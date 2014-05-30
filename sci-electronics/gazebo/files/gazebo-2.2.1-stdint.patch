@@ -1,0 +1,44 @@
+diff -ruN gazebo-2.2.1.orig/gazebo/common/Console.hh gazebo-2.2.1/gazebo/common/Console.hh
+--- gazebo-2.2.1.orig/gazebo/common/Console.hh	2014-01-10 19:56:21.000000000 -0500
++++ gazebo-2.2.1/gazebo/common/Console.hh	2014-05-23 03:32:10.250410204 -0400
+@@ -26,6 +26,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <string>
++#include <stdint.h>
+ 
+ #include "gazebo/common/SingletonT.hh"
+ #include "gazebo/common/CommonTypes.hh"
+diff -ruN gazebo-2.2.1.orig/gazebo/rendering/deferred_shading/MaterialGenerator.hh gazebo-2.2.1/gazebo/rendering/deferred_shading/MaterialGenerator.hh
+--- gazebo-2.2.1.orig/gazebo/rendering/deferred_shading/MaterialGenerator.hh	2014-01-10 19:56:21.000000000 -0500
++++ gazebo-2.2.1/gazebo/rendering/deferred_shading/MaterialGenerator.hh	2014-05-23 03:32:32.000410407 -0400
+@@ -22,6 +22,7 @@
+ #include <map>
+ 
+ #include <string>
++#include <stdint.h>
+ 
+ namespace gazebo
+ {
+diff -ruN gazebo-2.2.1.orig/gazebo/rendering/deferred_shading/SSAOLogic.hh gazebo-2.2.1/gazebo/rendering/deferred_shading/SSAOLogic.hh
+--- gazebo-2.2.1.orig/gazebo/rendering/deferred_shading/SSAOLogic.hh	2014-01-10 19:56:21.000000000 -0500
++++ gazebo-2.2.1/gazebo/rendering/deferred_shading/SSAOLogic.hh	2014-05-23 03:31:45.880409976 -0400
+@@ -20,6 +20,7 @@
+ #include <OgreCompositorInstance.h>
+ #include <OgreCompositorLogic.h>
+ #include <map>
++#include <stdint.h>
+ 
+ #include "gazebo/rendering/deferred_shading/ListenerFactoryLogic.hh"
+ 
+diff -ruN gazebo-2.2.1.orig/gazebo/rendering/skyx/include/Prerequisites.h gazebo-2.2.1/gazebo/rendering/skyx/include/Prerequisites.h
+--- gazebo-2.2.1.orig/gazebo/rendering/skyx/include/Prerequisites.h	2014-01-10 19:56:21.000000000 -0500
++++ gazebo-2.2.1/gazebo/rendering/skyx/include/Prerequisites.h	2014-05-23 03:33:39.720411038 -0400
+@@ -33,6 +33,7 @@
+ 
+ /// Include external headers
+ #include <OGRE/Ogre.h>
++#include <stdint.h>
+ 
+ /// Define the dll export qualifier if compiling for Windows
+ #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32

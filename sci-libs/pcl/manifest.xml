@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer>
+    <email>mavrinac@gmail.com</email>
+    <name>Aaron Mavrinac</name>
+    </maintainer>
+    <use>
+        <flag name="cuda">Enable NVIDIA Cuda computations support</flag>
+        <flag name="tools">Build extra tools</flag>
+        <flag name="vtk">Enable visualization support through sci-libs/vtk</flag>
+    </use>
+</pkgmetadata>
+

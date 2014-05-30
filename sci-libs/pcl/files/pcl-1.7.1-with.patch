@@ -1,0 +1,14 @@
+diff -ruN pcl-1.7.1.orig/CMakeLists.txt pcl-1.7.1/CMakeLists.txt
+--- pcl-1.7.1.orig/CMakeLists.txt	2014-05-22 23:51:35.800286769 -0400
++++ pcl-1.7.1/CMakeLists.txt	2014-05-22 23:52:55.620287513 -0400
+@@ -247,7 +247,9 @@
+ endif(LIBUSB_1_FOUND)
+ 
+ # OpenNI
+-find_package(OpenNI)
++if(WITH_OPENNI)
++  find_package(OpenNI)
++endif()
+ if (OPENNI_FOUND)
+   set(HAVE_OPENNI ON)
+   include_directories(SYSTEM ${OPENNI_INCLUDE_DIRS})
