@@ -1,0 +1,13 @@
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>wyc</name>
+    <description>A Gentoo overlay of ROS</description>
+	<homepage>https://github.com/allenh1/wyc-overlay/</homepage>
+	<owner type="organization">
+		<name>WYC</name>
+		<email>hunter.allen@vanderbilt.edu</email>
+	</owner>
+    <source type="git">git://github.com/allenh1/wyc-overlay.git</source>
+    <feed>https://github.com/allenh1/wyc-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
