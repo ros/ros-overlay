@@ -1,0 +1,13 @@
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>wyc</name>
+    <description>A Gentoo overlay of ROS</description>
+	<homepage>https://github.com/wyc/wyc-overlay/</homepage>
+	<owner type="organization">
+		<name>WYC</name>
+		<email>wayne@neverfear.org</email>
+	</owner>
+    <source type="git">git://github.com/wyc/wyc-overlay.git</source>
+    <feed>https://github.com/wyc/wyc-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
