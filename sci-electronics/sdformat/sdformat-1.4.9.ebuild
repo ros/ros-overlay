@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="XML format describing environments for robotic applications"
 HOMEPAGE="http://sdformat.org"
-SRC_URI="http://gazebosim.org/assets/distributions/${P}.tar.bz2"
+SRC_URI="http://osrf-distributions.s3.amazonaws.com/sdformat/releases/${P}.tar.bz2"
 
 LICENSE="Apache"
 SLOT="0"
