@@ -1,9 +1,9 @@
 <repositories version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>ros-gentoo</name>
-    <description>A Gentoo overlay of ROS</description>
-	<homepage>https://github.com/allenh1/ros-overlay/</homepage>
-    <source type="git">git://github.com/allenh1/ros-overlay.git</source>
-    <feed>https://github.com/allenh1/ros-overlay/commits/master.atom</feed>
+    <name>ros-overlay</name>
+    <description>A Gentoo overlay for ROS</description>
+	<homepage>https://github.com/ros/ros-overlay/</homepage>
+    <source type="git">git://github.com/ros/ros-overlay.git</source>
+    <feed>https://github.com/ros/ros-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
