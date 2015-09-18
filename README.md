@@ -9,7 +9,7 @@ Install This Overlay
 ====================
 Layman makes the install rather simple, thankfully.
 
-<code> # layman -f -o https://raw.githubusercontent.com/allenh1/ros-overlay/master/overlay.xml -a ros-gentoo </code>
+<code> # layman -f -o https://raw.githubusercontent.com/ros/ros-overlay/master/overlay.xml -a ros-gentoo </code>
 
 ROS Installation
 ================
