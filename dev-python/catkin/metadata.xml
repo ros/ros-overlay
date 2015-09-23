@@ -2,5 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
-	<longdescription></longdescription>
+	<longdescription>Catkin is the build system for ROS.</longdescription>
 </pkgmetadata>
