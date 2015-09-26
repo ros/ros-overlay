@@ -26,7 +26,7 @@ ROS Installation
 2. Now we refresh rosdep (this should not be done as the root user, hence the '$' proceeding the command).
 
 ```
-rosdep update
+ $ rosdep update
 ```
 &nbsp;
 3. Now add these three lines to the end of your `/etc/portage/package.use` file.
