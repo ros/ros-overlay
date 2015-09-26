@@ -3,15 +3,13 @@ ros-overlay
 
 This overlay contains ebuilds for the Robot Operating System (ROS).
 
-This overlay has been adapted from the wyc-overlay.
-
 Install This Overlay
 --------------------
 
 Layman makes the install rather simple, thankfully.
 
 ```
-layman -f -o https://raw.githubusercontent.com/ros/ros-overlay/master/overlay.xml -a ros-gentoo
+layman -f -o https://raw.githubusercontent.com/ros/ros-overlay/master/overlay.xml -a ros-overlay
 ```
 
 ROS Installation
@@ -45,6 +43,7 @@ dev-libs/boost python
 ```
 sudo emerge --sync
 sudo emerge -uDNvaj @world
+sudo revdep-rebuild
 ```
 &nbsp;
 5. Now, we install the tools needed for the install.
@@ -72,8 +71,8 @@ wstool update -j 4 -t src
 rosdep install --from-paths src --ignore-src --rosdistro jade -y
 ```
 &nbsp;
-8. Build the packages! The following command might fail several times (This is due to the python path not updating). Run it until all the packages build. 
+8. Build the packages!
 
 ```
-sudo PYTHONPATH="/opt/ros/jade/lib64/python3.3/site-packages/" ./src/catkin/bin/catkin_make_isolated --install --install-space /opt/ros/jade -DSETUPTOOLS_DEB_LAYOUT=OFF
+sudo PYTHONPATH="/opt/ros/jade/lib64/python2.7/site-packages/" ./src/catkin/bin/catkin_make_isolated --install --install-space /opt/ros/jade -DSETUPTOOLS_DEB_LAYOUT=OFF
 ```
