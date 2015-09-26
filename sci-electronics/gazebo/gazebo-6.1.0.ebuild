@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gazebo/gazebo-5.0.1.ebuild,v 1.2 2015/05/04 12:14:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gazebo/gazebo-6.1.0.ebuild,v 1.2 2015/23/09 12:14:40 Hunter.Allen Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit cmake-utils versionator vcs-snapshot flag-o-matic
 
 DESCRIPTION="A 3D multiple robot simulator with dynamics"
 HOMEPAGE="http://gazebosim.org/"
-SRC_URI="https://bitbucket.org/osrf/gazebo/get/gazebo4_4.1.2.tar.bz2"
+SRC_URI="https://bitbucket.org/osrf/${PN}/get/${PN}6_${PV}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	app-text/ronn
 	virtual/pkgconfig
 "
-S="${WORKDIR}/gazebo4_4.1.2"
+S="${WORKDIR}/gazebo=6_${PV}"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_configure() {

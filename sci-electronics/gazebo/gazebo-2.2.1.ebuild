@@ -4,7 +4,7 @@ inherit eutils cmake-utils
 
 DESCRIPTION="A 3D multiple robot simulator with dynamics."
 HOMEPAGE="http://gazebosim.org"
-SRC_URI="${HOMEPAGE}/assets/distributions/${P}.tar.bz2"
+SRC_URI="https://bitbucket.org/osrf/${PN}/get/${PN}-current_${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

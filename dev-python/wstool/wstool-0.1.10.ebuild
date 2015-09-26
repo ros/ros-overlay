@@ -5,7 +5,7 @@ inherit distutils-r1
 
 DESCRIPTION="A tool for managing a workspace of multiple heterogenous SCM repositories"
 HOMEPAGE="http://wiki.ros.org/wstool"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/vcstools/${PN}/archive/${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -15,4 +15,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		>=dev-python/vcstools-0.1.34[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-

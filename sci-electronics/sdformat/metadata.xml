@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<herd>noherd</herd>
 <pkgmetadata>
+<maintainer>
+<email>aballier@gentoo.org</email>
+<name>Alexis Ballier</name>
+</maintainer>
 <longdescription lang="en">
 SDF is an XML file format that describes environments, objects, and robots
 in a manner suitable for robotic applications. SDF is capable of representing
@@ -10,8 +13,5 @@ or dynamic objects, and articulated robots with various sensors, and acutators.
 The format of SDF is also described by XML, which facilitates updates and
 allows conversion from previous versions. A parser is also contained within
 this package that reads SDF files and returns a C++ interface.
-  
-  http://sdformat.org
-
 </longdescription>
 </pkgmetadata>
