@@ -53,7 +53,7 @@ dev-libs/boost python
 6. Now we begin building the system.
 
 ```
- $ mkdir ~/catkin_ws
+ $ mkdir ~/catkin_ws && cd ~/catkin_ws
  $ rosinstall_generator desktop_full --rosdistro jade --deps --wet-only > jade-desktop_full-wet.rosinstall
  $ cd ~/catkin_ws && wstool init -j8 src jade-desktop_full-wet.rosinstall
 ```
