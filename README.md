@@ -55,7 +55,7 @@ dev-libs/boost python
 ```
  $ mkdir ~/catkin_ws && cd ~/catkin_ws
  $ rosinstall_generator desktop_full --rosdistro jade --deps --wet-only > jade-desktop_full-wet.rosinstall
- $ cd ~/catkin_ws && wstool init -j8 src jade-desktop_full-wet.rosinstall
+ $ wstool init -j8 src jade-desktop_full-wet.rosinstall
 ```
 
 Should wstool fail, run the following command to resume the install (sometimes the amount of jobs causes problems).
