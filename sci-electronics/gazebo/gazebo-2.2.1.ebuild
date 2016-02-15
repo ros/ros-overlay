@@ -44,6 +44,9 @@ PATCHES=(
 	"${FILESDIR}/${P}-stdint.patch"
 )
 
+SRCDIR="$(ls ${WORKDIR} | grep osrf-gazebo | tail -n 1)"
+S="${WORKDIR}/${SRCDIR}"
+
 src_configure() {
 	if use debug; then
 		CMAKE_BUILD_TYPE=RelWithDebInfo
