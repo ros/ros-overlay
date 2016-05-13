@@ -5,7 +5,7 @@ inherit distutils-r1
 
 DESCRIPTION="Bloom Release System for ROS."
 HOMEPAGE="http://wiki.ros.org/bloom"
-SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/0.5.20.tar.gz"
+SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/0.5.21.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
