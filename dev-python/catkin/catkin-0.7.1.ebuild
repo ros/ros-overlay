@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros/${PN}/archive/${PV}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm"
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
 		dev-python/python-dateutil[${PYTHON_USEDEP}]"
