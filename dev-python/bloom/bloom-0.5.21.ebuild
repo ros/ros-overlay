@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm"
 
 DEPEND="dev-python/empy[${PYTHON_USEDEP}]
-		>=dev-python/catkin-pkg-0.2.2
+		>=dev-python/catkin_pkg-0.2.2
 		dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		dev-python/python-dateutil[${PYTHON_USEDEP}]"
