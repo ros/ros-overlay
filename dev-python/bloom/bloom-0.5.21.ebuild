@@ -11,6 +11,8 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm"
 
+IUSE="test"
+
 DEPEND="dev-python/empy[${PYTHON_USEDEP}]
 		>=dev-python/catkin_pkg-0.2.2
 		dev-python/setuptools[${PYTHON_USEDEP}]
