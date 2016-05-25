@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	app-text/ronn
 	virtual/pkgconfig
 "
-S="${WORKDIR}/gazebo6_${PV}"
+S="${WORKDIR}/gazebo7_${PV}"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_configure() {
