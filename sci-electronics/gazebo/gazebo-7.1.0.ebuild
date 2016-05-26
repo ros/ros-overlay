@@ -23,6 +23,9 @@ RDEPEND="
 	dev-libs/tinyxml
 	dev-libs/libtar
 	dev-cpp/tbb
+	sci-physics/simbody
+	net-libs/ignition-transport
+	tinyxml2
 	>=dev-games/ogre-1.7.4
 	sci-libs/libccd
 	libav? ( media-video/libav:= )
