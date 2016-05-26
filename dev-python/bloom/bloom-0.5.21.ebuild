@@ -1,21 +1,37 @@
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit distutils-r1
+SCM=""
+if [ "${PV#9999}" != "${PV}" ] ; then
+	SCM="git-r3"
+	EGIT_REPO_URI="https://github.com/ros-infrastructure/bloom"
+fi
 
-DESCRIPTION="Bloom Release System for ROS."
-HOMEPAGE="http://wiki.ros.org/bloom"
-SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/${PV}.tar.gz"
+inherit ${SCM} distutils-r1
 
-LICENSE="BSD-2"
+DESCRIPTION="Commands to manage several local SCM repositories for ROS"
+HOMEPAGE="http://wiki.ros.org/wstool"
+if [ "${PV#9999}" != "${PV}" ] ; then
+	SRC_URI=""
+	KEYWORDS=""
+else
+	SRC_URI="http://download.ros.org/downloads/${PN}/${P}.tar.gz
+		http://github.com/ros-infrastructure/bloom/archive/${PV}.tar.gz -> ${P}.tar.gz
+	"
+	KEYWORDS="~amd64 ~x86 ~arm"
+fi
+
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm"
-
 IUSE="test"
 
-DEPEND="dev-python/empy[${PYTHON_USEDEP}]
-		>=dev-python/catkin_pkg-0.2.2
-		dev-python/setuptools[${PYTHON_USEDEP}]
-		dev-python/pyyaml[${PYTHON_USEDEP}]
-		dev-python/python-dateutil[${PYTHON_USEDEP}]"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	>=dev-python/vcstools-0.1.38[${PYTHON_USEDEP}]
+"
+DEPEND="
+	${RDEPEND}
+	dev-python/sphinx
+"
+
+DISTUTILS_IN_SOURCE_BUILD="yes"
