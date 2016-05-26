@@ -32,6 +32,8 @@ RDEPEND="
 	>=dev-libs/sdformat-2.3.1
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
+	dev-qt/qtxmlpatterns:4
 	dev-libs/boost:=[threads]
 	sci-libs/gdal
 	virtual/libusb:1
