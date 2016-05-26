@@ -40,5 +40,5 @@ src_install() {
 	cmake-utils_src_install
 
 	insinto /usr/share/cmake/Modules/
-	doins "${S}/cmake/FindSimbody.cmake"
+	doins "${S}/cmake/SimbodyConfig.cmake"
 }
