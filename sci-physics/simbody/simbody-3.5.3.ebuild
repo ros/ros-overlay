@@ -34,9 +34,6 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
-	if use doc; then
-		cmake-utils_src_compile doc
-	fi
 }
 
 src_install() {
