@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	default
-	mv Simbody* ${P} || die
+	mv simbody-Simbody* ${P} || die
 }
 
 src_prepare() {
