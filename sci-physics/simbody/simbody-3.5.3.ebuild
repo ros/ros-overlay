@@ -42,11 +42,6 @@ src_compile() {
 src_install() {
 	cmake-utils_src_install
 
-	if use doc; then
-		cd "${BUILD_DIR}"/doc
-		dohtml -r html/*
-	fi
-
 	insinto /usr/share/cmake/Modules/
 	doins "${S}/cmake/FindSimbody.cmake"
 }
