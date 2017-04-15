@@ -6,7 +6,7 @@ DESCRIPTION="Multibody Physics API."
 HOMEPAGE="https://simtk.org/projects/simbody"
 SRC_URI="https://github.com/${PN}/${PN}/archive/Simbody-${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="APACHE 2.0"
+LICENSE="Apache-2.0"
 SLOT="3"
 KEYWORDS="~x86 ~amd64 ~arm"
 IUSE="debug doc"
