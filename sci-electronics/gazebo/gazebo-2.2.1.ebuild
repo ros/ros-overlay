@@ -1,4 +1,4 @@
-EAPI=5
+EAPI=6
 
 inherit eutils cmake-utils
 
@@ -40,12 +40,13 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen app-text/ronn )
 "
 
-PATCHES=(
-	"${FILESDIR}/${P}-stdint.patch"
-)
-
-SRCDIR="$(ls ${WORKDIR} | grep osrf-gazebo | tail -n 1)"
+SRCDIR="osrf-gazebo-3b8a07b268a5"
 S="${WORKDIR}/${SRCDIR}"
+
+src_prepare() {
+	eapply "${FILESDIR}/${P}-stdint.patch"
+	eapply_user
+}
 
 src_configure() {
 	if use debug; then
