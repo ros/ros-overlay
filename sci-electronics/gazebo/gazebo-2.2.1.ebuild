@@ -1,4 +1,4 @@
-EAPI=6
+EAPI=5
 
 inherit eutils cmake-utils
 
@@ -14,6 +14,7 @@ IUSE="ffmpeg bullet gts doc debug"
 # http://gazebosim.org/user_guide/installation__requirements.html
 RDEPEND="
 	>=dev-games/ogre-1.7.1
+	<dev-games/ogre-1.9
 	>=dev-libs/protobuf-2.3
 	dev-libs/protobuf-c
 	>=dev-libs/tinyxml-2.6.2
@@ -40,12 +41,16 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen app-text/ronn )
 "
 
-SRCDIR="osrf-gazebo-3b8a07b268a5"
-S="${WORKDIR}/${SRCDIR}"
+#SRCDIR="osrf-gazebo-3b8a07b268a5"
+
+src_unpack(){
+	unpack ${A}
+	SRCDIR="$(echo *${PN}*)"
+	S="${WORKDIR}/${SRCDIR}"
+}
 
 src_prepare() {
-	eapply "${FILESDIR}/${P}-stdint.patch"
-	eapply_user
+	epatch "${FILESDIR}/${P}-stdint.patch"
 }
 
 src_configure() {
@@ -55,9 +60,9 @@ src_configure() {
 		CMAKE_BUILD_TYPE=Release
 	fi
     local mycmakeargs=(
-		$(cmake-utils_has ffmpeg)
-		$(cmake-utils_has bullet)
-		$(cmake-utils_has gts)
+		$(cmake-utils_use_has ffmpeg)
+		$(cmake-utils_use_has bullet)
+		$(cmake-utils_use_has gts)
 	)
 
 	cmake-utils_src_configure
