@@ -8,7 +8,7 @@ inherit cmake-utils versionator vcs-snapshot flag-o-matic
 
 DESCRIPTION="A 3D multiple robot simulator with dynamics"
 HOMEPAGE="http://gazebosim.org/"
-MY_MAJORV=$(get_major_version )
+MY_MAJORV=$(get_major_version)
 SRC_URI="https://bitbucket.org/osrf/${PN}/get/${PN}${MY_MAJORV}_${PV}.tar.bz2"
 
 LICENSE="Apache-2.0"
