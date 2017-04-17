@@ -41,8 +41,6 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen app-text/ronn )
 "
 
-#SRCDIR="osrf-gazebo-3b8a07b268a5"
-
 src_unpack(){
 	unpack ${A}
 	SRCDIR="$(echo *${PN}*)"
@@ -84,4 +82,3 @@ src_install() {
 		dohtml -r "${CMAKE_BUILD_DIR}"/doxygen/html/*
 	fi
 }
-
