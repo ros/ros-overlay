@@ -14,6 +14,7 @@ IUSE="ffmpeg bullet gts doc debug"
 # http://gazebosim.org/user_guide/installation__requirements.html
 RDEPEND="
 	>=dev-games/ogre-1.7.1
+	<dev-games/ogre-1.9
 	>=dev-libs/protobuf-2.3
 	dev-libs/protobuf-c
 	>=dev-libs/tinyxml-2.6.2
@@ -40,12 +41,15 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen app-text/ronn )
 "
 
-PATCHES=(
-	"${FILESDIR}/${P}-stdint.patch"
-)
+src_unpack(){
+	unpack ${A}
+	SRCDIR="$(echo *${PN}*)"
+	S="${WORKDIR}/${SRCDIR}"
+}
 
-SRCDIR="$(ls ${WORKDIR} | grep osrf-gazebo | tail -n 1)"
-S="${WORKDIR}/${SRCDIR}"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-stdint.patch"
+}
 
 src_configure() {
 	if use debug; then
@@ -54,9 +58,9 @@ src_configure() {
 		CMAKE_BUILD_TYPE=Release
 	fi
     local mycmakeargs=(
-		$(cmake-utils_has ffmpeg)
-		$(cmake-utils_has bullet)
-		$(cmake-utils_has gts)
+		$(cmake-utils_use_has ffmpeg)
+		$(cmake-utils_use_has bullet)
+		$(cmake-utils_use_has gts)
 	)
 
 	cmake-utils_src_configure
@@ -78,4 +82,3 @@ src_install() {
 		dohtml -r "${CMAKE_BUILD_DIR}"/doxygen/html/*
 	fi
 }
-
