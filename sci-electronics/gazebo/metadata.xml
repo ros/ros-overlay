@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer type="project">
-	<email>info@osrfoundation.org</email>	
-  </maintainer>
+	<maintainer type="project">
+		<email>info@osrfoundation.org</email>	
+	</maintainer>
+	<use>
+		<flag name="gts">Enable support for <pkg>sci-libs/gts</pkg></flag>
+		<flag name="bullet">Enable support for <pkg>sci-physics/bullet</pkg></flag>
+	</use>
 </pkgmetadata>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
   <longdescription>
     This project is a SimTK toolset providing general multibody dynamics capability,
     that is, the ability to solve Newton's 2nd law F=ma in any set of generalized coordinates

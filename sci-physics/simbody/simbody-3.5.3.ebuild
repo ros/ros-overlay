@@ -11,12 +11,13 @@ SLOT="3"
 KEYWORDS="~x86 ~amd64 ~arm"
 IUSE="debug doc"
 
-DEPEND="doc? ( app-doc/doxygen[dot,latex] )
-		virtual/lapack
+DEPEND="	virtual/lapack
 		media-libs/freeglut
 		x11-libs/libXi
 		x11-libs/libXmu"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		doc? ( app-doc/doxygen[dot,latex] )
+"
 
 src_unpack() {
 	default

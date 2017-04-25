@@ -13,7 +13,6 @@ IUSE="qhull cuda mpi qt4 doc test +tools"
 
 # dependencies: http://pointclouds.org/downloads/source.html
 RDEPEND="
-	>=dev-util/cmake-2.8.3
 	>=dev-libs/boost-1.46
 	dev-cpp/eigen:3
 	>=sci-libs/flann-1.7.1
@@ -24,10 +23,11 @@ RDEPEND="
 	qhull? ( >=media-libs/qhull-2011.1 )
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
 	mpi? ( virtual/mpi )
-	test? ( >=dev-cpp/gtest-1.6.0 )
 "
 DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.8.3
 	doc? ( app-doc/doxygen )
+	test? ( >=dev-cpp/gtest-1.6.0 )
 "
 
 PATCHES=(
@@ -52,4 +52,3 @@ src_configure() {
 
 	cmake-utils_src_configure
 }
-

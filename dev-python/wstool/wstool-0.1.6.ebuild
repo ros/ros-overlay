@@ -15,4 +15,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		>=dev-python/vcstools-0.1.34[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-

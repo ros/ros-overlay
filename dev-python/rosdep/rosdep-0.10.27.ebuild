@@ -20,4 +20,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND="${DEPEND}"
 
 # @todo tests
-

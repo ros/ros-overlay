@@ -14,4 +14,3 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
 		dev-python/python-dateutil[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-

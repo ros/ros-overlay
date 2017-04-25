@@ -19,4 +19,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/rosdistro-0.3.0[${PYTHON_USEDEP}]
 		>=dev-python/wstool-0.1.0[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-
