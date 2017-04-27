@@ -7,7 +7,7 @@ DESCRIPTION="Kitchen contains a cornucopia of useful code"
 HOMEPAGE="https://fedorahosted.org/kitchen"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="LGPLv2+"
+LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm"
 

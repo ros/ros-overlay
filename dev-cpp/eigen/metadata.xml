@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<herd>kde</herd>
 	<longdescription>
 		Eigen is a lightweight C++ template library for vector and matrix math,
 		a.k.a. linear algebra. Unlike most other linear algebra libraries, Eigen

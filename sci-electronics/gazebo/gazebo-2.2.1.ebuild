@@ -25,8 +25,6 @@ RDEPEND="
 	virtual/opengl
 	>=net-misc/curl-4[ssl,curl_ssl_openssl]
 	>=dev-libs/libtar-1.2
-	>=dev-util/cmake-2.8
-	virtual/pkgconfig
 	>=sys-devel/libtool-2.4.2
 	>=dev-games/cegui-0.7.5[ogre,truetype]
 	media-libs/freeglut
@@ -38,6 +36,8 @@ RDEPEND="
 	gts? ( sci-libs/gts )
 "
 DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.8
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen app-text/ronn )
 "
 
@@ -57,7 +57,7 @@ src_configure() {
 	else
 		CMAKE_BUILD_TYPE=Release
 	fi
-    local mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_has ffmpeg)
 		$(cmake-utils_use_has bullet)
 		$(cmake-utils_use_has gts)

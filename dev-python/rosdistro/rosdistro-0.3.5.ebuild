@@ -16,4 +16,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/catkin_pkg[${PYTHON_USEDEP}]
 		dev-python/rospkg[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-

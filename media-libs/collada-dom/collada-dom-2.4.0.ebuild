@@ -12,12 +12,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-    dev-libs/boost
+	dev-libs/boost
 	dev-libs/libxml2
 	virtual/opengl
 	media-libs/freeglut
-	>=dev-util/cmake-2.6.0
 	>=media-gfx/nvidia-cg-toolkit-2.0
 "
-DEPEND="${RDEPEND}"
-
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6.0
+"

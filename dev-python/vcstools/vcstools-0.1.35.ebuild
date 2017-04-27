@@ -17,4 +17,3 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND="${DEPEND}"
 
 # @todo tests and use flags per VCS
-

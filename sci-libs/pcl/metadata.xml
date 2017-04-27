@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>The Point Cloud Library (PCL) is a standalone, large scale, open project for 2D/3D image and point cloud processing.</longdescription>
+        <use>
+                <flag name="cuda">Enable NVIDIA Cuda computations support</flag>
+                <flag name="qhull">Add support for <pkg>media-libs/qhull</pkg></flag>
+                <flag name="tools">Build tools</flag>
+        </use>
+</pkgmetadata>
