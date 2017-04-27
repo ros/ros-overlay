@@ -4,8 +4,4 @@
 	<upstream>
 		<remote-id type="bitbucket">ignitionrobotics/ign-math</remote-id>
 	</upstream>
-  <maintainer type="person">
-    <email>ale.barbio@alice.it</email>
-    <name>Alessandro Barbieri</name>
-  </maintainer>
 </pkgmetadata>

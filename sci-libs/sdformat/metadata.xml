@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer type="person">
-    <email>ale.barbio@alice.it</email>
-    <name>Alessandro Barbieri</name>
-  </maintainer>
 <longdescription lang="en">
 SDF is an XML file format that describes environments, objects, and robots
 in a manner suitable for robotic applications. SDF is capable of representing
