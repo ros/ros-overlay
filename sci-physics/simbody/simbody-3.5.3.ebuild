@@ -11,11 +11,11 @@ SLOT="3"
 KEYWORDS="~x86 ~amd64 ~arm"
 IUSE="debug doc"
 
-DEPEND="	virtual/lapack
+RDEPEND="	virtual/lapack
 		media-libs/freeglut
 		x11-libs/libXi
 		x11-libs/libXmu"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen[dot,latex] )
 "
 
