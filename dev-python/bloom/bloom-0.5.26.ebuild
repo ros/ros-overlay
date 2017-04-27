@@ -29,7 +29,3 @@ DEPEND="
 "
 
 DISTUTILS_IN_SOURCE_BUILD="yes"
-
-python_install_all() {
-	distutils-r1_python_install
-}
