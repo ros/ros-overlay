@@ -57,6 +57,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
+PATCHES=( "${FILESDIR}/qwt.patch" )
 
 src_configure() {
 	# doesnt build without it
