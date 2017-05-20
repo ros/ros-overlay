@@ -8,10 +8,10 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/Simbody-${PV}.tar.gz -> ${P}.tar
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="~x86 ~amd64 ~arm"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="debug doc"
 
-RDEPEND="	virtual/lapack
+RDEPEND="virtual/lapack
 		media-libs/freeglut
 		x11-libs/libXi
 		x11-libs/libXmu"
@@ -39,7 +39,4 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-
-	insinto /usr/share/cmake/Modules/
-	doins "${S}/cmake/SimbodyConfig.cmake"
 }
