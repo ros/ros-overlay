@@ -14,34 +14,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/rosbag
+    ros-lunar/tf2_eigen
+    ros-lunar/pcl_msgs
     ros-lunar/std_msgs
-    ros-lunar/tf
+    ros-lunar/pcl_conversions
     ros-lunar/dynamic_reconfigure
     ros-lunar/pluginlib
     ros-lunar/nodelet
-    ros-lunar/pcl_conversions
-    ros-lunar/pcl_msgs
-    ros-lunar/tf2_eigen
-    ros-lunar/sensor_msgs
     ros-lunar/message_filters
-    sci-libs/vtk
-    sci-libs/pcl
+    ros-lunar/nodelet_topic_tools
+    ros-lunar/roscpp
+    ros-lunar/rosbag
+    ros-lunar/tf
+    ros-lunar/sensor_msgs
     sci-libs/proj
     dev-qt/qtcore
     dev-cpp/eigen
+    sci-libs/pcl
+    sci-libs/vtk
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rosconsole
-    ros-lunar/roslib
     ros-lunar/cmake_modules
+    ros-lunar/roslib
     ros-lunar/genmsg
+    ros-lunar/rosconsole
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -62,13 +63,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}" || die
-}
-
-pkg_postinst() {
-    cd ${D}
-    cp -R lib* /opt/ros/lunar
-    cp -R share /opt/ros/lunar
-    cp -R bin /opt/ros/lunar
-    cp -R include /opt/ros/lunar
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

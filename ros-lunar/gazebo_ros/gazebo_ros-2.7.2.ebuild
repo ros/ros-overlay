@@ -12,16 +12,16 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
-    ros-lunar/roscpp
-    ros-lunar/tf
     ros-lunar/std_msgs
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/std_srvs
     ros-lunar/gazebo_msgs
-    ros-lunar/gazebo_dev
     ros-lunar/roslib
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/gazebo_dev
+    ros-lunar/std_srvs
+    ros-lunar/roscpp
+    ros-lunar/geometry_msgs
     ros-lunar/rosgraph_msgs
+    ros-lunar/tf
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -50,13 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}" || die
-}
-
-pkg_postinst() {
-    cd ${D}
-    cp -R lib* /opt/ros/lunar
-    cp -R share /opt/ros/lunar
-    cp -R bin /opt/ros/lunar
-    cp -R include /opt/ros/lunar
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -12,33 +12,34 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/message_generation
-    ros-lunar/genpy
-    ros-lunar/gennodejs
-    ros-lunar/rosgraph_msgs
-    ros-lunar/roslisp
-    ros-lunar/geneus
-    ros-lunar/genmsg
-    ros-lunar/rosbag_migration_rule
-    ros-lunar/std_msgs
-    ros-lunar/genlisp
-    ros-lunar/message_runtime
-    ros-lunar/ros_comm
-    ros-lunar/std_srvs
-    ros-lunar/catkin
-    ros-lunar/gencpp
-    ros-lunar/rosconsole_bridge
-    ros-lunar/common_msgs
-    ros-lunar/roscpp_core
-    ros-lunar/ros
-    ros-lunar/rospack
     ros-lunar/cmake_modules
+    ros-lunar/rosconsole_bridge
+    ros-lunar/std_msgs
+    ros-lunar/ros
+    ros-lunar/genmsg
+    ros-lunar/message_generation
+    ros-lunar/gencpp
+    ros-lunar/rosbag_migration_rule
+    ros-lunar/geneus
+    ros-lunar/ros_comm
+    ros-lunar/common_msgs
+    ros-lunar/rospack
+    ros-lunar/gennodejs
+    ros-lunar/roscpp_core
+    ros-lunar/genpy
+    ros-lunar/rosgraph_msgs
+    ros-lunar/std_srvs
+    ros-lunar/roslisp
+    ros-lunar/message_runtime
+    ros-lunar/genlisp
+    ros-lunar/catkin
 "
 DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -59,13 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}" || die
-}
-
-pkg_postinst() {
-    cd ${D}
-    cp -R lib* /opt/ros/lunar
-    cp -R share /opt/ros/lunar
-    cp -R bin /opt/ros/lunar
-    cp -R include /opt/ros/lunar
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

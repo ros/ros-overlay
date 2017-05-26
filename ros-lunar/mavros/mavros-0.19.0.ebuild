@@ -12,33 +12,34 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
-    ros-lunar/rospy
-    ros-lunar/roscpp
-    ros-lunar/libmavconn
-    ros-lunar/mavros_msgs
     ros-lunar/std_msgs
+    ros-lunar/rospy
+    ros-lunar/libmavconn
     ros-lunar/eigen_conversions
     ros-lunar/mavlink
-    ros-lunar/pluginlib
-    ros-lunar/message_runtime
-    ros-lunar/diagnostic_updater
-    ros-lunar/std_srvs
-    ros-lunar/rosconsole_bridge
-    ros-lunar/sensor_msgs
-    ros-lunar/nav_msgs
-    ros-lunar/tf2_ros
     ros-lunar/diagnostic_msgs
-    dev-libs/boost
+    ros-lunar/pluginlib
+    ros-lunar/sensor_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/roscpp
+    ros-lunar/rosconsole_bridge
+    ros-lunar/tf2_ros
+    ros-lunar/std_srvs
+    ros-lunar/message_runtime
+    ros-lunar/mavros_msgs
+    ros-lunar/diagnostic_updater
+    ros-lunar/nav_msgs
     dev-cpp/eigen
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-lunar/angles
     ros-lunar/cmake_modules
+    ros-lunar/angles
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -59,13 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}" || die
-}
-
-pkg_postinst() {
-    cd ${D}
-    cp -R lib* /opt/ros/lunar
-    cp -R share /opt/ros/lunar
-    cp -R bin /opt/ros/lunar
-    cp -R include /opt/ros/lunar
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }
