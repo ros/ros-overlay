@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Small lib to transform sensor_msgs with tf. Most notably, PointCloud2"
-HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_sensor_msgs/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,23 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/python_orocos_kdl
-    ros-kinetic/cmake_modules
     ros-kinetic/sensor_msgs
-    ros-kinetic/tf2
+    ros-kinetic/cmake_modules
     ros-kinetic/tf2_ros
+    ros-kinetic/python_orocos_kdl
+    ros-kinetic/tf2
     dev-cpp/eigen
 "
-DEPEND="
-    ros-kinetic/tf2_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/cmake_modules
-    ros-kinetic/tf2
-    dev-cpp/eigen
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -47,11 +43,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

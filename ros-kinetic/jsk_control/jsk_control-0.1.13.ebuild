@@ -12,21 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/eus_nlopt
     ros-kinetic/eus_qpoases
-    ros-kinetic/jsk_footstep_planner
-    ros-kinetic/eus_qp
-    ros-kinetic/joy_mouse
-    ros-kinetic/jsk_footstep_controller
     ros-kinetic/jsk_teleop_joy
     ros-kinetic/jsk_calibration
-    ros-kinetic/eus_nlopt
+    ros-kinetic/eus_qp
+    ros-kinetic/jsk_footstep_controller
+    ros-kinetic/jsk_footstep_planner
     ros-kinetic/jsk_ik_server
+    ros-kinetic/joy_mouse
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -45,11 +46,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

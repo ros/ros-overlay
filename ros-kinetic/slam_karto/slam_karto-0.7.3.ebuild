@@ -13,33 +13,24 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/message_filters
     ros-kinetic/nav_msgs
+    ros-kinetic/rosconsole
+    ros-kinetic/open_karto
+    ros-kinetic/message_filters
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/visualization_msgs
     ros-kinetic/tf
-    ros-kinetic/open_karto
     ros-kinetic/sparse_bundle_adjustment
+    ros-kinetic/roscpp
     dev-cpp/eigen
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
-    ros-kinetic/rosconsole
-    ros-kinetic/message_filters
-    ros-kinetic/nav_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/open_karto
-    ros-kinetic/sparse_bundle_adjustment
-    dev-cpp/eigen
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -58,11 +49,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

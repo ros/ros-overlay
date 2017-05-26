@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Python library to assist in publishing markers easily"
-HOMEPAGE="http://ros.org/wiki/easy_markers"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/easy_markers/0.2.4-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,24 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/roslib
+    ros-kinetic/interactive_markers
+    ros-kinetic/geometry_msgs
     ros-kinetic/visualization_msgs
     ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/interactive_markers
+    ros-kinetic/rospy
 "
-DEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/roslib
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/interactive_markers
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -48,11 +43,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

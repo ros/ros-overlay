@@ -12,70 +12,43 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
     ros-kinetic/pcl_conversions
-    ros-kinetic/costmap_2d
-    ros-kinetic/rviz
-    ros-kinetic/sensor_msgs
+    ros-kinetic/stereo_msgs
+    ros-kinetic/class_loader
+    ros-kinetic/pcl_ros
+    ros-kinetic/nav_msgs
+    ros-kinetic/laser_geometry
     ros-kinetic/roscpp
-    ros-kinetic/tf_conversions
+    ros-kinetic/rtabmap
+    ros-kinetic/eigen_conversions
+    ros-kinetic/tf2_ros
+    ros-kinetic/visualization_msgs
+    ros-kinetic/tf
+    ros-kinetic/nodelet
+    ros-kinetic/image_geometry
+    ros-kinetic/message_filters
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/image_transport
     ros-kinetic/octomap_ros
     ros-kinetic/rospy
+    ros-kinetic/costmap_2d
     ros-kinetic/move_base_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/nav_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/stereo_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/rtabmap
-    ros-kinetic/image_transport
-    ros-kinetic/message_filters
     ros-kinetic/cv_bridge
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/class_loader
-    ros-kinetic/geometry_msgs
-    ros-kinetic/nodelet
+    ros-kinetic/tf_conversions
+    ros-kinetic/rviz
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/image_transport_plugins
-    ros-kinetic/image_geometry
-    ros-kinetic/eigen_conversions
-"
-DEPEND="
     ros-kinetic/std_srvs
-    ros-kinetic/pcl_conversions
-    ros-kinetic/costmap_2d
-    ros-kinetic/rviz
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf_conversions
-    ros-kinetic/octomap_ros
-    ros-kinetic/rospy
-    ros-kinetic/move_base_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/nav_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/stereo_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/rtabmap
-    ros-kinetic/image_transport
-    ros-kinetic/message_filters
-    ros-kinetic/cv_bridge
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/class_loader
     ros-kinetic/geometry_msgs
-    ros-kinetic/nodelet
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/eigen_conversions
-    ros-kinetic/image_geometry
+"
+DEPEND="${RDEPEND}
     sci-libs/pcl
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -94,11 +67,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

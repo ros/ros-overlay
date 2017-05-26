@@ -12,45 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/image_transport
-    ros-kinetic/message_filters
-    ros-kinetic/octomap
-    ros-kinetic/cv_bridge
-    ros-kinetic/sensor_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/moveit_core
     ros-kinetic/roscpp
+    ros-kinetic/message_filters
+    ros-kinetic/rosconsole
+    ros-kinetic/urdf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/octomap
+    ros-kinetic/tf
+    ros-kinetic/cv_bridge
     ros-kinetic/moveit_msgs
     ros-kinetic/tf_conversions
-    ros-kinetic/tf
-    ros-kinetic/moveit_core
-    ros-kinetic/urdf
-    ros-kinetic/pluginlib
-    media-libs/glew
-    media-libs/mesa
     media-libs/freeglut
+    media-libs/mesa
+    media-libs/glew
 "
-DEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/image_transport
-    ros-kinetic/message_filters
-    ros-kinetic/octomap
-    ros-kinetic/cv_bridge
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/moveit_msgs
-    ros-kinetic/tf_conversions
-    ros-kinetic/tf
-    ros-kinetic/moveit_core
-    ros-kinetic/urdf
-    ros-kinetic/pluginlib
-    media-libs/glew
+DEPEND="${RDEPEND}
     dev-cpp/eigen
-    media-libs/mesa
-    media-libs/freeglut
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -69,11 +54,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

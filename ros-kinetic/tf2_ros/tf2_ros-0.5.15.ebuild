@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and C++."
-HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_ros/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,36 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/rosgraph
-    ros-kinetic/tf2_py
-    ros-kinetic/tf2_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/tf2
     ros-kinetic/roscpp
+    ros-kinetic/message_filters
     ros-kinetic/xmlrpcpp
     ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/actionlib_msgs
     ros-kinetic/actionlib
+    ros-kinetic/tf2_py
+    ros-kinetic/rosgraph
+    ros-kinetic/tf2_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/rospy
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/tf2
 "
-DEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/rosgraph
-    ros-kinetic/tf2_py
-    ros-kinetic/tf2_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/tf2
-    ros-kinetic/roscpp
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/actionlib
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -60,11 +49,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="hector_compressed_map_transport provides means for transporting compressed map data through the use of image_transport."
-HOMEPAGE="http://ros.org/wiki/hector_compressed_map_transport"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_compressed_map_transport/0.3.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,26 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_map_tools
-    ros-kinetic/image_transport
-    ros-kinetic/sensor_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/cv_bridge
+    ros-kinetic/hector_map_tools
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_transport
     ros-kinetic/geometry_msgs
+    ros-kinetic/cv_bridge
     dev-cpp/eigen
 "
-DEPEND="
-    ros-kinetic/hector_map_tools
-    ros-kinetic/image_transport
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/geometry_msgs
-    dev-cpp/eigen
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -50,11 +44,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

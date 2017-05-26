@@ -12,60 +12,38 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostime
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/sensor_msgs
-    ros-kinetic/moveit_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/urdf
+    ros-kinetic/eigen_conversions
+    ros-kinetic/eigen_stl_containers
+    ros-kinetic/visualization_msgs
     ros-kinetic/geometric_shapes
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/moveit_msgs
+    ros-kinetic/rostime
+    ros-kinetic/octomap_msgs
     ros-kinetic/random_numbers
     ros-kinetic/srdfdom
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
     ros-kinetic/kdl_parser
     ros-kinetic/octomap
-    ros-kinetic/octomap_msgs
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/eigen_conversions
-    sci-libs/fcl
-    media-libs/assimp
+    ros-kinetic/geometry_msgs
+    ros-kinetic/sensor_msgs
+    dev-cpp/eigen
     dev-libs/urdfdom
     dev-libs/urdfdom_headers
+    sci-libs/fcl
+    media-libs/assimp
     dev-libs/console_bridge
-    dev-cpp/eigen
     dev-libs/boost
 "
-DEPEND="
-    ros-kinetic/rostime
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/sensor_msgs
-    ros-kinetic/moveit_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/urdf
-    ros-kinetic/geometric_shapes
-    ros-kinetic/random_numbers
+DEPEND="${RDEPEND}
     ros-kinetic/roslib
-    ros-kinetic/srdfdom
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/kdl_parser
-    ros-kinetic/octomap
-    ros-kinetic/octomap_msgs
-    ros-kinetic/trajectory_msgs
     ros-kinetic/shape_msgs
-    ros-kinetic/eigen_conversions
-    sci-libs/fcl
-    media-libs/assimp
-    dev-libs/urdfdom
-    dev-libs/urdfdom_headers
-    dev-libs/console_bridge
-    dev-cpp/eigen
-    dev-libs/boost
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -84,11 +62,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

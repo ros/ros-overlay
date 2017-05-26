@@ -12,62 +12,39 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/angles
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/camera_info_manager
-    ros-kinetic/gazebo_msgs
-    ros-kinetic/rospy
-    ros-kinetic/nav_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/tf2_ros
-    ros-kinetic/rostest
-    ros-kinetic/urdf
-    ros-kinetic/image_transport
-    ros-kinetic/cv_bridge
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/nodelet
     ros-kinetic/rosconsole
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/trajectory_msgs
+    ros-kinetic/urdf
     ros-kinetic/polled_camera
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/rostest
+    ros-kinetic/tf2_ros
+    ros-kinetic/message_generation
+    ros-kinetic/nodelet
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/gazebo_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/tf
+    ros-kinetic/rospy
+    ros-kinetic/angles
+    ros-kinetic/std_msgs
+    ros-kinetic/cv_bridge
     ros-kinetic/gazebo_ros
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/std_srvs
+    ros-kinetic/camera_info_manager
+    ros-kinetic/geometry_msgs
     sci-electronics/gazebo
 "
-DEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/angles
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/camera_info_manager
-    ros-kinetic/gazebo_msgs
-    ros-kinetic/rospy
+DEPEND="${RDEPEND}
     ros-kinetic/diagnostic_updater
-    ros-kinetic/nav_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/tf2_ros
-    ros-kinetic/rostest
-    ros-kinetic/urdf
-    ros-kinetic/image_transport
-    ros-kinetic/cv_bridge
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/nodelet
-    ros-kinetic/rosconsole
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/polled_camera
-    sci-electronics/gazebo
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -86,11 +63,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

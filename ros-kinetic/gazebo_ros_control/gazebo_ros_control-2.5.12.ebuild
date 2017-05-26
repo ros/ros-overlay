@@ -13,34 +13,24 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/hardware_interface
-    ros-kinetic/transmission_interface
-    ros-kinetic/joint_limits_interface
-    ros-kinetic/controller_manager
-    ros-kinetic/angles
-    ros-kinetic/pluginlib
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/urdf
-    ros-kinetic/gazebo_ros
     ros-kinetic/control_toolbox
+    ros-kinetic/roscpp
+    ros-kinetic/controller_manager
+    ros-kinetic/pluginlib
+    ros-kinetic/transmission_interface
+    ros-kinetic/urdf
+    ros-kinetic/std_msgs
+    ros-kinetic/joint_limits_interface
+    ros-kinetic/angles
+    ros-kinetic/gazebo_ros
     sci-electronics/gazebo
 "
-DEPEND="
-    ros-kinetic/hardware_interface
-    ros-kinetic/transmission_interface
-    ros-kinetic/joint_limits_interface
-    ros-kinetic/controller_manager
-    ros-kinetic/angles
-    ros-kinetic/control_toolbox
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/urdf
-    ros-kinetic/pluginlib
-    sci-electronics/gazebo
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -59,11 +49,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

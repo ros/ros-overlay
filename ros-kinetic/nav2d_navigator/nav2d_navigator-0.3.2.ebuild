@@ -8,7 +8,7 @@ DESCRIPTION="This package provides a node for higher level navigation of a mobil
     within this map to create a plan for navigation. When used together with
     a SLAM module it can also be used to perform autonomous exploration of
     the robot's workspace."
-HOMEPAGE="http://wiki.ros.org/robot_operator"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_navigator/0.3.2-0.tar.gz"
 
 LICENSE="GPLv3"
@@ -16,32 +16,24 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/nav2d_operator
     ros-kinetic/std_srvs
-    ros-kinetic/pluginlib
     ros-kinetic/roscpp
+    ros-kinetic/pluginlib
+    ros-kinetic/actionlib
     ros-kinetic/message_runtime
-    ros-kinetic/tf
     ros-kinetic/geometry_msgs
-    ros-kinetic/nav2d_operator
-    ros-kinetic/actionlib_msgs
+    ros-kinetic/tf
     ros-kinetic/nav2d_msgs
-    ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
 "
-DEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/pluginlib
-    ros-kinetic/roscpp
-    ros-kinetic/tf
+DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/geometry_msgs
-    ros-kinetic/nav2d_operator
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/nav2d_msgs
-    ros-kinetic/actionlib
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -60,11 +52,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

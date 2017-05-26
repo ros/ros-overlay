@@ -7,7 +7,7 @@ DESCRIPTION="hector_mapping is a SLAM approach that can be used without odometry
     It leverages the high update rate of modern LIDAR systems like the Hokuyo UTM-30LX and provides 2D pose estimates at scan rate of the sensors (40Hz for the UTM-30LX).
     While the system does not provide explicit loop closing ability, it is sufficiently accurate for many real world scenarios. The system has successfully been used on
     Unmanned Ground Robots, Unmanned Surface Vehicles, Handheld Mapping Devices and logged data from quadrotor UAVs."
-HOMEPAGE="http://ros.org/wiki/hector_mapping"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_mapping/0.3.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,32 +15,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/laser_geometry
-    ros-kinetic/message_filters
     ros-kinetic/nav_msgs
+    ros-kinetic/laser_geometry
     ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf_conversions
-    ros-kinetic/tf
+    ros-kinetic/message_filters
     ros-kinetic/message_runtime
-    dev-cpp/eigen
-    dev-libs/boost
-"
-DEPEND="
-    ros-kinetic/laser_geometry
-    ros-kinetic/message_filters
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
     ros-kinetic/visualization_msgs
-    ros-kinetic/tf_conversions
     ros-kinetic/tf
-    ros-kinetic/message_generation
-    dev-cpp/eigen
+    ros-kinetic/tf_conversions
     dev-libs/boost
+    dev-cpp/eigen
+"
+DEPEND="${RDEPEND}
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -59,11 +51,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

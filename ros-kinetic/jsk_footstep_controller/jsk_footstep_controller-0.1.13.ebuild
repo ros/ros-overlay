@@ -12,51 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_pcl_ros
-    ros-kinetic/jsk_footstep_planner
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/kdl_parser
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/message_filters
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf2
-    ros-kinetic/tf_conversions
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/genmsg
-    ros-kinetic/message_generation
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
     ros-kinetic/std_msgs
+    ros-kinetic/jsk_pcl_ros
     ros-kinetic/urdf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/kdl_parser
     ros-kinetic/kdl_conversions
+    ros-kinetic/jsk_footstep_planner
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
+    ros-kinetic/message_generation
+    ros-kinetic/jsk_topic_tools
     ros-kinetic/sound_play
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/jsk_footstep_msgs
-"
-DEPEND="
-    ros-kinetic/jsk_pcl_ros
-    ros-kinetic/jsk_footstep_planner
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/kdl_parser
     ros-kinetic/diagnostic_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/message_filters
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf2
-    ros-kinetic/kdl_conversions
-    ros-kinetic/genmsg
-    ros-kinetic/message_generation
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/urdf
     ros-kinetic/tf_conversions
-    ros-kinetic/std_msgs
-    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/tf2
+"
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -75,11 +57,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

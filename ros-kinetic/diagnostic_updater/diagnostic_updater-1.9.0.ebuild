@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc."
-HOMEPAGE="http://www.ros.org/wiki/diagnostic_updater"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/diagnostic_updater/1.9.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,19 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/roscpp
 "
-DEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/diagnostic_msgs
+DEPEND="${RDEPEND}
     ros-kinetic/rostest
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -43,11 +41,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

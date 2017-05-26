@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/capabilities
-    ros-kinetic/rospy
     ros-kinetic/rocon_apps
-    ros-kinetic/rocon_console
-    ros-kinetic/rocon_app_utilities
-    ros-kinetic/rocon_gateway_utils
-    ros-kinetic/rocon_hub
-    ros-kinetic/roslib
-    ros-kinetic/rocon_std_msgs
-    ros-kinetic/gateway_msgs
     ros-kinetic/rocon_gateway
-    ros-kinetic/std_msgs
+    ros-kinetic/rocon_hub
+    ros-kinetic/rocon_interactions
+    ros-kinetic/rospy
     ros-kinetic/rocon_python_utils
     ros-kinetic/rocon_master_info
-    ros-kinetic/rocon_interactions
+    ros-kinetic/gateway_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/rocon_gateway_utils
+    ros-kinetic/capabilities
+    ros-kinetic/roslib
     ros-kinetic/rocon_app_manager_msgs
-    ros-kinetic/rocon_uri
     ros-kinetic/rosmaster
     ros-kinetic/rocon_python_comms
+    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rocon_app_utilities
+    ros-kinetic/rocon_console
+    ros-kinetic/rocon_uri
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-kinetic/roslint
     ros-kinetic/rostest
     dev-python/catkin_pkg
@@ -40,6 +40,7 @@ DEPEND="
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -58,11 +59,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

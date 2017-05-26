@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Face detection in images."
-HOMEPAGE="http://ros.org/wiki/face_detector"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.0.10-1.tar.gz"
 
 LICENSE="BSD"
@@ -12,48 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/std_srvs
-    ros-kinetic/roslib
-    ros-kinetic/image_transport
-    ros-kinetic/sensor_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/openni_launch
-    ros-kinetic/roscpp
-    ros-kinetic/rosbag
+    ros-kinetic/image_geometry
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
+    ros-kinetic/roslib
+    ros-kinetic/std_srvs
+    ros-kinetic/roscpp
+    ros-kinetic/stereo_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/actionlib_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
+    ros-kinetic/rosbag
+    ros-kinetic/image_transport
+    ros-kinetic/openni_launch
     ros-kinetic/geometry_msgs
     ros-kinetic/people_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/stereo_msgs
-    ros-kinetic/image_geometry
+    ros-kinetic/tf
+    ros-kinetic/rospy
+    ros-kinetic/cv_bridge
     ros-kinetic/actionlib
 "
-DEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/std_srvs
-    ros-kinetic/image_transport
-    ros-kinetic/sensor_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
-    ros-kinetic/rosbag
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
+DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/geometry_msgs
-    ros-kinetic/people_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/stereo_msgs
-    ros-kinetic/image_geometry
-    ros-kinetic/actionlib
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -72,11 +57,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

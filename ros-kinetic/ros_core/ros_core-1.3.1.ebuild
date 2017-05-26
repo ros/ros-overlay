@@ -12,33 +12,34 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/genpy
-    ros-kinetic/ros_comm
-    ros-kinetic/rospack
-    ros-kinetic/std_srvs
-    ros-kinetic/cmake_modules
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/roslisp
     ros-kinetic/genlisp
-    ros-kinetic/gencpp
-    ros-kinetic/rosbag_migration_rule
-    ros-kinetic/catkin
+    ros-kinetic/genpy
     ros-kinetic/genmsg
-    ros-kinetic/message_generation
+    ros-kinetic/catkin
+    ros-kinetic/std_srvs
+    ros-kinetic/gencpp
+    ros-kinetic/rosconsole_bridge
+    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp_core
     ros-kinetic/geneus
     ros-kinetic/gennodejs
-    ros-kinetic/rosconsole_bridge
-    ros-kinetic/roscpp_core
-    ros-kinetic/std_msgs
+    ros-kinetic/cmake_modules
+    ros-kinetic/roslisp
+    ros-kinetic/message_generation
+    ros-kinetic/rospack
     ros-kinetic/ros
+    ros-kinetic/rosbag_migration_rule
+    ros-kinetic/ros_comm
     ros-kinetic/common_msgs
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -57,11 +58,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

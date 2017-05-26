@@ -14,50 +14,34 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pcl_conversions
-    ros-kinetic/nodelet
-    ros-kinetic/message_filters
-    ros-kinetic/sensor_msgs
-    ros-kinetic/rosbag
-    ros-kinetic/roscpp
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/nodelet_topic_tools
-    ros-kinetic/pcl_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
     ros-kinetic/tf2_eigen
+    ros-kinetic/pcl_conversions
+    ros-kinetic/message_filters
     ros-kinetic/pluginlib
+    ros-kinetic/std_msgs
+    ros-kinetic/rosbag
+    ros-kinetic/pcl_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/nodelet_topic_tools
+    ros-kinetic/tf
+    ros-kinetic/nodelet
+    ros-kinetic/roscpp
     dev-cpp/eigen
+    sci-libs/vtk
     sci-libs/proj
     sci-libs/pcl
-    sci-libs/vtk
 "
-DEPEND="
-    ros-kinetic/pcl_conversions
-    ros-kinetic/cmake_modules
+DEPEND="${RDEPEND}
     ros-kinetic/rosconsole
-    ros-kinetic/nodelet
-    ros-kinetic/message_filters
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roslib
-    ros-kinetic/rosbag
-    ros-kinetic/roscpp
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/genmsg
-    ros-kinetic/nodelet_topic_tools
-    ros-kinetic/pcl_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/tf2_eigen
-    ros-kinetic/pluginlib
-    dev-cpp/eigen
-    sci-libs/vtk
-    sci-libs/proj
-    sci-libs/pcl
+    ros-kinetic/roslib
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -76,11 +60,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

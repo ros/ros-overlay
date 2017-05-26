@@ -9,7 +9,7 @@ DESCRIPTION="roseus_smach
      * Message publisher for visualizing current state by smach_viewer.
      * Simple pickle dump script for debugging state machine.
      * Execute state machine as a action server."
-HOMEPAGE="http://ros.org/wiki/roseus_smach"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.6.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -17,31 +17,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/actionlib_tutorials
+    ros-kinetic/smach_ros
+    ros-kinetic/roseus
+    ros-kinetic/euslisp
+    ros-kinetic/actionlib
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/smach
     ros-kinetic/rostest
-    ros-kinetic/roseus
-    ros-kinetic/smach_ros
-    ros-kinetic/smach_msgs
-    ros-kinetic/euslisp
-    ros-kinetic/actionlib
-"
-DEPEND="
     ros-kinetic/actionlib_tutorials
-    ros-kinetic/std_msgs
-    ros-kinetic/smach_ros
-    ros-kinetic/rostest
-    ros-kinetic/smach
-    ros-kinetic/roseus
     ros-kinetic/smach_msgs
+"
+DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/actionlib
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -60,11 +53,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

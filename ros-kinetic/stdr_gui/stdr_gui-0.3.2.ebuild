@@ -12,32 +12,24 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stdr_msgs
     ros-kinetic/stdr_robot
-    ros-kinetic/sensor_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/roslib
+    ros-kinetic/stdr_server
     ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
     ros-kinetic/stdr_parser
-    ros-kinetic/stdr_server
+    ros-kinetic/stdr_msgs
     dev-qt/qtcore
 "
-DEPEND="
-    ros-kinetic/stdr_msgs
-    ros-kinetic/stdr_robot
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roslib
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/stdr_parser
-    ros-kinetic/stdr_server
+DEPEND="${RDEPEND}
     dev-qt/qtcore
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -56,11 +48,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

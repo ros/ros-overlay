@@ -12,22 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ar_track_alvar
-    ros-kinetic/rospy
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
     ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/yocs_msgs
     ros-kinetic/actionlib
+    ros-kinetic/std_msgs
+    ros-kinetic/ar_track_alvar
+    ros-kinetic/yocs_msgs
+    ros-kinetic/rospy
+    ros-kinetic/tf
+    ros-kinetic/geometry_msgs
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-kinetic/roslint
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -46,11 +47,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

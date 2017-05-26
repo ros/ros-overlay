@@ -12,29 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/teleop_twist_joy
-    ros-kinetic/twist_mux
-    ros-kinetic/controller_manager
-    ros-kinetic/roscpp
-    ros-kinetic/interactive_marker_twist_server
-    ros-kinetic/joy
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/geometry_msgs
-    ros-kinetic/robot_localization
     ros-kinetic/joint_trajectory_controller
+    ros-kinetic/roscpp
+    ros-kinetic/diff_drive_controller
+    ros-kinetic/controller_manager
+    ros-kinetic/joy
+    ros-kinetic/interactive_marker_twist_server
+    ros-kinetic/twist_mux
+    ros-kinetic/teleop_twist_joy
+    ros-kinetic/yocs_cmd_vel_mux
+    ros-kinetic/robot_localization
+    ros-kinetic/geometry_msgs
     ros-kinetic/rostopic
     ros-kinetic/joint_state_controller
-    ros-kinetic/yocs_cmd_vel_mux
 "
-DEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/joy
+DEPEND="${RDEPEND}
     ros-kinetic/roslaunch
-    ros-kinetic/geometry_msgs
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -53,11 +51,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

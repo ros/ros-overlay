@@ -12,20 +12,21 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosjava_bootstrap
+    ros-kinetic/rosjava_messages
+    ros-kinetic/zeroconf_jmdns_suite
+    ros-kinetic/genjava
+    ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_extras
     ros-kinetic/rosjava_core
     ros-kinetic/rosjava_test_msgs
-    ros-kinetic/rosjava_messages
-    ros-kinetic/rosjava_bootstrap
-    ros-kinetic/zeroconf_jmdns_suite
-    ros-kinetic/rosjava_build_tools
-    ros-kinetic/genjava
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -44,11 +45,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

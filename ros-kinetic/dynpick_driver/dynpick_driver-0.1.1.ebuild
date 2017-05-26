@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION=""
-HOMEPAGE="http://wiki.ros.org/dynpick_driver"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/dynpick_driver-release/archive/release/kinetic/dynpick_driver/0.1.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,22 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/std_srvs
+    ros-kinetic/roscpp
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
     ros-kinetic/xacro
     ros-kinetic/rviz
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/robot_state_publisher
 "
-DEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
+DEPEND="${RDEPEND}
     dev-python/catkin_pkg
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -47,11 +45,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

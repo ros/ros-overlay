@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="message_to_tf translates pose information from different kind of common_msgs message types to tf. Currently the node supports nav_msgs/Odometry, geometry_msgs/PoseStamped and sensor_msgs/Imu messages as input.
     The resulting transform is divided into three subtransforms with intermediate frames for the footprint and the stabilized base frame (without roll and pitch)."
-HOMEPAGE="http://ros.org/wiki/message_to_tf"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/message_to_tf/0.3.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,24 +13,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/topic_tools
-    ros-kinetic/sensor_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/tf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/topic_tools
     ros-kinetic/geometry_msgs
+    ros-kinetic/tf
 "
-DEPEND="
-    ros-kinetic/topic_tools
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -49,11 +44,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

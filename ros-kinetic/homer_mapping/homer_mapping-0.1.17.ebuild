@@ -5,44 +5,34 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_mapping/archive/release/kinetic/homer_mapping/0.1.17-1.tar.gz"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_mapping/repository/archive.tar.gz?ref=release/kinetic/homer_mapping/0.1.17-1"
 
 LICENSE="LGPL-v2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/homer_mapnav_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
     ros-kinetic/homer_nav_libs
-    ros-kinetic/tf
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
-    dev-qt/qtwidgets
-    dev-cpp/eigen
-    dev-qt/qtcore
-    dev-qt/qtgui
-"
-DEPEND="
-    ros-kinetic/homer_mapnav_msgs
-    ros-kinetic/cmake_modules
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/roslib
-    ros-kinetic/roscpp
-    ros-kinetic/homer_nav_libs
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/homer_mapnav_msgs
     dev-qt/qtwidgets
-    dev-cpp/eigen
-    dev-qt/qtcore
     dev-qt/qtgui
+    dev-qt/qtcore
+    dev-cpp/eigen
+"
+DEPEND="${RDEPEND}
+    ros-kinetic/cmake_modules
     dev-qt/qtcore
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -61,11 +51,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

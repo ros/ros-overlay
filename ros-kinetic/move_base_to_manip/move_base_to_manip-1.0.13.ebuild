@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Move the robot base until a desired end-effector pose can be reached."
-HOMEPAGE="http://wiki.ros.org/move_base_to_manip"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/UTNuclearRoboticsPublic/move_base_to_manip-release/archive/release/kinetic/move_base_to_manip/1.0.13-0.tar.gz"
 
 LICENSE="See license.txt"
@@ -12,34 +12,24 @@ LICENSE="See license.txt"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/move_base_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/message_generation
     ros-kinetic/moveit_core
-    ros-kinetic/geometry_msgs
-    ros-kinetic/moveit_ros_planning_interface
-    ros-kinetic/tf
     ros-kinetic/interactive_markers
+    ros-kinetic/message_runtime
+    ros-kinetic/move_base_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
+    ros-kinetic/message_generation
+    ros-kinetic/visualization_msgs
+    ros-kinetic/moveit_ros_planning_interface
+    ros-kinetic/roscpp
     dev-cpp/eigen
 "
-DEPEND="
-    ros-kinetic/move_base_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/message_generation
-    ros-kinetic/moveit_core
-    ros-kinetic/geometry_msgs
-    ros-kinetic/moveit_ros_planning_interface
-    ros-kinetic/tf
-    ros-kinetic/interactive_markers
-    dev-cpp/eigen
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -58,11 +48,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

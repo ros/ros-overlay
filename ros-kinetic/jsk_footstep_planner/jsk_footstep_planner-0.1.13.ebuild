@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="jsk_footstep_planner"
-HOMEPAGE="http://ros.org/wiki/jsk_footstep_planner"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/kinetic/jsk_footstep_planner/0.1.13-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,36 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pcl_ros
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/roseus
+    ros-kinetic/roscpp
+    ros-kinetic/jsk_interactive_marker
     ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/jsk_topic_tools
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/geometry_msgs
+    ros-kinetic/visualization_msgs
     ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roseus
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_recognition_utils
-    ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_footstep_msgs
-"
-DEPEND="
-    ros-kinetic/pcl_ros
-    ros-kinetic/jsk_rviz_plugins
     ros-kinetic/jsk_topic_tools
-    ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/pcl_ros
+"
+DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/roseus
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_recognition_utils
-    ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_footstep_msgs
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -60,11 +50,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

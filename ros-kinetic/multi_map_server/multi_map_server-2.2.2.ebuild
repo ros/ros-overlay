@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="multi_map_server provides the"
-HOMEPAGE="http://ros.org/wiki/map_server"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/multi_map_server/2.2.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,32 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
+    ros-kinetic/nav_msgs
     ros-kinetic/rosconsole
     ros-kinetic/map_server
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/rospy
     ros-kinetic/tf
-    dev-cpp/yaml-cpp
     media-libs/sdl-image
+    dev-cpp/yaml-cpp
 "
-DEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/rosconsole
-    ros-kinetic/map_server
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
+DEPEND="${RDEPEND}
     ros-kinetic/jsk_tools
     ros-kinetic/rosmake
     dev-python/pyyaml
-    dev-cpp/yaml-cpp
-    media-libs/sdl-image
     dev-python/pillow
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -56,11 +49,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

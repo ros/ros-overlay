@@ -12,63 +12,41 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/rviz
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf_conversions
-    ros-kinetic/moveit_msgs
+    ros-kinetic/urdf
     ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/actionlib
+    ros-kinetic/roslib
+    ros-kinetic/eigen_conversions
+    ros-kinetic/jsk_footstep_msgs
     ros-kinetic/visualization_msgs
+    ros-kinetic/tf
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/interactive_markers
+    ros-kinetic/message_filters
+    ros-kinetic/moveit_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/urdf
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/message_filters
-    ros-kinetic/roslib
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/interactive_markers
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roseus
-    ros-kinetic/eigen_conversions
-    ros-kinetic/actionlib
-    dev-libs/tinyxml
-    dev-cpp/yaml-cpp
-"
-DEPEND="
-    ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/rviz
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/tf_conversions
-    ros-kinetic/moveit_msgs
-    ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/urdf
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/cmake_modules
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/message_filters
-    ros-kinetic/roslib
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/mk
-    ros-kinetic/rosbuild
-    ros-kinetic/interactive_markers
+    ros-kinetic/rviz
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/roseus
-    ros-kinetic/eigen_conversions
-    ros-kinetic/actionlib
-    dev-libs/tinyxml
+    ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/geometry_msgs
     dev-cpp/yaml-cpp
+    dev-libs/tinyxml
+"
+DEPEND="${RDEPEND}
+    ros-kinetic/cmake_modules
+    ros-kinetic/rosbuild
+    ros-kinetic/message_generation
+    ros-kinetic/mk
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -87,11 +65,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

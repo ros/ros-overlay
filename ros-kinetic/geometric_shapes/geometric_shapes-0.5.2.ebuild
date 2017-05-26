@@ -12,35 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/random_numbers
-    ros-kinetic/octomap
-    ros-kinetic/visualization_msgs
     ros-kinetic/shape_msgs
     ros-kinetic/resource_retriever
+    ros-kinetic/octomap
+    ros-kinetic/random_numbers
+    ros-kinetic/eigen_stl_containers
+    ros-kinetic/visualization_msgs
     dev-cpp/eigen
     media-libs/qhull
-    dev-libs/boost
     media-libs/assimp
     dev-libs/console_bridge
+    dev-libs/boost
 "
-DEPEND="
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/random_numbers
-    ros-kinetic/octomap
-    ros-kinetic/visualization_msgs
-    ros-kinetic/shape_msgs
-    ros-kinetic/resource_retriever
-    dev-cpp/eigen
-    media-libs/qhull
+DEPEND="${RDEPEND}
     media-libs/assimp
-    dev-libs/boost
-    dev-libs/console_bridge
     virtual/pkgconfig
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -59,11 +50,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

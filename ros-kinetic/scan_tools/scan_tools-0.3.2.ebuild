@@ -11,19 +11,20 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/laser_scan_splitter
     ros-kinetic/laser_ortho_projector
     ros-kinetic/laser_scan_matcher
-    ros-kinetic/ncd_parser
-    ros-kinetic/polar_scan_matcher
     ros-kinetic/laser_scan_sparsifier
+    ros-kinetic/polar_scan_matcher
+    ros-kinetic/ncd_parser
+    ros-kinetic/laser_scan_splitter
     ros-kinetic/scan_to_cloud_converter
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -42,11 +43,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

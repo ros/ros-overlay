@@ -12,46 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/image_transport
-    ros-kinetic/nodelet
-    ros-kinetic/swri_math_util
-    ros-kinetic/message_filters
-    ros-kinetic/cv_bridge
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/swri_opencv_util
     ros-kinetic/image_geometry
-    dev-qt/qtgui
+    ros-kinetic/nav_msgs
+    ros-kinetic/swri_opencv_util
+    ros-kinetic/message_filters
+    ros-kinetic/nodelet
+    ros-kinetic/std_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/tf
+    ros-kinetic/rospy
+    ros-kinetic/swri_math_util
+    ros-kinetic/cv_bridge
+    ros-kinetic/roscpp
     dev-cpp/eigen
+    dev-qt/qtgui
     dev-qt/qtopengl
 "
-DEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/image_transport
-    ros-kinetic/nodelet
-    ros-kinetic/swri_math_util
-    ros-kinetic/message_filters
-    ros-kinetic/cv_bridge
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/swri_opencv_util
-    ros-kinetic/image_geometry
-    dev-qt/qtgui
-    dev-cpp/eigen
-    dev-qt/qtopengl
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -70,11 +54,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

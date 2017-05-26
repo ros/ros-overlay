@@ -12,41 +12,31 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/orocos_kdl
-    ros-kinetic/image_transport
-    ros-kinetic/kdl_parser
-    ros-kinetic/cv_bridge
     ros-kinetic/naoqi_libqicore
-    ros-kinetic/rosbag_storage
-    ros-kinetic/naoqi_bridge_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/robot_state_publisher
     ros-kinetic/naoqi_libqi
+    ros-kinetic/naoqi_bridge_msgs
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/kdl_parser
+    ros-kinetic/image_transport
+    ros-kinetic/tf2_ros
+    ros-kinetic/orocos_kdl
+    ros-kinetic/cv_bridge
+    ros-kinetic/rosbag_storage
     dev-libs/boost
 "
-DEPEND="
-    ros-kinetic/orocos_kdl
+DEPEND="${RDEPEND}
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/image_transport
     ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/kdl_parser
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf2_msgs
     ros-kinetic/diagnostic_updater
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/sensor_msgs
-    ros-kinetic/naoqi_libqicore
-    ros-kinetic/rosbag_storage
-    ros-kinetic/naoqi_bridge_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/naoqi_libqi
-    dev-libs/boost
+    ros-kinetic/diagnostic_msgs
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -65,11 +55,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

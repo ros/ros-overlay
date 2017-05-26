@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Messages used by nodes in the people stack."
-HOMEPAGE="http://ros.org/wiki/people_msgs"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/people_msgs/1.0.10-1.tar.gz"
 
 LICENSE="BSD"
@@ -12,18 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/geometry_msgs
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -42,11 +41,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

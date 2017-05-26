@@ -12,37 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/posedetection_msgs
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/rosconsole
+    ros-kinetic/roscpp
+    ros-kinetic/message_filters
+    ros-kinetic/sensor_msgs
     ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/sensor_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/message_filters
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf
-    ros-kinetic/tf2
     ros-kinetic/eigen_conversions
     ros-kinetic/image_geometry
-"
-DEPEND="
     ros-kinetic/posedetection_msgs
-    ros-kinetic/rosconsole
-    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
     ros-kinetic/jsk_recognition_msgs
     ros-kinetic/cv_bridge
-    ros-kinetic/message_filters
-    ros-kinetic/roscpp
     ros-kinetic/tf2
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf
-    ros-kinetic/eigen_conversions
-    ros-kinetic/image_geometry
+"
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -61,11 +50,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

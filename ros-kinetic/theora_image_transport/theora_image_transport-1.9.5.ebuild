@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="Theora_image_transport provides a plugin to image_transport for
     transparently sending an image stream encoded with the Theora codec."
-HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/release/kinetic/theora_image_transport/1.9.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,30 +13,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_transport
-    ros-kinetic/cv_bridge
-    ros-kinetic/rosbag
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/pluginlib
+    ros-kinetic/rosbag
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
-    ros-kinetic/pluginlib
-    media-libs/libtheora
-    media-libs/libogg
-"
-DEPEND="
     ros-kinetic/image_transport
     ros-kinetic/cv_bridge
-    ros-kinetic/rosbag
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/message_generation
-    ros-kinetic/std_msgs
-    ros-kinetic/pluginlib
-    media-libs/libtheora
     media-libs/libogg
+    media-libs/libtheora
+"
+DEPEND="${RDEPEND}
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -55,11 +48,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

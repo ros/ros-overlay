@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION=""
-HOMEPAGE="http://ros.org/wiki/rosping"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rosping/2.0.20-0.tar.gz"
 
 LICENSE="Boost Software License, Version 1.0"
@@ -12,20 +12,19 @@ LICENSE="Boost Software License, Version 1.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
     ros-kinetic/std_msgs
+    ros-kinetic/roscpp
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-kinetic/rosboost_cfg
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/rostest
     ros-kinetic/mk
     ros-kinetic/rosbuild
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -44,11 +43,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

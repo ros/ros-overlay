@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="tf2_tools"
-HOMEPAGE="http://www.ros.org/wiki/tf2_tools"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_tools/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -16,14 +16,12 @@ RDEPEND="
     ros-kinetic/tf2_ros
     ros-kinetic/tf2
 "
-DEPEND="
-    ros-kinetic/tf2_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/tf2
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -42,11 +40,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

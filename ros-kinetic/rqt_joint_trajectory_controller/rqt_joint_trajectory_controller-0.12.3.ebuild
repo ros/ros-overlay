@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Graphical frontend for interacting with joint_trajectory_controller instances."
-HOMEPAGE="http://wiki.ros.org/rqt_joint_trajectory_controller"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/rqt_joint_trajectory_controller/0.12.3-0.tar.gz"
 
 LICENSE="Modified BSD"
@@ -12,18 +12,19 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/controller_manager_msgs
-    ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/control_msgs
     ros-kinetic/trajectory_msgs
+    ros-kinetic/rospy
+    ros-kinetic/control_msgs
+    ros-kinetic/rqt_gui_py
+    ros-kinetic/rqt_gui
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -42,11 +43,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

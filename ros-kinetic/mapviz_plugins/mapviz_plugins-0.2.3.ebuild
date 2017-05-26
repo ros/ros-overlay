@@ -13,58 +13,36 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/marti_common_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/swri_image_util
-    ros-kinetic/swri_route_util
-    ros-kinetic/nav_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/swri_transform_util
     ros-kinetic/stereo_msgs
-    ros-kinetic/swri_math_util
-    ros-kinetic/image_transport
+    ros-kinetic/swri_image_util
     ros-kinetic/swri_yaml_util
-    ros-kinetic/cv_bridge
-    ros-kinetic/marti_nav_msgs
+    ros-kinetic/swri_transform_util
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
     ros-kinetic/tf
     ros-kinetic/std_msgs
-    ros-kinetic/marti_visualization_msgs
-    ros-kinetic/pluginlib
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_transport
     ros-kinetic/mapviz
-    dev-qt/qtgui
-    dev-qt/qtwidgets
+    ros-kinetic/cv_bridge
+    ros-kinetic/marti_nav_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/marti_visualization_msgs
+    ros-kinetic/swri_route_util
+    ros-kinetic/swri_math_util
     dev-qt/qtopengl
     dev-qt/qtcore
+    dev-qt/qtwidgets
+    dev-qt/qtgui
 "
-DEPEND="
-    ros-kinetic/marti_common_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/swri_image_util
-    ros-kinetic/swri_route_util
-    ros-kinetic/nav_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/swri_transform_util
-    ros-kinetic/stereo_msgs
-    ros-kinetic/swri_math_util
-    ros-kinetic/image_transport
-    ros-kinetic/swri_yaml_util
-    ros-kinetic/cv_bridge
-    ros-kinetic/marti_nav_msgs
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/marti_visualization_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/mapviz
-    dev-qt/qtgui
+DEPEND="${RDEPEND}
     dev-qt/qtopengl
-    dev-qt/qtwidgets
-    dev-qt/qtopengl
-    dev-qt/qtcore
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -83,11 +61,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

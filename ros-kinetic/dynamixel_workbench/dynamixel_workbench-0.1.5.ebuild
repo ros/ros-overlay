@@ -14,18 +14,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamixel_workbench_msgs
+    ros-kinetic/dynamixel_workbench_single_manager_gui
+    ros-kinetic/dynamixel_workbench_single_manager
     ros-kinetic/dynamixel_workbench_tutorials
     ros-kinetic/dynamixel_workbench_toolbox
-    ros-kinetic/dynamixel_workbench_single_manager_gui
-    ros-kinetic/dynamixel_workbench_msgs
-    ros-kinetic/dynamixel_workbench_single_manager
     ros-kinetic/dynamixel_workbench_controllers
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -44,11 +45,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

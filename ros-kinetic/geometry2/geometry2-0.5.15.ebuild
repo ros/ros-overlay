@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A metapackage to bring in the default packages second generation Transform Library in ros, tf2."
-HOMEPAGE="http://www.ros.org/wiki/geometry2"
+HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/geometry2/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,21 +13,22 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/tf2_py
-    ros-kinetic/tf2_msgs
     ros-kinetic/tf2_bullet
-    ros-kinetic/tf2
-    ros-kinetic/tf2_sensor_msgs
-    ros-kinetic/tf2_ros
     ros-kinetic/tf2_tools
-    ros-kinetic/tf2_kdl
+    ros-kinetic/tf2_py
+    ros-kinetic/tf2_sensor_msgs
     ros-kinetic/tf2_eigen
+    ros-kinetic/tf2_ros
+    ros-kinetic/tf2
+    ros-kinetic/tf2_msgs
+    ros-kinetic/tf2_kdl
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
+ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
     wget -O ${P}.tar.gz ${SRC_URI}
@@ -46,11 +47,9 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
-}
-
-pkg_postinst() {
-    cd ../work
+    cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/kinetic" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }
