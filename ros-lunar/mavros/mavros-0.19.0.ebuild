@@ -12,46 +12,46 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/rosconsole_bridge
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
-    ros-lunar/sensor_msgs
-    ros-lunar/mavlink
-    ros-lunar/mavros_msgs
+    ros-lunar/rosconsole_bridge
     ros-lunar/eigen_conversions
+    ros-lunar/roscpp
+    ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
     ros-lunar/diagnostic_updater
     ros-lunar/libmavconn
-    ros-lunar/rospy
-    ros-lunar/tf2_ros
     ros-lunar/geometry_msgs
-    ros-lunar/diagnostic_msgs
-    boost
-    eigen
+    ros-lunar/mavros_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/mavlink
+    ros-lunar/tf2_ros
+    ros-lunar/message_runtime
+    ros-lunar/std_srvs
+    ros-lunar/pluginlib
+    dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="
+    ros-lunar/std_msgs
+    ros-lunar/rosconsole_bridge
+    ros-lunar/eigen_conversions
+    ros-lunar/roscpp
+    ros-lunar/diagnostic_msgs
+    ros-lunar/mavlink
+    ros-lunar/diagnostic_updater
+    ros-lunar/libmavconn
+    ros-lunar/geometry_msgs
+    ros-lunar/mavros_msgs
     ros-lunar/nav_msgs
+    ros-lunar/sensor_msgs
     ros-lunar/tf2_ros
     ros-lunar/std_srvs
     ros-lunar/pluginlib
-    ros-lunar/rosconsole_bridge
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/libmavconn
-    ros-lunar/eigen_conversions
-    ros-lunar/diagnostic_updater
     ros-lunar/cmake_modules
-    ros-lunar/mavlink
-    ros-lunar/geometry_msgs
-    ros-lunar/mavros_msgs
     ros-lunar/angles
-    ros-lunar/diagnostic_msgs
-    ros-lunar/roscpp
-    eigen
-    boost
+    dev-libs/boost
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

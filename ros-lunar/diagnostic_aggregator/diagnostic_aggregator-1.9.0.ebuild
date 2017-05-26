@@ -13,22 +13,22 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/xmlrpcpp
-    ros-lunar/rospy
     ros-lunar/bondpy
     ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
     ros-lunar/bondcpp
+    ros-lunar/xmlrpcpp
+    ros-lunar/pluginlib
 "
 DEPEND="
     ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/xmlrpcpp
-    ros-lunar/rostest
-    ros-lunar/rospy
     ros-lunar/bondpy
     ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
+    ros-lunar/rostest
     ros-lunar/bondcpp
+    ros-lunar/xmlrpcpp
+    ros-lunar/pluginlib
 "
 
 SLOT="0/0"

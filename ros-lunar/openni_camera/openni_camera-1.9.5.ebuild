@@ -17,26 +17,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
-    ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
+    ros-lunar/sensor_msgs
     ros-lunar/nodelet
-    libopenni-dev
-    libusb-1.0-dev
-    log4cxx
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/camera_info_manager
+    =dev-libs/libusb-1.0*
+    dev-libs/OpenNI
+    dev-libs/log4cxx
 "
 DEPEND="
-    ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
-    ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
+    ros-lunar/sensor_msgs
     ros-lunar/nodelet
-    libopenni-dev
-    libusb-1.0-dev
-    log4cxx
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/camera_info_manager
+    =dev-libs/libusb-1.0*
+    dev-libs/OpenNI
+    dev-libs/log4cxx
 "
 
 SLOT="0/0"

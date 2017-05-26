@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rqt_robot_steering
-    ros-lunar/gazebo_ros_control
-    ros-lunar/xacro
-    ros-lunar/controller_manager
     ros-lunar/diff_drive_controller
-    ros-lunar/robot_state_publisher
     ros-lunar/urdf
-    ros-lunar/joint_state_publisher
-    ros-lunar/position_controllers
-    ros-lunar/joint_state_controller
+    ros-lunar/gazebo_ros_control
     ros-lunar/gazebo_ros
+    ros-lunar/joint_state_publisher
     ros-lunar/rviz
+    ros-lunar/xacro
+    ros-lunar/joint_state_controller
+    ros-lunar/robot_state_publisher
+    ros-lunar/controller_manager
+    ros-lunar/position_controllers
 "
 DEPEND="
     ros-lunar/roslaunch

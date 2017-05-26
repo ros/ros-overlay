@@ -14,48 +14,48 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/tf2_eigen
-    ros-lunar/pcl_conversions
     ros-lunar/message_filters
-    ros-lunar/pluginlib
+    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/rosbag
-    ros-lunar/pcl_msgs
+    ros-lunar/tf2_eigen
     ros-lunar/sensor_msgs
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/tf
     ros-lunar/nodelet
-    ros-lunar/roscpp
-    eigen
-    libvtk-java
-    proj
-    libpcl-all-dev
-    qtbase5-dev
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/nodelet_topic_tools
+    ros-lunar/pcl_msgs
+    ros-lunar/pluginlib
+    ros-lunar/tf
+    ros-lunar/pcl_conversions
+    sci-libs/pcl
+    sci-libs/proj
+    dev-cpp/eigen
+    dev-qt/qtcore
+    sci-libs/vtk
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/pcl_conversions
-    ros-lunar/pcl_msgs
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/cmake_modules
-    ros-lunar/roscpp
-    ros-lunar/roslib
-    ros-lunar/tf
-    ros-lunar/nodelet
-    ros-lunar/message_filters
     ros-lunar/sensor_msgs
-    ros-lunar/std_msgs
-    ros-lunar/tf2_eigen
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/genmsg
     ros-lunar/pluginlib
+    ros-lunar/cmake_modules
+    ros-lunar/nodelet
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/nodelet_topic_tools
+    ros-lunar/roslib
+    ros-lunar/rosconsole
+    ros-lunar/genmsg
+    ros-lunar/tf2_eigen
+    ros-lunar/pcl_msgs
+    ros-lunar/message_filters
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/rosbag
-    eigen
-    qtbase5-dev
-    libpcl-all-dev
-    libvtk-java
-    proj
+    ros-lunar/tf
+    ros-lunar/pcl_conversions
+    dev-qt/qtcore
+    sci-libs/proj
+    dev-cpp/eigen
+    sci-libs/pcl
+    sci-libs/vtk
 "
 
 SLOT="0/0"

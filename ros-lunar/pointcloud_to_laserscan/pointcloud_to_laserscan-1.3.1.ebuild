@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/message_filters
+    ros-lunar/roscpp
     ros-lunar/sensor_msgs
-    ros-lunar/tf2_sensor_msgs
-    ros-lunar/tf2_ros
     ros-lunar/nodelet
+    ros-lunar/tf2_ros
     ros-lunar/tf2
+    ros-lunar/tf2_sensor_msgs
 "
 DEPEND="
-    ros-lunar/roscpp
     ros-lunar/message_filters
+    ros-lunar/roscpp
     ros-lunar/sensor_msgs
-    ros-lunar/tf2_sensor_msgs
-    ros-lunar/tf2_ros
     ros-lunar/nodelet
+    ros-lunar/tf2_ros
     ros-lunar/tf2
+    ros-lunar/tf2_sensor_msgs
 "
 
 SLOT="0/0"

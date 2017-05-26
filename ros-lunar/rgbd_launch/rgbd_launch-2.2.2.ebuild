@@ -14,16 +14,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/image_proc
     ros-lunar/depth_image_proc
-    ros-lunar/tf2_ros
     ros-lunar/nodelet
+    ros-lunar/image_proc
+    ros-lunar/tf2_ros
 "
 DEPEND="
-    ros-lunar/image_proc
     ros-lunar/depth_image_proc
-    ros-lunar/tf2_ros
     ros-lunar/nodelet
+    ros-lunar/image_proc
+    ros-lunar/tf2_ros
 "
 
 SLOT="0/0"

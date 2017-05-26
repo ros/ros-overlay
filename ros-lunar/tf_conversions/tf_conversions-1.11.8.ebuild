@@ -19,20 +19,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/python_orocos_kdl
+    ros-lunar/orocos_kdl
     ros-lunar/kdl_conversions
     ros-lunar/geometry_msgs
     ros-lunar/tf
-    ros-lunar/orocos_kdl
-    ros-lunar/python_orocos_kdl
-    eigen
+    dev-cpp/eigen
 "
 DEPEND="
-    ros-lunar/kdl_conversions
-    ros-lunar/cmake_modules
-    ros-lunar/geometry_msgs
-    ros-lunar/tf
     ros-lunar/orocos_kdl
-    eigen
+    ros-lunar/kdl_conversions
+    ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
+    ros-lunar/tf
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

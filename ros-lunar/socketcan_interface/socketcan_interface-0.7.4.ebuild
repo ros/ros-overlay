@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/class_loader
-    boost
-    linux-headers-generic
+    sys-kernel/linux-headers
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/class_loader
-    boost
-    linux-headers-generic
+    sys-kernel/linux-headers
+    dev-libs/boost
 "
 
 SLOT="0/0"

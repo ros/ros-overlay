@@ -12,41 +12,41 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/moveit_core
-    ros-lunar/roscpp
     ros-lunar/message_filters
-    ros-lunar/rosconsole
+    ros-lunar/roscpp
+    ros-lunar/cv_bridge
+    ros-lunar/image_transport
     ros-lunar/urdf
     ros-lunar/sensor_msgs
-    ros-lunar/image_transport
     ros-lunar/octomap
-    ros-lunar/tf
-    ros-lunar/cv_bridge
-    ros-lunar/moveit_msgs
     ros-lunar/tf_conversions
-    glut
-    opengl
-    libglew-dev
+    ros-lunar/moveit_msgs
+    ros-lunar/moveit_core
+    ros-lunar/rosconsole
+    ros-lunar/pluginlib
+    ros-lunar/tf
+    media-libs/mesa
+    media-libs/glew
+    media-libs/freeglut
 "
 DEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/moveit_core
-    ros-lunar/roscpp
     ros-lunar/message_filters
-    ros-lunar/rosconsole
+    ros-lunar/roscpp
+    ros-lunar/cv_bridge
+    ros-lunar/image_transport
     ros-lunar/urdf
     ros-lunar/sensor_msgs
-    ros-lunar/image_transport
     ros-lunar/octomap
-    ros-lunar/tf
-    ros-lunar/cv_bridge
-    ros-lunar/moveit_msgs
     ros-lunar/tf_conversions
-    eigen
-    glut
-    opengl
-    libglew-dev
+    ros-lunar/moveit_msgs
+    ros-lunar/moveit_core
+    ros-lunar/rosconsole
+    ros-lunar/pluginlib
+    ros-lunar/tf
+    media-libs/mesa
+    media-libs/glew
+    media-libs/freeglut
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

@@ -13,16 +13,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/qt_gui
     ros-lunar/pluginlib
+    ros-lunar/qt_gui
 "
 DEPEND="
     ros-lunar/python_qt_binding
     ros-lunar/pluginlib
-    qtbase5-dev
-    qt5-qmake
-    tinyxml
-    pkg-config
+    dev-libs/tinyxml
+    virtual/pkgconfig
+    dev-qt/qtcore
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

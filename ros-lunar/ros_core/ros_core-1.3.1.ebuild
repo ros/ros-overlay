@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/genlisp
-    ros-lunar/genpy
-    ros-lunar/genmsg
-    ros-lunar/catkin
-    ros-lunar/std_srvs
-    ros-lunar/gencpp
-    ros-lunar/rosconsole_bridge
-    ros-lunar/std_msgs
-    ros-lunar/message_runtime
-    ros-lunar/roscpp_core
     ros-lunar/geneus
-    ros-lunar/gennodejs
-    ros-lunar/cmake_modules
-    ros-lunar/roslisp
+    ros-lunar/genmsg
+    ros-lunar/gencpp
     ros-lunar/message_generation
-    ros-lunar/rospack
     ros-lunar/ros
     ros-lunar/rosbag_migration_rule
-    ros-lunar/ros_comm
+    ros-lunar/rosconsole_bridge
+    ros-lunar/roslisp
+    ros-lunar/roscpp_core
+    ros-lunar/std_msgs
+    ros-lunar/gennodejs
+    ros-lunar/rosgraph_msgs
     ros-lunar/common_msgs
+    ros-lunar/rospack
+    ros-lunar/ros_comm
+    ros-lunar/catkin
+    ros-lunar/genlisp
+    ros-lunar/genpy
+    ros-lunar/message_runtime
+    ros-lunar/std_srvs
+    ros-lunar/cmake_modules
 "
 DEPEND="
 "

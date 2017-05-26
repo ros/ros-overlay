@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/robot_state_publisher
     ros-lunar/joint_state_publisher
+    ros-lunar/robot_state_publisher
 "
 DEPEND="
 "

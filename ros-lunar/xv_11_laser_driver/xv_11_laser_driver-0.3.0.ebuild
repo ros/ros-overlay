@@ -12,7 +12,7 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    boost
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/sensor_msgs

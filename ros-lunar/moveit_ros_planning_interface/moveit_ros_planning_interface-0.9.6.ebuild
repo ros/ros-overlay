@@ -12,33 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
+    ros-lunar/eigen_conversions
+    ros-lunar/rosconsole
+    ros-lunar/rospy
+    ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_manipulation
+    ros-lunar/tf_conversions
     ros-lunar/actionlib
     ros-lunar/moveit_ros_warehouse
     ros-lunar/moveit_ros_move_group
-    ros-lunar/eigen_conversions
-    ros-lunar/moveit_ros_planning
-    ros-lunar/rospy
     ros-lunar/tf
-    ros-lunar/moveit_ros_manipulation
-    ros-lunar/tf_conversions
-    python
+    dev-lang/python
+dev-lang/python-exec
 "
 DEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
+    ros-lunar/eigen_conversions
+    ros-lunar/rosconsole
+    ros-lunar/rospy
+    ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_manipulation
+    ros-lunar/tf_conversions
     ros-lunar/actionlib
     ros-lunar/moveit_ros_warehouse
     ros-lunar/moveit_ros_move_group
-    ros-lunar/eigen_conversions
-    ros-lunar/moveit_ros_planning
-    ros-lunar/rospy
     ros-lunar/tf
-    ros-lunar/moveit_ros_manipulation
-    ros-lunar/tf_conversions
-    python
-    eigen
+    dev-cpp/eigen
+    dev-lang/python
+dev-lang/python-exec
 "
 
 SLOT="0/0"

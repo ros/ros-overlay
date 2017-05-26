@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/hardware_interface
     ros-lunar/urdf
     ros-lunar/roscpp
-    liburdfdom-dev
+    ros-lunar/hardware_interface
+    dev-libs/urdfdom
 "
 DEPEND="
-    ros-lunar/hardware_interface
     ros-lunar/urdf
     ros-lunar/roscpp
-    liburdfdom-dev
+    ros-lunar/hardware_interface
+    dev-libs/urdfdom
 "
 
 SLOT="0/0"

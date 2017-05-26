@@ -13,26 +13,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/pluginlib
-    ros-lunar/rosbag
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
     ros-lunar/image_transport
+    ros-lunar/rosbag
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/message_runtime
     ros-lunar/cv_bridge
-    libogg
-    libtheora
+    ros-lunar/pluginlib
+    media-libs/libogg
+    media-libs/libtheora
 "
 DEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/pluginlib
-    ros-lunar/rosbag
+    ros-lunar/message_generation
     ros-lunar/std_msgs
     ros-lunar/image_transport
-    ros-lunar/message_generation
+    ros-lunar/rosbag
+    ros-lunar/dynamic_reconfigure
     ros-lunar/cv_bridge
-    libogg
-    libtheora
+    ros-lunar/pluginlib
+    media-libs/libogg
+    media-libs/libtheora
 "
 
 SLOT="0/0"

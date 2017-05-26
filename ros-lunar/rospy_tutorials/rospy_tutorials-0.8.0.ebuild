@@ -19,8 +19,8 @@ RDEPEND="
 "
 DEPEND="
     ros-lunar/message_generation
-    ros-lunar/rostest
     ros-lunar/std_msgs
+    ros-lunar/rostest
 "
 
 SLOT="0/0"

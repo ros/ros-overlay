@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/genpy
     ros-lunar/rosbag
+    ros-lunar/genpy
+    ros-lunar/rospy
 "
 DEPEND="
     ros-lunar/rostest

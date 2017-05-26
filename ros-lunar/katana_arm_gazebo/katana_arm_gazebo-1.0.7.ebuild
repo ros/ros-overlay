@@ -12,32 +12,32 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/xacro
-    ros-lunar/roscpp
-    ros-lunar/controller_manager
     ros-lunar/std_msgs
-    ros-lunar/robot_state_publisher
+    ros-lunar/roscpp
     ros-lunar/urdf
-    ros-lunar/controller_manager_msgs
-    ros-lunar/actionlib
+    ros-lunar/gazebo_ros
     ros-lunar/joint_trajectory_controller
     ros-lunar/katana_gazebo_plugins
-    ros-lunar/gazebo_ros
     ros-lunar/katana_description
+    ros-lunar/controller_manager_msgs
+    ros-lunar/xacro
+    ros-lunar/actionlib
+    ros-lunar/robot_state_publisher
+    ros-lunar/controller_manager
 "
 DEPEND="
-    ros-lunar/xacro
-    ros-lunar/roscpp
-    ros-lunar/controller_manager
     ros-lunar/std_msgs
-    ros-lunar/robot_state_publisher
+    ros-lunar/roscpp
     ros-lunar/urdf
-    ros-lunar/controller_manager_msgs
-    ros-lunar/actionlib
+    ros-lunar/gazebo_ros
     ros-lunar/joint_trajectory_controller
     ros-lunar/katana_gazebo_plugins
-    ros-lunar/gazebo_ros
     ros-lunar/katana_description
+    ros-lunar/controller_manager_msgs
+    ros-lunar/xacro
+    ros-lunar/actionlib
+    ros-lunar/robot_state_publisher
+    ros-lunar/controller_manager
 "
 
 SLOT="0/0"

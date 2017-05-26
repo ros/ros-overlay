@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/tf
     ros-lunar/urdf
     ros-lunar/controller_interface
+    ros-lunar/nav_msgs
     ros-lunar/realtime_tools
+    ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/tf
     ros-lunar/urdf
     ros-lunar/controller_interface
+    ros-lunar/nav_msgs
     ros-lunar/realtime_tools
+    ros-lunar/tf
 "
 
 SLOT="0/0"

@@ -12,27 +12,27 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/control_toolbox
-    ros-lunar/roscpp
-    ros-lunar/mavros
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/eigen_conversions
+    ros-lunar/tf2_ros
+    ros-lunar/mavros
     ros-lunar/mavros_extras
     ros-lunar/geometry_msgs
-    ros-lunar/tf2_ros
-    eigen
+    dev-cpp/eigen
 "
 DEPEND="
     ros-lunar/control_toolbox
+    ros-lunar/std_msgs
     ros-lunar/roscpp
+    ros-lunar/eigen_conversions
     ros-lunar/tf2_ros
     ros-lunar/mavros
-    ros-lunar/std_msgs
-    ros-lunar/eigen_conversions
-    ros-lunar/cmake_modules
     ros-lunar/mavros_extras
     ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
     ros-lunar/angles
-    eigen
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

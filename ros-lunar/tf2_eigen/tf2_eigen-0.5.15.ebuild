@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/cmake_modules
     ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
     ros-lunar/tf2
 "
 DEPEND="
-    ros-lunar/cmake_modules
-    ros-lunar/geometry_msgs
     ros-lunar/tf2
-    eigen
+    ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

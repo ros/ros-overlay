@@ -12,31 +12,31 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/shape_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/random_numbers
     ros-lunar/resource_retriever
     ros-lunar/octomap
-    ros-lunar/random_numbers
+    ros-lunar/shape_msgs
     ros-lunar/eigen_stl_containers
-    ros-lunar/visualization_msgs
-    eigen
-    libqhull
-    assimp
-    libconsole-bridge-dev
-    boost
+    dev-libs/boost
+    media-libs/qhull
+    dev-libs/console_bridge
+    media-libs/assimp
+    dev-cpp/eigen
 "
 DEPEND="
-    ros-lunar/shape_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/random_numbers
     ros-lunar/resource_retriever
     ros-lunar/octomap
-    ros-lunar/random_numbers
+    ros-lunar/shape_msgs
     ros-lunar/eigen_stl_containers
-    ros-lunar/visualization_msgs
-    eigen
-    libqhull
-    assimp-dev
-    libconsole-bridge-dev
-    boost
-    pkg-config
+    media-libs/assimp
+    dev-libs/boost
+    media-libs/qhull
+    dev-libs/console_bridge
+    virtual/pkgconfig
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/python_qt_binding
-    python-pydot
+    media-gfx/pydot
 "
 DEPEND="
 "

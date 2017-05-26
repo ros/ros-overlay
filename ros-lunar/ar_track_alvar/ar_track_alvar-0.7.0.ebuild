@@ -12,43 +12,43 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/pcl_conversions
-    ros-lunar/roscpp
-    ros-lunar/ar_track_alvar_msgs
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
-    ros-lunar/sensor_msgs
-    ros-lunar/resource_retriever
+    ros-lunar/roscpp
     ros-lunar/image_transport
-    ros-lunar/geometry_msgs
-    ros-lunar/visualization_msgs
-    ros-lunar/tf
+    ros-lunar/ar_track_alvar_msgs
+    ros-lunar/resource_retriever
     ros-lunar/rospy
-    ros-lunar/tf2
-    ros-lunar/cv_bridge
+    ros-lunar/sensor_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/dynamic_reconfigure
     ros-lunar/pcl_ros
-    tinyxml
+    ros-lunar/tf2
+    ros-lunar/message_runtime
+    ros-lunar/cv_bridge
+    ros-lunar/geometry_msgs
+    ros-lunar/tf
+    ros-lunar/pcl_conversions
+    dev-libs/tinyxml
 "
 DEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/pcl_conversions
-    ros-lunar/roscpp
-    ros-lunar/ar_track_alvar_msgs
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/resource_retriever
-    ros-lunar/image_transport
-    ros-lunar/tf
-    ros-lunar/cmake_modules
-    ros-lunar/geometry_msgs
-    ros-lunar/visualization_msgs
     ros-lunar/message_generation
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/image_transport
+    ros-lunar/ar_track_alvar_msgs
+    ros-lunar/resource_retriever
     ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/pcl_ros
     ros-lunar/tf2
     ros-lunar/cv_bridge
-    ros-lunar/pcl_ros
-    tinyxml
+    ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
+    ros-lunar/tf
+    ros-lunar/pcl_conversions
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

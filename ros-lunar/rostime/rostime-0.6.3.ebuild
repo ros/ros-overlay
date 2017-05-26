@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/cpp_common
-    boost
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/cpp_common
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

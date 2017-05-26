@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
     ros-lunar/rosparam
+    ros-lunar/rosunit
+    ros-lunar/rosgraph_msgs
     ros-lunar/roslib
     ros-lunar/rosmaster
-    ros-lunar/rosout
     ros-lunar/rosclean
-    ros-lunar/rosunit
-    python-yaml
-    python-rospkg
-    python-paramiko
+    ros-lunar/rosout
+    dev-python/rospkg
+    dev-python/pyyaml
+    dev-python/paramiko
 "
 DEPEND="
 "

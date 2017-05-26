@@ -12,13 +12,13 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/can_msgs
+    ros-lunar/canopen_402
+    ros-lunar/canopen_motor_node
+    ros-lunar/canopen_master
     ros-lunar/socketcan_interface
     ros-lunar/socketcan_bridge
     ros-lunar/canopen_chain_node
-    ros-lunar/canopen_master
-    ros-lunar/canopen_402
-    ros-lunar/can_msgs
-    ros-lunar/canopen_motor_node
 "
 DEPEND="
 "

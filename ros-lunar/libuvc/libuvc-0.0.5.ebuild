@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    libusb-1.0-dev
+    =dev-libs/libusb-1.0*
 "
 DEPEND="
-    libusb-1.0-dev
+    =dev-libs/libusb-1.0*
 "
 
 SLOT="0/0"

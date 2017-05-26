@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_ros_planning
-    ros-lunar/pluginlib
-    ros-lunar/moveit_ros_warehouse
     ros-lunar/roscpp
+    ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_warehouse
+    ros-lunar/pluginlib
 "
 DEPEND="
-    ros-lunar/moveit_ros_planning
-    ros-lunar/pluginlib
-    ros-lunar/moveit_ros_warehouse
     ros-lunar/roscpp
+    ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_warehouse
+    ros-lunar/pluginlib
 "
 
 SLOT="0/0"

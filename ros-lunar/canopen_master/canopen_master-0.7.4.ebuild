@@ -14,12 +14,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/socketcan_interface
     ros-lunar/class_loader
-    boost
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/socketcan_interface
     ros-lunar/class_loader
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

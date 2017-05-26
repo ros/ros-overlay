@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/gazebo_ros_pkgs
-    ros-lunar/rqt_common_plugins
-    ros-lunar/rqt_robot_plugins
     ros-lunar/robot
+    ros-lunar/gazebo_ros_pkgs
+    ros-lunar/rqt_robot_plugins
     ros-lunar/stage_ros
+    ros-lunar/rqt_common_plugins
 "
 DEPEND="
 "

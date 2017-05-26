@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/urdf
-    ros-lunar/orocos_kdl
     ros-lunar/python_orocos_kdl
+    ros-lunar/orocos_kdl
     ros-lunar/urdfdom_py
 "
 DEPEND="
     ros-lunar/urdf
-    ros-lunar/rostest
     ros-lunar/orocos_kdl
+    ros-lunar/rostest
 "
 
 SLOT="0/0"

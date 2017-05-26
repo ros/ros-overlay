@@ -5,21 +5,21 @@ EAPI=6
 
 DESCRIPTION="OMPL is a free sampling-based motion planning library."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/lunar/ompl/1.3.1-2.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/lunar/ompl/1.3.1-3.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    boost
-    eigen
+    dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="
-    boost
-    cmake
-    eigen
-    pkg-config
+    virtual/pkgconfig
+    dev-libs/boost
+    dev-util/cmake
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf
-    ros-lunar/geometry_msgs
     ros-lunar/sensor_msgs
     ros-lunar/std_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/tf
-    ros-lunar/std_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
     ros-lunar/geometry_msgs
+    ros-lunar/tf
 "
 
 SLOT="0/0"

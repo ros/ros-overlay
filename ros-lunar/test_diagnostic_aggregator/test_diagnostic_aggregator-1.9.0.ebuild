@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/rospy
     ros-lunar/diagnostic_msgs
-    ros-lunar/diagnostic_aggregator
     ros-lunar/pluginlib
+    ros-lunar/diagnostic_aggregator
+    ros-lunar/rospy
 "
 DEPEND="
     ros-lunar/roscpp
+    ros-lunar/diagnostic_msgs
     ros-lunar/diagnostic_aggregator
-    ros-lunar/pluginlib
     ros-lunar/rostest
     ros-lunar/rospy
-    ros-lunar/diagnostic_msgs
+    ros-lunar/pluginlib
 "
 
 SLOT="0/0"

@@ -16,13 +16,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/mavlink
-    libconsole-bridge-dev
-    boost
+    dev-libs/console_bridge
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/mavlink
-    libconsole-bridge-dev
-    boost
+    dev-libs/console_bridge
+    dev-libs/boost
 "
 
 SLOT="0/0"

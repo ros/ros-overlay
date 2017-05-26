@@ -13,24 +13,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roslz4
     ros-lunar/rostime
-    ros-lunar/roscpp_serialization
+    ros-lunar/roslz4
     ros-lunar/roscpp_traits
+    ros-lunar/roscpp_serialization
     ros-lunar/cpp_common
-    bzip2
-    libconsole-bridge-dev
-    boost
+    dev-libs/boost
+    dev-libs/console_bridge
+    app-arch/bzip2
 "
 DEPEND="
-    ros-lunar/roslz4
     ros-lunar/rostime
-    ros-lunar/roscpp_serialization
+    ros-lunar/roslz4
     ros-lunar/roscpp_traits
+    ros-lunar/roscpp_serialization
     ros-lunar/cpp_common
-    bzip2
-    libconsole-bridge-dev
-    boost
+    dev-libs/boost
+    dev-libs/console_bridge
+    app-arch/bzip2
 "
 
 SLOT="0/0"

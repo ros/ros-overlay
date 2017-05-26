@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_core
-    ros-lunar/xacro
-    ros-lunar/moveit_ros_visualization
     ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_visualization
     ros-lunar/srdfdom
-    yaml-cpp
+    ros-lunar/xacro
+    ros-lunar/moveit_core
+    dev-cpp/yaml-cpp
 "
 DEPEND="
-    ros-lunar/moveit_ros_planning
-    ros-lunar/moveit_core
     ros-lunar/srdfdom
+    ros-lunar/moveit_core
+    ros-lunar/moveit_ros_planning
     ros-lunar/moveit_ros_visualization
-    yaml-cpp
+    dev-cpp/yaml-cpp
 "
 
 SLOT="0/0"

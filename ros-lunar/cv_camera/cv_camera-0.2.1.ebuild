@@ -14,22 +14,22 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
+    ros-lunar/opencv3
+    ros-lunar/image_transport
+    ros-lunar/sensor_msgs
     ros-lunar/nodelet
     ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
-    ros-lunar/opencv3
     ros-lunar/cv_bridge
 "
 DEPEND="
     ros-lunar/roscpp
+    ros-lunar/opencv3
+    ros-lunar/image_transport
+    ros-lunar/sensor_msgs
+    ros-lunar/rostest
     ros-lunar/nodelet
     ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
     ros-lunar/roslint
-    ros-lunar/opencv3
-    ros-lunar/rostest
     ros-lunar/cv_bridge
 "
 

@@ -17,13 +17,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    python
+    dev-lang/python
+dev-lang/python-exec
 "
 DEPEND="
-    python
-    python-setuptools
-    python-lxml
-    python-future
+    dev-python/future
+    dev-python/lxml
+    dev-lang/python
+dev-lang/python-exec
+    dev-python/setuptools
 "
 
 SLOT="0/0"

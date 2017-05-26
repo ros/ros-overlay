@@ -12,30 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/hardware_interface
     ros-lunar/control_toolbox
-    ros-lunar/roscpp
-    ros-lunar/controller_manager
-    ros-lunar/pluginlib
-    ros-lunar/transmission_interface
-    ros-lunar/urdf
     ros-lunar/std_msgs
-    ros-lunar/joint_limits_interface
-    ros-lunar/angles
+    ros-lunar/roscpp
+    ros-lunar/hardware_interface
+    ros-lunar/urdf
     ros-lunar/gazebo_ros
+    ros-lunar/transmission_interface
+    ros-lunar/joint_limits_interface
+    ros-lunar/pluginlib
+    ros-lunar/controller_manager
+    ros-lunar/angles
 "
 DEPEND="
-    ros-lunar/hardware_interface
     ros-lunar/control_toolbox
-    ros-lunar/roscpp
-    ros-lunar/controller_manager
-    ros-lunar/pluginlib
-    ros-lunar/transmission_interface
-    ros-lunar/urdf
     ros-lunar/std_msgs
-    ros-lunar/joint_limits_interface
-    ros-lunar/angles
+    ros-lunar/roscpp
+    ros-lunar/hardware_interface
+    ros-lunar/urdf
     ros-lunar/gazebo_dev
+    ros-lunar/transmission_interface
+    ros-lunar/joint_limits_interface
+    ros-lunar/pluginlib
+    ros-lunar/controller_manager
+    ros-lunar/angles
 "
 
 SLOT="0/0"

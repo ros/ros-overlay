@@ -15,16 +15,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/std_msgs
-    ros-lunar/orocos_kdl
     ros-lunar/geometry_msgs
-    eigen
+    ros-lunar/orocos_kdl
+    dev-cpp/eigen
 "
 DEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/cmake_modules
     ros-lunar/orocos_kdl
     ros-lunar/geometry_msgs
-    eigen
+    ros-lunar/cmake_modules
+    ros-lunar/std_msgs
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

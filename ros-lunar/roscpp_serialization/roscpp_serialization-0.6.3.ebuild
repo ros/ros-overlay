@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rostime
     ros-lunar/roscpp_traits
     ros-lunar/cpp_common
-    ros-lunar/rostime
 "
 DEPEND="
+    ros-lunar/rostime
     ros-lunar/roscpp_traits
     ros-lunar/cpp_common
-    ros-lunar/rostime
 "
 
 SLOT="0/0"

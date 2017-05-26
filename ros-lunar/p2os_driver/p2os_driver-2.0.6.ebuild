@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/kdl_parser
     ros-lunar/diagnostic_updater
+    ros-lunar/nav_msgs
     ros-lunar/geometry_msgs
     ros-lunar/tf
     ros-lunar/p2os_msgs
 "
 DEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
-    ros-lunar/diagnostic_updater
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/kdl_parser
-    ros-lunar/tf
+    ros-lunar/diagnostic_updater
+    ros-lunar/nav_msgs
     ros-lunar/geometry_msgs
+    ros-lunar/tf
     ros-lunar/p2os_msgs
 "
 

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/python_qt_binding
-    ros-lunar/rqt_bag
-    ros-lunar/rqt_gui
-    ros-lunar/qt_gui_py_common
-    ros-lunar/rospy
-    ros-lunar/qt_gui
-    ros-lunar/rqt_gui_py
     ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
+    ros-lunar/rqt_gui
+    ros-lunar/python_qt_binding
+    ros-lunar/rqt_gui_py
+    ros-lunar/qt_gui
     ros-lunar/rqt_py_common
-    python-rospkg
+    ros-lunar/rqt_bag
+    ros-lunar/qt_gui_py_common
+    dev-python/rospkg
 "
 DEPEND="
 "

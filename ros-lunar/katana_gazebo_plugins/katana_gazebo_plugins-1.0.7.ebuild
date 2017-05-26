@@ -13,21 +13,21 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/control_toolbox
-    ros-lunar/actionlib
     ros-lunar/trajectory_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/gazebo_ros
+    ros-lunar/actionlib
     ros-lunar/control_msgs
     ros-lunar/katana_msgs
-    ros-lunar/gazebo_ros
 "
 DEPEND="
     ros-lunar/control_toolbox
-    ros-lunar/actionlib
     ros-lunar/trajectory_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/gazebo_ros
+    ros-lunar/actionlib
     ros-lunar/control_msgs
     ros-lunar/katana_msgs
-    ros-lunar/gazebo_ros
 "
 
 SLOT="0/0"

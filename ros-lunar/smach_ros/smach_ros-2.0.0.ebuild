@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_srvs
-    ros-lunar/actionlib_msgs
     ros-lunar/std_msgs
+    ros-lunar/actionlib_msgs
     ros-lunar/smach
     ros-lunar/rospy
     ros-lunar/rostopic
-    ros-lunar/smach_msgs
     ros-lunar/actionlib
+    ros-lunar/std_srvs
+    ros-lunar/smach_msgs
 "
 DEPEND="
     ros-lunar/rostest

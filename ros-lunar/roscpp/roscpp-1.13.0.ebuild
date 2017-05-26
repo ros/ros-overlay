@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/rosconsole
-    ros-lunar/xmlrpcpp
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
     ros-lunar/rostime
-    ros-lunar/roscpp_serialization
+    ros-lunar/rosgraph_msgs
     ros-lunar/roscpp_traits
+    ros-lunar/xmlrpcpp
+    ros-lunar/roscpp_serialization
+    ros-lunar/message_runtime
+    ros-lunar/rosconsole
     ros-lunar/cpp_common
 "
 DEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/rosconsole
-    ros-lunar/roslang
-    ros-lunar/xmlrpcpp
-    ros-lunar/std_msgs
-    ros-lunar/rostime
-    ros-lunar/roscpp_serialization
-    ros-lunar/roscpp_traits
     ros-lunar/message_generation
+    ros-lunar/std_msgs
+    ros-lunar/roslang
+    ros-lunar/rostime
+    ros-lunar/rosgraph_msgs
+    ros-lunar/roscpp_traits
+    ros-lunar/xmlrpcpp
+    ros-lunar/roscpp_serialization
+    ros-lunar/rosconsole
     ros-lunar/cpp_common
-    pkg-config
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

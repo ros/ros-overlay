@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui
     ros-lunar/rospy
-    ros-lunar/tf
-    ros-lunar/geometry_msgs
+    ros-lunar/rqt_gui
     ros-lunar/rqt_gui_py
     ros-lunar/tf2_msgs
     ros-lunar/rqt_py_common
+    ros-lunar/geometry_msgs
+    ros-lunar/tf
 "
 DEPEND="
     ros-lunar/rostest
-    python-catkin-pkg
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"

@@ -12,10 +12,10 @@ LICENSE="MIT"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    unzip
+    app-arch/unzip
 "
 DEPEND="
-    unzip
+    app-arch/unzip
 "
 
 SLOT="0/0"

@@ -12,8 +12,8 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    libgazebo7-dev
-    gazebo7
+    sci-electronics/gazebo
+    sci-electronics/gazebo
 "
 DEPEND="
 "

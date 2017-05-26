@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
     ros-lunar/roscpp
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/message_runtime
 "
 DEPEND="
     ros-lunar/message_generation
-    ros-lunar/dynamic_reconfigure
     ros-lunar/std_msgs
     ros-lunar/roscpp
+    ros-lunar/dynamic_reconfigure
 "
 
 SLOT="0/0"

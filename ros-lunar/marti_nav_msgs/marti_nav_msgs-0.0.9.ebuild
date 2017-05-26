@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geographic_msgs
-    ros-lunar/marti_common_msgs
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
+    ros-lunar/geographic_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/marti_common_msgs
+    ros-lunar/message_runtime
     ros-lunar/geometry_msgs
 "
 DEPEND="
-    ros-lunar/geographic_msgs
-    ros-lunar/marti_common_msgs
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/geometry_msgs
     ros-lunar/message_generation
+    ros-lunar/std_msgs
+    ros-lunar/geographic_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/marti_common_msgs
+    ros-lunar/geometry_msgs
 "
 
 SLOT="0/0"

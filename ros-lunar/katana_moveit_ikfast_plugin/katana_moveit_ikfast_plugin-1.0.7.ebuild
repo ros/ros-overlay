@@ -15,14 +15,14 @@ RDEPEND="
     ros-lunar/roscpp
     ros-lunar/tf_conversions
     ros-lunar/pluginlib
-    liblapack-dev
+    virtual/lapack
 "
 DEPEND="
     ros-lunar/moveit_core
     ros-lunar/roscpp
     ros-lunar/tf_conversions
     ros-lunar/pluginlib
-    liblapack-dev
+    virtual/lapack
 "
 
 SLOT="0/0"

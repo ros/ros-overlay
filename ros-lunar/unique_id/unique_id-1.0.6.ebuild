@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/roscpp
     ros-lunar/uuid_msgs
+    ros-lunar/rospy
 "
 DEPEND="
-    ros-lunar/rospy
     ros-lunar/roscpp
     ros-lunar/uuid_msgs
+    ros-lunar/rospy
 "
 
 SLOT="0/0"

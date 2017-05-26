@@ -14,10 +14,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    lz4
+    app-arch/lz4
 "
 DEPEND="
-    lz4
+    app-arch/lz4
 "
 
 SLOT="0/0"

@@ -18,8 +18,8 @@ RDEPEND="
     ros-lunar/xacro
 "
 DEPEND="
-    ros-lunar/convex_decomposition
     ros-lunar/ivcon
+    ros-lunar/convex_decomposition
 "
 
 SLOT="0/0"

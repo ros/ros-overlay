@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    libjpeg
-    libfltk-dev
-    gtk2
-    opengl
+    media-libs/mesa
+    x11-libs/gtk+
+    media-libs/libjpeg-turbo
+    =x11-libs/fltk-1*
 "
 DEPEND="
-    libjpeg
-    libfltk-dev
-    libtool
-    gtk2
-    opengl
+    =x11-libs/fltk-1*
+    media-libs/mesa
+    x11-libs/gtk+
+    sys-devel/libtool
+    media-libs/libjpeg-turbo
 "
 
 SLOT="0/0"

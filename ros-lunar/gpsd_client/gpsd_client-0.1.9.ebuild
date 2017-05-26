@@ -15,11 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="
-    ros-lunar/gps_common
     ros-lunar/sensor_msgs
     ros-lunar/roscpp
-    libgps
-    pkg-config
+    ros-lunar/gps_common
+    virtual/pkgconfig
+    sci-geosciences/gpsd
 "
 
 SLOT="0/0"

@@ -16,16 +16,16 @@ RDEPEND="
     ros-lunar/rosconsole
     ros-lunar/class_loader
     ros-lunar/roslib
-    boost
-    tinyxml
+    dev-libs/boost
+    dev-libs/tinyxml
 "
 DEPEND="
+    ros-lunar/roslib
     ros-lunar/rosconsole
     ros-lunar/class_loader
-    ros-lunar/roslib
     ros-lunar/cmake_modules
-    tinyxml
-    boost
+    dev-libs/boost
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

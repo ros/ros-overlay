@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/nodelet
-    ros-lunar/roscpp
 "
 DEPEND="
+    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/nodelet
-    ros-lunar/roscpp
 "
 
 SLOT="0/0"

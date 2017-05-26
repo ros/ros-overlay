@@ -11,26 +11,26 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/sensor_msgs
-    ros-lunar/mavros
-    ros-lunar/urdf
     ros-lunar/std_msgs
-    ros-lunar/mavros_msgs
-    ros-lunar/geometry_msgs
+    ros-lunar/roscpp
     ros-lunar/visualization_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/urdf
+    ros-lunar/mavros_msgs
+    ros-lunar/mavros
+    ros-lunar/geometry_msgs
     ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/mavros
-    ros-lunar/urdf
-    ros-lunar/sensor_msgs
-    ros-lunar/mavros_msgs
-    ros-lunar/cmake_modules
-    ros-lunar/geometry_msgs
+    ros-lunar/roscpp
     ros-lunar/visualization_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/urdf
+    ros-lunar/mavros_msgs
+    ros-lunar/mavros
+    ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
     ros-lunar/tf
 "
 

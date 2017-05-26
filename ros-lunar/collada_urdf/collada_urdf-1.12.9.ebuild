@@ -15,31 +15,31 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/urdf
-    ros-lunar/roscpp
-    ros-lunar/collada_parser
-    ros-lunar/resource_retriever
-    ros-lunar/angles
-    ros-lunar/tf
     ros-lunar/geometric_shapes
-    collada-dom
-    liburdfdom-headers-dev
-    assimp
-    liburdfdom-dev
+    ros-lunar/roscpp
+    ros-lunar/tf
+    ros-lunar/resource_retriever
+    ros-lunar/urdf
+    ros-lunar/collada_parser
+    ros-lunar/angles
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
+    media-libs/assimp
+    media-libs/collada-dom
 "
 DEPEND="
-    ros-lunar/urdf
+    ros-lunar/geometric_shapes
     ros-lunar/roscpp
-    ros-lunar/collada_parser
+    ros-lunar/tf
     ros-lunar/resource_retriever
+    ros-lunar/urdf
+    ros-lunar/collada_parser
     ros-lunar/cmake_modules
     ros-lunar/angles
-    ros-lunar/tf
-    ros-lunar/geometric_shapes
-    collada-dom
-    liburdfdom-headers-dev
-    assimp-dev
-    liburdfdom-dev
+    media-libs/assimp
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
+    media-libs/collada-dom
 "
 
 SLOT="0/0"

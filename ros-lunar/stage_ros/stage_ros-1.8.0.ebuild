@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/sensor_msgs
+    ros-lunar/stage
     ros-lunar/nav_msgs
     ros-lunar/std_srvs
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
     ros-lunar/geometry_msgs
     ros-lunar/tf
-    ros-lunar/stage
-    boost
+    dev-libs/boost
 "
 DEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
+    ros-lunar/roscpp
     ros-lunar/rostest
+    ros-lunar/sensor_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/stage
+    ros-lunar/std_srvs
     ros-lunar/geometry_msgs
     ros-lunar/tf
-    ros-lunar/stage
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

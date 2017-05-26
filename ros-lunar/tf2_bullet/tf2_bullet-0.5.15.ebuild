@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
     ros-lunar/tf2
-    bullet
+    ros-lunar/geometry_msgs
+    sci-physics/bullet
 "
 DEPEND="
-    ros-lunar/geometry_msgs
     ros-lunar/tf2
-    bullet
+    ros-lunar/geometry_msgs
+    sci-physics/bullet
 "
 
 SLOT="0/0"

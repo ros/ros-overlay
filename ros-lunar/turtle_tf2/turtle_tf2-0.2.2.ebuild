@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/rospy
     ros-lunar/tf2_ros
-    ros-lunar/geometry_msgs
-    ros-lunar/turtlesim
     ros-lunar/tf2
+    ros-lunar/turtlesim
+    ros-lunar/geometry_msgs
 "
 DEPEND="
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/rospy
     ros-lunar/tf2_ros
-    ros-lunar/geometry_msgs
-    ros-lunar/turtlesim
     ros-lunar/tf2
+    ros-lunar/turtlesim
+    ros-lunar/geometry_msgs
 "
 
 SLOT="0/0"

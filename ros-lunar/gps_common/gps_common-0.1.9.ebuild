@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
     ros-lunar/message_filters
-    ros-lunar/sensor_msgs
-    ros-lunar/message_runtime
+    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/message_runtime
 "
 DEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
+    ros-lunar/message_generation
     ros-lunar/message_filters
+    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/sensor_msgs
-    ros-lunar/message_generation
+    ros-lunar/nav_msgs
 "
 
 SLOT="0/0"

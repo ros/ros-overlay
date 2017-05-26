@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/uuid_msgs
     ros-lunar/geographic_msgs
     ros-lunar/sensor_msgs
     ros-lunar/geometry_msgs
-    ros-lunar/uuid_msgs
     ros-lunar/tf
     ros-lunar/unique_id
-    python-pyproj
+    dev-python/pyproj
 "
 DEPEND="
+    ros-lunar/uuid_msgs
+    ros-lunar/tf
     ros-lunar/geographic_msgs
     ros-lunar/sensor_msgs
     ros-lunar/geometry_msgs
     ros-lunar/angles
-    ros-lunar/uuid_msgs
-    ros-lunar/tf
     ros-lunar/unique_id
-    python-catkin-pkg
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"

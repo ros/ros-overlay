@@ -12,7 +12,7 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    python-qt5-bindings-webkit
+    dev-python/PyQt5
 "
 DEPEND="
 "

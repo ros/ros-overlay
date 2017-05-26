@@ -15,14 +15,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/sensor_msgs
-    python-rospkg
-    python-yaml
+    ros-lunar/rospy
+    dev-python/pyyaml
+    dev-python/rospkg
 "
 DEPEND="
-    ros-lunar/sensor_msgs
     ros-lunar/rostest
+    ros-lunar/sensor_msgs
     ros-lunar/rospy
 "
 

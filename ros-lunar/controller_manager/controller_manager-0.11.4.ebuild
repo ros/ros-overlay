@@ -14,16 +14,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/controller_manager_msgs
     ros-lunar/controller_interface
-    ros-lunar/hardware_interface
-    ros-lunar/realtime_tools
     ros-lunar/pluginlib
+    ros-lunar/realtime_tools
+    ros-lunar/hardware_interface
 "
 DEPEND="
     ros-lunar/controller_manager_msgs
     ros-lunar/controller_interface
-    ros-lunar/hardware_interface
-    ros-lunar/realtime_tools
     ros-lunar/pluginlib
+    ros-lunar/realtime_tools
+    ros-lunar/hardware_interface
 "
 
 SLOT="0/0"

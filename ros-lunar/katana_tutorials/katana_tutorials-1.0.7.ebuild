@@ -12,18 +12,18 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/actionlib
-    ros-lunar/trajectory_msgs
     ros-lunar/control_msgs
     ros-lunar/roscpp
+    ros-lunar/trajectory_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/actionlib
 "
 DEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/actionlib
-    ros-lunar/trajectory_msgs
     ros-lunar/control_msgs
     ros-lunar/roscpp
+    ros-lunar/trajectory_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/actionlib
 "
 
 SLOT="0/0"

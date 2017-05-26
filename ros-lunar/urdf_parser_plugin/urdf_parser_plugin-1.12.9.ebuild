@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    liburdfdom-headers-dev
+    dev-libs/urdfdom_headers
 "
 DEPEND="
-    liburdfdom-headers-dev
+    dev-libs/urdfdom_headers
 "
 
 SLOT="0/0"

@@ -20,13 +20,13 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/ros
     ros-lunar/catkin
-    cppunit
+    ros-lunar/ros
+    dev-util/cppunit
 "
 DEPEND="
     ros-lunar/ros
-    cppunit
+    dev-util/cppunit
 "
 
 SLOT="0/0"

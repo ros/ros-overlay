@@ -12,24 +12,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/moveit_core
     ros-lunar/roscpp
-    ros-lunar/pluginlib
     ros-lunar/eigen_conversions
     ros-lunar/moveit_ros_planning
-    ros-lunar/tf
+    ros-lunar/dynamic_reconfigure
     ros-lunar/ompl
+    ros-lunar/moveit_core
+    ros-lunar/pluginlib
+    ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/moveit_core
     ros-lunar/roscpp
-    ros-lunar/pluginlib
     ros-lunar/eigen_conversions
     ros-lunar/moveit_ros_planning
-    ros-lunar/tf
+    ros-lunar/dynamic_reconfigure
     ros-lunar/ompl
+    ros-lunar/moveit_core
+    ros-lunar/pluginlib
+    ros-lunar/tf
 "
 
 SLOT="0/0"

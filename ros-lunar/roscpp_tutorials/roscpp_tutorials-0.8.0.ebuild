@@ -13,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
+    ros-lunar/std_msgs
     ros-lunar/roscpp
     ros-lunar/rostime
-    ros-lunar/message_runtime
-    ros-lunar/std_msgs
     ros-lunar/roscpp_serialization
+    ros-lunar/message_runtime
+    ros-lunar/rosconsole
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/roscpp
+    ros-lunar/message_generation
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/rostime
     ros-lunar/roscpp_serialization
-    ros-lunar/message_generation
+    ros-lunar/rosconsole
 "
 
 SLOT="0/0"

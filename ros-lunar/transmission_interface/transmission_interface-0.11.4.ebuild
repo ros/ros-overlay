@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/roscpp
     ros-lunar/pluginlib
-    tinyxml
+    dev-libs/tinyxml
 "
 DEPEND="
-    ros-lunar/hardware_interface
+    ros-lunar/roscpp
     ros-lunar/pluginlib
     ros-lunar/cmake_modules
-    ros-lunar/roscpp
-    tinyxml
+    ros-lunar/hardware_interface
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

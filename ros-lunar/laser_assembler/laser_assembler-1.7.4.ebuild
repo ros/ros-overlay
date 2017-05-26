@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/laser_geometry
-    ros-lunar/roscpp
-    ros-lunar/message_filters
-    ros-lunar/pluginlib
-    ros-lunar/message_runtime
-    ros-lunar/sensor_msgs
     ros-lunar/filters
+    ros-lunar/message_filters
+    ros-lunar/roscpp
+    ros-lunar/laser_geometry
+    ros-lunar/sensor_msgs
+    ros-lunar/message_runtime
+    ros-lunar/pluginlib
     ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/laser_geometry
-    ros-lunar/roscpp
-    ros-lunar/message_filters
-    ros-lunar/pluginlib
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/rostest
-    ros-lunar/filters
     ros-lunar/message_generation
+    ros-lunar/message_filters
+    ros-lunar/roscpp
+    ros-lunar/filters
+    ros-lunar/laser_geometry
+    ros-lunar/sensor_msgs
+    ros-lunar/rostest
+    ros-lunar/pluginlib
+    ros-lunar/tf
 "
 
 SLOT="0/0"

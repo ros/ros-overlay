@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    eigen
+    dev-cpp/eigen
 "
 DEPEND="
     ros-lunar/cmake_modules
-    eigen
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

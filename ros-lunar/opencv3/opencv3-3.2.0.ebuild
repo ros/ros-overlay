@@ -13,28 +13,30 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    ffmpeg
-    libjpeg
-    libvtk-qt
-    zlib
-    python-numpy
-    libpng-dev
-    python
-    libwebp-dev
-    protobuf
+    dev-python/numpy
+    dev-libs/protobuf
+    sci-libs/vtk
+    virtual/ffmpeg
+    media-libs/libwebp
+    dev-lang/python
+dev-lang/python-exec
+    media-libs/libjpeg-turbo
+    sys-libs/zlib
+    media-libs/libpng
 "
 DEPEND="
-    libv4l-dev
-    ffmpeg
-    libjpeg
-    libvtk-qt
-    zlib
-    python-numpy
-    libpng-dev
-    python
-    libtiff-dev
-    libwebp-dev
-    protobuf-dev
+    dev-libs/protobuf
+    dev-python/numpy
+    media-libs/libv4l
+    sci-libs/vtk
+    virtual/ffmpeg
+    media-libs/tiff
+    media-libs/libwebp
+    dev-lang/python
+dev-lang/python-exec
+    media-libs/libjpeg-turbo
+    sys-libs/zlib
+    media-libs/libpng
 "
 
 SLOT="0/0"

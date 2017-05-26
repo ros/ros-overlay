@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
     ros-lunar/roscpp
     ros-lunar/rosbag_storage
-    libqt5-widgets
-    libqt5-gui
-    libqt5-core
+    ros-lunar/rosgraph_msgs
+    dev-qt/qtgui
+    dev-qt/qtwidgets
+    dev-qt/qtcore
 "
 DEPEND="
-    ros-lunar/rosgraph_msgs
     ros-lunar/roscpp
     ros-lunar/rosbag_storage
-    libqt5-widgets
-    libqt5-gui
-    libqt5-core
-    libqt5-opengl-dev
+    ros-lunar/rosgraph_msgs
+    dev-qt/qtgui
+    dev-qt/qtwidgets
+    dev-qt/qtopengl
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

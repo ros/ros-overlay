@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf
-    ros-lunar/octomap
     ros-lunar/sensor_msgs
+    ros-lunar/tf
     ros-lunar/octomap_msgs
+    ros-lunar/octomap
 "
 DEPEND="
-    ros-lunar/tf
     ros-lunar/sensor_msgs
-    ros-lunar/octomap
     ros-lunar/catkin
+    ros-lunar/tf
     ros-lunar/octomap_msgs
+    ros-lunar/octomap
 "
 
 SLOT="0/0"

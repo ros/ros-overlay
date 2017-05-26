@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/urdf
+    ros-lunar/roscpp
     ros-lunar/rosconsole
     ros-lunar/orocos_kdl
-    ros-lunar/roscpp
 "
 DEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
     ros-lunar/urdf
-    ros-lunar/cmake_modules
     ros-lunar/rostest
     ros-lunar/orocos_kdl
+    ros-lunar/rosconsole
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"

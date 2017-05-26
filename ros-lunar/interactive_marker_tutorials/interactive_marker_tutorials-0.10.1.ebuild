@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roscpp
     ros-lunar/tf
     ros-lunar/interactive_markers
-    ros-lunar/roscpp
     ros-lunar/visualization_msgs
 "
 DEPEND="
+    ros-lunar/roscpp
     ros-lunar/tf
     ros-lunar/interactive_markers
-    ros-lunar/roscpp
     ros-lunar/visualization_msgs
 "
 

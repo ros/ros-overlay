@@ -16,30 +16,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
     ros-lunar/message_filters
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
-    ros-lunar/sensor_msgs
-    ros-lunar/geometry_msgs
-    ros-lunar/tf2_ros
     ros-lunar/roswtf
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_ros
     ros-lunar/tf2
-    graphviz
+    ros-lunar/message_runtime
+    ros-lunar/rosconsole
+    ros-lunar/geometry_msgs
+    media-gfx/graphviz
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/roscpp
+    ros-lunar/message_generation
     ros-lunar/message_filters
-    ros-lunar/tf2_ros
+    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
     ros-lunar/rostest
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/tf2
+    ros-lunar/rosconsole
     ros-lunar/geometry_msgs
     ros-lunar/angles
-    ros-lunar/message_generation
-    ros-lunar/tf2
 "
 
 SLOT="0/0"

@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/cmake_modules
-    ros-lunar/tf2_ros
     ros-lunar/python_orocos_kdl
+    ros-lunar/tf2_ros
     ros-lunar/tf2
-    eigen
+    ros-lunar/cmake_modules
+    dev-cpp/eigen
 "
 DEPEND="
-    ros-lunar/cmake_modules
     ros-lunar/sensor_msgs
     ros-lunar/tf2_ros
     ros-lunar/tf2
-    eigen
+    ros-lunar/cmake_modules
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

@@ -18,14 +18,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/python_qt_binding
-    ros-lunar/genpy
-    ros-lunar/actionlib
-    ros-lunar/roslib
-    ros-lunar/rospy
-    ros-lunar/qt_gui
     ros-lunar/rosbag
+    ros-lunar/rospy
+    ros-lunar/python_qt_binding
+    ros-lunar/qt_gui
+    ros-lunar/roslib
+    ros-lunar/genpy
     ros-lunar/rostopic
+    ros-lunar/actionlib
 "
 DEPEND="
     ros-lunar/genmsg

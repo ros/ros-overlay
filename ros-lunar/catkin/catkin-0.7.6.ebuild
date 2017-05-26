@@ -12,16 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    python-argparse
-    gtest
-    python-empy
-    python-nose
-    python-catkin-pkg
+    dev-python/catkin_pkg
+    dev-lang/python
+dev-lang/python-exec
+    dev-python/empy
+    dev-cpp/gtest
+    dev-python/nose
 "
 DEPEND="
-    python-argparse
-    python-catkin-pkg
-    python-empy
+    dev-python/catkin_pkg
+    dev-lang/python
+dev-lang/python-exec
+    dev-python/empy
 "
 
 SLOT="0/0"

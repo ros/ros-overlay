@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/socketcan_interface
-    ros-lunar/can_msgs
     ros-lunar/roscpp
+    ros-lunar/can_msgs
 "
 DEPEND="
     ros-lunar/socketcan_interface
-    ros-lunar/can_msgs
     ros-lunar/roscpp
+    ros-lunar/can_msgs
 "
 
 SLOT="0/0"

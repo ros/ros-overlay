@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui_cpp
-    ros-lunar/rqt_gui
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
-    ros-lunar/geometry_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/rqt_gui
+    ros-lunar/rqt_gui_cpp
     ros-lunar/cv_bridge
+    ros-lunar/geometry_msgs
 "
 DEPEND="
-    ros-lunar/rqt_gui_cpp
-    ros-lunar/rqt_gui
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
-    ros-lunar/geometry_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/rqt_gui
+    ros-lunar/rqt_gui_cpp
     ros-lunar/cv_bridge
+    ros-lunar/geometry_msgs
 "
 
 SLOT="0/0"

@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/xmlrpcpp
-    ros-lunar/rosconsole
     ros-lunar/roscpp
+    ros-lunar/rosconsole
 "
 DEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
-    ros-lunar/xmlrpcpp
     ros-lunar/rostest
     ros-lunar/rosunit
-    boost
+    ros-lunar/xmlrpcpp
+    ros-lunar/rosconsole
+    dev-libs/boost
 "
 
 SLOT="0/0"

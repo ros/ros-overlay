@@ -12,12 +12,12 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/canopen_master
     ros-lunar/class_loader
+    ros-lunar/canopen_master
 "
 DEPEND="
-    ros-lunar/canopen_master
     ros-lunar/class_loader
+    ros-lunar/canopen_master
 "
 
 SLOT="0/0"

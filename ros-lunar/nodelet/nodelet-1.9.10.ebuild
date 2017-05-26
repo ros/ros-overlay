@@ -18,26 +18,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/bondcpp
-    ros-lunar/pluginlib
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
     ros-lunar/roscpp
-    uuid
-    boost
+    ros-lunar/bondcpp
+    ros-lunar/message_runtime
+    ros-lunar/rosconsole
+    ros-lunar/pluginlib
+    dev-libs/boost
+    sys-apps/util-linux
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/bondcpp
-    ros-lunar/pluginlib
-    ros-lunar/std_msgs
-    ros-lunar/cmake_modules
-    ros-lunar/rospy
     ros-lunar/message_generation
+    ros-lunar/std_msgs
     ros-lunar/roscpp
-    uuid
-    boost
+    ros-lunar/rospy
+    ros-lunar/bondcpp
+    ros-lunar/rosconsole
+    ros-lunar/pluginlib
+    ros-lunar/cmake_modules
+    dev-libs/boost
+    sys-apps/util-linux
 "
 
 SLOT="0/0"

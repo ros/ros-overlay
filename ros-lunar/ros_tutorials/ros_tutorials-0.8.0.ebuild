@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy_tutorials
     ros-lunar/turtlesim
+    ros-lunar/rospy_tutorials
     ros-lunar/roscpp_tutorials
 "
 DEPEND="

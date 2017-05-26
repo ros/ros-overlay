@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_generation
-    ros-lunar/message_runtime
     ros-lunar/catkin
+    ros-lunar/message_runtime
 "
 DEPEND="
-    pkg-config
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

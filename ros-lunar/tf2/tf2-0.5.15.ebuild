@@ -17,16 +17,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/tf2_msgs
     ros-lunar/rostime
     ros-lunar/geometry_msgs
-    ros-lunar/tf2_msgs
-    libconsole-bridge-dev
+    dev-libs/console_bridge
 "
 DEPEND="
+    ros-lunar/tf2_msgs
     ros-lunar/rostime
     ros-lunar/geometry_msgs
-    ros-lunar/tf2_msgs
-    libconsole-bridge-dev
+    dev-libs/console_bridge
 "
 
 SLOT="0/0"

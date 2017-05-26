@@ -12,18 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/moveit_ros_planning_interface
     ros-lunar/shape_msgs
     ros-lunar/moveit_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/rospy
-    ros-lunar/tf
     ros-lunar/geometry_msgs
-    ros-lunar/moveit_ros_planning_interface
-    python
-    python-pyassimp
+    ros-lunar/tf
+    dev-libs/assimp
+    dev-lang/python
+dev-lang/python-exec
 "
 DEPEND="
-    python
+    dev-lang/python
+dev-lang/python-exec
 "
 
 SLOT="0/0"

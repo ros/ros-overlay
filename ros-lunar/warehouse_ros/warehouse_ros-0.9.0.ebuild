@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/rostime
     ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/rostime
     ros-lunar/geometry_msgs
+    ros-lunar/pluginlib
     ros-lunar/tf
-    boost
+    dev-libs/boost
 "
 DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/rostime
     ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/rostime
     ros-lunar/geometry_msgs
+    ros-lunar/pluginlib
     ros-lunar/tf
 "
 

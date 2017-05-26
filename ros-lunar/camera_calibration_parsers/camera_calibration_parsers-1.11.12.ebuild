@@ -13,19 +13,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/roscpp_serialization
     ros-lunar/roscpp
-    boost
-    yaml-cpp
+    ros-lunar/roscpp_serialization
+    dev-libs/boost
+    dev-cpp/yaml-cpp
 "
 DEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/roscpp_serialization
-    yaml-cpp
-    boost
-    pkg-config
+    ros-lunar/rosconsole
+    dev-libs/boost
+    virtual/pkgconfig
+    dev-cpp/yaml-cpp
 "
 
 SLOT="0/0"

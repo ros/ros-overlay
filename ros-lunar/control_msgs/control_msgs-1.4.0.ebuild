@@ -14,18 +14,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/trajectory_msgs
     ros-lunar/geometry_msgs
-    ros-lunar/actionlib_msgs
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
+    ros-lunar/actionlib_msgs
+    ros-lunar/trajectory_msgs
+    ros-lunar/message_runtime
 "
 DEPEND="
     ros-lunar/message_generation
-    ros-lunar/geometry_msgs
+    ros-lunar/std_msgs
     ros-lunar/actionlib_msgs
     ros-lunar/trajectory_msgs
-    ros-lunar/std_msgs
+    ros-lunar/geometry_msgs
 "
 
 SLOT="0/0"

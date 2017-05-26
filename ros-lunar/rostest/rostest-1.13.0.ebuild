@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rospy
+    ros-lunar/rosunit
     ros-lunar/roslaunch
     ros-lunar/rosgraph
     ros-lunar/rosmaster
-    ros-lunar/rospy
-    ros-lunar/rosunit
-    boost
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/rosunit
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

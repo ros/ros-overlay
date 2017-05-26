@@ -13,19 +13,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/smclib
     ros-lunar/roscpp
     ros-lunar/bond
-    uuid
-    boost
+    ros-lunar/smclib
+    dev-libs/boost
+    sys-apps/util-linux
 "
 DEPEND="
-    ros-lunar/smclib
-    ros-lunar/cmake_modules
-    ros-lunar/bond
     ros-lunar/roscpp
-    uuid
-    boost
+    ros-lunar/bond
+    ros-lunar/cmake_modules
+    ros-lunar/smclib
+    dev-libs/boost
+    sys-apps/util-linux
 "
 
 SLOT="0/0"

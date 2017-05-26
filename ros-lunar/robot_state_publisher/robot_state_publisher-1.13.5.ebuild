@@ -12,31 +12,31 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/catkin
-    ros-lunar/sensor_msgs
-    ros-lunar/rostime
-    ros-lunar/kdl_parser
-    ros-lunar/tf2_kdl
-    ros-lunar/tf2_ros
-    ros-lunar/tf
-    ros-lunar/orocos_kdl
     ros-lunar/roscpp
-    eigen
+    ros-lunar/rostime
+    ros-lunar/sensor_msgs
+    ros-lunar/orocos_kdl
+    ros-lunar/tf2_kdl
+    ros-lunar/catkin
+    ros-lunar/tf2_ros
+    ros-lunar/rosconsole
+    ros-lunar/tf
+    ros-lunar/kdl_parser
+    dev-cpp/eigen
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/sensor_msgs
-    ros-lunar/rostime
-    ros-lunar/kdl_parser
-    ros-lunar/tf2_kdl
-    ros-lunar/rostest
-    ros-lunar/tf2_ros
-    ros-lunar/tf
-    ros-lunar/orocos_kdl
     ros-lunar/roscpp
-    eigen
-    liburdfdom-headers-dev
+    ros-lunar/rostime
+    ros-lunar/rostest
+    ros-lunar/sensor_msgs
+    ros-lunar/orocos_kdl
+    ros-lunar/tf2_kdl
+    ros-lunar/tf2_ros
+    ros-lunar/rosconsole
+    ros-lunar/tf
+    ros-lunar/kdl_parser
+    dev-libs/urdfdom_headers
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

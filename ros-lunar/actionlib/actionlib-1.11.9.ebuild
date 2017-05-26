@@ -15,22 +15,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/actionlib_msgs
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
-    ros-lunar/rostest
+    ros-lunar/actionlib_msgs
+    ros-lunar/roscpp
     ros-lunar/rospy
-    boost
+    ros-lunar/rostest
+    ros-lunar/message_runtime
+    dev-libs/boost
 "
 DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/actionlib_msgs
-    ros-lunar/std_msgs
-    ros-lunar/rostest
-    ros-lunar/rospy
     ros-lunar/message_generation
-    boost
+    ros-lunar/std_msgs
+    ros-lunar/actionlib_msgs
+    ros-lunar/roscpp
+    ros-lunar/rospy
+    ros-lunar/rostest
+    dev-libs/boost
 "
 
 SLOT="0/0"

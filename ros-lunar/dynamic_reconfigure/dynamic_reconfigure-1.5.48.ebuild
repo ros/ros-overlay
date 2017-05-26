@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means to change
-	node parameters at any time without having to restart the node."
+    node parameters at any time without having to restart the node."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/lunar/dynamic_reconfigure/1.5.48-0.tar.gz"
 
@@ -13,48 +13,48 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-	ros-lunar/message_runtime
-	ros-lunar/roscpp
-	ros-lunar/roslib
-	ros-lunar/std_msgs
-	ros-lunar/rosservice
-	ros-lunar/rospy
-	dev-libs/boost
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/rosservice
+    ros-lunar/rospy
+    ros-lunar/roslib
+    ros-lunar/message_runtime
+    dev-libs/boost
 "
 DEPEND="
-	ros-lunar/roscpp
-	ros-lunar/std_msgs
-	ros-lunar/roscpp_serialization
-	ros-lunar/rostest
-	ros-lunar/message_generation
-	dev-libs/boost
+    ros-lunar/message_generation
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/rostest
+    ros-lunar/roscpp_serialization
+    dev-libs/boost
 "
 
 SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_unpack() {
-	wget -O ${P}.tar.gz ${SRC_URI}
-	tar -xf ${P}.tar.gz
-	rm -f ${P}.tar.gz
-	mv *${P}* ${P}
+    wget -O ${P}.tar.gz ${SRC_URI}
+    tar -xf ${P}.tar.gz
+    rm -f ${P}.tar.gz
+    mv *${P}* ${P}
 }
 
 src_configure() {
-	mkdir ${WORKDIR}/src
-	cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
+    mkdir ${WORKDIR}/src
+    cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
 }
 
 src_compile() {
-	echo ""
+    echo ""
 }
 
 src_install() {
-	echo ""
+    echo ""
 }
 
 pkg_postinst() {
-	cd ../work
-	source /opt/ros/lunar/setup.bash
-	catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
 }

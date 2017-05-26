@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_core
-    ros-lunar/moveit_kinematics
-    ros-lunar/pluginlib
-    ros-lunar/actionlib
     ros-lunar/moveit_ros_planning
-    ros-lunar/tf
+    ros-lunar/actionlib
     ros-lunar/std_srvs
+    ros-lunar/moveit_core
+    ros-lunar/pluginlib
+    ros-lunar/tf
+    ros-lunar/moveit_kinematics
 "
 DEPEND="
-    ros-lunar/moveit_core
-    ros-lunar/std_srvs
-    ros-lunar/pluginlib
-    ros-lunar/actionlib
     ros-lunar/moveit_ros_planning
+    ros-lunar/actionlib
+    ros-lunar/std_srvs
+    ros-lunar/moveit_core
+    ros-lunar/pluginlib
     ros-lunar/tf
 "
 

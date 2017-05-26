@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    glut
-    libusb-1.0-dev
-    libxmu-dev
-    libxi-dev
+    x11-libs/libXmu
+    media-libs/freeglut
+    =dev-libs/libusb-1.0*
+    x11-libs/libXi
 "
 DEPEND="
-    glut
-    libusb-1.0-dev
-    libxmu-dev
-    libxi-dev
+    x11-libs/libXmu
+    media-libs/freeglut
+    =dev-libs/libusb-1.0*
+    x11-libs/libXi
 "
 
 SLOT="0/0"

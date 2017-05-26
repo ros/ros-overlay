@@ -22,12 +22,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    python-qt5-bindings
+    dev-python/PyQt5
 "
 DEPEND="
     ros-lunar/rosbuild
-    python-qt5-bindings
-    qtbase5-dev
+    dev-qt/qtcore
+    dev-python/PyQt5
 "
 
 SLOT="0/0"

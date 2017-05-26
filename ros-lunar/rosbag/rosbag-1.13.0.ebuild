@@ -14,30 +14,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/genpy
     ros-lunar/genmsg
-    ros-lunar/std_srvs
+    ros-lunar/rosbag_storage
     ros-lunar/roscpp
+    ros-lunar/rospy
     ros-lunar/xmlrpcpp
     ros-lunar/roslib
+    ros-lunar/genpy
+    ros-lunar/std_srvs
     ros-lunar/topic_tools
-    ros-lunar/rospy
-    ros-lunar/rosbag_storage
-    python-rospkg
-    boost
+    ros-lunar/rosconsole
+    dev-libs/boost
+    dev-python/rospkg
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/std_srvs
     ros-lunar/roscpp
+    ros-lunar/rosbag_storage
     ros-lunar/xmlrpcpp
     ros-lunar/roscpp_serialization
+    ros-lunar/std_srvs
     ros-lunar/topic_tools
+    ros-lunar/rosconsole
     ros-lunar/cpp_common
-    ros-lunar/rosbag_storage
-    python-imaging
-    boost
+    dev-libs/boost
+    dev-python/pillow
 "
 
 SLOT="0/0"

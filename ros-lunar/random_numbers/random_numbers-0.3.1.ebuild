@@ -15,10 +15,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    boost
+    dev-libs/boost
 "
 DEPEND="
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

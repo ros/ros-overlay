@@ -19,13 +19,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/rosconsole
     ros-lunar/roslib
-    python-rospkg
-    curl
+    net-misc/curl
+    dev-python/rospkg
 "
 DEPEND="
     ros-lunar/rosconsole
     ros-lunar/roslib
-    curl
+    net-misc/curl
 "
 
 SLOT="0/0"

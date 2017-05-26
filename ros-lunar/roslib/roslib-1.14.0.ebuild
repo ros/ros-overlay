@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospack
     ros-lunar/catkin
-    python-rospkg
+    ros-lunar/rospack
+    dev-python/rospkg
 "
 DEPEND="
     ros-lunar/rospack
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

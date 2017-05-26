@@ -12,56 +12,56 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/trajectory_msgs
-    ros-lunar/diagnostic_updater
-    ros-lunar/polled_camera
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
-    ros-lunar/tf
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/std_srvs
+    ros-lunar/urdf
+    ros-lunar/gazebo_dev
     ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
-    ros-lunar/urdf
-    ros-lunar/sensor_msgs
-    ros-lunar/message_runtime
-    ros-lunar/gazebo_msgs
-    ros-lunar/image_transport
-    ros-lunar/rospy
-    ros-lunar/angles
-    ros-lunar/std_msgs
-    ros-lunar/cv_bridge
-    ros-lunar/rosgraph_msgs
-    ros-lunar/std_srvs
-    ros-lunar/gazebo_dev
     ros-lunar/camera_info_manager
+    ros-lunar/tf2_ros
+    ros-lunar/message_runtime
+    ros-lunar/rosconsole
+    ros-lunar/angles
+    ros-lunar/trajectory_msgs
+    ros-lunar/polled_camera
+    ros-lunar/diagnostic_updater
+    ros-lunar/gazebo_msgs
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/image_transport
+    ros-lunar/nav_msgs
+    ros-lunar/rosgraph_msgs
+    ros-lunar/cv_bridge
     ros-lunar/geometry_msgs
+    ros-lunar/tf
 "
 DEPEND="
-    ros-lunar/rosconsole
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/std_srvs
+    ros-lunar/message_generation
     ros-lunar/urdf
-    ros-lunar/diagnostic_updater
-    ros-lunar/polled_camera
-    ros-lunar/nav_msgs
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
-    ros-lunar/tf
+    ros-lunar/gazebo_dev
     ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
-    ros-lunar/trajectory_msgs
-    ros-lunar/gazebo_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
-    ros-lunar/message_generation
-    ros-lunar/rospy
-    ros-lunar/angles
-    ros-lunar/std_msgs
-    ros-lunar/cv_bridge
-    ros-lunar/rosgraph_msgs
-    ros-lunar/std_srvs
-    ros-lunar/gazebo_dev
     ros-lunar/camera_info_manager
+    ros-lunar/tf2_ros
+    ros-lunar/rosconsole
+    ros-lunar/angles
+    ros-lunar/trajectory_msgs
+    ros-lunar/polled_camera
+    ros-lunar/diagnostic_updater
+    ros-lunar/gazebo_msgs
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/image_transport
+    ros-lunar/nav_msgs
+    ros-lunar/rosgraph_msgs
+    ros-lunar/cv_bridge
     ros-lunar/geometry_msgs
+    ros-lunar/tf
 "
 
 SLOT="0/0"

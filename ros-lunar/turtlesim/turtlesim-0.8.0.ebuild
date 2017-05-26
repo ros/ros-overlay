@@ -12,30 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/roslib
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/message_runtime
+    ros-lunar/roscpp
     ros-lunar/rostime
+    ros-lunar/roslib
     ros-lunar/roscpp_serialization
+    ros-lunar/message_runtime
+    ros-lunar/std_srvs
+    ros-lunar/rosconsole
     ros-lunar/geometry_msgs
-    libqt5-gui
-    libqt5-core
+    dev-qt/qtgui
+    dev-qt/qtcore
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
+    ros-lunar/message_generation
     ros-lunar/std_msgs
+    ros-lunar/roscpp
     ros-lunar/rostime
     ros-lunar/roslib
     ros-lunar/roscpp_serialization
+    ros-lunar/std_srvs
+    ros-lunar/rosconsole
     ros-lunar/geometry_msgs
-    ros-lunar/message_generation
-    qt5-qmake
-    qtbase5-dev
+    dev-qt/qtcore
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

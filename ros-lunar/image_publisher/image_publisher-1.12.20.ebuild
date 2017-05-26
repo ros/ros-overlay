@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
-    ros-lunar/cv_bridge
-    ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
+    ros-lunar/sensor_msgs
     ros-lunar/nodelet
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/camera_info_manager
+    ros-lunar/cv_bridge
 "
 DEPEND="
-    ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
-    ros-lunar/cv_bridge
-    ros-lunar/camera_info_manager
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
+    ros-lunar/sensor_msgs
     ros-lunar/nodelet
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/camera_info_manager
+    ros-lunar/cv_bridge
 "
 
 SLOT="0/0"

@@ -11,72 +11,72 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/interactive_markers
-    ros-lunar/resource_retriever
-    ros-lunar/nav_msgs
-    ros-lunar/python_qt_binding
-    ros-lunar/laser_geometry
-    ros-lunar/roscpp
-    ros-lunar/roslib
-    ros-lunar/visualization_msgs
-    ros-lunar/tf
-    ros-lunar/urdf
-    ros-lunar/message_filters
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
-    ros-lunar/rospy
     ros-lunar/map_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
     ros-lunar/std_srvs
     ros-lunar/pluginlib
+    ros-lunar/laser_geometry
+    ros-lunar/urdf
+    ros-lunar/roslib
+    ros-lunar/rosconsole
     ros-lunar/media_export
-    ros-lunar/geometry_msgs
+    ros-lunar/interactive_markers
+    ros-lunar/python_qt_binding
+    ros-lunar/message_filters
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
+    ros-lunar/image_transport
     ros-lunar/rosbag
-    liburdfdom-headers-dev
-    eigen
-    opengl
-    yaml-cpp
-    libqt5-core
-    libqt5-widgets
-    assimp
-    tinyxml
-    libqt5-opengl
-    libogre-dev
-    libqt5-gui
+    ros-lunar/resource_retriever
+    ros-lunar/nav_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/tf
+    dev-games/ogre
+    media-libs/mesa
+    dev-cpp/eigen
+    dev-qt/qtgui
+    dev-qt/qtopengl
+    dev-cpp/yaml-cpp
+    dev-qt/qtcore
+    dev-libs/tinyxml
+    dev-qt/qtwidgets
+    dev-libs/urdfdom_headers
+    media-libs/assimp
 "
 DEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/interactive_markers
-    ros-lunar/resource_retriever
-    ros-lunar/cmake_modules
-    ros-lunar/nav_msgs
-    ros-lunar/python_qt_binding
-    ros-lunar/laser_geometry
-    ros-lunar/roscpp
-    ros-lunar/roslib
-    ros-lunar/visualization_msgs
-    ros-lunar/tf
-    ros-lunar/urdf
-    ros-lunar/message_filters
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
-    ros-lunar/rospy
     ros-lunar/map_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
     ros-lunar/std_srvs
     ros-lunar/pluginlib
-    ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
+    ros-lunar/laser_geometry
+    ros-lunar/urdf
+    ros-lunar/roslib
+    ros-lunar/rosconsole
+    ros-lunar/interactive_markers
+    ros-lunar/python_qt_binding
+    ros-lunar/message_filters
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
+    ros-lunar/image_transport
     ros-lunar/rosbag
-    liburdfdom-headers-dev
-    eigen
-    qtbase5-dev
-    opengl
-    yaml-cpp
-    libqt5-opengl-dev
-    tinyxml
-    libogre-dev
-    assimp-dev
+    ros-lunar/resource_retriever
+    ros-lunar/nav_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/tf
+    dev-games/ogre
+    dev-qt/qtcore
+    media-libs/mesa
+    dev-cpp/eigen
+    dev-cpp/yaml-cpp
+    media-libs/assimp
+    dev-libs/tinyxml
+    dev-libs/urdfdom_headers
+    dev-qt/qtopengl
 "
 
 SLOT="0/0"

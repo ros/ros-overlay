@@ -16,20 +16,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/roslib
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
+    ros-lunar/sensor_msgs
+    ros-lunar/roslib
     ros-lunar/camera_calibration_parsers
-    boost
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/roscpp
-    ros-lunar/roslib
-    ros-lunar/sensor_msgs
     ros-lunar/image_transport
     ros-lunar/rostest
+    ros-lunar/sensor_msgs
+    ros-lunar/roslib
     ros-lunar/camera_calibration_parsers
-    boost
+    dev-libs/boost
 "
 
 SLOT="0/0"

@@ -12,8 +12,8 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/ar_track_alvar
     ros-lunar/ar_track_alvar_msgs
+    ros-lunar/ar_track_alvar
 "
 DEPEND="
 "

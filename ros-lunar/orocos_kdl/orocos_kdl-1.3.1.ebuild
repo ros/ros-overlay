@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    eigen
-    pkg-config
+    virtual/pkgconfig
+    dev-cpp/eigen
 "
 DEPEND="
-    eigen
+    dev-cpp/eigen
 "
 
 SLOT="0/0"

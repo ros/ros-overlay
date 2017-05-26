@@ -14,17 +14,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/roslib
     ros-lunar/roscpp
+    ros-lunar/roslib
     ros-lunar/pluginlib
+    ros-lunar/rosconsole
 "
 DEPEND="
-    ros-lunar/rosconsole
     ros-lunar/rostest
-    ros-lunar/roslib
     ros-lunar/roscpp
+    ros-lunar/roslib
     ros-lunar/pluginlib
+    ros-lunar/rosconsole
 "
 
 SLOT="0/0"

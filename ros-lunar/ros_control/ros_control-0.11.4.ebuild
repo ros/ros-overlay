@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/combined_robot_hw_tests
     ros-lunar/hardware_interface
-    ros-lunar/controller_interface
-    ros-lunar/controller_manager
     ros-lunar/transmission_interface
-    ros-lunar/joint_limits_interface
-    ros-lunar/realtime_tools
-    ros-lunar/combined_robot_hw
     ros-lunar/controller_manager_tests
     ros-lunar/controller_manager_msgs
+    ros-lunar/controller_interface
+    ros-lunar/realtime_tools
+    ros-lunar/joint_limits_interface
+    ros-lunar/combined_robot_hw_tests
+    ros-lunar/controller_manager
+    ros-lunar/combined_robot_hw
 "
 DEPEND="
 "

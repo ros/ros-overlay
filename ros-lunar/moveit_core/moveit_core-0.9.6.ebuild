@@ -12,56 +12,56 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/urdf
-    ros-lunar/eigen_conversions
-    ros-lunar/eigen_stl_containers
     ros-lunar/visualization_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/octomap
+    ros-lunar/moveit_msgs
+    ros-lunar/eigen_stl_containers
+    ros-lunar/eigen_conversions
+    ros-lunar/urdf
     ros-lunar/geometric_shapes
     ros-lunar/trajectory_msgs
-    ros-lunar/std_msgs
-    ros-lunar/moveit_msgs
-    ros-lunar/rostime
-    ros-lunar/octomap_msgs
     ros-lunar/random_numbers
     ros-lunar/srdfdom
+    ros-lunar/octomap_msgs
     ros-lunar/kdl_parser
-    ros-lunar/octomap
+    ros-lunar/std_msgs
+    ros-lunar/rostime
     ros-lunar/geometry_msgs
-    ros-lunar/sensor_msgs
-    eigen
-    liburdfdom-dev
-    liburdfdom-headers-dev
-    libfcl-dev
-    assimp
-    libconsole-bridge-dev
-    boost
+    sci-libs/fcl
+    dev-libs/boost
+    dev-libs/urdfdom
+    dev-libs/console_bridge
+    dev-cpp/eigen
+    dev-libs/urdfdom_headers
+    media-libs/assimp
 "
 DEPEND="
-    ros-lunar/roslib
-    ros-lunar/urdf
-    ros-lunar/eigen_conversions
-    ros-lunar/eigen_stl_containers
     ros-lunar/visualization_msgs
-    ros-lunar/geometric_shapes
-    ros-lunar/shape_msgs
-    ros-lunar/trajectory_msgs
     ros-lunar/sensor_msgs
-    ros-lunar/moveit_msgs
-    ros-lunar/rostime
-    ros-lunar/octomap_msgs
-    ros-lunar/random_numbers
-    ros-lunar/std_msgs
-    ros-lunar/srdfdom
-    ros-lunar/kdl_parser
     ros-lunar/octomap
+    ros-lunar/moveit_msgs
+    ros-lunar/eigen_stl_containers
+    ros-lunar/eigen_conversions
+    ros-lunar/urdf
+    ros-lunar/roslib
+    ros-lunar/geometric_shapes
+    ros-lunar/trajectory_msgs
+    ros-lunar/random_numbers
+    ros-lunar/srdfdom
+    ros-lunar/octomap_msgs
+    ros-lunar/kdl_parser
+    ros-lunar/std_msgs
+    ros-lunar/rostime
+    ros-lunar/shape_msgs
     ros-lunar/geometry_msgs
-    eigen
-    liburdfdom-dev
-    liburdfdom-headers-dev
-    libfcl-dev
-    assimp
-    libconsole-bridge-dev
-    boost
+    sci-libs/fcl
+    dev-libs/boost
+    dev-libs/urdfdom
+    dev-libs/console_bridge
+    dev-cpp/eigen
+    dev-libs/urdfdom_headers
+    media-libs/assimp
 "
 
 SLOT="0/0"

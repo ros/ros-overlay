@@ -12,31 +12,31 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/gazebo_dev
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/rosgraph_msgs
     ros-lunar/roslib
     ros-lunar/gazebo_msgs
+    ros-lunar/std_srvs
     ros-lunar/geometry_msgs
     ros-lunar/tf
-    ros-lunar/gazebo_dev
-    tinyxml
+    dev-libs/tinyxml
 "
 DEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/gazebo_dev
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/rosgraph_msgs
     ros-lunar/roslib
     ros-lunar/gazebo_msgs
-    ros-lunar/cmake_modules
+    ros-lunar/std_srvs
     ros-lunar/geometry_msgs
+    ros-lunar/cmake_modules
     ros-lunar/tf
-    ros-lunar/gazebo_dev
-    tinyxml
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

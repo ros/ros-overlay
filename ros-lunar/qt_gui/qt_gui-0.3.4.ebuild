@@ -15,12 +15,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/python_qt_binding
-    python-rospkg
-    tango-icon-theme
+    x11-themes/tango-icon-theme
+    dev-python/rospkg
 "
 DEPEND="
-    qt5-qmake
-    python-qt5-bindings
+    dev-qt/qtcore
+    dev-python/PyQt5
 "
 
 SLOT="0/0"

@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosconsole
-    libconsole-bridge-dev
+    dev-libs/console_bridge
 "
 DEPEND="
     ros-lunar/rosconsole
-    libconsole-bridge-dev
+    dev-libs/console_bridge
 "
 
 SLOT="0/0"

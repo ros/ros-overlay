@@ -12,32 +12,32 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/message_filters
-    ros-lunar/xmlrpcpp
-    ros-lunar/std_msgs
-    ros-lunar/actionlib
-    ros-lunar/tf2_py
-    ros-lunar/rosgraph
-    ros-lunar/tf2_msgs
-    ros-lunar/geometry_msgs
-    ros-lunar/rospy
+    ros-lunar/roscpp
     ros-lunar/actionlib_msgs
+    ros-lunar/std_msgs
+    ros-lunar/rospy
+    ros-lunar/tf2_msgs
+    ros-lunar/rosgraph
+    ros-lunar/tf2_py
+    ros-lunar/xmlrpcpp
     ros-lunar/tf2
+    ros-lunar/actionlib
+    ros-lunar/geometry_msgs
 "
 DEPEND="
-    ros-lunar/roscpp
     ros-lunar/message_filters
-    ros-lunar/xmlrpcpp
-    ros-lunar/std_msgs
-    ros-lunar/actionlib
-    ros-lunar/tf2_py
-    ros-lunar/rosgraph
-    ros-lunar/tf2_msgs
-    ros-lunar/geometry_msgs
-    ros-lunar/rospy
+    ros-lunar/roscpp
     ros-lunar/actionlib_msgs
+    ros-lunar/std_msgs
+    ros-lunar/rospy
+    ros-lunar/tf2_msgs
+    ros-lunar/rosgraph
+    ros-lunar/tf2_py
+    ros-lunar/xmlrpcpp
     ros-lunar/tf2
+    ros-lunar/actionlib
+    ros-lunar/geometry_msgs
 "
 
 SLOT="0/0"

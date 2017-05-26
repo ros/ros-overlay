@@ -13,19 +13,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/std_msgs
-    ros-lunar/urdf
     ros-lunar/sensor_msgs
-    ros-lunar/kdl_parser
+    ros-lunar/urdf
     ros-lunar/geometry_msgs
     ros-lunar/tf
+    ros-lunar/kdl_parser
 "
 DEPEND="
+    ros-lunar/std_msgs
     ros-lunar/sensor_msgs
     ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/kdl_parser
     ros-lunar/geometry_msgs
     ros-lunar/tf
+    ros-lunar/kdl_parser
 "
 
 SLOT="0/0"

@@ -15,12 +15,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/smclib
     ros-lunar/rospy
-    uuid
+    sys-apps/util-linux
 "
 DEPEND="
+    ros-lunar/bond
     ros-lunar/smclib
     ros-lunar/rospy
-    ros-lunar/bond
 "
 
 SLOT="0/0"

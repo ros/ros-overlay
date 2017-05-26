@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/polled_camera
     ros-lunar/camera_info_manager
+    ros-lunar/polled_camera
     ros-lunar/image_transport
     ros-lunar/camera_calibration_parsers
 "

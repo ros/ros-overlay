@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/roscpp
     ros-lunar/rviz
-    libqt5-widgets
-    libqt5-gui
-    libqt5-core
+    dev-qt/qtgui
+    dev-qt/qtwidgets
+    dev-qt/qtcore
 "
 DEPEND="
     ros-lunar/roscpp
     ros-lunar/rviz
-    qtbase5-dev
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

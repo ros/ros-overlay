@@ -15,22 +15,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
     ros-lunar/rosconsole_bridge
+    ros-lunar/roscpp
     ros-lunar/urdf_parser_plugin
-    liburdfdom-headers-dev
-    liburdfdom-dev
+    ros-lunar/pluginlib
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
 "
 DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
     ros-lunar/rosconsole_bridge
-    ros-lunar/cmake_modules
+    ros-lunar/roscpp
     ros-lunar/rostest
+    ros-lunar/cmake_modules
     ros-lunar/urdf_parser_plugin
-    liburdfdom-headers-dev
-    liburdfdom-dev
+    ros-lunar/pluginlib
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
 "
 
 SLOT="0/0"

@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui_cpp
-    ros-lunar/rqt_gui
     ros-lunar/rviz
+    ros-lunar/rqt_gui
     ros-lunar/pluginlib
-    boost
+    ros-lunar/rqt_gui_cpp
+    dev-libs/boost
 "
 DEPEND="
     ros-lunar/rviz
-    ros-lunar/pluginlib
-    ros-lunar/rqt_gui_cpp
     ros-lunar/rqt_gui
-    qtbase5-dev
-    boost
+    ros-lunar/rqt_gui_cpp
+    ros-lunar/pluginlib
+    dev-libs/boost
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

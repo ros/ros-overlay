@@ -15,19 +15,19 @@ RDEPEND="
     ros-lunar/control_toolbox
     ros-lunar/forward_command_controller
     ros-lunar/urdf
+    ros-lunar/controller_interface
     ros-lunar/realtime_tools
     ros-lunar/control_msgs
     ros-lunar/angles
-    ros-lunar/controller_interface
 "
 DEPEND="
     ros-lunar/control_toolbox
     ros-lunar/forward_command_controller
     ros-lunar/urdf
+    ros-lunar/controller_interface
     ros-lunar/realtime_tools
     ros-lunar/control_msgs
     ros-lunar/angles
-    ros-lunar/controller_interface
 "
 
 SLOT="0/0"

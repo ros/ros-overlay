@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/message_filters
+    ros-lunar/image_transport
+    ros-lunar/sensor_msgs
+    ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
     ros-lunar/image_geometry
-    ros-lunar/image_proc
     ros-lunar/stereo_msgs
-    ros-lunar/message_filters
-    ros-lunar/nodelet
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
     ros-lunar/cv_bridge
+    ros-lunar/image_proc
 "
 DEPEND="
+    ros-lunar/message_filters
+    ros-lunar/image_transport
+    ros-lunar/sensor_msgs
+    ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
     ros-lunar/image_geometry
-    ros-lunar/image_proc
     ros-lunar/stereo_msgs
-    ros-lunar/message_filters
-    ros-lunar/nodelet
-    ros-lunar/sensor_msgs
-    ros-lunar/image_transport
     ros-lunar/cv_bridge
+    ros-lunar/image_proc
 "
 
 SLOT="0/0"

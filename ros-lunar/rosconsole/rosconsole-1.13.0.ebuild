@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosbuild
-    ros-lunar/cpp_common
     ros-lunar/rostime
-    apr
-    log4cxx
+    ros-lunar/cpp_common
+    dev-libs/log4cxx
+    dev-libs/apr
 "
 DEPEND="
     ros-lunar/rostime
     ros-lunar/rosunit
     ros-lunar/cpp_common
-    apr
-    boost
-    log4cxx
+    dev-libs/boost
+    dev-libs/apr
+    dev-libs/log4cxx
 "
 
 SLOT="0/0"
