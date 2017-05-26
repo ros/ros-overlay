@@ -24,19 +24,11 @@ RDEPEND="
     ros-lunar/cv_bridge
     dev-libs/boost
 "
-DEPEND="
-    ros-lunar/message_filters
-    ros-lunar/eigen_conversions
-    ros-lunar/image_transport
-    ros-lunar/sensor_msgs
-    ros-lunar/nodelet
+DEPEND="${RDEPEND}
     ros-lunar/stereo_msgs
-    ros-lunar/image_geometry
-    ros-lunar/tf2_ros
-    ros-lunar/tf2
-    ros-lunar/cv_bridge
+    ros-lunar/sensor_msgs
+    ros-lunar/message_filters
     ros-lunar/cmake_modules
-    dev-libs/boost
 "
 
 SLOT="0/0"
@@ -59,11 +51,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

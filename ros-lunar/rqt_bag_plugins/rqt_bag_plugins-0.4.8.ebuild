@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/rosbag
-    ros-lunar/rospy
-    ros-lunar/sensor_msgs
-    ros-lunar/rqt_gui
-    ros-lunar/rqt_gui_py
-    ros-lunar/roslib
-    ros-lunar/rqt_bag
-    ros-lunar/rqt_plot
     ros-lunar/geometry_msgs
+    ros-lunar/rospy
+    ros-lunar/rqt_gui
+    ros-lunar/rosbag
+    ros-lunar/rqt_plot
+    ros-lunar/std_msgs
+    ros-lunar/rqt_bag
+    ros-lunar/rqt_gui_py
+    ros-lunar/sensor_msgs
+    ros-lunar/roslib
     dev-python/pillow
     dev-python/pycairo
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -48,11 +48,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

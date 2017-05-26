@@ -19,18 +19,12 @@ RDEPEND="
     ros-lunar/tf
     ros-lunar/sensor_msgs
     ros-lunar/angles
-    dev-libs/boost
-    dev-cpp/eigen
     dev-python/numpy
-"
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/tf
-    ros-lunar/sensor_msgs
-    ros-lunar/cmake_modules
-    ros-lunar/angles
     dev-libs/boost
     dev-cpp/eigen
+"
+DEPEND="${RDEPEND}
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"
@@ -53,11 +47,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

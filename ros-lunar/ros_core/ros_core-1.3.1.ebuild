@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geneus
-    ros-lunar/genmsg
-    ros-lunar/gencpp
     ros-lunar/message_generation
-    ros-lunar/ros
-    ros-lunar/rosbag_migration_rule
-    ros-lunar/rosconsole_bridge
-    ros-lunar/roslisp
-    ros-lunar/roscpp_core
-    ros-lunar/std_msgs
+    ros-lunar/genpy
     ros-lunar/gennodejs
     ros-lunar/rosgraph_msgs
-    ros-lunar/common_msgs
-    ros-lunar/rospack
-    ros-lunar/ros_comm
-    ros-lunar/catkin
+    ros-lunar/roslisp
+    ros-lunar/geneus
+    ros-lunar/genmsg
+    ros-lunar/rosbag_migration_rule
+    ros-lunar/std_msgs
     ros-lunar/genlisp
-    ros-lunar/genpy
     ros-lunar/message_runtime
+    ros-lunar/ros_comm
     ros-lunar/std_srvs
+    ros-lunar/catkin
+    ros-lunar/gencpp
+    ros-lunar/rosconsole_bridge
+    ros-lunar/common_msgs
+    ros-lunar/roscpp_core
+    ros-lunar/ros
+    ros-lunar/rospack
     ros-lunar/cmake_modules
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -57,11 +57,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

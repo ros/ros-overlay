@@ -12,21 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-libs/boost
     dev-libs/tinyxml2
-    virtual/pkgconfig
-    dev-lang/python
-dev-lang/python-exec
-    dev-util/rosdep
+    dev-libs/boost
     dev-python/catkin_pkg
-"
-DEPEND="
-    ros-lunar/cmake_modules
-    dev-libs/boost
-    dev-libs/tinyxml2
+    dev-util/rosdep
     virtual/pkgconfig
     dev-lang/python
-dev-lang/python-exec
+"
+DEPEND="${RDEPEND}
+    ros-lunar/cmake_modules
     dev-cpp/gtest
 "
 
@@ -50,11 +44,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

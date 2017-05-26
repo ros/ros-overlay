@@ -22,13 +22,8 @@ RDEPEND="
     dev-libs/urdfdom_headers
     media-libs/collada-dom
 "
-DEPEND="
-    ros-lunar/roscpp
+DEPEND="${RDEPEND}
     ros-lunar/urdf
-    ros-lunar/urdf_parser_plugin
-    ros-lunar/class_loader
-    dev-libs/urdfdom_headers
-    media-libs/collada-dom
 "
 
 SLOT="0/0"
@@ -51,11 +46,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

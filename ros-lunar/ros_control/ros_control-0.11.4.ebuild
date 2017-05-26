@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/hardware_interface
-    ros-lunar/transmission_interface
-    ros-lunar/controller_manager_tests
-    ros-lunar/controller_manager_msgs
-    ros-lunar/controller_interface
     ros-lunar/realtime_tools
     ros-lunar/joint_limits_interface
+    ros-lunar/controller_manager_tests
+    ros-lunar/transmission_interface
+    ros-lunar/hardware_interface
+    ros-lunar/controller_interface
+    ros-lunar/controller_manager_msgs
+    ros-lunar/combined_robot_hw
     ros-lunar/combined_robot_hw_tests
     ros-lunar/controller_manager
-    ros-lunar/combined_robot_hw
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -46,11 +46,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

@@ -20,14 +20,8 @@ RDEPEND="
     dev-qt/qtwidgets
     dev-qt/qtcore
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/rosbag_storage
-    ros-lunar/rosgraph_msgs
-    dev-qt/qtgui
-    dev-qt/qtwidgets
+DEPEND="${RDEPEND}
     dev-qt/qtopengl
-    dev-qt/qtcore
 "
 
 SLOT="0/0"
@@ -50,11 +44,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

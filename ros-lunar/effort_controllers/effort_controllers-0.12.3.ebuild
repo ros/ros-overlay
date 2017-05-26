@@ -12,22 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/control_toolbox
-    ros-lunar/forward_command_controller
-    ros-lunar/urdf
-    ros-lunar/controller_interface
     ros-lunar/realtime_tools
+    ros-lunar/forward_command_controller
+    ros-lunar/control_toolbox
     ros-lunar/control_msgs
+    ros-lunar/controller_interface
+    ros-lunar/urdf
     ros-lunar/angles
 "
-DEPEND="
-    ros-lunar/control_toolbox
-    ros-lunar/forward_command_controller
-    ros-lunar/urdf
-    ros-lunar/controller_interface
-    ros-lunar/realtime_tools
-    ros-lunar/control_msgs
-    ros-lunar/angles
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -50,11 +43,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

@@ -13,18 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosbuild
-    ros-lunar/rostime
     ros-lunar/cpp_common
-    dev-libs/log4cxx
+    ros-lunar/rostime
     dev-libs/apr
+    dev-libs/log4cxx
 "
-DEPEND="
-    ros-lunar/rostime
+DEPEND="${RDEPEND}
     ros-lunar/rosunit
-    ros-lunar/cpp_common
     dev-libs/boost
-    dev-libs/apr
-    dev-libs/log4cxx
 "
 
 SLOT="0/0"
@@ -47,11 +43,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

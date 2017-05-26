@@ -13,19 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/smclib
     ros-lunar/roscpp
     ros-lunar/bond
-    ros-lunar/smclib
     dev-libs/boost
     sys-apps/util-linux
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/bond
+DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
-    ros-lunar/smclib
-    dev-libs/boost
-    sys-apps/util-linux
 "
 
 SLOT="0/0"
@@ -48,11 +43,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

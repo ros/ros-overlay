@@ -16,11 +16,8 @@ RDEPEND="
     dev-libs/boost
     dev-libs/console_bridge
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
-    dev-libs/poco
-    dev-libs/boost
-    dev-libs/console_bridge
 "
 
 SLOT="0/0"
@@ -43,11 +40,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

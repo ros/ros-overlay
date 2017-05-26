@@ -13,25 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/filters
-    ros-lunar/hardware_interface
-    ros-lunar/canopen_402
-    ros-lunar/urdf
-    ros-lunar/controller_manager_msgs
     ros-lunar/joint_limits_interface
-    ros-lunar/controller_manager
+    ros-lunar/controller_manager_msgs
+    ros-lunar/canopen_402
+    ros-lunar/hardware_interface
     ros-lunar/canopen_chain_node
+    ros-lunar/urdf
+    ros-lunar/controller_manager
     dev-cpp/muParser
 "
-DEPEND="
-    ros-lunar/filters
-    ros-lunar/hardware_interface
-    ros-lunar/canopen_402
-    ros-lunar/urdf
-    ros-lunar/controller_manager_msgs
-    ros-lunar/joint_limits_interface
-    ros-lunar/controller_manager
-    ros-lunar/canopen_chain_node
-    dev-cpp/muParser
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -54,11 +45,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

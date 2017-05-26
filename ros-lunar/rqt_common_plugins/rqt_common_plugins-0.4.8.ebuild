@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_msg
-    ros-lunar/rqt_action
-    ros-lunar/rqt_graph
-    ros-lunar/rqt_py_console
-    ros-lunar/rqt_dep
-    ros-lunar/rqt_image_view
-    ros-lunar/rqt_publisher
-    ros-lunar/rqt_srv
-    ros-lunar/rqt_top
-    ros-lunar/rqt_console
-    ros-lunar/rqt_web
-    ros-lunar/rqt_bag_plugins
-    ros-lunar/rqt_reconfigure
-    ros-lunar/rqt_service_caller
-    ros-lunar/rqt_bag
-    ros-lunar/rqt_logger_level
-    ros-lunar/rqt_plot
-    ros-lunar/rqt_py_common
-    ros-lunar/rqt_shell
     ros-lunar/rqt_topic
+    ros-lunar/rqt_top
+    ros-lunar/rqt_plot
+    ros-lunar/rqt_web
+    ros-lunar/rqt_graph
+    ros-lunar/rqt_reconfigure
+    ros-lunar/rqt_srv
+    ros-lunar/rqt_bag_plugins
+    ros-lunar/rqt_image_view
+    ros-lunar/rqt_action
+    ros-lunar/rqt_console
+    ros-lunar/rqt_publisher
+    ros-lunar/rqt_bag
     ros-lunar/rqt_launch
+    ros-lunar/rqt_py_console
+    ros-lunar/rqt_service_caller
+    ros-lunar/rqt_logger_level
+    ros-lunar/rqt_py_common
+    ros-lunar/rqt_dep
+    ros-lunar/rqt_msg
+    ros-lunar/rqt_shell
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -57,11 +57,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

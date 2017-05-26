@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosservice
-    ros-lunar/rosnode
     ros-lunar/roslaunch
     ros-lunar/rosgraph
-    ros-lunar/roslib
+    ros-lunar/rosservice
     ros-lunar/rosbuild
-    dev-python/rospkg
+    ros-lunar/rosnode
+    ros-lunar/roslib
     dev-python/paramiko
+    dev-python/rospkg
 "
-DEPEND="
+DEPEND="${RDEPEND}
     ros-lunar/rostest
 "
 
@@ -45,11 +45,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

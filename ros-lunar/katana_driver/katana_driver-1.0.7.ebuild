@@ -12,17 +12,17 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/kni
-    ros-lunar/katana_moveit_ikfast_plugin
-    ros-lunar/katana_gazebo_plugins
     ros-lunar/katana_description
-    ros-lunar/katana_tutorials
+    ros-lunar/kni
     ros-lunar/katana
-    ros-lunar/katana_teleop
+    ros-lunar/katana_tutorials
     ros-lunar/katana_msgs
     ros-lunar/katana_arm_gazebo
+    ros-lunar/katana_moveit_ikfast_plugin
+    ros-lunar/katana_teleop
+    ros-lunar/katana_gazebo_plugins
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -45,11 +45,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

@@ -13,30 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
+    ros-lunar/kdl_parser
+    ros-lunar/tf
+    ros-lunar/rosconsole
     ros-lunar/rostime
-    ros-lunar/sensor_msgs
-    ros-lunar/orocos_kdl
     ros-lunar/tf2_kdl
     ros-lunar/catkin
+    ros-lunar/sensor_msgs
     ros-lunar/tf2_ros
-    ros-lunar/rosconsole
-    ros-lunar/tf
-    ros-lunar/kdl_parser
+    ros-lunar/orocos_kdl
     dev-cpp/eigen
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/rostime
+DEPEND="${RDEPEND}
     ros-lunar/rostest
-    ros-lunar/sensor_msgs
-    ros-lunar/orocos_kdl
-    ros-lunar/tf2_kdl
-    ros-lunar/tf2_ros
-    ros-lunar/rosconsole
-    ros-lunar/tf
-    ros-lunar/kdl_parser
     dev-libs/urdfdom_headers
-    dev-cpp/eigen
 "
 
 SLOT="0/0"
@@ -59,11 +49,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

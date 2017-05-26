@@ -12,15 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/rviz
-    dev-qt/qtgui
+    ros-lunar/roscpp
     dev-qt/qtwidgets
     dev-qt/qtcore
+    dev-qt/qtgui
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/rviz
+DEPEND="${RDEPEND}
     dev-qt/qtcore
 "
 
@@ -44,11 +42,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

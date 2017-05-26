@@ -12,56 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/visualization_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/octomap
-    ros-lunar/moveit_msgs
-    ros-lunar/eigen_stl_containers
+    ros-lunar/geometry_msgs
     ros-lunar/eigen_conversions
+    ros-lunar/std_msgs
+    ros-lunar/octomap
+    ros-lunar/srdfdom
+    ros-lunar/rostime
+    ros-lunar/octomap_msgs
+    ros-lunar/random_numbers
+    ros-lunar/sensor_msgs
+    ros-lunar/trajectory_msgs
+    ros-lunar/kdl_parser
+    ros-lunar/visualization_msgs
     ros-lunar/urdf
     ros-lunar/geometric_shapes
-    ros-lunar/trajectory_msgs
-    ros-lunar/random_numbers
-    ros-lunar/srdfdom
-    ros-lunar/octomap_msgs
-    ros-lunar/kdl_parser
-    ros-lunar/std_msgs
-    ros-lunar/rostime
-    ros-lunar/geometry_msgs
-    sci-libs/fcl
-    dev-libs/boost
-    dev-libs/urdfdom
-    dev-libs/console_bridge
-    dev-cpp/eigen
+    ros-lunar/moveit_msgs
+    ros-lunar/eigen_stl_containers
     dev-libs/urdfdom_headers
     media-libs/assimp
+    dev-libs/boost
+    dev-libs/console_bridge
+    dev-libs/urdfdom
+    sci-libs/fcl
+    dev-cpp/eigen
 "
-DEPEND="
-    ros-lunar/visualization_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/octomap
-    ros-lunar/moveit_msgs
-    ros-lunar/eigen_stl_containers
-    ros-lunar/eigen_conversions
-    ros-lunar/urdf
+DEPEND="${RDEPEND}
     ros-lunar/roslib
-    ros-lunar/geometric_shapes
-    ros-lunar/trajectory_msgs
-    ros-lunar/random_numbers
-    ros-lunar/srdfdom
-    ros-lunar/octomap_msgs
-    ros-lunar/kdl_parser
-    ros-lunar/std_msgs
-    ros-lunar/rostime
     ros-lunar/shape_msgs
-    ros-lunar/geometry_msgs
-    sci-libs/fcl
-    dev-libs/boost
-    dev-libs/urdfdom
-    dev-libs/console_bridge
-    dev-cpp/eigen
-    dev-libs/urdfdom_headers
-    media-libs/assimp
 "
 
 SLOT="0/0"
@@ -84,11 +61,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

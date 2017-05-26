@@ -14,18 +14,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/moveit_ros_perception
     ros-lunar/dynamic_reconfigure
+    ros-lunar/pluginlib
     ros-lunar/actionlib
     ros-lunar/moveit_core
-    ros-lunar/pluginlib
     ros-lunar/angles
 "
-DEPEND="
-    ros-lunar/moveit_ros_perception
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/actionlib
-    ros-lunar/moveit_core
-    ros-lunar/pluginlib
-    ros-lunar/angles
+DEPEND="${RDEPEND}
     dev-cpp/eigen
 "
 
@@ -49,11 +43,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

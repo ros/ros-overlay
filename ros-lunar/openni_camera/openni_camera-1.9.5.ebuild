@@ -18,25 +18,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/image_transport
-    ros-lunar/sensor_msgs
-    ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
+    ros-lunar/image_transport
+    ros-lunar/nodelet
     ros-lunar/camera_info_manager
+    ros-lunar/sensor_msgs
     =dev-libs/libusb-1.0*
-    dev-libs/OpenNI
+    dev-libs/OpenNi
     dev-libs/log4cxx
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/image_transport
-    ros-lunar/sensor_msgs
-    ros-lunar/nodelet
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/camera_info_manager
-    =dev-libs/libusb-1.0*
-    dev-libs/OpenNI
-    dev-libs/log4cxx
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -59,11 +50,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

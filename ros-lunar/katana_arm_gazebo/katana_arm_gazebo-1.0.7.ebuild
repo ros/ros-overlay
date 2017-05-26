@@ -12,32 +12,20 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
     ros-lunar/roscpp
-    ros-lunar/urdf
-    ros-lunar/gazebo_ros
-    ros-lunar/joint_trajectory_controller
-    ros-lunar/katana_gazebo_plugins
     ros-lunar/katana_description
+    ros-lunar/std_msgs
     ros-lunar/controller_manager_msgs
     ros-lunar/xacro
-    ros-lunar/actionlib
     ros-lunar/robot_state_publisher
+    ros-lunar/joint_trajectory_controller
+    ros-lunar/actionlib
+    ros-lunar/gazebo_ros
+    ros-lunar/urdf
     ros-lunar/controller_manager
+    ros-lunar/katana_gazebo_plugins
 "
-DEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/roscpp
-    ros-lunar/urdf
-    ros-lunar/gazebo_ros
-    ros-lunar/joint_trajectory_controller
-    ros-lunar/katana_gazebo_plugins
-    ros-lunar/katana_description
-    ros-lunar/controller_manager_msgs
-    ros-lunar/xacro
-    ros-lunar/actionlib
-    ros-lunar/robot_state_publisher
-    ros-lunar/controller_manager
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -60,11 +48,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

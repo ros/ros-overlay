@@ -14,48 +14,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/message_filters
     ros-lunar/roscpp
-    ros-lunar/std_msgs
+    ros-lunar/nodelet_topic_tools
     ros-lunar/rosbag
+    ros-lunar/std_msgs
+    ros-lunar/tf
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/pluginlib
+    ros-lunar/nodelet
+    ros-lunar/pcl_conversions
+    ros-lunar/pcl_msgs
     ros-lunar/tf2_eigen
     ros-lunar/sensor_msgs
-    ros-lunar/nodelet
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/pcl_msgs
-    ros-lunar/pluginlib
-    ros-lunar/tf
-    ros-lunar/pcl_conversions
+    ros-lunar/message_filters
+    sci-libs/vtk
     sci-libs/pcl
     sci-libs/proj
-    dev-cpp/eigen
     dev-qt/qtcore
-    sci-libs/vtk
+    dev-cpp/eigen
 "
-DEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/pluginlib
-    ros-lunar/cmake_modules
-    ros-lunar/nodelet
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/roslib
+DEPEND="${RDEPEND}
     ros-lunar/rosconsole
+    ros-lunar/roslib
+    ros-lunar/cmake_modules
     ros-lunar/genmsg
-    ros-lunar/tf2_eigen
-    ros-lunar/pcl_msgs
-    ros-lunar/message_filters
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/rosbag
-    ros-lunar/tf
-    ros-lunar/pcl_conversions
-    dev-qt/qtcore
-    sci-libs/proj
-    dev-cpp/eigen
-    sci-libs/pcl
-    sci-libs/vtk
 "
 
 SLOT="0/0"
@@ -78,11 +60,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

@@ -12,15 +12,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/can_msgs
-    ros-lunar/canopen_402
-    ros-lunar/canopen_motor_node
-    ros-lunar/canopen_master
     ros-lunar/socketcan_interface
+    ros-lunar/canopen_402
     ros-lunar/socketcan_bridge
+    ros-lunar/canopen_master
     ros-lunar/canopen_chain_node
+    ros-lunar/canopen_motor_node
+    ros-lunar/can_msgs
 "
-DEPEND="
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -43,11 +43,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

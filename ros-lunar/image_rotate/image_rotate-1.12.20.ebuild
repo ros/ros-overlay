@@ -13,23 +13,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/image_transport
-    ros-lunar/nodelet
     ros-lunar/dynamic_reconfigure
+    ros-lunar/image_transport
+    ros-lunar/tf2_geometry_msgs
+    ros-lunar/nodelet
     ros-lunar/tf2_ros
     ros-lunar/tf2
     ros-lunar/cv_bridge
-    ros-lunar/tf2_geometry_msgs
 "
-DEPEND="
-    ros-lunar/roscpp
-    ros-lunar/image_transport
-    ros-lunar/nodelet
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/tf2_ros
-    ros-lunar/tf2
-    ros-lunar/cv_bridge
-    ros-lunar/tf2_geometry_msgs
+DEPEND="${RDEPEND}
     ros-lunar/geometry_msgs
     ros-lunar/cmake_modules
 "
@@ -54,11 +46,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

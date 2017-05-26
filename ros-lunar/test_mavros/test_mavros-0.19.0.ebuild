@@ -11,28 +11,19 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/control_toolbox
-    ros-lunar/std_msgs
-    ros-lunar/roscpp
-    ros-lunar/eigen_conversions
-    ros-lunar/tf2_ros
-    ros-lunar/mavros
     ros-lunar/mavros_extras
     ros-lunar/geometry_msgs
+    ros-lunar/roscpp
+    ros-lunar/control_toolbox
+    ros-lunar/std_msgs
+    ros-lunar/eigen_conversions
+    ros-lunar/mavros
+    ros-lunar/tf2_ros
     dev-cpp/eigen
 "
-DEPEND="
-    ros-lunar/control_toolbox
-    ros-lunar/std_msgs
-    ros-lunar/roscpp
-    ros-lunar/eigen_conversions
-    ros-lunar/tf2_ros
-    ros-lunar/mavros
-    ros-lunar/mavros_extras
-    ros-lunar/geometry_msgs
-    ros-lunar/cmake_modules
+DEPEND="${RDEPEND}
     ros-lunar/angles
-    dev-cpp/eigen
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"
@@ -55,11 +46,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }

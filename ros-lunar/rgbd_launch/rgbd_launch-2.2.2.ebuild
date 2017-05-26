@@ -14,16 +14,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/image_proc
     ros-lunar/depth_image_proc
     ros-lunar/nodelet
-    ros-lunar/image_proc
     ros-lunar/tf2_ros
 "
-DEPEND="
-    ros-lunar/depth_image_proc
-    ros-lunar/nodelet
-    ros-lunar/image_proc
-    ros-lunar/tf2_ros
+DEPEND="${RDEPEND}
 "
 
 SLOT="0/0"
@@ -46,11 +42,15 @@ src_compile() {
 }
 
 src_install() {
-    echo ""
+    cd ../../work
+    source /opt/ros/lunar/setup.bash
+    catkin_make_isolated --install --install-space="${D}" || die
 }
 
 pkg_postinst() {
-    cd ../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="/opt/ros/lunar" || die
+    cd ${D}
+    cp -R lib* /opt/ros/lunar
+    cp -R share /opt/ros/lunar
+    cp -R bin /opt/ros/lunar
+    cp -R include /opt/ros/lunar
 }
