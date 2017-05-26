@@ -11,39 +11,39 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rosbag
     ros-lunar/geometry_msgs
     ros-lunar/rospy
-    ros-lunar/roslib
     ros-lunar/interactive_markers
+    ros-lunar/laser_geometry
+    ros-lunar/std_srvs
     ros-lunar/roscpp
-    ros-lunar/sensor_msgs
+    ros-lunar/pluginlib
+    ros-lunar/image_transport
+    ros-lunar/roslib
+    ros-lunar/tf
+    ros-lunar/urdf
     ros-lunar/std_msgs
     ros-lunar/resource_retriever
-    ros-lunar/media_export
-    ros-lunar/visualization_msgs
-    ros-lunar/urdf
-    ros-lunar/rosbag
-    ros-lunar/std_srvs
-    ros-lunar/tf
-    ros-lunar/python_qt_binding
-    ros-lunar/image_transport
-    ros-lunar/pluginlib
-    ros-lunar/map_msgs
-    ros-lunar/laser_geometry
-    ros-lunar/message_filters
     ros-lunar/rosconsole
+    ros-lunar/visualization_msgs
+    ros-lunar/message_filters
+    ros-lunar/sensor_msgs
     ros-lunar/nav_msgs
-    dev-games/ogre
+    ros-lunar/media_export
+    ros-lunar/map_msgs
+    ros-lunar/python_qt_binding
     dev-libs/tinyxml
-    dev-cpp/eigen
-    dev-qt/qtwidgets
-    media-libs/assimp
-    dev-qt/qtopengl
-    dev-cpp/yaml-cpp
     media-libs/mesa
+    dev-cpp/eigen
+    dev-games/ogre
+    dev-qt/qtwidgets
     dev-qt/qtgui
+    dev-cpp/yaml-cpp
     dev-libs/urdfdom_headers
+    dev-qt/qtopengl
     dev-qt/qtcore
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -75,7 +75,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

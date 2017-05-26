@@ -12,33 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/eigen_stl_containers
-    ros-lunar/random_numbers
     ros-lunar/geometry_msgs
-    ros-lunar/rostime
-    ros-lunar/srdfdom
-    ros-lunar/kdl_parser
+    ros-lunar/eigen_stl_containers
+    ros-lunar/trajectory_msgs
+    ros-lunar/random_numbers
+    ros-lunar/octomap_msgs
     ros-lunar/moveit_msgs
-    ros-lunar/octomap
-    ros-lunar/eigen_conversions
-    ros-lunar/sensor_msgs
+    ros-lunar/urdf
+    ros-lunar/rostime
     ros-lunar/std_msgs
     ros-lunar/geometric_shapes
-    ros-lunar/trajectory_msgs
+    ros-lunar/srdfdom
     ros-lunar/visualization_msgs
-    ros-lunar/octomap_msgs
-    ros-lunar/urdf
-    dev-libs/boost
-    dev-libs/urdfdom
-    dev-cpp/eigen
-    dev-libs/console_bridge
-    media-libs/assimp
+    ros-lunar/eigen_conversions
+    ros-lunar/sensor_msgs
+    ros-lunar/octomap
+    ros-lunar/kdl_parser
     sci-libs/fcl
+    dev-cpp/eigen
     dev-libs/urdfdom_headers
+    dev-libs/urdfdom
+    dev-libs/console_bridge
+    dev-libs/boost
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
-    ros-lunar/roslib
     ros-lunar/shape_msgs
+    ros-lunar/roslib
 "
 
 SLOT="0/0"
@@ -64,7 +64,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

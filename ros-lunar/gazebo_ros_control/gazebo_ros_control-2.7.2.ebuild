@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/joint_limits_interface
-    ros-lunar/std_msgs
-    ros-lunar/controller_manager
-    ros-lunar/transmission_interface
-    ros-lunar/control_toolbox
-    ros-lunar/angles
-    ros-lunar/pluginlib
     ros-lunar/hardware_interface
-    ros-lunar/gazebo_ros
+    ros-lunar/control_toolbox
+    ros-lunar/transmission_interface
+    ros-lunar/joint_limits_interface
     ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/urdf
+    ros-lunar/gazebo_ros
+    ros-lunar/controller_manager
+    ros-lunar/pluginlib
+    ros-lunar/angles
 "
 DEPEND="${RDEPEND}
     ros-lunar/gazebo_dev
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

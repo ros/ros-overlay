@@ -11,14 +11,14 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/mavros
-    ros-lunar/std_msgs
     ros-lunar/sensor_msgs
-    ros-lunar/visualization_msgs
+    ros-lunar/mavros
     ros-lunar/geometry_msgs
-    ros-lunar/roscpp
     ros-lunar/urdf
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/tf
+    ros-lunar/visualization_msgs
     ros-lunar/mavros_msgs
 "
 DEPEND="${RDEPEND}
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

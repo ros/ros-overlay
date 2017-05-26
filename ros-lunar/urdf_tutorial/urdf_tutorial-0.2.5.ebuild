@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/controller_manager
-    ros-lunar/joint_state_controller
     ros-lunar/rqt_robot_steering
-    ros-lunar/xacro
-    ros-lunar/robot_state_publisher
-    ros-lunar/position_controllers
-    ros-lunar/rviz
-    ros-lunar/gazebo_ros
-    ros-lunar/gazebo_ros_control
-    ros-lunar/joint_state_publisher
-    ros-lunar/urdf
     ros-lunar/diff_drive_controller
+    ros-lunar/joint_state_publisher
+    ros-lunar/robot_state_publisher
+    ros-lunar/urdf
+    ros-lunar/position_controllers
+    ros-lunar/gazebo_ros_control
+    ros-lunar/gazebo_ros
+    ros-lunar/controller_manager
+    ros-lunar/xacro
+    ros-lunar/rviz
+    ros-lunar/joint_state_controller
 "
 DEPEND="${RDEPEND}
     ros-lunar/roslaunch
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

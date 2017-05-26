@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/rospy
-    ros-lunar/actionlib_msgs
-    ros-lunar/rostopic
-    ros-lunar/actionlib
-    ros-lunar/smach_msgs
-    ros-lunar/std_srvs
     ros-lunar/smach
+    ros-lunar/actionlib
+    ros-lunar/rospy
+    ros-lunar/std_srvs
+    ros-lunar/std_msgs
+    ros-lunar/rostopic
+    ros-lunar/actionlib_msgs
+    ros-lunar/smach_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

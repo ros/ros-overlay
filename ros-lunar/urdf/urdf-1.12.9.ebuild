@@ -15,16 +15,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/roscpp
     ros-lunar/rosconsole_bridge
+    ros-lunar/roscpp
     ros-lunar/urdf_parser_plugin
+    ros-lunar/pluginlib
     dev-libs/urdfdom_headers
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cmake_modules
     ros-lunar/rostest
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

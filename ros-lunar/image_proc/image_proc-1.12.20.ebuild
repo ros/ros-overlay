@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/image_transport
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/nodelet
-    ros-lunar/image_geometry
-    ros-lunar/nodelet_topic_tools
-    ros-lunar/roscpp
-    ros-lunar/cv_bridge
     ros-lunar/sensor_msgs
+    ros-lunar/nodelet_topic_tools
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/cv_bridge
+    ros-lunar/nodelet
+    ros-lunar/roscpp
+    ros-lunar/image_geometry
+    ros-lunar/image_transport
 "
 DEPEND="${RDEPEND}
     dev-libs/boost
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

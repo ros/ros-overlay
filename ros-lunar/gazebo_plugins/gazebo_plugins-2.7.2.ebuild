@@ -12,30 +12,30 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/camera_info_manager
-    ros-lunar/gazebo_msgs
-    ros-lunar/angles
     ros-lunar/geometry_msgs
     ros-lunar/cv_bridge
     ros-lunar/rospy
-    ros-lunar/nodelet
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
-    ros-lunar/rosgraph_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/std_msgs
-    ros-lunar/polled_camera
     ros-lunar/trajectory_msgs
-    ros-lunar/urdf
-    ros-lunar/tf
-    ros-lunar/std_srvs
-    ros-lunar/message_runtime
-    ros-lunar/image_transport
-    ros-lunar/dynamic_reconfigure
+    ros-lunar/polled_camera
+    ros-lunar/tf2_ros
+    ros-lunar/angles
+    ros-lunar/camera_info_manager
     ros-lunar/gazebo_dev
-    ros-lunar/rosconsole
+    ros-lunar/std_srvs
+    ros-lunar/roscpp
+    ros-lunar/gazebo_msgs
+    ros-lunar/image_transport
     ros-lunar/diagnostic_updater
+    ros-lunar/message_runtime
+    ros-lunar/urdf
+    ros-lunar/nodelet
+    ros-lunar/tf
+    ros-lunar/std_msgs
+    ros-lunar/rosconsole
+    ros-lunar/sensor_msgs
     ros-lunar/nav_msgs
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/rosgraph_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -64,7 +64,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

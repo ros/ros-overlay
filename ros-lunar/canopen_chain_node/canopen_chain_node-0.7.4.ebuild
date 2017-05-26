@@ -12,15 +12,15 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/roslib
-    ros-lunar/pluginlib
-    ros-lunar/canopen_master
-    ros-lunar/socketcan_interface
-    ros-lunar/roscpp
-    ros-lunar/std_srvs
-    ros-lunar/message_runtime
     ros-lunar/diagnostic_updater
+    ros-lunar/canopen_master
+    ros-lunar/roslib
+    ros-lunar/roscpp
+    ros-lunar/message_runtime
+    ros-lunar/socketcan_interface
+    ros-lunar/std_msgs
+    ros-lunar/std_srvs
+    ros-lunar/pluginlib
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/qt_gui
-    ros-lunar/rqt_gui_py
-    ros-lunar/rqt_gui
     ros-lunar/webkit_dependency
+    ros-lunar/rospy
     ros-lunar/python_qt_binding
+    ros-lunar/rqt_gui
+    ros-lunar/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }
