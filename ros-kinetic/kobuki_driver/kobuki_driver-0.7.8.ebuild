@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_command_line
-    ros-kinetic/ecl_devices
-    ros-kinetic/ecl_mobile_robot
-    ros-kinetic/ecl_converters
-    ros-kinetic/ecl_time
-    ros-kinetic/ecl_geometry
     ros-kinetic/ecl_sigslots
+    ros-kinetic/ecl_command_line
+    ros-kinetic/ecl_mobile_robot
+    ros-kinetic/ecl_geometry
+    ros-kinetic/ecl_time
+    ros-kinetic/ecl_converters
+    ros-kinetic/ecl_devices
 "
 DEPEND="${RDEPEND}
     ros-kinetic/ecl_build
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

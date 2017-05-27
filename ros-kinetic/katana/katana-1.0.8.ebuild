@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/katana"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana/1.0.8-0.tar.gz"
 
 LICENSE="GPL"
@@ -12,19 +12,19 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/urdf
     ros-kinetic/trajectory_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
-    ros-kinetic/kni
-    ros-kinetic/actionlib
+    ros-kinetic/moveit_msgs
     ros-kinetic/roslib
     ros-kinetic/sensor_msgs
-    ros-kinetic/control_msgs
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
+    ros-kinetic/urdf
+    ros-kinetic/actionlib
     ros-kinetic/katana_msgs
-    ros-kinetic/moveit_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/kni
+    ros-kinetic/roscpp
+    ros-kinetic/control_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
     sci-libs/armadillo
 "
 DEPEND="${RDEPEND}
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

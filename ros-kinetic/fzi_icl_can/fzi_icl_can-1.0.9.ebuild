@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The fzi_icl_can package"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/fzi_icl_can"
 SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_can-release/archive/release/kinetic/fzi_icl_can/1.0.9-0.tar.gz"
 
 LICENSE="LGPLv3"
@@ -12,10 +12,10 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/catkin
     ros-kinetic/fzi_icl_core
-    sys-kernel/linux-headers
+    ros-kinetic/catkin
     dev-libs/popt
+    sys-kernel/linux-headers
 "
 DEPEND="${RDEPEND}
     net-misc/wget
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

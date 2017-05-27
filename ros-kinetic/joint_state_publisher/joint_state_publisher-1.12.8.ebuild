@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a tool for setting and publishing joint state values for a given URDF."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/joint_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/joint_state_publisher/1.12.8-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/python_qt_binding
     ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

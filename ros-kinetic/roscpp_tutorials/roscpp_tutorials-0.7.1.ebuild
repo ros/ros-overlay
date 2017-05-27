@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosconsole
-    ros-kinetic/roscpp
     ros-kinetic/rostime
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/roscpp_serialization
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

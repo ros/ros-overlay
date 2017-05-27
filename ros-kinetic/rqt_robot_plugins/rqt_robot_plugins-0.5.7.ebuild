@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rqt_robot_monitor
+    ros-kinetic/rqt_pose_view
+    ros-kinetic/rqt_robot_dashboard
     ros-kinetic/rqt_robot_steering
+    ros-kinetic/rqt_rviz
+    ros-kinetic/rqt_moveit
     ros-kinetic/rqt_runtime_monitor
     ros-kinetic/rqt_tf_tree
-    ros-kinetic/rqt_moveit
-    ros-kinetic/rqt_robot_dashboard
     ros-kinetic/rqt_nav_view
-    ros-kinetic/rqt_pose_view
-    ros-kinetic/rqt_rviz
-    ros-kinetic/rqt_robot_monitor
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

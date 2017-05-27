@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="hector_slam_launch contains launch files for launching hector_slam with different robot systems/setups/postprocessing scenarios."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_slam_launch"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_slam_launch/0.3.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_geotiff
-    ros-kinetic/hector_geotiff_plugins
-    ros-kinetic/hector_trajectory_server
-    ros-kinetic/hector_mapping
     ros-kinetic/hector_map_server
+    ros-kinetic/hector_trajectory_server
+    ros-kinetic/hector_geotiff
+    ros-kinetic/hector_mapping
+    ros-kinetic/hector_geotiff_plugins
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

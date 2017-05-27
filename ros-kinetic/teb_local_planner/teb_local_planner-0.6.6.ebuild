@@ -8,7 +8,7 @@ DESCRIPTION="The teb_local_planner package implements a plugin
     The underlying method called Timed Elastic Band locally optimizes
     the robot's trajectory with respect to trajectory execution time,
     separation from obstacles and compliance with kinodynamic constraints at runtime."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/teb_local_planner"
 SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/kinetic/teb_local_planner/0.6.6-0.tar.gz"
 
 LICENSE="BSD"
@@ -16,26 +16,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/tf_conversions
+    ros-kinetic/message_runtime
+    ros-kinetic/visualization_msgs
+    ros-kinetic/base_local_planner
+    ros-kinetic/std_msgs
+    ros-kinetic/tf
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/costmap_converter
+    ros-kinetic/nav_core
+    ros-kinetic/libg2o
     ros-kinetic/nav_msgs
-    ros-kinetic/interactive_markers
     ros-kinetic/roscpp
     ros-kinetic/costmap_2d
-    ros-kinetic/costmap_converter
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/nav_core
     ros-kinetic/geometry_msgs
-    ros-kinetic/tf_conversions
-    ros-kinetic/libg2o
-    ros-kinetic/tf
-    ros-kinetic/base_local_planner
-    ros-kinetic/visualization_msgs
     ros-kinetic/pluginlib
+    ros-kinetic/interactive_markers
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/message_generation
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -61,7 +61,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

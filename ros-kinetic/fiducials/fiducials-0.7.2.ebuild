@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Localization using fiducial markers"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/fiducials"
 SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/fiducials/0.7.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/fiducial_detect
     ros-kinetic/fiducial_pose
-    ros-kinetic/aruco_detect
-    ros-kinetic/fiducial_lib
     ros-kinetic/fiducial_slam
+    ros-kinetic/fiducial_detect
+    ros-kinetic/aruco_detect
     ros-kinetic/fiducial_msgs
+    ros-kinetic/fiducial_lib
 "
 DEPEND="${RDEPEND}
 "
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

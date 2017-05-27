@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/shape_msgs
-    ros-kinetic/moveit_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/rospy
-    ros-kinetic/tf
-    ros-kinetic/geometry_msgs
     ros-kinetic/moveit_ros_planning_interface
-    dev-lang/python
+    ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/moveit_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
     dev-libs/assimp
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

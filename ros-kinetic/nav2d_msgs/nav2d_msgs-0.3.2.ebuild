@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Messages used for 2D-Navigation."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/nav2d_msgs"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_msgs/0.3.2-0.tar.gz"
 
 LICENSE="GPLv3"
@@ -12,10 +12,10 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

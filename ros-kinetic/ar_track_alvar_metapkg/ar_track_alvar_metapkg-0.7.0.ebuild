@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Meta package for ROS ar_track_alvar related packages."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/kinetic/ar_track_alvar_metapkg/0.7.0-1.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -12,8 +12,8 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ar_track_alvar
     ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/ar_track_alvar
 "
 DEPEND="${RDEPEND}
 "
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

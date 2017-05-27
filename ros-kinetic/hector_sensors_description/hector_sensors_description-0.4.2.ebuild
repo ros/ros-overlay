@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="hector_sensors_description contains URDF xacro macros for sensors, so they are easily attachable to robot models and usable in gazebo."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_sensors_description"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/kinetic/hector_sensors_description/0.4.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

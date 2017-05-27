@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pcl_conversions
-    ros-kinetic/stereo_msgs
-    ros-kinetic/class_loader
-    ros-kinetic/pcl_ros
-    ros-kinetic/nav_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/roscpp
-    ros-kinetic/rtabmap
-    ros-kinetic/eigen_conversions
-    ros-kinetic/tf2_ros
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/nodelet
-    ros-kinetic/image_geometry
     ros-kinetic/message_filters
     ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/image_transport
+    ros-kinetic/pcl_conversions
+    ros-kinetic/tf2_ros
+    ros-kinetic/std_srvs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/tf
+    ros-kinetic/visualization_msgs
     ros-kinetic/octomap_ros
+    ros-kinetic/image_transport_plugins
+    ros-kinetic/stereo_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/rtabmap
     ros-kinetic/rospy
-    ros-kinetic/costmap_2d
-    ros-kinetic/move_base_msgs
+    ros-kinetic/laser_geometry
+    ros-kinetic/nav_msgs
+    ros-kinetic/eigen_conversions
+    ros-kinetic/std_msgs
     ros-kinetic/cv_bridge
     ros-kinetic/tf_conversions
+    ros-kinetic/class_loader
+    ros-kinetic/image_geometry
+    ros-kinetic/roscpp
+    ros-kinetic/costmap_2d
     ros-kinetic/rviz
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_transport_plugins
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/move_base_msgs
+    ros-kinetic/pcl_ros
 "
 DEPEND="${RDEPEND}
     sci-libs/pcl
@@ -69,7 +69,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_msgs
-    ros-kinetic/roch_base
     ros-kinetic/roch_description
-    ros-kinetic/roch_bringup
-    ros-kinetic/roch_ftdi
-    ros-kinetic/roch_control
+    ros-kinetic/roch_base
     ros-kinetic/roch_sensorpc
+    ros-kinetic/roch_ftdi
     ros-kinetic/roch_capabilities
+    ros-kinetic/roch_control
+    ros-kinetic/roch_bringup
+    ros-kinetic/roch_msgs
     ros-kinetic/roch_safety_controller
 "
 DEPEND="${RDEPEND}
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

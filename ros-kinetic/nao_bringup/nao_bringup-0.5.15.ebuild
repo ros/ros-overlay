@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/naoqi_driver
+    ros-kinetic/nao_description
     ros-kinetic/naoqi_driver_py
     ros-kinetic/naoqi_pose
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/nao_description
-    ros-kinetic/naoqi_driver
-    ros-kinetic/diagnostic_aggregator
     ros-kinetic/naoqi_sensors_py
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

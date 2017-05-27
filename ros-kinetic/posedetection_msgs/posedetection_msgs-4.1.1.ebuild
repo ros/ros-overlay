@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="posedetection_msgs provides messages and services to facilitate passing pose detection results and features."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/posedetection_msgs"
 SRC_URI="https://github.com/tork-a/jsk_common_msgs-release/archive/release/kinetic/posedetection_msgs/4.1.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/message_runtime
+    ros-kinetic/cv_bridge
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
     ros-kinetic/message_filters
-    ros-kinetic/std_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/sensor_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

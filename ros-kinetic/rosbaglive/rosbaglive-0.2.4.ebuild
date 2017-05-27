@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Plays rosbags as though they were happening NOW."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/rosbaglive"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/rosbaglive/0.2.4-0.tar.gz"
 
 LICENSE="BSD"
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -5,17 +5,17 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_msgs/0.1.6-1"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_msgs-release/archive/release/kinetic/homer_msgs/0.1.6-1.tar.gz"
 
 LICENSE="LGPL-v2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/message_runtime
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

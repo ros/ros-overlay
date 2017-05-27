@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/katana_arm_gazebo"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_arm_gazebo/1.0.8-0.tar.gz"
 
 LICENSE="GPL"
@@ -12,17 +12,17 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
-    ros-kinetic/roscpp
-    ros-kinetic/controller_manager
     ros-kinetic/std_msgs
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/urdf
+    ros-kinetic/xacro
+    ros-kinetic/gazebo_ros
     ros-kinetic/controller_manager_msgs
+    ros-kinetic/urdf
     ros-kinetic/actionlib
+    ros-kinetic/controller_manager
+    ros-kinetic/roscpp
     ros-kinetic/joint_trajectory_controller
     ros-kinetic/katana_gazebo_plugins
-    ros-kinetic/gazebo_ros
+    ros-kinetic/robot_state_publisher
     ros-kinetic/katana_description
 "
 DEPEND="${RDEPEND}
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

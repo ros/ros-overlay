@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/navigation_stage
-    ros-kinetic/roomba_stage
     ros-kinetic/odometry_publisher_tutorial
-    ros-kinetic/point_cloud_publisher_tutorial
-    ros-kinetic/robot_setup_tf_tutorial
+    ros-kinetic/navigation_stage
     ros-kinetic/laser_scan_publisher_tutorial
+    ros-kinetic/point_cloud_publisher_tutorial
     ros-kinetic/simple_navigation_goals_tutorial
+    ros-kinetic/robot_setup_tf_tutorial
+    ros-kinetic/roomba_stage
 "
 DEPEND="${RDEPEND}
 "
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

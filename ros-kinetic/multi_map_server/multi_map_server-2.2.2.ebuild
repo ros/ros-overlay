@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="multi_map_server provides the"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/map_server"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/multi_map_server/2.2.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
     ros-kinetic/rosconsole
-    ros-kinetic/map_server
-    ros-kinetic/roscpp
     ros-kinetic/rospy
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/map_server
     ros-kinetic/tf
     media-libs/sdl-image
     dev-cpp/yaml-cpp
@@ -24,8 +24,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
     ros-kinetic/jsk_tools
     ros-kinetic/rosmake
-    dev-python/pyyaml
     dev-python/pillow
+    dev-python/pyyaml
 "
 
 SLOT="0/0"
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

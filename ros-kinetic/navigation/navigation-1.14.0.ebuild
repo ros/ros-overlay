@@ -14,23 +14,23 @@ LICENSE="BSD,LGPL,LGPL (amcl)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/move_base
-    ros-kinetic/navfn
-    ros-kinetic/clear_costmap_recovery
-    ros-kinetic/map_server
-    ros-kinetic/costmap_2d
-    ros-kinetic/dwa_local_planner
     ros-kinetic/base_local_planner
-    ros-kinetic/carrot_planner
-    ros-kinetic/rotate_recovery
-    ros-kinetic/voxel_grid
-    ros-kinetic/global_planner
-    ros-kinetic/amcl
-    ros-kinetic/fake_localization
-    ros-kinetic/move_base_msgs
-    ros-kinetic/move_slow_and_clear
-    ros-kinetic/nav_core
     ros-kinetic/robot_pose_ekf
+    ros-kinetic/fake_localization
+    ros-kinetic/navfn
+    ros-kinetic/dwa_local_planner
+    ros-kinetic/move_base
+    ros-kinetic/nav_core
+    ros-kinetic/clear_costmap_recovery
+    ros-kinetic/global_planner
+    ros-kinetic/rotate_recovery
+    ros-kinetic/move_slow_and_clear
+    ros-kinetic/voxel_grid
+    ros-kinetic/map_server
+    ros-kinetic/move_base_msgs
+    ros-kinetic/costmap_2d
+    ros-kinetic/amcl
+    ros-kinetic/carrot_planner
 "
 DEPEND="${RDEPEND}
 "
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

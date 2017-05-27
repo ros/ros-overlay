@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This is a programming framework to facilitate application development involving robot swarms. It makes coding for swarms much easier by providing an adequate swarm-level abstraction, as well as tools for swarm management, various communication mechanisms and so on. It also provides essential data structures, such as Neighbor, Swarm, and Virtual Stigmergy, to the user. Most importantly, it is completely compatible with ROS Indigo and presented in the form of a C++ library, which means that all resources in the ROS ecosystem are still available to the user. It is currently  extensible to Opensplice DDS."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/micros_swarm_framework"
 SRC_URI="https://github.com/xuefengchang/micros_swarm_framework-release/archive/release/kinetic/micros_swarm_framework/0.0.15-2.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/rospy
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
     ros-kinetic/nodelet
 "
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

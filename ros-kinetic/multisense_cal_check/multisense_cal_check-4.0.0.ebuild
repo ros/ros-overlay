@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="multisense_cal_check"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="https://bitbucket.org/crl/multisense_ros"
 SRC_URI="https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_cal_check/4.0.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

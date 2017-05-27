@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Filters the robot's body out of point clouds."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/robot_self_filter"
 SRC_URI="https://github.com/pr2-gbp/robot_self_filter-gbp/archive/release/kinetic/robot_self_filter/0.1.30-1.tar.gz"
 
 LICENSE="BSD"
@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/resource_retriever
-    ros-kinetic/filters
     ros-kinetic/visualization_msgs
-    ros-kinetic/tf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/urdf
+    ros-kinetic/resource_retriever
     ros-kinetic/pcl_ros
-    sci-physics/bullet
+    ros-kinetic/roscpp
+    ros-kinetic/filters
+    ros-kinetic/tf
     media-libs/assimp
+    sci-physics/bullet
 "
 DEPEND="${RDEPEND}
     media-libs/assimp
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

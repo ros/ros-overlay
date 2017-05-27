@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="jsk_footstep_planner"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/jsk_footstep_planner"
 SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/kinetic/jsk_footstep_planner/0.1.13-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roseus
-    ros-kinetic/roscpp
-    ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/jsk_recognition_utils
     ros-kinetic/geometry_msgs
+    ros-kinetic/roseus
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/jsk_topic_tools
     ros-kinetic/visualization_msgs
     ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/jsk_topic_tools
+    ros-kinetic/jsk_interactive_marker
+    ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/roscpp
     ros-kinetic/pcl_ros
 "
 DEPEND="${RDEPEND}
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

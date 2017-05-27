@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/rosconsole
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/std_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/rostime
     ros-kinetic/roscpp_serialization
+    ros-kinetic/message_runtime
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/xmlrpcpp
+    ros-kinetic/rosconsole
     ros-kinetic/roscpp_traits
+    ros-kinetic/rostime
     ros-kinetic/cpp_common
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslang
     ros-kinetic/message_generation
+    ros-kinetic/roslang
     virtual/pkgconfig
 "
 
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

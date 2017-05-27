@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/mrpt_reactivenav2d"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_reactivenav2d/0.1.18-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/visualization_msgs
+    ros-kinetic/actionlib_msgs
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roscpp
     ros-kinetic/mrpt_bridge
     ros-kinetic/actionlib
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/tf
-    ros-kinetic/actionlib_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

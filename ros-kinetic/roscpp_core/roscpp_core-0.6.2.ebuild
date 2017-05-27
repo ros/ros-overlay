@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Underlying data libraries for roscpp messages."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/roscpp_core"
 SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_core/0.6.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp_serialization
     ros-kinetic/roscpp_traits
     ros-kinetic/cpp_common
     ros-kinetic/rostime
-    ros-kinetic/roscpp_serialization
 "
 DEPEND="${RDEPEND}
 "
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

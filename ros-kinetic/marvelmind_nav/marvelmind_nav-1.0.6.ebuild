@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Marvelmind local navigation system"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://marvelmind.com"
 SRC_URI="https://github.com/MarvelmindRobotics/marvelmind_nav-release/archive/release/kinetic/marvelmind_nav/1.0.6-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/visualization_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
     ros-kinetic/roscpp
-    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

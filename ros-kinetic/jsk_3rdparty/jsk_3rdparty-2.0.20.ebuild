@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nlopt
-    ros-kinetic/slic
-    ros-kinetic/rospatlite
-    ros-kinetic/julius
-    ros-kinetic/libcmt
-    ros-kinetic/rosping
-    ros-kinetic/mini_maxwell
-    ros-kinetic/libsiftfast
-    ros-kinetic/assimp_devel
-    ros-kinetic/opt_camera
-    ros-kinetic/voice_text
-    ros-kinetic/bayesian_belief_networks
-    ros-kinetic/ff
     ros-kinetic/ffha
+    ros-kinetic/opt_camera
+    ros-kinetic/assimp_devel
+    ros-kinetic/rospatlite
+    ros-kinetic/libsiftfast
+    ros-kinetic/bayesian_belief_networks
+    ros-kinetic/rosping
+    ros-kinetic/ff
+    ros-kinetic/libcmt
+    ros-kinetic/mini_maxwell
+    ros-kinetic/voice_text
+    ros-kinetic/nlopt
     ros-kinetic/pgm_learner
+    ros-kinetic/slic
     ros-kinetic/downward
+    ros-kinetic/julius
 "
 DEPEND="${RDEPEND}
 "
@@ -55,7 +55,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

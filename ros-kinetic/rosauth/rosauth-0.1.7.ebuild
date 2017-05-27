@@ -16,8 +16,8 @@ RDEPEND="
     ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/rostest
+    ros-kinetic/message_generation
     dev-libs/openssl
 "
 
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

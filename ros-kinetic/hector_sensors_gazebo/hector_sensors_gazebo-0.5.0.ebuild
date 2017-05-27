@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="hector_sensors_gazebo depends on the necessary plugins for using the sensors from the hector_models repository."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_sensors_gazebo"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_sensors_gazebo/0.5.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_gazebo_plugins
     ros-kinetic/gazebo_plugins
     ros-kinetic/hector_sensors_description
+    ros-kinetic/hector_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 "
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

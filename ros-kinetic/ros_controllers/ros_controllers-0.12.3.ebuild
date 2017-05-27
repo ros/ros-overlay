@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/position_controllers
-    ros-kinetic/gripper_action_controller
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/forward_command_controller
-    ros-kinetic/imu_sensor_controller
-    ros-kinetic/force_torque_sensor_controller
-    ros-kinetic/velocity_controllers
-    ros-kinetic/joint_state_controller
-    ros-kinetic/joint_trajectory_controller
     ros-kinetic/rqt_joint_trajectory_controller
+    ros-kinetic/diff_drive_controller
+    ros-kinetic/force_torque_sensor_controller
+    ros-kinetic/joint_state_controller
+    ros-kinetic/position_controllers
+    ros-kinetic/velocity_controllers
     ros-kinetic/effort_controllers
+    ros-kinetic/gripper_action_controller
+    ros-kinetic/joint_trajectory_controller
+    ros-kinetic/imu_sensor_controller
+    ros-kinetic/forward_command_controller
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

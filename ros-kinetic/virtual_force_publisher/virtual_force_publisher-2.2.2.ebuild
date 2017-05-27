@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="publish end effector's force, which is estmated from joint torque value"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/virtual_force_publisher"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/virtual_force_publisher/2.2.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/kdl_parser
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf_conversions
     ros-kinetic/sensor_msgs
     ros-kinetic/urdf
-    ros-kinetic/geometry_msgs
-    ros-kinetic/kdl_parser
-    ros-kinetic/tf_conversions
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

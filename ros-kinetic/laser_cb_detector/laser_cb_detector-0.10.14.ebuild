@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cv_bridge
+    ros-kinetic/std_msgs
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/image_cb_detector
     ros-kinetic/roscpp
     ros-kinetic/message_filters
-    ros-kinetic/actionlib
-    ros-kinetic/std_msgs
     ros-kinetic/settlerlib
-    ros-kinetic/image_cb_detector
-    ros-kinetic/cv_bridge
-    ros-kinetic/actionlib_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

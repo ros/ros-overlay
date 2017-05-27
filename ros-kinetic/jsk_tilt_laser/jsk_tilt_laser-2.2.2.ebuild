@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/sensor_msgs
-    ros-kinetic/laser_filters
-    ros-kinetic/multisense_lib
-    ros-kinetic/tf
-    ros-kinetic/laser_assembler
-    ros-kinetic/tf_conversions
     ros-kinetic/urg_node
+    ros-kinetic/sensor_msgs
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/laser_filters
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/tf
+    ros-kinetic/multisense_lib
+    ros-kinetic/tf_conversions
+    ros-kinetic/laser_assembler
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

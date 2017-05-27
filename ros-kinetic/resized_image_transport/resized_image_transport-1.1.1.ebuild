@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="resized_image_transport"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/resized_image_transport"
 SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/resized_image_transport/1.1.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/nodelet
     ros-kinetic/message_runtime
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/jsk_topic_tools
     ros-kinetic/cv_bridge
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/nodelet
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -19,8 +19,8 @@ RDEPEND="
     x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtcore
     dev-python/PyQt5
+    dev-qt/qtcore
 "
 
 SLOT="0/0"
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

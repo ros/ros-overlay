@@ -15,17 +15,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geometry_msgs
+    ros-kinetic/robotis_device
     ros-kinetic/cmake_modules
     ros-kinetic/std_msgs
     ros-kinetic/roscpp
-    ros-kinetic/robotis_device
+    ros-kinetic/geometry_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/robotis_math
-    ros-kinetic/dynamixel_sdk
-    ros-kinetic/manipulator_h_base_module_msgs
     ros-kinetic/manipulator_h_kinematics_dynamics
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/robotis_math
+    ros-kinetic/manipulator_h_base_module_msgs
 "
 
 SLOT="0/0"
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

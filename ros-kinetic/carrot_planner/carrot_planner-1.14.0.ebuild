@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/base_local_planner
+    ros-kinetic/nav_core
     ros-kinetic/roscpp
     ros-kinetic/costmap_2d
     ros-kinetic/pluginlib
-    ros-kinetic/nav_core
     ros-kinetic/tf
-    ros-kinetic/base_local_planner
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

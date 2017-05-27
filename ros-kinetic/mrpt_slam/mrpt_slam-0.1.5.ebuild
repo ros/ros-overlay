@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/mrpt_ekf_slam_3d
-    ros-kinetic/mrpt_icp_slam_2d
     ros-kinetic/mrpt_ekf_slam_2d
     ros-kinetic/mrpt_rbpf_slam
+    ros-kinetic/mrpt_icp_slam_2d
 "
 DEPEND="${RDEPEND}
 "
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

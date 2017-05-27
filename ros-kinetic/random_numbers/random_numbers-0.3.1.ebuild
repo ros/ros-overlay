@@ -7,7 +7,7 @@ DESCRIPTION="This  library contains wrappers for generating floating point value
     
   The constructor of the wrapper is guaranteed to be thread safe and initialize its random number generator to a random seed.
   Seeds are obtained using a separate and different random number generator."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/random_numbers"
 SRC_URI="https://github.com/ros-gbp/random_numbers-release/archive/release/kinetic/random_numbers/0.3.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking library."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/kinetic/ar_track_alvar/0.7.0-1.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -12,27 +12,27 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/pcl_conversions
-    ros-kinetic/roscpp
-    ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/cv_bridge
+    ros-kinetic/visualization_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_transport
+    ros-kinetic/rospy
     ros-kinetic/sensor_msgs
     ros-kinetic/resource_retriever
-    ros-kinetic/image_transport
-    ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/rospy
-    ros-kinetic/tf2
-    ros-kinetic/cv_bridge
     ros-kinetic/pcl_ros
+    ros-kinetic/pcl_conversions
+    ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/tf2
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/message_generation
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

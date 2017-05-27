@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains test and demo programs for the katana_driver stack."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/katana_tutorials"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_tutorials/1.0.8-0.tar.gz"
 
 LICENSE="GPL"
@@ -12,11 +12,11 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/actionlib
+    ros-kinetic/sensor_msgs
     ros-kinetic/trajectory_msgs
-    ros-kinetic/control_msgs
     ros-kinetic/roscpp
+    ros-kinetic/control_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

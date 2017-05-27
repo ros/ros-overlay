@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Filters a laser scan to remove points that are in the current static map"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/map_laser"
 SRC_URI="https://github.com/wu-robotics/laser_filtering_release/archive/release/kinetic/map_laser/0.0.4-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
+    ros-kinetic/laser_filters
     ros-kinetic/std_msgs
     ros-kinetic/roslib
-    ros-kinetic/sensor_msgs
-    ros-kinetic/laser_filters
     ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/nav_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

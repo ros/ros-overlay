@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/swri_opencv_util
+    ros-kinetic/cv_bridge
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/std_msgs
+    ros-kinetic/swri_math_util
+    ros-kinetic/image_transport
+    ros-kinetic/rospy
     ros-kinetic/image_geometry
     ros-kinetic/nav_msgs
-    ros-kinetic/swri_opencv_util
-    ros-kinetic/message_filters
-    ros-kinetic/nodelet
-    ros-kinetic/std_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/geometry_msgs
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/tf
-    ros-kinetic/rospy
-    ros-kinetic/swri_math_util
-    ros-kinetic/cv_bridge
     ros-kinetic/roscpp
+    ros-kinetic/message_filters
+    ros-kinetic/geometry_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/tf
+    dev-qt/qtopengl
     dev-cpp/eigen
     dev-qt/qtgui
-    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
 "
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

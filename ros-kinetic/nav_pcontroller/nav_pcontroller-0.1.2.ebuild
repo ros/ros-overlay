@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Simple P-Controller for a holonomic robot base"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="https://www.github.com/code-iai/nav_pcontroller"
 SRC_URI="https://github.com/code-iai-release/nav_pcontroller-release/archive/release/kinetic/nav_pcontroller/0.1.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/roslib
     ros-kinetic/sensor_msgs
     ros-kinetic/actionlib
-    ros-kinetic/roslib
-    ros-kinetic/std_msgs
     ros-kinetic/move_base_msgs
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -9,7 +9,7 @@ DESCRIPTION="tf2 is the second generation of the transform library, which lets
     structure buffered in time, and lets the user transform points,
     vectors, etc between any two coordinate frames at any desired
     point in time."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/tf2"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -17,9 +17,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostime
-    ros-kinetic/geometry_msgs
     ros-kinetic/tf2_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/rostime
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

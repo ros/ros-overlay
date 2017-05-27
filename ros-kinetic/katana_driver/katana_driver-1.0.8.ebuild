@@ -12,14 +12,14 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/katana_tutorials
-    ros-kinetic/kni
     ros-kinetic/katana_moveit_ikfast_plugin
+    ros-kinetic/katana_teleop
     ros-kinetic/katana
     ros-kinetic/katana_arm_gazebo
-    ros-kinetic/katana_teleop
-    ros-kinetic/katana_gazebo_plugins
     ros-kinetic/katana_msgs
+    ros-kinetic/kni
+    ros-kinetic/katana_gazebo_plugins
+    ros-kinetic/katana_tutorials
     ros-kinetic/katana_description
 "
 DEPEND="${RDEPEND}
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

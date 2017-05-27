@@ -7,7 +7,7 @@ DESCRIPTION="The marker_msgs package contains messages usable to setup a marker/
     The package distinguishes between two types of messages. 
     First messages to describe the properties of a marker/fiducial detection system and the detected markers. 
     Secondly messages used to represent a map of markers/features with covariances as it would be produced by a SLAM system or published by a map server for self-localization.."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/marker_msgs"
 SRC_URI="https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,8 +15,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geometry_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

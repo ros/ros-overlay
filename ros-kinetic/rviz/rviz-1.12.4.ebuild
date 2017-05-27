@@ -11,38 +11,38 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/media_export
+    ros-kinetic/laser_geometry
     ros-kinetic/rosconsole
+    ros-kinetic/roslib
+    ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/roscpp
     ros-kinetic/interactive_markers
+    ros-kinetic/tf
+    ros-kinetic/visualization_msgs
+    ros-kinetic/map_msgs
+    ros-kinetic/urdf
+    ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/image_transport
     ros-kinetic/resource_retriever
     ros-kinetic/nav_msgs
-    ros-kinetic/python_qt_binding
-    ros-kinetic/laser_geometry
-    ros-kinetic/roscpp
-    ros-kinetic/roslib
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/urdf
-    ros-kinetic/message_filters
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/rospy
-    ros-kinetic/map_msgs
-    ros-kinetic/std_srvs
     ros-kinetic/pluginlib
-    ros-kinetic/media_export
-    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/python_qt_binding
     ros-kinetic/rosbag
-    dev-libs/urdfdom_headers
-    dev-cpp/eigen
+    ros-kinetic/std_srvs
     media-libs/mesa
     dev-cpp/yaml-cpp
     dev-qt/qtcore
-    dev-qt/qtwidgets
-    media-libs/assimp
-    dev-libs/tinyxml
     dev-qt/qtopengl
     dev-games/ogre
+    dev-libs/tinyxml
+    dev-libs/urdfdom_headers
+    media-libs/assimp
+    dev-qt/qtwidgets
+    dev-cpp/eigen
     dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
@@ -75,7 +75,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

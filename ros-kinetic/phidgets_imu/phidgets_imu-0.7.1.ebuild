@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/std_msgs
+    ros-kinetic/phidgets_api
+    ros-kinetic/imu_filter_madgwick
+    ros-kinetic/sensor_msgs
+    ros-kinetic/diagnostic_updater
     ros-kinetic/std_srvs
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/roscpp
     ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/imu_filter_madgwick
-    ros-kinetic/tf
     ros-kinetic/nodelet
-    ros-kinetic/phidgets_api
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

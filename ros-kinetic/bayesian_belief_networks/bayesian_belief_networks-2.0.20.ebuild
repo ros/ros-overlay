@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The bayesian_belief_networks package form https://github.com/eBay/bayesian-belief-networks, Authored by Neville Newey, Anzar Afaq, Copyright 2013 eBay Software Foundation"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="https://github.com/eBay/bayesian-belief-networks"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.0.20-0.tar.gz"
 
 LICENSE="Apache License, Version 2.0"
@@ -12,8 +12,8 @@ LICENSE="Apache License, Version 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -13,12 +13,12 @@ LICENSE="CC BY-NC-SA 4.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/twist_mux_msgs
+    ros-kinetic/visualization_msgs
     ros-kinetic/std_msgs
     ros-kinetic/diagnostic_updater
-    ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/roscpp
+    ros-kinetic/geometry_msgs
+    ros-kinetic/twist_mux_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

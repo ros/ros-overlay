@@ -7,7 +7,7 @@ DESCRIPTION="simple_message defines a simple messaging connection and protocol f
 	with an industrial robot controller.  Additional handler and manager classes are 
 	included for handling connection limited systems.  This package is part of the ROS-Industrial 
 	program."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/simple_message"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.6.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,8 +15,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/industrial_msgs
     ros-kinetic/roscpp
+    ros-kinetic/industrial_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/genlisp
-    ros-kinetic/genpy
-    ros-kinetic/genmsg
-    ros-kinetic/catkin
-    ros-kinetic/std_srvs
-    ros-kinetic/gencpp
-    ros-kinetic/rosconsole_bridge
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/roscpp_core
-    ros-kinetic/geneus
-    ros-kinetic/gennodejs
-    ros-kinetic/cmake_modules
-    ros-kinetic/roslisp
+    ros-kinetic/genlisp
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/message_generation
+    ros-kinetic/roscpp_core
+    ros-kinetic/gennodejs
+    ros-kinetic/gencpp
     ros-kinetic/rospack
-    ros-kinetic/ros
+    ros-kinetic/rosconsole_bridge
     ros-kinetic/rosbag_migration_rule
+    ros-kinetic/std_srvs
+    ros-kinetic/roslisp
+    ros-kinetic/catkin
+    ros-kinetic/genpy
+    ros-kinetic/ros
     ros-kinetic/ros_comm
+    ros-kinetic/cmake_modules
+    ros-kinetic/geneus
+    ros-kinetic/genmsg
     ros-kinetic/common_msgs
 "
 DEPEND="${RDEPEND}
@@ -60,7 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="cv_camera uses OpenCV capture object to capture camera image.
   This supports camera_image and nodelet."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/cv_camera"
 SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/kinetic/cv_camera/0.1.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
     ros-kinetic/cv_bridge
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/camera_info_manager
+    ros-kinetic/nodelet
     media-libs/opencv
 "
 DEPEND="${RDEPEND}
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

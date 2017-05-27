@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_testsuite
-    ros-kinetic/kobuki_bumper2pc
-    ros-kinetic/kobuki_description
     ros-kinetic/kobuki_capabilities
+    ros-kinetic/kobuki_keyop
     ros-kinetic/kobuki_random_walker
     ros-kinetic/kobuki_controller_tutorial
+    ros-kinetic/kobuki_testsuite
     ros-kinetic/kobuki_safety_controller
-    ros-kinetic/kobuki_auto_docking
-    ros-kinetic/kobuki_keyop
-    ros-kinetic/kobuki_node
     ros-kinetic/kobuki_rapps
+    ros-kinetic/kobuki_node
+    ros-kinetic/kobuki_bumper2pc
+    ros-kinetic/kobuki_auto_docking
+    ros-kinetic/kobuki_description
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

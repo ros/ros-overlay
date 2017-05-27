@@ -20,10 +20,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/kdl_conversions
-    ros-kinetic/geometry_msgs
-    ros-kinetic/tf
-    ros-kinetic/orocos_kdl
     ros-kinetic/python_orocos_kdl
+    ros-kinetic/geometry_msgs
+    ros-kinetic/orocos_kdl
+    ros-kinetic/tf
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

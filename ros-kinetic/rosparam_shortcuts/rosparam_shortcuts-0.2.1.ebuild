@@ -16,9 +16,9 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslint
     ros-kinetic/cmake_modules
     ros-kinetic/eigen_conversions
+    ros-kinetic/roslint
 "
 
 SLOT="0/0"
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

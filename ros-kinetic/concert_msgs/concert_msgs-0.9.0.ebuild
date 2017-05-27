@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/gateway_msgs
+    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rocon_app_manager_msgs
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
-    ros-kinetic/rocon_app_manager_msgs
     ros-kinetic/uuid_msgs
-    ros-kinetic/rocon_std_msgs
+    ros-kinetic/gateway_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="Theora_image_transport provides a plugin to image_transport for
     transparently sending an image stream encoded with the Theora codec."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
 SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/release/kinetic/theora_image_transport/1.9.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/pluginlib
-    ros-kinetic/rosbag
     ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/image_transport
     ros-kinetic/cv_bridge
-    media-libs/libogg
+    ros-kinetic/std_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_transport
+    ros-kinetic/rosbag
+    ros-kinetic/pluginlib
     media-libs/libtheora
+    media-libs/libogg
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

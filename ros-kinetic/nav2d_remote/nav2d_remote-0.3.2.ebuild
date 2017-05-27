@@ -7,7 +7,7 @@ DESCRIPTION="This package is used to manually control a robot that uses the oper
     navigator node from navigation_2d. Currently there is one node to control one
     robot with a joystick and one to control multiple robots in simulation.
     It can send commands directly to the operator or start and stop navigator actions."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/remote_controller"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_remote/0.3.2-0.tar.gz"
 
 LICENSE="GPLv3"
@@ -15,10 +15,10 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/nav2d_navigator
     ros-kinetic/nav2d_operator
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

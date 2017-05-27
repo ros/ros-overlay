@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Launch a PID control node."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/pid"
 SRC_URI="https://github.com/AndyZe/pid-release/archive/release/kinetic/pid/0.0.20-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/diagnostic_updater
     ros-kinetic/message_runtime
+    ros-kinetic/diagnostic_updater
     ros-kinetic/std_msgs
     ros-kinetic/roscpp
 "
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

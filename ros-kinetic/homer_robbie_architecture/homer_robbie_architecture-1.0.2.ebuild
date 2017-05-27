@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/repository/archive.tar.gz?ref=release/kinetic/homer_robbie_architecture/1.0.2-3"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/archive/release/kinetic/homer_robbie_architecture/1.0.2-3.tar.gz"
 
 LICENSE="LGPL-v2"
 
@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/roscpp
     media-libs/opencv
-    dev-libs/boost
-    dev-libs/tinyxml
     media-libs/mesa
+    dev-libs/tinyxml
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

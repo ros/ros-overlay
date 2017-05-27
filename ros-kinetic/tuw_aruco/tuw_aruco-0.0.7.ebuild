@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This is a wrapper around the marker detection library ArUco."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/tuw_aruco"
 SRC_URI="https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_aruco/0.0.7-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_geometry
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/marker_msgs
-    ros-kinetic/rospy
-    ros-kinetic/tf
     ros-kinetic/cv_bridge
+    ros-kinetic/std_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_transport
+    ros-kinetic/rospy
+    ros-kinetic/image_geometry
+    ros-kinetic/roscpp
+    ros-kinetic/marker_msgs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

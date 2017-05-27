@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="jsk_interactive_test"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/jsk_interactive_test"
 SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_interactive_test/2.1.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_interactive
+    ros-kinetic/visualization_msgs
     ros-kinetic/rospy
     ros-kinetic/rviz
-    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_interactive
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/mk
     ros-kinetic/rosbuild
+    ros-kinetic/mk
 "
 
 SLOT="0/0"
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

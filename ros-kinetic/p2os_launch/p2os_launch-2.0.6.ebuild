@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Launch and config files designed for use with the p2os stack."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/p2os-vanderbilt"
 SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_launch/2.0.6-0.tar.gz"
 
 LICENSE="BSD"
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

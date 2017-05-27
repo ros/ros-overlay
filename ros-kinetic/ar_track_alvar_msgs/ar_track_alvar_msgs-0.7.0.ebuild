@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking library."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/kinetic/ar_track_alvar_msgs/0.7.0-1.tar.gz"
 
 LICENSE="BSD"
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

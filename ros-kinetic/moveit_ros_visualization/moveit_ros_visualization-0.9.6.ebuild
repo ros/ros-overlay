@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/object_recognition_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/pluginlib
-    ros-kinetic/interactive_markers
-    ros-kinetic/moveit_ros_robot_interaction
-    ros-kinetic/moveit_ros_warehouse
-    ros-kinetic/rospy
     ros-kinetic/moveit_ros_perception
-    ros-kinetic/geometric_shapes
-    ros-kinetic/moveit_ros_planning_interface
+    ros-kinetic/object_recognition_msgs
     ros-kinetic/rviz
+    ros-kinetic/moveit_ros_planning_interface
+    ros-kinetic/rospy
+    ros-kinetic/pluginlib
+    ros-kinetic/roscpp
+    ros-kinetic/moveit_ros_robot_interaction
+    ros-kinetic/geometric_shapes
+    ros-kinetic/moveit_ros_warehouse
+    ros-kinetic/interactive_markers
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

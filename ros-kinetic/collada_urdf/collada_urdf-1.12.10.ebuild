@@ -7,7 +7,7 @@ DESCRIPTION="This package contains a tool to convert Unified Robot Description F
 
     Implements robot-specific COLLADA extensions as defined by
     http://openrave.programmingvision.com/index.php/Started:COLLADA"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/collada_urdf"
 SRC_URI="https://github.com/ros-gbp/collada_urdf-release/archive/release/kinetic/collada_urdf/1.12.10-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,17 +15,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/urdf
-    ros-kinetic/roscpp
-    ros-kinetic/collada_parser
-    ros-kinetic/resource_retriever
-    ros-kinetic/angles
     ros-kinetic/tf
     ros-kinetic/geometric_shapes
-    media-libs/collada-dom
-    dev-libs/urdfdom_headers
+    ros-kinetic/urdf
+    ros-kinetic/angles
+    ros-kinetic/resource_retriever
+    ros-kinetic/roscpp
+    ros-kinetic/collada_parser
     media-libs/assimp
     dev-libs/urdfdom
+    media-libs/collada-dom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -55,7 +55,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

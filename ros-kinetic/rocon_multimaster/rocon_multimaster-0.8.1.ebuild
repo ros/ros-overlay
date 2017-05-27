@@ -15,13 +15,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rocon_gateway
-    ros-kinetic/rocon_hub
-    ros-kinetic/rocon_test
     ros-kinetic/rocon_gateway_utils
-    ros-kinetic/rocon_hub_client
+    ros-kinetic/rocon_hub
     ros-kinetic/rocon_gateway_tests
+    ros-kinetic/rocon_gateway
+    ros-kinetic/rocon_test
     ros-kinetic/rocon_unreliable_experiments
+    ros-kinetic/rocon_hub_client
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

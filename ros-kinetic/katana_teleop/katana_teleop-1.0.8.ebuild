@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides tele-operation nodes to control the Neuronics Katana 450 arm via keyboard commands or with a playstation 3 controller."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/katana_teleop"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_teleop/1.0.8-0.tar.gz"
 
 LICENSE="GPL"
@@ -12,11 +12,11 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/actionlib
     ros-kinetic/control_msgs
-    ros-kinetic/roscpp
     ros-kinetic/katana_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

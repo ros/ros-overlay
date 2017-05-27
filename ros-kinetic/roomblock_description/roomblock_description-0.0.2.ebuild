@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
     ros-kinetic/create_description
-    ros-kinetic/robot_state_publisher
+    ros-kinetic/rviz
+    ros-kinetic/xacro
     ros-kinetic/urdf
     ros-kinetic/joint_state_publisher
-    ros-kinetic/rviz
+    ros-kinetic/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

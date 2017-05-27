@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Collecting, tracking and generating statistics for ar markers from ar_track_alvar."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/yocs_ar_marker_tracking"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_ar_marker_tracking/0.8.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/ar_track_alvar_msgs
     ros-kinetic/yocs_math_toolkit
     ros-kinetic/sensor_msgs
+    ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
     dev-cpp/yaml-cpp
 "
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

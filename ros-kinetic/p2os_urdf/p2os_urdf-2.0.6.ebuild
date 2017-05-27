@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="URDF file descriptions for P2OS/ARCOS robot"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/p2os-purdue"
 SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_urdf/2.0.6-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/std_msgs
-    ros-kinetic/urdf
     ros-kinetic/sensor_msgs
+    ros-kinetic/urdf
     ros-kinetic/kdl_parser
     ros-kinetic/geometry_msgs
     ros-kinetic/tf
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides Gazebo plugins to simulate the Katana arm."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/katana_gazebo_plugins"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_gazebo_plugins/1.0.8-0.tar.gz"
 
 LICENSE="GPL"
@@ -12,13 +12,13 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_toolbox
-    ros-kinetic/actionlib
     ros-kinetic/trajectory_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/control_msgs
-    ros-kinetic/katana_msgs
     ros-kinetic/gazebo_ros
+    ros-kinetic/sensor_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/katana_msgs
+    ros-kinetic/control_toolbox
+    ros-kinetic/control_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

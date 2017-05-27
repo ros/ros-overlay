@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Messages related to the Point Grey camera driver."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/pointgrey_camera_driver"
 SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/image_exposure_msgs/0.13.1-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/statistics_msgs
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
+    ros-kinetic/statistics_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

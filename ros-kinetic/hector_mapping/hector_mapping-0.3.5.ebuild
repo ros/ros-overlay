@@ -7,7 +7,7 @@ DESCRIPTION="hector_mapping is a SLAM approach that can be used without odometry
     It leverages the high update rate of modern LIDAR systems like the Hokuyo UTM-30LX and provides 2D pose estimates at scan rate of the sensors (40Hz for the UTM-30LX).
     While the system does not provide explicit loop closing ability, it is sufficiently accurate for many real world scenarios. The system has successfully been used on
     Unmanned Ground Robots, Unmanned Surface Vehicles, Handheld Mapping Devices and logged data from quadrotor UAVs."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_mapping"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_mapping/0.3.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,14 +15,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/roscpp
-    ros-kinetic/message_filters
     ros-kinetic/message_runtime
     ros-kinetic/visualization_msgs
-    ros-kinetic/tf
+    ros-kinetic/laser_geometry
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/message_filters
     ros-kinetic/tf_conversions
+    ros-kinetic/tf
     dev-libs/boost
     dev-cpp/eigen
 "
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

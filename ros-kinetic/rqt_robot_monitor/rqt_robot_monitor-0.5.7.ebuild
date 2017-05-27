@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/python_qt_binding
-    ros-kinetic/rqt_bag
-    ros-kinetic/rqt_gui
-    ros-kinetic/qt_gui_py_common
+    ros-kinetic/rqt_py_common
+    ros-kinetic/rqt_gui_py
     ros-kinetic/rospy
     ros-kinetic/qt_gui
-    ros-kinetic/rqt_gui_py
+    ros-kinetic/qt_gui_py_common
     ros-kinetic/diagnostic_msgs
-    ros-kinetic/rqt_py_common
+    ros-kinetic/rqt_gui
+    ros-kinetic/rqt_bag
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rocon_python_wifi
     ros-kinetic/rocon_launch
-    ros-kinetic/rocon_master_info
-    ros-kinetic/rocon_interactions
-    ros-kinetic/rocon_semantic_version
     ros-kinetic/rocon_python_redis
-    ros-kinetic/rocon_python_comms
-    ros-kinetic/rocon_ebnf
+    ros-kinetic/rocon_master_info
     ros-kinetic/rocon_python_utils
     ros-kinetic/rocon_console
+    ros-kinetic/rocon_python_comms
     ros-kinetic/rocon_uri
-    ros-kinetic/rocon_python_wifi
+    ros-kinetic/rocon_ebnf
+    ros-kinetic/rocon_semantic_version
+    ros-kinetic/rocon_interactions
 "
 DEPEND="${RDEPEND}
 "
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

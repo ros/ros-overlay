@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="KDL binding for tf2"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/tf2"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_kdl/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
-    ros-kinetic/orocos_kdl
     ros-kinetic/tf2_ros
     ros-kinetic/tf2
+    ros-kinetic/orocos_kdl
+    ros-kinetic/cmake_modules
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

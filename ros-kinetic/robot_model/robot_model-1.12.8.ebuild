@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/collada_parser
     ros-kinetic/urdf
-    ros-kinetic/kdl_parser
-    ros-kinetic/joint_state_publisher
     ros-kinetic/resource_retriever
-    ros-kinetic/collada_urdf
     ros-kinetic/urdf_parser_plugin
+    ros-kinetic/joint_state_publisher
+    ros-kinetic/collada_urdf
+    ros-kinetic/kdl_parser
+    ros-kinetic/collada_parser
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

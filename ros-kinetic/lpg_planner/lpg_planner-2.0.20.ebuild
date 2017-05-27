@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/downward"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/lpg_planner/2.0.20-0.tar.gz"
 
 LICENSE="GPL"
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

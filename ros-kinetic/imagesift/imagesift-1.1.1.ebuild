@@ -14,14 +14,14 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cv_bridge
+    ros-kinetic/libsiftfast
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/posedetection_msgs
+    ros-kinetic/jsk_recognition_utils
     ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/jsk_recognition_utils
-    ros-kinetic/libsiftfast
-    ros-kinetic/posedetection_msgs
-    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

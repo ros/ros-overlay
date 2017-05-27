@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/roscpp_traits"
 SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_traits/0.6.2-0.tar.gz"
 
 LICENSE="BSD"
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

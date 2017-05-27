@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/compressed_image_transport
+    ros-kinetic/visualization_msgs
+    ros-kinetic/cv_bridge
     ros-kinetic/fiducial_pose
-    ros-kinetic/fiducial_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/compressed_image_transport
     ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/fiducial_msgs
+    ros-kinetic/tf2
+    ros-kinetic/roscpp
     ros-kinetic/fiducial_lib
     ros-kinetic/tf2_ros
-    ros-kinetic/visualization_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/orocos_kdl
-    ros-kinetic/cv_bridge
-    ros-kinetic/tf2
 "
 DEPEND="${RDEPEND}
 "
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -17,11 +17,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/sensor_msgs
     ros-kinetic/angles
-    ros-kinetic/tf
     ros-kinetic/roscpp
-    dev-cpp/eigen
+    ros-kinetic/tf
     dev-python/numpy
     dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

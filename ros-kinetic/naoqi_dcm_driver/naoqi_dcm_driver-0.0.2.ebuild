@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/naoqi_libqicore
-    ros-kinetic/hardware_interface
-    ros-kinetic/roscpp
-    ros-kinetic/controller_manager
-    ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/naoqi_libqi
+    ros-kinetic/rospy
+    ros-kinetic/hardware_interface
+    ros-kinetic/sensor_msgs
+    ros-kinetic/naoqi_libqicore
+    ros-kinetic/controller_manager
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
     ros-kinetic/tf
-    ros-kinetic/rospy
-    ros-kinetic/naoqi_libqi
 "
 DEPEND="${RDEPEND}
     ros-kinetic/diagnostic_updater
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

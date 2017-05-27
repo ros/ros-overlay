@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="tf2_bullet"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/tf2_bullet"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_bullet/0.5.15-0.tar.gz"
 
 LICENSE="BSD"
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

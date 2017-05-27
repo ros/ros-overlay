@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Metapackage for moveit plugins."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://moveit.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_plugins/0.9.6-0.tar.gz"
 
 LICENSE="BSD"
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/moveit_fake_controller_manager
-    ros-kinetic/moveit_ros_control_interface
     ros-kinetic/moveit_simple_controller_manager
+    ros-kinetic/moveit_ros_control_interface
 "
 DEPEND="${RDEPEND}
 "
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

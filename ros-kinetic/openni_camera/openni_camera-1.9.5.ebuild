@@ -9,7 +9,7 @@ DESCRIPTION="A ROS driver for OpenNI depth (+ RGB) cameras. These include:
        ASUS Xtion Pro and Pro Live
 
     The driver publishes raw depth, RGB, and IR image streams."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/openni_camera"
 SRC_URI="https://github.com/ros-gbp/openni_camera-release/archive/release/kinetic/openni_camera/1.9.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -18,14 +18,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
     ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
     ros-kinetic/nodelet
     dev-libs/OpenNi
-    =dev-libs/libusb-1.0*
     dev-libs/log4cxx
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
 "
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

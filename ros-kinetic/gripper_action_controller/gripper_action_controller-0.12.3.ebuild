@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/trajectory_msgs
     ros-kinetic/xacro
+    ros-kinetic/controller_interface
     ros-kinetic/hardware_interface
     ros-kinetic/urdf
-    ros-kinetic/controller_interface
-    ros-kinetic/roscpp
-    ros-kinetic/controller_manager
-    ros-kinetic/actionlib
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/realtime_tools
-    ros-kinetic/cmake_modules
-    ros-kinetic/control_msgs
     ros-kinetic/angles
+    ros-kinetic/actionlib
+    ros-kinetic/controller_manager
     ros-kinetic/control_toolbox
+    ros-kinetic/roscpp
+    ros-kinetic/control_msgs
+    ros-kinetic/cmake_modules
+    ros-kinetic/realtime_tools
 "
 DEPEND="${RDEPEND}
 "
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

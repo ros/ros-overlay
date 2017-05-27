@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="multisense_bringup"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="https://bitbucket.org/crl/multisense_ros"
 SRC_URI="https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_bringup/4.0.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/multisense_ros
     ros-kinetic/multisense_description
+    ros-kinetic/multisense_ros
 "
 DEPEND="${RDEPEND}
 "
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

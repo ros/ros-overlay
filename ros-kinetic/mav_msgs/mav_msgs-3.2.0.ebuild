@@ -12,15 +12,15 @@ LICENSE="ASL 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
     ros-kinetic/geometry_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/std_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/message_generation
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

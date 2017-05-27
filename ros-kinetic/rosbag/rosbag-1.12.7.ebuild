@@ -14,16 +14,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/genpy
-    ros-kinetic/genmsg
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
     ros-kinetic/xmlrpcpp
+    ros-kinetic/rosconsole
     ros-kinetic/roslib
-    ros-kinetic/topic_tools
     ros-kinetic/rospy
     ros-kinetic/rosbag_storage
+    ros-kinetic/topic_tools
+    ros-kinetic/std_srvs
+    ros-kinetic/roscpp
+    ros-kinetic/genpy
+    ros-kinetic/genmsg
     dev-python/rospkg
     dev-libs/boost
 "
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

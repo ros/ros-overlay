@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A driver for the KVH DSP-3000 single-axis Fiber Optic Gyroscope."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/kvh"
 SRC_URI="https://github.com/ros-drivers-gbp/kvh_drivers-release/archive/release/kinetic/kvh/1.0.3-0.tar.gz"
 
 LICENSE="BSD"
@@ -16,8 +16,8 @@ RDEPEND="
     ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslint
     ros-kinetic/roslaunch
+    ros-kinetic/roslint
 "
 
 SLOT="0/0"
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

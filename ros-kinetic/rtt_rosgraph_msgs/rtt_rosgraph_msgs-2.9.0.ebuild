@@ -15,7 +15,7 @@ DESCRIPTION="Provides an rtt typekit for ROS rosgraph_msgs messages.
 	See the http://ros.org/wiki/rosgraph_msgs documentation
 	for the documentation of the ROS messages in this
 	typekit."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/rtt_roscomm"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosgraph_msgs/2.9.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -23,9 +23,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rtt_roscomm
-    ros-kinetic/rosgraph_msgs
     ros-kinetic/rtt_std_msgs
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/rtt_roscomm
 "
 DEPEND="${RDEPEND}
 "
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Metapackage bringing all of ecl together."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/ecl"
 SRC_URI="https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/kinetic/ecl/0.60.1-1.tar.gz"
 
 LICENSE="BSD"
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_core
-    ros-kinetic/ecl_lite
-    ros-kinetic/ecl_manipulation
-    ros-kinetic/ecl_tools
     ros-kinetic/ecl_navigation
+    ros-kinetic/ecl_tools
+    ros-kinetic/ecl_lite
+    ros-kinetic/ecl_core
+    ros-kinetic/ecl_manipulation
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

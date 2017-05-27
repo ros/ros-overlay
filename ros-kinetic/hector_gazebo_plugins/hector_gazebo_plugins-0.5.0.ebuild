@@ -7,7 +7,7 @@ DESCRIPTION="hector_gazebo_plugins provides gazebo plugins from Team Hector.
      Currently it contains a 6wd differential drive plugin, an IMU sensor plugin,
      an earth magnetic field sensor plugin, a GPS sensor plugin and a
      sonar ranger plugin."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_gazebo_plugins"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo_plugins/0.5.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -15,15 +15,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
+    ros-kinetic/gazebo_ros
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/std_srvs
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
     ros-kinetic/tf
-    ros-kinetic/gazebo_ros
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
@@ -54,7 +54,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

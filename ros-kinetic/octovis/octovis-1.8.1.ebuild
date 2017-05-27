@@ -13,11 +13,11 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/octomap
     ros-kinetic/catkin
-    dev-qt/qtgui
-    x11-libs/libQGLViewer
+    ros-kinetic/octomap
     dev-qt/qtopengl
+    x11-libs/libQGLViewer
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
     x11-libs/libQGLViewer
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

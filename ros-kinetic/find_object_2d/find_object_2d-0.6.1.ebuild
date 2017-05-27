@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The find_object_2d package"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://find-object.googlecode.com"
 SRC_URI="https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.1-5.tar.gz"
 
 LICENSE="BSD"
@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cv_bridge
+    ros-kinetic/std_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rospy
     ros-kinetic/std_srvs
     ros-kinetic/roscpp
     ros-kinetic/message_filters
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
     ros-kinetic/qt_gui_cpp
-    ros-kinetic/rospy
     ros-kinetic/tf
-    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

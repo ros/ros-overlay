@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="euscollada"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/euscollada"
 SRC_URI="https://github.com/tork-a/jsk_model_tools-release/archive/release/kinetic/euscollada/0.3.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/collada_urdf
+    ros-kinetic/assimp_devel
+    ros-kinetic/tf
     ros-kinetic/rospack
-    ros-kinetic/roscpp
-    ros-kinetic/collada_parser
     ros-kinetic/urdf
     ros-kinetic/resource_retriever
-    ros-kinetic/assimp_devel
-    ros-kinetic/collada_urdf
+    ros-kinetic/roscpp
     ros-kinetic/rostest
-    ros-kinetic/tf
-    media-libs/qhull
-    media-libs/collada-dom
-    dev-cpp/yaml-cpp
+    ros-kinetic/collada_parser
     dev-libs/urdfdom
+    media-libs/qhull
+    dev-cpp/yaml-cpp
+    media-libs/collada-dom
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosbuild
     ros-kinetic/rosboost_cfg
+    ros-kinetic/rosbuild
     ros-kinetic/mk
     ros-kinetic/cmake_modules
 "
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

@@ -4,17 +4,17 @@
 EAPI=6
 
 DESCRIPTION="The katana_moveit_ikfast_plugin package"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_moveit_ikfast_plugin/1.0.8-0.tar.gz"
 
 LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_core
-    ros-kinetic/roscpp
-    ros-kinetic/tf_conversions
     ros-kinetic/pluginlib
+    ros-kinetic/tf_conversions
+    ros-kinetic/roscpp
+    ros-kinetic/moveit_core
     virtual/lapack
 "
 DEPEND="${RDEPEND}
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

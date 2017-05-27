@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/nav_msgs
-    ros-kinetic/navfn
-    ros-kinetic/clear_costmap_recovery
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/pluginlib
-    ros-kinetic/actionlib
     ros-kinetic/message_runtime
+    ros-kinetic/visualization_msgs
+    ros-kinetic/base_local_planner
     ros-kinetic/std_msgs
-    ros-kinetic/tf
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/navfn
     ros-kinetic/rotate_recovery
     ros-kinetic/nav_core
-    ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/move_base_msgs
+    ros-kinetic/clear_costmap_recovery
     ros-kinetic/rospy
-    ros-kinetic/base_local_planner
+    ros-kinetic/actionlib
+    ros-kinetic/nav_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/move_base_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/costmap_2d
+    ros-kinetic/geometry_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/message_generation
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -60,7 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

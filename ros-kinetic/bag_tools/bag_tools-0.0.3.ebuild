@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="ROS tools and scripts related to bagfiles"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/bag_tools"
 SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/bag_tools/0.0.3-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_geometry
-    ros-kinetic/image_proc
-    ros-kinetic/message_filters
     ros-kinetic/cv_bridge
-    ros-kinetic/sensor_msgs
-    ros-kinetic/rospy
-    ros-kinetic/camera_calibration_parsers
     ros-kinetic/stereo_image_proc
+    ros-kinetic/camera_calibration_parsers
     ros-kinetic/rosbag
+    ros-kinetic/rospy
+    ros-kinetic/image_proc
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_geometry
+    ros-kinetic/message_filters
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

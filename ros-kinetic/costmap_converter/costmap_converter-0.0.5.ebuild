@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://wiki.ros.org/costmap_converter"
 SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/kinetic/costmap_converter/0.0.5-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/std_msgs
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
     ros-kinetic/costmap_2d
-    ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/pluginlib
 "
 DEPEND="${RDEPEND}
 "
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

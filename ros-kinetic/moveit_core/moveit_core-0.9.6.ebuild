@@ -12,33 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/urdf
-    ros-kinetic/eigen_conversions
+    ros-kinetic/sensor_msgs
     ros-kinetic/eigen_stl_containers
     ros-kinetic/visualization_msgs
-    ros-kinetic/geometric_shapes
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/moveit_msgs
-    ros-kinetic/rostime
-    ros-kinetic/octomap_msgs
-    ros-kinetic/random_numbers
     ros-kinetic/srdfdom
+    ros-kinetic/urdf
+    ros-kinetic/geometry_msgs
+    ros-kinetic/random_numbers
+    ros-kinetic/octomap_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/rostime
     ros-kinetic/kdl_parser
     ros-kinetic/octomap
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    dev-cpp/eigen
+    ros-kinetic/eigen_conversions
+    ros-kinetic/moveit_msgs
+    ros-kinetic/geometric_shapes
     dev-libs/urdfdom
-    dev-libs/urdfdom_headers
-    sci-libs/fcl
-    media-libs/assimp
-    dev-libs/console_bridge
     dev-libs/boost
+    sci-libs/fcl
+    dev-libs/console_bridge
+    dev-libs/urdfdom_headers
+    media-libs/assimp
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslib
     ros-kinetic/shape_msgs
+    ros-kinetic/roslib
 "
 
 SLOT="0/0"
@@ -64,7 +64,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

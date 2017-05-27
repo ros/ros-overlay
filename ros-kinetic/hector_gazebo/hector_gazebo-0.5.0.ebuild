@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="hector_gazebo provides packages related to to simulation of robots using gazebo (gazebo plugins, world files etc.)"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/hector_gazebo"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo/0.5.0-0.tar.gz"
 
 LICENSE="BSD"
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_gazebo_worlds
-    ros-kinetic/hector_gazebo_plugins
     ros-kinetic/hector_gazebo_thermal_camera
+    ros-kinetic/hector_gazebo_plugins
+    ros-kinetic/hector_gazebo_worlds
 "
 DEPEND="${RDEPEND}
 "
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }

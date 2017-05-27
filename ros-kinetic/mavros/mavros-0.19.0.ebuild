@@ -12,29 +12,29 @@ LICENSE="UNKNOWN"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
-    ros-kinetic/pluginlib
-    ros-kinetic/rosconsole_bridge
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/sensor_msgs
     ros-kinetic/mavlink
-    ros-kinetic/mavros_msgs
-    ros-kinetic/eigen_conversions
-    ros-kinetic/diagnostic_updater
     ros-kinetic/libmavconn
+    ros-kinetic/eigen_conversions
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
-    ros-kinetic/tf2_ros
-    ros-kinetic/geometry_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rosconsole_bridge
+    ros-kinetic/mavros_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/nav_msgs
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/std_srvs
+    ros-kinetic/pluginlib
+    ros-kinetic/geometry_msgs
+    ros-kinetic/tf2_ros
     dev-libs/boost
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/angles
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -60,7 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /opt/ros/kinetic/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}"
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
     rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
 }
