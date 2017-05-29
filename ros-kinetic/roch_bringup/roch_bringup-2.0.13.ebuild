@@ -12,38 +12,38 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/microstrain_3dmgx2_imu
-    ros-kinetic/rgbd_launch
-    ros-kinetic/openni2_launch
-    ros-kinetic/nodelet
-    ros-kinetic/realsense_camera
     ros-kinetic/robot_localization
-    ros-kinetic/laser_filters
-    ros-kinetic/zeroconf_avahi
-    ros-kinetic/rocon_interaction_msgs
-    ros-kinetic/roch_base
-    ros-kinetic/tf
-    ros-kinetic/rocon_bubble_icons
-    ros-kinetic/imu_transformer
-    ros-kinetic/tf2_ros
-    ros-kinetic/astra_launch
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/depthimage_to_laserscan
-    ros-kinetic/nmea_navsat_driver
-    ros-kinetic/roch_capabilities
-    ros-kinetic/rplidar_ros
-    ros-kinetic/nmea_comms
+    ros-kinetic/openni2_launch
     ros-kinetic/roch_control
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/rospy
-    ros-kinetic/robot_upstart
-    ros-kinetic/imu_filter_madgwick
-    ros-kinetic/rocon_app_manager_msgs
-    ros-kinetic/roch_description
-    ros-kinetic/rocon_app_manager
-    ros-kinetic/roch_sensorpc
-    ros-kinetic/roch_safety_controller
+    ros-kinetic/rocon_interaction_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/tf
+    ros-kinetic/laser_filters
+    ros-kinetic/roch_base
     ros-kinetic/freenect_launch
+    ros-kinetic/zeroconf_avahi
+    ros-kinetic/robot_upstart
+    ros-kinetic/roch_description
+    ros-kinetic/tf2_ros
+    ros-kinetic/realsense_camera
+    ros-kinetic/nmea_comms
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/roch_capabilities
+    ros-kinetic/microstrain_3dmgx2_imu
+    ros-kinetic/roch_sensorpc
+    ros-kinetic/depthimage_to_laserscan
+    ros-kinetic/imu_filter_madgwick
+    ros-kinetic/rocon_app_manager
+    ros-kinetic/rospy
+    ros-kinetic/imu_transformer
+    ros-kinetic/astra_launch
+    ros-kinetic/rocon_bubble_icons
+    ros-kinetic/rocon_app_manager_msgs
+    ros-kinetic/rplidar_ros
+    ros-kinetic/roch_safety_controller
+    ros-kinetic/rgbd_launch
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/nmea_navsat_driver
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
@@ -74,7 +74,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

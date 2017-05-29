@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/random_numbers
-    ros-kinetic/kdl_parser
-    ros-kinetic/eigen_conversions
-    ros-kinetic/urdf
-    ros-kinetic/octomap
-    ros-kinetic/moveit_msgs
+    ros-kinetic/octomap_msgs
     ros-kinetic/rostime
+    ros-kinetic/random_numbers
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/urdf
     ros-kinetic/geometric_shapes
+    ros-kinetic/kdl_parser
+    ros-kinetic/moveit_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/eigen_stl_containers
     ros-kinetic/srdfdom
     ros-kinetic/trajectory_msgs
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/visualization_msgs
-    ros-kinetic/octomap_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/octomap
+    ros-kinetic/eigen_conversions
     media-libs/assimp
     dev-libs/boost
+    dev-cpp/eigen
     dev-libs/console_bridge
-    dev-libs/urdfdom
     sci-libs/fcl
     dev-libs/urdfdom_headers
-    dev-cpp/eigen
+    dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
     ros-kinetic/shape_msgs
@@ -65,7 +65,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

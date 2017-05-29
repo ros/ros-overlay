@@ -11,45 +11,45 @@ LICENSE="||( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
-    ros-kinetic/image_transport
-    ros-kinetic/rosconsole
-    ros-kinetic/nav_msgs
+    ros-kinetic/map_msgs
     ros-kinetic/rosbag
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/interactive_markers
+    ros-kinetic/pluginlib
     ros-kinetic/roscpp
-    ros-kinetic/roslib
-    ros-kinetic/urdf
-    ros-kinetic/python_qt_binding
-    ros-kinetic/laser_geometry
-    ros-kinetic/rospy
-    ros-kinetic/resource_retriever
+    ros-kinetic/tf
+    ros-kinetic/std_srvs
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/map_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/media_export
-    ros-kinetic/visualization_msgs
+    ros-kinetic/urdf
+    ros-kinetic/python_qt_binding
+    ros-kinetic/image_transport
+    ros-kinetic/interactive_markers
+    ros-kinetic/rosconsole
+    ros-kinetic/nav_msgs
+    ros-kinetic/laser_geometry
+    ros-kinetic/resource_retriever
     ros-kinetic/message_filters
+    ros-kinetic/roslib
+    ros-kinetic/visualization_msgs
+    ros-kinetic/rospy
+    ros-kinetic/media_export
+    ros-kinetic/sensor_msgs
     media-libs/assimp
-    dev-qt/qtcore
-    dev-qt/qtwidgets
-    media-libs/mesa
-    dev-qt/qtgui
-    dev-libs/tinyxml
-    dev-qt/qtopengl
     dev-cpp/yaml-cpp
-    dev-libs/urdfdom_headers
+    dev-qt/qtopengl
     dev-games/ogre
+    dev-qt/qtwidgets
+    dev-libs/tinyxml
     dev-cpp/eigen
+    media-libs/mesa
+    dev-libs/urdfdom_headers
+    dev-qt/qtgui
+    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
-    dev-qt/qtcore
     dev-qt/qtopengl
     media-libs/assimp
+    dev-qt/qtcore
 "
 
 SLOT="0/0"
@@ -76,7 +76,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

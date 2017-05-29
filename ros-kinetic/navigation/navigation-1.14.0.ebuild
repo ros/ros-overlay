@@ -14,22 +14,22 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/robot_pose_ekf
-    ros-kinetic/base_local_planner
-    ros-kinetic/voxel_grid
-    ros-kinetic/dwa_local_planner
     ros-kinetic/navfn
+    ros-kinetic/rotate_recovery
+    ros-kinetic/move_slow_and_clear
+    ros-kinetic/dwa_local_planner
+    ros-kinetic/voxel_grid
+    ros-kinetic/nav_core
     ros-kinetic/carrot_planner
     ros-kinetic/move_base_msgs
-    ros-kinetic/costmap_2d
-    ros-kinetic/clear_costmap_recovery
     ros-kinetic/fake_localization
-    ros-kinetic/global_planner
-    ros-kinetic/nav_core
+    ros-kinetic/costmap_2d
     ros-kinetic/map_server
+    ros-kinetic/base_local_planner
     ros-kinetic/amcl
-    ros-kinetic/move_slow_and_clear
-    ros-kinetic/rotate_recovery
+    ros-kinetic/global_planner
     ros-kinetic/move_base
+    ros-kinetic/clear_costmap_recovery
 "
 DEPEND="${RDEPEND}
 "
@@ -58,7 +58,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

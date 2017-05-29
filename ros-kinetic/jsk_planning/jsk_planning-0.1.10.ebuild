@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pddl_planner_viewer
-    ros-kinetic/pddl_msgs
-    ros-kinetic/pddl_planner
     ros-kinetic/task_compiler
+    ros-kinetic/pddl_planner
+    ros-kinetic/pddl_msgs
+    ros-kinetic/pddl_planner_viewer
 "
 DEPEND="${RDEPEND}
 "
@@ -44,7 +44,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

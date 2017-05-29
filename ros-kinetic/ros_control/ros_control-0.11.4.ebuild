@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/controller_manager
-    ros-kinetic/controller_manager_msgs
-    ros-kinetic/controller_interface
-    ros-kinetic/realtime_tools
-    ros-kinetic/hardware_interface
     ros-kinetic/transmission_interface
+    ros-kinetic/joint_limits_interface
     ros-kinetic/combined_robot_hw_tests
     ros-kinetic/controller_manager_tests
+    ros-kinetic/realtime_tools
+    ros-kinetic/controller_interface
+    ros-kinetic/hardware_interface
+    ros-kinetic/controller_manager_msgs
+    ros-kinetic/controller_manager
     ros-kinetic/combined_robot_hw
-    ros-kinetic/joint_limits_interface
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

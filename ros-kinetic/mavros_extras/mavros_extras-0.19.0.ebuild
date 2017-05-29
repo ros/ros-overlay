@@ -11,15 +11,15 @@ LICENSE="||( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
+    ros-kinetic/mavros
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/mavros_msgs
-    ros-kinetic/tf
-    ros-kinetic/urdf
     ros-kinetic/sensor_msgs
-    ros-kinetic/mavros
-    ros-kinetic/visualization_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/urdf
+    ros-kinetic/tf
+    ros-kinetic/mavros_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

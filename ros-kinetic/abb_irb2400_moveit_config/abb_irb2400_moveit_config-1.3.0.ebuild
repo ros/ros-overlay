@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_ros_visualization
-    ros-kinetic/xacro
-    ros-kinetic/industrial_robot_simulator
     ros-kinetic/moveit_ros_move_group
-    ros-kinetic/joint_state_publisher
-    ros-kinetic/moveit_simple_controller_manager
+    ros-kinetic/industrial_robot_simulator
     ros-kinetic/abb_irb2400_moveit_plugins
-    ros-kinetic/moveit_planners_ompl
     ros-kinetic/abb_irb2400_support
+    ros-kinetic/xacro
+    ros-kinetic/joint_state_publisher
     ros-kinetic/robot_state_publisher
+    ros-kinetic/moveit_simple_controller_manager
+    ros-kinetic/moveit_planners_ompl
+    ros-kinetic/moveit_ros_visualization
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

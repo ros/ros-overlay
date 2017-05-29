@@ -14,11 +14,11 @@ LICENSE="Apache 2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/roscpp
-    ros-kinetic/diagnostic_updater
     ros-kinetic/sensor_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -48,7 +48,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

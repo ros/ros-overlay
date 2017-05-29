@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/qt_gui_py_common
     ros-kinetic/rqt_gui
-    ros-kinetic/std_msgs
-    ros-kinetic/rqt_gui_py
     ros-kinetic/rosgraph
-    ros-kinetic/rostopic
+    ros-kinetic/rqt_gui_py
+    ros-kinetic/std_msgs
+    ros-kinetic/qwt_dependency
     ros-kinetic/python_qt_binding
     ros-kinetic/rqt_py_common
-    ros-kinetic/qwt_dependency
-    ros-kinetic/qt_gui_py_common
+    ros-kinetic/rostopic
     dev-python/numpy
-    dev-python/rospkg
     dev-python/matplotlib
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
 "
@@ -52,7 +52,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

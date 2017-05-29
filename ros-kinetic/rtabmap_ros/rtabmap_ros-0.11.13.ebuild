@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf_conversions
-    ros-kinetic/image_transport_plugins
-    ros-kinetic/nodelet
-    ros-kinetic/image_transport
-    ros-kinetic/nav_msgs
-    ros-kinetic/costmap_2d
     ros-kinetic/image_geometry
+    ros-kinetic/roscpp
+    ros-kinetic/nodelet
+    ros-kinetic/class_loader
+    ros-kinetic/costmap_2d
+    ros-kinetic/pcl_conversions
     ros-kinetic/tf
+    ros-kinetic/rtabmap
+    ros-kinetic/std_srvs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/pcl_ros
+    ros-kinetic/tf2_ros
+    ros-kinetic/image_transport
+    ros-kinetic/tf_conversions
+    ros-kinetic/nav_msgs
+    ros-kinetic/image_transport_plugins
+    ros-kinetic/laser_geometry
+    ros-kinetic/rviz
+    ros-kinetic/octomap_ros
+    ros-kinetic/message_filters
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/cv_bridge
+    ros-kinetic/visualization_msgs
+    ros-kinetic/rospy
+    ros-kinetic/move_base_msgs
     ros-kinetic/sensor_msgs
     ros-kinetic/stereo_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/roscpp
     ros-kinetic/eigen_conversions
-    ros-kinetic/rtabmap
-    ros-kinetic/move_base_msgs
-    ros-kinetic/octomap_ros
-    ros-kinetic/laser_geometry
-    ros-kinetic/rospy
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/class_loader
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/std_srvs
-    ros-kinetic/rviz
-    ros-kinetic/cv_bridge
-    ros-kinetic/pcl_conversions
-    ros-kinetic/visualization_msgs
-    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
     sci-libs/pcl
@@ -70,7 +70,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

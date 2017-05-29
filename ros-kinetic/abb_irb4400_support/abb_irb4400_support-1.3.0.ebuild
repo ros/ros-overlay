@@ -12,12 +12,12 @@ LICENSE="Apache2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
-    ros-kinetic/abb_driver
-    ros-kinetic/joint_state_publisher
-    ros-kinetic/rviz
     ros-kinetic/abb_resources
+    ros-kinetic/abb_driver
+    ros-kinetic/xacro
+    ros-kinetic/joint_state_publisher
     ros-kinetic/robot_state_publisher
+    ros-kinetic/rviz
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslaunch
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

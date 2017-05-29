@@ -12,23 +12,23 @@ LICENSE="||( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole_bridge
-    ros-kinetic/roscpp
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/eigen_conversions
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/libmavconn
-    ros-kinetic/geometry_msgs
-    ros-kinetic/mavros_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/mavlink
+    ros-kinetic/rospy
     ros-kinetic/pluginlib
     ros-kinetic/std_srvs
-    ros-kinetic/message_runtime
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/rospy
     ros-kinetic/nav_msgs
+    ros-kinetic/rosconsole_bridge
+    ros-kinetic/geometry_msgs
+    ros-kinetic/libmavconn
+    ros-kinetic/mavros_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/eigen_conversions
+    ros-kinetic/tf2_ros
+    ros-kinetic/diagnostic_msgs
     dev-libs/boost
     dev-cpp/eigen
 "
@@ -61,7 +61,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

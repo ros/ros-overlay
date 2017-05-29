@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_mapping
-    ros-kinetic/slam_karto
     ros-kinetic/rosbag
-    ros-kinetic/rviz
     ros-kinetic/gmapping
-    ros-kinetic/robot_state_publisher
+    ros-kinetic/slam_karto
     ros-kinetic/map_server
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/rviz
+    ros-kinetic/hector_mapping
 "
 DEPEND="${RDEPEND}
 "
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

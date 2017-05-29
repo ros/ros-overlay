@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/grid_map_rviz_plugin
-    ros-kinetic/grid_map_msgs
-    ros-kinetic/grid_map_loader
     ros-kinetic/grid_map_visualization
-    ros-kinetic/grid_map_filters
-    ros-kinetic/grid_map_ros
-    ros-kinetic/grid_map_demos
-    ros-kinetic/grid_map_cv
     ros-kinetic/grid_map_core
+    ros-kinetic/grid_map_demos
+    ros-kinetic/grid_map_filters
+    ros-kinetic/grid_map_loader
+    ros-kinetic/grid_map_cv
+    ros-kinetic/grid_map_msgs
+    ros-kinetic/grid_map_ros
+    ros-kinetic/grid_map_rviz_plugin
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

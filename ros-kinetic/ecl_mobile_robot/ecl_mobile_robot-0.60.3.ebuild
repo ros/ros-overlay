@@ -15,11 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/ecl_geometry
     ros-kinetic/ecl_linear_algebra
+    ros-kinetic/ecl_formatters
     ros-kinetic/ecl_errors
     ros-kinetic/ecl_license
-    ros-kinetic/ecl_math
-    ros-kinetic/ecl_formatters
     ros-kinetic/ecl_build
+    ros-kinetic/ecl_math
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

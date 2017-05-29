@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geneus
-    ros-kinetic/actionlib
-    ros-kinetic/roslang
-    ros-kinetic/actionlib_tutorials
+    ros-kinetic/rostest
     ros-kinetic/actionlib_msgs
-    ros-kinetic/euslisp
+    ros-kinetic/roscpp
     ros-kinetic/rosbash
     ros-kinetic/tf
-    ros-kinetic/sensor_msgs
+    ros-kinetic/jskeus
     ros-kinetic/rosmsg
-    ros-kinetic/tf2_ros
-    ros-kinetic/roscpp
-    ros-kinetic/rospack
-    ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/geneus
+    ros-kinetic/std_srvs
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/rostest
     ros-kinetic/rosnode
-    ros-kinetic/jskeus
+    ros-kinetic/tf2_ros
+    ros-kinetic/actionlib
+    ros-kinetic/rospack
+    ros-kinetic/euslisp
+    ros-kinetic/actionlib_tutorials
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/visualization_msgs
+    ros-kinetic/roslang
+    ros-kinetic/sensor_msgs
+    ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/angles
-    ros-kinetic/mk
-    ros-kinetic/rostopic
-    ros-kinetic/message_generation
     ros-kinetic/rosbuild
+    ros-kinetic/rostopic
+    ros-kinetic/mk
+    ros-kinetic/message_generation
+    ros-kinetic/angles
     sys-apps/coreutils
 "
 
@@ -68,7 +68,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

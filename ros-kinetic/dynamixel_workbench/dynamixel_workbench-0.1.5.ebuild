@@ -16,9 +16,9 @@ RDEPEND="
     ros-kinetic/dynamixel_workbench_toolbox
     ros-kinetic/dynamixel_workbench_single_manager
     ros-kinetic/dynamixel_workbench_single_manager_gui
-    ros-kinetic/dynamixel_workbench_controllers
-    ros-kinetic/dynamixel_workbench_tutorials
     ros-kinetic/dynamixel_workbench_msgs
+    ros-kinetic/dynamixel_workbench_tutorials
+    ros-kinetic/dynamixel_workbench_controllers
 "
 DEPEND="${RDEPEND}
 "
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

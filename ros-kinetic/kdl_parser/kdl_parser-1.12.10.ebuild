@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosconsole
+    ros-kinetic/orocos_kdl
     ros-kinetic/roscpp
     ros-kinetic/urdf
-    ros-kinetic/orocos_kdl
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/rostest
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -46,7 +46,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

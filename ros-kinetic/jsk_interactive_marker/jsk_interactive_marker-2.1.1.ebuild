@@ -12,36 +12,36 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf_conversions
+    ros-kinetic/jsk_footstep_msgs
     ros-kinetic/jsk_topic_tools
-    ros-kinetic/actionlib
     ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/interactive_markers
     ros-kinetic/roscpp
+    ros-kinetic/tf
     ros-kinetic/roseus
-    ros-kinetic/eigen_conversions
-    ros-kinetic/roslib
-    ros-kinetic/message_runtime
+    ros-kinetic/geometry_msgs
+    ros-kinetic/jsk_recognition_msgs
     ros-kinetic/urdf
+    ros-kinetic/message_runtime
+    ros-kinetic/actionlib
+    ros-kinetic/interactive_markers
+    ros-kinetic/tf_conversions
     ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/rviz
+    ros-kinetic/message_filters
+    ros-kinetic/roslib
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/moveit_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/rviz
     ros-kinetic/visualization_msgs
-    ros-kinetic/message_filters
-    dev-libs/tinyxml
+    ros-kinetic/sensor_msgs
+    ros-kinetic/eigen_conversions
     dev-cpp/yaml-cpp
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/rosbuild
     ros-kinetic/mk
     ros-kinetic/cmake_modules
     ros-kinetic/message_generation
-    ros-kinetic/rosbuild
 "
 
 SLOT="0/0"
@@ -68,7 +68,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/turtlebot_bringup
-    ros-kinetic/turtlebot_teleop
+    ros-kinetic/visualization_msgs
     ros-kinetic/turtlebot_msgs
+    ros-kinetic/turtlebot_teleop
+    ros-kinetic/turtlebot_bringup
+    ros-kinetic/topic_tools
+    ros-kinetic/roscpp
     ros-kinetic/nodelet
     ros-kinetic/depth_image_proc
-    ros-kinetic/topic_tools
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

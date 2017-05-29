@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/mrpt_map
-    ros-kinetic/mrpt_rawlog
-    ros-kinetic/mrpt_msgs
-    ros-kinetic/mrpt_reactivenav2d
     ros-kinetic/mrpt_local_obstacles
+    ros-kinetic/mrpt_msgs
     ros-kinetic/mrpt_bridge
     ros-kinetic/mrpt_localization
+    ros-kinetic/mrpt_rawlog
     ros-kinetic/mrpt_tutorials
+    ros-kinetic/mrpt_reactivenav2d
+    ros-kinetic/mrpt_map
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

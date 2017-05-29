@@ -11,13 +11,13 @@ LICENSE="||( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/eigen_conversions
     ros-kinetic/control_toolbox
-    ros-kinetic/tf2_ros
+    ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/mavros_extras
+    ros-kinetic/roscpp
+    ros-kinetic/tf2_ros
+    ros-kinetic/eigen_conversions
     ros-kinetic/mavros
     dev-cpp/eigen
 "
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

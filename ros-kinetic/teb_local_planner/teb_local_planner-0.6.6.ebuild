@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/base_local_planner
+    ros-kinetic/libg2o
+    ros-kinetic/tf_conversions
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pluginlib
     ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/nav_core
+    ros-kinetic/base_local_planner
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/tf_conversions
-    ros-kinetic/pluginlib
     ros-kinetic/tf
-    ros-kinetic/message_runtime
-    ros-kinetic/libg2o
-    ros-kinetic/nav_core
-    ros-kinetic/interactive_markers
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/costmap_converter
-    ros-kinetic/visualization_msgs
+    ros-kinetic/roscpp
     ros-kinetic/costmap_2d
+    ros-kinetic/message_runtime
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/interactive_markers
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -59,7 +59,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

@@ -13,10 +13,10 @@ LICENSE="CreativeCommons-by-nc-sa-2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/openslam_gmapping
+    ros-kinetic/nav_msgs
     ros-kinetic/tf
     ros-kinetic/roscpp
-    ros-kinetic/nav_msgs
-    ros-kinetic/openslam_gmapping
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest
@@ -46,7 +46,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

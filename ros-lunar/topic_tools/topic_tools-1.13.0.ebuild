@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/message_runtime
     ros-lunar/rosconsole
-    ros-lunar/xmlrpcpp
     ros-lunar/rostime
+    ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/xmlrpcpp
+    ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cpp_common
-    ros-lunar/rosunit
     ros-lunar/rostest
     ros-lunar/message_generation
+    ros-lunar/rosunit
+    ros-lunar/cpp_common
 "
 
 SLOT="0/0"
@@ -51,7 +51,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

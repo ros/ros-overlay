@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rqt_plot
+    ros-kinetic/rqt_py_console
+    ros-kinetic/rqt_publisher
+    ros-kinetic/rqt_console
+    ros-kinetic/rqt_srv
     ros-kinetic/rqt_launch
     ros-kinetic/rqt_top
-    ros-kinetic/rqt_dep
-    ros-kinetic/rqt_console
-    ros-kinetic/rqt_action
-    ros-kinetic/rqt_plot
-    ros-kinetic/rqt_bag_plugins
-    ros-kinetic/rqt_py_console
-    ros-kinetic/rqt_bag
-    ros-kinetic/rqt_msg
-    ros-kinetic/rqt_srv
     ros-kinetic/rqt_graph
-    ros-kinetic/rqt_publisher
+    ros-kinetic/rqt_topic
+    ros-kinetic/rqt_bag_plugins
+    ros-kinetic/rqt_shell
+    ros-kinetic/rqt_reconfigure
+    ros-kinetic/rqt_logger_level
+    ros-kinetic/rqt_bag
+    ros-kinetic/rqt_dep
+    ros-kinetic/rqt_msg
+    ros-kinetic/rqt_action
+    ros-kinetic/rqt_web
     ros-kinetic/rqt_image_view
     ros-kinetic/rqt_py_common
-    ros-kinetic/rqt_reconfigure
-    ros-kinetic/rqt_shell
     ros-kinetic/rqt_service_caller
-    ros-kinetic/rqt_logger_level
-    ros-kinetic/rqt_topic
-    ros-kinetic/rqt_web
 "
 DEPEND="${RDEPEND}
 "
@@ -61,7 +61,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

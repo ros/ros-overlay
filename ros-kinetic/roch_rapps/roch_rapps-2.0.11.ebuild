@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roch_teleop
     ros-kinetic/robot_pose_publisher
+    ros-kinetic/warehouse_ros
+    ros-kinetic/world_canvas_server
+    ros-kinetic/roch_follower
+    ros-kinetic/roch_navigation
     ros-kinetic/topic_tools
     ros-kinetic/nodelet
-    ros-kinetic/tf
-    ros-kinetic/roch_follower
-    ros-kinetic/warehouse_ros
-    ros-kinetic/roch_teleop
-    ros-kinetic/roch_navigation
     ros-kinetic/compressed_image_transport
-    ros-kinetic/world_canvas_server
+    ros-kinetic/tf
     ros-kinetic/roch_bringup
 "
 DEPEND="${RDEPEND}
@@ -51,7 +51,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

@@ -12,11 +12,11 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/openface_ros
-    ros-kinetic/image_recognition_util
     ros-kinetic/tensorflow_ros
+    ros-kinetic/image_recognition_util
     ros-kinetic/image_recognition_rqt
     ros-kinetic/image_recognition_msgs
+    ros-kinetic/openface_ros
     ros-kinetic/tensorflow_ros_rqt
     ros-kinetic/skybiometry_ros
 "
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

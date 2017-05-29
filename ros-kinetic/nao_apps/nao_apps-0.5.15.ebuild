@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/naoqi_pose
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/naoqi_bridge_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/rospy
+    ros-kinetic/naoqi_bridge
     ros-kinetic/std_srvs
     ros-kinetic/actionlib
-    ros-kinetic/humanoid_nav_msgs
-    ros-kinetic/naoqi_bridge
-    ros-kinetic/rospy
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/naoqi_driver
     ros-kinetic/naoqi_driver_py
+    ros-kinetic/naoqi_bridge_msgs
+    ros-kinetic/naoqi_driver
+    ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/humanoid_nav_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/diagnostic_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -53,7 +53,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

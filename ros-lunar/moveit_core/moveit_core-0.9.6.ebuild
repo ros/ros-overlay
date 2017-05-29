@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/random_numbers
-    ros-lunar/kdl_parser
-    ros-lunar/eigen_conversions
-    ros-lunar/urdf
-    ros-lunar/octomap
-    ros-lunar/moveit_msgs
+    ros-lunar/octomap_msgs
     ros-lunar/rostime
+    ros-lunar/random_numbers
     ros-lunar/geometry_msgs
     ros-lunar/std_msgs
+    ros-lunar/urdf
     ros-lunar/geometric_shapes
+    ros-lunar/kdl_parser
+    ros-lunar/moveit_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/eigen_stl_containers
     ros-lunar/srdfdom
     ros-lunar/trajectory_msgs
-    ros-lunar/eigen_stl_containers
-    ros-lunar/visualization_msgs
-    ros-lunar/octomap_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/octomap
+    ros-lunar/eigen_conversions
     media-libs/assimp
     dev-libs/boost
+    dev-cpp/eigen
     dev-libs/console_bridge
-    dev-libs/urdfdom
     sci-libs/fcl
     dev-libs/urdfdom_headers
-    dev-cpp/eigen
+    dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
     ros-lunar/shape_msgs
@@ -65,7 +65,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

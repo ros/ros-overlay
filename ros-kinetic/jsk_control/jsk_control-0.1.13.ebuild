@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/jsk_footstep_planner
-    ros-kinetic/eus_nlopt
-    ros-kinetic/jsk_calibration
-    ros-kinetic/jsk_ik_server
     ros-kinetic/eus_qp
-    ros-kinetic/eus_qpoases
-    ros-kinetic/jsk_teleop_joy
+    ros-kinetic/eus_nlopt
     ros-kinetic/jsk_footstep_controller
     ros-kinetic/joy_mouse
+    ros-kinetic/jsk_calibration
+    ros-kinetic/jsk_ik_server
+    ros-kinetic/eus_qpoases
+    ros-kinetic/jsk_teleop_joy
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

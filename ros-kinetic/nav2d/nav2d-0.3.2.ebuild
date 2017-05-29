@@ -12,14 +12,14 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav2d_msgs
-    ros-kinetic/nav2d_tutorials
-    ros-kinetic/nav2d_remote
-    ros-kinetic/nav2d_localizer
-    ros-kinetic/nav2d_operator
     ros-kinetic/nav2d_navigator
     ros-kinetic/nav2d_karto
+    ros-kinetic/nav2d_remote
+    ros-kinetic/nav2d_operator
     ros-kinetic/nav2d_exploration
+    ros-kinetic/nav2d_msgs
+    ros-kinetic/nav2d_localizer
+    ros-kinetic/nav2d_tutorials
 "
 DEPEND="${RDEPEND}
 "
@@ -48,7 +48,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

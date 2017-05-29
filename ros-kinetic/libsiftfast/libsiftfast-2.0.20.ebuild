@@ -16,10 +16,10 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslib
-    ros-kinetic/rospack
     ros-kinetic/mk
     ros-kinetic/rosboost_cfg
+    ros-kinetic/roslib
+    ros-kinetic/rospack
     dev-vcs/subversion
 "
 
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

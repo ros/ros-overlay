@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_view2
-    ros-kinetic/posedetection_msgs
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/pr2eus
-    ros-kinetic/image_proc
-    ros-kinetic/visualization_msgs
-    ros-kinetic/opencv_apps
     ros-kinetic/ar_track_alvar
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pr2eus
     ros-kinetic/checkerboard_detector
+    ros-kinetic/opencv_apps
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/image_view2
+    ros-kinetic/image_proc
+    ros-kinetic/posedetection_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roseus
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

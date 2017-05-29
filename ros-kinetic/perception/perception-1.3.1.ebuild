@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_pipeline
-    ros-kinetic/image_transport_plugins
-    ros-kinetic/laser_pipeline
-    ros-kinetic/vision_opencv
-    ros-kinetic/image_common
     ros-kinetic/ros_base
+    ros-kinetic/laser_pipeline
     ros-kinetic/perception_pcl
+    ros-kinetic/image_transport_plugins
+    ros-kinetic/image_pipeline
+    ros-kinetic/image_common
+    ros-kinetic/vision_opencv
 "
 DEPEND="${RDEPEND}
 "
@@ -47,7 +47,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/joint_states_settler
+    ros-kinetic/calibration_estimation
     ros-kinetic/image_cb_detector
-    ros-kinetic/laser_cb_detector
     ros-kinetic/interval_intersection
-    ros-kinetic/settlerlib
+    ros-kinetic/monocam_settler
+    ros-kinetic/joint_states_settler
+    ros-kinetic/laser_cb_detector
     ros-kinetic/calibration_launch
     ros-kinetic/calibration_msgs
-    ros-kinetic/monocam_settler
-    ros-kinetic/calibration_estimation
+    ros-kinetic/settlerlib
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/unique_id
+    ros-kinetic/world_canvas_msgs
+    ros-kinetic/nav_msgs
+    ros-kinetic/world_canvas_client_py
     ros-kinetic/roscpp
     ros-kinetic/uuid_msgs
-    ros-kinetic/world_canvas_msgs
-    ros-kinetic/unique_id
-    ros-kinetic/yocs_msgs
-    ros-kinetic/world_canvas_client_py
-    ros-kinetic/nav_msgs
     ros-kinetic/world_canvas_client_cpp
+    ros-kinetic/yocs_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -49,7 +49,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

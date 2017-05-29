@@ -12,30 +12,30 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/camera_info_manager
+    ros-kinetic/rostest
+    ros-kinetic/polled_camera
+    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/gazebo_msgs
+    ros-kinetic/tf
+    ros-kinetic/std_srvs
+    ros-kinetic/camera_info_manager
+    ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/urdf
+    ros-kinetic/tf2_ros
     ros-kinetic/image_transport
     ros-kinetic/rosconsole
     ros-kinetic/nav_msgs
-    ros-kinetic/angles
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf2_ros
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/polled_camera
-    ros-kinetic/urdf
-    ros-kinetic/rospy
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/std_srvs
+    ros-kinetic/gazebo_msgs
     ros-kinetic/cv_bridge
-    ros-kinetic/rostest
-    ros-kinetic/message_generation
-    ros-kinetic/gazebo_ros
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/rospy
     ros-kinetic/trajectory_msgs
+    ros-kinetic/gazebo_ros
+    ros-kinetic/sensor_msgs
+    ros-kinetic/message_generation
+    ros-kinetic/angles
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
@@ -66,7 +66,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

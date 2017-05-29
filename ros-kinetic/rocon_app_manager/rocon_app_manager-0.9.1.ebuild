@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rocon_python_utils
-    ros-kinetic/rocon_app_manager_msgs
-    ros-kinetic/rocon_gateway
-    ros-kinetic/rocon_console
-    ros-kinetic/rosmaster
-    ros-kinetic/std_msgs
-    ros-kinetic/gateway_msgs
-    ros-kinetic/rocon_python_comms
-    ros-kinetic/roslib
-    ros-kinetic/rocon_apps
     ros-kinetic/rocon_hub
+    ros-kinetic/rocon_gateway
+    ros-kinetic/gateway_msgs
+    ros-kinetic/rosmaster
     ros-kinetic/rospy
-    ros-kinetic/rocon_master_info
-    ros-kinetic/rocon_std_msgs
-    ros-kinetic/rocon_uri
     ros-kinetic/rocon_app_utilities
     ros-kinetic/rocon_gateway_utils
-    ros-kinetic/rocon_interactions
+    ros-kinetic/rocon_apps
+    ros-kinetic/rocon_console
+    ros-kinetic/rocon_master_info
+    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rocon_app_manager_msgs
+    ros-kinetic/roslib
+    ros-kinetic/rocon_uri
+    ros-kinetic/std_msgs
     ros-kinetic/capabilities
+    ros-kinetic/rocon_python_comms
+    ros-kinetic/rocon_interactions
+    ros-kinetic/rocon_python_utils
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/roslint
+    ros-kinetic/rostest
     dev-python/catkin_pkg
 "
 
@@ -62,7 +62,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

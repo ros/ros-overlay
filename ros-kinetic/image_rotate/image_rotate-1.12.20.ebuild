@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cv_bridge
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/tf2
     ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/cv_bridge
-    ros-kinetic/tf2
-    ros-kinetic/image_transport
     ros-kinetic/tf2_ros
+    ros-kinetic/image_transport
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf2_geometry_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/geometry_msgs
     ros-kinetic/cmake_modules
+    ros-kinetic/geometry_msgs
 "
 
 SLOT="0/0"
@@ -50,7 +50,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi

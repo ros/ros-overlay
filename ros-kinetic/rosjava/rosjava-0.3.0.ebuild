@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosjava_test_msgs
-    ros-kinetic/zeroconf_jmdns_suite
-    ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_bootstrap
+    ros-kinetic/zeroconf_jmdns_suite
     ros-kinetic/rosjava_core
     ros-kinetic/genjava
+    ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_messages
     ros-kinetic/rosjava_extras
 "
@@ -48,7 +48,7 @@ src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
     fi
