@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Integration of the ROS package system and ROS-specific plugins for a Qt-based GUI."
+DESCRIPTION="Integration of the ROS package system and ROS-specific plugins for a Qt-based GU"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt_gui_core/0.3.4-2.tar.gz"
 
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/qt_dotgraph
     ros-lunar/qt_gui_cpp
     ros-lunar/qt_gui
     ros-lunar/qt_gui_app
+    ros-lunar/qt_dotgraph
     ros-lunar/qt_gui_py_common
 "
 DEPEND="${RDEPEND}
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

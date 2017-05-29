@@ -4,12 +4,7 @@
 EAPI=6
 
 DESCRIPTION="rqt_py_common provides common functionality for rqt plugins written in Python.
-    Despite no plugin is provided, this package is part of the rqt_common_plugins
-    repository to keep refactoring generic functionality from these common plugins
-    into this package as easy as possible.
-
-    Functionality included in this package should cover generic ROS concepts and
-    should not introduce any special dependencies beside "ros_base"."
+ "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_py_common/0.5.0-0.tar.gz"
 
@@ -18,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosbag
-    ros-lunar/qt_gui
     ros-lunar/genpy
-    ros-lunar/actionlib
-    ros-lunar/rospy
+    ros-lunar/rosbag
+    ros-lunar/python_qt_binding
+    ros-lunar/qt_gui
     ros-lunar/roslib
     ros-lunar/rostopic
-    ros-lunar/python_qt_binding
+    ros-lunar/rospy
+    ros-lunar/actionlib
 "
 DEPEND="${RDEPEND}
     ros-lunar/std_msgs
@@ -54,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A simple viewer for ROS image topics. Includes a specialized viewer
-  for stereo + disparity images."
+  for stereo"
 HOMEPAGE="http://www.ros.org/wiki/image_view"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar/image_view/1.12.20-0.tar.gz"
 
@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/cv_bridge
-    ros-lunar/std_srvs
-    ros-lunar/nodelet
-    ros-lunar/roscpp
     ros-lunar/camera_calibration_parsers
     ros-lunar/rosconsole
-    ros-lunar/message_filters
+    ros-lunar/dynamic_reconfigure
     ros-lunar/image_transport
+    ros-lunar/cv_bridge
+    ros-lunar/nodelet
+    ros-lunar/roscpp
+    ros-lunar/std_srvs
+    ros-lunar/message_filters
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
@@ -52,8 +52,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>davidvlu@gmail.com</email>
+      <name>David V. Lu!!</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/navigation_msgs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

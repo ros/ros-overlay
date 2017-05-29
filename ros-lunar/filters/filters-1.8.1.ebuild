@@ -3,9 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This library provides a standardized interface for processing data as a sequence 
-    of filters.  This package contains a base class upon which to build specific implementations
-    as well as an interface which dynamically loads filters based on runtime parameters."
+DESCRIPTION="This library provides a standardized interface for processing data as a sequence"
 HOMEPAGE="http://ros.org/wiki/filters"
 SRC_URI="https://github.com/ros-gbp/filters-release/archive/release/lunar/filters/1.8.1-0.tar.gz"
 
@@ -16,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/pluginlib
     ros-lunar/roscpp
-    ros-lunar/rosconsole
     ros-lunar/roslib
+    ros-lunar/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -45,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

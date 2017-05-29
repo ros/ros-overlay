@@ -7,43 +7,43 @@ DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/lunar/rviz/1.12.8-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosbag
-    ros-lunar/geometry_msgs
-    ros-lunar/rospy
-    ros-lunar/interactive_markers
-    ros-lunar/laser_geometry
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/image_transport
-    ros-lunar/roslib
-    ros-lunar/tf
-    ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/resource_retriever
-    ros-lunar/rosconsole
-    ros-lunar/visualization_msgs
-    ros-lunar/message_filters
-    ros-lunar/sensor_msgs
-    ros-lunar/nav_msgs
-    ros-lunar/media_export
     ros-lunar/map_msgs
+    ros-lunar/media_export
+    ros-lunar/laser_geometry
+    ros-lunar/interactive_markers
+    ros-lunar/std_srvs
+    ros-lunar/sensor_msgs
+    ros-lunar/roslib
+    ros-lunar/urdf
+    ros-lunar/geometry_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/message_filters
+    ros-lunar/visualization_msgs
+    ros-lunar/pluginlib
+    ros-lunar/std_msgs
+    ros-lunar/rosbag
     ros-lunar/python_qt_binding
-    dev-libs/tinyxml
-    media-libs/mesa
-    dev-cpp/eigen
-    dev-games/ogre
-    dev-qt/qtwidgets
-    dev-qt/qtgui
+    ros-lunar/rosconsole
+    ros-lunar/tf
+    ros-lunar/image_transport
+    ros-lunar/resource_retriever
+    ros-lunar/roscpp
+    ros-lunar/rospy
     dev-cpp/yaml-cpp
+    dev-qt/qtwidgets
     dev-libs/urdfdom_headers
-    dev-qt/qtopengl
     dev-qt/qtcore
+    dev-games/ogre
     media-libs/assimp
+    dev-cpp/eigen
+    media-libs/mesa
+    dev-qt/qtgui
+    dev-libs/tinyxml
+    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -74,8 +74,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

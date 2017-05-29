@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Tools for directing, throttling, selecting, and otherwise messing with
-    ROS topics at a meta level. None of the programs in this package actually
-    know about the topics whose streams they are altering; instead, these
-    tools deal with messages as generic binary blobs. This means they can be
-    applied to any ROS topic."
+    ROS t"
 HOMEPAGE="http://ros.org/wiki/topic_tools"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/topic_tools/1.13.0-0.tar.gz"
 
@@ -16,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/xmlrpcpp
+    ros-lunar/std_msgs
     ros-lunar/message_runtime
     ros-lunar/rostime
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
     ros-lunar/rosconsole
-    ros-lunar/xmlrpcpp
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rosunit
     ros-lunar/rostest
-    ros-lunar/message_generation
     ros-lunar/cpp_common
+    ros-lunar/rosunit
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"
@@ -52,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

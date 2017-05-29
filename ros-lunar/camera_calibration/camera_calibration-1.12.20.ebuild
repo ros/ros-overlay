@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="camera_calibration allows easy calibration of monocular or stereo
-     cameras using a checkerboard calibration target."
+     cameras u"
 HOMEPAGE="http://www.ros.org/wiki/camera_calibration"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar/camera_calibration/1.12.20-0.tar.gz"
 
@@ -16,8 +16,8 @@ RDEPEND="
     ros-lunar/sensor_msgs
     ros-lunar/cv_bridge
     ros-lunar/rospy
-    ros-lunar/std_srvs
     ros-lunar/image_geometry
+    ros-lunar/std_srvs
     ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A metapackage which extends ros_core and includes other basic non-robot tools like actionlib, dynamic reconfigure, nodelets, and pluginlib."
+DESCRIPTION="A metapackage which extends ros_core and includes other basic non-robot tools li"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/lunar/ros_base/1.3.1-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/actionlib
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/class_loader
-    ros-lunar/nodelet_core
     ros-lunar/bond_core
-    ros-lunar/pluginlib
     ros-lunar/ros_core
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/nodelet_core
+    ros-lunar/pluginlib
+    ros-lunar/class_loader
+    ros-lunar/actionlib
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

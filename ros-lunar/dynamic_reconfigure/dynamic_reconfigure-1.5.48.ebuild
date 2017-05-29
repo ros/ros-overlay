@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means to change
-    node parameters at any time without having to restart the node."
+DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/lunar/dynamic_reconfigure/1.5.48-0.tar.gz"
 
@@ -13,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/rosservice
-    ros-lunar/roslib
-    ros-lunar/roscpp
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
+    ros-lunar/message_runtime
+    ros-lunar/roslib
+    ros-lunar/rosservice
+    ros-lunar/roscpp
+    ros-lunar/rospy
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
     ros-lunar/roscpp_serialization
+    ros-lunar/rostest
     ros-lunar/message_generation
 "
 
@@ -49,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

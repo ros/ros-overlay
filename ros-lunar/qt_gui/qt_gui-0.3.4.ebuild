@@ -3,9 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
-    It is extensible with Python- and C++-based plugins (implemented in separate packages) which can contribute arbitrary widgets.
-    It requires either PyQt or PySide bindings."
+DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interface ba"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt_gui/0.3.4-2.tar.gz"
 
@@ -19,8 +17,8 @@ RDEPEND="
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtcore
     dev-python/PyQt5
+    dev-qt/qtcore
 "
 
 SLOT="0/0"
@@ -45,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

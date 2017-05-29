@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A Python GUI plugin for introspecting available ROS message types.
-  Note that the srvs available through this plugin is the ones that are stored
-  on your machine, not on the ROS core your rqt instance connects to."
+  Note that t"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_srv-release/archive/release/lunar/rqt_srv/0.4.8-0.tar.gz"
 
@@ -14,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui
-    ros-lunar/rospy
-    ros-lunar/rqt_msg
     ros-lunar/rosmsg
+    ros-lunar/rospy
     ros-lunar/rqt_gui_py
+    ros-lunar/rqt_gui
+    ros-lunar/rqt_msg
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

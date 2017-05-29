@@ -3,10 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This  library contains wrappers for generating floating point values, integers, quaternions using boost libraries.
-    
-  The constructor of the wrapper is guaranteed to be thread safe and initialize its random number generator to a random seed.
-  Seeds are obtained using a separate and different random number generator."
+DESCRIPTION="This  library contains wrappers for generating floating point values, integers, "
 HOMEPAGE="http://ros.org/wiki/random_numbers"
 SRC_URI="https://github.com/ros-gbp/random_numbers-release/archive/release/lunar/random_numbers/0.3.1-1.tar.gz"
 
@@ -42,8 +39,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

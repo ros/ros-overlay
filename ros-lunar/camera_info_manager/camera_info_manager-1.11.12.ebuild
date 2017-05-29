@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides a C++ interface for camera calibration
-     information.  It provides CameraInfo, and handles SetCameraInfo
-     service requests, saving and restoring the camera calibration
-     data."
+     information.  "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/image_common-release/archive/release/lunar/camera_info_manager/1.11.12-0.tar.gz"
 
@@ -16,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/roslib
-    ros-lunar/roscpp
     ros-lunar/camera_calibration_parsers
+    ros-lunar/roslib
     ros-lunar/image_transport
+    ros-lunar/roscpp
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -48,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

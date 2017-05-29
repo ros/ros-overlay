@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages."
+DESCRIPTION="rqt_robot_steering provides a GUI plugin for steering a robot using Twist messag"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/lunar/rqt_robot_steering/0.5.7-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
-    ros-lunar/rostopic
-    ros-lunar/rqt_gui_py
-    ros-lunar/rqt_gui
     ros-lunar/python_qt_binding
+    ros-lunar/rqt_gui
+    ros-lunar/rqt_gui_py
+    ros-lunar/rostopic
+    ros-lunar/geometry_msgs
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

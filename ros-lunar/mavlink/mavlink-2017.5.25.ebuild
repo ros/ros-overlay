@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="MAVLink message marshaling library.
-  This package provides C-headers and C++11 library
-  for both 1.0 and 2.0 versions of protocol.
-
-  For pymavlink use separate install via rosdep (python-pymavlink)."
+  This package provides C-headers and C++11 "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/lunar/mavlink/2017.5.25-1.tar.gz"
 
@@ -20,9 +17,9 @@ RDEPEND="
     dev-lang/python
 "
 DEPEND="${RDEPEND}
+    dev-python/setuptools
     dev-python/future
     dev-python/lxml
-    dev-python/setuptools
 "
 
 SLOT="0/0"
@@ -47,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

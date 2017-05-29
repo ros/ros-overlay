@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="geometry_msgs provides messages for common geometric primitives
-    such as points, vectors, and poses. These primitives are designed
-    to provide a common data type and facilitate interoperability
-    throughout the system."
+    such as poin"
 HOMEPAGE="http://wiki.ros.org/geometry_msgs"
 SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/lunar/geometry_msgs/1.12.5-0.tar.gz"
 
@@ -15,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
     ros-lunar/message_runtime
+    ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -44,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

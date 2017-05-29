@@ -7,18 +7,18 @@ DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_mavros/0.19.0-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/mavros
-    ros-lunar/control_toolbox
-    ros-lunar/mavros_extras
-    ros-lunar/geometry_msgs
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/control_toolbox
     ros-lunar/tf2_ros
     ros-lunar/eigen_conversions
+    ros-lunar/roscpp
+    ros-lunar/mavros_extras
+    ros-lunar/mavros
+    ros-lunar/geometry_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This is a set of tools for recording from and playing back ROS
-    message without relying on the ROS client library."
+    message witho"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosbag_storage/1.13.0-0.tar.gz"
 
@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/cpp_common
     ros-lunar/roslz4
-    ros-lunar/roscpp_serialization
-    ros-lunar/rostime
     ros-lunar/roscpp_traits
-    app-arch/bzip2
+    ros-lunar/roscpp_serialization
+    ros-lunar/cpp_common
+    ros-lunar/rostime
     dev-libs/console_bridge
+    app-arch/bzip2
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

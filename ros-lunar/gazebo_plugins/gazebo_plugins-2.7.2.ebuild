@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components."
+DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_plugins/2.7.2-0.tar.gz"
 
@@ -12,30 +12,30 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
-    ros-lunar/cv_bridge
-    ros-lunar/rospy
-    ros-lunar/trajectory_msgs
-    ros-lunar/polled_camera
-    ros-lunar/tf2_ros
-    ros-lunar/angles
-    ros-lunar/camera_info_manager
-    ros-lunar/gazebo_dev
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
-    ros-lunar/gazebo_msgs
-    ros-lunar/image_transport
-    ros-lunar/diagnostic_updater
     ros-lunar/message_runtime
-    ros-lunar/urdf
-    ros-lunar/nodelet
-    ros-lunar/tf
-    ros-lunar/std_msgs
-    ros-lunar/rosconsole
-    ros-lunar/sensor_msgs
-    ros-lunar/nav_msgs
-    ros-lunar/dynamic_reconfigure
     ros-lunar/rosgraph_msgs
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/tf2_ros
+    ros-lunar/trajectory_msgs
+    ros-lunar/std_srvs
+    ros-lunar/sensor_msgs
+    ros-lunar/camera_info_manager
+    ros-lunar/urdf
+    ros-lunar/cv_bridge
+    ros-lunar/gazebo_dev
+    ros-lunar/geometry_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/polled_camera
+    ros-lunar/nodelet
+    ros-lunar/roscpp
+    ros-lunar/angles
+    ros-lunar/std_msgs
+    ros-lunar/gazebo_msgs
+    ros-lunar/diagnostic_updater
+    ros-lunar/tf
+    ros-lunar/image_transport
+    ros-lunar/rosconsole
+    ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -63,8 +63,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

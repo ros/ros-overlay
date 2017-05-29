@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>andyz@utexas.edu</email>
+      <name>Andy Zelenak</name>
+    </maintainer>
+    <bugs-to>https://github.com/AndyZe/pid/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

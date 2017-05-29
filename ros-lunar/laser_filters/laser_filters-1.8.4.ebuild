@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Assorted filters designed to operate on 2D planar laser scanners,
-    which use the sensor_msgs/LaserScan type."
+    which use "
 HOMEPAGE="http://ros.org/wiki/laser_filters"
 SRC_URI="https://github.com/ros-gbp/laser_filters-release/archive/release/lunar/laser_filters/1.8.4-1.tar.gz"
 
@@ -14,13 +14,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/angles
-    ros-lunar/filters
+    ros-lunar/laser_geometry
     ros-lunar/tf
+    ros-lunar/filters
+    ros-lunar/angles
     ros-lunar/roscpp
     ros-lunar/pluginlib
     ros-lunar/message_filters
-    ros-lunar/laser_geometry
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

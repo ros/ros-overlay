@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a C++ parser for the Collada robot
-    description format. The parser reads a Collada XML robot
-    description, and creates a C++ URDF model. Although it is possible
-    to directly use this parser when working with Collada robot
-    descriptions, the preferred user API is found in the urdf package."
+    description format."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/collada_parser/1.12.9-0.tar.gz"
 
@@ -17,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/class_loader
-    ros-lunar/roscpp
     ros-lunar/urdf_parser_plugin
-    dev-libs/urdfdom_headers
+    ros-lunar/roscpp
     media-libs/collada-dom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
     ros-lunar/urdf
@@ -48,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

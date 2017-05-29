@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a C++ parser for the Unified Robot Description
-    Format (URDF), which is an XML format for representing a robot model.
-    The code API of the parser has been through our review process and will remain
-    backwards compatible in future releases."
+    Format "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/urdf/1.12.9-0.tar.gz"
 
@@ -15,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole_bridge
     ros-lunar/roscpp
     ros-lunar/urdf_parser_plugin
     ros-lunar/pluginlib
+    ros-lunar/rosconsole_bridge
     dev-libs/urdfdom_headers
     dev-libs/urdfdom
 "
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

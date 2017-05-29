@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="turtle_actionlib demonstrates how to write an action server and client with the turtlesim. The shape_server provides and action interface for drawing regular polygons with the turtlesim."
+DESCRIPTION="turtle_actionlib demonstrates how to write an action server and client with the "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/lunar/turtle_actionlib/0.1.10-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/actionlib
-    ros-lunar/geometry_msgs
-    ros-lunar/message_runtime
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/actionlib_msgs
+    ros-lunar/message_runtime
     ros-lunar/turtlesim
     ros-lunar/rosconsole
+    ros-lunar/actionlib
+    ros-lunar/roscpp
+    ros-lunar/geometry_msgs
     ros-lunar/angles
 "
 DEPEND="${RDEPEND}
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

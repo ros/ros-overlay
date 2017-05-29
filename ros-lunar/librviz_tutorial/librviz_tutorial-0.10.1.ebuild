@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Tutorial showing how to compile your own C++ program with RViz displays and features."
+DESCRIPTION="Tutorial showing how to compile your own C++ program with RViz displays and feat"
 HOMEPAGE="http://ros.org/wiki/librviz_tutorial"
 SRC_URI="https://github.com/ros-gbp/visualization_tutorials-release/archive/release/lunar/librviz_tutorial/0.10.1-0.tar.gz"
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/roscpp
     ros-lunar/rviz
-    dev-qt/qtgui
     dev-qt/qtwidgets
+    dev-qt/qtgui
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

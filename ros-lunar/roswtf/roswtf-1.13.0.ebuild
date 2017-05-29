@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code."
+DESCRIPTION="roswtf is a tool for diagnosing issues with a running ROS system. Think of it as"
 HOMEPAGE="http://ros.org/wiki/roswtf"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/roswtf/1.13.0-0.tar.gz"
 
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roslaunch
     ros-lunar/rosgraph
     ros-lunar/rosbuild
     ros-lunar/roslib
+    ros-lunar/roslaunch
     ros-lunar/rosservice
     ros-lunar/rosnode
     dev-python/rospkg
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

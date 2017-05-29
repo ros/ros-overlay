@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and C++."
+DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and "
 HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/tf2_ros/0.5.15-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rospy
+    ros-lunar/tf2_py
+    ros-lunar/message_filters
+    ros-lunar/actionlib_msgs
+    ros-lunar/roscpp
+    ros-lunar/xmlrpcpp
+    ros-lunar/std_msgs
+    ros-lunar/tf2
+    ros-lunar/geometry_msgs
+    ros-lunar/tf2_msgs
     ros-lunar/rosgraph
     ros-lunar/actionlib
-    ros-lunar/geometry_msgs
-    ros-lunar/rospy
-    ros-lunar/tf2
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/actionlib_msgs
-    ros-lunar/tf2_py
-    ros-lunar/tf2_msgs
-    ros-lunar/message_filters
-    ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 "
@@ -50,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>adolfo.rodriguez@pal-robotics.com</email>
+      <name>Adolfo Rodriguez Tsouroukdissian</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/control_msgs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

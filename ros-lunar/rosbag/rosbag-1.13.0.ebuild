@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This is a set of tools for recording from and playing back to ROS
-    topics.  It is intended to be high performance and avoids
-    deserialization and reserialization of the messages."
+    topics.  I"
 HOMEPAGE="http://ros.org/wiki/rosbag"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosbag/1.13.0-0.tar.gz"
 
@@ -15,21 +14,21 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/genpy
-    ros-lunar/rospy
-    ros-lunar/genmsg
-    ros-lunar/roslib
-    ros-lunar/std_srvs
-    ros-lunar/rosbag_storage
-    ros-lunar/roscpp
-    ros-lunar/topic_tools
-    ros-lunar/rosconsole
     ros-lunar/xmlrpcpp
-    dev-libs/boost
+    ros-lunar/rosbag_storage
+    ros-lunar/topic_tools
+    ros-lunar/roslib
+    ros-lunar/rosconsole
+    ros-lunar/rospy
+    ros-lunar/roscpp
+    ros-lunar/std_srvs
+    ros-lunar/genmsg
     dev-python/rospkg
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cpp_common
     ros-lunar/roscpp_serialization
+    ros-lunar/cpp_common
     dev-python/pillow
 "
 
@@ -55,8 +54,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -4,12 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The nodelet package is designed to provide a way to run multiple
-    algorithms in the same process with zero copy transport between
-    algorithms.
-
-    This package provides both the nodelet base class needed for
-    implementing a nodelet, as well as the NodeletLoader class used
-    for instantiating nodelets."
+    algorithms "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/nodelet_core-release/archive/release/lunar/nodelet/1.9.10-0.tar.gz"
 
@@ -18,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/bondcpp
-    ros-lunar/message_runtime
-    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/pluginlib
+    ros-lunar/message_runtime
     ros-lunar/rosconsole
-    dev-libs/boost
+    ros-lunar/bondcpp
+    ros-lunar/roscpp
+    ros-lunar/pluginlib
     sys-apps/util-linux
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -55,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

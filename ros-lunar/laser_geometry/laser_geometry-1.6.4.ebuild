@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a class for converting from a 2D laser scan as defined by
-    sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
-    or sensor_msgs/PointCloud2. In particular, it contains functionality to account
-    for the skew resulting from moving robots or tilting laser scanners."
+"
 HOMEPAGE="http://ros.org/wiki/laser_geometry"
 SRC_URI="https://github.com/ros-gbp/laser_geometry-release/archive/release/lunar/laser_geometry/1.6.4-0.tar.gz"
 
@@ -15,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/angles
+    ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/tf
-    ros-lunar/roscpp
-    ros-lunar/angles
-    dev-cpp/eigen
-    dev-python/numpy
     dev-libs/boost
+    dev-python/numpy
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

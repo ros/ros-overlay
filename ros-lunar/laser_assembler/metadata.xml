@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dgossoe@willowgarage.com</email>
+      <name>David Gossow</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/laser_assembler/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

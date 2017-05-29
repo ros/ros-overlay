@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>timo.roehling@fkie.fraunhofer.de</email>
+      <name>Timo Roehling</name>
+    </maintainer>
+    <bugs-to>https://github.com/swri-robotics-gbp/gps_umd/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

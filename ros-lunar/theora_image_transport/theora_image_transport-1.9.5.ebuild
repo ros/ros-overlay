@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Theora_image_transport provides a plugin to image_transport for
-    transparently sending an image stream encoded with the Theora codec."
+    transparentl"
 HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
 SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/release/lunar/theora_image_transport/1.9.5-0.tar.gz"
 
@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/std_msgs
+    ros-lunar/message_runtime
     ros-lunar/rosbag
     ros-lunar/dynamic_reconfigure
-    ros-lunar/cv_bridge
-    ros-lunar/message_runtime
-    ros-lunar/std_msgs
-    ros-lunar/pluginlib
     ros-lunar/image_transport
+    ros-lunar/cv_bridge
+    ros-lunar/pluginlib
     media-libs/libtheora
     media-libs/libogg
 "
@@ -49,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

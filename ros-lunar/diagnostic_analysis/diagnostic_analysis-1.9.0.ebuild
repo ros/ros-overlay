@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The diagnostic_analysis package can convert a log of diagnostics data
-    into a series of CSV files. Robot logs are recorded with rosbag, and
-    can be processed offline using the scripts in this package."
+    into a"
 HOMEPAGE="http://www.ros.org/wiki/diagnostics_analysis"
 SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/diagnostic_analysis/1.9.0-0.tar.gz"
 
@@ -14,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosbag
     ros-lunar/diagnostic_msgs
     ros-lunar/roslib
+    ros-lunar/rosbag
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -44,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

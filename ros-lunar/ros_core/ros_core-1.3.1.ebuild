@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts."
+DESCRIPTION="A metapackage to aggregate the packages required to use publish / subscribe, ser"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/lunar/ros_core/1.3.1-0.tar.gz"
 
@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/common_msgs
-    ros-lunar/ros_comm
     ros-lunar/genpy
-    ros-lunar/rosconsole_bridge
-    ros-lunar/roscpp_core
-    ros-lunar/rospack
-    ros-lunar/rosgraph_msgs
-    ros-lunar/cmake_modules
-    ros-lunar/genmsg
     ros-lunar/roslisp
-    ros-lunar/geneus
-    ros-lunar/gencpp
-    ros-lunar/gennodejs
-    ros-lunar/genlisp
-    ros-lunar/message_runtime
-    ros-lunar/ros
     ros-lunar/std_msgs
-    ros-lunar/std_srvs
+    ros-lunar/geneus
+    ros-lunar/message_runtime
     ros-lunar/rosbag_migration_rule
-    ros-lunar/catkin
+    ros-lunar/rosgraph_msgs
+    ros-lunar/rospack
+    ros-lunar/gencpp
+    ros-lunar/ros_comm
+    ros-lunar/cmake_modules
+    ros-lunar/roscpp_core
+    ros-lunar/genlisp
+    ros-lunar/rosconsole_bridge
+    ros-lunar/std_srvs
+    ros-lunar/gennodejs
+    ros-lunar/ros
     ros-lunar/message_generation
+    ros-lunar/catkin
+    ros-lunar/common_msgs
+    ros-lunar/genmsg
 "
 DEPEND="${RDEPEND}
 "
@@ -59,8 +59,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="tf2 is the second generation of the transform library, which lets
-    the user keep track of multiple coordinate frames over time. tf2
-    maintains the relationship between coordinate frames in a tree
-    structure buffered in time, and lets the user transform points,
-    vectors, etc between any two coordinate frames at any desired
-    point in time."
+    the user k"
 HOMEPAGE="http://www.ros.org/wiki/tf2"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/tf2/0.5.15-0.tar.gz"
 
@@ -17,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rostime
     ros-lunar/geometry_msgs
     ros-lunar/tf2_msgs
+    ros-lunar/rostime
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
@@ -47,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

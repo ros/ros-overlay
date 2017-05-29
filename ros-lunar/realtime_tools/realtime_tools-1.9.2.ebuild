@@ -4,15 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Contains a set of tools that can be used from a hard
-    realtime thread, without breaking the realtime behavior.  The
-    tools currently only provides the realtime publisher, which makes
-    it possible to publish messages to a ROS topic from a realtime
-    thread. We plan to add a basic implementation of a realtime
-    buffer, to make it possible to get data from a (non-realtime)
-    topic callback into the realtime loop. Once the lockfree buffer is
-    created, the realtime publisher will start using it, which will
-    result in major API changes for the realtime publisher (removal of
-    all lock methods)."
+    realtime thread, withou"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/realtime_tools-release/archive/release/lunar/realtime_tools/1.9.2-0.tar.gz"
 
@@ -21,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/rospy
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -49,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

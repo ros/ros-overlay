@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="tf is a package that lets the user keep track of multiple coordinate
-frames over time. tf maintains the relationship between coordinate
-frames in a tree structure buffered in time, and lets the user
-transform points, vectors, etc between any two coordinate frames at
-any desired point in time."
+frames over"
 HOMEPAGE="http://www.ros.org/wiki/tf"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.11.8-0.tar.gz"
 
@@ -16,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/roswtf
-    ros-lunar/tf2_ros
-    ros-lunar/geometry_msgs
-    ros-lunar/tf2
-    ros-lunar/message_runtime
+    ros-lunar/message_filters
     ros-lunar/roscpp
+    ros-lunar/tf2_ros
+    ros-lunar/sensor_msgs
     ros-lunar/std_msgs
     ros-lunar/rosconsole
-    ros-lunar/message_filters
+    ros-lunar/tf2
+    ros-lunar/roswtf
+    ros-lunar/message_runtime
+    ros-lunar/geometry_msgs
     media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
+    ros-lunar/angles
     ros-lunar/rostest
     ros-lunar/message_generation
-    ros-lunar/angles
 "
 
 SLOT="0/0"
@@ -56,8 +53,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

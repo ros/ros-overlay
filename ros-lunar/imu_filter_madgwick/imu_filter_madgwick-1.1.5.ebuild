@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation. Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms."
+DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optionally) magnetic "
 HOMEPAGE="http://ros.org/wiki/imu_filter_madgwick"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_filter_madgwick/1.1.5-0.tar.gz"
 
@@ -13,15 +13,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/tf2_geometry_msgs
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/geometry_msgs
-    ros-lunar/message_filters
     ros-lunar/tf2
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/tf2_ros
+    ros-lunar/tf2_geometry_msgs
     ros-lunar/roscpp
     ros-lunar/nodelet
     ros-lunar/pluginlib
-    ros-lunar/tf2_ros
+    ros-lunar/geometry_msgs
+    ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
 "
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

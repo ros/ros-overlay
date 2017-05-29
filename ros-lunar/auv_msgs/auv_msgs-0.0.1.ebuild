@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package provides message types commonly used with Autonomous Underwater Vehicles"
+DESCRIPTION="This package provides message types commonly used with Autonomous Underwater Veh"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/oceansystemslab/auv_msgs-release/archive/release/lunar/auv_msgs/0.0.1-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/geometry_msgs
     ros-lunar/std_msgs
-    ros-lunar/geographic_msgs
+    ros-lunar/sensor_msgs
     ros-lunar/message_runtime
+    ros-lunar/geometry_msgs
+    ros-lunar/geographic_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package contains a tool for setting and publishing joint state values for a given URDF."
+DESCRIPTION="This package contains a tool for setting and publishing joint state values for a"
 HOMEPAGE="http://www.ros.org/wiki/joint_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/joint_state_publisher/1.12.9-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/rospy
     ros-lunar/python_qt_binding
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -41,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

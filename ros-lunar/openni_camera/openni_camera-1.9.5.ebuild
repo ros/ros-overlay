@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A ROS driver for OpenNI depth (+ RGB) cameras. These include: 
-       Microsoft Kinect,
-       PrimeSense PSDK,
-       ASUS Xtion Pro and Pro Live
-
-    The driver publishes raw depth, RGB, and IR image streams."
+       Microsoft "
 HOMEPAGE="http://www.ros.org/wiki/openni_camera"
 SRC_URI="https://github.com/ros-gbp/openni_camera-release/archive/release/lunar/openni_camera/1.9.5-0.tar.gz"
 
@@ -18,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/sensor_msgs
-    ros-lunar/dynamic_reconfigure
     ros-lunar/camera_info_manager
-    ros-lunar/nodelet
-    ros-lunar/roscpp
+    ros-lunar/dynamic_reconfigure
     ros-lunar/image_transport
+    ros-lunar/roscpp
+    ros-lunar/nodelet
     =dev-libs/libusb-1.0*
     dev-libs/OpenNi
     dev-libs/log4cxx
@@ -52,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/lunar/setup.bash
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    source /${ROS_PREFIX}/setup.bash
+    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }
