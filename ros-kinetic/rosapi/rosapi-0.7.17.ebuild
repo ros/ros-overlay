@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Provides service calls for getting ros meta-information, like list of
-    topics, services, params, etc."
+    topics"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosapi/0.7.17-0.tar.gz"
 
@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosnode
-    ros-kinetic/message_runtime
     ros-kinetic/rosgraph
     ros-kinetic/rospy
+    ros-kinetic/message_runtime
+    ros-kinetic/rosnode
     ros-kinetic/rosbridge_library
 "
 DEPEND="${RDEPEND}
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

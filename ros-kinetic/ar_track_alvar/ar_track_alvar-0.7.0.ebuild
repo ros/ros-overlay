@@ -12,27 +12,27 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/cv_bridge
-    ros-kinetic/visualization_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_transport
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
-    ros-kinetic/resource_retriever
     ros-kinetic/pcl_ros
     ros-kinetic/pcl_conversions
-    ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf2
-    ros-kinetic/geometry_msgs
     ros-kinetic/tf
+    ros-kinetic/cv_bridge
+    ros-kinetic/message_runtime
+    ros-kinetic/tf2
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rospy
+    ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/resource_retriever
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/cmake_modules
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
@@ -57,8 +57,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

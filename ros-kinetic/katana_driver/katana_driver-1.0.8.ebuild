@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This stack contains all descriptions, drivers and bringup facilities for Neuronics Katana 450 arm."
+DESCRIPTION="This stack contains all descriptions, drivers and bringup facilities for Neuroni"
 HOMEPAGE="http://ros.org/wiki/katana_driver"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_driver/1.0.8-0.tar.gz"
 
@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/katana_moveit_ikfast_plugin
-    ros-kinetic/katana_teleop
-    ros-kinetic/katana
-    ros-kinetic/katana_arm_gazebo
-    ros-kinetic/katana_msgs
-    ros-kinetic/kni
-    ros-kinetic/katana_gazebo_plugins
-    ros-kinetic/katana_tutorials
     ros-kinetic/katana_description
+    ros-kinetic/kni
+    ros-kinetic/katana_arm_gazebo
+    ros-kinetic/katana_teleop
+    ros-kinetic/katana_gazebo_plugins
+    ros-kinetic/katana
+    ros-kinetic/katana_tutorials
+    ros-kinetic/katana_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

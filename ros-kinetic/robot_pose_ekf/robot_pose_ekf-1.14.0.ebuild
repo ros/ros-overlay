@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on (partial) pose measurements coming from different sources. It uses an extended Kalman filter with a 6D model (3D position and 3D orientation) to combine measurements from wheel odometry, IMU sensor and visual odometry. The basic idea is to offer loosely coupled integration with different sensors, where sensor signals are received as ROS messages."
+DESCRIPTION="The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on "
 HOMEPAGE="http://wiki.ros.org/robot_pose_ekf"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/robot_pose_ekf/1.14.0-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/rostest
-    ros-kinetic/bfl
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/tf
+    ros-kinetic/bfl
+    ros-kinetic/rostest
+    ros-kinetic/sensor_msgs
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

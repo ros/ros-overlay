@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="rqt_web is a simple web content viewer for rqt. Users can show web content in Qt-based window by specifying its URL."
+DESCRIPTION="rqt_web is a simple web content viewer for rqt. Users can show web content in Qt"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_web-release/archive/release/kinetic/rqt_web/0.4.8-0.tar.gz"
 
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/python_qt_binding
+    ros-kinetic/rqt_gui
     ros-kinetic/webkit_dependency
     ros-kinetic/rqt_gui_py
-    ros-kinetic/rospy
     ros-kinetic/qt_gui
-    ros-kinetic/rqt_gui
+    ros-kinetic/python_qt_binding
+    ros-kinetic/rospy
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

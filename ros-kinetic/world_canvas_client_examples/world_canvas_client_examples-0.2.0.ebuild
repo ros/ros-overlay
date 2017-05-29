@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Examples showing how to use C++ and Python client libraries to access semantic
-    maps within the world canvas framework."
+ "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/world_canvas_libs-release/archive/release/kinetic/world_canvas_client_examples/0.2.0-0.tar.gz"
 
@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/unique_id
-    ros-kinetic/world_canvas_msgs
-    ros-kinetic/yocs_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/world_canvas_client_cpp
-    ros-kinetic/world_canvas_client_py
     ros-kinetic/uuid_msgs
+    ros-kinetic/world_canvas_msgs
+    ros-kinetic/unique_id
+    ros-kinetic/yocs_msgs
+    ros-kinetic/world_canvas_client_py
+    ros-kinetic/nav_msgs
+    ros-kinetic/world_canvas_client_cpp
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

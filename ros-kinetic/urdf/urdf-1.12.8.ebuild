@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a C++ parser for the Unified Robot Description
-    Format (URDF), which is an XML format for representing a robot model.
-    The code API of the parser has been through our review process and will remain
-    backwards compatible in future releases."
+    Format "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/urdf/1.12.8-0.tar.gz"
 
@@ -17,8 +15,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/rosconsole_bridge
     ros-kinetic/roscpp
-    ros-kinetic/urdf_parser_plugin
     ros-kinetic/pluginlib
+    ros-kinetic/urdf_parser_plugin
     dev-libs/urdfdom
     dev-libs/urdfdom_headers
 "
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

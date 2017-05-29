@@ -3,10 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The marker_msgs package contains messages usable to setup a marker/fiducial system. 
-    The package distinguishes between two types of messages. 
-    First messages to describe the properties of a marker/fiducial detection system and the detected markers. 
-    Secondly messages used to represent a map of markers/features with covariances as it would be produced by a SLAM system or published by a map server for self-localization.."
+DESCRIPTION="The marker_msgs package contains messages usable to setup a marker/fiducial syst"
 HOMEPAGE="http://wiki.ros.org/marker_msgs"
 SRC_URI="https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.5-0.tar.gz"
 
@@ -16,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_runtime
-    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/geometry_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -45,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

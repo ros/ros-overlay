@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to follow. It does this by moving back along the vector between the robot and the goal point."
+DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to fol"
 HOMEPAGE="http://wiki.ros.org/carrot_planner"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.0-0.tar.gz"
 
@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/base_local_planner
-    ros-kinetic/nav_core
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
     ros-kinetic/pluginlib
     ros-kinetic/tf
+    ros-kinetic/nav_core
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

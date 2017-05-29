@@ -12,15 +12,15 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/tf2
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/tf2_ros
-    ros-lunar/tf2_geometry_msgs
     ros-lunar/roscpp
-    ros-lunar/nodelet
-    ros-lunar/pluginlib
     ros-lunar/geometry_msgs
+    ros-lunar/pluginlib
+    ros-lunar/nodelet
+    ros-lunar/tf2
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/tf2_geometry_msgs
     ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

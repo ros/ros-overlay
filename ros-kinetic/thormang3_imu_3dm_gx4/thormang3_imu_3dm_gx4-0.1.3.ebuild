@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="Driver for Microstrain 3DM-GX4-25 IMU
     This package is modified by robotis.
-    The original version is Kumar Robotics's imu_3dm_gx4 package."
+ "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_imu_3dm_gx4/0.1.3-0.tar.gz"
 
@@ -15,10 +15,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_runtime
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/sensor_msgs
+    ros-kinetic/geometry_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

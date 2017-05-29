@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The manipulator_h_manager package
-    This package describes robot manager to execute manipulator_h_base_module."
+    This package describes robot manager to ex"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_manager/0.2.2-0.tar.gz"
 
@@ -17,12 +17,12 @@ RDEPEND="
     ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/robotis_framework_common
-    ros-kinetic/dynamixel_sdk
-    ros-kinetic/robotis_controller_msgs
-    ros-kinetic/manipulator_h_base_module
     ros-kinetic/robotis_device
     ros-kinetic/cmake_modules
+    ros-kinetic/robotis_framework_common
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/manipulator_h_base_module
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0/0"
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

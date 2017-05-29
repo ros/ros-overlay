@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The agvs_robot_control package. Robot controller that interacts with Gazebo motor controllers."
+DESCRIPTION="The agvs_robot_control package. Robot controller that interacts with Gazebo moto"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_robot_control/0.1.3-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/ackermann_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/robotnik_msgs
-    ros-kinetic/nav_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/diagnostic_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/robotnik_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
+    ros-kinetic/ackermann_msgs
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -51,8 +51,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

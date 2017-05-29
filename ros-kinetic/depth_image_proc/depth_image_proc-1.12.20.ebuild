@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Contains nodelets for processing depth images such as those
-     produced by OpenNI camera. Functions include creating disparity
-     images and point clouds, as well as registering (reprojecting)
-     a depth image into another camera frame."
+     produced by Ope"
 HOMEPAGE="http://ros.org/wiki/depth_image_proc"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/depth_image_proc/1.12.20-0.tar.gz"
 
@@ -15,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/eigen_conversions
-    ros-kinetic/image_transport
     ros-kinetic/image_geometry
-    ros-kinetic/tf2
-    ros-kinetic/tf2_ros
     ros-kinetic/nodelet
+    ros-kinetic/cv_bridge
+    ros-kinetic/tf2
+    ros-kinetic/image_transport
+    ros-kinetic/tf2_ros
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/stereo_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/message_filters
     ros-kinetic/cmake_modules
+    ros-kinetic/sensor_msgs
+    ros-kinetic/stereo_msgs
+    ros-kinetic/message_filters
 "
 
 SLOT="0/0"
@@ -53,8 +51,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

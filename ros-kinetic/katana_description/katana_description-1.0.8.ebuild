@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package contains an URDF description of the Katana arm and all supporting mesh files."
+DESCRIPTION="This package contains an URDF description of the Katana arm and all supporting m"
 HOMEPAGE="http://ros.org/wiki/katana_description"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_description/1.0.8-0.tar.gz"
 
@@ -12,12 +12,12 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/transmission_interface
     ros-kinetic/urdf
+    ros-kinetic/transmission_interface
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/convex_decomposition
     ros-kinetic/ivcon
+    ros-kinetic/convex_decomposition
 "
 
 SLOT="0/0"
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

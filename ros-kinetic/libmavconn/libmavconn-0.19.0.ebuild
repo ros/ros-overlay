@@ -4,14 +4,11 @@
 EAPI=6
 
 DESCRIPTION="MAVLink communication library.
-    This library provide unified connection handling classes
-    and URL to connection object mapper.
-
-    This library can be used in standalone programs."
+    This library provide unified connection handl"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.19.0-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
@@ -44,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

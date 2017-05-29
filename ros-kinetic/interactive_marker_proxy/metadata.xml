@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>rctoris@wpi.edu</email>
+      <name>Russell Toris</name>
+    </maintainer>
+    <bugs-to>https://github.com/RobotWebTools/interactive_marker_proxy/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

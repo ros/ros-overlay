@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="RealSense Camera package allowing access to Intel 3D cameras and advanced modules"
+DESCRIPTION="RealSense Camera package allowing access to Intel 3D cameras and advanced module"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/intel-ros/realsense-release/archive/release/kinetic/realsense_camera/1.8.0-0.tar.gz"
 
@@ -12,21 +12,21 @@ LICENSE="BSD 3-clause. See license attached"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/rostest
-    ros-kinetic/rgbd_launch
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_transport
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/nodelet
-    ros-kinetic/cv_bridge
-    ros-kinetic/message_runtime
-    ros-kinetic/camera_info_manager
-    ros-kinetic/librealsense
     ros-kinetic/roscpp
+    ros-kinetic/rgbd_launch
+    ros-kinetic/std_msgs
+    ros-kinetic/camera_info_manager
     ros-kinetic/pcl_ros
+    ros-kinetic/nodelet
+    ros-kinetic/tf
+    ros-kinetic/cv_bridge
+    ros-kinetic/rostest
+    ros-kinetic/librealsense
+    ros-kinetic/image_transport
+    ros-kinetic/message_generation
+    ros-kinetic/sensor_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/dynamic_reconfigure
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -55,8 +55,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

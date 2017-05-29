@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This metapackage depends on the SMACH library and ROS SMACH integration
-    packages."
+    pack"
 HOMEPAGE="http://ros.org/wiki/smach"
 SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/executive_smach/2.0.0-2.tar.gz"
 
@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/smach
-    ros-kinetic/smach_msgs
     ros-kinetic/smach_ros
+    ros-kinetic/smach_msgs
+    ros-kinetic/smach
 "
 DEPEND="${RDEPEND}
 "
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

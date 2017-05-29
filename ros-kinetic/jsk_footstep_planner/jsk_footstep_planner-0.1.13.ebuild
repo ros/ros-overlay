@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geometry_msgs
-    ros-kinetic/roseus
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/visualization_msgs
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/jsk_recognition_utils
     ros-kinetic/roscpp
+    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/roseus
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/geometry_msgs
     ros-kinetic/pcl_ros
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_interactive_marker
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -51,8 +51,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

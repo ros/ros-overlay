@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/cv_bridge
-    ros-kinetic/marti_common_msgs
-    ros-kinetic/swri_transform_util
-    ros-kinetic/image_transport
-    ros-kinetic/rqt_gui_cpp
-    ros-kinetic/pluginlib
-    ros-kinetic/rosapi
     ros-kinetic/roscpp
     ros-kinetic/rqt_gui
+    ros-kinetic/swri_transform_util
+    ros-kinetic/pluginlib
+    ros-kinetic/marti_common_msgs
+    ros-kinetic/cv_bridge
+    ros-kinetic/message_runtime
     ros-kinetic/std_srvs
-    ros-kinetic/swri_yaml_util
+    ros-kinetic/image_transport
+    ros-kinetic/rqt_gui_cpp
     ros-kinetic/tf
-    dev-qt/qtwidgets
-    x11-libs/libXmu
-    dev-qt/qtcore
-    media-libs/glew
+    ros-kinetic/rosapi
+    ros-kinetic/swri_yaml_util
     x11-libs/libXi
-    media-libs/freeglut
+    dev-qt/qtcore
     dev-qt/qtgui
+    x11-libs/libXmu
+    media-libs/glew
+    dev-qt/qtwidgets
     dev-qt/qtopengl
+    media-libs/freeglut
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -61,8 +61,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

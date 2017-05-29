@@ -4,16 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This stack provides Python bindings for Qt.
-    There are two providers: pyside and pyqt.  PySide is released under
-    the LGPL.  PyQt is released under the GPL.
-
-    Both the bindings and tools to build bindings are included from each
-    available provider.  For PySide, it is called "Shiboken".  For PyQt,
-    this is called "SIP".
-
-    Also provided is adapter code to make the user's Python code
-    independent of which binding provider was actually used which makes
-    it very easy to switch between these."
+    There are two providers: pyside "
 HOMEPAGE="http://ros.org/wiki/python_qt_binding"
 SRC_URI="https://github.com/ros-gbp/python_qt_binding-release/archive/release/kinetic/python_qt_binding/0.3.2-0.tar.gz"
 
@@ -51,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

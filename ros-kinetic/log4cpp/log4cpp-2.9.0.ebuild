@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Log4cpp maintained by Orocos developers
-    This version of log4cpp deviates from the official release
-    by adding custom category factories. Orocos requires this for
-    setting up real-time logging."
+    This version of log4cpp deviates fro"
 HOMEPAGE="http://log4cpp.sourceforge.net/"
 SRC_URI="https://github.com/orocos-gbp/log4cpp-release/archive/release/kinetic/log4cpp/2.9.0-0.tar.gz"
 
@@ -42,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

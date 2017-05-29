@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The marker_rviz_plugin package contains RViz plugins to visualize messages of the marker_msgs package using RViz."
+DESCRIPTION="The marker_rviz_plugin package contains RViz plugins to visualize messages of th"
 HOMEPAGE="http://wiki.ros.org/marker_rviz_plugin"
 SRC_URI="https://github.com/tuw-robotics/marker_rviz_plugin-release/archive/release/kinetic/marker_rviz_plugin/0.0.2-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rviz
     ros-kinetic/roscpp
     ros-kinetic/marker_msgs
+    ros-kinetic/rviz
 "
 DEPEND="${RDEPEND}
 "
@@ -41,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

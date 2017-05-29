@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/bondcpp
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/rospy
-    ros-kinetic/diagnostic_msgs
     ros-kinetic/roscpp
-    ros-kinetic/bondpy
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/pluginlib
+    ros-kinetic/bondcpp
+    ros-kinetic/bondpy
+    ros-kinetic/rospy
+    ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

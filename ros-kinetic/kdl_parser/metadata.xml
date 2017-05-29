@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>clalancette@osrfoundation.org</email>
+      <name>Chris Lalancette</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/kdl_parser/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

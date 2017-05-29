@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This doesn't do everything you need for multimaster, however it does
-    provide the building blocks common to most or all multimaster systems.
-    In particular, it provides the gateway model, which is an upgrade on
-    old foreign_relay and master_sync concepts."
+    provide"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_multimaster/0.8.1-2.tar.gz"
 
@@ -15,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rocon_gateway_utils
-    ros-kinetic/rocon_hub
-    ros-kinetic/rocon_gateway_tests
     ros-kinetic/rocon_gateway
-    ros-kinetic/rocon_test
-    ros-kinetic/rocon_unreliable_experiments
+    ros-kinetic/rocon_hub
     ros-kinetic/rocon_hub_client
+    ros-kinetic/rocon_unreliable_experiments
+    ros-kinetic/rocon_gateway_utils
+    ros-kinetic/rocon_test
+    ros-kinetic/rocon_gateway_tests
 "
 DEPEND="${RDEPEND}
 "
@@ -48,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

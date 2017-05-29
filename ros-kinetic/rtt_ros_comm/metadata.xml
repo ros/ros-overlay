@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>orocos-dev@lists.mech.kuleuven.be</email>
+      <name>Orocos Developers</name>
+    </maintainer>
+    <bugs-to>https://github.com/orocos-gbp/rtt_ros_integration/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>matei.ciocarlie@gmail.com</email>
+      <name>Matei Ciocarlie</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/household_objects_database_msgs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

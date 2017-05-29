@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork detection results"
+DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork dete"
 HOMEPAGE="wg-perception.github.io/object_recognition_ros"
 SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/kinetic/object_recognition_ros_visualization/0.3.8-0.tar.gz"
 
@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pluginlib
+    ros-kinetic/rviz
     ros-kinetic/object_recognition_msgs
     ros-kinetic/object_recognition_ros
-    ros-kinetic/rviz
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

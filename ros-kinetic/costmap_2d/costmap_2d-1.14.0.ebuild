@@ -4,12 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides an implementation of a 2D costmap that takes in sensor
-        data from the world, builds a 2D or 3D occupancy grid of the data (depending
-        on whether a voxel based implementation is used), and inflates costs in a
-        2D costmap based on the occupancy grid and a user specified inflation radius.
-        This package also provides support for map_server based initialization of a
-        costmap, rolling window based costmaps, and parameter based subscription to
-        and configuration of sensor topics."
+   "
 HOMEPAGE="http://wiki.ros.org/costmap_2d"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.0-0.tar.gz"
 
@@ -18,28 +13,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_filters
-    ros-kinetic/rosconsole
-    ros-kinetic/sensor_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/pcl_conversions
-    ros-kinetic/pcl_ros
-    ros-kinetic/rostest
-    ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/message_runtime
-    ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/visualization_msgs
-    ros-kinetic/map_msgs
-    ros-kinetic/voxel_grid
     ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/voxel_grid
+    ros-kinetic/pcl_ros
+    ros-kinetic/pcl_conversions
+    ros-kinetic/map_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/tf
+    ros-kinetic/message_runtime
+    ros-kinetic/rostest
+    ros-kinetic/sensor_msgs
+    ros-kinetic/laser_geometry
+    ros-kinetic/rosconsole
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nav_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/cmake_modules
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
@@ -64,8 +59,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

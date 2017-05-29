@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/joint_trajectory_controller
-    ros-lunar/diff_drive_controller
-    ros-lunar/position_controllers
-    ros-lunar/effort_controllers
-    ros-lunar/forward_command_controller
     ros-lunar/imu_sensor_controller
-    ros-lunar/rqt_joint_trajectory_controller
-    ros-lunar/gripper_action_controller
-    ros-lunar/velocity_controllers
     ros-lunar/force_torque_sensor_controller
+    ros-lunar/gripper_action_controller
+    ros-lunar/forward_command_controller
+    ros-lunar/rqt_joint_trajectory_controller
+    ros-lunar/velocity_controllers
+    ros-lunar/diff_drive_controller
+    ros-lunar/joint_trajectory_controller
+    ros-lunar/effort_controllers
     ros-lunar/joint_state_controller
+    ros-lunar/position_controllers
 "
 DEPEND="${RDEPEND}
 "
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

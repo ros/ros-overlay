@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>atsushi.w@ieee.org</email>
+      <name>Atsushi Watanabe</name>
+    </maintainer>
+    <bugs-to>https://github.com/at-wat/hokuyo3d/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

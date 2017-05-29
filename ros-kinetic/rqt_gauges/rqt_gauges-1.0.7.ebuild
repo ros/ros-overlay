@@ -12,11 +12,11 @@ LICENSE="see License.txt"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
-    ros-kinetic/rqt_gui
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
     ros-kinetic/rqt_gui_cpp
+    ros-kinetic/roscpp
+    ros-kinetic/pluginlib
+    ros-kinetic/std_msgs
+    ros-kinetic/rqt_gui
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslint
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

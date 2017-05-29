@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.
-    You can do simple tests using this package on rviz without real robots."
+DESCRIPTION="Package for TurtleBot3 fake node. With this package, simple tests can be done wi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_fake/0.1.4-1.tar.gz"
 
@@ -13,13 +12,13 @@ LICENSE="Apache License 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/turtlebot3_msgs
+    ros-kinetic/tf
     ros-kinetic/sensor_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/turtlebot3_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/geometry_msgs
-    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

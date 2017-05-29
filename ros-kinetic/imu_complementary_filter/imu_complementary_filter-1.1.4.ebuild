@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into a quaternion to represent the orientation of the device wrt the global frame. Based on the algorithm by Roberto G. Valenti etal. described in the paper "Keeping a Good Attitude: A Quaternion-Based Orientation Filter for IMUs and MARGs" available at http://www.mdpi.com/1424-8220/15/8/19302 ."
+DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optionally) magnetic "
 HOMEPAGE="http://www.mdpi.com/1424-8220/15/8/19302"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_complementary_filter/1.1.4-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_filters
-    ros-kinetic/tf
+    ros-kinetic/roscpp
     ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

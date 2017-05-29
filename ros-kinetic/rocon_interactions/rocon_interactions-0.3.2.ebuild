@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/unique_id
-    ros-kinetic/rocon_icons
-    ros-kinetic/std_msgs
     ros-kinetic/rocon_python_utils
-    ros-kinetic/rocon_console
-    ros-kinetic/rospy
     ros-kinetic/rocon_app_manager_msgs
     ros-kinetic/rocon_interaction_msgs
-    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rocon_console
+    ros-kinetic/std_msgs
     ros-kinetic/rocon_python_comms
-    ros-kinetic/rocon_uri
-    ros-kinetic/rocon_bubble_icons
     ros-kinetic/genpy
+    ros-kinetic/rocon_icons
+    ros-kinetic/unique_id
+    ros-kinetic/rocon_bubble_icons
+    ros-kinetic/rocon_uri
+    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rospy
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -55,8 +55,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

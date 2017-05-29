@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Variant messages are designed to accommodate the information content
-    of any invariant message. They are truly generic and can freely be
-    converted to and from specific message objects."
+    of any "
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
 SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_msgs/0.1.3-0.tar.gz"
 
@@ -43,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="rqt_robot_dashboard provides an infrastructure for building robot dashboard plugins in rqt."
+DESCRIPTION="rqt_robot_dashboard provides an infrastructure for building robot dashboard plug"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/kinetic/rqt_robot_dashboard/0.5.7-0.tar.gz"
 
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/python_qt_binding
-    ros-kinetic/rqt_console
-    ros-kinetic/rqt_robot_monitor
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/rospy
-    ros-kinetic/qt_gui
-    ros-kinetic/diagnostic_msgs
     ros-kinetic/rqt_gui
     ros-kinetic/rqt_nav_view
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/rqt_console
+    ros-kinetic/rqt_gui_py
+    ros-kinetic/qt_gui
+    ros-kinetic/rqt_robot_monitor
+    ros-kinetic/python_qt_binding
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

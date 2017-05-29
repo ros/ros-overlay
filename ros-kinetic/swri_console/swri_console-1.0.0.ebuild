@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A rosout GUI viewer developed at Southwest Research Insititute as an
-     alternative to rqt_console."
+     altern"
 HOMEPAGE="http://ros.org/wiki/swri_console"
 SRC_URI="https://github.com/swri-robotics-gbp/swri_console-release/archive/release/kinetic/swri_console/1.0.0-0.tar.gz"
 
@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/rosbag_storage
     ros-kinetic/roscpp
-    dev-qt/qtwidgets
+    ros-kinetic/rosbag_storage
+    ros-kinetic/rosgraph_msgs
     dev-qt/qtcore
     dev-qt/qtgui
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

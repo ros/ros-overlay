@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="URDF description of the robot kinematics and dynamics, 3D models of robot components, information required for gazebo to simulate the PR2, and messages specific to the PR2 such as detailed information about its power board and fingertip pressure sensors."
+DESCRIPTION="URDF description of the robot kinematics and dynamics, 3D models of robot compon"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_common/1.12.0-0.tar.gz"
 
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pr2_msgs
-    ros-kinetic/pr2_description
-    ros-kinetic/pr2_machine
     ros-kinetic/pr2_dashboard_aggregator
+    ros-kinetic/pr2_msgs
+    ros-kinetic/pr2_machine
+    ros-kinetic/pr2_description
 "
 DEPEND="${RDEPEND}
 "
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

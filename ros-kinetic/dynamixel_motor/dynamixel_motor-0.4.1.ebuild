@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This stack contains packages that are used to interface with Robotis
-    Dynamixel line of servo motors. This stack was tested with and fully
-    supports AX-12, AX-18, RX-24, RX-28, MX-28, RX-64, MX-64, EX-106 and
-    MX-106 models."
+    Dynamix"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_motor/0.4.1-0.tar.gz"
 
@@ -16,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/dynamixel_controllers
+    ros-kinetic/dynamixel_tutorials
     ros-kinetic/dynamixel_msgs
     ros-kinetic/dynamixel_driver
-    ros-kinetic/dynamixel_tutorials
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

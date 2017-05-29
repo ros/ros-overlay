@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package attempts to show the features of ROS step-by-step,
-    including using messages, servers, parameters, etc."
+    including us"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/roscpp_tutorials/0.7.1-0.tar.gz"
 
@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rostime
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp_serialization
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/rosconsole
+    ros-kinetic/rostime
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

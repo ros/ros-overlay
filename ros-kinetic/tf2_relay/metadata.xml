@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>pbovbel@clearpath.ai</email>
+      <name>Paul Bovbel</name>
+    </maintainer>
+    <bugs-to>https://github.com/clearpath-gbp/cpr_multimaster_tools/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

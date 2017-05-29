@@ -3,16 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="hector_object_tracker is the core package of hector_worldmodel. It listens to percept message from
-     detectors (e.g. heat signatures of persons or recognitions of other objects of interest in the
-     scene) and fuses all information to a single worldmodel state. Objects will be tracked over time
-     and their states can be influenced by a couple of services.
-
-     The percept to object association problem is solved either automatically based on the Mahalanobis
-     distance, or a unique object_id can be given in the percept message.
-
-     If a hector_nav_msgs/GetDistanceToObstacle service is available, the object_tracker can optionally
-     deduce the depth of objects in the scene by projection to the nearest obstacle (wall)."
+DESCRIPTION="hector_object_tracker is the core package of hector_worldmodel. It listens to pe"
 HOMEPAGE="http://ros.org/wiki/hector_object_tracker"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_object_tracker/0.3.4-0.tar.gz"
 
@@ -21,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_nav_msgs
-    ros-kinetic/hector_marker_drawing
-    ros-kinetic/image_geometry
     ros-kinetic/roscpp
-    ros-kinetic/hector_worldmodel_msgs
+    ros-kinetic/image_geometry
     ros-kinetic/tf
+    ros-kinetic/hector_worldmodel_msgs
+    ros-kinetic/hector_marker_drawing
+    ros-kinetic/hector_nav_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -53,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

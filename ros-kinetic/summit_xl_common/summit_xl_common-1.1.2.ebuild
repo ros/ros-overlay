@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="URDF description of the Summit XL and Summit XL HL, platform messages and other files for simulation."
+DESCRIPTION="URDF description of the Summit XL and Summit XL HL, platform messages and other "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_common/1.1.2-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/summit_xl_navigation
-    ros-kinetic/summit_xl_description
     ros-kinetic/summit_xl_localization
+    ros-kinetic/summit_xl_description
+    ros-kinetic/summit_xl_navigation
     ros-kinetic/summit_xl_pad
 "
 DEPEND="${RDEPEND}
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

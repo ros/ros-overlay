@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Provides wrappers around the yaml-cpp library for various utility functions
-    and to abstract out the API changes made to yaml-cpp between ubuntu:precise
-    and ubuntu:trusty."
+    "
 HOMEPAGE="https://github.com/swri-robotics/marti_common"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/0.2.4-0.tar.gz"
 
@@ -14,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-cpp/yaml-cpp
     dev-libs/boost
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
 "
@@ -42,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

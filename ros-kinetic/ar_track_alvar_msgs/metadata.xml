@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sniekum@cs.umass.edu</email>
+      <name>Scott Niekum</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/ar_track_alvar/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

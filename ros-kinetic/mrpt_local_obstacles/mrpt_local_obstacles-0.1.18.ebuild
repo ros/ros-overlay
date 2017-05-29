@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Maintains a local obstacle map (point cloud,
-   voxels or occupancy grid) from recent sensor readings within a
-   configurable time window."
+   voxels or occupancy grid) from r"
 HOMEPAGE="http://wiki.ros.org/mrpt_local_obstacles"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_local_obstacles/0.1.18-0.tar.gz"
 
@@ -14,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/mrpt_bridge
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
     ros-kinetic/tf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/mrpt_bridge
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

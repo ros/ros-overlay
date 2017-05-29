@@ -6,9 +6,7 @@ EAPI=6
 DESCRIPTION="roseus_smach
 
      * Euslisp state machine class. it will be moved.
-     * Message publisher for visualizing current state by smach_viewer.
-     * Simple pickle dump script for debugging state machine.
-     * Execute state machine as a action server."
+     * Messa"
 HOMEPAGE="http://ros.org/wiki/roseus_smach"
 SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.6.1-0.tar.gz"
 
@@ -17,16 +15,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
     ros-kinetic/std_msgs
+    ros-kinetic/roseus
     ros-kinetic/smach
-    ros-kinetic/euslisp
-    ros-kinetic/smach_ros
-    ros-kinetic/actionlib_tutorials
+    ros-kinetic/smach_msgs
     ros-kinetic/actionlib
     ros-kinetic/rostest
-    ros-kinetic/roseus
-    ros-kinetic/smach_msgs
+    ros-kinetic/smach_ros
+    ros-kinetic/message_runtime
+    ros-kinetic/actionlib_tutorials
+    ros-kinetic/euslisp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -54,8 +52,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

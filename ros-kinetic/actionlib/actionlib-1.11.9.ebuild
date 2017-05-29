@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The actionlib stack provides a standardized interface for
-    interfacing with preemptable tasks. Examples of this include moving
-    the base to a target location, performing a laser scan and returning
-    the resulting point cloud, detecting the handle of a door, etc."
+    interfacing with p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.9-0.tar.gz"
 
@@ -15,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/rospy
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/message_runtime
     ros-kinetic/rostest
+    ros-kinetic/rospy
+    ros-kinetic/actionlib_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

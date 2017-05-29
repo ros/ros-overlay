@@ -13,20 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    dev-python/numpy
-    sys-libs/zlib
     media-libs/libpng
-    media-libs/libwebp
-    sci-libs/vtk
-    virtual/ffmpeg
-    dev-lang/python
     dev-libs/protobuf
+    media-libs/libwebp
+    virtual/ffmpeg
+    dev-python/numpy
+    sci-libs/vtk
+    dev-lang/python
+    sys-libs/zlib
     media-libs/libjpeg-turbo
 "
 DEPEND="${RDEPEND}
+    media-libs/libv4l
     media-libs/tiff
     dev-libs/protobuf
-    media-libs/libv4l
 "
 
 SLOT="0/0"
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server."
+DESCRIPTION="Package which implements capabilities, including code to parse capability interf"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/capabilities-release/archive/release/kinetic/capabilities/0.2.0-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
     ros-kinetic/std_msgs
-    ros-kinetic/rospy
     ros-kinetic/std_srvs
+    ros-kinetic/nodelet
     ros-kinetic/roslaunch
     ros-kinetic/bondpy
-    ros-kinetic/nodelet
+    ros-kinetic/message_runtime
+    ros-kinetic/rospy
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/rostest
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

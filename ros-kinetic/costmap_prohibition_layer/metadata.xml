@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>stephan.kurzawe@tu-dortmund.de</email>
+      <name>Stephan Kurzawe</name>
+    </maintainer>
+    <bugs-to>https://github.com/rst-tu-dortmund/costmap_prohibition_layer/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

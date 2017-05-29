@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="ROS communications-related packages, including core client libraries (roscpp, rospy) and graph introspection tools (rostopic, rosnode, rosservice, rosparam)."
+DESCRIPTION="ROS communications-related packages, including core client libraries (roscpp, ro"
 HOMEPAGE="http://www.ros.org/wiki/ros_comm"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/ros_comm/1.12.7-0.tar.gz"
 
@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosservice
-    ros-kinetic/rosconsole
-    ros-kinetic/rospy
-    ros-kinetic/roscpp
     ros-kinetic/rosparam
+    ros-kinetic/roslaunch
+    ros-kinetic/ros
+    ros-kinetic/rosconsole
+    ros-kinetic/roswtf
+    ros-kinetic/rosmaster
+    ros-kinetic/rosbag
     ros-kinetic/rosout
+    ros-kinetic/rosmsg
     ros-kinetic/roslisp
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/rosmsg
-    ros-kinetic/roslaunch
-    ros-kinetic/rosnode
-    ros-kinetic/ros
-    ros-kinetic/rostest
-    ros-kinetic/message_filters
-    ros-kinetic/rosmaster
+    ros-kinetic/roscpp
     ros-kinetic/rosgraph
-    ros-kinetic/roswtf
-    ros-kinetic/rosbag
-    ros-kinetic/topic_tools
+    ros-kinetic/rospy
+    ros-kinetic/xmlrpcpp
     ros-kinetic/std_srvs
+    ros-kinetic/rostest
     ros-kinetic/rostopic
+    ros-kinetic/rosnode
+    ros-kinetic/topic_tools
+    ros-kinetic/rosservice
+    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
 "
@@ -60,8 +60,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors."
+DESCRIPTION="Messages for representing PR2 state, such as battery information and the PR2 fin"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_msgs/1.12.0-0.tar.gz"
 
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_runtime
-    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/geometry_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

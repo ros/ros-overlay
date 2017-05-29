@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     dev-util/rosdep
-    dev-lang/python
     virtual/pkgconfig
-    dev-python/catkin_pkg
     dev-libs/boost
+    dev-python/catkin_pkg
     dev-libs/tinyxml2
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

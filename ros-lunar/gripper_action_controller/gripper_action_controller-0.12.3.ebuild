@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/controller_manager
-    ros-lunar/hardware_interface
-    ros-lunar/control_toolbox
+    ros-lunar/roscpp
+    ros-lunar/xacro
     ros-lunar/controller_interface
     ros-lunar/cmake_modules
-    ros-lunar/urdf
-    ros-lunar/xacro
-    ros-lunar/trajectory_msgs
     ros-lunar/angles
-    ros-lunar/roscpp
-    ros-lunar/actionlib
+    ros-lunar/hardware_interface
     ros-lunar/realtime_tools
+    ros-lunar/actionlib
+    ros-lunar/urdf
+    ros-lunar/control_toolbox
     ros-lunar/control_msgs
+    ros-lunar/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

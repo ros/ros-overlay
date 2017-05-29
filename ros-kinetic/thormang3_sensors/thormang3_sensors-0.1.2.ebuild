@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains sensor related launch files.
-    The package also includes a node for assembling Laserscan(LaserScan to PointCloud)"
+    The package also includes"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_sensors/0.1.2-0.tar.gz"
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pcl_ros
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/laser_assembler
 "
 DEPEND="${RDEPEND}
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package extends the canopen_chain_node with specialized handling for canopen_402 devices. It facilitates interface abstraction with ros_control."
+DESCRIPTION="This package extends the canopen_chain_node with specialized handling for canope"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_motor_node/0.7.4-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/controller_manager
     ros-kinetic/canopen_chain_node
-    ros-kinetic/filters
+    ros-kinetic/controller_manager_msgs
     ros-kinetic/hardware_interface
     ros-kinetic/urdf
-    ros-kinetic/controller_manager
     ros-kinetic/joint_limits_interface
     ros-kinetic/canopen_402
-    ros-kinetic/controller_manager_msgs
+    ros-kinetic/filters
     dev-cpp/muParser
 "
 DEPEND="${RDEPEND}
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

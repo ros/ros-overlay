@@ -12,16 +12,16 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/homer_ptu_msgs
-    ros-kinetic/homer_robbie_architecture
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/roslib
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/homer_mapnav_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/homer_nav_libs
+    ros-kinetic/roslib
+    ros-kinetic/homer_mapnav_msgs
+    ros-kinetic/tf
+    ros-kinetic/homer_ptu_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/homer_robbie_architecture
+    ros-kinetic/nav_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -50,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

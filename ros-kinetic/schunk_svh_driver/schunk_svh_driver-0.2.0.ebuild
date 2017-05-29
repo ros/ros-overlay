@@ -12,17 +12,17 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
+    ros-kinetic/rqt_gui
     ros-kinetic/std_msgs
     ros-kinetic/xacro
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/rqt_gui_py
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
-    ros-kinetic/urdf
     ros-kinetic/fzi_icl_comm
+    ros-kinetic/urdf
+    ros-kinetic/sensor_msgs
     ros-kinetic/fzi_icl_core
-    ros-kinetic/rqt_gui
-    ros-kinetic/roscpp
+    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "
@@ -49,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

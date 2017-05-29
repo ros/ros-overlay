@@ -3,25 +3,25 @@
 
 EAPI=6
 
-DESCRIPTION="This stack contains all software necessary to build systems using both Orocos and ROS infrastructures"
+DESCRIPTION="This stack contains all software necessary to build systems using both Orocos an"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_ros_integration/2.9.0-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( GPL BSD LGPL GPL + runtime exception )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rtt_rospack
-    ros-kinetic/rtt_tf
     ros-kinetic/rtt_actionlib
-    ros-kinetic/rtt_rosparam
-    ros-kinetic/rtt_ros
-    ros-kinetic/rtt_rosnode
-    ros-kinetic/rtt_rosclock
-    ros-kinetic/rtt_rosdeployment
     ros-kinetic/rtt_dynamic_reconfigure
-    ros-kinetic/rtt_ros_msgs
+    ros-kinetic/rtt_rosdeployment
     ros-kinetic/rtt_roscomm
+    ros-kinetic/rtt_rosparam
+    ros-kinetic/rtt_rosclock
+    ros-kinetic/rtt_rospack
+    ros-kinetic/rtt_ros
+    ros-kinetic/rtt_tf
+    ros-kinetic/rtt_rosnode
+    ros-kinetic/rtt_ros_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

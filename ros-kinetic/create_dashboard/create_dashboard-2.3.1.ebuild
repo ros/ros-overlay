@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The Create dashboard is a RQT-based plug-in for visualising data from the Create and giving easy access
-    to basic functionalities."
+DESCRIPTION="The Create dashboard is a RQT-based plug-in for visualising data from the Create"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_create_desktop-release/archive/release/kinetic/create_dashboard/2.3.1-0.tar.gz"
 
@@ -13,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rqt_gui
     ros-kinetic/rqt_robot_dashboard
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/rqt_gui_py
     ros-kinetic/create_node
     ros-kinetic/rospy
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/rqt_gui
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

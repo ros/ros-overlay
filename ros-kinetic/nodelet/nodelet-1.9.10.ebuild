@@ -4,12 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The nodelet package is designed to provide a way to run multiple
-    algorithms in the same process with zero copy transport between
-    algorithms.
-
-    This package provides both the nodelet base class needed for
-    implementing a nodelet, as well as the NodeletLoader class used
-    for instantiating nodelets."
+    algorithms "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/nodelet_core-release/archive/release/kinetic/nodelet/1.9.10-0.tar.gz"
 
@@ -18,19 +13,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/message_runtime
-    ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
-    ros-kinetic/bondcpp
     ros-kinetic/roscpp
-    sys-apps/util-linux
+    ros-kinetic/std_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/bondcpp
+    ros-kinetic/message_runtime
+    ros-kinetic/rosconsole
     dev-libs/boost
+    sys-apps/util-linux
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rospy
-    ros-kinetic/message_generation
     ros-kinetic/cmake_modules
+    ros-kinetic/message_generation
+    ros-kinetic/rospy
 "
 
 SLOT="0/0"
@@ -55,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

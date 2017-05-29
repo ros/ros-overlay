@@ -3,10 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="simple_message defines a simple messaging connection and protocol for communicating 
-	with an industrial robot controller.  Additional handler and manager classes are 
-	included for handling connection limited systems.  This package is part of the ROS-Industrial 
-	program."
+DESCRIPTION="simple_message defines a simple messaging connection and protocol for communicat"
 HOMEPAGE="http://ros.org/wiki/simple_message"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.6.0-0.tar.gz"
 
@@ -43,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

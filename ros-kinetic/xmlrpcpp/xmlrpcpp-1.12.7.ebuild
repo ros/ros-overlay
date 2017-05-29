@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is
-    heavily modified from the package available on SourceForge in order to
-    support roscpp's threading model. As such, we are maintaining our
-    own fork."
+    he"
 HOMEPAGE="http://xmlrpcpp.sourceforge.net"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/xmlrpcpp/1.12.7-0.tar.gz"
 
@@ -42,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

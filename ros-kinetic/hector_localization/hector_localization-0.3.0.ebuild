@@ -3,13 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The hector_localization stack is a collection of packages, that provide the full 6DOF pose of a robot or platform.
-    It uses various sensor sources, which are fused using an Extended Kalman filter.
-
-    Acceleration and angular rates from an inertial measurement unit (IMU) serve as primary measurements.
-    The usage of other sensors is application-dependent. The hector_localization stack currently supports
-    GPS, magnetometer, barometric pressure sensors and other external sources that provide a geometry_msgs/PoseWithCovariance
-    message via the poseupdate topic."
+DESCRIPTION="The hector_localization stack is a collection of packages, that provide the full"
 HOMEPAGE="http://ros.org/wiki/hector_localization"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/hector_localization/0.3.0-0.tar.gz"
 
@@ -18,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_pose_estimation
-    ros-kinetic/message_to_tf
     ros-kinetic/hector_pose_estimation_core
+    ros-kinetic/message_to_tf
+    ros-kinetic/hector_pose_estimation
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

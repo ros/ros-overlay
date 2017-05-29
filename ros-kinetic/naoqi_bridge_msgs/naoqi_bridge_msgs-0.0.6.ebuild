@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The naoqi_bridge_msgs package provides custom messages for running Aldebaran's robot such as NAO and Pepper. See the packages nao_robot and pepper_robot for details."
+DESCRIPTION="The naoqi_bridge_msgs package provides custom messages for running Aldebaran's r"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/naoqi_bridge_msgs-release/archive/release/kinetic/naoqi_bridge_msgs/0.0.6-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/trajectory_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/genmsg
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

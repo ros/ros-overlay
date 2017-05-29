@@ -4,14 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides a set of simple math utilities to work
-        with angles. The utilities cover simple things like
-        normalizing an angle and conversion between degrees and
-        radians. But even if you're trying to calculate things like
-        the shortest angular distance between two joinst space
-        positions of your robot, but the joint motion is constrained
-        by joint limits, this package is what you need. The code in
-        this packge is stable and well tested. There are no plans for
-        major changes in the near future."
+        with angles"
 HOMEPAGE="http://ros.org/wiki/angles"
 SRC_URI="https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/kinetic/angles/1.9.11-0.tar.gz"
 
@@ -46,8 +39,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

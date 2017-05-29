@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>liuhua@orbbec.com</email>
+      <name>Tim Liu</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/astra_launch/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

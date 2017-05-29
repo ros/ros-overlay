@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package configures the move_base stack and makes use of the gmapping and amcl algorithms to
-    move the rb1_base robot"
+DESCRIPTION="This package configures the move_base stack and makes use of the gmapping and am"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_2dnav/1.0.2-0.tar.gz"
 
@@ -13,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/move_base
-    ros-kinetic/amcl
-    ros-kinetic/message_runtime
-    ros-kinetic/map_server
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/gmapping
-    ros-kinetic/rviz
     ros-kinetic/robot_pose_ekf
+    ros-kinetic/std_msgs
+    ros-kinetic/rviz
+    ros-kinetic/tf
+    ros-kinetic/message_runtime
+    ros-kinetic/gmapping
+    ros-kinetic/map_server
+    ros-kinetic/amcl
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "
@@ -48,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

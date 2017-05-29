@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The ROS packages in this repository were created to provide an improved
-    alternative Inverse Kinematics solver to the popular inverse Jacobian
-    methods in KDL.  TRAC-IK handles joint-limited chains better than KDL
-    without increasing solve time."
+    alte"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik/1.4.5-1.tar.gz"
 
@@ -16,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/trac_ik_kinematics_plugin
-    ros-kinetic/trac_ik_examples
     ros-kinetic/trac_ik_lib
+    ros-kinetic/trac_ik_examples
 "
 DEPEND="${RDEPEND}
 "
@@ -44,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="rosserial_tivac package provides the required hardware definitions for compiling rosserial_client targets for TivaC Launchpad 
-  evaluation boards."
+DESCRIPTION="rosserial_tivac package provides the required hardware definitions for compiling"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_tivac/0.7.6-0.tar.gz"
 
@@ -41,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

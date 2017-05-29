@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>denis.dillenberger@gmail.com</email>
+      <name>Denis Dillenberger</name>
+    </maintainer>
+    <bugs-to>https://github.com/dillenberger/pepperl_fuchs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

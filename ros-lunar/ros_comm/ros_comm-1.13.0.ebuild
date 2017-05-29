@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/rosservice
-    ros-lunar/message_filters
-    ros-lunar/rosgraph_msgs
-    ros-lunar/rosconsole
-    ros-lunar/rosmaster
-    ros-lunar/topic_tools
-    ros-lunar/rosout
     ros-lunar/rosparam
-    ros-lunar/rosnode
+    ros-lunar/roslaunch
+    ros-lunar/ros
+    ros-lunar/rosconsole
+    ros-lunar/roswtf
+    ros-lunar/rosmaster
+    ros-lunar/rosbag
+    ros-lunar/rosout
+    ros-lunar/rosmsg
+    ros-lunar/roslisp
+    ros-lunar/rosgraph_msgs
+    ros-lunar/roscpp
     ros-lunar/rosgraph
+    ros-lunar/rospy
+    ros-lunar/xmlrpcpp
+    ros-lunar/std_srvs
     ros-lunar/rostest
     ros-lunar/rostopic
-    ros-lunar/std_srvs
-    ros-lunar/roscpp
-    ros-lunar/rosbag
-    ros-lunar/roslaunch
-    ros-lunar/roslisp
-    ros-lunar/xmlrpcpp
-    ros-lunar/rosmsg
-    ros-lunar/roswtf
-    ros-lunar/ros
+    ros-lunar/rosnode
+    ros-lunar/topic_tools
+    ros-lunar/rosservice
+    ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
 "
@@ -61,7 +61,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

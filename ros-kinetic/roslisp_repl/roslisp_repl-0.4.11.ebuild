@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides a script that launches Emacs with Slime (the
-    Superior Lisp Interaction Mode) ready for Lisp development and
-    roslisp."
+    Superior "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/kinetic/roslisp_repl/0.4.11-0.tar.gz"
 
@@ -14,9 +13,9 @@ LICENSE="Public domain"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosemacs
     ros-kinetic/slime_wrapper
     ros-kinetic/slime_ros
-    ros-kinetic/rosemacs
     ros-kinetic/roslisp
     dev-lisp/sbcl
 "
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

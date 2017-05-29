@@ -7,23 +7,23 @@ DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.19.0-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/mavros
-    ros-kinetic/std_msgs
-    ros-kinetic/eigen_conversions
-    ros-kinetic/mavros_extras
     ros-kinetic/roscpp
-    ros-kinetic/control_toolbox
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/eigen_conversions
+    ros-kinetic/control_toolbox
     ros-kinetic/tf2_ros
+    ros-kinetic/mavros_extras
+    ros-kinetic/mavros
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/angles
     ros-kinetic/cmake_modules
+    ros-kinetic/angles
 "
 
 SLOT="0/0"
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

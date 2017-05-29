@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This node does pose estimation for detected fiducials (marker_msgs/FiducialDetection.msg)"
+DESCRIPTION="This node does pose estimation for detected fiducials (marker_msgs/FiducialDetec"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_marker_pose_estimation/0.0.7-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/std_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/rospy
-    ros-kinetic/image_geometry
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/marker_msgs
+    ros-kinetic/image_geometry
     ros-kinetic/tf
+    ros-kinetic/cv_bridge
+    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

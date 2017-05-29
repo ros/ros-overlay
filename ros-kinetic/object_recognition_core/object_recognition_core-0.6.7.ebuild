@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="object_recognition_core contains tools to launch several recognition pipelines, train objects, store models ..."
+DESCRIPTION="object_recognition_core contains tools to launch several recognition pipelines, "
 HOMEPAGE="http://wg-perception.github.io/object_recognition_core/"
 SRC_URI="https://github.com/ros-gbp/object_recognition_core-release/archive/release/kinetic/object_recognition_core/0.6.7-0.tar.gz"
 
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/ecto
     ros-kinetic/ecto_image_pipeline
     ros-kinetic/sensor_msgs
-    ros-kinetic/ecto
     dev-libs/boost
-    net-misc/curl
     dev-db/couchdb
+    net-misc/curl
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

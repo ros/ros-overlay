@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a class for converting from a 2D laser scan as defined by
-    sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
-    or sensor_msgs/PointCloud2. In particular, it contains functionality to account
-    for the skew resulting from moving robots or tilting laser scanners."
+"
 HOMEPAGE="http://ros.org/wiki/laser_geometry"
 SRC_URI="https://github.com/ros-gbp/laser_geometry-release/archive/release/kinetic/laser_geometry/1.6.4-0.tar.gz"
 
@@ -15,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/angles
     ros-kinetic/roscpp
+    ros-kinetic/angles
     ros-kinetic/tf
-    dev-python/numpy
+    ros-kinetic/sensor_msgs
     dev-libs/boost
+    dev-python/numpy
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>marioprats@gmail.com</email>
+      <name>Mario Prats</name>
+    </maintainer>
+    <bugs-to>https://github.com/uji-ros-pkg/uwsim_osgworks/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

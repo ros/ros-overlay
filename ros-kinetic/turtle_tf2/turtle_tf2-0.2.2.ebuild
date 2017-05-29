@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="turtle_tf2 demonstrates how to write a tf2 broadcaster and listener with the turtlesim. The tutle_tf2_listener commands turtle2 to follow turtle1 around as you drive turtle1 using the keyboard."
+DESCRIPTION="turtle_tf2 demonstrates how to write a tf2 broadcaster and listener with the tur"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry_tutorials-release/archive/release/kinetic/turtle_tf2/0.2.2-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/tf2_ros
-    ros-kinetic/tf2
-    ros-kinetic/std_msgs
-    ros-kinetic/turtlesim
     ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/turtlesim
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

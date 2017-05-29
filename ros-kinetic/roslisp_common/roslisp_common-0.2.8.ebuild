@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Common libraries to control ROS based robots. This stack contains
-    an implementation of actionlib (client and server) in Common Lisp,
-    a transformation library and an implementation of tf in Common
-    Lisp."
+    an impleme"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.8-0.tar.gz"
 
@@ -15,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cl_tf2
-    ros-kinetic/cl_transforms
-    ros-kinetic/cl_transforms_stamped
     ros-kinetic/cl_utils
-    ros-kinetic/actionlib_lisp
     ros-kinetic/cl_urdf
-    ros-kinetic/roslisp_utilities
     ros-kinetic/cl_tf
+    ros-kinetic/cl_transforms
+    ros-kinetic/roslisp_utilities
+    ros-kinetic/actionlib_lisp
+    ros-kinetic/cl_transforms_stamped
+    ros-kinetic/cl_tf2
 "
 DEPEND="${RDEPEND}
 "
@@ -49,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

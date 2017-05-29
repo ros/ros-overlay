@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Rosbridge provides a JSON API to ROS functionality for non-ROS programs.
-    There are a variety of front ends that interface with rosbridge, including
-    a WebSocket server for web browsers to interact with.
-
-    Rosbridge_suite is a meta-package containing rosbridge, various front end
-    packages for rosbridge like a WebSocket package, and helper packages."
+    The"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_suite/0.7.17-0.tar.gz"
 
@@ -17,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosbridge_server
     ros-kinetic/rosbridge_library
     ros-kinetic/rosapi
-    ros-kinetic/rosbridge_server
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

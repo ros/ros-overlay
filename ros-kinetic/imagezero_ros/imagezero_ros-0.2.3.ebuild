@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A library that provides convenient methods for manipulating ROS images with ImageZero"
+DESCRIPTION="A library that provides convenient methods for manipulating ROS images with Imag"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_ros/0.2.3-0.tar.gz"
 
@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_runtime
-    ros-kinetic/cv_bridge
     ros-kinetic/sensor_msgs
     ros-kinetic/imagezero
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roscpp
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

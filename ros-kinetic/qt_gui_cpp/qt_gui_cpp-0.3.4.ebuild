@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindings for every generator available.
-    At least one specific binding must be available in order to use C++-plugins."
+DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_cpp/0.3.4-0.tar.gz"
 
@@ -13,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
     ros-kinetic/qt_gui
+    ros-kinetic/pluginlib
 "
 DEPEND="${RDEPEND}
     ros-kinetic/python_qt_binding
-    dev-qt/qtcore
-    dev-qt/qtcore
     virtual/pkgconfig
+    dev-qt/qtcore
     dev-libs/tinyxml
+    dev-qt/qtcore
 "
 
 SLOT="0/0"
@@ -46,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

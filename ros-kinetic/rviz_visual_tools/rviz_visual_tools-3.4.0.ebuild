@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Utility functions for displaying and debugging data in Rviz via published markers"
+DESCRIPTION="Utility functions for displaying and debugging data in Rviz via published marker"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/rviz_visual_tools-release/archive/release/kinetic/rviz_visual_tools/3.4.0-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/eigen_conversions
-    ros-kinetic/rviz
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/graph_msgs
-    ros-kinetic/roslint
     ros-kinetic/roscpp
     ros-kinetic/geometry_msgs
     ros-kinetic/tf_conversions
+    ros-kinetic/eigen_conversions
+    ros-kinetic/std_msgs
+    ros-kinetic/graph_msgs
+    ros-kinetic/rviz
+    ros-kinetic/sensor_msgs
     ros-kinetic/eigen_stl_containers
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/roslint
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -50,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

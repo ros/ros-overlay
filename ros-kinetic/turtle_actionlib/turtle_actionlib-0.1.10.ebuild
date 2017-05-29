@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="turtle_actionlib demonstrates how to write an action server and client with the turtlesim. The shape_server provides and action interface for drawing regular polygons with the turtlesim."
+DESCRIPTION="turtle_actionlib demonstrates how to write an action server and client with the "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/turtle_actionlib/0.1.10-0.tar.gz"
 
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/rosconsole
-    ros-kinetic/angles
-    ros-kinetic/actionlib
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/angles
     ros-kinetic/geometry_msgs
     ros-kinetic/turtlesim
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/rosconsole
+    ros-kinetic/actionlib_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

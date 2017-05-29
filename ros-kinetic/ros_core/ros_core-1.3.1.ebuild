@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts."
+DESCRIPTION="A metapackage to aggregate the packages required to use publish / subscribe, ser"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/ros_core/1.3.1-0.tar.gz"
 
@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/genlisp
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/roscpp_core
-    ros-kinetic/gennodejs
-    ros-kinetic/gencpp
-    ros-kinetic/rospack
     ros-kinetic/rosconsole_bridge
-    ros-kinetic/rosbag_migration_rule
-    ros-kinetic/std_srvs
-    ros-kinetic/roslisp
-    ros-kinetic/catkin
-    ros-kinetic/genpy
-    ros-kinetic/ros
-    ros-kinetic/ros_comm
+    ros-kinetic/std_msgs
     ros-kinetic/cmake_modules
-    ros-kinetic/geneus
-    ros-kinetic/genmsg
+    ros-kinetic/std_srvs
     ros-kinetic/common_msgs
+    ros-kinetic/genmsg
+    ros-kinetic/genpy
+    ros-kinetic/rospack
+    ros-kinetic/genlisp
+    ros-kinetic/geneus
+    ros-kinetic/gennodejs
+    ros-kinetic/message_runtime
+    ros-kinetic/ros_comm
+    ros-kinetic/message_generation
+    ros-kinetic/catkin
+    ros-kinetic/gencpp
+    ros-kinetic/ros
+    ros-kinetic/rosbag_migration_rule
+    ros-kinetic/roscpp_core
+    ros-kinetic/roslisp
+    ros-kinetic/rosgraph_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -59,8 +59,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

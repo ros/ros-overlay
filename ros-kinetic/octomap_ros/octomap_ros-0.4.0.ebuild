@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="octomap_ros provides conversion functions between ROS and OctoMap's native types.
-    This enables a convenvient use of the octomap package in ROS."
+DESCRIPTION="octomap_ros provides conversion functions between ROS and OctoMap's native types"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_ros-release/archive/release/kinetic/octomap_ros/0.4.0-0.tar.gz"
 
@@ -13,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf
-    ros-kinetic/octomap_msgs
     ros-kinetic/sensor_msgs
     ros-kinetic/octomap
+    ros-kinetic/tf
+    ros-kinetic/octomap_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
@@ -44,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

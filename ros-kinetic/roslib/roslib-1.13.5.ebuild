@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Base dependencies and support libraries for ROS.
-    roslib contains many of the common data structures and tools that are shared across ROS client library implementations."
+    roslib contains many of the"
 HOMEPAGE="http://ros.org/wiki/roslib"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/roslib/1.13.5-0.tar.gz"
 
@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospack
     ros-kinetic/catkin
+    ros-kinetic/rospack
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/yocs_virtual_sensor
+    ros-kinetic/yocs_safety_controller
+    ros-kinetic/yocs_waypoints_navi
+    ros-kinetic/yocs_joyop
+    ros-kinetic/yocs_math_toolkit
+    ros-kinetic/yocs_controllers
+    ros-kinetic/yocs_keyop
+    ros-kinetic/yocs_rapps
     ros-kinetic/yocs_velocity_smoother
     ros-kinetic/yocs_cmd_vel_mux
     ros-kinetic/yocs_diff_drive_pose_controller
-    ros-kinetic/yocs_waypoints_navi
-    ros-kinetic/yocs_math_toolkit
-    ros-kinetic/yocs_virtual_sensor
-    ros-kinetic/yocs_joyop
-    ros-kinetic/yocs_keyop
-    ros-kinetic/yocs_safety_controller
-    ros-kinetic/yocs_controllers
-    ros-kinetic/yocs_rapps
 "
 DEPEND="${RDEPEND}
 "
@@ -49,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

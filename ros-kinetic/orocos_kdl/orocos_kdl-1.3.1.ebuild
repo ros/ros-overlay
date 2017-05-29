@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a recent version of the Kinematics and Dynamics
-    Library (KDL), distributed by the Orocos Project."
+    Librar"
 HOMEPAGE="http://wiki.ros.org/orocos_kdl"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.1-0.tar.gz"
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
-    dev-cpp/eigen
     virtual/pkgconfig
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
 "
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

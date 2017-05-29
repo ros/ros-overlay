@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Common tools for image based pipelines. Includes stereo and mono camera drivers, rectification, image sinks, calibration, etc.."
+DESCRIPTION="Common tools for image based pipelines. Includes stereo and mono camera drivers,"
 HOMEPAGE="http://plasmodic.github.io/ecto_image_pipeline/"
 SRC_URI="https://github.com/ros-gbp/ecto_image_pipeline-release/archive/release/kinetic/ecto_image_pipeline/0.5.7-0.tar.gz"
 
@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecto_opencv
-    ros-kinetic/opencv_candidate
     ros-kinetic/ecto_ros
     ros-kinetic/ecto
+    ros-kinetic/ecto_opencv
+    ros-kinetic/opencv_candidate
     dev-libs/boost
     dev-cpp/eigen
 "
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

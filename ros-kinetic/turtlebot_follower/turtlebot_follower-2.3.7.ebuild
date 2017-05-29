@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Follower for the turtlebot. Follows humans and robots around by following the centroid of a box points in front of the turtlebot."
+DESCRIPTION="Follower for the turtlebot. Follows humans and robots around by following the ce"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_follower/2.3.7-0.tar.gz"
 
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/depth_image_proc
-    ros-kinetic/turtlebot_teleop
-    ros-kinetic/topic_tools
     ros-kinetic/roscpp
     ros-kinetic/turtlebot_bringup
-    ros-kinetic/nodelet
+    ros-kinetic/turtlebot_teleop
     ros-kinetic/turtlebot_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/depth_image_proc
+    ros-kinetic/topic_tools
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

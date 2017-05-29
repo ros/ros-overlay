@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The laser_ortho_projector package calculates orthogonal projections of LaserScan messages."
+DESCRIPTION="The laser_ortho_projector package calculates orthogonal projections of LaserScan"
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_ortho_projector/0.3.2-0.tar.gz"
 
@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/pcl_conversions
     ros-kinetic/roscpp
-    ros-kinetic/message_filters
     ros-kinetic/geometry_msgs
+    ros-kinetic/pcl_ros
     ros-kinetic/nodelet
     ros-kinetic/tf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/pcl_conversions
+    ros-kinetic/message_filters
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

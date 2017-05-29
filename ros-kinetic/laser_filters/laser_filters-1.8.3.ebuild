@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Assorted filters designed to operate on 2D planar laser scanners,
-    which use the sensor_msgs/LaserScan type."
+    which use "
 HOMEPAGE="http://ros.org/wiki/laser_filters"
 SRC_URI="https://github.com/ros-gbp/laser_filters-release/archive/release/kinetic/laser_filters/1.8.3-0.tar.gz"
 
@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_filters
+    ros-kinetic/roscpp
+    ros-kinetic/angles
+    ros-kinetic/pluginlib
+    ros-kinetic/tf
     ros-kinetic/sensor_msgs
     ros-kinetic/laser_geometry
     ros-kinetic/filters
-    ros-kinetic/tf
-    ros-kinetic/pluginlib
-    ros-kinetic/roscpp
-    ros-kinetic/angles
+    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

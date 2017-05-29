@@ -12,21 +12,21 @@ LICENSE="FZI all rights reserved"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/xacro
-    ros-kinetic/fzi_icl_can
-    ros-kinetic/hardware_interface
-    ros-kinetic/sensor_msgs
-    ros-kinetic/urdf
-    ros-kinetic/actionlib
-    ros-kinetic/fzi_icl_core
     ros-kinetic/controller_manager
-    ros-kinetic/joint_limits_interface
-    ros-kinetic/std_srvs
     ros-kinetic/roscpp
+    ros-kinetic/xacro
+    ros-kinetic/std_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/fzi_icl_can
+    ros-kinetic/std_srvs
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/urdf
+    ros-kinetic/sensor_msgs
+    ros-kinetic/robot_state_publisher
     ros-kinetic/control_msgs
+    ros-kinetic/fzi_icl_core
+    ros-kinetic/joint_limits_interface
     ros-kinetic/ros_controllers
 "
 DEPEND="${RDEPEND}
@@ -55,8 +55,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

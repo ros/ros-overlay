@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Integration test suite based on roslaunch that is compatible with xUnit frameworks."
+DESCRIPTION="Integration test suite based on roslaunch that is compatible with xUnit framewor"
 HOMEPAGE="http://ros.org/wiki/rostest"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rostest/1.12.7-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
+    ros-kinetic/rosmaster
     ros-kinetic/rosunit
     ros-kinetic/roslaunch
     ros-kinetic/rosgraph
-    ros-kinetic/rosmaster
+    ros-kinetic/rospy
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

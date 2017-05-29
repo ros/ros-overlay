@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This contains CvBridge, which converts between ROS
-    Image messages and OpenCV images."
+    Image messages and OpenCV"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/cv_bridge/1.12.4-0.tar.gz"
 
@@ -16,8 +16,8 @@ RDEPEND="
     ros-kinetic/rosconsole
     ros-kinetic/sensor_msgs
     ros-kinetic/opencv3
-    dev-lang/python
     dev-libs/boost
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The manipulator_h_base_module_msgs package
-    This package includes ROS messages and services for manipulator_h_base_module_msgs"
+    This package includes ROS message"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_base_module_msgs/0.2.2-0.tar.gz"
 
@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

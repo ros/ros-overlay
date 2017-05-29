@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize
-  ROS messages which type is unknown at compilation time."
+  RO"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
 SRC_URI="https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/0.5.1-0.tar.gz"
 
@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/roscpp_serialization
+    ros-kinetic/roscpp
+    ros-kinetic/rosbag_storage
     ros-kinetic/rosbag
     ros-kinetic/topic_tools
     ros-kinetic/rostime
-    ros-kinetic/rosbag_storage
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

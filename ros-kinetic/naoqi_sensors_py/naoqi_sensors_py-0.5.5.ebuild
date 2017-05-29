@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="ROS driver for miscellaneous sensors on NAO.
-    Python bindings for camera, sonar and octomap
-    C++: bindings for camera only (requires NAOqi to build)"
+    Python bindings for camera, son"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_sensors_py/0.5.5-0.tar.gz"
 
@@ -14,13 +13,13 @@ LICENSE="LGPL and Apache2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/camera_info_manager_py
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/naoqi_driver_py
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
     ros-kinetic/camera_info_manager
     ros-kinetic/octomap
+    ros-kinetic/sensor_msgs
+    ros-kinetic/camera_info_manager_py
+    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/naoqi_driver_py
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -49,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

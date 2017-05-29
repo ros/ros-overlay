@@ -3,10 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The Industrial deprecated package contains nodes, launch files, etc... that are slated for 
-  deprecation.  This package is the last place something will end up before being deleted.  
-  If you are missing a package/node and find it's contents here, then you should consider 
-  a replacement."
+DESCRIPTION="The Industrial deprecated package contains nodes, launch files, etc... that are "
 HOMEPAGE="http://ros.org/wiki/industrial_deprecated"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_deprecated/0.6.0-0.tar.gz"
 
@@ -41,8 +38,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

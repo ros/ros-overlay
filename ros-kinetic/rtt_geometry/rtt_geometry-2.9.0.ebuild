@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This metapackage contains tools for integrating the Orocos Kinematics and
-    Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit
-    (RTT)."
+    Dy"
 HOMEPAGE="http://www.orocos.org/"
 SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/rtt_geometry/2.9.0-0.tar.gz"
 
@@ -14,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/eigen_typekit
     ros-kinetic/kdl_typekit
+    ros-kinetic/eigen_typekit
 "
 DEPEND="${RDEPEND}
 "
@@ -42,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

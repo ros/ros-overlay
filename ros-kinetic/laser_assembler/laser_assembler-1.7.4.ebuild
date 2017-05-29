@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Provides nodes to assemble point clouds from either LaserScan or PointCloud messages"
+DESCRIPTION="Provides nodes to assemble point clouds from either LaserScan or PointCloud mess"
 HOMEPAGE="http://ros.org/wiki/laser_assembler"
 SRC_URI="https://github.com/ros-gbp/laser_assembler-release/archive/release/kinetic/laser_assembler/1.7.4-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/laser_geometry
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
     ros-kinetic/pluginlib
-    ros-kinetic/message_filters
-    ros-kinetic/filters
     ros-kinetic/tf
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
+    ros-kinetic/laser_geometry
+    ros-kinetic/filters
+    ros-kinetic/message_filters
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/rostest
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Neato XV-11 Laser Driver. This driver works with the laser when it is removed from the XV-11 Robot as opposed to reading scans from the Neato's USB port."
+DESCRIPTION="Neato XV-11 Laser Driver. This driver works with the laser when it is removed fr"
 HOMEPAGE="http://ros.org/wiki/xv_11_laser_driver"
 SRC_URI="https://github.com/rohbotics/xv_11_laser_driver-release/archive/release/kinetic/xv_11_laser_driver/0.3.0-0.tar.gz"
 
@@ -15,8 +15,8 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
 "
 
 SLOT="0/0"
@@ -41,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

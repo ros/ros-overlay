@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A set of plugins for publishing and subscribing to sensor_msgs/Image topics
-    in representations other than raw pixel data. For example, for viewing a
-    stream of images off-robot, a video codec will give much lower bandwidth
-    and latency. For low frame rate tranport of high-definition images, you
-    might prefer sending them as JPEG or PNG-compressed form."
+    "
 HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
 SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/release/kinetic/image_transport_plugins/1.9.5-0.tar.gz"
 
@@ -16,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/compressed_image_transport
     ros-kinetic/theora_image_transport
     ros-kinetic/compressed_depth_image_transport
+    ros-kinetic/compressed_image_transport
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

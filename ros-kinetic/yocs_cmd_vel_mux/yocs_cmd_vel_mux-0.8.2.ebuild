@@ -3,10 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages from several topics,
-     allowing one topic at a time to command the robot, based on priorities. It also deallocates current
-     allowed topic if no messages are received after a configured timeout. All topics, together with their
-     priority and timeout are configured through a YAML file, that can be reload at runtime."
+DESCRIPTION="A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_cmd_vel_mux/0.8.2-0.tar.gz"
 
@@ -15,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
-    ros-kinetic/pluginlib
     ros-kinetic/geometry_msgs
+    ros-kinetic/pluginlib
     ros-kinetic/nodelet
+    ros-kinetic/dynamic_reconfigure
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
@@ -47,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

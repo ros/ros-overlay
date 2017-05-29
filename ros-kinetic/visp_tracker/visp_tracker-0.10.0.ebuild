@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Wraps the ViSP moving edge tracker provided by the ViSP visual
-    servoing library into a ROS package.
-
-    This computer vision algorithm computes the pose (i.e. position
-    and orientation) of an object in an image. It is fast enough to
-    allow object online tracking using a camera."
+    servoing libr"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_tracker/0.10.0-0.tar.gz"
 
@@ -17,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/message_generation
-    ros-kinetic/image_transport
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
-    ros-kinetic/image_proc
-    ros-kinetic/resource_retriever
-    ros-kinetic/visp
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/visp
     ros-kinetic/nodelet
     ros-kinetic/tf
+    ros-kinetic/message_runtime
+    ros-kinetic/message_generation
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/image_proc
+    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/resource_retriever
 "
 DEPEND="${RDEPEND}
 "
@@ -57,8 +53,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

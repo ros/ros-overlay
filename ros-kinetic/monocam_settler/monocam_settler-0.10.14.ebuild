@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Listens on a ImageFeatures topic, and waits for the data to settle.
-     This package is experimental and unstable.
-     Expect its APIs to change."
+     This pa"
 HOMEPAGE="http://www.ros.org/wiki/monocam_settler"
 SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/monocam_settler/0.10.14-0.tar.gz"
 
@@ -16,10 +15,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/roscpp_serialization
     ros-kinetic/std_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/rosconsole
     ros-kinetic/actionlib
     ros-kinetic/settlerlib
+    ros-kinetic/rosconsole
+    ros-kinetic/actionlib_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

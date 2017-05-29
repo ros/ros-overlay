@@ -5,12 +5,7 @@ EAPI=6
 
 DESCRIPTION="iRobot Create ROS driver node
     
-    ROS bindings for the Create/Roomba driver.
-    
-    This is based on otl_roomba driver by OTL, ported to use
-    create_driver's implementation instead. 
-    This also contains a 'bonus' feature from the turtlebot 
-    driver by Xuwen Cao and Morgan Quigley."
+    ROS bindings for the Create/Roomba driver"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_create-release/archive/release/kinetic/create_node/2.3.1-0.tar.gz"
 
@@ -19,15 +14,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/nav_msgs
-    ros-kinetic/create_driver
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/message_runtime
-    ros-kinetic/tf
-    ros-kinetic/python_orocos_kdl
     ros-kinetic/diagnostic_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/tf
+    ros-kinetic/message_runtime
+    ros-kinetic/python_orocos_kdl
+    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nav_msgs
+    ros-kinetic/create_driver
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -55,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

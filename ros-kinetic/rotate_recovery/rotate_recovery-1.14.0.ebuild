@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts to clear space by performing a 360 degree rotation of the robot."
+DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
 HOMEPAGE="http://wiki.ros.org/rotate_recovery"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.0-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_core
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
     ros-kinetic/pluginlib
     ros-kinetic/tf
+    ros-kinetic/nav_core
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

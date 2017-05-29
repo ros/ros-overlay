@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Industrial utils is a library package that captures common funcitonality for the ROS-Industrial distribution."
+DESCRIPTION="Industrial utils is a library package that captures common funcitonality for the"
 HOMEPAGE="http://ros.org/wiki/industrial_utils"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_utils/0.6.0-0.tar.gz"
 
@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
     ros-kinetic/urdf
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -40,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

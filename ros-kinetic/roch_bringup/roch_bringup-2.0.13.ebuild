@@ -12,38 +12,38 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_description
-    ros-kinetic/roch_base
-    ros-kinetic/rospy
-    ros-kinetic/depthimage_to_laserscan
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/nmea_navsat_driver
-    ros-kinetic/astra_launch
-    ros-kinetic/zeroconf_avahi
-    ros-kinetic/rocon_interaction_msgs
-    ros-kinetic/roch_control
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/rocon_bubble_icons
+    ros-kinetic/microstrain_3dmgx2_imu
+    ros-kinetic/rgbd_launch
     ros-kinetic/openni2_launch
-    ros-kinetic/tf
+    ros-kinetic/nodelet
     ros-kinetic/realsense_camera
     ros-kinetic/robot_localization
-    ros-kinetic/roch_sensorpc
-    ros-kinetic/rgbd_launch
-    ros-kinetic/nmea_comms
-    ros-kinetic/robot_upstart
-    ros-kinetic/microstrain_3dmgx2_imu
-    ros-kinetic/rplidar_ros
-    ros-kinetic/roch_capabilities
-    ros-kinetic/freenect_launch
+    ros-kinetic/laser_filters
+    ros-kinetic/zeroconf_avahi
+    ros-kinetic/rocon_interaction_msgs
+    ros-kinetic/roch_base
+    ros-kinetic/tf
+    ros-kinetic/rocon_bubble_icons
     ros-kinetic/imu_transformer
     ros-kinetic/tf2_ros
-    ros-kinetic/laser_filters
-    ros-kinetic/rocon_app_manager
+    ros-kinetic/astra_launch
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/depthimage_to_laserscan
+    ros-kinetic/nmea_navsat_driver
+    ros-kinetic/roch_capabilities
+    ros-kinetic/rplidar_ros
+    ros-kinetic/nmea_comms
+    ros-kinetic/roch_control
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/rospy
+    ros-kinetic/robot_upstart
     ros-kinetic/imu_filter_madgwick
     ros-kinetic/rocon_app_manager_msgs
+    ros-kinetic/roch_description
+    ros-kinetic/rocon_app_manager
+    ros-kinetic/roch_sensorpc
     ros-kinetic/roch_safety_controller
-    ros-kinetic/nodelet
+    ros-kinetic/freenect_launch
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
@@ -72,8 +72,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package provides an RTT plugin to access different time measurements on a realtime host."
+DESCRIPTION="This package provides an RTT plugin to access different time measurements on a r"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosclock/2.9.0-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rtt
-    ros-kinetic/ocl
-    ros-kinetic/rtt_rosgraph_msgs
-    ros-kinetic/rospack
-    ros-kinetic/rostime
     ros-kinetic/roscpp
     ros-kinetic/cmake_modules
+    ros-kinetic/rtt_rosgraph_msgs
+    ros-kinetic/rospack
+    ros-kinetic/rtt
+    ros-kinetic/ocl
+    ros-kinetic/rostime
     dev-libs/libxml2
 "
 DEPEND="${RDEPEND}
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

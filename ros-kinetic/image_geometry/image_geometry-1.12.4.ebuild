@@ -3,10 +3,8 @@
 
 EAPI=6
 
-DESCRIPTION="`image_geometry` contains C++ and Python libraries for interpreting images
-    geometrically. It interfaces the calibration parameters in sensor_msgs/CameraInfo
-    messages with OpenCV functions such as image rectification, much as cv_bridge
-    interfaces ROS sensor_msgs/Image with OpenCV data types."
+DESCRIPTION="image_geometry contains C++ and Python libraries for interpreting images
+    geo"
 HOMEPAGE="http://www.ros.org/wiki/image_geometry"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/image_geometry/1.12.4-0.tar.gz"
 
@@ -43,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

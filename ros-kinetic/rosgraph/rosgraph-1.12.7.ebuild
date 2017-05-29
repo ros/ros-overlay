@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="rosgraph contains the rosgraph command-line tool, which prints
-    information about the ROS Computation Graph. It also provides an
-    internal library that can be used by graphical tools."
+    information a"
 HOMEPAGE="http://ros.org/wiki/rosgraph"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosgraph/1.12.7-0.tar.gz"
 
@@ -42,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

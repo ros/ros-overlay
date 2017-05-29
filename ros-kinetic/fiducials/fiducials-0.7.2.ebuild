@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/fiducial_pose
-    ros-kinetic/fiducial_slam
-    ros-kinetic/fiducial_detect
-    ros-kinetic/aruco_detect
-    ros-kinetic/fiducial_msgs
     ros-kinetic/fiducial_lib
+    ros-kinetic/aruco_detect
+    ros-kinetic/fiducial_pose
+    ros-kinetic/fiducial_detect
+    ros-kinetic/fiducial_msgs
+    ros-kinetic/fiducial_slam
 "
 DEPEND="${RDEPEND}
 "
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

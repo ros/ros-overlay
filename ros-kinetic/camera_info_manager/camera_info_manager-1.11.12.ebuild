@@ -4,9 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package provides a C++ interface for camera calibration
-     information.  It provides CameraInfo, and handles SetCameraInfo
-     service requests, saving and restoring the camera calibration
-     data."
+     information.  "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/image_common-release/archive/release/kinetic/camera_info_manager/1.11.12-0.tar.gz"
 
@@ -15,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/image_transport
-    ros-kinetic/roslib
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/camera_calibration_parsers
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -48,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

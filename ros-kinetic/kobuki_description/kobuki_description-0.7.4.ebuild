@@ -4,12 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Description of the Kobuki model.
-      Provides the model description of Kobuki for simulation and visualisation. The files in this 
-      package are parsed and used by a variety of other components. Most users will not interact directly
-      with this package.
-      
-      WARNING: This package is disabled because it cannot be catkinized by now, as xacro dependency is not
-      catkin still. In the interim we use a unary pre-catkin stack named kobuki_description."
+      Provides the model description of Kobuki "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_description/0.7.4-0.tar.gz"
 
@@ -18,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
     ros-kinetic/urdf
+    ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
 "
@@ -46,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Parse a multiple poses from yaml and provide as topic and service. This package is highly inspired by yocs_waypoints_navi"
+DESCRIPTION="Parse a multiple poses from yaml and provide as topic and service. This package "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_waypoint_provider/0.8.2-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
+    ros-kinetic/geometry_msgs
+    ros-kinetic/visualization_msgs
     ros-kinetic/yocs_msgs
     dev-cpp/yaml-cpp
 "
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

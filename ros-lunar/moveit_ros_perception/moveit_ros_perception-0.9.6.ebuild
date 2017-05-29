@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/tf_conversions
-    ros-lunar/moveit_msgs
-    ros-lunar/tf
+    ros-lunar/roscpp
     ros-lunar/moveit_core
+    ros-lunar/tf_conversions
+    ros-lunar/pluginlib
+    ros-lunar/tf
+    ros-lunar/cv_bridge
     ros-lunar/urdf
     ros-lunar/image_transport
-    ros-lunar/pluginlib
-    ros-lunar/cv_bridge
-    ros-lunar/rosconsole
-    ros-lunar/roscpp
     ros-lunar/octomap
+    ros-lunar/sensor_msgs
+    ros-lunar/moveit_msgs
+    ros-lunar/rosconsole
     ros-lunar/message_filters
     media-libs/glew
     media-libs/freeglut
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

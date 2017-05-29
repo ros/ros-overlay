@@ -4,37 +4,37 @@
 EAPI=6
 
 DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS
-    with proxy for Ground Control Station."
+    with proxy for Groun"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros/0.19.0-0.tar.gz"
 
-LICENSE="UNKNOWN"
+LICENSE="||( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/mavlink
-    ros-kinetic/libmavconn
-    ros-kinetic/eigen_conversions
-    ros-kinetic/std_msgs
-    ros-kinetic/rospy
-    ros-kinetic/sensor_msgs
     ros-kinetic/rosconsole_bridge
-    ros-kinetic/mavros_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/nav_msgs
-    ros-kinetic/diagnostic_msgs
     ros-kinetic/roscpp
-    ros-kinetic/std_srvs
-    ros-kinetic/pluginlib
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/eigen_conversions
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/libmavconn
     ros-kinetic/geometry_msgs
+    ros-kinetic/mavros_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/mavlink
+    ros-kinetic/pluginlib
+    ros-kinetic/std_srvs
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf2_ros
+    ros-kinetic/rospy
+    ros-kinetic/nav_msgs
     dev-libs/boost
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/angles
     ros-kinetic/cmake_modules
+    ros-kinetic/angles
 "
 
 SLOT="0/0"
@@ -59,8 +59,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

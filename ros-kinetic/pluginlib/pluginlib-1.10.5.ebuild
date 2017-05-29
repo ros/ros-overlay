@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
-    To work, these tools require plugin providers to register their plugins in the package.xml of their package."
+DESCRIPTION="The pluginlib package provides tools for writing and dynamically loading plugins"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/pluginlib-release/archive/release/kinetic/pluginlib/1.10.5-0.tar.gz"
 
@@ -13,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslib
     ros-kinetic/rosconsole
+    ros-kinetic/roslib
     ros-kinetic/class_loader
     dev-libs/boost
     dev-libs/tinyxml
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="ROS-Package that implements a costmap layer to add prohibited areas to the costmap-2D by a user configuration."
+DESCRIPTION="ROS-Package that implements a costmap layer to add prohibited areas to the costm"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rst-tu-dortmund/costmap_prohibition_layer-release/archive/release/kinetic/costmap_prohibition_layer/0.0.5-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/costmap_2d
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
 "
@@ -41,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

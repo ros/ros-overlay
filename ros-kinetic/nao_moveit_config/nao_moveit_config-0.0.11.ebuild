@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="An automatically generated package with all the configuration and launch files for using the NAO robot with the MoveIt Motion Planning Framework"
+DESCRIPTION="An automatically generated package with all the configuration and launch files f"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/nao_moveit_config-release/archive/release/kinetic/nao_moveit_config/0.0.11-0.tar.gz"
 
@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nao_description
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/xacro
-    ros-kinetic/moveit_planners_ompl
-    ros-kinetic/moveit_fake_controller_manager
     ros-kinetic/moveit_ros_visualization
+    ros-kinetic/xacro
+    ros-kinetic/nao_description
+    ros-kinetic/moveit_fake_controller_manager
+    ros-kinetic/moveit_ros_move_group
     ros-kinetic/joint_state_publisher
     ros-kinetic/moveit_simple_controller_manager
-    ros-kinetic/moveit_ros_move_group
+    ros-kinetic/moveit_planners_ompl
+    ros-kinetic/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

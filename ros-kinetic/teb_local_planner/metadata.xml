@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>christoph.roesmann@tu-dortmund.de</email>
+      <name>Christoph Rösmann</name>
+    </maintainer>
+    <bugs-to>https://github.com/rst-tu-dortmund/teb_local_planner/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

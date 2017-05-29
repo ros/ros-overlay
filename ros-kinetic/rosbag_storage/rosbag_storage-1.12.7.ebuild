@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This is a set of tools for recording from and playing back ROS
-    message without relying on the ROS client library."
+    message witho"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.7-0.tar.gz"
 
@@ -15,11 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/roscpp_serialization
     ros-kinetic/roslz4
-    ros-kinetic/roscpp_traits
     ros-kinetic/rostime
+    ros-kinetic/roscpp_traits
     ros-kinetic/cpp_common
-    dev-libs/console_bridge
     dev-libs/boost
+    dev-libs/console_bridge
     app-arch/bzip2
 "
 DEPEND="${RDEPEND}
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

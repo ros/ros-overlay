@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="SMACH is a task-level architecture for rapidly creating complex robot
-    behavior. At its core, SMACH is a ROS-independent Python library to build
-    hierarchical state machines. SMACH is a new library that takes advantage of
-    very old concepts in order to quickly create robust robot behavior with
-    maintainable and modular code."
+    behavi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach/2.0.0-2.tar.gz"
 
@@ -42,8 +39,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

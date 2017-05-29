@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Stdr version of turtlebot simulation. Convenient to test 2D-navigation related stuffs"
+DESCRIPTION="Stdr version of turtlebot simulation. Convenient to test 2D-navigation related s"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_stdr/2.2.2-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stdr_gui
-    ros-kinetic/stdr_resources
-    ros-kinetic/navigation
-    ros-kinetic/yocs_velocity_smoother
     ros-kinetic/stdr_server
+    ros-kinetic/stdr_gui
+    ros-kinetic/navigation
     ros-kinetic/yocs_virtual_sensor
     ros-kinetic/stdr_robot
+    ros-kinetic/stdr_resources
+    ros-kinetic/yocs_velocity_smoother
     ros-kinetic/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

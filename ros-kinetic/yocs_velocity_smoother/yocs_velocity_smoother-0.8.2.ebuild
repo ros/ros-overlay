@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Bound incoming velocity messages according to robot velocity and acceleration limits."
+DESCRIPTION="Bound incoming velocity messages according to robot velocity and acceleration li"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_velocity_smoother/0.8.2-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/ecl_threads
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/pluginlib
     ros-kinetic/geometry_msgs
+    ros-kinetic/pluginlib
     ros-kinetic/nodelet
+    ros-kinetic/ecl_threads
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

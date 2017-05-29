@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Plugin-based layers for the navigation stack that 
-  implement various social navigation contraints, like proxemic distance."
+  implement various social na"
 HOMEPAGE="http://ros.org/wiki/social_navigation_layers"
 SRC_URI="https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz"
 
@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/costmap_2d
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/people_msgs
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
 "
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to other nodes in a compact binary format. It also allows to incrementally build 3D OctoMaps, and provides map saving in the node octomap_saver."
+DESCRIPTION="octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to ot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz"
 
@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/pcl_ros
+    ros-kinetic/std_srvs
+    ros-kinetic/nodelet
     ros-kinetic/sensor_msgs
     ros-kinetic/octomap
-    ros-kinetic/octomap_msgs
+    ros-kinetic/octomap_ros
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pcl_conversions
     ros-kinetic/nav_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/visualization_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/nodelet
-    ros-kinetic/octomap_ros
-    ros-kinetic/roscpp
-    ros-kinetic/pcl_ros
+    ros-kinetic/octomap_msgs
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
@@ -53,8 +53,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rqt_robot_steering
+    ros-kinetic/controller_manager
+    ros-kinetic/xacro
+    ros-kinetic/diff_drive_controller
+    ros-kinetic/joint_state_publisher
+    ros-kinetic/rviz
+    ros-kinetic/urdf
     ros-kinetic/gazebo_ros
+    ros-kinetic/joint_state_controller
+    ros-kinetic/gazebo_ros_control
     ros-kinetic/position_controllers
     ros-kinetic/robot_state_publisher
-    ros-kinetic/controller_manager
-    ros-kinetic/joint_state_controller
-    ros-kinetic/rviz
-    ros-kinetic/xacro
-    ros-kinetic/gazebo_ros_control
-    ros-kinetic/joint_state_publisher
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/urdf
+    ros-kinetic/rqt_robot_steering
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslaunch
@@ -51,8 +51,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

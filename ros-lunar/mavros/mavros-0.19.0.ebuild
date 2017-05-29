@@ -12,25 +12,25 @@ LICENSE="||( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/std_msgs
-    ros-lunar/message_runtime
-    ros-lunar/libmavconn
-    ros-lunar/diagnostic_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/diagnostic_updater
-    ros-lunar/nav_msgs
-    ros-lunar/tf2_ros
     ros-lunar/rosconsole_bridge
-    ros-lunar/eigen_conversions
     ros-lunar/roscpp
-    ros-lunar/std_srvs
-    ros-lunar/rospy
-    ros-lunar/mavlink
-    ros-lunar/pluginlib
+    ros-lunar/diagnostic_updater
+    ros-lunar/eigen_conversions
+    ros-lunar/diagnostic_msgs
+    ros-lunar/libmavconn
     ros-lunar/geometry_msgs
     ros-lunar/mavros_msgs
-    dev-cpp/eigen
+    ros-lunar/std_msgs
+    ros-lunar/mavlink
+    ros-lunar/pluginlib
+    ros-lunar/std_srvs
+    ros-lunar/message_runtime
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/rospy
+    ros-lunar/nav_msgs
     dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -60,7 +60,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="visp_camera_calibration allows easy calibration of
-     cameras using a customizable pattern and ViSP library."
+     cameras using a customiz"
 HOMEPAGE="http://wiki.ros.org/visp_camera_calibration"
 SRC_URI="https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_camera_calibration/0.10.0-0.tar.gz"
 
@@ -13,15 +13,15 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
+    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/visp
+    ros-kinetic/message_runtime
     ros-kinetic/message_generation
     ros-kinetic/sensor_msgs
     ros-kinetic/visp_bridge
-    ros-kinetic/visp
-    ros-kinetic/roscpp
-    ros-kinetic/geometry_msgs
+    ros-kinetic/camera_calibration_parsers
 "
 DEPEND="${RDEPEND}
 "
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

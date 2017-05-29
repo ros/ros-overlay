@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/base_local_planner
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/nav_core
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
     ros-kinetic/pluginlib
     ros-kinetic/tf
+    ros-kinetic/nav_core
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nav_msgs
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/pcl_conversions
     ros-kinetic/cmake_modules
+    ros-kinetic/pcl_conversions
 "
 
 SLOT="0/0"
@@ -49,8 +49,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

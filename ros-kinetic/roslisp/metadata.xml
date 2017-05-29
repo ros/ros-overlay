@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>georg.bartels@cs.uni-bremen.de</email>
+      <name>Georg Bartels</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/roslisp/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

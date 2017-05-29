@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/cv_bridge
+    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/jsk_gui_msgs
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/image_geometry
     ros-kinetic/std_msgs
-    ros-kinetic/rviz
     ros-kinetic/urdfdom_py
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/people_msgs
+    ros-kinetic/rviz
+    ros-kinetic/cv_bridge
+    ros-kinetic/message_generation
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/view_controller_msgs
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/jsk_hark_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/view_controller_msgs
-    ros-kinetic/image_geometry
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/jsk_recognition_utils
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/jsk_gui_msgs
-    ros-kinetic/people_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosbuild
     ros-kinetic/mk
+    ros-kinetic/rosbuild
 "
 
 SLOT="0/0"
@@ -57,8 +57,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

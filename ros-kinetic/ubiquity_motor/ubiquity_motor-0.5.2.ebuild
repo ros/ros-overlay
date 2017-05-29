@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/joint_state_controller
-    ros-kinetic/hardware_interface
-    ros-kinetic/serial
-    ros-kinetic/nav_msgs
     ros-kinetic/controller_manager
     ros-kinetic/geometry_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/diff_drive_controller
+    ros-kinetic/serial
     ros-kinetic/tf
+    ros-kinetic/joint_state_controller
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roscpp
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

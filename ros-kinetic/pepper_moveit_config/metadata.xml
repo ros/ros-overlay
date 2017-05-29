@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>natalia.lyubova@gmail.com</email>
+      <name>Natalia Lyubova</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-naoqi/pepper_moveit_config/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

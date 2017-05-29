@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and C++."
+DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and "
 HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_ros/0.5.15-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
+    ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/tf2_py
+    ros-kinetic/tf2_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/rosgraph
+    ros-kinetic/tf2
+    ros-kinetic/rospy
     ros-kinetic/actionlib_msgs
     ros-kinetic/xmlrpcpp
-    ros-kinetic/rospy
-    ros-kinetic/actionlib
-    ros-kinetic/tf2_py
-    ros-kinetic/roscpp
-    ros-kinetic/tf2
-    ros-kinetic/tf2_msgs
     ros-kinetic/message_filters
-    ros-kinetic/geometry_msgs
-    ros-kinetic/rosgraph
 "
 DEPEND="${RDEPEND}
 "
@@ -50,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

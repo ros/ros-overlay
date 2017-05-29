@@ -4,10 +4,7 @@
 EAPI=6
 
 DESCRIPTION="ROS driver for a generic Linux joystick.
-    The joy package contains joy_node, a node that interfaces a
-    generic Linux joystick to ROS. This node publishes a "Joy"
-    message, which contains the current state of each one of the
-    joystick's buttons and axes."
+    The joy package contains joy_node, "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joy/1.11.0-0.tar.gz"
 
@@ -16,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/diagnostic_updater
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     games-util/joystick
 "
 DEPEND="${RDEPEND}
@@ -46,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

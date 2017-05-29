@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The manipulator_h_kinematics_dynamics package
-    This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
-    Additionally, there are some function to calculate kinematics and dynamics."
+    This packages provides library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_kinematics_dynamics/0.2.2-0.tar.gz"
 
@@ -14,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
     ros-kinetic/roscpp
+    ros-kinetic/cmake_modules
 "
 DEPEND="${RDEPEND}
     ros-kinetic/robotis_math
@@ -43,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

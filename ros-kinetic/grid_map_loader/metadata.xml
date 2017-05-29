@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>pfankhauser@ethz.ch</email>
+      <name>Péter Fankhauser</name>
+    </maintainer>
+    <bugs-to>https://github.com/ethz-asl/grid_map/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

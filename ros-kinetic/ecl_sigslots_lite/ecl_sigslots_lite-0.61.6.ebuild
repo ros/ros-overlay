@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to
-     provide a very simple sigslots implementation that can be used for *very*
-     embedded development."
+ "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_lite-release/archive/release/kinetic/ecl_sigslots_lite/0.61.6-0.tar.gz"
 
@@ -14,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_license
     ros-kinetic/ecl_errors
+    ros-kinetic/ecl_license
     ros-kinetic/ecl_config
 "
 DEPEND="${RDEPEND}
@@ -43,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

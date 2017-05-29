@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/stereo_image_proc
-    ros-kinetic/camera_calibration_parsers
     ros-kinetic/rosbag
-    ros-kinetic/rospy
-    ros-kinetic/image_proc
-    ros-kinetic/sensor_msgs
     ros-kinetic/image_geometry
+    ros-kinetic/cv_bridge
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_proc
+    ros-kinetic/stereo_image_proc
+    ros-kinetic/rospy
     ros-kinetic/message_filters
     dev-libs/console_bridge
 "
@@ -48,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

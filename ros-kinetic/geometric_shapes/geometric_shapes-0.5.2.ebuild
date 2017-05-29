@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/random_numbers
-    ros-kinetic/visualization_msgs
     ros-kinetic/shape_msgs
-    ros-kinetic/resource_retriever
-    ros-kinetic/eigen_stl_containers
     ros-kinetic/octomap
-    media-libs/assimp
-    dev-libs/console_bridge
+    ros-kinetic/visualization_msgs
+    ros-kinetic/eigen_stl_containers
+    ros-kinetic/random_numbers
+    ros-kinetic/resource_retriever
     dev-libs/boost
     media-libs/qhull
+    media-libs/assimp
+    dev-libs/console_bridge
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    media-libs/assimp
     virtual/pkgconfig
+    media-libs/assimp
 "
 
 SLOT="0/0"
@@ -51,8 +51,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

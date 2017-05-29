@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="hector_geotiff provides a node that can be used to save occupancy grid map, robot trajectory and object of interest data to RoboCup Rescue compliant GeoTiff images."
+DESCRIPTION="hector_geotiff provides a node that can be used to save occupancy grid map, robo"
 HOMEPAGE="http://ros.org/wiki/hector_geotiff"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_geotiff/0.3.5-0.tar.gz"
 
@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_nav_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/hector_map_tools
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/hector_map_tools
+    ros-kinetic/std_msgs
     ros-kinetic/pluginlib
+    ros-kinetic/hector_nav_msgs
+    ros-kinetic/nav_msgs
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
@@ -45,8 +45,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

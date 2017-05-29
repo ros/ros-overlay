@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means to change
-    node parameters at any time without having to restart the node."
+DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.48-0.tar.gz"
 
@@ -13,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/roslib
+    ros-kinetic/message_runtime
     ros-kinetic/rospy
     ros-kinetic/rosservice
-    ros-kinetic/message_runtime
-    ros-kinetic/roslib
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
-    ros-kinetic/rostest
     ros-kinetic/roscpp_serialization
+    ros-kinetic/rostest
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"
@@ -49,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

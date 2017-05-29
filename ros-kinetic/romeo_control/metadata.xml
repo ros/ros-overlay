@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>hris2003@gmail.com</email>
+      <name>Ha Dang</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-aldebaran/romeo_virtual/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

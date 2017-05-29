@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package is single manager for a Dynamixel.
-    Before operating Dynamixels, it can be used to check states of a Dynamixel and change address value with GUI."
+    Before operating Dynamixels,"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench_single_manager_gui/0.1.5-2.tar.gz"
 
@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamixel_workbench_toolbox
-    ros-kinetic/dynamixel_workbench_msgs
     ros-kinetic/roscpp
     ros-kinetic/qt_build
+    ros-kinetic/dynamixel_workbench_toolbox
+    ros-kinetic/dynamixel_workbench_msgs
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

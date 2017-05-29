@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package retrieves data from url-format files such as http://,
-   ftp://, package:// file://, etc., and loads the data into memory.
-   The package:// url for ros packages is translated into a local
-   file:// url.  The resourse retriever was initially designed to load
-   mesh files into memory, but it can be used for any type of
-   data. The resource retriever is based on the the libcurl library."
+   ftp://, pa"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/resource_retriever-release/archive/release/kinetic/resource_retriever/1.12.3-0.tar.gz"
 
@@ -19,8 +15,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/rosconsole
     ros-kinetic/roslib
-    net-misc/curl
     dev-python/rospkg
+    net-misc/curl
 "
 DEPEND="${RDEPEND}
 "
@@ -47,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

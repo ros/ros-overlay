@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="A 2D navigation stack that takes in information from odometry, sensor
-        streams, and a goal pose and outputs safe velocity commands that are sent
-        to a mobile base."
+        st"
 HOMEPAGE="http://wiki.ros.org/navigation"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.0-0.tar.gz"
 
@@ -14,23 +13,23 @@ LICENSE="BSD,LGPL,LGPL (amcl)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/base_local_planner
     ros-kinetic/robot_pose_ekf
-    ros-kinetic/fake_localization
-    ros-kinetic/navfn
-    ros-kinetic/dwa_local_planner
-    ros-kinetic/move_base
-    ros-kinetic/nav_core
-    ros-kinetic/clear_costmap_recovery
-    ros-kinetic/global_planner
-    ros-kinetic/rotate_recovery
-    ros-kinetic/move_slow_and_clear
+    ros-kinetic/base_local_planner
     ros-kinetic/voxel_grid
-    ros-kinetic/map_server
+    ros-kinetic/dwa_local_planner
+    ros-kinetic/navfn
+    ros-kinetic/carrot_planner
     ros-kinetic/move_base_msgs
     ros-kinetic/costmap_2d
+    ros-kinetic/clear_costmap_recovery
+    ros-kinetic/fake_localization
+    ros-kinetic/global_planner
+    ros-kinetic/nav_core
+    ros-kinetic/map_server
     ros-kinetic/amcl
-    ros-kinetic/carrot_planner
+    ros-kinetic/move_slow_and_clear
+    ros-kinetic/rotate_recovery
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "
@@ -57,8 +56,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

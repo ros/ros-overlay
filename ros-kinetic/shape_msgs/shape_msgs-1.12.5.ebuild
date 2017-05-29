@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains messages for defining shapes, such as simple solid
-    object primitives (cube, sphere, etc), planes, and meshes."
+    obj"
 HOMEPAGE="http://wiki.ros.org/shape_msgs"
 SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/shape_msgs/1.12.5-0.tar.gz"
 
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A plugin to image_transport for transparently sending images encoded with ImageZero."
+DESCRIPTION="A plugin to image_transport for transparently sending images encoded with ImageZ"
 HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
 SRC_URI="https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_image_transport/0.2.3-0.tar.gz"
 
@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/message_runtime
     ros-kinetic/image_transport
-    ros-kinetic/cv_bridge
-    ros-kinetic/imagezero_ros
     ros-kinetic/sensor_msgs
+    ros-kinetic/imagezero_ros
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

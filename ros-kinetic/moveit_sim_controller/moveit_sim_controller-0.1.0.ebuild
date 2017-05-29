@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="A simulation interface for a hardware interface for ros_control, and loads default joint values from SRDF"
+DESCRIPTION="A simulation interface for a hardware interface for ros_control, and loads defau"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/moveit_sim_controller-release/archive/release/kinetic/moveit_sim_controller/0.1.0-0.tar.gz"
 
@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/rosparam_shortcuts
     ros-kinetic/ros_control_boilerplate
+    ros-kinetic/roscpp
     ros-kinetic/moveit_ros_planning
     ros-kinetic/moveit_core
+    ros-kinetic/rosparam_shortcuts
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslint
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

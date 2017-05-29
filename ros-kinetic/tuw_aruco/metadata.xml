@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>lukas.pfeifhofer@devlabs.pro</email>
+      <name>Lukas Pfeifhofer</name>
+    </maintainer>
+    <bugs-to>https://github.com/tuw-robotics/tuw_marker_detection/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

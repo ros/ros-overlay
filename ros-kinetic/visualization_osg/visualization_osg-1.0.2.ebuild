@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="visualization_osg is a metapackage providing support for visualization of geometry using the OpenSceneGraph rendering engine."
+DESCRIPTION="visualization_osg is a metapackage providing support for visualization of geomet"
 HOMEPAGE="http://wiki.ros.org/osg_interactive_markers"
 SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/kinetic/visualization_osg/1.0.2-0.tar.gz"
 
@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/osg_markers
     ros-kinetic/osg_interactive_markers
     ros-kinetic/osg_utils
-    ros-kinetic/osg_markers
 "
 DEPEND="${RDEPEND}
 "
@@ -41,8 +41,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

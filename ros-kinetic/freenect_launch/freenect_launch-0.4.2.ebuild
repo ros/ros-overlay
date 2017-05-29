@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Launch files for freenect_camera to produce rectified, registered
-    or disparity images.  Also produce point clouds and registered
-    point clouds.  Based on the openni_launch package."
+    or dispari"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/kinetic/freenect_launch/0.4.2-0.tar.gz"
 
@@ -14,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_proc
+    ros-kinetic/nodelet
     ros-kinetic/rgbd_launch
     ros-kinetic/freenect_camera
-    ros-kinetic/nodelet
     ros-kinetic/tf
+    ros-kinetic/image_proc
 "
 DEPEND="${RDEPEND}
 "
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

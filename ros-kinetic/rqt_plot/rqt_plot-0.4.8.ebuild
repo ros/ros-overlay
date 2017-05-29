@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends."
+DESCRIPTION="rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using dif"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz"
 
@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rqt_gui
+    ros-kinetic/std_msgs
+    ros-kinetic/rqt_gui_py
+    ros-kinetic/rosgraph
     ros-kinetic/rostopic
     ros-kinetic/python_qt_binding
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/qwt_dependency
-    ros-kinetic/rqt_gui
-    ros-kinetic/rosgraph
-    ros-kinetic/std_msgs
-    ros-kinetic/qt_gui_py_common
     ros-kinetic/rqt_py_common
+    ros-kinetic/qwt_dependency
+    ros-kinetic/qt_gui_py_common
+    dev-python/numpy
     dev-python/rospkg
     dev-python/matplotlib
-    dev-python/numpy
 "
 DEPEND="${RDEPEND}
 "
@@ -50,8 +50,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

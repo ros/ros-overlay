@@ -4,11 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package contains a configurable node, services and a spawner script
-        to start, stop and restart one or more controller plugins. Reusable
-        controller types are defined for common Dynamixel motor joints. Both speed and
-        torque can be set for each joint. This python package can be used by more
-        specific robot controllers and all configurable parameters can be loaded
-        via a yaml file."
+       "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_controllers/0.4.1-0.tar.gz"
 
@@ -17,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/std_msgs
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/dynamixel_msgs
+    ros-kinetic/control_msgs
     ros-kinetic/dynamixel_driver
     ros-kinetic/trajectory_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/rospy
-    ros-kinetic/actionlib
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/control_msgs
-    ros-kinetic/dynamixel_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -52,8 +48,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

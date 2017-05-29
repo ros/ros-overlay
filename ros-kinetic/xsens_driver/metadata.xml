@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>francis.colas@mavt.ethz.ch</email>
+      <name>Francis Colas</name>
+    </maintainer>
+    <bugs-to>https://github.com/ethz-asl/ethzasl_xsens_driver/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

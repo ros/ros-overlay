@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="connects to a GPSd server and broadcasts GPS fixes 
-   using the NavSatFix message"
+   using the NavSatFix messa"
 HOMEPAGE="http://ros.org/wiki/gpsd_client"
 SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gpsd_client/0.1.9-0.tar.gz"
 
@@ -15,11 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/gps_common
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
-    sci-geosciences/gpsd
+    ros-kinetic/sensor_msgs
+    ros-kinetic/gps_common
     virtual/pkgconfig
+    sci-geosciences/gpsd
 "
 
 SLOT="0/0"
@@ -44,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

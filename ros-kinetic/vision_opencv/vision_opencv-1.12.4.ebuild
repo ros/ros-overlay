@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision."
+DESCRIPTION="Packages for interfacing ROS with OpenCV, a library of programming functions for"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/vision_opencv/1.12.4-0.tar.gz"
 
@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/image_geometry
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "
@@ -40,8 +40,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

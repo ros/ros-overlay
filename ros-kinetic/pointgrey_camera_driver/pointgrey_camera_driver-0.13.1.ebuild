@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_proc
-    ros-kinetic/sensor_msgs
-    ros-kinetic/wfov_camera_msgs
-    ros-kinetic/image_exposure_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/nodelet
-    ros-kinetic/camera_info_manager
-    ros-kinetic/image_transport
     ros-kinetic/roscpp
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/camera_info_manager
+    ros-kinetic/wfov_camera_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/image_transport
+    ros-kinetic/sensor_msgs
+    ros-kinetic/image_proc
     ros-kinetic/stereo_image_proc
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_exposure_msgs
     sys-libs/libraw1394
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
-    net-misc/curl
     app-arch/dpkg
+    net-misc/curl
 "
 
 SLOT="0/0"
@@ -53,8 +53,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

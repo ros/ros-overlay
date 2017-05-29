@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Kobuki test suite: this package provides tools to thoroughly test Kobuki's hardware."
+DESCRIPTION="Kobuki test suite: this package provides tools to thoroughly test Kobuki's hardw"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_testsuite/0.7.4-0.tar.gz"
 
@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/std_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/kobuki_node
+    ros-kinetic/message_runtime
+    ros-kinetic/python_orocos_kdl
     ros-kinetic/sensor_msgs
     ros-kinetic/kobuki_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/kobuki_node
-    ros-kinetic/std_msgs
-    ros-kinetic/python_orocos_kdl
-    ros-kinetic/geometry_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
@@ -46,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="This package contains a collection of launch files that can be helpful in configuring
-    the calibration stack to run on your robot."
+DESCRIPTION="This package contains a collection of launch files that can be helpful in config"
 HOMEPAGE="http://ros.org/wiki/calibration_launch"
 SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_launch/0.10.14-0.tar.gz"
 
@@ -13,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/laser_cb_detector
-    ros-kinetic/monocam_settler
-    ros-kinetic/joint_states_settler
     ros-kinetic/interval_intersection
+    ros-kinetic/monocam_settler
     ros-kinetic/urdfdom_py
+    ros-kinetic/joint_states_settler
+    ros-kinetic/laser_cb_detector
 "
 DEPEND="${RDEPEND}
 "
@@ -44,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

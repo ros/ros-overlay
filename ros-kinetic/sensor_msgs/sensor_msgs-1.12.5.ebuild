@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="This package defines messages for commonly used sensors, including
-    cameras and scanning laser rangefinders."
+    cameras a"
 HOMEPAGE="http://ros.org/wiki/sensor_msgs"
 SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/sensor_msgs/1.12.5-0.tar.gz"
 
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

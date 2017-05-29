@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_ros_perception
-    ros-lunar/dynamic_reconfigure
     ros-lunar/moveit_core
-    ros-lunar/actionlib
-    ros-lunar/pluginlib
     ros-lunar/angles
+    ros-lunar/pluginlib
+    ros-lunar/actionlib
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/moveit_ros_perception
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

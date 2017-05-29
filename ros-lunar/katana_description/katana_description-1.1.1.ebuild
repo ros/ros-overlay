@@ -12,12 +12,12 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/transmission_interface
     ros-lunar/urdf
+    ros-lunar/transmission_interface
 "
 DEPEND="${RDEPEND}
-    ros-lunar/convex_decomposition
     ros-lunar/ivcon
+    ros-lunar/convex_decomposition
 "
 
 SLOT="0/0"
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
-    /usr/bin/catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

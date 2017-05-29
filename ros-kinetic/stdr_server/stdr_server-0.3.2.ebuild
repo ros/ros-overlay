@@ -12,14 +12,14 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/stdr_msgs
-    ros-kinetic/actionlib
-    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/map_server
     ros-kinetic/nodelet
     ros-kinetic/tf
+    ros-kinetic/actionlib
+    ros-kinetic/map_server
+    ros-kinetic/stdr_msgs
+    ros-kinetic/nav_msgs
+    ros-kinetic/visualization_msgs
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
@@ -47,8 +47,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

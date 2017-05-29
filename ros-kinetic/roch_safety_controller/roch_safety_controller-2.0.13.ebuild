@@ -5,11 +5,7 @@ EAPI=6
 
 DESCRIPTION="A controller ensuring the safe operation of roch.
 
-    The SafetyController keeps track of ult, psd and cliff events. In case of the first three,
-    roch is commanded to move back. 
-    This controller can be enabled/disabled.
-    The safety states (cliff, psd and ult etc.) can be reset. WARNING: Dangerous!
-    Refrence with yujinrobot' kobuki."
+    The SafetyController keep"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_safety_controller/2.0.13-2.tar.gz"
 
@@ -18,12 +14,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
-    ros-kinetic/roch_msgs
-    ros-kinetic/ecl_threads
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/roch_msgs
     ros-kinetic/yocs_controllers
+    ros-kinetic/ecl_threads
 "
 DEPEND="${RDEPEND}
 "
@@ -50,8 +46,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

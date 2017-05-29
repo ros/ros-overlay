@@ -3,8 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="The rosserial_server package provides a C++ implementation of the rosserial server side,
-    serving as a more performance- and stability-oriented alternative to rosserial_python."
+DESCRIPTION="The rosserial_server package provides a C++ implementation of the rosserial serv"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_server/0.7.6-0.tar.gz"
 
@@ -13,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/rosserial_python
-    ros-kinetic/topic_tools
     ros-kinetic/std_msgs
     ros-kinetic/rosserial_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/topic_tools
 "
 DEPEND="${RDEPEND}
 "
@@ -44,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

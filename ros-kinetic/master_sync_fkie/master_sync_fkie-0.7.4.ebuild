@@ -4,8 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Synchronize the local ROS master to the remote masters 
-     discovered by master_discovery_fkie node. The registration
-     of topics and services is only perform by local ROS master."
+     discovered by maste"
 HOMEPAGE="http://ros.org/wiki/master_sync_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_sync_fkie/0.7.4-0.tar.gz"
 
@@ -15,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/roslib
-    ros-kinetic/multimaster_msgs_fkie
     ros-kinetic/rospy
+    ros-kinetic/multimaster_msgs_fkie
     ros-kinetic/rosgraph
     ros-kinetic/master_discovery_fkie
 "
@@ -45,8 +44,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

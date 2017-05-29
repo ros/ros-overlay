@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The thormang3_walking_demo package
-    This package describes how to use thormang3_walking_module."
+    This package describes how to use thorman"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_walking_demo/0.1.2-0.tar.gz"
 
@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/robotis_controller_msgs
     ros-kinetic/thormang3_walking_module_msgs
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0/0"
@@ -43,8 +43,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }

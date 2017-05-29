@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>adnanademovic100@gmail.com</email>
+      <name>Adnan Ademovic</name>
+    </maintainer>
+    <bugs-to>https://github.com/adnanademovic/genrs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

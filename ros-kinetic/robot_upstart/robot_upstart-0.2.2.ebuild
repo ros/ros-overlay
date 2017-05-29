@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="The robot_upstart package provides scripts which may be used to install
-    and uninstall Ubuntu Linux upstart jobs which launch groups of roslaunch files."
+    and "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/robot_upstart-release/archive/release/kinetic/robot_upstart/0.2.2-0.tar.gz"
 
@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslaunch
     ros-kinetic/xacro
+    ros-kinetic/roslaunch
     sys-process/daemontools
 "
 DEPEND="${RDEPEND}
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
     cd ../../work
-    source /opt/ros/kinetic/setup.bash
+    source /${ROS_PREFIX}/setup.bash
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-    rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    if [[ -e ${D}/${ROS_PREFIX}/setup.bash ]]; then
+        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
+        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
+    fi
 }
