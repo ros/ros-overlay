@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/python_orocos_kdl
     ros-lunar/cmake_modules
     ros-lunar/tf2
     ros-lunar/sensor_msgs
+    ros-lunar/python_orocos_kdl
     ros-lunar/tf2_ros
     dev-cpp/eigen
 "

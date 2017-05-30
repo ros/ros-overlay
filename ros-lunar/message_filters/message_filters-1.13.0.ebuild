@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roscpp
+    ros-lunar/rosconsole
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}

@@ -12,8 +12,8 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/imu_complementary_filter
     ros-lunar/imu_filter_madgwick
+    ros-lunar/imu_complementary_filter
     ros-lunar/rviz_imu_plugin
 "
 DEPEND="${RDEPEND}

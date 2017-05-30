@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    x11-libs/libXi
     x11-libs/libXmu
-    =dev-libs/libusb-1.0*
     media-libs/freeglut
+    =dev-libs/libusb-1.0*
+    x11-libs/libXi
 "
 DEPEND="${RDEPEND}
 "

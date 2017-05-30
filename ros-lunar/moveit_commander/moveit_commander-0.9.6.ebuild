@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/geometry_msgs
-    ros-lunar/moveit_ros_planning_interface
-    ros-lunar/sensor_msgs
     ros-lunar/tf
-    ros-lunar/shape_msgs
     ros-lunar/moveit_msgs
-    dev-lang/python
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/moveit_ros_planning_interface
+    ros-lunar/shape_msgs
     dev-libs/assimp
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "

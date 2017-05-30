@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosgraph_msgs
-    ros-lunar/rosgraph
-    ros-lunar/genpy
+    ros-lunar/roslib
     ros-lunar/std_msgs
     ros-lunar/roscpp
-    ros-lunar/roslib
+    ros-lunar/rosgraph
+    ros-lunar/genpy
     dev-python/pyyaml
-    dev-python/numpy
     dev-python/rospkg
+    dev-python/numpy
 "
 DEPEND="${RDEPEND}
 "

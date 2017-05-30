@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rviz
+    ros-lunar/robot_state_publisher
+    ros-lunar/joint_state_publisher
     ros-lunar/rqt_robot_steering
     ros-lunar/urdf
-    ros-lunar/diff_drive_controller
     ros-lunar/gazebo_ros_control
-    ros-lunar/gazebo_ros
     ros-lunar/position_controllers
     ros-lunar/xacro
+    ros-lunar/diff_drive_controller
+    ros-lunar/gazebo_ros
     ros-lunar/controller_manager
-    ros-lunar/joint_state_publisher
-    ros-lunar/robot_state_publisher
-    ros-lunar/rviz
     ros-lunar/joint_state_controller
 "
 DEPEND="${RDEPEND}

@@ -8,27 +8,27 @@ DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/0.19.0-0.tar.gz"
 
-LICENSE="||( GPLv3 LGPLv3 BSD )"
+LICENSE="|| ( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/mavlink
-    ros-lunar/rospy
-    ros-lunar/pluginlib
-    ros-lunar/std_srvs
-    ros-lunar/nav_msgs
-    ros-lunar/rosconsole_bridge
     ros-lunar/geometry_msgs
-    ros-lunar/libmavconn
     ros-lunar/mavros_msgs
-    ros-lunar/roscpp
+    ros-lunar/eigen_conversions
+    ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
     ros-lunar/sensor_msgs
-    ros-lunar/message_runtime
     ros-lunar/std_msgs
     ros-lunar/diagnostic_updater
-    ros-lunar/eigen_conversions
+    ros-lunar/message_runtime
+    ros-lunar/pluginlib
     ros-lunar/tf2_ros
-    ros-lunar/diagnostic_msgs
+    ros-lunar/libmavconn
+    ros-lunar/mavlink
+    ros-lunar/roscpp
+    ros-lunar/rosconsole_bridge
+    ros-lunar/std_srvs
+    ros-lunar/nav_msgs
     dev-libs/boost
     dev-cpp/eigen
 "

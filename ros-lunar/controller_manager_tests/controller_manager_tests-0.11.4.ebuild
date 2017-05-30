@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/controller_interface
     ros-lunar/rostest
     ros-lunar/controller_manager
+    ros-lunar/controller_interface
 "
 DEPEND="${RDEPEND}
 "

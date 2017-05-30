@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosservice
-    ros-lunar/rosgraph
-    ros-lunar/rosbuild
-    ros-lunar/rosnode
-    ros-lunar/roslaunch
     ros-lunar/roslib
-    dev-python/paramiko
+    ros-lunar/rosbuild
+    ros-lunar/rosservice
+    ros-lunar/roslaunch
+    ros-lunar/rosnode
+    ros-lunar/rosgraph
     dev-python/rospkg
+    dev-python/paramiko
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/urdf_parser_plugin
-    ros-lunar/resource_retriever
     ros-lunar/collada_parser
     ros-lunar/kdl_parser
-    ros-lunar/joint_state_publisher
     ros-lunar/urdf
+    ros-lunar/resource_retriever
+    ros-lunar/urdf_parser_plugin
     ros-lunar/collada_urdf
+    ros-lunar/joint_state_publisher
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}

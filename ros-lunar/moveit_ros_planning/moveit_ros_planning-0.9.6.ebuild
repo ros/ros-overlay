@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/moveit_core
+    ros-lunar/moveit_ros_perception
+    ros-lunar/dynamic_reconfigure
     ros-lunar/pluginlib
     ros-lunar/actionlib
-    ros-lunar/moveit_ros_perception
-    ros-lunar/moveit_core
-    ros-lunar/dynamic_reconfigure
     ros-lunar/angles
 "
 DEPEND="${RDEPEND}

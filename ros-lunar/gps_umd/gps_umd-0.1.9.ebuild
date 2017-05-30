@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/gps_common
     ros-lunar/gpsd_client
+    ros-lunar/gps_common
 "
 DEPEND="${RDEPEND}
 "

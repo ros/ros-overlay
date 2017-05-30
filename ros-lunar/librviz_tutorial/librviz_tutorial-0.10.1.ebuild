@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/rviz
     ros-lunar/roscpp
-    dev-qt/qtwidgets
     dev-qt/qtgui
     dev-qt/qtcore
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

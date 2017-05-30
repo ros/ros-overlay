@@ -15,10 +15,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/cv_bridge
     ros-lunar/rospy
-    ros-lunar/image_geometry
-    ros-lunar/std_srvs
     ros-lunar/sensor_msgs
     ros-lunar/message_filters
+    ros-lunar/image_geometry
+    ros-lunar/std_srvs
 "
 DEPEND="${RDEPEND}
 "

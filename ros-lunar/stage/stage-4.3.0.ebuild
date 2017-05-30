@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    media-libs/mesa
     =x11-libs/fltk-1*
+    media-libs/mesa
     media-libs/libjpeg-turbo
     x11-libs/gtk+
 "

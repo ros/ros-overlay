@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/laser_assembler
-    ros-lunar/laser_geometry
     ros-lunar/laser_filters
+    ros-lunar/laser_geometry
 "
 DEPEND="${RDEPEND}
 "

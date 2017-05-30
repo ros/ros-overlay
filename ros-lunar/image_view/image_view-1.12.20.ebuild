@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/cv_bridge
-    ros-lunar/std_srvs
-    ros-lunar/message_filters
-    ros-lunar/camera_calibration_parsers
-    ros-lunar/nodelet
-    ros-lunar/roscpp
-    ros-lunar/image_transport
     ros-lunar/dynamic_reconfigure
+    ros-lunar/camera_calibration_parsers
+    ros-lunar/cv_bridge
+    ros-lunar/nodelet
+    ros-lunar/rosconsole
+    ros-lunar/image_transport
+    ros-lunar/message_filters
+    ros-lunar/std_srvs
+    ros-lunar/roscpp
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
-    ros-lunar/sensor_msgs
     ros-lunar/stereo_msgs
+    ros-lunar/sensor_msgs
 "
 
 SLOT="0/0"

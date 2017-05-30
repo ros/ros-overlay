@@ -12,13 +12,13 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/katana_msgs
-    ros-lunar/control_msgs
     ros-lunar/control_toolbox
-    ros-lunar/trajectory_msgs
-    ros-lunar/gazebo_ros
     ros-lunar/sensor_msgs
+    ros-lunar/trajectory_msgs
+    ros-lunar/control_msgs
     ros-lunar/actionlib
+    ros-lunar/gazebo_ros
+    ros-lunar/katana_msgs
 "
 DEPEND="${RDEPEND}
 "

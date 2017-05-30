@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roscpp
     ros-lunar/bond
     ros-lunar/smclib
-    ros-lunar/roscpp
     dev-libs/boost
     sys-apps/util-linux
 "

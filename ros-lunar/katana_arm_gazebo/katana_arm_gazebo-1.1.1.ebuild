@@ -12,18 +12,18 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/katana_description
-    ros-lunar/urdf
-    ros-lunar/gazebo_ros
-    ros-lunar/xacro
-    ros-lunar/joint_trajectory_controller
-    ros-lunar/controller_manager_msgs
-    ros-lunar/std_msgs
-    ros-lunar/controller_manager
     ros-lunar/robot_state_publisher
-    ros-lunar/roscpp
+    ros-lunar/urdf
+    ros-lunar/controller_manager_msgs
     ros-lunar/katana_gazebo_plugins
+    ros-lunar/katana_description
+    ros-lunar/std_msgs
+    ros-lunar/xacro
     ros-lunar/actionlib
+    ros-lunar/joint_trajectory_controller
+    ros-lunar/gazebo_ros
+    ros-lunar/roscpp
+    ros-lunar/controller_manager
 "
 DEPEND="${RDEPEND}
 "

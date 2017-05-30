@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-cpp/eigen
     dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    virtual/pkgconfig
     dev-util/cmake
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

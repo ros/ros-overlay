@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rostime
     ros-lunar/cpp_common
     ros-lunar/rosbuild
+    ros-lunar/rostime
     dev-libs/apr
     dev-libs/log4cxx
 "

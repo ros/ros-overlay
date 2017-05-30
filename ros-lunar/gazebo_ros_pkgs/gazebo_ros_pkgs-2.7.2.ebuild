@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/gazebo_msgs
-    ros-lunar/gazebo_dev
     ros-lunar/gazebo_plugins
     ros-lunar/gazebo_ros
+    ros-lunar/gazebo_dev
 "
 DEPEND="${RDEPEND}
 "

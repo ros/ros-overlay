@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/tf
     ros-lunar/urdf
     ros-lunar/collada_parser
-    ros-lunar/resource_retriever
     ros-lunar/geometric_shapes
-    ros-lunar/roscpp
-    ros-lunar/tf
+    ros-lunar/resource_retriever
     ros-lunar/angles
+    ros-lunar/roscpp
+    dev-libs/urdfdom
+    media-libs/collada-dom
     dev-libs/urdfdom_headers
     media-libs/assimp
-    media-libs/collada-dom
-    dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

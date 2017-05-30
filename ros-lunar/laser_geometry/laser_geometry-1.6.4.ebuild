@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
-    ros-lunar/roscpp
     ros-lunar/tf
+    ros-lunar/sensor_msgs
     ros-lunar/angles
-    dev-python/numpy
-    dev-cpp/eigen
+    ros-lunar/roscpp
     dev-libs/boost
+    dev-cpp/eigen
+    dev-python/numpy
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

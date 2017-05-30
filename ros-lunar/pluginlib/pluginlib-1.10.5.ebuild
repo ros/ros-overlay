@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rosconsole
     ros-lunar/class_loader
     ros-lunar/roslib
-    ros-lunar/rosconsole
     dev-libs/boost
     dev-libs/tinyxml
 "

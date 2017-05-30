@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/visualization_msgs
-    ros-lunar/trajectory_msgs
-    ros-lunar/nav_msgs
-    ros-lunar/actionlib_msgs
     ros-lunar/geometry_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/stereo_msgs
-    ros-lunar/shape_msgs
     ros-lunar/diagnostic_msgs
+    ros-lunar/stereo_msgs
+    ros-lunar/sensor_msgs
+    ros-lunar/trajectory_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/actionlib_msgs
+    ros-lunar/shape_msgs
+    ros-lunar/nav_msgs
 "
 DEPEND="${RDEPEND}
 "

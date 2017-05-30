@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/cv_bridge
-    ros-lunar/rqt_gui_cpp
-    ros-lunar/rqt_gui
     ros-lunar/geometry_msgs
+    ros-lunar/cv_bridge
     ros-lunar/sensor_msgs
+    ros-lunar/rqt_gui_cpp
     ros-lunar/image_transport
+    ros-lunar/rqt_gui
 "
 DEPEND="${RDEPEND}
 "

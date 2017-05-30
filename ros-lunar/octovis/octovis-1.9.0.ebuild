@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/octomap
     ros-lunar/catkin
-    x11-libs/libQGLViewer
     dev-qt/qtgui
     dev-qt/qtopengl
+    x11-libs/libQGLViewer
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtopengl
-    dev-qt/qtcore
     x11-libs/libQGLViewer
+    dev-qt/qtcore
+    dev-qt/qtopengl
 "
 
 SLOT="0/0"

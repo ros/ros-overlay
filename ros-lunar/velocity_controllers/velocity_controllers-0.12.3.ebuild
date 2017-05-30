@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/control_msgs
     ros-lunar/control_toolbox
+    ros-lunar/urdf
+    ros-lunar/control_msgs
+    ros-lunar/angles
+    ros-lunar/forward_command_controller
     ros-lunar/realtime_tools
     ros-lunar/controller_interface
-    ros-lunar/urdf
-    ros-lunar/forward_command_controller
-    ros-lunar/angles
 "
 DEPEND="${RDEPEND}
 "

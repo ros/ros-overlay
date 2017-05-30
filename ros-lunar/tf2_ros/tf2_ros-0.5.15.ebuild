@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf2_py
-    ros-lunar/rospy
-    ros-lunar/actionlib_msgs
-    ros-lunar/rosgraph
-    ros-lunar/tf2
     ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
-    ros-lunar/roscpp
+    ros-lunar/tf2
     ros-lunar/xmlrpcpp
-    ros-lunar/message_filters
-    ros-lunar/actionlib
+    ros-lunar/rospy
+    ros-lunar/std_msgs
     ros-lunar/tf2_msgs
+    ros-lunar/tf2_py
+    ros-lunar/actionlib
+    ros-lunar/actionlib_msgs
+    ros-lunar/message_filters
+    ros-lunar/rosgraph
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "

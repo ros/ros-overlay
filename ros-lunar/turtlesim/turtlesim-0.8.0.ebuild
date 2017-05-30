@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/geometry_msgs
+    ros-lunar/roslib
     ros-lunar/rosconsole
-    ros-lunar/std_srvs
+    ros-lunar/std_msgs
+    ros-lunar/message_runtime
     ros-lunar/roscpp_serialization
     ros-lunar/rostime
-    ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
     ros-lunar/roscpp
-    ros-lunar/message_runtime
-    ros-lunar/roslib
+    ros-lunar/std_srvs
     dev-qt/qtcore
     dev-qt/qtgui
 "

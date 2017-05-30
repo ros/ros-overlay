@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/octomap_msgs
-    ros-lunar/rostime
-    ros-lunar/random_numbers
-    ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
-    ros-lunar/urdf
-    ros-lunar/geometric_shapes
-    ros-lunar/kdl_parser
-    ros-lunar/moveit_msgs
-    ros-lunar/visualization_msgs
-    ros-lunar/eigen_stl_containers
-    ros-lunar/srdfdom
     ros-lunar/trajectory_msgs
-    ros-lunar/sensor_msgs
+    ros-lunar/random_numbers
+    ros-lunar/moveit_msgs
     ros-lunar/octomap
+    ros-lunar/sensor_msgs
+    ros-lunar/srdfdom
+    ros-lunar/geometric_shapes
+    ros-lunar/rostime
+    ros-lunar/geometry_msgs
     ros-lunar/eigen_conversions
-    media-libs/assimp
-    dev-libs/boost
-    dev-cpp/eigen
-    dev-libs/console_bridge
-    sci-libs/fcl
-    dev-libs/urdfdom_headers
+    ros-lunar/urdf
+    ros-lunar/std_msgs
+    ros-lunar/eigen_stl_containers
+    ros-lunar/octomap_msgs
+    ros-lunar/kdl_parser
+    ros-lunar/visualization_msgs
     dev-libs/urdfdom
+    dev-libs/console_bridge
+    dev-libs/boost
+    dev-libs/urdfdom_headers
+    sci-libs/fcl
+    dev-cpp/eigen
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
     ros-lunar/shape_msgs

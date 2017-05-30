@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/warehouse_ros
+    ros-lunar/roscpp
     ros-lunar/rosconsole
     ros-lunar/moveit_ros_planning
-    ros-lunar/warehouse_ros
     ros-lunar/tf
-    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "

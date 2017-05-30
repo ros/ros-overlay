@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosbag
     ros-lunar/roslib
-    ros-lunar/catkin
     ros-lunar/genmsg
+    ros-lunar/catkin
+    ros-lunar/rosbag
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

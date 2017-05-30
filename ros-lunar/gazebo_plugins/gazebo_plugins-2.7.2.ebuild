@@ -12,30 +12,30 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/polled_camera
-    ros-lunar/roscpp
+    ros-lunar/rospy
     ros-lunar/nodelet
-    ros-lunar/tf
+    ros-lunar/trajectory_msgs
+    ros-lunar/angles
     ros-lunar/std_srvs
-    ros-lunar/camera_info_manager
-    ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
-    ros-lunar/urdf
+    ros-lunar/sensor_msgs
+    ros-lunar/rosconsole
+    ros-lunar/diagnostic_updater
     ros-lunar/tf2_ros
     ros-lunar/image_transport
-    ros-lunar/diagnostic_updater
-    ros-lunar/rosconsole
-    ros-lunar/gazebo_dev
-    ros-lunar/nav_msgs
+    ros-lunar/camera_info_manager
+    ros-lunar/geometry_msgs
+    ros-lunar/urdf
     ros-lunar/dynamic_reconfigure
-    ros-lunar/gazebo_msgs
-    ros-lunar/cv_bridge
-    ros-lunar/rosgraph_msgs
-    ros-lunar/rospy
-    ros-lunar/trajectory_msgs
-    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
+    ros-lunar/polled_camera
     ros-lunar/message_runtime
-    ros-lunar/angles
+    ros-lunar/gazebo_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/rosgraph_msgs
+    ros-lunar/tf
+    ros-lunar/cv_bridge
+    ros-lunar/gazebo_dev
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roscpp
     ros-lunar/rosconsole
     ros-lunar/orocos_kdl
-    ros-lunar/roscpp
     ros-lunar/urdf
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
     ros-lunar/cmake_modules
+    ros-lunar/rostest
 "
 
 SLOT="0/0"

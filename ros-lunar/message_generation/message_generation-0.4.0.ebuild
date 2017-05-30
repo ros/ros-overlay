@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/genmsg
-    ros-lunar/gennodejs
     ros-lunar/geneus
+    ros-lunar/genlisp
+    ros-lunar/gennodejs
     ros-lunar/gencpp
     ros-lunar/genpy
-    ros-lunar/genlisp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_robot_plugins
-    ros-lunar/ros_base
     ros-lunar/rviz
+    ros-lunar/rqt_robot_plugins
     ros-lunar/rqt_common_plugins
+    ros-lunar/ros_base
 "
 DEPEND="${RDEPEND}
 "

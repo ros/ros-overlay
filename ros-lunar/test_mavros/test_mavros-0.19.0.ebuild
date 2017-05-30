@@ -7,18 +7,18 @@ DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_mavros/0.19.0-0.tar.gz"
 
-LICENSE="||( BSD GPLv3 LGPLv3 )"
+LICENSE="|| ( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/control_toolbox
     ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
-    ros-lunar/mavros_extras
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
-    ros-lunar/eigen_conversions
     ros-lunar/mavros
+    ros-lunar/eigen_conversions
+    ros-lunar/control_toolbox
+    ros-lunar/std_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/roscpp
+    ros-lunar/mavros_extras
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

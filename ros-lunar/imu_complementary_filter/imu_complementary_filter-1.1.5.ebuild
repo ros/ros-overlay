@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_filters
-    ros-lunar/std_msgs
     ros-lunar/sensor_msgs
     ros-lunar/tf
+    ros-lunar/std_msgs
     ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}

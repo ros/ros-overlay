@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/roscpp
-    ros-lunar/nodelet
-    ros-lunar/message_filters
     ros-lunar/dynamic_reconfigure
+    ros-lunar/nodelet
+    ros-lunar/pluginlib
+    ros-lunar/message_filters
+    ros-lunar/roscpp
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

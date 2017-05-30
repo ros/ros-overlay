@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/hardware_interface
     ros-lunar/roscpp
     ros-lunar/urdf
+    ros-lunar/hardware_interface
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}

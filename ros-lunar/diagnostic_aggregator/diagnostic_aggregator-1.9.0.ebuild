@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/diagnostic_msgs
+    ros-lunar/xmlrpcpp
     ros-lunar/bondcpp
     ros-lunar/rospy
     ros-lunar/pluginlib
     ros-lunar/bondpy
     ros-lunar/roscpp
-    ros-lunar/xmlrpcpp
-    ros-lunar/diagnostic_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

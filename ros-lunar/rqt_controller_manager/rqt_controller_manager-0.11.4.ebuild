@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui
     ros-lunar/controller_manager
+    ros-lunar/rqt_gui
 "
 DEPEND="${RDEPEND}
 "

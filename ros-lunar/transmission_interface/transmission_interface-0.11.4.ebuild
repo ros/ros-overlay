@@ -12,13 +12,13 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
     ros-lunar/roscpp
+    ros-lunar/pluginlib
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-lunar/hardware_interface
     ros-lunar/cmake_modules
+    ros-lunar/hardware_interface
 "
 
 SLOT="0/0"

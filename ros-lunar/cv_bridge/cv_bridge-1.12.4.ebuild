@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosconsole
-    ros-lunar/opencv3
     ros-lunar/sensor_msgs
-    dev-libs/boost
+    ros-lunar/opencv3
     dev-lang/python
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
 "

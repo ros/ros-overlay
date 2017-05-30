@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/executive_smach
+    ros-lunar/robot_state_publisher
+    ros-lunar/diagnostics
+    ros-lunar/geometry
     ros-lunar/filters
     ros-lunar/control_msgs
-    ros-lunar/ros_base
-    ros-lunar/robot_model
-    ros-lunar/geometry
     ros-lunar/xacro
-    ros-lunar/diagnostics
-    ros-lunar/robot_state_publisher
-    ros-lunar/executive_smach
+    ros-lunar/robot_model
+    ros-lunar/ros_base
 "
 DEPEND="${RDEPEND}
 "

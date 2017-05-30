@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/visualization_msgs
-    ros-lunar/eigen_stl_containers
-    ros-lunar/resource_retriever
     ros-lunar/random_numbers
     ros-lunar/octomap
+    ros-lunar/resource_retriever
+    ros-lunar/visualization_msgs
     ros-lunar/shape_msgs
-    media-libs/assimp
+    ros-lunar/eigen_stl_containers
     dev-libs/boost
-    dev-cpp/eigen
     media-libs/qhull
     dev-libs/console_bridge
+    dev-cpp/eigen
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
     media-libs/assimp

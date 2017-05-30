@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/robot
-    ros-lunar/common_tutorials
-    ros-lunar/ros_tutorials
-    ros-lunar/viz
-    ros-lunar/visualization_tutorials
     ros-lunar/geometry_tutorials
+    ros-lunar/visualization_tutorials
+    ros-lunar/viz
     ros-lunar/roslint
+    ros-lunar/ros_tutorials
+    ros-lunar/common_tutorials
+    ros-lunar/robot
 "
 DEPEND="${RDEPEND}
 "

@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/filters
-    ros-lunar/pluginlib
-    ros-lunar/laser_geometry
     ros-lunar/sensor_msgs
-    ros-lunar/roscpp
-    ros-lunar/message_filters
-    ros-lunar/tf
+    ros-lunar/laser_geometry
+    ros-lunar/pluginlib
     ros-lunar/angles
+    ros-lunar/roscpp
+    ros-lunar/tf
+    ros-lunar/message_filters
+    ros-lunar/filters
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

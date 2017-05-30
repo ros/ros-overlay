@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rospy
     ros-lunar/std_msgs
     ros-lunar/message_runtime
-    ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
     ros-lunar/message_generation
+    ros-lunar/rostest
 "
 
 SLOT="0/0"

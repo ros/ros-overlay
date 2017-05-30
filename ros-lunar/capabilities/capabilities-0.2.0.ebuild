@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rospy
-    ros-lunar/std_srvs
-    ros-lunar/bondpy
-    ros-lunar/std_msgs
-    ros-lunar/roslaunch
     ros-lunar/nodelet
+    ros-lunar/std_msgs
     ros-lunar/message_runtime
+    ros-lunar/bondpy
+    ros-lunar/roslaunch
+    ros-lunar/std_srvs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
     ros-lunar/message_generation
+    ros-lunar/rostest
 "
 
 SLOT="0/0"

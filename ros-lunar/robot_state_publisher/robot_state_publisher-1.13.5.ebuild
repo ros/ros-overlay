@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
-    ros-lunar/tf2_kdl
-    ros-lunar/rostime
-    ros-lunar/orocos_kdl
     ros-lunar/kdl_parser
-    ros-lunar/sensor_msgs
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
     ros-lunar/tf
     ros-lunar/catkin
+    ros-lunar/rosconsole
+    ros-lunar/orocos_kdl
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/rostime
+    ros-lunar/roscpp
+    ros-lunar/tf2_kdl
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

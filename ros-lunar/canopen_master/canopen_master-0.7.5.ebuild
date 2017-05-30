@@ -12,8 +12,8 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/class_loader
     ros-lunar/socketcan_interface
+    ros-lunar/class_loader
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

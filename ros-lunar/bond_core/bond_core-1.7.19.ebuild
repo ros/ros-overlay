@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/bond
-    ros-lunar/smclib
     ros-lunar/bondpy
+    ros-lunar/smclib
+    ros-lunar/bond
     ros-lunar/bondcpp
 "
 DEPEND="${RDEPEND}

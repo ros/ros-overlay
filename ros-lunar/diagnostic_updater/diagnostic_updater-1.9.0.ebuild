@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/std_msgs
-    ros-lunar/roscpp
     ros-lunar/diagnostic_msgs
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

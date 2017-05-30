@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/realtime_tools
-    ros-lunar/controller_interface
     ros-lunar/hardware_interface
     ros-lunar/controller_manager_msgs
     ros-lunar/pluginlib
+    ros-lunar/controller_interface
 "
 DEPEND="${RDEPEND}
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
+    ros-lunar/moveit_core
+    ros-lunar/tf
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/moveit_msgs
     ros-lunar/moveit_ros_move_group
+    ros-lunar/rosconsole
     ros-lunar/pluginlib
     ros-lunar/actionlib
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/tf
     ros-lunar/roscpp
     ros-lunar/moveit_ros_planning
-    ros-lunar/moveit_core
-    ros-lunar/moveit_msgs
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

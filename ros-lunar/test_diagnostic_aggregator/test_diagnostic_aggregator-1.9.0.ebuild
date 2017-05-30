@@ -15,8 +15,8 @@ RDEPEND="
     ros-lunar/diagnostic_aggregator
     ros-lunar/roscpp
     ros-lunar/rospy
-    ros-lunar/pluginlib
     ros-lunar/diagnostic_msgs
+    ros-lunar/pluginlib
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

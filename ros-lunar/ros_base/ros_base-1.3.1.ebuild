@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/bond_core
-    ros-lunar/pluginlib
     ros-lunar/nodelet_core
     ros-lunar/dynamic_reconfigure
     ros-lunar/ros_core
-    ros-lunar/class_loader
+    ros-lunar/pluginlib
     ros-lunar/actionlib
+    ros-lunar/class_loader
+    ros-lunar/bond_core
 "
 DEPEND="${RDEPEND}
 "

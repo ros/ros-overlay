@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/ros_base
-    ros-lunar/laser_pipeline
-    ros-lunar/perception_pcl
     ros-lunar/image_transport_plugins
     ros-lunar/image_pipeline
-    ros-lunar/image_common
     ros-lunar/vision_opencv
+    ros-lunar/perception_pcl
+    ros-lunar/image_common
+    ros-lunar/laser_pipeline
+    ros-lunar/ros_base
 "
 DEPEND="${RDEPEND}
 "

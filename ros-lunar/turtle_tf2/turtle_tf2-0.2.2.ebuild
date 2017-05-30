@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/tf2
     ros-lunar/geometry_msgs
-    ros-lunar/std_msgs
-    ros-lunar/roscpp
-    ros-lunar/tf2_ros
+    ros-lunar/tf2
     ros-lunar/turtlesim
+    ros-lunar/rospy
+    ros-lunar/std_msgs
+    ros-lunar/tf2_ros
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "

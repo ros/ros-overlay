@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosservice
     ros-lunar/rostest
-    ros-lunar/rosbag
-    ros-lunar/roscpp
-    ros-lunar/roswtf
-    ros-lunar/ros
-    ros-lunar/rosmsg
-    ros-lunar/std_srvs
-    ros-lunar/rosnode
-    ros-lunar/roslaunch
-    ros-lunar/rosparam
-    ros-lunar/rosconsole
-    ros-lunar/rosmaster
     ros-lunar/roslisp
-    ros-lunar/xmlrpcpp
-    ros-lunar/message_filters
-    ros-lunar/rosgraph_msgs
     ros-lunar/rospy
+    ros-lunar/std_srvs
+    ros-lunar/roswtf
+    ros-lunar/xmlrpcpp
+    ros-lunar/rosconsole
+    ros-lunar/rosbag
+    ros-lunar/roslaunch
+    ros-lunar/rosnode
+    ros-lunar/ros
+    ros-lunar/rosmaster
     ros-lunar/rosgraph
-    ros-lunar/topic_tools
     ros-lunar/rosout
+    ros-lunar/rosgraph_msgs
+    ros-lunar/topic_tools
+    ros-lunar/rosmsg
+    ros-lunar/rosservice
+    ros-lunar/rosparam
+    ros-lunar/message_filters
     ros-lunar/rostopic
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "

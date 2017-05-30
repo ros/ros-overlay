@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    dev-cpp/gtest
     dev-python/nose
     dev-python/catkin_pkg
-    dev-cpp/gtest
-    dev-lang/python
     dev-python/empy
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "
