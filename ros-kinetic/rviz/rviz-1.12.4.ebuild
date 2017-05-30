@@ -7,48 +7,48 @@ DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/kinetic/rviz/1.12.4-0.tar.gz"
 
-LICENSE="||( BSD Creative Commons )"
+LICENSE="|| ( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/interactive_markers
+    ros-kinetic/sensor_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/rosconsole
     ros-kinetic/map_msgs
     ros-kinetic/rosbag
     ros-kinetic/pluginlib
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/urdf
-    ros-kinetic/python_qt_binding
-    ros-kinetic/image_transport
-    ros-kinetic/interactive_markers
-    ros-kinetic/rosconsole
-    ros-kinetic/nav_msgs
     ros-kinetic/laser_geometry
-    ros-kinetic/resource_retriever
-    ros-kinetic/message_filters
     ros-kinetic/roslib
-    ros-kinetic/visualization_msgs
-    ros-kinetic/rospy
+    ros-kinetic/nav_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/python_qt_binding
     ros-kinetic/media_export
-    ros-kinetic/sensor_msgs
-    media-libs/assimp
-    dev-cpp/yaml-cpp
+    ros-kinetic/message_filters
+    ros-kinetic/std_msgs
+    ros-kinetic/resource_retriever
+    ros-kinetic/rospy
+    ros-kinetic/urdf
+    ros-kinetic/roscpp
     dev-qt/qtopengl
-    dev-games/ogre
-    dev-qt/qtwidgets
+    dev-qt/qtgui
     dev-libs/tinyxml
-    dev-cpp/eigen
+    dev-qt/qtcore
+    dev-cpp/yaml-cpp
+    media-libs/assimp
     media-libs/mesa
     dev-libs/urdfdom_headers
-    dev-qt/qtgui
-    dev-qt/qtcore
+    dev-games/ogre
+    dev-cpp/eigen
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
-    dev-qt/qtopengl
     media-libs/assimp
+    dev-qt/qtopengl
     dev-qt/qtcore
 "
 
