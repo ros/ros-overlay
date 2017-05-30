@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/wiimote
-    ros-kinetic/spacenav_node
-    ros-kinetic/ps3joy
     ros-kinetic/joy
+    ros-kinetic/ps3joy
+    ros-kinetic/spacenav_node
+    ros-kinetic/wiimote
 "
 DEPEND="${RDEPEND}
 "

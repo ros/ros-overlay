@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/class_loader
     ros-kinetic/urdf_parser_plugin
-    ros-kinetic/roscpp
-    dev-libs/urdfdom_headers
     media-libs/collada-dom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
     ros-kinetic/urdf

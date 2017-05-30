@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_msgs
     ros-kinetic/cmake_modules
-    ros-kinetic/realtime_tools
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/message_runtime
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/realtime_tools
+    ros-kinetic/control_msgs
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

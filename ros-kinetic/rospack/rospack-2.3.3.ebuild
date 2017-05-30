@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-util/rosdep
+    virtual/pkgconfig
     dev-lang/python
+    dev-util/rosdep
     dev-libs/tinyxml
     dev-libs/boost
-    virtual/pkgconfig
     dev-python/catkin_pkg
 "
 DEPEND="${RDEPEND}

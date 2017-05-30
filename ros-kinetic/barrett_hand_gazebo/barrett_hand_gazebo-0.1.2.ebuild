@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/barrett_hand_description
-    ros-kinetic/gazebo_ros
     ros-kinetic/roscpp
+    ros-kinetic/gazebo_ros
 "
 DEPEND="${RDEPEND}
 "

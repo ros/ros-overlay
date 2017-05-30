@@ -12,9 +12,9 @@ LICENSE="LGPL / BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rtt
     ros-indigo/orocos_kdl
     ros-indigo/ocl
-    ros-indigo/rtt
 "
 DEPEND="${RDEPEND}
 "

@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_config
     ros-kinetic/ecl_concepts
-    ros-kinetic/ecl_time
-    ros-kinetic/ecl_exceptions
     ros-kinetic/ecl_errors
-    ros-kinetic/ecl_license
-    ros-kinetic/ecl_build
+    ros-kinetic/ecl_config
     ros-kinetic/ecl_utilities
+    ros-kinetic/ecl_time
+    ros-kinetic/ecl_build
+    ros-kinetic/ecl_exceptions
+    ros-kinetic/ecl_license
 "
 DEPEND="${RDEPEND}
 "

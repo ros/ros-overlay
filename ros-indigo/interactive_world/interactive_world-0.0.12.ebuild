@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/interactive_world_tools
     ros-indigo/interactive_world_parser
     ros-indigo/jinteractiveworld
     ros-indigo/interactive_world_msgs
+    ros-indigo/interactive_world_tools
 "
 DEPEND="${RDEPEND}
 "

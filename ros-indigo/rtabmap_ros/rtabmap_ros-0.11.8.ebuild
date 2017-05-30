@@ -12,34 +12,34 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/class_loader
-    ros-indigo/costmap_2d
-    ros-indigo/pcl_conversions
-    ros-indigo/tf
-    ros-indigo/rtabmap
-    ros-indigo/std_srvs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/tf2_ros
-    ros-indigo/image_transport
-    ros-indigo/tf_conversions
     ros-indigo/nav_msgs
-    ros-indigo/image_transport_plugins
     ros-indigo/laser_geometry
+    ros-indigo/image_transport_plugins
+    ros-indigo/std_msgs
     ros-indigo/rviz
-    ros-indigo/octomap_ros
-    ros-indigo/message_filters
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/cv_bridge
-    ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/move_base_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/tf2_ros
+    ros-indigo/tf_conversions
+    ros-indigo/rtabmap
+    ros-indigo/image_transport
     ros-indigo/stereo_msgs
     ros-indigo/eigen_conversions
+    ros-indigo/sensor_msgs
+    ros-indigo/pcl_conversions
+    ros-indigo/cv_bridge
+    ros-indigo/costmap_2d
+    ros-indigo/nodelet
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
+    ros-indigo/move_base_msgs
+    ros-indigo/roscpp
+    ros-indigo/octomap_ros
+    ros-indigo/std_srvs
+    ros-indigo/visualization_msgs
+    ros-indigo/tf
+    ros-indigo/class_loader
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/pcl_ros
 "
 DEPEND="${RDEPEND}
     sci-libs/pcl

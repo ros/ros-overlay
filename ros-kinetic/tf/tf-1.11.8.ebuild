@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/roswtf
     ros-kinetic/tf2
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf2_ros
     ros-kinetic/message_filters
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf2_ros
+    ros-kinetic/rosconsole
+    ros-kinetic/roswtf
     media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
-    ros-kinetic/message_generation
     ros-kinetic/angles
+    ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

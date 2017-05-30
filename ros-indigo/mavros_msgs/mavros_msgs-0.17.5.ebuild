@@ -7,7 +7,7 @@ DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/indigo/mavros_msgs/0.17.5-0.tar.gz"
 
-LICENSE="||( GPLv3 LGPLv3 BSD )"
+LICENSE="|| ( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="

@@ -16,9 +16,9 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/cmake_modules
     ros-indigo/roslint
     ros-indigo/eigen_conversions
-    ros-indigo/cmake_modules
 "
 
 SLOT="0/0"

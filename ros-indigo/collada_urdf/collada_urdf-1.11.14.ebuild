@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
-    ros-indigo/angles
     ros-indigo/geometric_shapes
-    ros-indigo/tf
-    ros-indigo/resource_retriever
-    ros-indigo/urdf
+    ros-indigo/angles
     ros-indigo/collada_parser
-    dev-libs/urdfdom_headers
+    ros-indigo/resource_retriever
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/tf
     media-libs/collada-dom
+    dev-libs/urdfdom_headers
     dev-libs/urdfdom
     media-libs/assimp
 "

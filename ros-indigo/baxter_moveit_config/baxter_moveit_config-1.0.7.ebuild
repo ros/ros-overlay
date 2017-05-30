@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/moveit_simple_controller_manager
     ros-indigo/moveit_ros_move_group
     ros-indigo/baxter_description
-    ros-indigo/moveit_simple_controller_manager
 "
 DEPEND="${RDEPEND}
 "

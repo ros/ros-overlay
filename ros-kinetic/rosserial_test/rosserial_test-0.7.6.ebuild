@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
     ros-kinetic/rosserial_msgs
-    ros-kinetic/rosserial_server
     ros-kinetic/rosserial_client
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/rosserial_python
+    ros-kinetic/rostest
+    ros-kinetic/rosserial_server
     dev-cpp/gtest
 "
 DEPEND="${RDEPEND}

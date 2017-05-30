@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/self_test
     ros-indigo/message_generation
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
-    ros-indigo/diagnostic_updater
-    ros-indigo/tf
     ros-indigo/diagnostic_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

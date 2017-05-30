@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/alexandria
     ros-indigo/trivial_gray_streams
+    ros-indigo/alexandria
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

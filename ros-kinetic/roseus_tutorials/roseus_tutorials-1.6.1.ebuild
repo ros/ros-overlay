@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ar_track_alvar
-    ros-kinetic/visualization_msgs
-    ros-kinetic/pr2eus
     ros-kinetic/checkerboard_detector
-    ros-kinetic/opencv_apps
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/image_view2
     ros-kinetic/image_proc
+    ros-kinetic/ar_track_alvar
+    ros-kinetic/pr2eus
+    ros-kinetic/image_view2
     ros-kinetic/posedetection_msgs
+    ros-kinetic/opencv_apps
+    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_recognition_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roseus

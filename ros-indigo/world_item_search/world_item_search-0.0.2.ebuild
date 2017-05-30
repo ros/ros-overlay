@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/worldlib
-    ros-indigo/roslib
     ros-indigo/roscpp
+    ros-indigo/roslib
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
     ros-indigo/camera_info_manager
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/image_transport
-    ros-indigo/diagnostic_updater
     ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/pluginlib
     ros-indigo/libfreenect
+    ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/diagnostic_updater
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}

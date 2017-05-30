@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/yocs_velocity_smoother
+    ros-indigo/geometry_msgs
     ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/ecl_time
     ros-indigo/kobuki_msgs
+    ros-indigo/roscpp
+    ros-indigo/ecl_time
+    ros-indigo/std_msgs
     ros-indigo/std_srvs
     ros-indigo/ecl_exceptions
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/ecl_threads
-    ros-indigo/yocs_velocity_smoother
 "
 DEPEND="${RDEPEND}
 "

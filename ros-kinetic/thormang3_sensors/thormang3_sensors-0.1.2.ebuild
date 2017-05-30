@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/laser_assembler
-    ros-kinetic/pcl_ros
     ros-kinetic/sensor_msgs
+    ros-kinetic/laser_assembler
     ros-kinetic/roscpp
+    ros-kinetic/pcl_ros
 "
 DEPEND="${RDEPEND}
 "

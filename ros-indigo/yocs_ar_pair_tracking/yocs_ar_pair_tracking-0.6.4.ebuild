@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/yocs_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/ar_track_alvar_msgs
     ros-indigo/yocs_math_toolkit
     ros-indigo/roscpp
-    ros-indigo/yocs_msgs
     ros-indigo/std_msgs
-    ros-indigo/yocs_ar_marker_tracking
-    ros-indigo/ar_track_alvar_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/yocs_ar_marker_tracking
 "
 DEPEND="${RDEPEND}
 "

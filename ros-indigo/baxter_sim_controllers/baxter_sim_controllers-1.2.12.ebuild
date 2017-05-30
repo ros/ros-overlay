@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/controller_interface
-    ros-indigo/effort_controllers
-    ros-indigo/control_toolbox
     ros-indigo/baxter_core_msgs
+    ros-indigo/effort_controllers
+    ros-indigo/controller_interface
+    ros-indigo/control_toolbox
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}

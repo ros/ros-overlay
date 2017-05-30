@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/mk
+    ros-kinetic/cmake_modules
     ros-kinetic/rospack
     ros-kinetic/rosbuild
-    ros-kinetic/cmake_modules
+    ros-kinetic/mk
     sys-devel/libtool
 "
 

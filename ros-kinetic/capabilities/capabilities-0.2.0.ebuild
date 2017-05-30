@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/std_srvs
-    ros-kinetic/bondpy
-    ros-kinetic/std_msgs
-    ros-kinetic/roslaunch
     ros-kinetic/nodelet
+    ros-kinetic/bondpy
+    ros-kinetic/rospy
+    ros-kinetic/roslaunch
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

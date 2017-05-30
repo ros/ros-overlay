@@ -12,11 +12,11 @@ LICENSE="Apache2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/abb_driver
+    ros-indigo/rviz
+    ros-indigo/robot_state_publisher
     ros-indigo/xacro
     ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/rviz
+    ros-indigo/abb_driver
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

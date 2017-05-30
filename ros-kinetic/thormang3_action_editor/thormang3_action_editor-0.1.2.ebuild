@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/robotis_framework_common
-    ros-kinetic/thormang3_action_module
+    ros-kinetic/robotis_controller
     ros-kinetic/robotis_controller_msgs
     ros-kinetic/roscpp
-    ros-kinetic/robotis_controller
+    ros-kinetic/thormang3_action_module
     sys-libs/ncurses
 "
 DEPEND="${RDEPEND}

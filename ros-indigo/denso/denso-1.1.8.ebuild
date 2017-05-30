@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/vs060_moveit_config
     ros-indigo/denso_controller
+    ros-indigo/vs060
     ros-indigo/denso_launch
     ros-indigo/vs060_gazebo
-    ros-indigo/vs060
-    ros-indigo/vs060_moveit_config
 "
 DEPEND="${RDEPEND}
 "

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joint_state_controller
-    ros-indigo/std_srvs
-    ros-indigo/effort_controllers
-    ros-indigo/gazebo_ros
-    ros-indigo/std_msgs
-    ros-indigo/velocity_controllers
-    ros-indigo/roscpp
-    ros-indigo/agvs_description
-    ros-indigo/agvs_pad
-    ros-indigo/tf
     ros-indigo/agvs_robot_control
+    ros-indigo/gazebo_ros
+    ros-indigo/agvs_pad
+    ros-indigo/joint_state_controller
+    ros-indigo/roscpp
+    ros-indigo/effort_controllers
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/velocity_controllers
+    ros-indigo/agvs_description
 "
 DEPEND="${RDEPEND}
 "

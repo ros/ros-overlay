@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/geometry_msgs
     ros-kinetic/actionlib
     ros-kinetic/actionlib_msgs
-    ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
     ros-kinetic/tf2_ros
     ros-kinetic/tf

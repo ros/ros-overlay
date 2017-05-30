@@ -13,10 +13,10 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/sensor_msgs
     ros-kinetic/nav2d_navigator
     ros-kinetic/nav2d_operator
     ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

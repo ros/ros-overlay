@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/mrpt_reactivenav2d
     ros-indigo/mrpt_local_obstacles
     ros-indigo/mrpt_msgs
+    ros-indigo/mrpt_map
+    ros-indigo/mrpt_tutorials
     ros-indigo/mrpt_bridge
     ros-indigo/mrpt_localization
     ros-indigo/mrpt_rawlog
-    ros-indigo/mrpt_tutorials
-    ros-indigo/mrpt_reactivenav2d
-    ros-indigo/mrpt_map
 "
 DEPEND="${RDEPEND}
 "

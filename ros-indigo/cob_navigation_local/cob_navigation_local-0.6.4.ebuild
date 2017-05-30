@@ -12,9 +12,9 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rviz
     ros-indigo/move_base
     ros-indigo/cob_navigation_config
-    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
 "

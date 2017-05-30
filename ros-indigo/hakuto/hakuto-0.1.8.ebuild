@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/tetris_launch
-    ros-indigo/tetris_description
     ros-indigo/tetris_gazebo
+    ros-indigo/tetris_description
 "
 DEPEND="${RDEPEND}
 "

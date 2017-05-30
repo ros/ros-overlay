@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/warehouse_ros
+    ros-kinetic/roscpp
     ros-kinetic/rosconsole
     ros-kinetic/moveit_ros_planning
-    ros-kinetic/warehouse_ros
     ros-kinetic/tf
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/barrett_hand_gazebo
     ros-indigo/barrett_hand_control
+    ros-indigo/barrett_hand_gazebo
 "
 DEPEND="${RDEPEND}
 "

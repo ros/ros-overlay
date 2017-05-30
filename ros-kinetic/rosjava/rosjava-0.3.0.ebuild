@@ -12,14 +12,14 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosjava_test_msgs
+    ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_bootstrap
-    ros-kinetic/zeroconf_jmdns_suite
+    ros-kinetic/rosjava_extras
+    ros-kinetic/rosjava_test_msgs
     ros-kinetic/rosjava_core
     ros-kinetic/genjava
-    ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_messages
-    ros-kinetic/rosjava_extras
+    ros-kinetic/zeroconf_jmdns_suite
 "
 DEPEND="${RDEPEND}
 "

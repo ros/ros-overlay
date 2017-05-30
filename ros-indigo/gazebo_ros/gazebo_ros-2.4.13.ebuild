@@ -12,18 +12,18 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/message_generation
+    ros-indigo/geometry_msgs
+    ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
     ros-indigo/gazebo_msgs
     ros-indigo/rosgraph_msgs
-    ros-indigo/std_srvs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/roslib
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/message_generation
-    ros-indigo/roscpp
-    ros-indigo/tf
-    dev-libs/tinyxml
     sci-electronics/gazebo
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

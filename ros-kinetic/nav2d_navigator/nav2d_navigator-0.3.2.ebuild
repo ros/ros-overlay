@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pluginlib
-    ros-kinetic/std_srvs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/tf
     ros-kinetic/geometry_msgs
-    ros-kinetic/nav2d_operator
-    ros-kinetic/roscpp
-    ros-kinetic/nav2d_msgs
-    ros-kinetic/message_runtime
     ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/nav2d_operator
+    ros-kinetic/std_srvs
+    ros-kinetic/nav2d_msgs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

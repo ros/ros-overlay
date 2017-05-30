@@ -15,9 +15,9 @@ RDEPEND="
     ros-indigo/rqt_robot_dashboard
     ros-indigo/rospy
     ros-indigo/rqt_gui
-    ros-indigo/create_node
-    ros-indigo/rqt_gui_py
     ros-indigo/diagnostic_msgs
+    ros-indigo/rqt_gui_py
+    ros-indigo/create_node
 "
 DEPEND="${RDEPEND}
 "

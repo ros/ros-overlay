@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
-    ros-lunar/sensor_msgs
     ros-lunar/message_runtime
+    ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation

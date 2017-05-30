@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_planning
+    ros-indigo/roscpp
     ros-indigo/roslang
+    ros-indigo/moveit_ros_planning
     ros-indigo/open_controllers_interface
     ros-indigo/moveit_commander
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

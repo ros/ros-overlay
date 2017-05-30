@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
     ros-kinetic/cmake_modules
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/robotis_controller_msgs
-    ros-kinetic/thormang3_offset_tuner_msgs
-    ros-kinetic/thormang3_base_module
     ros-kinetic/robotis_controller
+    ros-kinetic/thormang3_base_module
+    ros-kinetic/thormang3_offset_tuner_msgs
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0/0"

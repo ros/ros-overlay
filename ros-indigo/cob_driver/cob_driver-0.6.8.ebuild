@@ -12,24 +12,24 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_relayboard
-    ros-indigo/cob_mimic
     ros-indigo/cob_sound
-    ros-indigo/cob_camera_sensors
-    ros-indigo/cob_light
-    ros-indigo/cob_bms_driver
-    ros-indigo/cob_generic_can
     ros-indigo/cob_base_drive_chain
-    ros-indigo/cob_elmo_homing
-    ros-indigo/cob_head_axis
-    ros-indigo/cob_undercarriage_ctrl
-    ros-indigo/cob_utilities
-    ros-indigo/cob_sick_lms1xx
     ros-indigo/cob_sick_s300
-    ros-indigo/cob_scan_unifier
-    ros-indigo/cob_voltage_control
-    ros-indigo/cob_phidgets
+    ros-indigo/cob_head_axis
+    ros-indigo/cob_generic_can
+    ros-indigo/cob_sick_lms1xx
+    ros-indigo/cob_light
     ros-indigo/cob_canopen_motor
+    ros-indigo/cob_undercarriage_ctrl
+    ros-indigo/cob_scan_unifier
+    ros-indigo/cob_mimic
+    ros-indigo/cob_bms_driver
+    ros-indigo/cob_voltage_control
+    ros-indigo/cob_utilities
+    ros-indigo/cob_camera_sensors
+    ros-indigo/cob_relayboard
+    ros-indigo/cob_phidgets
+    ros-indigo/cob_elmo_homing
 "
 DEPEND="${RDEPEND}
 "

@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_gazebo_thermal_camera
     ros-kinetic/hector_gazebo_plugins
+    ros-kinetic/hector_gazebo_thermal_camera
     ros-kinetic/hector_gazebo_worlds
 "
 DEPEND="${RDEPEND}

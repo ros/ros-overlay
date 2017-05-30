@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf
     ros-kinetic/move_base_msgs
     ros-kinetic/actionlib
+    ros-kinetic/tf
     ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}

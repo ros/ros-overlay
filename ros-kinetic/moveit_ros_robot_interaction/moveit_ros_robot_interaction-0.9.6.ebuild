@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/pluginlib
     ros-kinetic/roscpp
-    ros-kinetic/moveit_ros_planning
     ros-kinetic/eigen_conversions
+    ros-kinetic/moveit_ros_planning
     ros-kinetic/tf
     ros-kinetic/interactive_markers
 "

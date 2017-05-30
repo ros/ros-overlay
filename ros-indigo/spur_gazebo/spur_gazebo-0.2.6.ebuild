@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/gazebo_ros
+    ros-indigo/turtlebot_gazebo
     ros-indigo/gazebo_ros_control
     ros-indigo/effort_controllers
-    ros-indigo/turtlebot_gazebo
-    ros-indigo/gazebo_ros
     ros-indigo/spur_controller
-    ros-indigo/spur_description
     ros-indigo/robot_state_publisher
+    ros-indigo/spur_description
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hrpsys_ros_bridge
-    ros-indigo/turtlebot_description
-    ros-indigo/gazebo_ros
     ros-indigo/collada_urdf_jsk_patch
     ros-indigo/xacro
+    ros-indigo/gazebo_ros
     ros-indigo/hrpsys_gazebo_msgs
+    ros-indigo/turtlebot_description
+    ros-indigo/hrpsys_ros_bridge
 "
 DEPEND="${RDEPEND}
 "

@@ -12,14 +12,14 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_external_dependencies
-    ros-indigo/ros_ethercat_hardware
-    ros-indigo/sr_robot_lib
     ros-indigo/sr_robot_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
     ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/sr_external_dependencies
+    ros-indigo/sr_robot_lib
+    ros-indigo/std_msgs
+    ros-indigo/ros_ethercat_hardware
     sys-devel/binutils
 "
 DEPEND="${RDEPEND}

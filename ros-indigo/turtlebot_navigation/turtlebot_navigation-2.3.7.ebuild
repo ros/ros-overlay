@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/turtlebot_bringup
+    ros-indigo/amcl
     ros-indigo/gmapping
     ros-indigo/dwa_local_planner
-    ros-indigo/turtlebot_bringup
+    ros-indigo/roscpp
     ros-indigo/map_server
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/amcl
-    ros-indigo/move_base
     ros-indigo/tf
+    ros-indigo/move_base
 "
 DEPEND="${RDEPEND}
 "

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ecl_mpl
-    ros-indigo/ecl_concepts
     ros-indigo/ecl_license
+    ros-indigo/ecl_concepts
 "
 DEPEND="${RDEPEND}
 "

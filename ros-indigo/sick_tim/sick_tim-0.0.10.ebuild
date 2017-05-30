@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_updater
     ros-indigo/sensor_msgs
     ros-indigo/dynamic_reconfigure
     ros-indigo/roscpp
+    ros-indigo/diagnostic_updater
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}

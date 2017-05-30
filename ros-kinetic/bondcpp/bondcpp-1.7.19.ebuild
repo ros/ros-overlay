@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/bond
     ros-kinetic/smclib
     ros-kinetic/roscpp
+    ros-kinetic/bond
     dev-libs/boost
     sys-apps/util-linux
 "

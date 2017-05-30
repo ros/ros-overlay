@@ -12,31 +12,31 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/polled_camera
-    ros-indigo/roscpp
-    ros-indigo/driver_base
-    ros-indigo/gazebo_plugins
-    ros-indigo/tf
-    ros-indigo/pr2_controller_manager
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/urdf
-    ros-indigo/image_transport
-    ros-indigo/diagnostic_updater
+    ros-indigo/angles
     ros-indigo/nav_msgs
-    ros-indigo/orocos_kdl
-    ros-indigo/diagnostic_msgs
-    ros-indigo/gazebo_msgs
-    ros-indigo/cv_bridge
-    ros-indigo/rospy
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/gazebo_ros
+    ros-indigo/driver_base
+    ros-indigo/std_msgs
+    ros-indigo/pr2_controller_manager
     ros-indigo/pr2_msgs
-    ros-indigo/pr2_hardware_interface
-    ros-indigo/sensor_msgs
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/image_transport
     ros-indigo/message_generation
     ros-indigo/message_runtime
-    ros-indigo/angles
+    ros-indigo/diagnostic_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/rospy
+    ros-indigo/polled_camera
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/tf
+    ros-indigo/diagnostic_updater
+    ros-indigo/gazebo_ros
+    ros-indigo/geometry_msgs
+    ros-indigo/pr2_hardware_interface
+    ros-indigo/orocos_kdl
+    ros-indigo/gazebo_plugins
+    ros-indigo/gazebo_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

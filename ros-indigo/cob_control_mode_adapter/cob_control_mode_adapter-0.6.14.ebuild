@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
     ros-indigo/controller_manager_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

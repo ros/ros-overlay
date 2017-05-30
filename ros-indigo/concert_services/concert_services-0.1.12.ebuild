@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/concert_service_gazebo
-    ros-indigo/concert_service_admin
-    ros-indigo/concert_service_image_stream
-    ros-indigo/concert_service_teleop
-    ros-indigo/concert_service_turtlesim
     ros-indigo/concert_service_waypoint_navigation
     ros-indigo/concert_service_indoor_2d_map_prep
+    ros-indigo/concert_service_teleop
+    ros-indigo/concert_service_image_stream
+    ros-indigo/concert_service_turtlesim
+    ros-indigo/concert_service_admin
 "
 DEPEND="${RDEPEND}
 "

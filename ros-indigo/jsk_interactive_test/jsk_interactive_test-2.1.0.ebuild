@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/jsk_interactive_marker
+    ros-indigo/visualization_msgs
     ros-indigo/jsk_interactive
     ros-indigo/rospy
     ros-indigo/rviz
-    ros-indigo/visualization_msgs
-    ros-indigo/jsk_interactive_marker
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosbuild

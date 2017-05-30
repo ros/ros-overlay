@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pcl_conversions
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/control_msgs
+    ros-indigo/moveit_planners_ompl
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/geometry_msgs
+    ros-indigo/xacro
+    ros-indigo/actionlib
     ros-indigo/std_srvs
     ros-indigo/actionlib_msgs
-    ros-indigo/carl_description
-    ros-indigo/xacro
-    ros-indigo/geometry_msgs
-    ros-indigo/moveit_ros_planning_interface
-    ros-indigo/pcl_ros
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/wpi_jaco_msgs
-    ros-indigo/moveit_planners_ompl
     ros-indigo/message_runtime
-    ros-indigo/actionlib
+    ros-indigo/pcl_ros
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/roscpp
+    ros-indigo/rail_manipulation_msgs
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/control_msgs
+    ros-indigo/carl_description
+    ros-indigo/robot_state_publisher
+    ros-indigo/pcl_conversions
+    ros-indigo/wpi_jaco_msgs
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

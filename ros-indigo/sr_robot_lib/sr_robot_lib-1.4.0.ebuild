@@ -12,19 +12,19 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/sr_external_dependencies
-    ros-indigo/sr_hardware_interface
-    ros-indigo/std_srvs
     ros-indigo/sr_ethercat_hand_config
-    ros-indigo/realtime_tools
     ros-indigo/sr_robot_msgs
+    ros-indigo/sr_self_test
     ros-indigo/controller_manager_msgs
+    ros-indigo/rospy
     ros-indigo/sr_utilities
     ros-indigo/roscpp
-    ros-indigo/diagnostic_updater
-    ros-indigo/sr_self_test
+    ros-indigo/sr_external_dependencies
     ros-indigo/sr_mechanism_model
+    ros-indigo/realtime_tools
+    ros-indigo/std_srvs
+    ros-indigo/sr_hardware_interface
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

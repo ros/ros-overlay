@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/grid_map_msgs
     ros-indigo/filters
-    ros-indigo/grid_map_core
     ros-indigo/grid_map_ros
+    ros-indigo/grid_map_core
 "
 DEPEND="${RDEPEND}
 "

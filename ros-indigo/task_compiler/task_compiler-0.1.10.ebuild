@@ -14,9 +14,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roseus_smach
     ros-indigo/pddl_planner
     ros-indigo/smach_viewer
-    ros-indigo/roseus_smach
 "
 DEPEND="${RDEPEND}
 "

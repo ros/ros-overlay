@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/turtlebot_msgs
-    ros-indigo/turtlebot_teleop
-    ros-indigo/turtlebot_bringup
-    ros-indigo/topic_tools
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/depth_image_proc
     ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/topic_tools
+    ros-indigo/depth_image_proc
+    ros-indigo/turtlebot_msgs
+    ros-indigo/roscpp
+    ros-indigo/turtlebot_teleop
+    ros-indigo/visualization_msgs
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

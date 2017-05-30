@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/python_ethernet_rmp
     ros-indigo/rmp_msgs
     ros-indigo/rospy
-    ros-indigo/python_ethernet_rmp
 "
 DEPEND="${RDEPEND}
 "

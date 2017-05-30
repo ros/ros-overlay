@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/romeo_bringup
-    ros-kinetic/romeo_description
     ros-kinetic/romeo_sensors_py
+    ros-kinetic/romeo_description
 "
 DEPEND="${RDEPEND}
 "

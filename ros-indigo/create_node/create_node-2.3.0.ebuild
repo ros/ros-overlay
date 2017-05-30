@@ -14,15 +14,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/python_orocos_kdl
+    ros-indigo/dynamic_reconfigure
     ros-indigo/nav_msgs
     ros-indigo/create_driver
     ros-indigo/geometry_msgs
-    ros-indigo/tf
+    ros-indigo/rospy
     ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
     ros-indigo/diagnostic_msgs
+    ros-indigo/python_orocos_kdl
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

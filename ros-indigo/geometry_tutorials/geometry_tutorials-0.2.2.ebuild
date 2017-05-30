@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtle_tf2
     ros-indigo/turtle_tf
+    ros-indigo/turtle_tf2
 "
 DEPEND="${RDEPEND}
 "

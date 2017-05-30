@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/tf
     ros-indigo/rospy
     ros-indigo/diagnostic_updater
-    ros-indigo/tf
     app-admin/hddtemp
 "
 DEPEND="${RDEPEND}

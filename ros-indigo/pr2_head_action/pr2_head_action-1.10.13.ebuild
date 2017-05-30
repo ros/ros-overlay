@@ -14,16 +14,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/tf_conversions
-    ros-indigo/trajectory_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
     ros-indigo/actionlib
     ros-indigo/orocos_kdl
-    ros-indigo/geometry_msgs
-    ros-indigo/kdl_parser
-    ros-indigo/sensor_msgs
-    ros-indigo/pr2_controllers_msgs
     ros-indigo/roscpp
-    ros-indigo/message_filters
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/kdl_parser
     ros-indigo/tf
+    ros-indigo/pr2_controllers_msgs
 "
 DEPEND="${RDEPEND}
 "

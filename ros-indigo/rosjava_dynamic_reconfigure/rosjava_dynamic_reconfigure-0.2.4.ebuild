@@ -12,8 +12,8 @@ LICENSE="Apache V2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosjava_core
     ros-indigo/dynamic_reconfigure
+    ros-indigo/rosjava_core
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosjava_build_tools

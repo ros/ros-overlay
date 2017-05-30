@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_hardware
-    ros-indigo/ros_ethercat_model
     ros-indigo/roscpp
+    ros-indigo/ros_ethercat_model
+    ros-indigo/ros_ethercat_hardware
 "
 DEPEND="${RDEPEND}
 "

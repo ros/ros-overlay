@@ -12,15 +12,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_script_server
-    ros-indigo/std_srvs
     ros-indigo/cob_sound
+    ros-indigo/cob_script_server
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/cob_light
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/cob_light
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

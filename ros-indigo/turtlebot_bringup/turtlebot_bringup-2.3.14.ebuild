@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/create_node
-    ros-indigo/astra_launch
-    ros-indigo/openni2_launch
-    ros-indigo/rocon_app_manager
-    ros-indigo/turtlebot_capabilities
-    ros-indigo/rocon_bubble_icons
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/kobuki_safety_controller
-    ros-indigo/kobuki_node
-    ros-indigo/robot_state_publisher
-    ros-indigo/robot_pose_ekf
-    ros-indigo/laptop_battery_monitor
     ros-indigo/kobuki_capabilities
+    ros-indigo/kobuki_node
+    ros-indigo/yocs_cmd_vel_mux
     ros-indigo/depthimage_to_laserscan
+    ros-indigo/turtlebot_capabilities
+    ros-indigo/robot_pose_ekf
     ros-indigo/freenect_launch
-    ros-indigo/turtlebot_description
-    ros-indigo/zeroconf_avahi
-    ros-indigo/realsense_camera
     ros-indigo/kobuki_bumper2pc
+    ros-indigo/openni2_launch
+    ros-indigo/turtlebot_description
+    ros-indigo/laptop_battery_monitor
+    ros-indigo/realsense_camera
+    ros-indigo/rocon_app_manager
+    ros-indigo/kobuki_safety_controller
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/rocon_bubble_icons
+    ros-indigo/robot_state_publisher
+    ros-indigo/astra_launch
+    ros-indigo/zeroconf_avahi
+    ros-indigo/create_node
 "
 DEPEND="${RDEPEND}
 "

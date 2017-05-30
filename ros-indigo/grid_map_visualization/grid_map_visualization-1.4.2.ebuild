@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grid_map_core
-    ros-indigo/visualization_msgs
     ros-indigo/nav_msgs
     ros-indigo/grid_map_msgs
     ros-indigo/grid_map_ros
-    ros-indigo/sensor_msgs
+    ros-indigo/grid_map_core
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

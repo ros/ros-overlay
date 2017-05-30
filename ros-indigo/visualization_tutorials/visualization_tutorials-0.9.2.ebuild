@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_marker_tutorials
     ros-indigo/rviz_python_tutorial
-    ros-indigo/interactive_marker_tutorials
     ros-indigo/librviz_tutorial
     ros-indigo/rviz_plugin_tutorials
+    ros-indigo/interactive_marker_tutorials
+    ros-indigo/visualization_marker_tutorials
 "
 DEPEND="${RDEPEND}
 "

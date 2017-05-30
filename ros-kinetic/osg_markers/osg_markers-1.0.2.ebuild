@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslib
     ros-kinetic/visualization_msgs
-    ros-kinetic/tf
     ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/tf
     dev-games/openscenegraph
 "
 DEPEND="${RDEPEND}

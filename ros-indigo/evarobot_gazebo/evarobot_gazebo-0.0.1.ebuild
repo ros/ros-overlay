@@ -12,32 +12,32 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/angles
+    ros-indigo/nav_msgs
+    ros-indigo/driver_base
+    ros-indigo/tf2_ros
+    ros-indigo/rosgraph_msgs
+    ros-indigo/interactive_marker_twist_server
+    ros-indigo/image_transport
+    ros-indigo/message_generation
+    ros-indigo/sensor_msgs
+    ros-indigo/im_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/camera_info_manager
+    ros-indigo/nodelet
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
     ros-indigo/polled_camera
     ros-indigo/roscpp
-    ros-indigo/driver_base
-    ros-indigo/nodelet
-    ros-indigo/tf
-    ros-indigo/hector_gazebo_plugins
-    ros-indigo/std_srvs
-    ros-indigo/camera_info_manager
-    ros-indigo/geometry_msgs
     ros-indigo/urdf
-    ros-indigo/tf2_ros
-    ros-indigo/image_transport
-    ros-indigo/rosconsole
-    ros-indigo/nav_msgs
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/gazebo_msgs
-    ros-indigo/cv_bridge
-    ros-indigo/rosgraph_msgs
-    ros-indigo/rospy
-    ros-indigo/im_msgs
     ros-indigo/trajectory_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/rosconsole
     ros-indigo/gazebo_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/message_generation
-    ros-indigo/angles
+    ros-indigo/geometry_msgs
+    ros-indigo/hector_gazebo_plugins
+    ros-indigo/gazebo_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

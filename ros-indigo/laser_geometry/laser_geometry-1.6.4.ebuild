@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/tf
     ros-indigo/angles
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
     dev-python/numpy
     dev-cpp/eigen
     dev-libs/boost

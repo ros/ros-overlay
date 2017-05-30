@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ar_track_alvar
-    ros-kinetic/rospy
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/yocs_msgs
+    ros-kinetic/rospy
+    ros-kinetic/ar_track_alvar
+    ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/actionlib
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
     ros-kinetic/tf
-    ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/actionlib
-    ros-kinetic/yocs_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslint

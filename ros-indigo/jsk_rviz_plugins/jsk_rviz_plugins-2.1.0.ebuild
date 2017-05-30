@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/image_geometry
-    ros-indigo/urdfdom_py
-    ros-indigo/people_msgs
-    ros-indigo/jsk_footstep_msgs
-    ros-indigo/jsk_topic_tools
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/jsk_recognition_utils
-    ros-indigo/message_generation
-    ros-indigo/rviz
-    ros-indigo/jsk_hark_msgs
-    ros-indigo/jsk_gui_msgs
     ros-indigo/dynamic_reconfigure
+    ros-indigo/image_geometry
+    ros-indigo/message_generation
+    ros-indigo/geometry_msgs
+    ros-indigo/jsk_recognition_utils
+    ros-indigo/jsk_hark_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/people_msgs
+    ros-indigo/urdfdom_py
+    ros-indigo/jsk_gui_msgs
     ros-indigo/view_controller_msgs
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/rviz
+    ros-indigo/jsk_topic_tools
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/jsk_footstep_msgs
     x11-libs/wxGTK
 "
 DEPEND="${RDEPEND}

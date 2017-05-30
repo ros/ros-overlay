@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_smartthings_bridge
     ros-indigo/rocon_hue
-    ros-indigo/rocon_ninjablock_bridge
     ros-indigo/rocon_iot_bridge
-    ros-indigo/rocon_python_hue
+    ros-indigo/rocon_ninjablock_bridge
     ros-indigo/rocon_rtsp_camera_relay
+    ros-indigo/rocon_python_hue
+    ros-indigo/rocon_smartthings_bridge
 "
 DEPEND="${RDEPEND}
 "

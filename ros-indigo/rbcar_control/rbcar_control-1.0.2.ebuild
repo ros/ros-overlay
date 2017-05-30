@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="The rbcar_control package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/rbcar_sim-release/archive/release/indigo/rbcar_control/1.0.2-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 

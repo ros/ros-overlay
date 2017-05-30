@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_robot_dashboard
-    ros-indigo/roslib
+    ros-indigo/rqt_gui
     ros-indigo/rospy
     ros-indigo/cob_msgs
-    ros-indigo/rqt_gui
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
 "

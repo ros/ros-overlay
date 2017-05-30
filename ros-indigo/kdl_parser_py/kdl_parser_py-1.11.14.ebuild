@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/orocos_kdl
     ros-indigo/python_orocos_kdl
-    ros-indigo/urdfdom_py
     ros-indigo/urdf
+    ros-indigo/urdfdom_py
+    ros-indigo/orocos_kdl
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

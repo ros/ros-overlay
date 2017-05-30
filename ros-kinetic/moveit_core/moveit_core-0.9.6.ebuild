@@ -12,33 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/octomap_msgs
-    ros-kinetic/rostime
-    ros-kinetic/random_numbers
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/urdf
     ros-kinetic/geometric_shapes
-    ros-kinetic/kdl_parser
-    ros-kinetic/moveit_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/srdfdom
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/octomap
+    ros-kinetic/std_msgs
+    ros-kinetic/srdfdom
+    ros-kinetic/moveit_msgs
     ros-kinetic/eigen_conversions
-    media-libs/assimp
-    dev-libs/boost
+    ros-kinetic/sensor_msgs
+    ros-kinetic/kdl_parser
+    ros-kinetic/random_numbers
+    ros-kinetic/urdf
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/octomap_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/eigen_stl_containers
+    ros-kinetic/rostime
     dev-cpp/eigen
-    dev-libs/console_bridge
     sci-libs/fcl
-    dev-libs/urdfdom_headers
+    dev-libs/console_bridge
+    dev-libs/boost
     dev-libs/urdfdom
+    media-libs/assimp
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/shape_msgs
     ros-kinetic/roslib
+    ros-kinetic/shape_msgs
 "
 
 SLOT="0/0"

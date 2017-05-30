@@ -15,8 +15,8 @@ RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/nav_core
     ros-indigo/roscpp
-    ros-indigo/costmap_2d
     ros-indigo/tf
+    ros-indigo/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pcl_ros
-    ros-indigo/tf
     ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/pcl_ros
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

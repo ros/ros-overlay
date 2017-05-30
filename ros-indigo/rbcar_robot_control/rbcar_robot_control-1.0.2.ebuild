@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ackermann_msgs
-    ros-indigo/nav_msgs
     ros-indigo/robotnik_msgs
+    ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/ackermann_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
 "
 
 SLOT="0/0"

@@ -12,19 +12,19 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/visualization_msgs
-    ros-indigo/message_filters
     ros-indigo/cmake_modules
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/cob_object_detection_msgs
+    ros-indigo/visualization_msgs
     ros-indigo/image_transport
+    ros-indigo/message_filters
+    ros-indigo/cob_object_detection_msgs
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
     ros-indigo/eigen_conversions
-    media-libs/opencv
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
     sci-libs/pcl
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
 "

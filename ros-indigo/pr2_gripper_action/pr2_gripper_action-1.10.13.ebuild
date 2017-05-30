@@ -15,11 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/pr2_controllers_msgs
     ros-indigo/roscpp
-    ros-indigo/robot_mechanism_controllers
+    ros-indigo/pr2_mechanism_model
     ros-indigo/pr2_mechanism_controllers
+    ros-indigo/pr2_controllers_msgs
+    ros-indigo/robot_mechanism_controllers
 "
 DEPEND="${RDEPEND}
 "

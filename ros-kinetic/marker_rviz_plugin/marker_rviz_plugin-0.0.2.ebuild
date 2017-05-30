@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rviz
     ros-kinetic/marker_msgs
     ros-kinetic/roscpp
+    ros-kinetic/rviz
 "
 DEPEND="${RDEPEND}
 "

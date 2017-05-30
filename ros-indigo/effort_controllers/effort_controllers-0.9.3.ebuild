@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/controller_interface
     ros-indigo/dynamic_reconfigure
-    ros-indigo/control_toolbox
     ros-indigo/angles
-    ros-indigo/control_msgs
+    ros-indigo/forward_command_controller
     ros-indigo/urdf
     ros-indigo/realtime_tools
-    ros-indigo/forward_command_controller
+    ros-indigo/control_msgs
+    ros-indigo/controller_interface
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
 "

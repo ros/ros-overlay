@@ -12,17 +12,17 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/actionlib
     ros-indigo/dynamic_reconfigure
-    ros-indigo/actionlib_msgs
+    ros-indigo/visualization_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
+    ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/actionlib_msgs
     ros-indigo/move_base_msgs
     ros-indigo/roscpp
-    ros-indigo/costmap_2d
-    ros-indigo/message_runtime
+    ros-indigo/std_msgs
     ros-indigo/tf
+    ros-indigo/costmap_2d
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

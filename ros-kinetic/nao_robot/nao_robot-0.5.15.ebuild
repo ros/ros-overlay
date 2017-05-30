@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nao_apps
-    ros-kinetic/nao_bringup
     ros-kinetic/nao_description
+    ros-kinetic/nao_bringup
+    ros-kinetic/nao_apps
 "
 DEPEND="${RDEPEND}
 "

@@ -12,32 +12,32 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostime
-    ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/nodelet
-    ros-kinetic/roscpp
-    ros-kinetic/eigen_conversions
-    ros-kinetic/tf
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
+    ros-kinetic/topic_tools
     ros-kinetic/std_msgs
     ros-kinetic/rosnode
-    ros-kinetic/roslaunch
+    ros-kinetic/dynamic_tf_publisher
     ros-kinetic/image_transport
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/topic_tools
-    ros-kinetic/sensor_msgs
-    ros-kinetic/sound_play
     ros-kinetic/message_runtime
+    ros-kinetic/sound_play
     ros-kinetic/rostopic
-    dev-python/numpy
+    ros-kinetic/eigen_conversions
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/roslaunch
+    ros-kinetic/roscpp
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/geometry_msgs
+    ros-kinetic/rostime
     media-libs/opencv
+    dev-python/numpy
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

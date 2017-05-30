@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/sensor_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/nav_msgs
-    ros-indigo/tf
     ros-indigo/roscpp
+    ros-indigo/geometry_msgs
+    ros-indigo/tf
+    ros-indigo/nav_msgs
 "
 DEPEND="${RDEPEND}
 "

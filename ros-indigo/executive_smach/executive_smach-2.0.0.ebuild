@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/smach_msgs
     ros-indigo/smach
     ros-indigo/smach_ros
+    ros-indigo/smach_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -13,15 +13,15 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/visp
+    ros-kinetic/geometry_msgs
     ros-kinetic/message_runtime
     ros-kinetic/visp_bridge
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/visp
 "
 DEPEND="${RDEPEND}
 "

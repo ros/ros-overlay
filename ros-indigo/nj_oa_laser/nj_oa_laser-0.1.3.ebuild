@@ -15,9 +15,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/geometry_msgs
     ros-indigo/roscpp
-    ros-indigo/sensor_msgs
     ros-indigo/lama_jockeys
     ros-indigo/angles
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -14,19 +14,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/visualization_msgs
     ros-indigo/image_geometry
-    ros-indigo/std_srvs
-    ros-indigo/people_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/laser_geometry
+    ros-indigo/map_laser
+    ros-indigo/laser_filters
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/laser_geometry
+    ros-indigo/people_msgs
     ros-indigo/people_tracking_filter
     ros-indigo/roscpp
-    ros-indigo/map_laser
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
     ros-indigo/tf
     ros-indigo/bfl
-    ros-indigo/laser_filters
 "
 DEPEND="${RDEPEND}
 "

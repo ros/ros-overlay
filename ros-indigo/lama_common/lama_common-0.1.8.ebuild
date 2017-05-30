@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
     ros-indigo/map_ray_caster
-    ros-indigo/laser_geometry
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/angles
+    ros-indigo/geometry_msgs
+    ros-indigo/laser_geometry
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "

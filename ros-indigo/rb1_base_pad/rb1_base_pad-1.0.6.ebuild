@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/robotnik_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/diagnostic_updater
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

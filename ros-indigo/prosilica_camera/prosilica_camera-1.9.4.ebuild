@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/self_test
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/polled_camera
-    ros-indigo/roscpp
-    ros-indigo/camera_calibration_parsers
-    ros-indigo/driver_base
-    ros-indigo/prosilica_gige_sdk
-    ros-indigo/image_transport
-    ros-indigo/diagnostic_updater
     ros-indigo/dynamic_reconfigure
+    ros-indigo/self_test
+    ros-indigo/image_transport
+    ros-indigo/prosilica_gige_sdk
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
+    ros-indigo/polled_camera
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/driver_base
+    ros-indigo/sensor_msgs
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosconsole

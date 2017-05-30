@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/tf_conversions
-    ros-kinetic/cv_bridge
     ros-kinetic/pluginlib
+    ros-kinetic/tf_conversions
     ros-kinetic/moveit_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
     ros-kinetic/octomap
     ros-kinetic/message_filters
+    ros-kinetic/image_transport
+    ros-kinetic/roscpp
     ros-kinetic/moveit_core
+    ros-kinetic/urdf
     ros-kinetic/sensor_msgs
     ros-kinetic/tf
-    media-libs/mesa
+    ros-kinetic/rosconsole
+    ros-kinetic/cv_bridge
     media-libs/freeglut
     media-libs/glew
+    media-libs/mesa
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

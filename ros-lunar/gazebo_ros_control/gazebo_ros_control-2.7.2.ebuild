@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/control_toolbox
-    ros-lunar/urdf
-    ros-lunar/joint_limits_interface
-    ros-lunar/std_msgs
     ros-lunar/pluginlib
+    ros-lunar/joint_limits_interface
     ros-lunar/angles
-    ros-lunar/gazebo_ros
-    ros-lunar/hardware_interface
-    ros-lunar/roscpp
     ros-lunar/controller_manager
+    ros-lunar/gazebo_ros
+    ros-lunar/roscpp
     ros-lunar/transmission_interface
+    ros-lunar/urdf
+    ros-lunar/std_msgs
+    ros-lunar/hardware_interface
+    ros-lunar/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-lunar/gazebo_dev

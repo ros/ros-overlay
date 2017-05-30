@@ -3,17 +3,18 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="This package depends on a recent version of the Kinematics and Dynamics
+    Libr"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/indigo/orocos_kinematics_dynamics/1.3.1-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/orocos_kdl
     ros-indigo/python_orocos_kdl
+    ros-indigo/orocos_kdl
 "
 DEPEND="${RDEPEND}
 "

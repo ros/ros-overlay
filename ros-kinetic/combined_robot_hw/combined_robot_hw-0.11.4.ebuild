@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hardware_interface
     ros-kinetic/roscpp
     ros-kinetic/pluginlib
+    ros-kinetic/hardware_interface
 "
 DEPEND="${RDEPEND}
 "

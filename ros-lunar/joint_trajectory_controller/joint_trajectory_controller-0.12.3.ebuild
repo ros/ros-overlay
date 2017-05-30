@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/angles
+    ros-lunar/actionlib
     ros-lunar/hardware_interface
     ros-lunar/roscpp
-    ros-lunar/control_toolbox
-    ros-lunar/actionlib
-    ros-lunar/controller_interface
     ros-lunar/urdf
-    ros-lunar/angles
+    ros-lunar/realtime_tools
     ros-lunar/trajectory_msgs
     ros-lunar/control_msgs
-    ros-lunar/realtime_tools
+    ros-lunar/controller_interface
+    ros-lunar/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

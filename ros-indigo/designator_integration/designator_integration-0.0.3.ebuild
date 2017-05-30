@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/designator_integration_cpp
     ros-indigo/designator_integration_lisp
+    ros-indigo/designator_integration_cpp
 "
 DEPEND="${RDEPEND}
 "

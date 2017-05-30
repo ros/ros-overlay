@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rosemacs
-    ros-indigo/slime_wrapper
     ros-indigo/slime_ros
     ros-indigo/roslisp_repl
+    ros-indigo/slime_wrapper
 "
 DEPEND="${RDEPEND}
 "

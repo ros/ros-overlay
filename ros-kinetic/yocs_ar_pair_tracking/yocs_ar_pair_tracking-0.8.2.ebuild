@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/yocs_ar_marker_tracking
+    ros-kinetic/yocs_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/ar_track_alvar_msgs
+    ros-kinetic/yocs_math_toolkit
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/yocs_math_toolkit
-    ros-kinetic/yocs_msgs
+    ros-kinetic/yocs_ar_marker_tracking
 "
 DEPEND="${RDEPEND}
 "

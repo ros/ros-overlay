@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/master_discovery_fkie
     ros-kinetic/tf2_relay
+    ros-kinetic/master_sync_fkie
     ros-kinetic/message_relay
     ros-kinetic/clock_relay
-    ros-kinetic/master_sync_fkie
+    ros-kinetic/master_discovery_fkie
 "
 DEPEND="${RDEPEND}
 "

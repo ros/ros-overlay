@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/rospy
-    ros-indigo/rosh
     ros-indigo/tf
+    ros-indigo/rosh
+    ros-indigo/rospy
     ros-indigo/roslib
 "
 DEPEND="${RDEPEND}

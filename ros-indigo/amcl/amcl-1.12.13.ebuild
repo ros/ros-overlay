@@ -12,16 +12,16 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf
-    ros-indigo/rosbag
     ros-indigo/dynamic_reconfigure
     ros-indigo/roscpp
+    ros-indigo/rosbag
+    ros-indigo/tf
     ros-indigo/nav_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
-    ros-indigo/std_srvs
     ros-indigo/message_filters
+    ros-indigo/std_srvs
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

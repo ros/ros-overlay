@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pcl_conversions
     ros-kinetic/ecto
+    ros-kinetic/pcl_conversions
     ros-kinetic/sensor_msgs
     sci-libs/proj
     dev-libs/boost

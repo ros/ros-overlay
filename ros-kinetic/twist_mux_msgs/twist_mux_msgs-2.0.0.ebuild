@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/actionlib_msgs
-    ros-kinetic/message_runtime
     ros-kinetic/actionlib
+    ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

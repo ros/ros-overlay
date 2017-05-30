@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf
     ros-indigo/pluginlib
+    ros-indigo/angles
     ros-indigo/pr2_hardware_interface
+    ros-indigo/roscpp
+    ros-indigo/urdf
     ros-indigo/kdl_parser
     ros-indigo/hardware_interface
-    ros-indigo/roscpp
-    ros-indigo/angles
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
     ros-indigo/rosunit
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

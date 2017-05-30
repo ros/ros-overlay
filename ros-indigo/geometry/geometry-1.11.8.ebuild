@@ -3,20 +3,20 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="Geometry Library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/indigo/geometry/1.11.8-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kdl_conversions
-    ros-indigo/tf_conversions
-    ros-indigo/eigen_conversions
     ros-indigo/tf
+    ros-indigo/eigen_conversions
+    ros-indigo/kdl_conversions
     ros-indigo/angles
+    ros-indigo/tf_conversions
 "
 DEPEND="${RDEPEND}
 "

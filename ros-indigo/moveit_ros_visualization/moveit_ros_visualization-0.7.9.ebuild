@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/pluginlib
-    ros-indigo/moveit_ros_warehouse
-    ros-indigo/object_recognition_msgs
-    ros-indigo/moveit_ros_perception
     ros-indigo/geometric_shapes
+    ros-indigo/rospy
     ros-indigo/moveit_ros_planning_interface
     ros-indigo/moveit_ros_robot_interaction
-    ros-indigo/rviz
     ros-indigo/roscpp
+    ros-indigo/moveit_ros_perception
+    ros-indigo/object_recognition_msgs
+    ros-indigo/rviz
+    ros-indigo/moveit_ros_warehouse
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

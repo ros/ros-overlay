@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/roseus
-    ros-indigo/pr2_controllers_msgs
     ros-indigo/pr2_msgs
+    ros-indigo/pr2_controllers_msgs
 "
 DEPEND="${RDEPEND}
 "

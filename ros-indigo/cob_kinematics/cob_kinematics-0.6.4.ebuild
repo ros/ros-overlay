@@ -12,15 +12,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
     ros-indigo/pluginlib
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/moveit_core
-    ros-indigo/message_runtime
     ros-indigo/moveit_msgs
+    ros-indigo/tf_conversions
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/moveit_core
+    ros-indigo/urdf
+    ros-indigo/std_msgs
     virtual/lapack
 "
 DEPEND="${RDEPEND}

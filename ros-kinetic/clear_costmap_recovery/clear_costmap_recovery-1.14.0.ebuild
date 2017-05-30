@@ -15,8 +15,8 @@ RDEPEND="
     ros-kinetic/pluginlib
     ros-kinetic/nav_core
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
     ros-kinetic/tf
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

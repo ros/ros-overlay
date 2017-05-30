@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
-    ros-indigo/lama_jockeys
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/image_transport
-    ros-indigo/message_runtime
-    ros-indigo/tf
     ros-indigo/angles
-    media-libs/opencv
+    ros-indigo/nav_msgs
+    ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/lama_jockeys
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

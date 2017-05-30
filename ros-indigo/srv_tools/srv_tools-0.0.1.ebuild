@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/bag_tools
     ros-indigo/plot_tools
-    ros-indigo/tf_tools
     ros-indigo/launch_tools
     ros-indigo/pointcloud_tools
-    ros-indigo/bag_tools
+    ros-indigo/tf_tools
 "
 DEPEND="${RDEPEND}
 "

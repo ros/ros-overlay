@@ -16,8 +16,8 @@ RDEPEND="
     ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/ivcon
     ros-kinetic/convex_decomposition
+    ros-kinetic/ivcon
 "
 
 SLOT="0/0"

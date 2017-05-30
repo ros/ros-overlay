@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_toolbox
-    ros-indigo/pluginlib
-    ros-indigo/realtime_tools
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/filters
-    ros-indigo/pr2_controller_manager
-    ros-indigo/control_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/actionlib
-    ros-indigo/tf_conversions
-    ros-indigo/pr2_controller_interface
-    ros-indigo/kdl_parser
-    ros-indigo/pr2_controllers_msgs
-    ros-indigo/message_filters
-    ros-indigo/diagnostic_msgs
-    ros-indigo/rospy
-    ros-indigo/trajectory_msgs
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/eigen_conversions
     ros-indigo/angles
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/pr2_controller_manager
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/tf_conversions
+    ros-indigo/filters
+    ros-indigo/actionlib
+    ros-indigo/eigen_conversions
+    ros-indigo/diagnostic_msgs
+    ros-indigo/control_msgs
+    ros-indigo/kdl_parser
+    ros-indigo/rospy
+    ros-indigo/pr2_controller_interface
+    ros-indigo/roscpp
+    ros-indigo/trajectory_msgs
+    ros-indigo/tf
+    ros-indigo/pluginlib
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/pr2_controllers_msgs
+    ros-indigo/control_toolbox
     sys-devel/libtool
 "
 DEPEND="${RDEPEND}

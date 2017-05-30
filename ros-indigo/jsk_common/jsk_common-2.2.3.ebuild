@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jsk_tools
-    ros-indigo/jsk_network_tools
+    ros-indigo/dynamic_tf_publisher
     ros-indigo/virtual_force_publisher
-    ros-indigo/multi_map_server
+    ros-indigo/jsk_tools
+    ros-indigo/image_view2
     ros-indigo/jsk_tilt_laser
     ros-indigo/jsk_topic_tools
-    ros-indigo/image_view2
-    ros-indigo/dynamic_tf_publisher
+    ros-indigo/jsk_network_tools
+    ros-indigo/multi_map_server
 "
 DEPEND="${RDEPEND}
 "

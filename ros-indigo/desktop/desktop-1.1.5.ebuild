@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot
-    ros-indigo/common_tutorials
+    ros-indigo/roslint
     ros-indigo/rqt_common_plugins
     ros-indigo/ros_tutorials
     ros-indigo/viz
+    ros-indigo/robot
+    ros-indigo/rqt_robot_plugins
+    ros-indigo/common_tutorials
     ros-indigo/visualization_tutorials
     ros-indigo/geometry_tutorials
-    ros-indigo/rqt_robot_plugins
-    ros-indigo/roslint
 "
 DEPEND="${RDEPEND}
 "

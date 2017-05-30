@@ -12,12 +12,12 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/youbot_gazebo_control
+    ros-indigo/youbot_description
     ros-indigo/gazebo_ros
-    ros-indigo/youbot_gazebo_worlds
     ros-indigo/xacro
     ros-indigo/robot_state_publisher
-    ros-indigo/youbot_description
+    ros-indigo/youbot_gazebo_worlds
+    ros-indigo/youbot_gazebo_control
 "
 DEPEND="${RDEPEND}
 "

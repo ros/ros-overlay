@@ -12,11 +12,11 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/prace_common
-    ros-indigo/frida_driver
     ros-indigo/prace_gripper_driver
+    ros-indigo/frida_driver
     ros-indigo/cob_lbr
     ros-indigo/cob_safety_controller
+    ros-indigo/prace_common
 "
 DEPEND="${RDEPEND}
 "

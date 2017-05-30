@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/transmission_interface
-    ros-indigo/control_toolbox
     ros-indigo/pluginlib
     ros-indigo/joint_limits_interface
-    ros-indigo/urdf
-    ros-indigo/gazebo_ros
-    ros-indigo/hardware_interface
-    ros-indigo/std_msgs
-    ros-indigo/controller_manager
-    ros-indigo/roscpp
     ros-indigo/angles
+    ros-indigo/controller_manager
+    ros-indigo/gazebo_ros
+    ros-indigo/roscpp
+    ros-indigo/transmission_interface
+    ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/hardware_interface
+    ros-indigo/control_toolbox
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

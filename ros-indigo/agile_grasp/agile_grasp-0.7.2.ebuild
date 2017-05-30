@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/visualization_msgs
     ros-indigo/cmake_modules
     ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/eigen_conversions
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
+    ros-indigo/visualization_msgs
     ros-indigo/pcl_conversions
-    ros-indigo/eigen_conversions
-    sci-libs/pcl
+    ros-indigo/cv_bridge
     virtual/lapack
+    sci-libs/pcl
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

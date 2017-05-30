@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hector_nav_msgs
     ros-kinetic/image_geometry
+    ros-kinetic/hector_nav_msgs
+    ros-kinetic/hector_worldmodel_msgs
     ros-kinetic/hector_marker_drawing
     ros-kinetic/roscpp
-    ros-kinetic/hector_worldmodel_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

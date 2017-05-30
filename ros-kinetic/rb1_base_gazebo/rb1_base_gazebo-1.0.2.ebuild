@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rb1_base_control
+    ros-kinetic/gazebo_ros
     ros-kinetic/rb1_base_description
     ros-kinetic/gazebo_ros_control
-    ros-kinetic/rb1_base_pad
-    ros-kinetic/std_srvs
-    ros-kinetic/gazebo_ros
     ros-kinetic/std_msgs
-    ros-kinetic/rb1_base_control
+    ros-kinetic/std_srvs
     ros-kinetic/tf
+    ros-kinetic/rb1_base_pad
 "
 DEPEND="${RDEPEND}
 "

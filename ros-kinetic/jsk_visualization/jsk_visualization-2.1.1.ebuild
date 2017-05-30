@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_interactive
+    ros-kinetic/jsk_rqt_plugins
     ros-kinetic/jsk_interactive_test
     ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/jsk_interactive
     ros-kinetic/jsk_interactive_marker
-    ros-kinetic/jsk_rqt_plugins
 "
 DEPEND="${RDEPEND}
 "

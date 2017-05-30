@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_ros
-    ros-kinetic/orocos_kdl
     ros-kinetic/geometry_msgs
+    ros-kinetic/tf2_ros
     ros-kinetic/python_orocos_kdl
+    ros-kinetic/orocos_kdl
     ros-kinetic/tf2
 "
 DEPEND="${RDEPEND}

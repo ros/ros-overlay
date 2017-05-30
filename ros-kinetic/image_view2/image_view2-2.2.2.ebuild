@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/image_geometry
-    ros-kinetic/std_srvs
-    ros-kinetic/message_filters
-    ros-kinetic/geometry_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/image_transport
     ros-kinetic/image_view
+    ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/std_srvs
     ros-kinetic/message_runtime
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

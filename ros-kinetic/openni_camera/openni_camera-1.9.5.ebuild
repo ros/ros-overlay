@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/nodelet
     ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
-    =dev-libs/libusb-1.0*
-    dev-libs/OpenNi
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     dev-libs/log4cxx
+    dev-libs/OpenNi
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
 "

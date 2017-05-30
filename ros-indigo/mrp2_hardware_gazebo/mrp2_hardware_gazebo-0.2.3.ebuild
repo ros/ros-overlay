@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hardware_interface
     ros-indigo/gazebo_ros_control
-    ros-indigo/control_toolbox
     ros-indigo/joint_limits_interface
+    ros-indigo/hardware_interface
+    ros-indigo/control_toolbox
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

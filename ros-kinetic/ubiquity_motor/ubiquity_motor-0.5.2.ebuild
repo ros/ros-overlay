@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/serial
+    ros-kinetic/nav_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/controller_manager
     ros-kinetic/joint_state_controller
     ros-kinetic/diff_drive_controller
-    ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/geometry_msgs
-    ros-kinetic/hardware_interface
-    ros-kinetic/controller_manager
     ros-kinetic/tf
-    ros-kinetic/serial
+    ros-kinetic/hardware_interface
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roscpp

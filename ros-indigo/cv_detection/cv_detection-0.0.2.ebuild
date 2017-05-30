@@ -12,12 +12,12 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
+    ros-indigo/image_transport
     ros-indigo/geometry_msgs
+    ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/image_transport
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

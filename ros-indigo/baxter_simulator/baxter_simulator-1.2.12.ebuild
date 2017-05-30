@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/baxter_sim_hardware
+    ros-indigo/baxter_sim_controllers
+    ros-indigo/baxter_sim_kinematics
+    ros-indigo/baxter_gazebo
     ros-indigo/baxter_sim_examples
     ros-indigo/baxter_sim_io
-    ros-indigo/baxter_sim_controllers
-    ros-indigo/baxter_sim_hardware
-    ros-indigo/baxter_gazebo
-    ros-indigo/baxter_sim_kinematics
 "
 DEPEND="${RDEPEND}
 "

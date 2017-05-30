@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robotis_device
-    ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
     ros-kinetic/cmake_modules
+    ros-kinetic/robotis_device
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/robotis_math

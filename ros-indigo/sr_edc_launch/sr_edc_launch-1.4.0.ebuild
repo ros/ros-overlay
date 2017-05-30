@@ -12,17 +12,17 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/self_test
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/sr_mechanism_controllers
-    ros-indigo/sr_description
     ros-indigo/sr_ethercat_hand_config
+    ros-indigo/self_test
+    ros-indigo/sr_description
     ros-indigo/xacro
-    ros-indigo/ros_ethercat
+    ros-indigo/sr_mechanism_controllers
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_msgs
+    ros-indigo/ros_ethercat
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/tf
     ros-kinetic/rospy
     ros-kinetic/diagnostic_updater
-    ros-kinetic/tf
     app-admin/hddtemp
 "
 DEPEND="${RDEPEND}

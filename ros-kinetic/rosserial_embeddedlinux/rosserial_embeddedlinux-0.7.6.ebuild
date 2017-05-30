@@ -16,11 +16,11 @@ RDEPEND="
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/sensor_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/rosserial_client
     ros-kinetic/nav_msgs
+    ros-kinetic/rosserial_client
 "
 
 SLOT="0/0"

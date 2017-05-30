@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/sensor_msgs
-    ros-indigo/cv_bridge
     ros-indigo/imagezero
     ros-indigo/message_runtime
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/roscpp

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_build
-    ros-kinetic/geometry_msgs
-    ros-kinetic/tf
-    ros-kinetic/sophus
     ros-kinetic/cmake_modules
+    ros-kinetic/sophus
+    ros-kinetic/tf
+    ros-kinetic/geometry_msgs
+    ros-kinetic/ecl_build
 "
 DEPEND="${RDEPEND}
 "

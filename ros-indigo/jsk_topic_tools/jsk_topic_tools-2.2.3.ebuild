@@ -12,32 +12,32 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostime
-    ros-indigo/dynamic_tf_publisher
-    ros-indigo/nodelet
-    ros-indigo/roscpp
-    ros-indigo/eigen_conversions
-    ros-indigo/tf
-    ros-indigo/std_srvs
-    ros-indigo/geometry_msgs
+    ros-indigo/topic_tools
     ros-indigo/std_msgs
     ros-indigo/rosnode
-    ros-indigo/roslaunch
+    ros-indigo/dynamic_tf_publisher
     ros-indigo/image_transport
-    ros-indigo/diagnostic_updater
-    ros-indigo/diagnostic_msgs
-    ros-indigo/topic_tools
-    ros-indigo/sensor_msgs
-    ros-indigo/sound_play
     ros-indigo/message_runtime
+    ros-indigo/sound_play
     ros-indigo/rostopic
-    dev-python/numpy
+    ros-indigo/eigen_conversions
+    ros-indigo/diagnostic_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/nodelet
+    ros-indigo/roslaunch
+    ros-indigo/roscpp
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/diagnostic_updater
+    ros-indigo/geometry_msgs
+    ros-indigo/rostime
     media-libs/opencv
+    dev-python/numpy
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/image_geometry
-    ros-indigo/std_srvs
-    ros-indigo/message_filters
-    ros-indigo/geometry_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/image_transport
     ros-indigo/image_view
+    ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/std_srvs
     ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

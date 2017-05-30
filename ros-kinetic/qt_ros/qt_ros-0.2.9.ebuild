@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/qt_build
-    ros-kinetic/qt_create
     ros-kinetic/qt_tutorials
+    ros-kinetic/qt_create
 "
 DEPEND="${RDEPEND}
 "

@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosapi
     ros-kinetic/rosbridge_library
     ros-kinetic/rosbridge_server
-    ros-kinetic/rosapi
 "
 DEPEND="${RDEPEND}
 "

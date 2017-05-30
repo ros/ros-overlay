@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nodelet
+    ros-kinetic/image_transport
     ros-kinetic/roslib
     ros-kinetic/camera_calibration_parsers
     ros-kinetic/roscpp
-    ros-kinetic/image_transport
-    ros-kinetic/nodelet
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/roslaunch
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

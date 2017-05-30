@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/visualization_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/rviz
     ros-indigo/tf
     ros-indigo/interactive_markers

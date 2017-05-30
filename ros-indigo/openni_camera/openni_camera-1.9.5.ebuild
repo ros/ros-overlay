@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/camera_info_manager
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
+    ros-indigo/dynamic_reconfigure
     ros-indigo/nodelet
     ros-indigo/image_transport
-    ros-indigo/dynamic_reconfigure
-    =dev-libs/libusb-1.0*
-    dev-libs/OpenNi
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     dev-libs/log4cxx
+    dev-libs/OpenNi
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
 "

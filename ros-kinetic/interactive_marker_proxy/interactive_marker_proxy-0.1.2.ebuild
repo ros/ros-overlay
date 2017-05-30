@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/visualization_msgs
-    ros-kinetic/message_runtime
     ros-kinetic/roscpp
+    ros-kinetic/message_runtime
     ros-kinetic/interactive_markers
 "
 DEPEND="${RDEPEND}

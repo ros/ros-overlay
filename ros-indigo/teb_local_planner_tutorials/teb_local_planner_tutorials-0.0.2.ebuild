@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/stage_ros
-    ros-indigo/navigation
     ros-indigo/teb_local_planner
+    ros-indigo/navigation
 "
 DEPEND="${RDEPEND}
 "

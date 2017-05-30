@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/topic_tools
-    ros-indigo/controller_interface
-    ros-indigo/urdf
+    ros-indigo/controller_manager
+    ros-indigo/nav_msgs
+    ros-indigo/joy
     ros-indigo/joint_state_controller
     ros-indigo/robot_localization
-    ros-indigo/teleop_twist_joy
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/tf
-    ros-indigo/controller_manager
-    ros-indigo/joy
+    ros-indigo/urdf
     ros-indigo/realtime_tools
-    ros-indigo/nav_msgs
+    ros-indigo/teleop_twist_joy
+    ros-indigo/tf
+    ros-indigo/controller_interface
+    ros-indigo/interactive_marker_twist_server
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -13,8 +13,8 @@ LICENSE="Public domain"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosemacs
     ros-kinetic/roslisp
+    ros-kinetic/rosemacs
     ros-kinetic/slime_ros
     ros-kinetic/slime_wrapper
     dev-lisp/sbcl

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/moveit_ros_move_group
-    ros-kinetic/pluginlib
-    ros-kinetic/actionlib
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/tf
-    ros-kinetic/roscpp
-    ros-kinetic/moveit_ros_planning
-    ros-kinetic/moveit_core
+    ros-kinetic/pluginlib
     ros-kinetic/moveit_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/moveit_ros_move_group
+    ros-kinetic/roscpp
+    ros-kinetic/moveit_core
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/tf
+    ros-kinetic/rosconsole
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/phidgets_api
+    ros-kinetic/nodelet
     ros-kinetic/pluginlib
     ros-kinetic/std_srvs
-    ros-kinetic/imu_filter_madgwick
+    ros-kinetic/phidgets_api
+    ros-kinetic/roscpp
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/diagnostic_updater
     ros-kinetic/tf
-    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/imu_filter_madgwick
 "
 DEPEND="${RDEPEND}
 "

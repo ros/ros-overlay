@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/nav_msgs
-    ros-kinetic/ecl_build
     ros-kinetic/cost_map_visualisations
-    ros-kinetic/cost_map_ros
-    ros-kinetic/rviz
-    ros-kinetic/costmap_2d
-    ros-kinetic/roscpp
-    ros-kinetic/tf
     ros-kinetic/ecl_console
+    ros-kinetic/cost_map_ros
+    ros-kinetic/roscpp
+    ros-kinetic/rviz
+    ros-kinetic/ecl_build
+    ros-kinetic/tf
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
     ros-indigo/pluginlib
+    ros-indigo/angles
     ros-indigo/actionlib
     ros-indigo/moveit_ros_perception
     ros-indigo/moveit_core
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/angles
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

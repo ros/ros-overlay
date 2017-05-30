@@ -12,19 +12,19 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_model
-    ros-indigo/rospy
+    ros-indigo/dynamic_reconfigure
     ros-indigo/sr_ronex_msgs
     ros-indigo/pluginlib
-    ros-indigo/sr_ronex_hardware_interface
-    ros-indigo/std_srvs
-    ros-indigo/sr_ronex_utilities
-    ros-indigo/realtime_tools
-    ros-indigo/controller_interface
+    ros-indigo/rospy
     ros-indigo/xacro
-    ros-indigo/std_msgs
+    ros-indigo/sr_ronex_hardware_interface
+    ros-indigo/sr_ronex_utilities
     ros-indigo/roscpp
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/std_srvs
+    ros-indigo/ros_ethercat_model
+    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
 "

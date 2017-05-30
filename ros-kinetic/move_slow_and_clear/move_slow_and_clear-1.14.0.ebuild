@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/costmap_2d
     ros-kinetic/roscpp
     ros-kinetic/nav_core
+    ros-kinetic/pluginlib
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

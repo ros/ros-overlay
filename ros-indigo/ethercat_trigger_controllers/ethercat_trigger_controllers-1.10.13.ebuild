@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/pluginlib
-    ros-indigo/realtime_tools
-    ros-indigo/pr2_controller_interface
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/message_runtime
+    ros-indigo/pr2_controller_interface
+    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
     sys-devel/libtool
 "
 DEPEND="${RDEPEND}

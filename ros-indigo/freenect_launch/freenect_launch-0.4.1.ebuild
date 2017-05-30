@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rgbd_launch
-    ros-indigo/tf
     ros-indigo/nodelet
+    ros-indigo/tf
+    ros-indigo/rgbd_launch
     ros-indigo/freenect_camera
     ros-indigo/image_proc
 "

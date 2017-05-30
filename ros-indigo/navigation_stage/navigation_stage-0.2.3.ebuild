@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/move_base
-    ros-indigo/stage_ros
-    ros-indigo/gmapping
-    ros-indigo/map_server
-    ros-indigo/amcl
     ros-indigo/fake_localization
+    ros-indigo/amcl
+    ros-indigo/gmapping
+    ros-indigo/stage_ros
+    ros-indigo/map_server
+    ros-indigo/move_base
 "
 DEPEND="${RDEPEND}
 "

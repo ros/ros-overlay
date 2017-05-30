@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/nodelet_topic_tools
-    ros-indigo/image_geometry
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/image_transport
     ros-indigo/dynamic_reconfigure
+    ros-indigo/image_geometry
+    ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/nodelet_topic_tools
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     dev-libs/boost

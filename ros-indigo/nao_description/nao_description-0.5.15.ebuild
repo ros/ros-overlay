@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf
     ros-indigo/xacro
+    ros-indigo/message_filters
+    ros-indigo/urdf
+    ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
-    ros-indigo/message_filters
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

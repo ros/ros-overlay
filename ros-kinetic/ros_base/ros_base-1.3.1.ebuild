@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/bond_core
-    ros-kinetic/pluginlib
-    ros-kinetic/nodelet_core
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/ros_core
+    ros-kinetic/nodelet_core
+    ros-kinetic/pluginlib
     ros-kinetic/class_loader
     ros-kinetic/actionlib
+    ros-kinetic/bond_core
+    ros-kinetic/ros_core
 "
 DEPEND="${RDEPEND}
 "

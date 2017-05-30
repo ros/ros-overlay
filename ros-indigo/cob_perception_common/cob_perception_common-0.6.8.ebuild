@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/cob_3d_mapping_msgs
     ros-indigo/cob_perception_msgs
-    ros-indigo/cob_vision_utils
     ros-indigo/cob_object_detection_msgs
-    ros-indigo/cob_object_detection_visualizer
-    ros-indigo/cob_cam3d_throttle
     ros-indigo/cob_image_flip
+    ros-indigo/cob_vision_utils
+    ros-indigo/cob_cam3d_throttle
+    ros-indigo/cob_object_detection_visualizer
 "
 DEPEND="${RDEPEND}
 "

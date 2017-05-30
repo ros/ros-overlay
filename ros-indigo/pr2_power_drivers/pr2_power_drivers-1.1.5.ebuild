@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_power_board
-    ros-indigo/ocean_battery_driver
     ros-indigo/power_monitor
+    ros-indigo/ocean_battery_driver
+    ros-indigo/pr2_power_board
 "
 DEPEND="${RDEPEND}
 "

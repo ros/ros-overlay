@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2_geometry_msgs
-    ros-indigo/nav_msgs
     ros-indigo/cmake_modules
     ros-indigo/tf2
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/geographic_msgs
-    ros-indigo/tf2_ros
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
     ros-indigo/message_filters
-    ros-indigo/diagnostic_updater
     ros-indigo/message_runtime
+    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf2_geometry_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf2_ros
+    ros-indigo/diagnostic_updater
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
     ros-indigo/roslint
+    ros-indigo/message_generation
     dev-python/catkin_pkg
 "
 

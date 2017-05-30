@@ -17,8 +17,8 @@ RDEPEND="
     ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_generation
     ros-kinetic/genmsg
+    ros-kinetic/message_generation
 "
 
 SLOT="0/0"

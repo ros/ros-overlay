@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/nav2d_navigator
-    ros-kinetic/visualization_msgs
     ros-kinetic/pluginlib
+    ros-kinetic/visualization_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/roscpp

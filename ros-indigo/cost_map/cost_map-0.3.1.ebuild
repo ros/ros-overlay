@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/cost_map_msgs
+    ros-indigo/cost_map_ros
     ros-indigo/cost_map_visualisations
     ros-indigo/cost_map_core
-    ros-indigo/cost_map_ros
 "
 DEPEND="${RDEPEND}
 "

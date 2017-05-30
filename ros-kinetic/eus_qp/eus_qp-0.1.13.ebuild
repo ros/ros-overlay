@@ -16,8 +16,8 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/cmake_modules
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

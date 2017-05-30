@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/realtime_tools
+    ros-indigo/urdf
+    ros-indigo/tf
     ros-indigo/controller_interface
     ros-indigo/nav_msgs
-    ros-indigo/tf
-    ros-indigo/urdf
+    ros-indigo/realtime_tools
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stereo_image_proc
     ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/wfov_camera_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/image_exposure_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/diagnostic_updater
+    ros-kinetic/stereo_image_proc
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/image_proc
-    =dev-libs/libusb-1.0*
+    ros-kinetic/image_transport
+    ros-kinetic/roscpp
+    ros-kinetic/image_exposure_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/wfov_camera_msgs
+    ros-kinetic/diagnostic_updater
     sys-libs/libraw1394
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
-    app-arch/dpkg
     net-misc/curl
+    app-arch/dpkg
 "
 
 SLOT="0/0"

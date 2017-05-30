@@ -12,10 +12,10 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/sr_ethercat_hand_config
     ros-indigo/ros_controllers
     ros-indigo/controller_manager
     ros-indigo/pr2_mechanism_msgs
-    ros-indigo/sr_ethercat_hand_config
 "
 DEPEND="${RDEPEND}
 "

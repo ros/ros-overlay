@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/concert_software_common
-    ros-indigo/rospy
     ros-indigo/concert_service_msgs
-    ros-indigo/unique_id
-    ros-indigo/concert_scheduler_requests
+    ros-indigo/rospy
     ros-indigo/rocon_std_msgs
-    ros-indigo/scheduler_msgs
+    ros-indigo/concert_scheduler_requests
+    ros-indigo/unique_id
+    ros-indigo/concert_software_common
     ros-indigo/rocon_uri
     ros-indigo/concert_software_farmer
     ros-indigo/concert_service_utilities
     ros-indigo/rocon_python_comms
     ros-indigo/concert_msgs
+    ros-indigo/scheduler_msgs
 "
 DEPEND="${RDEPEND}
 "

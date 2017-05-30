@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "

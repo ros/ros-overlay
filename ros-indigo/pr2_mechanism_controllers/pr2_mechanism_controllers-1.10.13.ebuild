@@ -13,28 +13,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_toolbox
-    ros-indigo/pluginlib
-    ros-indigo/realtime_tools
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/filters
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/diagnostic_updater
-    ros-indigo/rosconsole
+    ros-indigo/angles
     ros-indigo/nav_msgs
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/pr2_msgs
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/filters
+    ros-indigo/message_runtime
+    ros-indigo/diagnostic_msgs
+    ros-indigo/rospy
+    ros-indigo/pr2_mechanism_msgs
     ros-indigo/pr2_controller_interface
+    ros-indigo/roscpp
+    ros-indigo/visualization_msgs
+    ros-indigo/rosconsole
+    ros-indigo/tf
+    ros-indigo/diagnostic_updater
+    ros-indigo/pluginlib
+    ros-indigo/geometry_msgs
     ros-indigo/pr2_controllers_msgs
     ros-indigo/robot_mechanism_controllers
-    ros-indigo/pr2_mechanism_msgs
-    ros-indigo/diagnostic_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/pr2_msgs
-    ros-indigo/message_runtime
-    ros-indigo/angles
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

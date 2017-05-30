@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslang
-    ros-indigo/rosclean
-    ros-indigo/mk
-    ros-indigo/rosbuild
-    ros-indigo/rosboost_cfg
     ros-indigo/rosunit
     ros-indigo/rosbash
-    ros-indigo/rosmake
-    ros-indigo/roslib
-    ros-indigo/catkin
     ros-indigo/roscreate
+    ros-indigo/rosbuild
+    ros-indigo/roslang
+    ros-indigo/mk
+    ros-indigo/rosclean
+    ros-indigo/roslib
+    ros-indigo/rosboost_cfg
+    ros-indigo/catkin
+    ros-indigo/rosmake
 "
 DEPEND="${RDEPEND}
 "

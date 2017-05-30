@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
     ros-lunar/sensor_msgs
+    ros-lunar/rosconsole
     ros-lunar/opencv3
-    dev-lang/python
     dev-libs/boost
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "

@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/swri_math_util
     ros-kinetic/roscpp
+    ros-kinetic/swri_math_util
 "
 DEPEND="${RDEPEND}
 "

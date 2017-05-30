@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/rail_pick_and_place_msgs
     ros-indigo/rail_segmentation
+    ros-indigo/carl_safety
     ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/move_base_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
     ros-indigo/urdf
     ros-indigo/carl_moveit
+    ros-indigo/sensor_msgs
+    ros-indigo/rail_pick_and_place_msgs
+    ros-indigo/visualization_msgs
     ros-indigo/wpi_jaco_msgs
-    ros-indigo/carl_safety
-    ros-indigo/actionlib
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

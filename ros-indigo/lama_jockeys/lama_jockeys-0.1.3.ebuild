@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/lama_interfaces
+    ros-indigo/actionlib
+    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
     ros-indigo/lama_msgs
     ros-indigo/roscpp
-    ros-indigo/message_runtime
-    ros-indigo/actionlib
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

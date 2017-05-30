@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/control_msgs
     ros-indigo/pluginlib
-    ros-indigo/kdl_parser
-    ros-indigo/pr2_controllers_msgs
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/moveit_core
-    ros-indigo/eigen_conversions
+    ros-indigo/tf_conversions
+    ros-indigo/angles
     ros-indigo/actionlib
     ros-indigo/pr2_mechanism_msgs
-    ros-indigo/angles
+    ros-indigo/pr2_controllers_msgs
+    ros-indigo/roscpp
+    ros-indigo/moveit_core
+    ros-indigo/urdf
+    ros-indigo/eigen_conversions
+    ros-indigo/control_msgs
+    ros-indigo/kdl_parser
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

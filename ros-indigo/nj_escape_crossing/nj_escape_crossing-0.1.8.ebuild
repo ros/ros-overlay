@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/angles
     ros-indigo/nav_msgs
-    ros-indigo/lama_jockeys
     ros-indigo/geometry_msgs
     ros-indigo/lama_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/lama_jockeys
+    ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/angles
 "
 DEPEND="${RDEPEND}
 "

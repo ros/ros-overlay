@@ -12,13 +12,13 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/canopen_motor_node
-    ros-kinetic/canopen_chain_node
-    ros-kinetic/canopen_master
-    ros-kinetic/socketcan_bridge
     ros-kinetic/canopen_402
-    ros-kinetic/socketcan_interface
+    ros-kinetic/canopen_motor_node
     ros-kinetic/can_msgs
+    ros-kinetic/socketcan_bridge
+    ros-kinetic/canopen_chain_node
+    ros-kinetic/socketcan_interface
+    ros-kinetic/canopen_master
 "
 DEPEND="${RDEPEND}
 "

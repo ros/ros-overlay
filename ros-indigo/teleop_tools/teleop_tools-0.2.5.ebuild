@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/teleop_tools_msgs
-    ros-indigo/key_teleop
     ros-indigo/joy_teleop
+    ros-indigo/key_teleop
 "
 DEPEND="${RDEPEND}
 "

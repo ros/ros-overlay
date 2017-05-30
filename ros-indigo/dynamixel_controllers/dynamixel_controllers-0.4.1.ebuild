@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
     ros-indigo/rospy
-    ros-indigo/dynamixel_msgs
-    ros-indigo/trajectory_msgs
-    ros-indigo/std_msgs
-    ros-indigo/dynamixel_driver
     ros-indigo/actionlib
+    ros-indigo/dynamixel_msgs
+    ros-indigo/dynamixel_driver
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

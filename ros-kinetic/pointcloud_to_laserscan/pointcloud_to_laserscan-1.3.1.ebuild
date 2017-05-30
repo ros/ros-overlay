@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf2_sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/tf2_ros
+    ros-kinetic/tf2_sensor_msgs
     ros-kinetic/message_filters
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

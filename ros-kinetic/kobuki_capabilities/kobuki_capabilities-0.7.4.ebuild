@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_node
-    ros-kinetic/rocon_app_manager
-    ros-kinetic/std_capabilities
-    ros-kinetic/rocon_apps
     ros-kinetic/nodelet
+    ros-kinetic/std_capabilities
+    ros-kinetic/rocon_app_manager
+    ros-kinetic/rocon_apps
+    ros-kinetic/kobuki_node
 "
 DEPEND="${RDEPEND}
 "

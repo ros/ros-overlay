@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
-    ros-indigo/actionlib_msgs
     ros-indigo/std_srvs
+    ros-indigo/actionlib_msgs
     ros-indigo/std_msgs
     ros-indigo/message_runtime
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

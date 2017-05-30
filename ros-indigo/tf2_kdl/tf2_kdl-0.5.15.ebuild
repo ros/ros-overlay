@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
-    ros-indigo/orocos_kdl
-    ros-indigo/tf2_ros
     ros-indigo/cmake_modules
+    ros-indigo/tf2_ros
+    ros-indigo/orocos_kdl
+    ros-indigo/tf2
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

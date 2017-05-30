@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/image_proc
-    ros-indigo/rospy
     ros-indigo/stereo_image_proc
+    ros-indigo/image_geometry
+    ros-indigo/rospy
+    ros-indigo/image_proc
+    ros-indigo/message_filters
     ros-indigo/camera_calibration_parsers
     ros-indigo/rosbag
-    ros-indigo/message_filters
-    ros-indigo/image_geometry
     ros-indigo/sensor_msgs
     ros-indigo/cv_bridge
     dev-libs/console_bridge

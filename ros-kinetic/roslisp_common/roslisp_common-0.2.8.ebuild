@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cl_tf2
+    ros-kinetic/cl_tf
     ros-kinetic/roslisp_utilities
     ros-kinetic/cl_utils
-    ros-kinetic/actionlib_lisp
-    ros-kinetic/cl_tf
-    ros-kinetic/cl_transforms_stamped
     ros-kinetic/cl_transforms
+    ros-kinetic/actionlib_lisp
+    ros-kinetic/cl_tf2
     ros-kinetic/cl_urdf
+    ros-kinetic/cl_transforms_stamped
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/create_driver
     ros-indigo/create_node
     ros-indigo/create_description
+    ros-indigo/create_driver
 "
 DEPEND="${RDEPEND}
 "

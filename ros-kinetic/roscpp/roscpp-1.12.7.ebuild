@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cpp_common
+    ros-kinetic/roscpp_traits
+    ros-kinetic/roscpp_serialization
+    ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
+    ros-kinetic/rostime
     ros-kinetic/rosconsole
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/roscpp_serialization
-    ros-kinetic/rostime
-    ros-kinetic/roscpp_traits
-    ros-kinetic/std_msgs
     ros-kinetic/xmlrpcpp
-    ros-kinetic/cpp_common
-    ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslang
     ros-kinetic/message_generation
+    ros-kinetic/roslang
     virtual/pkgconfig
 "
 

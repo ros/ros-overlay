@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_srvs
     ros-indigo/xacro
     ros-indigo/geometry_msgs
-    ros-indigo/rviz
     ros-indigo/roscpp
+    ros-indigo/rviz
+    ros-indigo/std_srvs
     ros-indigo/robot_state_publisher
     ros-indigo/tf
 "

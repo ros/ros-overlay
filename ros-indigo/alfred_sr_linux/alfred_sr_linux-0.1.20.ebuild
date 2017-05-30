@@ -12,12 +12,12 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/smarthome_media_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sound_play
-    ros-indigo/message_runtime
     ros-indigo/dynamic_reconfigure
+    ros-indigo/smarthome_media_msgs
+    ros-indigo/rospy
+    ros-indigo/message_runtime
+    ros-indigo/sound_play
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

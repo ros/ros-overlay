@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/eigen_stl_containers
-    ros-kinetic/resource_retriever
     ros-kinetic/random_numbers
+    ros-kinetic/visualization_msgs
     ros-kinetic/octomap
+    ros-kinetic/resource_retriever
+    ros-kinetic/eigen_stl_containers
     ros-kinetic/shape_msgs
-    media-libs/assimp
-    dev-libs/boost
     dev-cpp/eigen
-    media-libs/qhull
     dev-libs/console_bridge
+    dev-libs/boost
+    media-libs/assimp
+    media-libs/qhull
 "
 DEPEND="${RDEPEND}
-    media-libs/assimp
     virtual/pkgconfig
+    media-libs/assimp
 "
 
 SLOT="0/0"

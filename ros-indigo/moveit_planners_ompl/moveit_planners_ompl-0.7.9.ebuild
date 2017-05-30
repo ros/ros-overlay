@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
     ros-indigo/pluginlib
-    ros-indigo/ompl
-    ros-indigo/tf
     ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_core
     ros-indigo/eigen_conversions
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/moveit_ros_planning
+    ros-indigo/tf
+    ros-indigo/ompl
 "
 DEPEND="${RDEPEND}
 "

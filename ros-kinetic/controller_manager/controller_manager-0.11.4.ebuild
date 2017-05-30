@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/realtime_tools
-    ros-kinetic/controller_interface
-    ros-kinetic/hardware_interface
     ros-kinetic/controller_manager_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/controller_interface
+    ros-kinetic/realtime_tools
     ros-kinetic/pluginlib
 "
 DEPEND="${RDEPEND}

@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/tf2_kdl
-    ros-indigo/rospy
-    ros-indigo/transform_graph
     ros-indigo/cmake_modules
-    ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
+    ros-indigo/orocos_kdl
+    ros-indigo/transform_graph
     ros-indigo/roscpp
     ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/tf2_kdl
     ros-indigo/tf2_ros
+    ros-indigo/visualization_msgs
+    ros-indigo/kdl_parser
 "
 DEPEND="${RDEPEND}
 "

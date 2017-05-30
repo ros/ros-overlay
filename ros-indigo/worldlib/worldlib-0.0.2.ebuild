@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
     ros-indigo/geometry_msgs
-    ros-indigo/roscpp
     ros-indigo/tf2_ros
     ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/tf2
     dev-libs/jsoncpp
+    net-misc/curl
+    dev-db/mariadb
     dev-cpp/yaml-cpp
     dev-libs/boost
-    dev-db/mariadb
-    net-misc/curl
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kobuki_node
-    ros-indigo/rocon_app_manager
-    ros-indigo/std_capabilities
-    ros-indigo/rocon_apps
     ros-indigo/nodelet
+    ros-indigo/std_capabilities
+    ros-indigo/rocon_app_manager
+    ros-indigo/rocon_apps
+    ros-indigo/kobuki_node
 "
 DEPEND="${RDEPEND}
 "

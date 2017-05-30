@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rospy
     ros-indigo/bwi_msgs
-    ros-indigo/rqt_gui_cpp
-    ros-indigo/qt_gui
-    ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
-    ros-indigo/sensor_msgs
     ros-indigo/class_loader
-    ros-indigo/python_qt_binding
+    ros-indigo/rospy
     ros-indigo/image_transport
+    ros-indigo/rqt_gui
+    ros-indigo/cv_bridge
+    ros-indigo/qt_gui
+    ros-indigo/rqt_gui_cpp
+    ros-indigo/python_qt_binding
+    ros-indigo/sensor_msgs
+    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

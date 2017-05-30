@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
+    ros-indigo/dynamic_reconfigure
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

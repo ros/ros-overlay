@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/std_srvs
-    ros-kinetic/diagnostic_updater
+    ros-kinetic/roscpp
     ros-kinetic/nav_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

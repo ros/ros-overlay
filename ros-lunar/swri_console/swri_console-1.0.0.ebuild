@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
     ros-lunar/rosbag_storage
     ros-lunar/roscpp
+    ros-lunar/rosgraph_msgs
     dev-qt/qtcore
     dev-qt/qtgui
     dev-qt/qtwidgets

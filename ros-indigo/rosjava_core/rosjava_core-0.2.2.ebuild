@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosgraph_msgs
-    ros-indigo/rosjava_test_msgs
+    ros-indigo/rosjava_build_tools
     ros-indigo/rosjava_bootstrap
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/rosjava_build_tools
-    ros-indigo/rosjava_messages
+    ros-indigo/rosjava_test_msgs
     ros-indigo/tf2_msgs
+    ros-indigo/rosjava_messages
+    ros-indigo/sensor_msgs
+    ros-indigo/rosgraph_msgs
 "
 
 SLOT="0/0"

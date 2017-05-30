@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/gazebo_ros
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/kobuki_msgs
     ros-kinetic/roscpp
     ros-kinetic/gazebo_plugins
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
     dev-libs/boost
 "

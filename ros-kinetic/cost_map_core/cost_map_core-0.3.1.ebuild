@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/ecl_build
-    ros-kinetic/ecl_eigen
-    ros-kinetic/grid_map_core
     ros-kinetic/ecl_console
+    ros-kinetic/grid_map_core
+    ros-kinetic/ecl_eigen
 "
 DEPEND="${RDEPEND}
 "

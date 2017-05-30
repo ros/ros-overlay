@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robot_pose_ekf
+    ros-kinetic/amcl
     ros-kinetic/gmapping
+    ros-kinetic/robot_pose_ekf
+    ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/map_server
     ros-kinetic/rviz
-    ros-kinetic/amcl
-    ros-kinetic/move_base
-    ros-kinetic/message_runtime
     ros-kinetic/tf
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "

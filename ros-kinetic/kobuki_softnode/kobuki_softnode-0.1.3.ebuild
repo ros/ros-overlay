@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/kobuki_msgs
+    ros-kinetic/nodelet
     ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/kobuki_description
+    ros-kinetic/kobuki_msgs
     ros-kinetic/roscpp
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/sensor_msgs
     ros-kinetic/robot_state_publisher
-    ros-kinetic/nodelet
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

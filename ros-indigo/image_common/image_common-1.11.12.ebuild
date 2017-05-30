@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/polled_camera
-    ros-indigo/image_transport
     ros-indigo/camera_info_manager
     ros-indigo/camera_calibration_parsers
+    ros-indigo/polled_camera
+    ros-indigo/image_transport
 "
 DEPEND="${RDEPEND}
 "

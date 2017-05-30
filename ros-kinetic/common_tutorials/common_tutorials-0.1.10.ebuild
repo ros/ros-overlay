@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/actionlib_tutorials
-    ros-kinetic/nodelet_tutorial_math
-    ros-kinetic/turtle_actionlib
     ros-kinetic/pluginlib_tutorials
+    ros-kinetic/turtle_actionlib
+    ros-kinetic/nodelet_tutorial_math
 "
 DEPEND="${RDEPEND}
 "

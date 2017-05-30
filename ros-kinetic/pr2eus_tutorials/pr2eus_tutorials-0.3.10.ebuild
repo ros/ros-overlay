@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_pcl_ros
     ros-kinetic/pr2eus
+    ros-kinetic/jsk_pcl_ros
 "
 DEPEND="${RDEPEND}
 "

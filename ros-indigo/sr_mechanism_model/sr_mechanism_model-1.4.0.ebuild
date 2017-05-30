@@ -12,9 +12,9 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_model
     ros-indigo/sr_hardware_interface
     ros-indigo/roscpp
+    ros-indigo/ros_ethercat_model
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/nodelet
     ros-kinetic/tf2_ros
     ros-kinetic/depth_image_proc
-    ros-kinetic/nodelet
     ros-kinetic/image_proc
 "
 DEPEND="${RDEPEND}

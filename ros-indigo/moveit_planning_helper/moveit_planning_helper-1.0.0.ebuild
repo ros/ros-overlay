@@ -13,16 +13,16 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/shape_tools
-    ros-indigo/manipulation_msgs
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/tf
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/convenience_ros_functions
+    ros-indigo/manipulation_msgs
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/actionlib
+    ros-indigo/shape_tools
+    ros-indigo/actionlib_msgs
     ros-indigo/roscpp
     ros-indigo/eigen_conversions
-    ros-indigo/actionlib
+    ros-indigo/trajectory_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

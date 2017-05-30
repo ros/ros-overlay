@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/mrpt_rbpf_slam
-    ros-kinetic/mrpt_ekf_slam_2d
     ros-kinetic/mrpt_ekf_slam_3d
     ros-kinetic/mrpt_icp_slam_2d
+    ros-kinetic/mrpt_ekf_slam_2d
 "
 DEPEND="${RDEPEND}
 "

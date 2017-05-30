@@ -12,11 +12,11 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rqt_gui_py
+    ros-indigo/rqt_gui
     ros-indigo/sr_robot_msgs
     ros-indigo/sr_robot_lib
-    ros-indigo/rqt_gui
     ros-indigo/rospy
-    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/sensor_msgs
-    ros-indigo/mrpt_bridge
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/mrpt_bridge
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_pose_ekf
+    ros-indigo/amcl
     ros-indigo/gmapping
+    ros-indigo/robot_pose_ekf
+    ros-indigo/message_runtime
     ros-indigo/std_msgs
     ros-indigo/map_server
     ros-indigo/rviz
-    ros-indigo/amcl
-    ros-indigo/move_base
-    ros-indigo/message_runtime
     ros-indigo/tf
+    ros-indigo/move_base
 "
 DEPEND="${RDEPEND}
 "

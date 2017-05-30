@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/fiducial_msgs
-    ros-kinetic/fiducial_slam
-    ros-kinetic/aruco_detect
-    ros-kinetic/fiducial_detect
-    ros-kinetic/fiducial_lib
     ros-kinetic/fiducial_pose
+    ros-kinetic/fiducial_msgs
+    ros-kinetic/fiducial_detect
+    ros-kinetic/fiducial_slam
+    ros-kinetic/fiducial_lib
+    ros-kinetic/aruco_detect
 "
 DEPEND="${RDEPEND}
 "

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/audio_play
-    ros-indigo/audio_common_msgs
-    ros-indigo/sound_play
     ros-indigo/audio_capture
+    ros-indigo/audio_play
+    ros-indigo/sound_play
+    ros-indigo/audio_common_msgs
 "
 DEPEND="${RDEPEND}
 "

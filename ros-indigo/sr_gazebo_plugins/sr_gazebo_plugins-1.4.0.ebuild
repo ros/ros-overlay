@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_model
+    ros-indigo/dynamic_reconfigure
     ros-indigo/angles
-    ros-indigo/rospy
-    ros-indigo/urdf
-    ros-indigo/sr_hardware_interface
     ros-indigo/nav_msgs
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
+    ros-indigo/controller_manager
+    ros-indigo/sr_self_test
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/diagnostic_msgs
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/controller_manager
-    ros-indigo/roscpp
+    ros-indigo/sr_hardware_interface
+    ros-indigo/ros_ethercat_model
     ros-indigo/diagnostic_updater
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/sr_self_test
-    ros-indigo/diagnostic_msgs
-    dev-libs/tinyxml
     sci-electronics/gazebo
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

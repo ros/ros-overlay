@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_plot
-    ros-indigo/rqt_py_console
-    ros-indigo/rqt_publisher
-    ros-indigo/rqt_console
-    ros-indigo/rqt_srv
-    ros-indigo/rqt_launch
-    ros-indigo/rqt_top
-    ros-indigo/rqt_graph
-    ros-indigo/rqt_topic
-    ros-indigo/rqt_bag_plugins
     ros-indigo/rqt_shell
-    ros-indigo/rqt_reconfigure
-    ros-indigo/rqt_logger_level
-    ros-indigo/rqt_bag
     ros-indigo/rqt_dep
-    ros-indigo/rqt_msg
-    ros-indigo/rqt_action
-    ros-indigo/rqt_web
-    ros-indigo/rqt_image_view
-    ros-indigo/rqt_py_common
     ros-indigo/rqt_service_caller
+    ros-indigo/rqt_console
+    ros-indigo/rqt_bag_plugins
+    ros-indigo/rqt_plot
+    ros-indigo/rqt_srv
+    ros-indigo/rqt_image_view
+    ros-indigo/rqt_reconfigure
+    ros-indigo/rqt_web
+    ros-indigo/rqt_logger_level
+    ros-indigo/rqt_graph
+    ros-indigo/rqt_launch
+    ros-indigo/rqt_msg
+    ros-indigo/rqt_publisher
+    ros-indigo/rqt_py_console
+    ros-indigo/rqt_top
+    ros-indigo/rqt_bag
+    ros-indigo/rqt_topic
+    ros-indigo/rqt_action
+    ros-indigo/rqt_py_common
 "
 DEPEND="${RDEPEND}
 "

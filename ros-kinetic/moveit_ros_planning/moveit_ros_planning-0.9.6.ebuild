@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pluginlib
+    ros-kinetic/angles
     ros-kinetic/actionlib
     ros-kinetic/moveit_ros_perception
     ros-kinetic/moveit_core
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/angles
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

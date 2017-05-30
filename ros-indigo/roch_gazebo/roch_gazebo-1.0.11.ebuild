@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_gazebo_plugins
-    ros-indigo/rostopic
-    ros-indigo/gazebo_ros_control
-    ros-indigo/gazebo_ros
+    ros-indigo/roch_bringup
     ros-indigo/roch_navigation
-    ros-indigo/pointcloud_to_laserscan
-    ros-indigo/roch_control
     ros-indigo/controller_manager
+    ros-indigo/gazebo_ros
     ros-indigo/roch_description
     ros-indigo/robot_state_publisher
+    ros-indigo/gazebo_ros_control
+    ros-indigo/hector_gazebo_plugins
+    ros-indigo/rostopic
     ros-indigo/gazebo_plugins
-    ros-indigo/roch_bringup
+    ros-indigo/roch_control
+    ros-indigo/pointcloud_to_laserscan
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

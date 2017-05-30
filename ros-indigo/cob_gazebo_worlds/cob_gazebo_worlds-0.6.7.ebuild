@@ -12,22 +12,22 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
-    ros-indigo/rostest
-    ros-indigo/rospy
-    ros-indigo/gazebo_ros_control
-    ros-indigo/gazebo_ros
     ros-indigo/position_controllers
-    ros-indigo/xacro
-    ros-indigo/std_msgs
-    ros-indigo/velocity_controllers
     ros-indigo/controller_manager
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/roslaunch
-    ros-indigo/tf
+    ros-indigo/gazebo_ros
+    ros-indigo/rospy
+    ros-indigo/xacro
     ros-indigo/cob_default_env_config
+    ros-indigo/roslaunch
+    ros-indigo/gazebo_ros_control
     ros-indigo/joint_state_controller
+    ros-indigo/std_msgs
+    ros-indigo/rostest
+    ros-indigo/robot_state_publisher
+    ros-indigo/gazebo_msgs
+    ros-indigo/velocity_controllers
+    ros-indigo/tf
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

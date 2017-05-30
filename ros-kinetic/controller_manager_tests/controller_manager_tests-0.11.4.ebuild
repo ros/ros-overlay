@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/controller_interface
     ros-kinetic/rostest
+    ros-kinetic/controller_interface
     ros-kinetic/controller_manager
 "
 DEPEND="${RDEPEND}

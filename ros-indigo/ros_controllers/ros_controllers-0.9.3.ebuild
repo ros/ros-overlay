@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_joint_trajectory_controller
-    ros-indigo/diff_drive_controller
-    ros-indigo/effort_controllers
     ros-indigo/position_controllers
-    ros-indigo/imu_sensor_controller
     ros-indigo/joint_trajectory_controller
-    ros-indigo/velocity_controllers
-    ros-indigo/gripper_action_controller
     ros-indigo/force_torque_sensor_controller
     ros-indigo/forward_command_controller
     ros-indigo/joint_state_controller
+    ros-indigo/effort_controllers
+    ros-indigo/diff_drive_controller
+    ros-indigo/gripper_action_controller
+    ros-indigo/imu_sensor_controller
+    ros-indigo/rqt_joint_trajectory_controller
+    ros-indigo/velocity_controllers
 "
 DEPEND="${RDEPEND}
 "

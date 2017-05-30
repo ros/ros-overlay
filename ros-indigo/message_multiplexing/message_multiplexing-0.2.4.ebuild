@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mm_radio
     ros-indigo/mm_mux_demux
-    ros-indigo/mm_core_msgs
-    ros-indigo/mm_eigen_msgs
     ros-indigo/mm_messages
+    ros-indigo/mm_eigen_msgs
+    ros-indigo/mm_core_msgs
+    ros-indigo/mm_radio
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grizzly_viz
     ros-indigo/rqt_console
-    ros-indigo/rqt_robot_monitor
-    ros-indigo/grizzly_teleop
+    ros-indigo/grizzly_viz
     ros-indigo/grizzly_msgs
+    ros-indigo/rqt_robot_monitor
     ros-indigo/roboteq_msgs
+    ros-indigo/grizzly_teleop
 "
 DEPEND="${RDEPEND}
 "

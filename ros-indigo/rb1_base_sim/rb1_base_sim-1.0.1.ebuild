@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rb1_base_2dnav
-    ros-indigo/rb1_base_gazebo
-    ros-indigo/rb1_base_control
     ros-indigo/rb1_base_purepursuit
+    ros-indigo/rb1_base_gazebo
+    ros-indigo/rb1_base_2dnav
+    ros-indigo/rb1_base_control
 "
 DEPEND="${RDEPEND}
 "

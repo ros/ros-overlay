@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/tf2
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/dynamic_tf_publisher
+    ros-indigo/image_geometry
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/message_filters
+    ros-indigo/posedetection_msgs
+    ros-indigo/roscpp
+    ros-indigo/eigen_conversions
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
     ros-indigo/rosconsole
     ros-indigo/cv_bridge
-    ros-indigo/image_geometry
-    ros-indigo/tf2
-    ros-indigo/tf
-    ros-indigo/sensor_msgs
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/roscpp
-    ros-indigo/dynamic_tf_publisher
-    ros-indigo/posedetection_msgs
-    ros-indigo/message_filters
-    ros-indigo/eigen_conversions
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "

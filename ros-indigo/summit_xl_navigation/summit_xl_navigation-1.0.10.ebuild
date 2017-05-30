@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/navigation
     ros-indigo/gmapping
+    ros-indigo/navigation
 "
 DEPEND="${RDEPEND}
 "

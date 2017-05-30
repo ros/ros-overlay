@@ -13,8 +13,8 @@ LICENSE="LGPL/BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    media-gfx/graphviz
     dev-python/wxpython
+    media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
 "

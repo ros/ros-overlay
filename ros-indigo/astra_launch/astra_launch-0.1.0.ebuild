@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/image_proc
-    ros-indigo/rgbd_launch
-    ros-indigo/tf
-    ros-indigo/astra_camera
     ros-indigo/nodelet
+    ros-indigo/astra_camera
+    ros-indigo/image_proc
     ros-indigo/depth_image_proc
+    ros-indigo/tf
+    ros-indigo/rgbd_launch
 "
 DEPEND="${RDEPEND}
 "

@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/bwi_msgs
-    ros-indigo/rospy
     ros-indigo/bwi_kr_execution
-    ros-indigo/actionlib_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     app-accessibility/espeak
 "
 DEPEND="${RDEPEND}

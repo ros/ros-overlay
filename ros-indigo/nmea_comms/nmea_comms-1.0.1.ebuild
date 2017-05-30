@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nmea_msgs
     ros-indigo/roscpp
+    ros-indigo/nmea_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/rostest
     ros-indigo/roslint
     ros-indigo/roslaunch
-    ros-indigo/rostest
 "
 
 SLOT="0/0"

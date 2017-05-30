@@ -12,9 +12,9 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rospack
     ros-indigo/mk
     ros-indigo/roslib
-    ros-indigo/rospack
 "
 DEPEND="${RDEPEND}
 "

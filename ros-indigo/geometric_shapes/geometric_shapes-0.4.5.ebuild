@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/eigen_stl_containers
-    ros-indigo/resource_retriever
     ros-indigo/random_numbers
+    ros-indigo/visualization_msgs
     ros-indigo/octomap
+    ros-indigo/resource_retriever
+    ros-indigo/eigen_stl_containers
     ros-indigo/shape_msgs
-    media-libs/assimp
-    dev-libs/boost
     dev-cpp/eigen
-    media-libs/qhull
     dev-libs/console_bridge
+    dev-libs/boost
+    media-libs/assimp
+    media-libs/qhull
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules
-    media-libs/assimp
     virtual/pkgconfig
+    media-libs/assimp
 "
 
 SLOT="0/0"

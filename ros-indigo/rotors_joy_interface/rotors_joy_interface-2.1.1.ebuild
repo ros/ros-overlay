@@ -12,11 +12,11 @@ LICENSE="ASL 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/geometry_msgs
-    ros-indigo/trajectory_msgs
     ros-indigo/sensor_msgs
     ros-indigo/roscpp
     ros-indigo/mav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

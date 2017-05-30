@@ -12,12 +12,12 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/stdr_msgs
     ros-indigo/nav_msgs
-    ros-indigo/roslib
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/stdr_msgs
+    ros-indigo/roslib
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

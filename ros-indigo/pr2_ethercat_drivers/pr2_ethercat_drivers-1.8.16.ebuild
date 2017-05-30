@@ -8,12 +8,12 @@ DESCRIPTION="This stack contains drivers for the ethercat system and the periphe
 HOMEPAGE="http://ros.org/wiki/pr2_ethercat_drivers"
 SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/indigo/pr2_ethercat_drivers/1.8.16-0.tar.gz"
 
-LICENSE="||( BSD GPL )"
+LICENSE="|| ( BSD GPL )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ethercat_hardware
     ros-indigo/fingertip_pressure
+    ros-indigo/ethercat_hardware
 "
 DEPEND="${RDEPEND}
 "

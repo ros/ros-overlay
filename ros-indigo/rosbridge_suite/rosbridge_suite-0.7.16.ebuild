@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosapi
     ros-indigo/rosbridge_library
     ros-indigo/rosbridge_server
-    ros-indigo/rosapi
 "
 DEPEND="${RDEPEND}
 "

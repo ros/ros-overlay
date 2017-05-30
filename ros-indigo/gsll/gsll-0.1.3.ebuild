@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/trivial_garbage
-    ros-indigo/cl_utilities
     ros-indigo/gsd
+    ros-indigo/cl_utilities
     ros-indigo/cffi
     dev-lisp/sbcl
     sci-libs/gsl

@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/angles
-    ros-indigo/diff_drive_controller
-    ros-indigo/geometry_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/roch_control
-    ros-indigo/controller_manager
-    ros-indigo/roch_description
     ros-indigo/nodelet
-    ros-indigo/roscpp
-    ros-indigo/sensor_msgs
-    ros-indigo/roch_msgs
-    ros-indigo/diagnostic_updater
     ros-indigo/topic_tools
     ros-indigo/tf
-    ros-indigo/std_msgs
+    ros-indigo/angles
+    ros-indigo/controller_manager
+    ros-indigo/roch_description
+    ros-indigo/geometry_msgs
+    ros-indigo/roch_msgs
+    ros-indigo/roscpp
+    ros-indigo/diff_drive_controller
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/sensor_msgs
+    ros-indigo/roch_control
+    ros-indigo/hardware_interface
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/face_detector
-    ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/trajectory_msgs
-    ros-indigo/pr2_controllers_msgs
     ros-indigo/korg_nanokontrol
-    ros-indigo/rviz_backdrop
-    ros-indigo/sensor_msgs
-    ros-indigo/sound_play
+    ros-indigo/rospy
     ros-indigo/actionlib
-    ros-indigo/pr2_mechanism_msgs
     ros-indigo/program_queue
+    ros-indigo/std_srvs
+    ros-indigo/pr2_mechanism_msgs
+    ros-indigo/sound_play
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/face_detector
+    ros-indigo/pr2_controllers_msgs
+    ros-indigo/rviz_backdrop
 "
 DEPEND="${RDEPEND}
 "

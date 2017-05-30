@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/rospy
-    ros-kinetic/image_geometry
-    ros-kinetic/swri_math_util
-    ros-kinetic/message_filters
-    ros-kinetic/nav_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/camera_calibration_parsers
     ros-kinetic/nodelet
-    ros-kinetic/roscpp
+    ros-kinetic/image_geometry
     ros-kinetic/swri_opencv_util
+    ros-kinetic/nav_msgs
     ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/rospy
+    ros-kinetic/swri_math_util
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/tf
-    dev-qt/qtopengl
-    dev-qt/qtgui
+    ros-kinetic/cv_bridge
     dev-cpp/eigen
+    dev-qt/qtgui
+    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
 "

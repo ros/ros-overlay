@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_plot
-    ros-indigo/xacro
-    ros-indigo/controller_interface
-    ros-indigo/rostest
-    ros-indigo/roscpp
-    ros-indigo/control_toolbox
     ros-indigo/angles
-    ros-indigo/hardware_interface
     ros-indigo/controller_manager
+    ros-indigo/xacro
+    ros-indigo/rqt_plot
+    ros-indigo/actionlib
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/hardware_interface
+    ros-indigo/rostest
+    ros-indigo/realtime_tools
     ros-indigo/trajectory_msgs
     ros-indigo/control_msgs
-    ros-indigo/urdf
-    ros-indigo/realtime_tools
-    ros-indigo/actionlib
+    ros-indigo/controller_interface
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

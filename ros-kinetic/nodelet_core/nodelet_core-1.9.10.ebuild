@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nodelet_topic_tools
     ros-kinetic/nodelet
+    ros-kinetic/nodelet_topic_tools
 "
 DEPEND="${RDEPEND}
 "

@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/summit_x_control
-    ros-indigo/summit_x_description
-    ros-indigo/summit_xl_pad
-    ros-indigo/gazebo_ros
     ros-indigo/twist_mux
+    ros-indigo/summit_xl_pad
+    ros-indigo/summit_x_description
+    ros-indigo/gazebo_ros
 "
 DEPEND="${RDEPEND}
 "

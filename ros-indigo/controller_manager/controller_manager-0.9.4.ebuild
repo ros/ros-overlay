@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostest
     ros-indigo/pluginlib
-    ros-indigo/realtime_tools
-    ros-indigo/controller_interface
-    ros-indigo/hardware_interface
     ros-indigo/controller_manager_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/rostest
+    ros-indigo/hardware_interface
+    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
 "

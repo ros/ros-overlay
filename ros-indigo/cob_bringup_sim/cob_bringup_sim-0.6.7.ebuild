@@ -12,16 +12,16 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
     ros-indigo/rospy
-    ros-indigo/cob_gazebo_worlds
     ros-indigo/gazebo_ros
-    ros-indigo/cob_gazebo
     ros-indigo/geometry_msgs
-    ros-indigo/tf
+    ros-indigo/cob_default_env_config
     ros-indigo/roslaunch
     ros-indigo/roslib
-    ros-indigo/cob_default_env_config
+    ros-indigo/cob_gazebo_worlds
+    ros-indigo/cob_gazebo
+    ros-indigo/gazebo_msgs
+    ros-indigo/tf
     ros-indigo/cob_default_robot_config
     dev-python/numpy
 "

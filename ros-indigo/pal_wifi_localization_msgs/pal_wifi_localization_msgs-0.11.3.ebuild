@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/message_runtime
     ros-indigo/nav_msgs
+    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

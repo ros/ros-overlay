@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rbcar_joystick
-    ros-indigo/rbcar_sim_bringup
     ros-indigo/rbcar_gazebo
+    ros-indigo/rbcar_sim_bringup
+    ros-indigo/rbcar_joystick
     ros-indigo/rbcar_robot_control
     ros-indigo/rbcar_control
 "

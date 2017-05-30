@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ros_comm
-    ros-kinetic/ros
+    ros-kinetic/cmake_modules
+    ros-kinetic/rospack
+    ros-kinetic/gencpp
+    ros-kinetic/message_generation
+    ros-kinetic/common_msgs
+    ros-kinetic/rosconsole_bridge
+    ros-kinetic/std_srvs
     ros-kinetic/rosgraph_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/roslisp
+    ros-kinetic/catkin
     ros-kinetic/genmsg
+    ros-kinetic/ros
     ros-kinetic/gennodejs
     ros-kinetic/geneus
-    ros-kinetic/std_srvs
-    ros-kinetic/common_msgs
-    ros-kinetic/gencpp
-    ros-kinetic/roslisp
-    ros-kinetic/roscpp_core
-    ros-kinetic/cmake_modules
-    ros-kinetic/rosconsole_bridge
-    ros-kinetic/genpy
-    ros-kinetic/std_msgs
-    ros-kinetic/message_generation
     ros-kinetic/rosbag_migration_rule
+    ros-kinetic/genpy
+    ros-kinetic/roscpp_core
+    ros-kinetic/ros_comm
+    ros-kinetic/std_msgs
     ros-kinetic/genlisp
-    ros-kinetic/message_runtime
-    ros-kinetic/rospack
-    ros-kinetic/catkin
 "
 DEPEND="${RDEPEND}
 "

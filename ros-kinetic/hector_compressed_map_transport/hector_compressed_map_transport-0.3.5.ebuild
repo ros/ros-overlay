@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/hector_map_tools
     ros-kinetic/nav_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/hector_map_tools
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlebot_bringup
     ros-kinetic/visualization_msgs
     ros-kinetic/roscpp
     ros-kinetic/interactive_markers
+    ros-kinetic/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

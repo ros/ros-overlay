@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rqt_plot
-    ros-kinetic/rosbag
     ros-kinetic/rospy
-    ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
+    ros-kinetic/rqt_plot
     ros-kinetic/geometry_msgs
+    ros-kinetic/rqt_gui
+    ros-kinetic/roslib
+    ros-kinetic/rosbag
+    ros-kinetic/std_msgs
     ros-kinetic/rqt_bag
     ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roslib
-    dev-python/pillow
+    ros-kinetic/rqt_gui_py
     dev-python/pycairo
+    dev-python/pillow
 "
 DEPEND="${RDEPEND}
 "

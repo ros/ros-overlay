@@ -14,12 +14,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/robotis_framework_common
-    ros-kinetic/thormang3_kinematics_dynamics
     ros-kinetic/cmake_modules
+    ros-kinetic/thormang3_kinematics_dynamics
     ros-kinetic/geometry_msgs
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/robotis_math
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/thormang3_manipulation_module_msgs

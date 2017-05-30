@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2_py
-    ros-indigo/tf2_geometry_msgs
-    ros-indigo/tf2_kdl
-    ros-indigo/tf2_tools
-    ros-indigo/tf2
+    ros-indigo/tf2_sensor_msgs
     ros-indigo/tf2_bullet
     ros-indigo/tf2_eigen
-    ros-indigo/tf2_sensor_msgs
-    ros-indigo/tf2_ros
+    ros-indigo/tf2_py
+    ros-indigo/tf2_tools
     ros-indigo/tf2_msgs
+    ros-indigo/tf2_kdl
+    ros-indigo/tf2_geometry_msgs
+    ros-indigo/tf2
+    ros-indigo/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

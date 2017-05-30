@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/qt_gui
     ros-indigo/pluginlib
+    ros-indigo/qt_gui
 "
 DEPEND="${RDEPEND}
     ros-indigo/python_qt_binding
-    dev-libs/tinyxml
-    dev-qt/qtcore
-    dev-qt/qtcore
     virtual/pkgconfig
+    dev-qt/qtcore
+    dev-qt/qtcore
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

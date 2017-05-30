@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/husky_description
-    ros-indigo/diff_drive_controller
-    ros-indigo/husky_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/sensor_msgs
-    ros-indigo/controller_manager
-    ros-indigo/roscpp
     ros-indigo/husky_control
     ros-indigo/topic_tools
-    ros-indigo/diagnostic_updater
+    ros-indigo/controller_manager
+    ros-indigo/husky_description
+    ros-indigo/geometry_msgs
+    ros-indigo/roscpp
+    ros-indigo/diff_drive_controller
     ros-indigo/diagnostic_msgs
+    ros-indigo/husky_msgs
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/sensor_msgs
+    ros-indigo/hardware_interface
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslaunch
     ros-indigo/roslint
+    ros-indigo/roslaunch
 "
 
 SLOT="0/0"

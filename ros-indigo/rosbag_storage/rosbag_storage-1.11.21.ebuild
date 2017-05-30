@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/cpp_common
+    ros-indigo/roscpp_traits
     ros-indigo/roscpp_serialization
     ros-indigo/rostime
     ros-indigo/roslz4
-    ros-indigo/roscpp_traits
-    ros-indigo/cpp_common
-    dev-libs/boost
-    dev-libs/console_bridge
     app-arch/bzip2
+    dev-libs/console_bridge
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
 "

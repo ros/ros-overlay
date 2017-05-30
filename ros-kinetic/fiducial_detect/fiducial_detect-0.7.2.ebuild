@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/fiducial_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/fiducial_lib
-    ros-kinetic/tf2
-    ros-kinetic/orocos_kdl
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf2_ros
-    ros-kinetic/compressed_image_transport
-    ros-kinetic/image_transport
     ros-kinetic/fiducial_pose
+    ros-kinetic/fiducial_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/orocos_kdl
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/compressed_image_transport
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
+    ros-kinetic/visualization_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/fiducial_lib
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

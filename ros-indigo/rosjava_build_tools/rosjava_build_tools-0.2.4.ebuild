@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
-    dev-java/ant
     dev-java/sun-jdk
+    dev-java/ant
 "
 DEPEND="${RDEPEND}
 "

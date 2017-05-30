@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_navigation
-    ros-indigo/robot_pose_publisher
-    ros-indigo/turtlebot_teleop
-    ros-indigo/warehouse_ros
-    ros-indigo/world_canvas_server
     ros-indigo/turtlebot_follower
-    ros-indigo/turtlebot_bringup
     ros-indigo/topic_tools
     ros-indigo/kobuki_auto_docking
+    ros-indigo/warehouse_ros
+    ros-indigo/turtlebot_navigation
     ros-indigo/compressed_image_transport
+    ros-indigo/turtlebot_teleop
+    ros-indigo/world_canvas_server
     ros-indigo/tf
+    ros-indigo/robot_pose_publisher
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

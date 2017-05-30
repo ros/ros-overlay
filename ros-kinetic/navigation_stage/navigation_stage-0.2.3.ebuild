@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/move_base
-    ros-kinetic/stage_ros
-    ros-kinetic/gmapping
-    ros-kinetic/map_server
-    ros-kinetic/amcl
     ros-kinetic/fake_localization
+    ros-kinetic/amcl
+    ros-kinetic/gmapping
+    ros-kinetic/stage_ros
+    ros-kinetic/map_server
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "

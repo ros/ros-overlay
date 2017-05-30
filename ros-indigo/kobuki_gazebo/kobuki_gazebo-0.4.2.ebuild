@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/kobuki_safety_controller
-    ros-indigo/kobuki_random_walker
-    ros-indigo/kobuki_gazebo_plugins
     ros-indigo/gazebo_ros
+    ros-indigo/yocs_cmd_vel_mux
     ros-indigo/kobuki_description
-    ros-indigo/robot_state_publisher
+    ros-indigo/kobuki_random_walker
     ros-indigo/gazebo_plugins
+    ros-indigo/kobuki_gazebo_plugins
+    ros-indigo/kobuki_safety_controller
+    ros-indigo/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/transmission_interface
-    ros-indigo/hardware_interface
     ros-indigo/controller_manager
-    ros-indigo/roscpp
-    ros-indigo/diagnostic_updater
     ros-indigo/epos_library
+    ros-indigo/roscpp
+    ros-indigo/hardware_interface
+    ros-indigo/diagnostic_updater
+    ros-indigo/transmission_interface
 "
 DEPEND="${RDEPEND}
 "

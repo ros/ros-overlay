@@ -12,22 +12,22 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/resource_retriever
     ros-indigo/tf2
-    ros-indigo/geometry_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/ar_track_alvar_msgs
-    ros-indigo/roscpp
+    ros-indigo/visualization_msgs
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
     ros-indigo/image_transport
-    ros-indigo/pcl_conversions
+    ros-indigo/geometry_msgs
+    ros-indigo/ar_track_alvar_msgs
+    ros-indigo/resource_retriever
     ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/pcl_conversions
+    ros-indigo/cv_bridge
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

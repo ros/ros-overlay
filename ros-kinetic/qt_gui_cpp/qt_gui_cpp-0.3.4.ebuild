@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/qt_gui
     ros-kinetic/pluginlib
+    ros-kinetic/qt_gui
 "
 DEPEND="${RDEPEND}
     ros-kinetic/python_qt_binding
-    dev-qt/qtcore
-    dev-libs/tinyxml
     virtual/pkgconfig
     dev-qt/qtcore
+    dev-qt/qtcore
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

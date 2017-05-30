@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/baselib_binding
-    ros-indigo/roscpp
     ros-indigo/urdf_traverser
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
     ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/message_runtime
-    ros-indigo/geometry_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

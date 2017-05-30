@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/fzi_icl_core
     ros-indigo/catkin
-    dev-libs/popt
     sys-kernel/linux-headers
+    dev-libs/popt
 "
 DEPEND="${RDEPEND}
     net-misc/wget

@@ -12,13 +12,13 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/canopen_402
+    ros-indigo/canopen_motor_node
+    ros-indigo/can_msgs
     ros-indigo/socketcan_bridge
+    ros-indigo/canopen_chain_node
     ros-indigo/socketcan_interface
     ros-indigo/canopen_master
-    ros-indigo/can_msgs
-    ros-indigo/canopen_motor_node
-    ros-indigo/canopen_chain_node
-    ros-indigo/canopen_402
 "
 DEPEND="${RDEPEND}
 "

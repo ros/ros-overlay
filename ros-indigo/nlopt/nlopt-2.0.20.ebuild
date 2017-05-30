@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-indigo/mk
+    ros-indigo/cmake_modules
     ros-indigo/rospack
     ros-indigo/rosbuild
-    ros-indigo/cmake_modules
+    ros-indigo/mk
     sys-devel/libtool
 "
 

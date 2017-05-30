@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_app_manager
-    ros-indigo/rospy_tutorials
-    ros-indigo/rocon_apps
-    ros-indigo/rocon_bubble_icons
-    ros-indigo/zeroconf_avahi
-    ros-indigo/concert_master
-    ros-indigo/concert_service_utilities
-    ros-indigo/concert_service_admin
     ros-indigo/concert_service_link_graph
+    ros-indigo/rospy_tutorials
     ros-indigo/rocon_python_utils
+    ros-indigo/concert_master
+    ros-indigo/rocon_app_manager
+    ros-indigo/concert_service_utilities
+    ros-indigo/rocon_bubble_icons
+    ros-indigo/rocon_apps
+    ros-indigo/zeroconf_avahi
+    ros-indigo/concert_service_admin
 "
 DEPEND="${RDEPEND}
 "

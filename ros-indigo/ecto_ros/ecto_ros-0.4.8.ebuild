@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rosbag
-    ros-indigo/geometry_msgs
     ros-indigo/ecto
     ros-indigo/message_generation
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/rosbag
     ros-indigo/roscpp
     ros-indigo/std_msgs
-    ros-indigo/message_runtime
+    ros-indigo/cv_bridge
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosmsg
-    ros-indigo/nav_msgs
     ros-indigo/cmake_modules
+    ros-indigo/nav_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/rosmsg
 "
 
 SLOT="0/0"

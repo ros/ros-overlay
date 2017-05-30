@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
+    ros-indigo/pr2_description
     ros-indigo/orocos_kdl
     ros-indigo/trac_ik_lib
-    ros-indigo/pr2_description
+    ros-indigo/xacro
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

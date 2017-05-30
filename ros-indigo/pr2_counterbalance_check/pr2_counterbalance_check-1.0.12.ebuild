@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joint_qualification_controllers
-    ros-indigo/pr2_controller_manager
     ros-indigo/rospy
-    ros-indigo/pr2_controller_configuration
+    ros-indigo/joint_qualification_controllers
+    ros-indigo/actionlib
     ros-indigo/pr2_self_test_msgs
+    ros-indigo/pr2_controller_configuration
+    ros-indigo/pr2_controller_manager
     ros-indigo/std_msgs
     ros-indigo/pr2_controllers_msgs
-    ros-indigo/actionlib
 "
 DEPEND="${RDEPEND}
 "

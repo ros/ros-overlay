@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/image_geometry
-    ros-indigo/actionlib
-    ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/turtlebot_bringup
-    ros-indigo/roscpp
     ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/message_runtime
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
     ros-indigo/tf
+    ros-indigo/cv_bridge
+    ros-indigo/turtlebot_bringup
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

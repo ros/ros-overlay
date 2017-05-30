@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlebot_navigation
-    ros-kinetic/yocs_cmd_vel_mux
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/turtlebot_description
     ros-kinetic/depthimage_to_laserscan
+    ros-kinetic/yocs_cmd_vel_mux
     ros-kinetic/gazebo_ros
-    ros-kinetic/kobuki_gazebo_plugins
     ros-kinetic/xacro
-    ros-kinetic/turtlebot_bringup
-    ros-kinetic/robot_state_publisher
     ros-kinetic/robot_pose_ekf
+    ros-kinetic/turtlebot_description
+    ros-kinetic/kobuki_gazebo_plugins
+    ros-kinetic/turtlebot_navigation
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

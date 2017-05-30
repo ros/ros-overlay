@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/resized_image_transport
-    ros-indigo/jsk_pcl_ros
     ros-indigo/checkerboard_detector
-    ros-indigo/jsk_perception
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/imagesift
     ros-indigo/jsk_recognition_utils
+    ros-indigo/resized_image_transport
+    ros-indigo/imagesift
+    ros-indigo/jsk_perception
+    ros-indigo/jsk_pcl_ros
+    ros-indigo/jsk_recognition_msgs
 "
 DEPEND="${RDEPEND}
 "

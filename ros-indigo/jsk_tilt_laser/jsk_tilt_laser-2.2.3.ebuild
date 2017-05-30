@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/laser_assembler
+    ros-indigo/dynamic_reconfigure
     ros-indigo/tf_conversions
+    ros-indigo/laser_filters
     ros-indigo/multisense_lib
     ros-indigo/urg_node
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/laser_assembler
     ros-indigo/dynamixel_controllers
     ros-indigo/sensor_msgs
     ros-indigo/robot_state_publisher
     ros-indigo/tf
-    ros-indigo/laser_filters
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

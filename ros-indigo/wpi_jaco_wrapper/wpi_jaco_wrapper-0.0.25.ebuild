@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/ecl_geometry
-    ros-indigo/control_msgs
-    ros-indigo/std_srvs
     ros-indigo/jaco_sdk
-    ros-indigo/hardware_interface
+    ros-indigo/controller_manager
+    ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/ecl_geometry
+    ros-indigo/roscpp
+    ros-indigo/rail_manipulation_msgs
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/controller_manager
-    ros-indigo/wpi_jaco_msgs
-    ros-indigo/roscpp
+    ros-indigo/control_msgs
     ros-indigo/tf
-    ros-indigo/actionlib
+    ros-indigo/hardware_interface
+    ros-indigo/wpi_jaco_msgs
 "
 DEPEND="${RDEPEND}
 "

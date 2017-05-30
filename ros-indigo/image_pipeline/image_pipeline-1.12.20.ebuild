@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/camera_calibration
     ros-indigo/stereo_image_proc
-    ros-indigo/image_rotate
-    ros-indigo/image_publisher
+    ros-indigo/camera_calibration
+    ros-indigo/image_view
     ros-indigo/image_proc
     ros-indigo/depth_image_proc
-    ros-indigo/image_view
+    ros-indigo/image_publisher
+    ros-indigo/image_rotate
 "
 DEPEND="${RDEPEND}
 "

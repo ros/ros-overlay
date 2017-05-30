@@ -12,16 +12,16 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/rospy
-    ros-indigo/std_srvs
+    ros-indigo/image_transport
     ros-indigo/message_filters
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/image_transport
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

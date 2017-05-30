@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rospy
-    ros-kinetic/genmsg
-    ros-kinetic/std_srvs
-    ros-kinetic/genpy
     ros-kinetic/topic_tools
-    ros-kinetic/roscpp
     ros-kinetic/rosbag_storage
-    ros-kinetic/xmlrpcpp
+    ros-kinetic/rospy
+    ros-kinetic/std_srvs
     ros-kinetic/roslib
-    dev-libs/boost
+    ros-kinetic/roscpp
+    ros-kinetic/genmsg
+    ros-kinetic/genpy
+    ros-kinetic/rosconsole
+    ros-kinetic/xmlrpcpp
     dev-python/rospkg
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roscpp_serialization
     ros-kinetic/cpp_common
+    ros-kinetic/roscpp_serialization
     dev-python/pillow
 "
 

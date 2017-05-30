@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mrp2_control
-    ros-indigo/mrp2_analyzer
     ros-indigo/mrp2_navigation
+    ros-indigo/mrp2_analyzer
+    ros-indigo/mrp2_control
     ros-indigo/mrp2_description
 "
 DEPEND="${RDEPEND}

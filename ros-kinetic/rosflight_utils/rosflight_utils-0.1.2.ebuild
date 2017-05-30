@@ -12,14 +12,14 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/gazebo_msgs
-    ros-kinetic/rosgraph_msgs
     ros-kinetic/rospy
-    ros-kinetic/std_srvs
     ros-kinetic/geometry_msgs
     ros-kinetic/rosflight_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/std_srvs
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/gazebo_msgs
+    ros-kinetic/rosgraph_msgs
 "
 DEPEND="${RDEPEND}
 "

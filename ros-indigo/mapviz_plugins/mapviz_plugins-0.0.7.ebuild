@@ -12,33 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/swri_math_util
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/std_msgs
-    ros-indigo/gps_common
-    ros-indigo/image_transport
-    ros-indigo/swri_image_util
-    ros-indigo/marti_common_msgs
-    ros-indigo/swri_transform_util
-    ros-indigo/swri_route_util
-    ros-indigo/marti_nav_msgs
     ros-indigo/nav_msgs
-    ros-indigo/marti_visualization_msgs
-    ros-indigo/cv_bridge
-    ros-indigo/swri_yaml_util
-    ros-indigo/visualization_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/marti_nav_msgs
+    ros-indigo/image_transport
+    ros-indigo/swri_math_util
     ros-indigo/stereo_msgs
     ros-indigo/mapviz
+    ros-indigo/swri_transform_util
+    ros-indigo/swri_yaml_util
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/swri_route_util
+    ros-indigo/marti_common_msgs
+    ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/visualization_msgs
+    ros-indigo/pluginlib
+    ros-indigo/gps_common
+    ros-indigo/marti_visualization_msgs
+    ros-indigo/swri_image_util
+    dev-qt/qtcore
     dev-qt/qtcore
     dev-qt/qtopengl
-    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtcore
     dev-qt/qtopengl
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

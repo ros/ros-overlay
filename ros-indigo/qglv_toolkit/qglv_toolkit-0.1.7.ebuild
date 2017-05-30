@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/qglv_opengl
-    ros-indigo/qglv_opencv
-    ros-indigo/qglv_pcl
     ros-indigo/qglv_gallery
+    ros-indigo/qglv_opencv
+    ros-indigo/qglv_opengl
+    ros-indigo/qglv_pcl
     ros-indigo/qglv_extras
 "
 DEPEND="${RDEPEND}

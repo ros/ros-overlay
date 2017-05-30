@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/python_orocos_kdl
     ros-indigo/nav_msgs
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/python_orocos_kdl
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
     ros-indigo/turtlebot_bringup
-    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segbot_sensors
-    ros-indigo/xacro
     ros-indigo/segway_rmp
-    ros-indigo/tf
-    ros-indigo/bwi_logging
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/smart_battery_msgs
-    ros-indigo/segbot_description
-    ros-indigo/stop_base
     ros-indigo/dynamic_reconfigure
+    ros-indigo/xacro
+    ros-indigo/bwi_logging
+    ros-indigo/smart_battery_msgs
+    ros-indigo/stop_base
+    ros-indigo/robot_state_publisher
+    ros-indigo/segbot_sensors
+    ros-indigo/tf
+    ros-indigo/joint_state_publisher
+    ros-indigo/segbot_description
     dev-python/netifaces
 "
 DEPEND="${RDEPEND}

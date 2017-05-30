@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/laser_scan_publisher_tutorial
     ros-kinetic/point_cloud_publisher_tutorial
-    ros-kinetic/simple_navigation_goals_tutorial
+    ros-kinetic/laser_scan_publisher_tutorial
     ros-kinetic/odometry_publisher_tutorial
     ros-kinetic/navigation_stage
-    ros-kinetic/robot_setup_tf_tutorial
     ros-kinetic/roomba_stage
+    ros-kinetic/robot_setup_tf_tutorial
+    ros-kinetic/simple_navigation_goals_tutorial
 "
 DEPEND="${RDEPEND}
 "

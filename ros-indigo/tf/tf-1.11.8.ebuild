@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/roswtf
     ros-indigo/tf2
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/tf2_ros
     ros-indigo/message_filters
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf2_ros
+    ros-indigo/rosconsole
+    ros-indigo/roswtf
     media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
-    ros-indigo/message_generation
     ros-indigo/angles
+    ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

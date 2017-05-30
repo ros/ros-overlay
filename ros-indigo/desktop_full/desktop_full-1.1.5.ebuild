@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/perception
     ros-indigo/desktop
     ros-indigo/urdf_tutorial
+    ros-indigo/perception
     ros-indigo/simulators
 "
 DEPEND="${RDEPEND}

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
     ros-indigo/cmake_modules
+    ros-indigo/tf_conversions
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
     ros-indigo/eigen_conversions
+    ros-indigo/sensor_msgs
     ros-indigo/tf
     dev-cpp/eigen
 "

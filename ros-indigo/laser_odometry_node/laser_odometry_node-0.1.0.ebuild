@@ -13,11 +13,11 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/laser_odometry_core
     ros-indigo/topic_tools
-    ros-indigo/sensor_msgs
+    ros-indigo/pluginlib
     ros-indigo/roscpp
+    ros-indigo/laser_odometry_core
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/navfn
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pluginlib
     ros-kinetic/nav_msgs
-    ros-kinetic/nav_core
     ros-kinetic/geometry_msgs
-    ros-kinetic/tf
+    ros-kinetic/nav_core
     ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/navfn
     ros-kinetic/costmap_2d
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
     ros-kinetic/angles

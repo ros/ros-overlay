@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/crossing_detector
+    ros-indigo/goto_crossing
+    ros-indigo/geometry_msgs
+    ros-indigo/nj_oa_laser
     ros-indigo/lama_msgs
     ros-indigo/roscpp
-    ros-indigo/nj_oa_laser
-    ros-indigo/std_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/lama_jockeys
+    ros-indigo/std_msgs
     ros-indigo/lama_common
-    ros-indigo/goto_crossing
     ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/crossing_detector
 "
 DEPEND="${RDEPEND}
 "

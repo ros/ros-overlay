@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/turtlesim
-    ros-kinetic/message_runtime
-    ros-kinetic/actionlib
     ros-kinetic/angles
+    ros-kinetic/geometry_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/turtlesim
+    ros-kinetic/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

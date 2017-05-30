@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/roch_teleop
+    ros-kinetic/roch_navigation
     ros-kinetic/roch_rapps
     ros-kinetic/roch_follower
-    ros-kinetic/roch_navigation
 "
 DEPEND="${RDEPEND}
 "

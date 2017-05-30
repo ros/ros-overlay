@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_backports
     ros-indigo/ecto
     ros-indigo/opencv_candidate
+    ros-indigo/cv_backports
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

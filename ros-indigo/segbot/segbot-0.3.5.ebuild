@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segbot_bringup
-    ros-indigo/segbot_navigation
-    ros-indigo/segbot_firmware
-    ros-indigo/segbot_logical_translator
-    ros-indigo/segbot_gazebo
-    ros-indigo/segbot_gui
-    ros-indigo/segbot_description
     ros-indigo/segbot_simulation_apps
+    ros-indigo/segbot_gazebo
+    ros-indigo/segbot_navigation
+    ros-indigo/segbot_gui
+    ros-indigo/segbot_logical_translator
+    ros-indigo/segbot_bringup
+    ros-indigo/segbot_firmware
     ros-indigo/segbot_sensors
+    ros-indigo/segbot_description
 "
 DEPEND="${RDEPEND}
 "

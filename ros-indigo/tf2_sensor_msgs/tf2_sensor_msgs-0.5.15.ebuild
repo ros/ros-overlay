@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/python_orocos_kdl
     ros-indigo/cmake_modules
-    ros-indigo/tf2
+    ros-indigo/python_orocos_kdl
     ros-indigo/sensor_msgs
+    ros-indigo/tf2
     ros-indigo/tf2_ros
     dev-cpp/eigen
 "

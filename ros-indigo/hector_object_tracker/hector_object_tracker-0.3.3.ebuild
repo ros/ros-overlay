@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/image_geometry
+    ros-indigo/hector_nav_msgs
     ros-indigo/hector_worldmodel_msgs
+    ros-indigo/hector_marker_drawing
     ros-indigo/roscpp
     ros-indigo/tf
-    ros-indigo/hector_nav_msgs
-    ros-indigo/hector_marker_drawing
-    ros-indigo/image_geometry
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

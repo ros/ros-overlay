@@ -17,8 +17,8 @@ RDEPEND="
     ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
     ros-indigo/genmsg
+    ros-indigo/message_generation
 "
 
 SLOT="0/0"

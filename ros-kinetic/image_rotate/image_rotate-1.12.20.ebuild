@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
+    ros-kinetic/nodelet
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_transport
+    ros-kinetic/roscpp
     ros-kinetic/tf2_geometry_msgs
     ros-kinetic/tf2
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
     ros-kinetic/tf2_ros
-    ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

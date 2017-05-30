@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtle_concert
     ros-indigo/gazebo_concert
-    ros-indigo/rocon_gateway_tutorials
-    ros-indigo/chatter_concert
+    ros-indigo/turtle_concert
     ros-indigo/rocon_app_manager_tutorials
+    ros-indigo/chatter_concert
+    ros-indigo/rocon_gateway_tutorials
 "
 DEPEND="${RDEPEND}
 "

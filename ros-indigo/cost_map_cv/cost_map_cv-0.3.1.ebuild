@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/cost_map_core
-    media-libs/opencv
     dev-libs/boost
+    media-libs/opencv
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}

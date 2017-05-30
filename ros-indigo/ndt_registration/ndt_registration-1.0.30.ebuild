@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/pcl_ros
     ros-indigo/ndt_map
     ros-indigo/tf
+    ros-indigo/tf_conversions
+    ros-indigo/pcl_ros
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

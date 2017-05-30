@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/self_test
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_common_diagnostics
     ros-indigo/diagnostic_analysis
+    ros-indigo/self_test
+    ros-indigo/diagnostic_updater
+    ros-indigo/diagnostic_aggregator
 "
 DEPEND="${RDEPEND}
 "

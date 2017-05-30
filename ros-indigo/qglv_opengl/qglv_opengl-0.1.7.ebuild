@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_build
     ros-indigo/sophus
-    x11-libs/libXi
+    ros-indigo/ecl_build
     media-libs/freeglut
-    media-libs/mesa
-    dev-cpp/eigen
+    x11-libs/libXi
     media-libs/glew
+    dev-cpp/eigen
+    media-libs/mesa
     x11-libs/libXmu
 "
 DEPEND="${RDEPEND}

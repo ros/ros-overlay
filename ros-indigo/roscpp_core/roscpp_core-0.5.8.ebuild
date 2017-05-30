@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cpp_common
-    ros-indigo/rostime
-    ros-indigo/roscpp_traits
     ros-indigo/roscpp_serialization
+    ros-indigo/cpp_common
+    ros-indigo/roscpp_traits
+    ros-indigo/rostime
 "
 DEPEND="${RDEPEND}
 "

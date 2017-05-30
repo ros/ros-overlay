@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/aubo_description
-    ros-indigo/aubo_panel
-    ros-indigo/aubo_gazebo
-    ros-indigo/aubo_i5_moveit_config
-    ros-indigo/aubo_kinematics
-    ros-indigo/aubo_new_driver
     ros-indigo/aubo_trajectory_filters
-    ros-indigo/aubo_trajectory
-    ros-indigo/aubo_driver
-    ros-indigo/aubo_msgs
     ros-indigo/aubo_control
+    ros-indigo/aubo_panel
+    ros-indigo/aubo_kinematics
+    ros-indigo/aubo_driver
+    ros-indigo/aubo_trajectory
+    ros-indigo/aubo_new_driver
+    ros-indigo/aubo_msgs
+    ros-indigo/aubo_i5_moveit_config
+    ros-indigo/aubo_gazebo
 "
 DEPEND="${RDEPEND}
 "

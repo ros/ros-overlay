@@ -12,8 +12,8 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/message_runtime
     ros-indigo/std_msgs
+    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

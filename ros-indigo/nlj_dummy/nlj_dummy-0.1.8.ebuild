@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/lama_interfaces
     ros-indigo/lama_msgs
+    ros-indigo/lama_interfaces
     ros-indigo/roscpp
     ros-indigo/lama_jockeys
 "

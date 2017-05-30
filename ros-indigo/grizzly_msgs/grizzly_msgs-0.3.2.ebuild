@@ -17,8 +17,8 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
     ros-indigo/cmake_modules
+    ros-indigo/message_generation
 "
 
 SLOT="0/0"

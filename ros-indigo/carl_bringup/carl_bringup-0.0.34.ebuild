@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/carl_interactive_manipulation
-    ros-indigo/openni2_launch
-    ros-indigo/urg_node
-    ros-indigo/wpi_jaco_wrapper
-    ros-indigo/carl_description
-    ros-indigo/rail_segmentation
-    ros-indigo/carl_teleop
     ros-indigo/rail_recognition
-    ros-indigo/carl_dynamixel
     ros-indigo/world_item_observer
-    ros-indigo/m4atx_battery_monitor
-    ros-indigo/ros_ethernet_rmp
-    ros-indigo/carl_moveit
+    ros-indigo/rail_segmentation
     ros-indigo/carl_safety
+    ros-indigo/carl_teleop
+    ros-indigo/wpi_jaco_wrapper
+    ros-indigo/carl_interactive_manipulation
+    ros-indigo/urg_node
+    ros-indigo/openni2_launch
+    ros-indigo/m4atx_battery_monitor
+    ros-indigo/carl_dynamixel
+    ros-indigo/carl_moveit
+    ros-indigo/ros_ethernet_rmp
+    ros-indigo/carl_description
 "
 DEPEND="${RDEPEND}
 "

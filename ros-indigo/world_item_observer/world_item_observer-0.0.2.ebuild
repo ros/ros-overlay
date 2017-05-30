@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/graspdb
-    ros-indigo/tf2
-    ros-indigo/roscpp
-    ros-indigo/tf2_ros
     ros-indigo/worldlib
+    ros-indigo/roscpp
+    ros-indigo/rail_manipulation_msgs
+    ros-indigo/tf2
+    ros-indigo/tf2_ros
+    ros-indigo/graspdb
 "
 DEPEND="${RDEPEND}
 "

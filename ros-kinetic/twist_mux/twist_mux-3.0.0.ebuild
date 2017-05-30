@@ -13,11 +13,11 @@ LICENSE="CC BY-NC-SA 4.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/twist_mux_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/twist_mux_msgs
     ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}

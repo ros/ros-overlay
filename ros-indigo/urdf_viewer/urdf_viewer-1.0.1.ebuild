@@ -13,8 +13,8 @@ LICENSE="BSD (3-clause)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf2inventor
     ros-indigo/roscpp
+    ros-indigo/urdf2inventor
 "
 DEPEND="${RDEPEND}
 "

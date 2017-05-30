@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_plugins
-    ros-indigo/moveit_core
-    ros-indigo/moveit_ros
-    ros-indigo/moveit_commander
     ros-indigo/moveit_setup_assistant
+    ros-indigo/moveit_ros
     ros-indigo/moveit_planners
+    ros-indigo/moveit_core
+    ros-indigo/moveit_plugins
+    ros-indigo/moveit_commander
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
     ros-kinetic/xacro
     ros-kinetic/geometry_msgs
-    ros-kinetic/rviz
     ros-kinetic/roscpp
+    ros-kinetic/rviz
+    ros-kinetic/std_srvs
     ros-kinetic/robot_state_publisher
     ros-kinetic/tf
 "

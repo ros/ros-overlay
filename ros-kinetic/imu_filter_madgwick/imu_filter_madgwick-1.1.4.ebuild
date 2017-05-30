@@ -12,16 +12,16 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/pluginlib
     ros-kinetic/tf2
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/tf2_ros
-    ros-kinetic/message_filters
+    ros-kinetic/pluginlib
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/roscpp
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

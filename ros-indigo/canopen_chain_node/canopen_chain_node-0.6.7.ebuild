@@ -12,15 +12,15 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/socketcan_interface
-    ros-indigo/std_srvs
-    ros-indigo/roscpp
-    ros-indigo/roslib
-    ros-indigo/std_msgs
-    ros-indigo/message_runtime
-    ros-indigo/diagnostic_updater
     ros-indigo/pluginlib
+    ros-indigo/message_runtime
+    ros-indigo/roslib
+    ros-indigo/socketcan_interface
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
     ros-indigo/canopen_master
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

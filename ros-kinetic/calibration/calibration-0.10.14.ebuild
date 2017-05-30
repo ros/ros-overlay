@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/calibration_estimation
     ros-kinetic/image_cb_detector
-    ros-kinetic/interval_intersection
     ros-kinetic/monocam_settler
-    ros-kinetic/joint_states_settler
+    ros-kinetic/calibration_estimation
     ros-kinetic/laser_cb_detector
-    ros-kinetic/calibration_launch
-    ros-kinetic/calibration_msgs
     ros-kinetic/settlerlib
+    ros-kinetic/calibration_msgs
+    ros-kinetic/calibration_launch
+    ros-kinetic/interval_intersection
+    ros-kinetic/joint_states_settler
 "
 DEPEND="${RDEPEND}
 "

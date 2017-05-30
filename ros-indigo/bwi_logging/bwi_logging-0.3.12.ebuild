@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rosbag
-    ros-indigo/rospy
-    ros-indigo/nav_msgs
-    ros-indigo/message_filters
-    ros-indigo/geometry_msgs
     ros-indigo/topic_tools
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/nav_msgs
+    ros-indigo/rosbag
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

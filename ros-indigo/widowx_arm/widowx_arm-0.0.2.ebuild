@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/widowx_arm_description
     ros-indigo/widowx_arm_controller
+    ros-indigo/widowx_arm_description
 "
 DEPEND="${RDEPEND}
 "

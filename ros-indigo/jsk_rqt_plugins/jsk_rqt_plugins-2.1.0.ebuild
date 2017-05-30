@@ -13,20 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_plot
+    ros-indigo/rqt_image_view
     ros-indigo/qt_gui_py_common
-    ros-indigo/cv_bridge
+    ros-indigo/image_view2
     ros-indigo/rqt_gui
+    ros-indigo/cv_bridge
+    ros-indigo/message_runtime
     ros-indigo/resource_retriever
     ros-indigo/rqt_gui_py
-    ros-indigo/image_view2
-    ros-indigo/message_runtime
-    ros-indigo/rqt_image_view
     dev-python/urlgrabber
 "
 DEPEND="${RDEPEND}
+    ros-indigo/rosbuild
     ros-indigo/mk
     ros-indigo/message_generation
-    ros-indigo/rosbuild
 "
 
 SLOT="0/0"

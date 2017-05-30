@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segbot
-    ros-indigo/bwi_launch
     ros-indigo/bwi_common
+    ros-indigo/bwi_launch
+    ros-indigo/segbot
 "
 DEPEND="${RDEPEND}
 "

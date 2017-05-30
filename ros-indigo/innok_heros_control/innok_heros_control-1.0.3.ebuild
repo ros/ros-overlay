@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/teleop_twist_keyboard
-    ros-indigo/joy
-    ros-indigo/innok_heros_description
-    ros-indigo/controller_manager
-    ros-indigo/teleop_twist_joy
     ros-indigo/twist_mux
+    ros-indigo/controller_manager
+    ros-indigo/joy
+    ros-indigo/teleop_twist_joy
+    ros-indigo/innok_heros_description
     ros-indigo/innok_heros_gazebo
+    ros-indigo/teleop_twist_keyboard
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/topic_tools
     ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/topic_tools
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

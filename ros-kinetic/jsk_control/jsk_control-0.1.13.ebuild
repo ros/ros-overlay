@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_footstep_planner
-    ros-kinetic/eus_qp
-    ros-kinetic/eus_nlopt
-    ros-kinetic/jsk_footstep_controller
     ros-kinetic/joy_mouse
-    ros-kinetic/jsk_calibration
-    ros-kinetic/jsk_ik_server
+    ros-kinetic/eus_nlopt
+    ros-kinetic/jsk_footstep_planner
     ros-kinetic/eus_qpoases
+    ros-kinetic/jsk_ik_server
+    ros-kinetic/jsk_calibration
+    ros-kinetic/jsk_footstep_controller
     ros-kinetic/jsk_teleop_joy
+    ros-kinetic/eus_qp
 "
 DEPEND="${RDEPEND}
 "

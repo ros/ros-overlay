@@ -12,12 +12,12 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
     ros-indigo/rospy
-    ros-indigo/trajectory_msgs
-    ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
     ros-indigo/controller_manager_msgs
+    ros-indigo/rqt_gui
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
+    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

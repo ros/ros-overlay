@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/tf2
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/dynamic_tf_publisher
+    ros-kinetic/image_geometry
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/posedetection_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/eigen_conversions
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
     ros-kinetic/rosconsole
     ros-kinetic/cv_bridge
-    ros-kinetic/image_geometry
-    ros-kinetic/tf2
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/posedetection_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/eigen_conversions
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "

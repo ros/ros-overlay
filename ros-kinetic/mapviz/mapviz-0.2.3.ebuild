@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/swri_transform_util
-    ros-kinetic/cv_bridge
-    ros-kinetic/swri_yaml_util
-    ros-kinetic/rqt_gui_cpp
-    ros-kinetic/pluginlib
-    ros-kinetic/std_srvs
     ros-kinetic/rosapi
-    ros-kinetic/rqt_gui
-    ros-kinetic/roscpp
+    ros-kinetic/pluginlib
     ros-kinetic/image_transport
+    ros-kinetic/rqt_gui
     ros-kinetic/message_runtime
-    ros-kinetic/tf
     ros-kinetic/marti_common_msgs
-    x11-libs/libXmu
+    ros-kinetic/roscpp
+    ros-kinetic/rqt_gui_cpp
+    ros-kinetic/swri_transform_util
+    ros-kinetic/swri_yaml_util
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/cv_bridge
     dev-qt/qtcore
-    dev-qt/qtwidgets
-    dev-qt/qtgui
     dev-qt/qtopengl
     media-libs/freeglut
-    x11-libs/libXi
     media-libs/glew
+    x11-libs/libXmu
+    dev-qt/qtgui
+    x11-libs/libXi
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

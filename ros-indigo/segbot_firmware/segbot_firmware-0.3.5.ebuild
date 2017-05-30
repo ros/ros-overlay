@@ -7,7 +7,7 @@ DESCRIPTION="Arduino firmware for BWI segbot sensor array."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_firmware/0.3.5-0.tar.gz"
 
-LICENSE="||( BSD GPLv3 )"
+LICENSE="|| ( BSD GPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/navfn
+    ros-indigo/frontier_exploration
+    ros-indigo/amcl
     ros-indigo/gmapping
     ros-indigo/dwa_local_planner
-    ros-indigo/frontier_exploration
     ros-indigo/map_server
     ros-indigo/base_local_planner
-    ros-indigo/amcl
+    ros-indigo/navfn
     ros-indigo/move_base
 "
 DEPEND="${RDEPEND}

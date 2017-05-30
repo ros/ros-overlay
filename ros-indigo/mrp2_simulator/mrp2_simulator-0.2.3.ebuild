@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mrp2_gazebo
     ros-indigo/mrp2_hardware_gazebo
+    ros-indigo/mrp2_gazebo
 "
 DEPEND="${RDEPEND}
 "

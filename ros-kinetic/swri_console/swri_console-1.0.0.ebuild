@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/roscpp
     ros-kinetic/rosbag_storage
-    dev-qt/qtwidgets
+    ros-kinetic/roscpp
+    ros-kinetic/rosgraph_msgs
     dev-qt/qtcore
     dev-qt/qtgui
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

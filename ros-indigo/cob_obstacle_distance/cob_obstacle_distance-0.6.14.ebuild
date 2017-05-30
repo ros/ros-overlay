@@ -3,45 +3,45 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="The cob_obstacle_distance package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_obstacle_distance/0.6.14-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_control_msgs
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/xacro
-    ros-indigo/geometry_msgs
+    ros-indigo/roslib
     ros-indigo/std_msgs
+    ros-indigo/rviz
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
+    ros-indigo/moveit_msgs
+    ros-indigo/cob_control_msgs
+    ros-indigo/tf_conversions
+    ros-indigo/eigen_conversions
+    ros-indigo/fcl
+    ros-indigo/sensor_msgs
+    ros-indigo/kdl_parser
+    ros-indigo/cob_srvs
+    ros-indigo/cmake_modules
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
+    ros-indigo/xacro
+    ros-indigo/roscpp
     ros-indigo/urdf
     ros-indigo/kdl_conversions
     ros-indigo/shape_msgs
-    ros-indigo/fcl
-    ros-indigo/interactive_markers
-    ros-indigo/tf_conversions
-    ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
-    ros-indigo/rviz
-    ros-indigo/moveit_msgs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/roslib
+    ros-indigo/tf
     ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/cmake_modules
-    ros-indigo/sensor_msgs
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/cob_srvs
-    ros-indigo/eigen_conversions
-    media-libs/assimp
+    ros-indigo/geometry_msgs
+    ros-indigo/orocos_kdl
+    ros-indigo/interactive_markers
     virtual/pkgconfig
-    dev-libs/boost
     dev-cpp/eigen
+    dev-libs/boost
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
 "

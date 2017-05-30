@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_description
-    ros-indigo/urdf
-    ros-indigo/openni2_launch
+    ros-indigo/dynamic_tf_publisher
     ros-indigo/checkerboard_detector
     ros-indigo/gazebo_ros
     ros-indigo/freenect_stack
-    ros-indigo/joint_state_publisher
-    ros-indigo/dynamic_tf_publisher
-    ros-indigo/robot_state_publisher
+    ros-indigo/openni2_launch
+    ros-indigo/turtlebot_description
+    ros-indigo/urdf
     ros-indigo/gazebo_plugins
+    ros-indigo/robot_state_publisher
     ros-indigo/tf
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

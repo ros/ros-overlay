@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/household_objects_database_msgs
-    ros-indigo/moveit_ros_move_group
+    ros-indigo/dynamic_reconfigure
     ros-indigo/pluginlib
+    ros-indigo/household_objects_database_msgs
+    ros-indigo/moveit_msgs
     ros-indigo/manipulation_msgs
     ros-indigo/actionlib
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/tf
+    ros-indigo/moveit_ros_move_group
     ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_core
-    ros-indigo/moveit_msgs
+    ros-indigo/moveit_ros_planning
+    ros-indigo/tf
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

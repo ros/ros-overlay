@@ -12,8 +12,8 @@ LICENSE="CreativeCommons-by-nc-sa-2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/openslam_gmapping
     ros-kinetic/gmapping
+    ros-kinetic/openslam_gmapping
 "
 DEPEND="${RDEPEND}
 "

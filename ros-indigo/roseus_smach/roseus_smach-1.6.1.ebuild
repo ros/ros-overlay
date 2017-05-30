@@ -15,16 +15,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostest
-    ros-indigo/roseus
-    ros-indigo/euslisp
     ros-indigo/smach
     ros-indigo/actionlib_tutorials
-    ros-indigo/std_msgs
-    ros-indigo/smach_ros
+    ros-indigo/actionlib
     ros-indigo/smach_msgs
     ros-indigo/message_runtime
-    ros-indigo/actionlib
+    ros-indigo/roseus
+    ros-indigo/euslisp
+    ros-indigo/std_msgs
+    ros-indigo/smach_ros
+    ros-indigo/rostest
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/swri_transform_util
-    ros-indigo/swri_yaml_util
-    ros-indigo/rqt_gui_cpp
-    ros-indigo/pluginlib
-    ros-indigo/std_srvs
     ros-indigo/rosapi
-    ros-indigo/rqt_gui
-    ros-indigo/tf
+    ros-indigo/pluginlib
     ros-indigo/image_transport
-    ros-indigo/roscpp
+    ros-indigo/rqt_gui
     ros-indigo/message_runtime
     ros-indigo/marti_common_msgs
+    ros-indigo/roscpp
+    ros-indigo/rqt_gui_cpp
+    ros-indigo/swri_transform_util
+    ros-indigo/swri_yaml_util
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    dev-qt/qtopengl
+    media-libs/freeglut
+    dev-qt/qtcore
+    media-libs/glew
     dev-qt/qtcore
     media-libs/opencv
-    dev-qt/qtcore
-    media-libs/freeglut
     x11-libs/libXmu
-    media-libs/glew
-    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

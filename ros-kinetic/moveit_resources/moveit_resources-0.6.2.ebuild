@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/joint_state_publisher
     ros-kinetic/robot_state_publisher
+    ros-kinetic/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

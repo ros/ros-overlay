@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecto_image_pipeline
-    ros-kinetic/ecto_ros
-    ros-kinetic/ecto_openni
-    ros-kinetic/ecto_opencv
     ros-kinetic/ecto
     ros-kinetic/object_recognition_core
+    ros-kinetic/ecto_opencv
+    ros-kinetic/ecto_ros
+    ros-kinetic/ecto_image_pipeline
+    ros-kinetic/ecto_openni
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

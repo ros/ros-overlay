@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/nav_core
-    ros-indigo/costmap_2d
     ros-indigo/roscpp
     ros-indigo/base_local_planner
     ros-indigo/tf
+    ros-indigo/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

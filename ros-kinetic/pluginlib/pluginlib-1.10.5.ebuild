@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosconsole
     ros-kinetic/class_loader
     ros-kinetic/roslib
-    ros-kinetic/rosconsole
     dev-libs/boost
     dev-libs/tinyxml
 "

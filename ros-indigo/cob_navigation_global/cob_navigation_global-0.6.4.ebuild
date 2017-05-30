@@ -12,16 +12,16 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_scan_unifier
-    ros-indigo/cob_navigation_config
-    ros-indigo/move_base
-    ros-indigo/eband_local_planner
-    ros-indigo/map_server
     ros-indigo/topic_tools
     ros-indigo/rviz
     ros-indigo/amcl
-    ros-indigo/cob_linear_nav
     ros-indigo/cob_default_env_config
+    ros-indigo/eband_local_planner
+    ros-indigo/map_server
+    ros-indigo/cob_navigation_config
+    ros-indigo/cob_linear_nav
+    ros-indigo/cob_scan_unifier
+    ros-indigo/move_base
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/socketcan_interface
     ros-kinetic/roscpp
     ros-kinetic/can_msgs
+    ros-kinetic/socketcan_interface
 "
 DEPEND="${RDEPEND}
 "

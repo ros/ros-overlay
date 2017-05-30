@@ -13,19 +13,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/thormang3_kinematics_dynamics
-    ros-kinetic/thormang3_action_module
-    ros-kinetic/thormang3_feet_ft_module
+    ros-kinetic/thormang3_walking_module
+    ros-kinetic/thormang3_gripper_module
     ros-kinetic/thormang3_manager
-    ros-kinetic/thormang3_manipulation_module
     ros-kinetic/motion_module_tutorial
     ros-kinetic/thormang3_base_module
-    ros-kinetic/thormang3_head_control_module
-    ros-kinetic/thormang3_walking_module
-    ros-kinetic/thormang3_imu_3dm_gx4
-    ros-kinetic/thormang3_gripper_module
-    ros-kinetic/sensor_module_tutorial
-    ros-kinetic/ati_ft_sensor
     ros-kinetic/thormang3_balance_control
+    ros-kinetic/thormang3_imu_3dm_gx4
+    ros-kinetic/sensor_module_tutorial
+    ros-kinetic/thormang3_feet_ft_module
+    ros-kinetic/thormang3_manipulation_module
+    ros-kinetic/ati_ft_sensor
+    ros-kinetic/thormang3_action_module
+    ros-kinetic/thormang3_head_control_module
 "
 DEPEND="${RDEPEND}
 "

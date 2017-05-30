@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roseus
-    ros-indigo/visualization_msgs
-    ros-indigo/jsk_interactive_marker
     ros-indigo/dynamic_reconfigure
-    ros-indigo/jsk_footstep_msgs
-    ros-indigo/jsk_topic_tools
-    ros-indigo/geometry_msgs
     ros-indigo/jsk_rviz_plugins
-    ros-indigo/jsk_recognition_msgs
+    ros-indigo/jsk_interactive_marker
+    ros-indigo/geometry_msgs
+    ros-indigo/jsk_recognition_utils
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/jsk_recognition_utils
+    ros-indigo/roseus
+    ros-indigo/jsk_topic_tools
+    ros-indigo/visualization_msgs
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/jsk_footstep_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

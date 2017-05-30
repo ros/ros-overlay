@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_ros_move_group
+    ros-kinetic/moveit_planners_ompl
+    ros-kinetic/pepper_description
     ros-kinetic/xacro
-    ros-kinetic/joint_state_publisher
-    ros-kinetic/robot_state_publisher
     ros-kinetic/moveit_simple_controller_manager
     ros-kinetic/moveit_fake_controller_manager
-    ros-kinetic/pepper_description
-    ros-kinetic/moveit_planners_ompl
+    ros-kinetic/moveit_ros_move_group
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

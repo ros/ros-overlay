@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/rosbag_storage
-    ros-kinetic/naoqi_bridge_msgs
-    ros-kinetic/orocos_kdl
-    ros-kinetic/kdl_parser
-    ros-kinetic/naoqi_libqi
-    ros-kinetic/naoqi_libqicore
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/tf2_ros
     ros-kinetic/image_transport
+    ros-kinetic/naoqi_libqicore
+    ros-kinetic/tf2_ros
+    ros-kinetic/orocos_kdl
+    ros-kinetic/naoqi_bridge_msgs
+    ros-kinetic/naoqi_libqi
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/kdl_parser
+    ros-kinetic/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosgraph_msgs
     ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/tf2_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/diagnostic_updater
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/tf2_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rosgraph_msgs
 "
 
 SLOT="0/0"

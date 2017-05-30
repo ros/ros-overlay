@@ -13,8 +13,8 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosbag
     ros-indigo/sensor_msgs
+    ros-indigo/rosbag
     dev-python/pillow
 "
 DEPEND="${RDEPEND}

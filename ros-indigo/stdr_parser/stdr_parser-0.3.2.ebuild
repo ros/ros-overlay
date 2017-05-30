@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/stdr_msgs
-    ros-indigo/roslib
     ros-indigo/roscpp
-    dev-libs/tinyxml
+    ros-indigo/roslib
     dev-cpp/yaml-cpp
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

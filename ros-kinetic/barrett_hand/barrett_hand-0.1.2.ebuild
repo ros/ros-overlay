@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rqt_bhand
     ros-kinetic/bhand_controller
+    ros-kinetic/rqt_bhand
 "
 DEPEND="${RDEPEND}
 "

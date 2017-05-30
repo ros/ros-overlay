@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/aubo_msgs
-    ros-indigo/roscpp
     ros-indigo/aubo_description
-    ros-indigo/std_msgs
-    ros-indigo/ros_controllers
-    ros-indigo/tf
-    ros-indigo/hardware_interface
-    ros-indigo/geometry_msgs
     ros-indigo/controller_manager
-    ros-indigo/trajectory_msgs
-    ros-indigo/control_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
     ros-indigo/actionlib
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/aubo_msgs
+    ros-indigo/control_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/ros_controllers
+    ros-indigo/hardware_interface
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

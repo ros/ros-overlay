@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/nav_core
-    ros-kinetic/tf2
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/nav_core
+    ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
     ros-kinetic/move_base_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/tf2
     ros-kinetic/tf2_ros
-    ros-kinetic/actionlib
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "

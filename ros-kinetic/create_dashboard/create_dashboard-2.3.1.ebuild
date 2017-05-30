@@ -15,9 +15,9 @@ RDEPEND="
     ros-kinetic/rqt_robot_dashboard
     ros-kinetic/rospy
     ros-kinetic/rqt_gui
-    ros-kinetic/create_node
-    ros-kinetic/rqt_gui_py
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/rqt_gui_py
+    ros-kinetic/create_node
 "
 DEPEND="${RDEPEND}
 "

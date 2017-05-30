@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/nav_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/realtime_tools
-    ros-indigo/controller_interface
-    ros-indigo/hardware_interface
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/rospy
     ros-indigo/controller_manager
+    ros-indigo/std_srvs
     ros-indigo/roscpp
+    ros-indigo/hardware_interface
     ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/controller_interface
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}

@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/cmake_modules
     ros-indigo/message_generation
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     dev-libs/poco
 "
 DEPEND="${RDEPEND}

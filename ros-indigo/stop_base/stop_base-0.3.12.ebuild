@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bwi_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/bwi_msgs
     ros-indigo/rospy
     dev-python/catkin_pkg
 "

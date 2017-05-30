@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bondcpp
-    ros-indigo/rospy
     ros-indigo/pluginlib
     ros-indigo/bondpy
+    ros-indigo/rospy
     ros-indigo/roscpp
-    ros-indigo/xmlrpcpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/xmlrpcpp
+    ros-indigo/bondcpp
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

@@ -3,19 +3,19 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="Object Search via the Interactive World Data"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gt-rail-release/interactive_world-release/archive/release/indigo/informed_object_search/0.0.12-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/interactive_world_tools
     ros-indigo/actionlib
-    ros-indigo/roscpp
     ros-indigo/interactive_world_msgs
+    ros-indigo/interactive_world_tools
+    ros-indigo/roscpp
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

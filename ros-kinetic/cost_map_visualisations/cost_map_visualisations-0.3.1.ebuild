@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cost_map_core
     ros-kinetic/nav_msgs
-    ros-kinetic/ecl_build
-    ros-kinetic/ecl_command_line
+    ros-kinetic/ecl_console
     ros-kinetic/cost_map_ros
     ros-kinetic/roscpp
+    ros-kinetic/ecl_build
     ros-kinetic/cost_map_msgs
-    ros-kinetic/ecl_console
+    ros-kinetic/ecl_command_line
+    ros-kinetic/cost_map_core
 "
 DEPEND="${RDEPEND}
 "

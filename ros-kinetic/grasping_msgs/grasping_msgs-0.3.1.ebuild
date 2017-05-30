@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/actionlib
+    ros-kinetic/moveit_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
     ros-kinetic/sensor_msgs
     ros-kinetic/shape_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/moveit_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

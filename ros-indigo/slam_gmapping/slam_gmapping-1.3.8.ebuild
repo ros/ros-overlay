@@ -12,8 +12,8 @@ LICENSE="CreativeCommons-by-nc-sa-2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/openslam_gmapping
     ros-indigo/gmapping
+    ros-indigo/openslam_gmapping
 "
 DEPEND="${RDEPEND}
 "

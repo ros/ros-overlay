@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_device_msgs
-    ros-indigo/rocon_python_hue
     ros-indigo/roslint
+    ros-indigo/rocon_python_hue
+    ros-indigo/rocon_device_msgs
     ros-indigo/rospy
     dev-python/rospkg
 "

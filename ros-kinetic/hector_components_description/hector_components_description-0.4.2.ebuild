@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
     ros-kinetic/hector_xacro_tools
     ros-kinetic/hector_sensors_description
+    ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
 "

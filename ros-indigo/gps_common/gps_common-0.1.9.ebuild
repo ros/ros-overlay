@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/nav_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/message_filters
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

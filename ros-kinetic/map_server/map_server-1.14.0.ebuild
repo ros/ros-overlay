@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
     ros-kinetic/nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/rostest
     ros-kinetic/tf
     dev-cpp/yaml-cpp
     media-libs/sdl-image

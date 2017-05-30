@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pcl_conversions
-    ros-indigo/ndt_registration
-    ros-indigo/pcl_ros
     ros-indigo/ndt_map
+    ros-indigo/pcl_conversions
+    ros-indigo/pcl_ros
+    ros-indigo/ndt_registration
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

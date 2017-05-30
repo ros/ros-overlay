@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/genpy
     ros-indigo/genlisp
-    ros-indigo/gencpp
     ros-indigo/genmsg
+    ros-indigo/gencpp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosgraph
     ros-kinetic/tf2_py
     ros-kinetic/rospy
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/rosgraph
-    ros-kinetic/tf2
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/xmlrpcpp
     ros-kinetic/message_filters
     ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/roscpp
     ros-kinetic/tf2_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2
+    ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 "

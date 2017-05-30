@@ -12,21 +12,21 @@ LICENSE="BSD 3-clause. See license attached"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rostest
     ros-indigo/camera_info_manager
+    ros-indigo/nodelet
     ros-indigo/dynamic_reconfigure
-    ros-indigo/std_msgs
+    ros-indigo/image_transport
     ros-indigo/message_generation
     ros-indigo/rgbd_launch
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/sensor_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/image_transport
-    ros-indigo/librealsense
-    ros-indigo/tf
     ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/librealsense
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/rostest
+    ros-indigo/tf
+    ros-indigo/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cmake_modules
     ros-kinetic/robotis_framework_common
     ros-kinetic/thormang3_kinematics_dynamics
-    ros-kinetic/robotis_controller_msgs
-    ros-kinetic/cmake_modules
-    ros-kinetic/std_msgs
-    ros-kinetic/robotis_math
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/thormang3_feet_ft_module_msgs
+    ros-kinetic/robotis_math
     ros-kinetic/ati_ft_sensor
+    ros-kinetic/robotis_controller_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/topic_tools
+    ros-kinetic/rocon_app_manager_msgs
+    ros-kinetic/rospy
+    ros-kinetic/roslib
     ros-kinetic/gateway_msgs
     ros-kinetic/rospy_tutorials
-    ros-kinetic/rospy
-    ros-kinetic/rocon_app_manager_msgs
-    ros-kinetic/topic_tools
-    ros-kinetic/roslib
 "
 DEPEND="${RDEPEND}
 "

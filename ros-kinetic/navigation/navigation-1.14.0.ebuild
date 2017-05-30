@@ -13,23 +13,23 @@ LICENSE="BSD,LGPL,LGPL (amcl)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robot_pose_ekf
-    ros-kinetic/navfn
-    ros-kinetic/rotate_recovery
-    ros-kinetic/move_slow_and_clear
-    ros-kinetic/dwa_local_planner
     ros-kinetic/voxel_grid
-    ros-kinetic/nav_core
-    ros-kinetic/carrot_planner
-    ros-kinetic/move_base_msgs
     ros-kinetic/fake_localization
+    ros-kinetic/move_slow_and_clear
+    ros-kinetic/amcl
+    ros-kinetic/robot_pose_ekf
+    ros-kinetic/nav_core
     ros-kinetic/costmap_2d
+    ros-kinetic/clear_costmap_recovery
+    ros-kinetic/dwa_local_planner
+    ros-kinetic/global_planner
+    ros-kinetic/move_base_msgs
+    ros-kinetic/carrot_planner
+    ros-kinetic/rotate_recovery
     ros-kinetic/map_server
     ros-kinetic/base_local_planner
-    ros-kinetic/amcl
-    ros-kinetic/global_planner
+    ros-kinetic/navfn
     ros-kinetic/move_base
-    ros-kinetic/clear_costmap_recovery
 "
 DEPEND="${RDEPEND}
 "

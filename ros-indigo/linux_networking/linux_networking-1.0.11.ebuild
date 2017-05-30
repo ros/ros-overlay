@@ -12,18 +12,18 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/linksys_access_point
-    ros-indigo/hostapd_access_point
-    ros-indigo/access_point_control
-    ros-indigo/ieee80211_channels
-    ros-indigo/network_control_tests
-    ros-indigo/ddwrt_access_point
-    ros-indigo/network_traffic_control
     ros-indigo/network_monitor_udp
-    ros-indigo/asmach
-    ros-indigo/network_detector
-    ros-indigo/asmach_tutorials
+    ros-indigo/network_control_tests
+    ros-indigo/ieee80211_channels
     ros-indigo/multi_interface_roam
+    ros-indigo/asmach
+    ros-indigo/access_point_control
+    ros-indigo/network_detector
+    ros-indigo/ddwrt_access_point
+    ros-indigo/linksys_access_point
+    ros-indigo/network_traffic_control
+    ros-indigo/hostapd_access_point
+    ros-indigo/asmach_tutorials
 "
 DEPEND="${RDEPEND}
 "

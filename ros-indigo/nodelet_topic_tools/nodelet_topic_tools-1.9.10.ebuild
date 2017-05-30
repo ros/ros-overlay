@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/message_filters
     ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/pluginlib
+    ros-indigo/message_filters
+    ros-indigo/roscpp
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

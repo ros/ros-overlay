@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/lisp_unit
-    ros-indigo/gsd
-    ros-indigo/trivial_garbage
-    ros-indigo/cl_utilities
     ros-indigo/cl_store
-    ros-indigo/synchronization_tools
-    ros-indigo/fiveam
-    ros-indigo/trivial_gray_streams
-    ros-indigo/yason
     ros-indigo/alexandria
-    ros-indigo/split_sequence
-    ros-indigo/gsll
-    ros-indigo/babel
     ros-indigo/cffi
+    ros-indigo/lisp_unit
+    ros-indigo/gsll
+    ros-indigo/synchronization_tools
+    ros-indigo/trivial_garbage
+    ros-indigo/split_sequence
+    ros-indigo/gsd
     ros-indigo/trivial_features
+    ros-indigo/babel
+    ros-indigo/trivial_gray_streams
+    ros-indigo/cl_utilities
+    ros-indigo/yason
+    ros-indigo/fiveam
 "
 DEPEND="${RDEPEND}
 "

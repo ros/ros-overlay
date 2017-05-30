@@ -15,11 +15,11 @@ RDEPEND="
     ros-indigo/libsegwayrmp
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
-    ros-indigo/tf
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/serial
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

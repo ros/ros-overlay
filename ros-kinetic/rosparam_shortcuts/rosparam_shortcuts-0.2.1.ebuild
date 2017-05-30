@@ -16,9 +16,9 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/cmake_modules
     ros-kinetic/roslint
     ros-kinetic/eigen_conversions
-    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"

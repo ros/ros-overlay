@@ -12,9 +12,9 @@ LICENSE="cffi"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/alexandria
     ros-indigo/babel
     ros-indigo/trivial_features
-    ros-indigo/alexandria
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

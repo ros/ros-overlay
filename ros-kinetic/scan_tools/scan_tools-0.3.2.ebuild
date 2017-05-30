@@ -7,16 +7,16 @@ DESCRIPTION="Laser scan processing tools."
 HOMEPAGE="http://ros.org/wiki/scan_tools"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/scan_tools/0.3.2-0.tar.gz"
 
-LICENSE="||( BSD LGPLv3 )"
+LICENSE="|| ( BSD LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ncd_parser
-    ros-kinetic/laser_ortho_projector
     ros-kinetic/laser_scan_splitter
     ros-kinetic/laser_scan_matcher
     ros-kinetic/polar_scan_matcher
+    ros-kinetic/ncd_parser
     ros-kinetic/scan_to_cloud_converter
+    ros-kinetic/laser_ortho_projector
     ros-kinetic/laser_scan_sparsifier
 "
 DEPEND="${RDEPEND}

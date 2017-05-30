@@ -12,10 +12,10 @@ LICENSE="BSD (3-clause)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf_transform
+    ros-indigo/urdf_traverser
     ros-indigo/urdf2inventor
     ros-indigo/urdf_viewer
-    ros-indigo/urdf_traverser
+    ros-indigo/urdf_transform
 "
 DEPEND="${RDEPEND}
 "

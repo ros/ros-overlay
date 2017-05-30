@@ -12,15 +12,15 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stdr_msgs
-    ros-kinetic/actionlib
+    ros-kinetic/nodelet
     ros-kinetic/nav_msgs
-    ros-kinetic/stdr_server
     ros-kinetic/geometry_msgs
     ros-kinetic/stdr_parser
-    ros-kinetic/sensor_msgs
+    ros-kinetic/stdr_server
+    ros-kinetic/actionlib
+    ros-kinetic/stdr_msgs
     ros-kinetic/roscpp
-    ros-kinetic/nodelet
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

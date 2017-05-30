@@ -12,22 +12,22 @@ LICENSE="FZI all rights reserved"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/fzi_icl_can
-    ros-indigo/control_msgs
-    ros-indigo/urdf
-    ros-indigo/joint_limits_interface
-    ros-indigo/ros_controllers
-    ros-indigo/std_srvs
     ros-indigo/fzi_icl_core
+    ros-indigo/joint_limits_interface
+    ros-indigo/controller_manager
     ros-indigo/xacro
-    ros-indigo/hardware_interface
+    ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/message_runtime
+    ros-indigo/fzi_icl_can
+    ros-indigo/roscpp
+    ros-indigo/urdf
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/controller_manager
+    ros-indigo/control_msgs
     ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
-    ros-indigo/actionlib
+    ros-indigo/ros_controllers
+    ros-indigo/hardware_interface
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

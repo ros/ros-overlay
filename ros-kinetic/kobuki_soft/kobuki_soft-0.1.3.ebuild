@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_softapps
     ros-kinetic/kobuki_softnode
+    ros-kinetic/kobuki_softapps
 "
 DEPEND="${RDEPEND}
 "

@@ -7,14 +7,14 @@ DESCRIPTION="The katana_moveit_ikfast_plugin package"
 HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_moveit_ikfast_plugin/1.0.8-0.tar.gz"
 
-LICENSE="||( BSD Apache )"
+LICENSE="|| ( BSD Apache )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf_conversions
-    ros-kinetic/moveit_core
-    ros-kinetic/pluginlib
     ros-kinetic/roscpp
+    ros-kinetic/pluginlib
+    ros-kinetic/moveit_core
+    ros-kinetic/tf_conversions
     virtual/lapack
 "
 DEPEND="${RDEPEND}

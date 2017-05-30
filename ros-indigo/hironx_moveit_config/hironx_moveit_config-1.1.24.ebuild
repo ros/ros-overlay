@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hironx_ros_bridge
-    ros-indigo/pr2_moveit_plugins
     ros-indigo/moveit_ros
     ros-indigo/moveit_planners
+    ros-indigo/pr2_moveit_plugins
+    ros-indigo/hironx_ros_bridge
 "
 DEPEND="${RDEPEND}
-    ros-indigo/collada_urdf
     ros-indigo/moveit_ros_move_group
+    ros-indigo/collada_urdf
 "
 
 SLOT="0/0"

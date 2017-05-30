@@ -14,10 +14,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/rospy
-    dev-python/rospkg
+    ros-kinetic/sensor_msgs
     dev-python/pyyaml
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

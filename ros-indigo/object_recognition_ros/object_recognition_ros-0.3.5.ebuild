@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecto_image_pipeline
-    ros-indigo/pluginlib
-    ros-indigo/object_recognition_msgs
-    ros-indigo/ecto_ros
     ros-indigo/geometric_shapes
     ros-indigo/ecto
-    ros-indigo/object_recognition_core
+    ros-indigo/pluginlib
     ros-indigo/actionlib
+    ros-indigo/object_recognition_core
     ros-indigo/rostopic
+    ros-indigo/ecto_ros
+    ros-indigo/ecto_image_pipeline
+    ros-indigo/object_recognition_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

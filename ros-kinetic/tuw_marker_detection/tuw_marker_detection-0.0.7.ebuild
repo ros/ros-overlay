@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tuw_marker_pose_estimation
     ros-kinetic/tuw_aruco
     ros-kinetic/tuw_ellipses
+    ros-kinetic/tuw_marker_pose_estimation
 "
 DEPEND="${RDEPEND}
 "

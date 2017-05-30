@@ -13,16 +13,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
     ros-kinetic/robotis_controller
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/robotis_framework_common
-    ros-kinetic/robotis_controller_msgs
-    ros-kinetic/robotis_device
-    ros-kinetic/dynamixel_sdk
     ros-kinetic/cmake_modules
     ros-kinetic/manipulator_h_base_module
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/robotis_device
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0/0"

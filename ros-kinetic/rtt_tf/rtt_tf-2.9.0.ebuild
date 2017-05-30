@@ -12,10 +12,10 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rtt_roscomm
-    ros-kinetic/rtt_geometry_msgs
-    ros-kinetic/tf
     ros-kinetic/rtt
+    ros-kinetic/tf
+    ros-kinetic/rtt_geometry_msgs
+    ros-kinetic/rtt_roscomm
 "
 DEPEND="${RDEPEND}
 "

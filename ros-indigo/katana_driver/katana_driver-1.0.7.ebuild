@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/katana_description
-    ros-indigo/katana_msgs
-    ros-indigo/kni
-    ros-indigo/katana_arm_gazebo
-    ros-indigo/katana_moveit_ikfast_plugin
-    ros-indigo/katana
     ros-indigo/katana_teleop
-    ros-indigo/katana_tutorials
+    ros-indigo/katana_moveit_ikfast_plugin
+    ros-indigo/katana_msgs
     ros-indigo/katana_gazebo_plugins
+    ros-indigo/katana_arm_gazebo
+    ros-indigo/katana_tutorials
+    ros-indigo/kni
+    ros-indigo/katana
 "
 DEPEND="${RDEPEND}
 "

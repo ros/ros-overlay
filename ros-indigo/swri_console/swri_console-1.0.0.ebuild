@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosbag_storage
     ros-indigo/roscpp
     ros-indigo/rosgraph_msgs
-    ros-indigo/rosbag_storage
+    dev-qt/qtcore
     dev-qt/qtgui
     dev-qt/qtwidgets
-    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

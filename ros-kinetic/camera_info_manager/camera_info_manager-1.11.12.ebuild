@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/roscpp
     ros-kinetic/image_transport
     ros-kinetic/roslib
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

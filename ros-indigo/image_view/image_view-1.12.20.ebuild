@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/cv_bridge
-    ros-indigo/std_srvs
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/image_transport
     ros-indigo/message_filters
     ros-indigo/camera_calibration_parsers
-    ros-indigo/nodelet
     ros-indigo/roscpp
-    ros-indigo/image_transport
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/std_srvs
+    ros-indigo/rosconsole
+    ros-indigo/cv_bridge
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation
-    ros-indigo/sensor_msgs
     ros-indigo/stereo_msgs
+    ros-indigo/sensor_msgs
 "
 
 SLOT="0/0"

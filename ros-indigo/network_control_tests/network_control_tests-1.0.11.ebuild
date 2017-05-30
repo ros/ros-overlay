@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/linksys_access_point
-    ros-indigo/hostapd_access_point
-    ros-indigo/rostest
-    ros-indigo/access_point_control
-    ros-indigo/ddwrt_access_point
-    ros-indigo/network_traffic_control
     ros-indigo/network_monitor_udp
     ros-indigo/dynamic_reconfigure
+    ros-indigo/access_point_control
+    ros-indigo/ddwrt_access_point
+    ros-indigo/rostest
+    ros-indigo/linksys_access_point
+    ros-indigo/network_traffic_control
+    ros-indigo/hostapd_access_point
 "
 DEPEND="${RDEPEND}
 "

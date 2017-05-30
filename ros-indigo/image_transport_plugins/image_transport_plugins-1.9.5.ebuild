@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/theora_image_transport
-    ros-indigo/compressed_image_transport
     ros-indigo/compressed_depth_image_transport
+    ros-indigo/compressed_image_transport
+    ros-indigo/theora_image_transport
 "
 DEPEND="${RDEPEND}
 "

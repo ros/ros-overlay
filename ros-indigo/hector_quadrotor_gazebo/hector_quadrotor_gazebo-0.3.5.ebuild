@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_gazebo_plugins
-    ros-indigo/hector_uav_msgs
-    ros-indigo/hector_quadrotor_gazebo_plugins
-    ros-indigo/hector_quadrotor_controller_gazebo
-    ros-indigo/hector_quadrotor_pose_estimation
     ros-indigo/hector_quadrotor_teleop
-    ros-indigo/hector_quadrotor_description
+    ros-indigo/hector_quadrotor_model
+    ros-indigo/hector_quadrotor_controller_gazebo
+    ros-indigo/hector_uav_msgs
+    ros-indigo/hector_quadrotor_pose_estimation
+    ros-indigo/hector_quadrotor_gazebo_plugins
+    ros-indigo/hector_gazebo_plugins
+    ros-indigo/hector_sensors_gazebo
     ros-indigo/gazebo_plugins
     ros-indigo/message_to_tf
     ros-indigo/robot_state_publisher
-    ros-indigo/hector_sensors_gazebo
-    ros-indigo/hector_quadrotor_model
+    ros-indigo/hector_quadrotor_description
 "
 DEPEND="${RDEPEND}
 "

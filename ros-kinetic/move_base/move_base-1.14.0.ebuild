@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rotate_recovery
-    ros-kinetic/navfn
-    ros-kinetic/rospy
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pluginlib
     ros-kinetic/visualization_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/nav_msgs
-    ros-kinetic/nav_core
-    ros-kinetic/base_local_planner
+    ros-kinetic/rospy
     ros-kinetic/geometry_msgs
-    ros-kinetic/move_base_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/message_runtime
     ros-kinetic/actionlib
+    ros-kinetic/nav_core
     ros-kinetic/clear_costmap_recovery
+    ros-kinetic/message_runtime
+    ros-kinetic/move_base_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/rotate_recovery
+    ros-kinetic/std_msgs
+    ros-kinetic/base_local_planner
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/navfn
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

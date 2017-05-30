@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/pr2eus
     ros-indigo/roseus_tutorials
     ros-indigo/jsk_pcl_ros
-    ros-indigo/pr2eus
 "
 DEPEND="${RDEPEND}
 "

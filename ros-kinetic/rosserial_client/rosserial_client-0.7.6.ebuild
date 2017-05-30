@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/rosbash
     ros-kinetic/tf
-    ros-kinetic/std_msgs
     ros-kinetic/rosserial_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

@@ -12,13 +12,13 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf
-    ros-indigo/pcl_ros
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/pcl_conversions
-    ros-indigo/roslib
     ros-indigo/angles
+    ros-indigo/roslib
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

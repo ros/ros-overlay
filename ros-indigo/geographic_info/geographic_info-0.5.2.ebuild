@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/geodesy
     ros-indigo/geographic_msgs
+    ros-indigo/geodesy
 "
 DEPEND="${RDEPEND}
 "

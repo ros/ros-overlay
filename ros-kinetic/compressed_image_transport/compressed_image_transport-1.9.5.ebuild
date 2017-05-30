@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/cv_bridge
     ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "

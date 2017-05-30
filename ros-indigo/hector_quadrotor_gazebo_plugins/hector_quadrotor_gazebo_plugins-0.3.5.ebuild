@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/gazebo_ros
+    ros-indigo/hector_quadrotor_model
+    ros-indigo/geometry_msgs
     ros-indigo/hector_uav_msgs
     ros-indigo/hector_gazebo_plugins
-    ros-indigo/std_srvs
-    ros-indigo/gazebo_ros
-    ros-indigo/geometry_msgs
     ros-indigo/roscpp
-    ros-indigo/hector_quadrotor_model
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
     sci-electronics/gazebo

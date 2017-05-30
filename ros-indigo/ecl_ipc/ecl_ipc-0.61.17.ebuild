@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_config
-    ros-indigo/ecl_time
-    ros-indigo/ecl_exceptions
     ros-indigo/ecl_errors
-    ros-indigo/ecl_license
-    ros-indigo/ecl_build
+    ros-indigo/ecl_config
     ros-indigo/ecl_time_lite
+    ros-indigo/ecl_time
+    ros-indigo/ecl_build
+    ros-indigo/ecl_exceptions
+    ros-indigo/ecl_license
 "
 DEPEND="${RDEPEND}
 "

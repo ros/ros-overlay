@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/polled_camera
-    ros-kinetic/image_transport
     ros-kinetic/camera_info_manager
     ros-kinetic/camera_calibration_parsers
+    ros-kinetic/polled_camera
+    ros-kinetic/image_transport
 "
 DEPEND="${RDEPEND}
 "

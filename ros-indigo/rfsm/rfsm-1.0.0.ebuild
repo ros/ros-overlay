@@ -7,7 +7,7 @@ DESCRIPTION="This package contains the rFSM flavor of Statecharts."
 HOMEPAGE="http://people.mech.kuleuven.be/~mklotzbucher/rfsm/README.html"
 SRC_URI="https://github.com/orocos-gbp/rfsm-release/archive/release/indigo/rfsm/1.0.0-0.tar.gz"
 
-LICENSE="||( LGPL BSD )"
+LICENSE="|| ( LGPL BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="

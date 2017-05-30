@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bond
     ros-indigo/smclib
     ros-indigo/roscpp
+    ros-indigo/bond
     dev-libs/boost
     sys-apps/util-linux
 "

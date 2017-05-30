@@ -3,27 +3,27 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="Python interfaces for managing a pool of ROCON scheduler resources."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/utexas-bwi-gbp/concert_scheduling-release/archive/release/indigo/concert_resource_pool/0.7.0-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/unique_id
-    ros-indigo/rocon_std_msgs
-    ros-indigo/scheduler_msgs
     ros-indigo/rocon_app_manager_msgs
+    ros-indigo/rospy
+    ros-indigo/rocon_std_msgs
+    ros-indigo/unique_id
     ros-indigo/rocon_uri
     ros-indigo/concert_msgs
+    ros-indigo/scheduler_msgs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/roslint
+    ros-indigo/rostest
     dev-python/catkin_pkg
 "
 

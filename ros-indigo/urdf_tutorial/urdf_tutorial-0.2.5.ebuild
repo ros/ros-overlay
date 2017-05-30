@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_robot_steering
+    ros-indigo/position_controllers
+    ros-indigo/controller_manager
+    ros-indigo/gazebo_ros
+    ros-indigo/xacro
+    ros-indigo/gazebo_ros_control
+    ros-indigo/joint_state_controller
     ros-indigo/urdf
     ros-indigo/diff_drive_controller
-    ros-indigo/gazebo_ros_control
-    ros-indigo/gazebo_ros
-    ros-indigo/position_controllers
-    ros-indigo/xacro
-    ros-indigo/controller_manager
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
+    ros-indigo/rqt_robot_steering
     ros-indigo/rviz
-    ros-indigo/joint_state_controller
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -12,14 +12,14 @@ LICENSE="Boost Software License, Version 1.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
-    ros-kinetic/mk
     ros-kinetic/rosbuild
+    ros-kinetic/mk
     ros-kinetic/rosboost_cfg
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

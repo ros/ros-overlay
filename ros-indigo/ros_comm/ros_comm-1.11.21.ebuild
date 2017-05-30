@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/topic_tools
     ros-indigo/rosservice
-    ros-indigo/rostest
-    ros-indigo/rosbag
-    ros-indigo/roscpp
-    ros-indigo/roswtf
-    ros-indigo/ros
-    ros-indigo/rosmsg
-    ros-indigo/std_srvs
+    ros-indigo/rosgraph_msgs
+    ros-indigo/xmlrpcpp
     ros-indigo/rosnode
+    ros-indigo/roslisp
+    ros-indigo/rosmaster
+    ros-indigo/rosbag
+    ros-indigo/rostopic
+    ros-indigo/rostest
+    ros-indigo/roswtf
+    ros-indigo/rospy
     ros-indigo/roslaunch
     ros-indigo/rosparam
+    ros-indigo/roscpp
+    ros-indigo/std_srvs
     ros-indigo/rosconsole
-    ros-indigo/rosmaster
-    ros-indigo/roslisp
-    ros-indigo/xmlrpcpp
-    ros-indigo/message_filters
-    ros-indigo/rosgraph_msgs
-    ros-indigo/rospy
     ros-indigo/rosgraph
-    ros-indigo/topic_tools
+    ros-indigo/message_filters
+    ros-indigo/ros
     ros-indigo/rosout
-    ros-indigo/rostopic
+    ros-indigo/rosmsg
 "
 DEPEND="${RDEPEND}
 "

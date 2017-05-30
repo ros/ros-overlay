@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosh
     ros-indigo/image_view
+    ros-indigo/rosh
     ros-indigo/roslib
 "
 DEPEND="${RDEPEND}

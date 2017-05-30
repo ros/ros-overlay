@@ -15,8 +15,8 @@ RDEPEND="
     ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslib
     ros-kinetic/cmake_modules
+    ros-kinetic/roslib
 "
 
 SLOT="0/0"

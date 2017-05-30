@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rospack
-    ros-indigo/roslib
     ros-indigo/mk
+    ros-indigo/roslib
     sys-kernel/linux-headers
     dev-libs/popt
 "

@@ -7,18 +7,18 @@ DESCRIPTION="sdsdddsdsds"
 HOMEPAGE="http://ros.org/wiki/multi_interface_roam"
 SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/multi_interface_roam/1.0.11-0.tar.gz"
 
-LICENSE="||( BSD LGPL GPL for sigblock )"
+LICENSE="|| ( BSD LGPL GPL for sigblock )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/network_monitor_udp
+    ros-indigo/dynamic_reconfigure
     ros-indigo/rospy
     ros-indigo/ieee80211_channels
-    ros-indigo/network_monitor_udp
-    ros-indigo/pr2_msgs
     ros-indigo/asmach
-    ros-indigo/std_msgs
-    ros-indigo/dynamic_reconfigure
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/pr2_msgs
 "
 DEPEND="${RDEPEND}
 "

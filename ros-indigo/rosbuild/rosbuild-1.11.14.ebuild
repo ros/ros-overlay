@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/catkin
     ros-indigo/message_runtime
     ros-indigo/message_generation
-    ros-indigo/catkin
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

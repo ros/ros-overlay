@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_ros_manipulation
-    ros-kinetic/rosconsole
-    ros-kinetic/moveit_ros_move_group
     ros-kinetic/tf_conversions
     ros-kinetic/rospy
-    ros-kinetic/moveit_ros_warehouse
-    ros-kinetic/tf
-    ros-kinetic/roscpp
-    ros-kinetic/moveit_ros_planning
-    ros-kinetic/eigen_conversions
     ros-kinetic/actionlib
+    ros-kinetic/moveit_ros_move_group
+    ros-kinetic/roscpp
+    ros-kinetic/moveit_ros_manipulation
+    ros-kinetic/eigen_conversions
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/tf
+    ros-kinetic/rosconsole
+    ros-kinetic/moveit_ros_warehouse
     dev-lang/python
 "
 DEPEND="${RDEPEND}

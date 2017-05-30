@@ -12,14 +12,14 @@ LICENSE="GPL v2 + linking exception, LGPL v2, CeCILL-B, GPL v2 or later,"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/orogen
-    ros-indigo/rtt_typelib
-    ros-indigo/utilrb
-    ros-indigo/ocl
     ros-indigo/rtt
+    ros-indigo/orogen
     ros-indigo/log4cpp
-    ros-indigo/typelib
+    ros-indigo/utilrb
+    ros-indigo/rtt_typelib
     ros-indigo/catkin
+    ros-indigo/ocl
+    ros-indigo/typelib
 "
 DEPEND="${RDEPEND}
 "

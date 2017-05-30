@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/librms
+    ros-indigo/roscpp
+    ros-indigo/interactive_world_msgs
+    ros-indigo/jinteractiveworld
     ros-indigo/tf2
     ros-indigo/rosbridge_server
-    ros-indigo/roscpp
-    ros-indigo/librms
-    ros-indigo/jinteractiveworld
-    ros-indigo/interactive_world_msgs
     dev-libs/jsoncpp
 "
 DEPEND="${RDEPEND}

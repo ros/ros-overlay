@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
     ros-kinetic/rostime
+    ros-kinetic/rosconsole
     ros-kinetic/calibration_msgs
     dev-libs/boost
 "

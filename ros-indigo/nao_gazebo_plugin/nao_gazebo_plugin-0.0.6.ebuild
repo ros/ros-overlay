@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/nao_description
-    ros-indigo/gazebo_ros_control
-    ros-indigo/ros_controllers
+    ros-indigo/ros_control
     ros-indigo/gazebo_ros
     ros-indigo/nao_control
+    ros-indigo/gazebo_ros_control
     ros-indigo/gazebo_plugins
-    ros-indigo/ros_control
+    ros-indigo/ros_controllers
 "
 DEPEND="${RDEPEND}
 "

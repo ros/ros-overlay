@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/spur_gazebo
-    ros-indigo/spur_controller
     ros-indigo/spur_description
     ros-indigo/spur_bringup
+    ros-indigo/spur_controller
+    ros-indigo/spur_gazebo
 "
 DEPEND="${RDEPEND}
 "

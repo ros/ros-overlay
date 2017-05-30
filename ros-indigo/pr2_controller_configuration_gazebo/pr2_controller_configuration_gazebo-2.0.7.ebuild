@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gripper_action
     ros-indigo/single_joint_position_action
+    ros-indigo/pr2_gripper_action
     ros-indigo/pr2_controller_manager
     ros-indigo/pr2_head_action
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/industrial_robot_simulator
-    ros-indigo/abb_irb2400_moveit_plugins
-    ros-indigo/abb_irb2400_support
-    ros-indigo/xacro
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/moveit_simple_controller_manager
     ros-indigo/moveit_planners_ompl
+    ros-indigo/industrial_robot_simulator
+    ros-indigo/xacro
+    ros-indigo/moveit_simple_controller_manager
+    ros-indigo/abb_irb2400_support
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/abb_irb2400_moveit_plugins
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

@@ -14,13 +14,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rospy
-    ros-kinetic/genmsg
-    ros-kinetic/std_srvs
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/genmsg
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/roslib
     dev-python/numpy
     app-misc/cwiid
     app-misc/cwiid

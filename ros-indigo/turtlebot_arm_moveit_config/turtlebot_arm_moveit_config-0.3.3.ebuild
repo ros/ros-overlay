@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/turtlebot_arm_description
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/xacro
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/moveit_simple_controller_manager
     ros-indigo/moveit_planners_ompl
+    ros-indigo/xacro
+    ros-indigo/moveit_simple_controller_manager
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

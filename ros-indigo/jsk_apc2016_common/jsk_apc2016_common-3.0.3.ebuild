@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/tf2
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/tf2_eigen
     ros-indigo/qt_gui_py_common
-    ros-indigo/rqt_gui
+    ros-indigo/geometry_msgs
     ros-indigo/message_filters
+    ros-indigo/rqt_gui
+    ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf2_ros
     ros-indigo/resource_retriever
     ros-indigo/rqt_gui_py
-    ros-indigo/tf2
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/tf2_eigen
-    ros-indigo/tf2_ros
-    ros-indigo/pcl_ros
     ros-indigo/jsk_data
-    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

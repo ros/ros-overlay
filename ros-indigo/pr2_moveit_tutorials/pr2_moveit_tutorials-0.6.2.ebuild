@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_moveit_config
-    ros-indigo/pr2_moveit_plugins
-    ros-indigo/pr2_arm_kinematics
     ros-indigo/pluginlib
-    ros-indigo/moveit_ros_perception
+    ros-indigo/pr2_arm_kinematics
     ros-indigo/moveit_ros_planning_interface
+    ros-indigo/pr2_moveit_config
     ros-indigo/moveit_fake_controller_manager
+    ros-indigo/pr2_moveit_plugins
+    ros-indigo/moveit_ros_perception
     ros-indigo/moveit_core
     ros-indigo/interactive_markers
 "

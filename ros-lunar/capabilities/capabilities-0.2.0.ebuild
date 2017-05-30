@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/nodelet
-    ros-lunar/std_msgs
-    ros-lunar/message_runtime
     ros-lunar/bondpy
+    ros-lunar/rospy
     ros-lunar/roslaunch
+    ros-lunar/message_runtime
+    ros-lunar/std_msgs
     ros-lunar/std_srvs
     dev-python/pyyaml
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/image_geometry
     ros-indigo/camera_info_manager
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/image_geometry
+    ros-indigo/image_transport
     ros-indigo/polled_camera
     ros-indigo/roscpp
     ros-indigo/driver_base
-    ros-indigo/image_transport
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/diagnostic_updater
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "

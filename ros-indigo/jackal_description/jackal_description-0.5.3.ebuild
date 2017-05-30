@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/lms1xx
-    ros-indigo/xacro
-    ros-indigo/pointgrey_camera_description
     ros-indigo/robot_state_publisher
     ros-indigo/urdf
+    ros-indigo/pointgrey_camera_description
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

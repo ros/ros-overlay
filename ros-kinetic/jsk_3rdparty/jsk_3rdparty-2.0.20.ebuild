@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/slic
+    ros-kinetic/bayesian_belief_networks
+    ros-kinetic/libcmt
+    ros-kinetic/libsiftfast
+    ros-kinetic/julius
     ros-kinetic/nlopt
     ros-kinetic/rosping
-    ros-kinetic/slic
-    ros-kinetic/pgm_learner
-    ros-kinetic/ff
-    ros-kinetic/ffha
-    ros-kinetic/opt_camera
-    ros-kinetic/libsiftfast
     ros-kinetic/rospatlite
+    ros-kinetic/ff
+    ros-kinetic/pgm_learner
     ros-kinetic/voice_text
-    ros-kinetic/julius
-    ros-kinetic/mini_maxwell
-    ros-kinetic/bayesian_belief_networks
     ros-kinetic/downward
+    ros-kinetic/ffha
+    ros-kinetic/mini_maxwell
+    ros-kinetic/opt_camera
     ros-kinetic/assimp_devel
-    ros-kinetic/libcmt
 "
 DEPEND="${RDEPEND}
 "

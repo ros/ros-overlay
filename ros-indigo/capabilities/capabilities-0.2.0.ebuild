@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/bondpy
-    ros-indigo/std_msgs
-    ros-indigo/roslaunch
     ros-indigo/nodelet
+    ros-indigo/bondpy
+    ros-indigo/rospy
+    ros-indigo/roslaunch
     ros-indigo/message_runtime
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

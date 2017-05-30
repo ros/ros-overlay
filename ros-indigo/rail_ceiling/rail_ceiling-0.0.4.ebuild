@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ar_track_alvar
     ros-indigo/usb_cam
-    ros-indigo/xacro
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/robot_state_publisher
-    ros-indigo/ar_track_alvar_msgs
-    ros-indigo/roscpp
     ros-indigo/image_view
+    ros-indigo/xacro
+    ros-indigo/ar_track_alvar
+    ros-indigo/ar_track_alvar_msgs
+    ros-indigo/geometry_msgs
     ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/robot_state_publisher
+    ros-indigo/tf
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}

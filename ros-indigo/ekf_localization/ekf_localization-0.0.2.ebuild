@@ -12,8 +12,8 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
     ros-indigo/visualization_msgs
+    ros-indigo/tf_conversions
     ros-indigo/nav_msgs
     ros-indigo/laser_geometry
     ros-indigo/pcl_ros

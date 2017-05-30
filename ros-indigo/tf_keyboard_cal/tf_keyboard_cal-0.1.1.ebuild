@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/tf2
+    ros-indigo/roscpp
     ros-indigo/rosparam_shortcuts
     ros-indigo/keyboard
     ros-indigo/tf
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

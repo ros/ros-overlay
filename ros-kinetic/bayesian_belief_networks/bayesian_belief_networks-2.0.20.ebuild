@@ -12,8 +12,8 @@ LICENSE="Apache License, Version 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

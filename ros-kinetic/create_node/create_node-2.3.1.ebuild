@@ -14,15 +14,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/python_orocos_kdl
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/nav_msgs
     ros-kinetic/create_driver
     ros-kinetic/geometry_msgs
-    ros-kinetic/tf
+    ros-kinetic/rospy
     ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/python_orocos_kdl
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

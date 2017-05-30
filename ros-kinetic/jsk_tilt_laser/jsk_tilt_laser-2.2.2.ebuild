@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/laser_assembler
     ros-kinetic/tf_conversions
+    ros-kinetic/laser_filters
     ros-kinetic/multisense_lib
     ros-kinetic/urg_node
-    ros-kinetic/laser_assembler
-    ros-kinetic/tf
     ros-kinetic/sensor_msgs
     ros-kinetic/robot_state_publisher
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/laser_filters
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

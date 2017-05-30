@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/roscpp
     ros-indigo/eigen_conversions
-    ros-indigo/tf
     ros-indigo/object_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

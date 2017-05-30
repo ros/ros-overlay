@@ -13,12 +13,12 @@ LICENSE="GPSv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/object_msgs
     ros-indigo/gazebo_ros
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
+    ros-indigo/object_msgs
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

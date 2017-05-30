@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diagnostic_updater
     ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/diagnostic_updater
     games-util/joystick
 "
 DEPEND="${RDEPEND}

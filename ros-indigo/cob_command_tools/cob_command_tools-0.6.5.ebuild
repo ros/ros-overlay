@@ -12,12 +12,12 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_teleop
-    ros-indigo/cob_script_server
-    ros-indigo/cob_dashboard
-    ros-indigo/cob_interactive_teleop
-    ros-indigo/cob_monitoring
     ros-indigo/cob_command_gui
+    ros-indigo/cob_script_server
+    ros-indigo/cob_monitoring
+    ros-indigo/cob_teleop
+    ros-indigo/cob_interactive_teleop
+    ros-indigo/cob_dashboard
 "
 DEPEND="${RDEPEND}
 "

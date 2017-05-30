@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/octomap_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/std_msgs
     ros-indigo/object_recognition_msgs
     ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
     ros-indigo/shape_msgs
-    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

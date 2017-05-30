@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/async_web_server_cpp
-    ros-kinetic/roscpp
     ros-kinetic/image_transport
     ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/async_web_server_cpp
+    ros-kinetic/cv_bridge
     virtual/ffmpeg
 "
 DEPEND="${RDEPEND}

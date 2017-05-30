@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pal_vision_msgs
-    ros-indigo/pal_detection_msgs
-    ros-indigo/pal_interaction_msgs
-    ros-indigo/pal_tablet_msgs
-    ros-indigo/pal_control_msgs
-    ros-indigo/pal_navigation_msgs
-    ros-indigo/pal_device_msgs
-    ros-indigo/pal_motion_model_msgs
     ros-indigo/pal_multirobot_msgs
-    ros-indigo/pal_walking_msgs
+    ros-indigo/pal_vision_msgs
+    ros-indigo/pal_control_msgs
+    ros-indigo/pal_motion_model_msgs
+    ros-indigo/pal_interaction_msgs
     ros-indigo/pal_behaviour_msgs
+    ros-indigo/pal_navigation_msgs
+    ros-indigo/pal_walking_msgs
     ros-indigo/pal_wifi_localization_msgs
+    ros-indigo/pal_tablet_msgs
+    ros-indigo/pal_detection_msgs
+    ros-indigo/pal_device_msgs
 "
 DEPEND="${RDEPEND}
 "

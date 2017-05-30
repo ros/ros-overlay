@@ -3,21 +3,21 @@
 
 EAPI=6
 
-DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
+DESCRIPTION="Contains the definitions of the 3D Normal Distributions Transform data structure"
+HOMEPAGE="http://ros.org/wiki/ndt_map"
 SRC_URI="https://github.com/tstoyanov/perception_oru-release/archive/release/indigo/ndt_map/1.0.30-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/nav_msgs
+    ros-indigo/message_runtime
     ros-indigo/pcl_ros
     ros-indigo/roscpp
     ros-indigo/pcl_conversions
-    ros-indigo/message_runtime
+    ros-indigo/cv_bridge
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

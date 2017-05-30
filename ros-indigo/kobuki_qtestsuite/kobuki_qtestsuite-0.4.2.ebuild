@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/qt_gui_py_common
-    ros-indigo/rqt_plot
     ros-indigo/rospy
+    ros-indigo/rqt_plot
+    ros-indigo/qt_gui_py_common
+    ros-indigo/geometry_msgs
     ros-indigo/kobuki_testsuite
     ros-indigo/rqt_gui
     ros-indigo/nav_msgs
-    ros-indigo/rqt_gui_py
-    ros-indigo/geometry_msgs
     ros-indigo/rqt_py_common
+    ros-indigo/rqt_gui_py
     dev-python/PyQt4
 "
 DEPEND="${RDEPEND}

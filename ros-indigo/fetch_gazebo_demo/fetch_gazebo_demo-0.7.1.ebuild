@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/simple_grasping
-    ros-indigo/teleop_twist_keyboard
-    ros-indigo/fetch_navigation
     ros-indigo/fetch_moveit_config
-    ros-indigo/fetch_gazebo
+    ros-indigo/fetch_navigation
     ros-indigo/moveit_python
     ros-indigo/actionlib
+    ros-indigo/fetch_gazebo
+    ros-indigo/teleop_twist_keyboard
 "
 DEPEND="${RDEPEND}
 "

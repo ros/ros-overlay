@@ -12,14 +12,14 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/libsiftfast
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/posedetection_msgs
+    ros-kinetic/libsiftfast
     ros-kinetic/image_transport
+    ros-kinetic/posedetection_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/jsk_recognition_utils
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

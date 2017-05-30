@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
-    ros-indigo/grizzly_msgs
     ros-indigo/gazebo_ros
-    ros-indigo/std_msgs
+    ros-indigo/grizzly_msgs
     ros-indigo/roscpp
     ros-indigo/gazebo_plugins
+    ros-indigo/std_msgs
     ros-indigo/tf
+    ros-indigo/gazebo_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

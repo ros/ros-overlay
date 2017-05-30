@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/std_srvs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
+    ros-indigo/dynamic_reconfigure
     ros-indigo/image_transport
     ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

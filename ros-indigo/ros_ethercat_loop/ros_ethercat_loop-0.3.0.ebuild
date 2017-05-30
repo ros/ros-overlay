@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_model
-    ros-indigo/ethercat_grant
     ros-indigo/pluginlib
-    ros-indigo/ros_ethercat_hardware
-    ros-indigo/realtime_tools
-    ros-indigo/std_msgs
+    ros-indigo/ethercat_grant
     ros-indigo/controller_manager
     ros-indigo/roscpp
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/ros_ethercat_hardware
+    ros-indigo/ros_ethercat_model
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

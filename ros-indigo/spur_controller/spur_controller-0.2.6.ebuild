@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_pose_ekf
-    ros-indigo/joint_state_publisher
-    ros-indigo/effort_controllers
-    ros-indigo/controller_manager
     ros-indigo/joint_state_controller
+    ros-indigo/effort_controllers
+    ros-indigo/joint_state_publisher
+    ros-indigo/robot_pose_ekf
+    ros-indigo/controller_manager
 "
 DEPEND="${RDEPEND}
 "

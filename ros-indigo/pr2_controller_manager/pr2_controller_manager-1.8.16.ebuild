@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/pluginlib
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/realtime_tools
-    ros-indigo/pr2_controller_interface
-    ros-indigo/pr2_hardware_interface
-    ros-indigo/pr2_description
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/pr2_mechanism_diagnostics
+    ros-indigo/rospy
     ros-indigo/rosparam
+    ros-indigo/pr2_hardware_interface
     ros-indigo/pr2_mechanism_msgs
+    ros-indigo/pr2_mechanism_diagnostics
+    ros-indigo/pr2_controller_interface
+    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/sensor_msgs
+    ros-indigo/pr2_description
+    ros-indigo/pr2_mechanism_model
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
     ros-kinetic/visualization_msgs
     ros-kinetic/pluginlib
     ros-kinetic/nav_msgs
-    ros-kinetic/nav_core
+    ros-kinetic/rosconsole
     ros-kinetic/geometry_msgs
+    ros-kinetic/nav_core
     ros-kinetic/pcl_ros
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/pcl_conversions
     ros-kinetic/tf
+    ros-kinetic/pcl_conversions
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

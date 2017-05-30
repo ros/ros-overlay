@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/qt_gui_py_common
-    ros-kinetic/rosmsg
     ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/rqt_py_common
-    ros-kinetic/python_qt_binding
     ros-kinetic/roslib
+    ros-kinetic/python_qt_binding
+    ros-kinetic/rosmsg
+    ros-kinetic/rqt_py_common
+    ros-kinetic/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

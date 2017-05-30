@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_gui_cpp
+    ros-indigo/cmake_modules
     ros-indigo/pluginlib
     ros-indigo/rqt_gui
-    ros-indigo/cmake_modules
-    ros-indigo/roscpp
-    ros-indigo/stream_manipulator_3d
     ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/rqt_gui_cpp
+    ros-indigo/stream_manipulator_3d
 "
 DEPEND="${RDEPEND}
 "

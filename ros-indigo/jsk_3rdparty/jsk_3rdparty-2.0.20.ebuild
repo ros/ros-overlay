@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/slic
+    ros-indigo/bayesian_belief_networks
+    ros-indigo/libcmt
+    ros-indigo/libsiftfast
+    ros-indigo/rostwitter
+    ros-indigo/julius
     ros-indigo/nlopt
     ros-indigo/rosping
-    ros-indigo/slic
-    ros-indigo/pgm_learner
-    ros-indigo/ff
-    ros-indigo/ffha
-    ros-indigo/opt_camera
-    ros-indigo/libsiftfast
     ros-indigo/rospatlite
+    ros-indigo/ff
+    ros-indigo/pgm_learner
     ros-indigo/voice_text
-    ros-indigo/julius
-    ros-indigo/mini_maxwell
-    ros-indigo/bayesian_belief_networks
-    ros-indigo/rostwitter
     ros-indigo/downward
+    ros-indigo/ffha
+    ros-indigo/mini_maxwell
+    ros-indigo/opt_camera
     ros-indigo/assimp_devel
-    ros-indigo/libcmt
 "
 DEPEND="${RDEPEND}
 "

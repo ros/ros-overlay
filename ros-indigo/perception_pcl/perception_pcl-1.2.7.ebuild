@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pcl_ros
-    ros-indigo/pcl_msgs
     ros-indigo/pcl_conversions
+    ros-indigo/pcl_msgs
     ros-indigo/pointcloud_to_laserscan
+    ros-indigo/pcl_ros
 "
 DEPEND="${RDEPEND}
 "

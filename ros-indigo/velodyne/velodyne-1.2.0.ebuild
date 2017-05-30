@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/velodyne_driver
     ros-indigo/velodyne_msgs
     ros-indigo/velodyne_pointcloud
+    ros-indigo/velodyne_driver
 "
 DEPEND="${RDEPEND}
 "

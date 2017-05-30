@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ur_driver
-    ros-indigo/ur_gazebo
+    ros-indigo/ur_bringup
     ros-indigo/ur3_moveit_config
     ros-indigo/ur_description
-    ros-indigo/ur_kinematics
-    ros-indigo/ur_bringup
     ros-indigo/ur_msgs
-    ros-indigo/ur5_moveit_config
+    ros-indigo/ur_kinematics
     ros-indigo/ur10_moveit_config
+    ros-indigo/ur_gazebo
+    ros-indigo/ur5_moveit_config
 "
 DEPEND="${RDEPEND}
 "

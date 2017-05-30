@@ -13,8 +13,8 @@ LICENSE="Public domain"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosemacs
     ros-indigo/roslisp
+    ros-indigo/rosemacs
     ros-indigo/slime_ros
     ros-indigo/slime_wrapper
     dev-lisp/sbcl

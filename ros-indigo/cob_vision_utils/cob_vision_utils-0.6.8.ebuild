@@ -12,11 +12,11 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/roscpp
     ros-indigo/cmake_modules
-    dev-libs/tinyxml
+    ros-indigo/roscpp
+    ros-indigo/visualization_msgs
     media-libs/opencv
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
 "

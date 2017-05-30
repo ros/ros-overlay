@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlebot_navigation
+    ros-kinetic/turtlebot_calibration
     ros-kinetic/turtlebot_rapps
     ros-kinetic/turtlebot_actions
     ros-kinetic/turtlebot_follower
-    ros-kinetic/turtlebot_calibration
+    ros-kinetic/turtlebot_navigation
 "
 DEPEND="${RDEPEND}
 "

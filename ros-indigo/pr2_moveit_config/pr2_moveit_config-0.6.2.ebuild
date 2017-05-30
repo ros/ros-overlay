@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/moveit_ros_move_group
+    ros-indigo/robot_state_publisher
     ros-indigo/pr2_description
     ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "

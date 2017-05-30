@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grid_map_core
-    ros-indigo/grid_map_visualization
-    ros-indigo/cost_map_core
     ros-indigo/nav_msgs
+    ros-indigo/ecl_console
+    ros-indigo/grid_map_core
+    ros-indigo/grid_map_ros
+    ros-indigo/roslib
+    ros-indigo/cost_map_msgs
+    ros-indigo/grid_map_visualization
     ros-indigo/ecl_build
     ros-indigo/ecl_command_line
-    ros-indigo/grid_map_ros
+    ros-indigo/cost_map_core
     ros-indigo/costmap_2d
-    ros-indigo/cost_map_msgs
-    ros-indigo/roslib
-    ros-indigo/ecl_console
     media-libs/opencv
     dev-cpp/yaml-cpp
     dev-libs/boost

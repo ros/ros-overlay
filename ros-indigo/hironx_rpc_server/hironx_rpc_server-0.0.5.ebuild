@@ -13,11 +13,11 @@ LICENSE="Apache License 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hrpsys_ros_bridge
-    ros-indigo/hironx_ros_bridge
     ros-indigo/hironx_rpc_msgs
     ros-indigo/tork_rpc_util
+    ros-indigo/hrpsys_ros_bridge
     ros-indigo/hrpsys
+    ros-indigo/hironx_ros_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

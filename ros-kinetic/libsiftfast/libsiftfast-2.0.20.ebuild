@@ -16,10 +16,10 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/mk
-    ros-kinetic/rosboost_cfg
-    ros-kinetic/roslib
     ros-kinetic/rospack
+    ros-kinetic/mk
+    ros-kinetic/roslib
+    ros-kinetic/rosboost_cfg
     dev-vcs/subversion
 "
 

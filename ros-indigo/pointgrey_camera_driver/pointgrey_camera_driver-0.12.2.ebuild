@@ -13,22 +13,22 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/camera_info_manager
-    ros-indigo/sensor_msgs
-    ros-indigo/image_exposure_msgs
-    ros-indigo/wfov_camera_msgs
-    ros-indigo/image_proc
-    ros-indigo/roscpp
-    ros-indigo/image_transport
-    ros-indigo/diagnostic_updater
     ros-indigo/nodelet
     ros-indigo/dynamic_reconfigure
-    =dev-libs/libusb-1.0*
+    ros-indigo/image_proc
+    ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/image_exposure_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/wfov_camera_msgs
+    ros-indigo/diagnostic_updater
     sys-libs/libraw1394
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint
-    app-arch/dpkg
     net-misc/curl
+    app-arch/dpkg
 "
 
 SLOT="0/0"

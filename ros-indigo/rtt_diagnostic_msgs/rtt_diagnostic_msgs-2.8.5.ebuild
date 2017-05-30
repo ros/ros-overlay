@@ -3,18 +3,20 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="Provides an rtt typekit for ROS diagnostic_msgs messages.
+
+    It allows you to "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/indigo/rtt_diagnostic_msgs/2.8.5-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rtt_roscomm
     ros-indigo/rtt_std_msgs
     ros-indigo/diagnostic_msgs
+    ros-indigo/rtt_roscomm
 "
 DEPEND="${RDEPEND}
 "

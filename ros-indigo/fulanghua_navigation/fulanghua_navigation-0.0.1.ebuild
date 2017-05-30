@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/fulanghua_srvs
-    ros-indigo/fulanghua_ekf_2d
-    ros-indigo/fulanghua_static_path_publisher
     ros-indigo/fulanghua_waypoints_nav
+    ros-indigo/fulanghua_srvs
+    ros-indigo/fulanghua_static_path_publisher
+    ros-indigo/fulanghua_ekf_2d
 "
 DEPEND="${RDEPEND}
 "

@@ -12,8 +12,8 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pepper_bringup
     ros-kinetic/pepper_sensors_py
+    ros-kinetic/pepper_bringup
     ros-kinetic/pepper_description
 "
 DEPEND="${RDEPEND}

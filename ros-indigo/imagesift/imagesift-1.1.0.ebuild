@@ -12,14 +12,14 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/libsiftfast
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/posedetection_msgs
+    ros-indigo/libsiftfast
     ros-indigo/image_transport
+    ros-indigo/posedetection_msgs
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/jsk_recognition_utils
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

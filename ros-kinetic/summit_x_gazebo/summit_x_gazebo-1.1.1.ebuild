@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/summit_x_robot_control
     ros-kinetic/summit_x_description
-    ros-kinetic/std_srvs
     ros-kinetic/gazebo_ros
-    ros-kinetic/summit_x_control
     ros-kinetic/xacro
-    ros-kinetic/std_msgs
+    ros-kinetic/summit_x_robot_control
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/summit_x_control
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

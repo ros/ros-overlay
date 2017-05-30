@@ -12,23 +12,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/velodyne_msgs
+    ros-indigo/nodelet
     ros-indigo/pluginlib
     ros-indigo/dynamic_reconfigure
-    ros-indigo/tf
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/velodyne_driver
-    ros-indigo/roslib
     ros-indigo/angles
+    ros-indigo/velodyne_driver
+    ros-indigo/pcl_ros
+    ros-indigo/roslib
+    ros-indigo/velodyne_msgs
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
     dev-cpp/yaml-cpp
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/roslaunch
+    ros-indigo/rostest
     ros-indigo/pcl_conversions
 "
 

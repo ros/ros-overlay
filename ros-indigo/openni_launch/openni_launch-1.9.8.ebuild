@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nodelet
     ros-indigo/openni_camera
     ros-indigo/rgbd_launch
-    ros-indigo/nodelet
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

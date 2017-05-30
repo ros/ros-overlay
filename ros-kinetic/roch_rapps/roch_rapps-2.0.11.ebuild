@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_teleop
-    ros-kinetic/robot_pose_publisher
-    ros-kinetic/warehouse_ros
-    ros-kinetic/world_canvas_server
+    ros-kinetic/nodelet
+    ros-kinetic/roch_bringup
     ros-kinetic/roch_follower
     ros-kinetic/roch_navigation
+    ros-kinetic/world_canvas_server
     ros-kinetic/topic_tools
-    ros-kinetic/nodelet
+    ros-kinetic/warehouse_ros
     ros-kinetic/compressed_image_transport
+    ros-kinetic/roch_teleop
     ros-kinetic/tf
-    ros-kinetic/roch_bringup
+    ros-kinetic/robot_pose_publisher
 "
 DEPEND="${RDEPEND}
 "

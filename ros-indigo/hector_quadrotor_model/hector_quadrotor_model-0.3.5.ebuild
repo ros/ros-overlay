@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/hector_uav_msgs
     ros-indigo/roscpp
+    ros-indigo/hector_uav_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

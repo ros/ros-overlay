@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/carl_interactive_manipulation
-    ros-indigo/carl_phidgets
-    ros-indigo/carl_description
     ros-indigo/carl_bringup
+    ros-indigo/carl_interactive_manipulation
     ros-indigo/carl_teleop
-    ros-indigo/carl_dynamixel
+    ros-indigo/carl_phidgets
     ros-indigo/carl_tools
+    ros-indigo/carl_dynamixel
+    ros-indigo/carl_description
 "
 DEPEND="${RDEPEND}
 "

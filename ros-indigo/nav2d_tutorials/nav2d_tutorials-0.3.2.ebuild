@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/nav2d_navigator
+    ros-indigo/nav2d_exploration
     ros-indigo/nav2d_karto
     ros-indigo/nav2d_remote
-    ros-indigo/nav2d_operator
-    ros-indigo/nav2d_exploration
-    ros-indigo/nav2d_msgs
     ros-indigo/nav2d_localizer
+    ros-indigo/nav2d_msgs
+    ros-indigo/nav2d_operator
 "
 DEPEND="${RDEPEND}
 "

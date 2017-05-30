@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/summit_xl_navigation
-    ros-indigo/summit_xl_localization
     ros-indigo/summit_xl_pad
     ros-indigo/summit_xl_description
+    ros-indigo/summit_xl_navigation
+    ros-indigo/summit_xl_localization
 "
 DEPEND="${RDEPEND}
 "

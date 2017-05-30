@@ -13,16 +13,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
     ros-kinetic/qt_build
+    ros-kinetic/cmake_modules
     ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
     ros-kinetic/eigen_conversions
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/robotis_controller_msgs
     ros-kinetic/manipulator_h_base_module_msgs
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0/0"

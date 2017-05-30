@@ -13,29 +13,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nodelet_topic_tools
-    ros-indigo/pluginlib
-    ros-indigo/rosbag
-    ros-indigo/pcl_msgs
-    ros-indigo/tf
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/message_filters
-    ros-indigo/pcl_conversions
     ros-indigo/dynamic_reconfigure
-    sci-libs/pcl
-    dev-python/pyvtk
+    ros-indigo/nodelet
+    ros-indigo/pluginlib
+    ros-indigo/message_filters
+    ros-indigo/pcl_msgs
+    ros-indigo/rosbag
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/pcl_conversions
+    ros-indigo/nodelet_topic_tools
     sci-libs/pcl
     sci-libs/vtk
+    dev-python/pyvtk
     dev-cpp/eigen
+    sci-libs/pcl
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosconsole
-    ros-indigo/genmsg
     ros-indigo/cmake_modules
     ros-indigo/roslib
+    ros-indigo/genmsg
+    ros-indigo/rosconsole
 "
 
 SLOT="0/0"

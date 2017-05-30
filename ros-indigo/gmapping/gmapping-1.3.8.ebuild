@@ -13,10 +13,10 @@ LICENSE="CreativeCommons-by-nc-sa-2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/openslam_gmapping
+    ros-indigo/roscpp
     ros-indigo/tf
     ros-indigo/nav_msgs
-    ros-indigo/roscpp
+    ros-indigo/openslam_gmapping
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

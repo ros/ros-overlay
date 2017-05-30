@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/variant_msgs
-    ros-kinetic/variant_topic_test
     ros-kinetic/variant_topic_tools
+    ros-kinetic/variant_topic_test
 "
 DEPEND="${RDEPEND}
 "

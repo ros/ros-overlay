@@ -12,8 +12,8 @@ LICENSE="babel"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trivial_features
     ros-indigo/alexandria
+    ros-indigo/trivial_features
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

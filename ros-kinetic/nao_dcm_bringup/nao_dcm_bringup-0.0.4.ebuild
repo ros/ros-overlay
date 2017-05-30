@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nao_control
     ros-kinetic/naoqi_dcm_driver
+    ros-kinetic/nao_control
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

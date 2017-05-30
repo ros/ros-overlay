@@ -15,12 +15,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/web_video_server
     ros-indigo/bwi_kr_execution
-    ros-indigo/std_msgs
-    ros-indigo/rosbridge_server
-    ros-indigo/roscpp
-    ros-indigo/bwi_services
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/bwi_services
+    ros-indigo/rosbridge_server
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -12,11 +12,11 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_recognition_util
-    ros-kinetic/rqt_gui
-    ros-kinetic/rospy
-    ros-kinetic/image_recognition_msgs
     ros-kinetic/rqt_gui_py
+    ros-kinetic/rqt_gui
+    ros-kinetic/image_recognition_util
+    ros-kinetic/image_recognition_msgs
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "

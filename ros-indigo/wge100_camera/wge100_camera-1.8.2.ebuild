@@ -13,22 +13,22 @@ LICENSE="GPL because of list.h; other files released under BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
     ros-indigo/self_test
     ros-indigo/rospy
+    ros-indigo/image_transport
     ros-indigo/timestamp_tools
+    ros-indigo/message_runtime
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
+    ros-indigo/driver_base
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/camera_calibration_parsers
-    ros-indigo/driver_base
-    ros-indigo/image_transport
     ros-indigo/diagnostic_updater
-    ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

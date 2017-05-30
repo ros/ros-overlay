@@ -7,19 +7,19 @@ DESCRIPTION=""
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/laser_scan_matcher/0.3.2-0.tar.gz"
 
-LICENSE="||( BSD LGPLv3 )"
+LICENSE="|| ( BSD LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
-    ros-indigo/csm
-    ros-indigo/geometry_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/pcl_conversions
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/csm
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

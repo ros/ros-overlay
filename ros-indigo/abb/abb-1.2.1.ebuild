@@ -7,19 +7,19 @@ DESCRIPTION="ROS-Industrial support for ABB manipulators (metapackage)."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/indigo/abb/1.2.1-0.tar.gz"
 
-LICENSE="||( BSD Apache 2.0 )"
+LICENSE="|| ( BSD Apache 2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/abb_irb6600_support
     ros-indigo/abb_irb2400_support
-    ros-indigo/abb_irb6640_support
-    ros-indigo/abb_resources
-    ros-indigo/abb_driver
-    ros-indigo/abb_irb6640_moveit_config
-    ros-indigo/abb_irb5400_support
     ros-indigo/abb_irb2400_moveit_config
+    ros-indigo/abb_irb5400_support
     ros-indigo/abb_irb2400_moveit_plugins
+    ros-indigo/abb_irb6600_support
+    ros-indigo/abb_resources
+    ros-indigo/abb_irb6640_moveit_config
+    ros-indigo/abb_irb6640_support
+    ros-indigo/abb_driver
 "
 DEPEND="${RDEPEND}
 "

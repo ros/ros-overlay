@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_py
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/tf2_kdl
-    ros-kinetic/tf2_tools
-    ros-kinetic/tf2
+    ros-kinetic/tf2_sensor_msgs
     ros-kinetic/tf2_bullet
     ros-kinetic/tf2_eigen
-    ros-kinetic/tf2_sensor_msgs
-    ros-kinetic/tf2_ros
+    ros-kinetic/tf2_py
+    ros-kinetic/tf2_tools
     ros-kinetic/tf2_msgs
+    ros-kinetic/tf2_kdl
+    ros-kinetic/tf2_geometry_msgs
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

@@ -12,20 +12,20 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/cmake_modules
+    ros-indigo/nodelet
+    ros-indigo/image_transport
     ros-indigo/geometry_msgs
     ros-indigo/cob_perception_msgs
     ros-indigo/pcl_ros
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/sensor_msgs
     ros-indigo/stereo_msgs
-    ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/pcl_conversions
     ros-indigo/tf
-    media-libs/opencv
+    ros-indigo/cv_bridge
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
 "

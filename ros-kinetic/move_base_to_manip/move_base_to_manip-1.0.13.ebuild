@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/visualization_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/move_base_msgs
     ros-kinetic/message_generation
+    ros-kinetic/geometry_msgs
     ros-kinetic/moveit_ros_planning_interface
-    ros-kinetic/roscpp
-    ros-kinetic/moveit_core
     ros-kinetic/message_runtime
+    ros-kinetic/move_base_msgs
+    ros-kinetic/moveit_core
+    ros-kinetic/roscpp
     ros-kinetic/tf
     ros-kinetic/interactive_markers
     dev-cpp/eigen

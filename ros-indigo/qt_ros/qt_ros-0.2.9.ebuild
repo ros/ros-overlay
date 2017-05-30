@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/qt_build
-    ros-indigo/qt_create
     ros-indigo/qt_tutorials
+    ros-indigo/qt_create
 "
 DEPEND="${RDEPEND}
 "

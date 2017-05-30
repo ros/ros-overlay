@@ -12,33 +12,33 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/octomap_msgs
-    ros-indigo/rostime
-    ros-indigo/random_numbers
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/fcl
     ros-indigo/geometric_shapes
-    ros-indigo/kdl_parser
-    ros-indigo/moveit_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/eigen_stl_containers
-    ros-indigo/srdfdom
-    ros-indigo/trajectory_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/octomap
+    ros-indigo/std_msgs
+    ros-indigo/srdfdom
+    ros-indigo/moveit_msgs
     ros-indigo/eigen_conversions
-    media-libs/assimp
-    dev-libs/boost
+    ros-indigo/fcl
+    ros-indigo/sensor_msgs
+    ros-indigo/kdl_parser
+    ros-indigo/random_numbers
+    ros-indigo/trajectory_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/octomap_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/eigen_stl_containers
+    ros-indigo/rostime
     dev-cpp/eigen
     dev-libs/console_bridge
-    dev-libs/urdfdom_headers
+    dev-libs/boost
     dev-libs/urdfdom
+    media-libs/assimp
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
-    ros-indigo/shape_msgs
     ros-indigo/roslib
     ros-indigo/cmake_modules
+    ros-indigo/shape_msgs
 "
 
 SLOT="0/0"

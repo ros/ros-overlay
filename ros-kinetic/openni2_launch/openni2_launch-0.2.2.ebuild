@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/openni2_camera
-    ros-kinetic/rgbd_launch
     ros-kinetic/nodelet
+    ros-kinetic/image_proc
     ros-kinetic/depth_image_proc
     ros-kinetic/tf
-    ros-kinetic/image_proc
+    ros-kinetic/openni2_camera
+    ros-kinetic/rgbd_launch
 "
 DEPEND="${RDEPEND}
 "

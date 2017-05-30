@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/amcl
-    ros-kinetic/move_base
     ros-kinetic/map_server
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rtt_actionlib_msgs
-    ros-kinetic/rtt_sensor_msgs
-    ros-kinetic/rtt_diagnostic_msgs
     ros-kinetic/rtt_geometry_msgs
-    ros-kinetic/rtt_nav_msgs
-    ros-kinetic/rtt_trajectory_msgs
+    ros-kinetic/rtt_visualization_msgs
+    ros-kinetic/rtt_actionlib_msgs
+    ros-kinetic/rtt_diagnostic_msgs
     ros-kinetic/rtt_stereo_msgs
     ros-kinetic/rtt_shape_msgs
-    ros-kinetic/rtt_visualization_msgs
+    ros-kinetic/rtt_sensor_msgs
+    ros-kinetic/rtt_nav_msgs
+    ros-kinetic/rtt_trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

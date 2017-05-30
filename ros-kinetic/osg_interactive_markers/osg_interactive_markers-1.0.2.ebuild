@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/osg_markers
-    ros-kinetic/visualization_msgs
     ros-kinetic/roscpp
     ros-kinetic/osg_utils
+    ros-kinetic/visualization_msgs
     ros-kinetic/tf
     ros-kinetic/interactive_markers
     dev-games/openscenegraph

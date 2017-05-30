@@ -12,19 +12,19 @@ LICENSE="Beerware"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
-    ros-indigo/ros_controllers
-    ros-indigo/trajectory_msgs
-    ros-indigo/ur_description
-    ros-indigo/geometry_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/sensor_msgs
     ros-indigo/controller_manager
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/tf
-    ros-indigo/ur_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/ur_description
     ros-indigo/actionlib
+    ros-indigo/roscpp
+    ros-indigo/ur_msgs
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
+    ros-indigo/tf
+    ros-indigo/ros_controllers
+    ros-indigo/hardware_interface
 "
 DEPEND="${RDEPEND}
 "

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pluginlib
-    ros-kinetic/ompl
-    ros-kinetic/tf
     ros-kinetic/roscpp
-    ros-kinetic/moveit_ros_planning
     ros-kinetic/moveit_core
     ros-kinetic/eigen_conversions
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/tf
+    ros-kinetic/ompl
 "
 DEPEND="${RDEPEND}
 "

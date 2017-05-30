@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/polygon_matcher
-    ros-indigo/lama_common
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/lama_common
     sci-libs/gsl
 "
 DEPEND="${RDEPEND}

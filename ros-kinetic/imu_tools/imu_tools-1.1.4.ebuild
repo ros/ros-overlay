@@ -12,9 +12,9 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rviz_imu_plugin
     ros-kinetic/imu_complementary_filter
     ros-kinetic/imu_filter_madgwick
-    ros-kinetic/rviz_imu_plugin
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
     ros-indigo/urdf_tutorial
-    ros-indigo/gazebo_plugins
-    ros-indigo/rviz
     ros-indigo/urdf
+    ros-indigo/gazebo_plugins
+    ros-indigo/xacro
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
 "

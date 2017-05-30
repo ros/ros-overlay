@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/arni_core
     ros-indigo/arni_msgs
-    ros-indigo/rospy
     ros-indigo/rosgraph_msgs
+    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
 "

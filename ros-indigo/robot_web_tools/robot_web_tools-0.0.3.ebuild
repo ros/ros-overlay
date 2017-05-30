@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/web_video_server
-    ros-indigo/depthcloud_encoder
-    ros-indigo/rosbridge_server
-    ros-indigo/interactive_marker_proxy
     ros-indigo/tf2_web_republisher
+    ros-indigo/depthcloud_encoder
+    ros-indigo/web_video_server
+    ros-indigo/interactive_marker_proxy
+    ros-indigo/rosbridge_server
 "
 DEPEND="${RDEPEND}
 "

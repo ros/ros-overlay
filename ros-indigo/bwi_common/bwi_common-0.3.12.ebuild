@@ -13,25 +13,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bwi_interruptable_action_server
-    ros-indigo/bwi_scavenger
-    ros-indigo/multi_level_map_msgs
-    ros-indigo/bwi_msgs
-    ros-indigo/bwi_rqt_plugins
-    ros-indigo/multi_level_map_utils
-    ros-indigo/utexas_gdc
-    ros-indigo/bwi_tools
-    ros-indigo/bwi_mapper
     ros-indigo/bwi_kr_execution
-    ros-indigo/multi_level_map_server
-    ros-indigo/bwi_logging
-    ros-indigo/bwi_gazebo_entities
-    ros-indigo/bwi_planning_common
-    ros-indigo/bwi_joystick_teleop
-    ros-indigo/bwi_services
-    ros-indigo/bwi_tasks
-    ros-indigo/stop_base
+    ros-indigo/bwi_msgs
     ros-indigo/bwi_virtour
+    ros-indigo/multi_level_map_msgs
+    ros-indigo/bwi_gazebo_entities
+    ros-indigo/bwi_joystick_teleop
+    ros-indigo/multi_level_map_utils
+    ros-indigo/bwi_tools
+    ros-indigo/bwi_logging
+    ros-indigo/bwi_rqt_plugins
+    ros-indigo/bwi_scavenger
+    ros-indigo/bwi_interruptable_action_server
+    ros-indigo/bwi_tasks
+    ros-indigo/multi_level_map_server
+    ros-indigo/stop_base
+    ros-indigo/bwi_planning_common
+    ros-indigo/utexas_gdc
+    ros-indigo/bwi_services
+    ros-indigo/bwi_mapper
 "
 DEPEND="${RDEPEND}
 "

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rocon_multimaster
     ros-indigo/concert_services
-    ros-indigo/rocon_tools
     ros-indigo/rocon_concert
+    ros-indigo/rocon_qt_gui
     ros-indigo/rocon_tutorials
+    ros-indigo/rocon_tools
     ros-indigo/rocon_app_platform
     ros-indigo/rocon_msgs
-    ros-indigo/rocon_qt_gui
-    ros-indigo/rocon_multimaster
 "
 DEPEND="${RDEPEND}
 "

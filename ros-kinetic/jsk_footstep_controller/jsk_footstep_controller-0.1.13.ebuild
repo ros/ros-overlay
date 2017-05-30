@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/tf2
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/tf_conversions
+    ros-kinetic/message_generation
+    ros-kinetic/message_filters
     ros-kinetic/jsk_footstep_planner
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/sound_play
     ros-kinetic/jsk_pcl_ros
     ros-kinetic/urdf
     ros-kinetic/genmsg
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/tf2
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/kdl_parser
-    ros-kinetic/kdl_conversions
-    ros-kinetic/sound_play
-    ros-kinetic/message_filters
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/tf
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/kdl_conversions
+    ros-kinetic/tf
+    ros-kinetic/kdl_parser
+    ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

@@ -7,41 +7,41 @@ DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/indigo/rviz/1.11.15-0.tar.gz"
 
-LICENSE="||( BSD Creative Commons )"
+LICENSE="|| ( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/map_msgs
-    ros-indigo/rosbag
-    ros-indigo/image_geometry
-    ros-indigo/pluginlib
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/std_srvs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/urdf
-    ros-indigo/python_qt_binding
-    ros-indigo/image_transport
-    ros-indigo/interactive_markers
-    ros-indigo/rosconsole
     ros-indigo/nav_msgs
     ros-indigo/laser_geometry
-    ros-indigo/resource_retriever
-    ros-indigo/message_filters
     ros-indigo/roslib
-    ros-indigo/visualization_msgs
+    ros-indigo/map_msgs
+    ros-indigo/std_msgs
+    ros-indigo/python_qt_binding
+    ros-indigo/image_transport
+    ros-indigo/rosbag
+    ros-indigo/sensor_msgs
+    ros-indigo/resource_retriever
     ros-indigo/rospy
     ros-indigo/media_export
-    ros-indigo/sensor_msgs
-    media-libs/assimp
-    dev-cpp/yaml-cpp
-    dev-qt/qtcore
-    dev-games/ogre
-    dev-libs/tinyxml
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/rosconsole
+    ros-indigo/visualization_msgs
+    ros-indigo/image_geometry
+    ros-indigo/pluginlib
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/interactive_markers
     dev-cpp/eigen
     media-libs/mesa
+    dev-cpp/yaml-cpp
     dev-qt/qtopengl
+    dev-qt/qtcore
+    dev-libs/tinyxml
+    media-libs/assimp
+    dev-games/ogre
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

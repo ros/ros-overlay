@@ -16,8 +16,8 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp_serialization
     ros-indigo/roscpp
+    ros-indigo/roscpp_serialization
     dev-libs/boost
     dev-cpp/yaml-cpp
 "

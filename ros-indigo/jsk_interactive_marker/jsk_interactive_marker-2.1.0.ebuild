@@ -12,37 +12,37 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jsk_footstep_msgs
-    ros-indigo/jsk_topic_tools
-    ros-indigo/dynamic_tf_publisher
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/pr2eus_moveit
-    ros-indigo/roseus
-    ros-indigo/geometry_msgs
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/urdf
-    ros-indigo/message_runtime
-    ros-indigo/actionlib
-    ros-indigo/interactive_markers
-    ros-indigo/tf_conversions
-    ros-indigo/jsk_rviz_plugins
-    ros-indigo/rviz
-    ros-indigo/message_filters
     ros-indigo/roslib
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/rviz
+    ros-indigo/dynamic_tf_publisher
+    ros-indigo/tf_conversions
     ros-indigo/moveit_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/roseus
     ros-indigo/eigen_conversions
+    ros-indigo/jsk_topic_tools
+    ros-indigo/sensor_msgs
+    ros-indigo/pr2eus_moveit
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/jsk_rviz_plugins
+    ros-indigo/urdf
+    ros-indigo/roscpp
+    ros-indigo/visualization_msgs
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/tf
+    ros-indigo/jsk_footstep_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/interactive_markers
     dev-cpp/yaml-cpp
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosbuild
+    ros-indigo/message_generation
     ros-indigo/mk
     ros-indigo/cmake_modules
-    ros-indigo/message_generation
+    ros-indigo/rosbuild
 "
 
 SLOT="0/0"

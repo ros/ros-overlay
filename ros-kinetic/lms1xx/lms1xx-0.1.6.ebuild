@@ -12,9 +12,9 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole_bridge
     ros-kinetic/roscpp_serialization
     ros-kinetic/roscpp
+    ros-kinetic/rosconsole_bridge
     ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}

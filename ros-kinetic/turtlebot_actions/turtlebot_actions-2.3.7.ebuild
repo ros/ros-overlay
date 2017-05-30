@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/image_geometry
-    ros-kinetic/actionlib
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/turtlebot_bringup
-    ros-kinetic/roscpp
     ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
+    ros-kinetic/actionlib
     ros-kinetic/message_runtime
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/roscpp
     ros-kinetic/tf
+    ros-kinetic/cv_bridge
+    ros-kinetic/turtlebot_bringup
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

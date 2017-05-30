@@ -12,21 +12,21 @@ LICENSE="BSD 3-clause. See license attached"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/rostest
     ros-kinetic/camera_info_manager
+    ros-kinetic/nodelet
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/std_msgs
+    ros-kinetic/image_transport
     ros-kinetic/message_generation
     ros-kinetic/rgbd_launch
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/sensor_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/image_transport
-    ros-kinetic/librealsense
-    ros-kinetic/tf
     ros-kinetic/message_runtime
+    ros-kinetic/pcl_ros
+    ros-kinetic/librealsense
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rostest
+    ros-kinetic/tf
+    ros-kinetic/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

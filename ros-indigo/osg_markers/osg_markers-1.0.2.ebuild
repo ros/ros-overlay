@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslib
     ros-indigo/visualization_msgs
-    ros-indigo/tf
     ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/tf
     dev-games/openscenegraph
 "
 DEPEND="${RDEPEND}

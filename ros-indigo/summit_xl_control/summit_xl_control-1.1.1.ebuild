@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/robot_state_publisher
     ros-indigo/ros_controllers
-    ros-indigo/ros_control
     ros-indigo/summit_xl_pad
+    ros-indigo/ros_control
 "
 DEPEND="${RDEPEND}
 "

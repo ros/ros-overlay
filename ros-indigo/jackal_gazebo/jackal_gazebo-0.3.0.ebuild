@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_gazebo_plugins
-    ros-indigo/gazebo_ros_control
     ros-indigo/gazebo_ros
     ros-indigo/jackal_control
-    ros-indigo/jackal_description
+    ros-indigo/gazebo_ros_control
+    ros-indigo/hector_gazebo_plugins
     ros-indigo/gazebo_plugins
+    ros-indigo/jackal_description
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -12,8 +12,8 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gripper_sensor_msgs
     ros-indigo/pr2_gripper_sensor_action
+    ros-indigo/pr2_gripper_sensor_msgs
     ros-indigo/pr2_gripper_sensor_controller
 "
 DEPEND="${RDEPEND}

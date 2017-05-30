@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rospy
-    ros-kinetic/std_srvs
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/naoqi_bridge_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/actionlib
+    ros-kinetic/std_srvs
+    ros-kinetic/naoqi_bridge_msgs
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

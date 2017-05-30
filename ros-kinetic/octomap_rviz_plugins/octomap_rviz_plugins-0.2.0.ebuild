@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/rviz
     ros-kinetic/roscpp
-    ros-kinetic/octomap
     ros-kinetic/octomap_msgs
+    ros-kinetic/octomap
 "
 DEPEND="${RDEPEND}
 "

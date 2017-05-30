@@ -12,12 +12,12 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/transmission_interface
     ros-lunar/urdf
+    ros-lunar/transmission_interface
 "
 DEPEND="${RDEPEND}
-    ros-lunar/ivcon
     ros-lunar/convex_decomposition
+    ros-lunar/ivcon
 "
 
 SLOT="0/0"

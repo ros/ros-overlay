@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosbag_migration_rule
     ros-kinetic/geometry_msgs
+    ros-kinetic/rosbag_migration_rule
     ros-kinetic/std_msgs
     ros-kinetic/message_runtime
 "

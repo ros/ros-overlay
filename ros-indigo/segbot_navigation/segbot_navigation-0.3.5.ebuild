@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/amcl
+    ros-indigo/gmapping
+    ros-indigo/global_planner
+    ros-indigo/move_base_msgs
     ros-indigo/bwi_interruptable_action_server
     ros-indigo/segbot_bringup
-    ros-indigo/std_srvs
-    ros-indigo/nav_msgs
-    ros-indigo/gmapping
     ros-indigo/eband_local_planner
-    ros-indigo/geometry_msgs
-    ros-indigo/move_base_msgs
     ros-indigo/map_server
     ros-indigo/rviz
-    ros-indigo/amcl
-    ros-indigo/global_planner
+    ros-indigo/std_srvs
     ros-indigo/move_base
 "
 DEPEND="${RDEPEND}

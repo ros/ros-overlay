@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/point_cloud_publisher_tutorial
     ros-indigo/laser_scan_publisher_tutorial
-    ros-indigo/simple_navigation_goals_tutorial
+    ros-indigo/odometry_publisher_tutorial
+    ros-indigo/navigation_stage
     ros-indigo/roomba_stage
     ros-indigo/robot_setup_tf_tutorial
-    ros-indigo/point_cloud_publisher_tutorial
-    ros-indigo/navigation_stage
-    ros-indigo/odometry_publisher_tutorial
+    ros-indigo/simple_navigation_goals_tutorial
 "
 DEPEND="${RDEPEND}
 "

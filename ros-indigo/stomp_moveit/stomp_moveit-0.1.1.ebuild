@@ -12,12 +12,12 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
     ros-indigo/cmake_modules
+    ros-indigo/pluginlib
     ros-indigo/roscpp
-    ros-indigo/stomp_core
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning
+    ros-indigo/stomp_core
 "
 DEPEND="${RDEPEND}
 "

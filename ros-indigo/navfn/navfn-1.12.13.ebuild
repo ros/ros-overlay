@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
     ros-indigo/visualization_msgs
     ros-indigo/pluginlib
     ros-indigo/nav_msgs
-    ros-indigo/nav_core
+    ros-indigo/rosconsole
     ros-indigo/geometry_msgs
+    ros-indigo/nav_core
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/costmap_2d
-    ros-indigo/pcl_conversions
     ros-indigo/tf
+    ros-indigo/pcl_conversions
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

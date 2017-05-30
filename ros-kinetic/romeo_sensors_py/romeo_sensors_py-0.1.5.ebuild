@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/rospy
     ros-kinetic/naoqi_sensors_py
+    ros-kinetic/rospy
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_quadrotor_gazebo
     ros-indigo/hector_mapping
+    ros-indigo/hector_quadrotor_gazebo
+    ros-indigo/hector_geotiff
     ros-indigo/hector_gazebo_worlds
     ros-indigo/hector_trajectory_server
-    ros-indigo/hector_geotiff
 "
 DEPEND="${RDEPEND}
 "

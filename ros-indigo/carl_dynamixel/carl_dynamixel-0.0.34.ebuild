@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/dynamixel_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
     ros-indigo/dynamixel_controllers
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ros_base
-    ros-kinetic/laser_pipeline
     ros-kinetic/perception_pcl
-    ros-kinetic/image_transport_plugins
     ros-kinetic/image_pipeline
-    ros-kinetic/image_common
     ros-kinetic/vision_opencv
+    ros-kinetic/image_transport_plugins
+    ros-kinetic/laser_pipeline
+    ros-kinetic/ros_base
+    ros-kinetic/image_common
 "
 DEPEND="${RDEPEND}
 "

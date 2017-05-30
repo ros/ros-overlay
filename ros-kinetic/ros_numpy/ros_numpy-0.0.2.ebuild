@@ -12,8 +12,8 @@ LICENSE="MIT"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/nav_msgs
+    ros-kinetic/rospy
     ros-kinetic/geometry_msgs
     ros-kinetic/sensor_msgs
     ros-kinetic/tf

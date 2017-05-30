@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/pluginlib
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/rosconsole
     ros-kinetic/bondcpp
-    ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/message_runtime
     sys-apps/util-linux
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rospy
     ros-kinetic/cmake_modules
+    ros-kinetic/rospy
     ros-kinetic/message_generation
 "
 

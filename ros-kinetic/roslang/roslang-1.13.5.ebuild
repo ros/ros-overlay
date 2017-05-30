@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/catkin
     ros-kinetic/genmsg
+    ros-kinetic/catkin
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/resource_retriever
     ros-indigo/rospack
+    ros-indigo/resource_retriever
+    ros-indigo/rospy
     dev-python/urlgrabber
 "
 DEPEND="${RDEPEND}

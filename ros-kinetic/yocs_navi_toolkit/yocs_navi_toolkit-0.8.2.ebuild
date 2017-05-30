@@ -12,13 +12,13 @@ LICENSE="Yujin Robot"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_linear_algebra
     ros-kinetic/nav_msgs
+    ros-kinetic/ecl_linear_algebra
+    ros-kinetic/roscpp
+    ros-kinetic/base_local_planner
     ros-kinetic/ecl_build
     ros-kinetic/tf
-    ros-kinetic/roscpp
     ros-kinetic/costmap_2d
-    ros-kinetic/base_local_planner
 "
 DEPEND="${RDEPEND}
 "

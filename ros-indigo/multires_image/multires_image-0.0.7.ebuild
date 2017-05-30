@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/pluginlib
+    ros-indigo/rospy
+    ros-indigo/gps_common
+    ros-indigo/swri_math_util
+    ros-indigo/mapviz
+    ros-indigo/roscpp
     ros-indigo/swri_transform_util
     ros-indigo/swri_yaml_util
-    ros-indigo/rospy
-    ros-indigo/pluginlib
-    ros-indigo/swri_math_util
     ros-indigo/tf
-    ros-indigo/gps_common
-    ros-indigo/roscpp
-    ros-indigo/mapviz
+    dev-qt/qtopengl
     dev-qt/qtcore
     media-libs/opencv
-    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

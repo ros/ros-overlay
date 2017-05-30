@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/filters
     ros-indigo/laser_filters
+    ros-indigo/filters
 "
 DEPEND="${RDEPEND}
-    ros-indigo/mk
     ros-indigo/cmake_modules
     ros-indigo/laser_geometry
+    ros-indigo/mk
     dev-vcs/git
 "
 

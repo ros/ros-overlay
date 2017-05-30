@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/industrial_robot_simulator
     ros-indigo/industrial_deprecated
-    ros-indigo/industrial_msgs
     ros-indigo/industrial_robot_client
     ros-indigo/industrial_trajectory_filters
-    ros-indigo/industrial_utils
     ros-indigo/simple_message
-    ros-indigo/industrial_robot_simulator
+    ros-indigo/industrial_msgs
+    ros-indigo/industrial_utils
 "
 DEPEND="${RDEPEND}
 "

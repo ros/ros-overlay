@@ -13,19 +13,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/tf_conversions
-    ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/actionlib_msgs
     ros-indigo/featurenav_base
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/rviz
+    ros-indigo/visualization_msgs
+    ros-indigo/tf_conversions
+    ros-indigo/rospy
     ros-indigo/image_transport
     ros-indigo/actionlib
-    media-libs/opencv
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
+    ros-indigo/rviz
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
 "

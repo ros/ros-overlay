@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosgraph_msgs
+    ros-kinetic/rospack
     ros-kinetic/std_srvs
     ros-kinetic/roslang
-    ros-kinetic/rospack
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

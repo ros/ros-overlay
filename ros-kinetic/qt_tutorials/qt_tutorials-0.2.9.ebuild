@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/qt_build
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/roscpp
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}

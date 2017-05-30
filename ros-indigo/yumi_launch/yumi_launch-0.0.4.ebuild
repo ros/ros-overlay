@@ -12,9 +12,9 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/yumi_support
     ros-indigo/yumi_description
     ros-indigo/yumi_hw
-    ros-indigo/yumi_support
     ros-indigo/yumi_moveit_config
 "
 DEPEND="${RDEPEND}

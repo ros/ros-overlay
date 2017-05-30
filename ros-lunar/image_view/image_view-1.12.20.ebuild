@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
-    ros-lunar/camera_calibration_parsers
-    ros-lunar/cv_bridge
     ros-lunar/nodelet
-    ros-lunar/rosconsole
     ros-lunar/image_transport
     ros-lunar/message_filters
-    ros-lunar/std_srvs
+    ros-lunar/camera_calibration_parsers
     ros-lunar/roscpp
+    ros-lunar/std_srvs
+    ros-lunar/rosconsole
+    ros-lunar/cv_bridge
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}

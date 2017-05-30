@@ -12,15 +12,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
     ros-indigo/rospy
-    ros-indigo/actionlib_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

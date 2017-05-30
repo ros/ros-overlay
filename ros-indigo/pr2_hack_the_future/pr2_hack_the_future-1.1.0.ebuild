@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/pr2_joint_teleop
     ros-indigo/program_queue
-    ros-indigo/slider_gui
-    ros-indigo/pr2_simple_interface
-    ros-indigo/rviz_backdrop
     ros-indigo/hack_the_web_program_executor
+    ros-indigo/pr2_simple_interface
     ros-indigo/queue_web
+    ros-indigo/slider_gui
+    ros-indigo/rviz_backdrop
 "
 DEPEND="${RDEPEND}
 "

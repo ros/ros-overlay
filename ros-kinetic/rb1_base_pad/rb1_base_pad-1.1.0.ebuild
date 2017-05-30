@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/robotnik_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/diagnostic_updater
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

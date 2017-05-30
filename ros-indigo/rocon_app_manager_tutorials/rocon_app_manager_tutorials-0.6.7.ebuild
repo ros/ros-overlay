@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_app_manager
-    ros-indigo/rocon_qt_listener
-    ros-indigo/rocon_remocon
     ros-indigo/rocon_master_info
+    ros-indigo/turtle_concert
+    ros-indigo/rocon_interactions
+    ros-indigo/rocon_remocon
+    ros-indigo/rocon_qt_listener
+    ros-indigo/rocon_app_manager
+    ros-indigo/turtlesim
     ros-indigo/rocon_apps
     ros-indigo/rosbridge_server
-    ros-indigo/turtle_concert
-    ros-indigo/turtlesim
-    ros-indigo/rocon_interactions
 "
 DEPEND="${RDEPEND}
 "

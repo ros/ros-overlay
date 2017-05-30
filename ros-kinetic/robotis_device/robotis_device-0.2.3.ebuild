@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/dynamixel_sdk
     ros-kinetic/rospy
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "

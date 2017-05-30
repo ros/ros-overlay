@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
-    ros-indigo/camera_calibration_parsers
-    ros-indigo/roscpp
     ros-indigo/image_transport
     ros-indigo/roslib
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

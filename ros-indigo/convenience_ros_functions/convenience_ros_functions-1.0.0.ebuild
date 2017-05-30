@@ -12,15 +12,15 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/convenience_math_functions
-    ros-indigo/rosbag
-    ros-indigo/actionlib
-    ros-indigo/trajectory_msgs
-    ros-indigo/baselib_binding
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/baselib_binding
+    ros-indigo/actionlib
+    ros-indigo/convenience_math_functions
     ros-indigo/roscpp
+    ros-indigo/rosbag
     ros-indigo/eigen_conversions
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

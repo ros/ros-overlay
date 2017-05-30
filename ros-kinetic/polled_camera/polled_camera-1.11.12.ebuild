@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/sensor_msgs
-    ros-kinetic/image_transport
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/roscpp
+    ros-kinetic/image_transport
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

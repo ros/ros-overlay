@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/filters
     ros-indigo/visualization_msgs
-    ros-indigo/resource_retriever
+    ros-indigo/filters
     ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/urdf
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/resource_retriever
     sci-physics/bullet
     media-libs/assimp
 "

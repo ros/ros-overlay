@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nav_msgs
     ros-indigo/multi_level_map_msgs
     ros-indigo/rospy
-    ros-indigo/nav_msgs
     ros-indigo/multi_level_map_utils
     ros-indigo/tf
-    dev-python/pillow
     dev-python/rospkg
+    dev-python/pillow
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/bondcpp
-    ros-kinetic/rospy
     ros-kinetic/pluginlib
     ros-kinetic/bondpy
+    ros-kinetic/rospy
     ros-kinetic/roscpp
-    ros-kinetic/xmlrpcpp
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/xmlrpcpp
+    ros-kinetic/bondcpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

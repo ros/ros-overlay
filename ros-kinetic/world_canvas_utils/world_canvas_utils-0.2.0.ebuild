@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslib
     ros-kinetic/world_canvas_msgs
     ros-kinetic/rospy
+    ros-kinetic/roslib
 "
 DEPEND="${RDEPEND}
 "

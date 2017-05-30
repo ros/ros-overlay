@@ -12,8 +12,8 @@ LICENSE="MIT"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/message_runtime
+    ros-indigo/rospy
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}

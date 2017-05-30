@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/pluginlib
-    ros-indigo/costmap_2d
     ros-indigo/roscpp
     ros-indigo/nav_core
+    ros-indigo/pluginlib
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

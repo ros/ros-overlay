@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/swri_transform_util
-    ros-kinetic/swri_yaml_util
     ros-kinetic/pluginlib
     ros-kinetic/swri_math_util
-    ros-kinetic/roscpp
     ros-kinetic/mapviz
+    ros-kinetic/roscpp
+    ros-kinetic/swri_transform_util
+    ros-kinetic/swri_yaml_util
     ros-kinetic/tf
-    dev-qt/qtwidgets
     dev-qt/qtcore
-    media-libs/opencv
-    dev-qt/qtgui
     dev-qt/qtopengl
+    dev-qt/qtgui
+    media-libs/opencv
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

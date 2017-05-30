@@ -12,23 +12,23 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_omni_drive_controller
-    ros-indigo/diagnostic_aggregator
     ros-indigo/visualization_msgs
-    ros-indigo/rostest
-    ros-indigo/prace_common
-    ros-indigo/effort_controllers
     ros-indigo/position_controllers
-    ros-indigo/ur_description
+    ros-indigo/cob_calibration_data
     ros-indigo/joint_trajectory_controller
     ros-indigo/xacro
-    ros-indigo/velocity_controllers
     ros-indigo/roslaunch
-    ros-indigo/cob_description
-    ros-indigo/raw_description
+    ros-indigo/ur_description
     ros-indigo/schunk_description
-    ros-indigo/cob_calibration_data
     ros-indigo/joint_state_controller
+    ros-indigo/cob_omni_drive_controller
+    ros-indigo/effort_controllers
+    ros-indigo/raw_description
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/rostest
+    ros-indigo/cob_description
+    ros-indigo/velocity_controllers
+    ros-indigo/prace_common
 "
 DEPEND="${RDEPEND}
 "

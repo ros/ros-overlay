@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/cmake_modules
     ros-indigo/dynamic_reconfigure
+    ros-indigo/message_runtime
     ros-indigo/roscpp
     ros-indigo/std_msgs
-    ros-indigo/message_runtime
     ros-indigo/realtime_tools
-    ros-indigo/cmake_modules
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

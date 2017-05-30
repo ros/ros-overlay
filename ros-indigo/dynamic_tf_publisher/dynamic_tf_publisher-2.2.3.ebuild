@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf
     ros-indigo/geometry_msgs
-    ros-indigo/message_runtime
+    ros-indigo/tf
     ros-indigo/rospy
+    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/dynamic_reconfigure

@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslib
-    ros-kinetic/rosgraph
-    ros-kinetic/multimaster_msgs_fkie
-    ros-kinetic/rospy
     ros-kinetic/master_discovery_fkie
+    ros-kinetic/multimaster_msgs_fkie
+    ros-kinetic/rosgraph
+    ros-kinetic/rospy
+    ros-kinetic/roslib
 "
 DEPEND="${RDEPEND}
 "

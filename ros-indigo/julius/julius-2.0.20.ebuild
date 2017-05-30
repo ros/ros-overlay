@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslib
-    ros-indigo/mk
     ros-indigo/rospack
+    ros-indigo/mk
+    ros-indigo/roslib
 "
 
 SLOT="0/0"

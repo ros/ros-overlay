@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/waypoint_generator
     ros-kinetic/waypoint_touring
+    ros-kinetic/waypoint_generator
 "
 DEPEND="${RDEPEND}
 "

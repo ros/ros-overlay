@@ -12,18 +12,18 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/katana_description
-    ros-kinetic/urdf
-    ros-kinetic/gazebo_ros
-    ros-kinetic/xacro
     ros-kinetic/joint_trajectory_controller
-    ros-kinetic/controller_manager_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/katana_description
     ros-kinetic/controller_manager
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/roscpp
-    ros-kinetic/katana_gazebo_plugins
+    ros-kinetic/xacro
+    ros-kinetic/gazebo_ros
+    ros-kinetic/controller_manager_msgs
     ros-kinetic/actionlib
+    ros-kinetic/roscpp
+    ros-kinetic/urdf
+    ros-kinetic/std_msgs
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/katana_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 "

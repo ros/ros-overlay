@@ -15,11 +15,11 @@ RDEPEND="
     ros-indigo/visualization_msgs
     ros-indigo/rospy
     ros-indigo/nav_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/map_server
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/map_server
+    ros-indigo/sensor_msgs
     ros-indigo/tf
     media-libs/opencv
 "

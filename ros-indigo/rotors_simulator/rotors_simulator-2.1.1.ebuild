@@ -12,15 +12,15 @@ LICENSE="ASL 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rotors_description
     ros-indigo/rotors_hil_interface
-    ros-indigo/rotors_joy_interface
     ros-indigo/rotors_evaluation
-    ros-indigo/rotors_comm
     ros-indigo/rqt_rotors
     ros-indigo/rotors_gazebo_plugins
+    ros-indigo/rotors_description
     ros-indigo/rotors_control
+    ros-indigo/rotors_comm
     ros-indigo/rotors_gazebo
+    ros-indigo/rotors_joy_interface
 "
 DEPEND="${RDEPEND}
 "

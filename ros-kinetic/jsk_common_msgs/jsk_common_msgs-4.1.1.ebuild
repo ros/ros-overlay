@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/posedetection_msgs
-    ros-kinetic/jsk_gui_msgs
-    ros-kinetic/speech_recognition_msgs
     ros-kinetic/jsk_hark_msgs
+    ros-kinetic/posedetection_msgs
+    ros-kinetic/speech_recognition_msgs
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/jsk_gui_msgs
 "
 DEPEND="${RDEPEND}
 "

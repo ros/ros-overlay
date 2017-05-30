@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/turtlebot_msgs
-    ros-kinetic/turtlebot_teleop
-    ros-kinetic/turtlebot_bringup
-    ros-kinetic/topic_tools
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/depth_image_proc
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nodelet
+    ros-kinetic/topic_tools
+    ros-kinetic/depth_image_proc
+    ros-kinetic/turtlebot_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/turtlebot_teleop
+    ros-kinetic/visualization_msgs
+    ros-kinetic/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

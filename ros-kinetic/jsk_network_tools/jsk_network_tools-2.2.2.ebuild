@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/rospy
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/diagnostic_updater
-    ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/diagnostic_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

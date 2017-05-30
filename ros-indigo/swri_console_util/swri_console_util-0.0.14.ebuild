@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/swri_math_util
     ros-indigo/roscpp
+    ros-indigo/swri_math_util
     media-libs/opencv
 "
 DEPEND="${RDEPEND}

@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/lama_msgs
-    ros-indigo/nav_msgs
     ros-indigo/roscpp
+    ros-indigo/nav_msgs
 "
 DEPEND="${RDEPEND}
 "

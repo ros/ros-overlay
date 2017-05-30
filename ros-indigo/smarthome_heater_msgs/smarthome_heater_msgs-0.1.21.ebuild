@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="This package is Heater messages for ROS."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosalfred-release/smarthome_heater_msgs-release/archive/release/indigo/smarthome_heater_msgs/0.1.21-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="Apache V2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 

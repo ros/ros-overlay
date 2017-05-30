@@ -13,15 +13,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosconsole
-    ros-kinetic/tf2_kdl
-    ros-kinetic/rostime
     ros-kinetic/orocos_kdl
-    ros-kinetic/kdl_parser
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
+    ros-kinetic/catkin
+    ros-kinetic/tf2_kdl
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rostime
     ros-kinetic/tf2_ros
     ros-kinetic/tf
-    ros-kinetic/catkin
+    ros-kinetic/kdl_parser
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

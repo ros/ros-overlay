@@ -12,11 +12,11 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

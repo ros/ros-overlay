@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ecl_build
-    ros-indigo/nanomsg
     ros-indigo/ecl_utilities
+    ros-indigo/nanomsg
     ros-indigo/ecl_containers
 "
 DEPEND="${RDEPEND}

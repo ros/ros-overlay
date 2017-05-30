@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
-    ros-indigo/kdl_parser
-    ros-indigo/hardware_interface
-    ros-indigo/roscpp
-    ros-indigo/urdf
     ros-indigo/pr2_mechanism_msgs
     ros-indigo/joint_state_controller
+    ros-indigo/urdf
+    ros-indigo/roscpp
+    ros-indigo/kdl_parser
+    ros-indigo/hardware_interface
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

@@ -14,11 +14,11 @@ LICENSE="Apache 2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/diagnostic_updater
-    ros-kinetic/message_runtime
     ros-kinetic/roscpp
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

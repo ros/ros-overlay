@@ -12,13 +12,13 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
-    ros-indigo/rostest
-    ros-indigo/rospy
-    ros-indigo/actionlib
-    ros-indigo/sr_robot_msgs
-    ros-indigo/sr_hand
     ros-indigo/dynamic_reconfigure
+    ros-indigo/sr_robot_msgs
+    ros-indigo/rospy
+    ros-indigo/sr_hand
+    ros-indigo/actionlib
+    ros-indigo/rostest
+    ros-indigo/gazebo_msgs
 "
 DEPEND="${RDEPEND}
 "

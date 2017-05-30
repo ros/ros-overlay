@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/qt_gui
     ros-kinetic/rqt_gui
+    ros-kinetic/qt_gui
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

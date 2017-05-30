@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/arni_processing
-    ros-indigo/arni_gui
-    ros-indigo/arni_msgs
     ros-indigo/arni_rqt_overview_plugin
-    ros-indigo/arni_countermeasure
+    ros-indigo/arni_msgs
+    ros-indigo/arni_processing
     ros-indigo/arni_nodeinterface
+    ros-indigo/arni_gui
     ros-indigo/arni_core
     ros-indigo/arni_rqt_detail_plugin
+    ros-indigo/arni_countermeasure
 "
 DEPEND="${RDEPEND}
 "

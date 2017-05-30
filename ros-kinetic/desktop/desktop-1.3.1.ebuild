@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robot
-    ros-kinetic/common_tutorials
+    ros-kinetic/roslint
     ros-kinetic/ros_tutorials
     ros-kinetic/viz
+    ros-kinetic/robot
+    ros-kinetic/common_tutorials
     ros-kinetic/visualization_tutorials
     ros-kinetic/geometry_tutorials
-    ros-kinetic/roslint
 "
 DEPEND="${RDEPEND}
 "

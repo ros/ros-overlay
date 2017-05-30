@@ -12,8 +12,8 @@ LICENSE="Apache License, Version 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
     ros-indigo/message_runtime
+    ros-indigo/std_msgs
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}

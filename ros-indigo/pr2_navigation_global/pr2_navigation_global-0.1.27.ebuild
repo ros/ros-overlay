@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/move_base
-    ros-indigo/pr2_tuck_arms_action
-    ros-indigo/joint_trajectory_generator
-    ros-indigo/pr2_navigation_config
     ros-indigo/topic_tools
     ros-indigo/amcl
-    ros-indigo/pr2_machine
     ros-indigo/pr2_move_base
+    ros-indigo/move_base
+    ros-indigo/pr2_machine
+    ros-indigo/joint_trajectory_generator
+    ros-indigo/pr2_tuck_arms_action
+    ros-indigo/pr2_navigation_config
 "
 DEPEND="${RDEPEND}
 "

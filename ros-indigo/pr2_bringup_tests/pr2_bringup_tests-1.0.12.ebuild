@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_controller_manager
-    ros-indigo/camera_calibration
-    ros-indigo/pr2_bringup
-    ros-indigo/image_view
     ros-indigo/pr2_mannequin_mode
+    ros-indigo/camera_calibration
+    ros-indigo/image_view
     ros-indigo/ethercat_trigger_controllers
+    ros-indigo/pr2_bringup
+    ros-indigo/pr2_controller_manager
 "
 DEPEND="${RDEPEND}
 "

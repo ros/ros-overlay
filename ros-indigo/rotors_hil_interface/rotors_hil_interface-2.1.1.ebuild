@@ -12,12 +12,12 @@ LICENSE="ASL 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mav_msgs
-    ros-indigo/mavros
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/mavros_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/mavros
+    ros-indigo/mav_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

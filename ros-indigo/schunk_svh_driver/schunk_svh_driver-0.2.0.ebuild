@@ -12,17 +12,17 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/rqt_gui
+    ros-indigo/dynamic_reconfigure
     ros-indigo/fzi_icl_core
-    ros-indigo/rqt_gui_py
-    ros-indigo/xacro
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/fzi_icl_comm
+    ros-indigo/rospy
+    ros-indigo/xacro
+    ros-indigo/rqt_gui
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

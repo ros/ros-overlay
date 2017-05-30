@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/xacro
-    ros-indigo/motoman_sda10f_support
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
     ros-indigo/moveit_planners_ompl
+    ros-indigo/xacro
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/motoman_sda10f_support
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

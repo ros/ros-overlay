@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/variant_msgs
-    ros-indigo/variant_topic_test
     ros-indigo/variant_topic_tools
+    ros-indigo/variant_topic_test
 "
 DEPEND="${RDEPEND}
 "

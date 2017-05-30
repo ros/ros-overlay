@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_geometry
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/image_transport
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_geometry
+    ros-kinetic/image_transport
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     dev-cpp/gtest

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/socketcan_interface
     ros-lunar/roscpp
     ros-lunar/can_msgs
+    ros-lunar/socketcan_interface
 "
 DEPEND="${RDEPEND}
 "

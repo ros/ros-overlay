@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/controller_interface
     ros-indigo/rostest
+    ros-indigo/controller_interface
     ros-indigo/controller_manager
     ros-indigo/control_toolbox
 "

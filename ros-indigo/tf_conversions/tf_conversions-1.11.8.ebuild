@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/python_orocos_kdl
-    ros-indigo/orocos_kdl
     ros-indigo/geometry_msgs
+    ros-indigo/orocos_kdl
+    ros-indigo/python_orocos_kdl
     ros-indigo/kdl_conversions
     ros-indigo/tf
     dev-cpp/eigen

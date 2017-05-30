@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/tf
     ros-indigo/roscpp
+    ros-indigo/tf
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosserial_python
-    ros-indigo/rosserial_msgs
     ros-indigo/rosserial_client
+    ros-indigo/rosserial_msgs
+    ros-indigo/rosserial_python
 "
 DEPEND="${RDEPEND}
 "

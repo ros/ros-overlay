@@ -7,14 +7,14 @@ DESCRIPTION="A pr2 agnostic replacement for robots using EtherCAT"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/shadow-robot/ros_ethercat-release/archive/release/indigo/ros_ethercat/0.3.0-0.tar.gz"
 
-LICENSE="||( BSD GPL )"
+LICENSE="|| ( BSD GPL )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_hardware
+    ros-indigo/ros_ethercat_loop
     ros-indigo/ros_ethercat_model
     ros-indigo/ros_ethercat_eml
-    ros-indigo/ros_ethercat_loop
+    ros-indigo/ros_ethercat_hardware
 "
 DEPEND="${RDEPEND}
 "

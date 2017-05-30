@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/ecl_config
-    ros-kinetic/ecl_linear_algebra
-    ros-kinetic/ecl_formatters
-    ros-kinetic/ecl_exceptions
-    ros-kinetic/ecl_build
     ros-kinetic/geometry_msgs
+    ros-kinetic/ecl_linear_algebra
     ros-kinetic/roscpp
+    ros-kinetic/ecl_formatters
+    ros-kinetic/ecl_build
+    ros-kinetic/ecl_exceptions
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

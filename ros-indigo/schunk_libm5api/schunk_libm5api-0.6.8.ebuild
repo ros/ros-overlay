@@ -12,8 +12,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/libpcan
     ros-indigo/libntcan
+    ros-indigo/libpcan
 "
 DEPEND="${RDEPEND}
 "

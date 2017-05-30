@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/tf_conversions
-    ros-kinetic/visualization_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/roscpp
     ros-kinetic/message_filters
+    ros-kinetic/laser_geometry
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
     ros-kinetic/tf
     dev-cpp/eigen
     dev-libs/boost

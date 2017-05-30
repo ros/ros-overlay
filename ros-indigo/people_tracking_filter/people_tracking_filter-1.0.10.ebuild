@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/people_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/people_msgs
+    ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_filters
     ros-indigo/tf
     ros-indigo/bfl
 "

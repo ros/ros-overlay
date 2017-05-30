@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robotnik_sensors
     ros-indigo/std_srvs
+    ros-indigo/tf
     ros-indigo/std_msgs
     ros-indigo/message_runtime
-    ros-indigo/tf
+    ros-indigo/robotnik_sensors
 "
 DEPEND="${RDEPEND}
 "

@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ar_track_alvar
-    ros-indigo/rospy
     ros-indigo/dynamic_reconfigure
+    ros-indigo/yocs_msgs
+    ros-indigo/rospy
+    ros-indigo/ar_track_alvar
+    ros-indigo/ar_track_alvar_msgs
+    ros-indigo/actionlib
     ros-indigo/geometry_msgs
     ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/ar_track_alvar_msgs
-    ros-indigo/actionlib
-    ros-indigo/yocs_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

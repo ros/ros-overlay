@@ -14,17 +14,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/topic_tools
-    ros-lunar/genmsg
-    ros-lunar/xmlrpcpp
-    ros-lunar/roslib
-    ros-lunar/rospy
-    ros-lunar/rosconsole
     ros-lunar/rosbag_storage
-    ros-lunar/roscpp
+    ros-lunar/rospy
     ros-lunar/std_srvs
+    ros-lunar/roslib
+    ros-lunar/roscpp
+    ros-lunar/genmsg
     ros-lunar/genpy
-    dev-libs/boost
+    ros-lunar/rosconsole
+    ros-lunar/xmlrpcpp
     dev-python/rospkg
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/cpp_common

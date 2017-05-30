@@ -14,13 +14,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/yocs_controllers
-    ros-kinetic/pluginlib
-    ros-kinetic/kobuki_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
+    ros-kinetic/pluginlib
+    ros-kinetic/yocs_controllers
+    ros-kinetic/geometry_msgs
+    ros-kinetic/kobuki_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/ecl_threads
 "
 DEPEND="${RDEPEND}

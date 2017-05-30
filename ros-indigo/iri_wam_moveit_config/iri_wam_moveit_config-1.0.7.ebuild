@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_visualization
     ros-indigo/moveit_ros_move_group
+    ros-indigo/moveit_ros_visualization
     ros-indigo/moveit_plugins
     ros-indigo/ompl_visual_tools
 "

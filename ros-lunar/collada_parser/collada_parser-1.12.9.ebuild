@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/urdf_parser_plugin
     ros-lunar/roscpp
     ros-lunar/class_loader
+    ros-lunar/urdf_parser_plugin
     media-libs/collada-dom
     dev-libs/urdfdom_headers
 "

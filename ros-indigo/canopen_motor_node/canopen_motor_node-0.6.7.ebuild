@@ -12,14 +12,14 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/canopen_chain_node
     ros-indigo/canopen_402
-    ros-indigo/controller_manager_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/controller_manager
     ros-indigo/joint_limits_interface
+    ros-indigo/controller_manager
     ros-indigo/filters
+    ros-indigo/controller_manager_msgs
+    ros-indigo/canopen_chain_node
     ros-indigo/urdf
+    ros-indigo/hardware_interface
     dev-cpp/muParser
 "
 DEPEND="${RDEPEND}

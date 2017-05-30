@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
     ros-kinetic/angles
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
     dev-python/numpy
     dev-cpp/eigen
     dev-libs/boost

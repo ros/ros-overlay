@@ -12,14 +12,14 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/controller_manager
-    ros-kinetic/canopen_chain_node
-    ros-kinetic/hardware_interface
-    ros-kinetic/joint_limits_interface
-    ros-kinetic/urdf
     ros-kinetic/canopen_402
+    ros-kinetic/joint_limits_interface
+    ros-kinetic/controller_manager
     ros-kinetic/filters
     ros-kinetic/controller_manager_msgs
+    ros-kinetic/canopen_chain_node
+    ros-kinetic/urdf
+    ros-kinetic/hardware_interface
     dev-cpp/muParser
 "
 DEPEND="${RDEPEND}

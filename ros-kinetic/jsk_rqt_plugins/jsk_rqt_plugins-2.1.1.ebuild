@@ -13,20 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rqt_plot
+    ros-kinetic/rqt_image_view
     ros-kinetic/qt_gui_py_common
-    ros-kinetic/cv_bridge
+    ros-kinetic/image_view2
     ros-kinetic/rqt_gui
+    ros-kinetic/cv_bridge
+    ros-kinetic/message_runtime
     ros-kinetic/resource_retriever
     ros-kinetic/rqt_gui_py
-    ros-kinetic/image_view2
-    ros-kinetic/message_runtime
-    ros-kinetic/rqt_image_view
     dev-python/urlgrabber
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/rosbuild
     ros-kinetic/mk
     ros-kinetic/message_generation
-    ros-kinetic/rosbuild
 "
 
 SLOT="0/0"

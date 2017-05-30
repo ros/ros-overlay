@@ -13,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kdl_typekit
     ros-indigo/eigen_typekit
+    ros-indigo/kdl_typekit
 "
 DEPEND="${RDEPEND}
 "

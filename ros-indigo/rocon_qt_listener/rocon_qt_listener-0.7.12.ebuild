@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rospy
-    ros-indigo/rocon_console
+    ros-indigo/rocon_python_utils
     ros-indigo/std_msgs
     ros-indigo/python_qt_binding
-    ros-indigo/rocon_python_utils
+    ros-indigo/rocon_console
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

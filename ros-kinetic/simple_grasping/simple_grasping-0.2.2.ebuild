@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/grasping_msgs
-    ros-kinetic/actionlib
-    ros-kinetic/geometry_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf
-    ros-kinetic/moveit_python
-    ros-kinetic/roscpp
-    ros-kinetic/shape_msgs
-    ros-kinetic/message_runtime
     ros-kinetic/moveit_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/moveit_python
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/grasping_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/shape_msgs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

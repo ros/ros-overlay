@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/visualization_msgs
-    ros-kinetic/rospy
-    ros-kinetic/pluginlib
-    ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/voxel_grid
-    ros-kinetic/nav_core
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/angles
+    ros-kinetic/nav_msgs
+    ros-kinetic/rospy
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/message_generation
+    ros-kinetic/nav_core
     ros-kinetic/pcl_ros
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/message_generation
+    ros-kinetic/std_msgs
     ros-kinetic/tf
-    ros-kinetic/angles
+    ros-kinetic/rosconsole
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,8 +12,8 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros
     ros-indigo/xacro
+    ros-indigo/gazebo_ros
 "
 DEPEND="${RDEPEND}
 "

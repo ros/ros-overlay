@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_planners
-    ros-indigo/pr2_moveit_plugins
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/hironx_moveit_config
+    ros-indigo/moveit_ros_visualization
+    ros-indigo/trac_ik_kinematics_plugin
     ros-indigo/moveit_ros
     ros-indigo/moveit_ros_move_group
-    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/moveit_planners
+    ros-indigo/pr2_moveit_plugins
     ros-indigo/nextage_ros_bridge
-    ros-indigo/moveit_ros_visualization
-    ros-indigo/hironx_moveit_config
-    ros-indigo/trac_ik_kinematics_plugin
 "
 DEPEND="${RDEPEND}
 "

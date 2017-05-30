@@ -15,8 +15,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/dynamixel_msgs
     ros-indigo/dynamixel_driver
-    ros-indigo/dynamixel_controllers
     ros-indigo/dynamixel_tutorials
+    ros-indigo/dynamixel_controllers
 "
 DEPEND="${RDEPEND}
 "

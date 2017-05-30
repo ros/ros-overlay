@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosbridge_server
-    ros-kinetic/rosgraph
     ros-kinetic/rospack
+    ros-kinetic/rosgraph
+    ros-kinetic/rosbridge_server
 "
 DEPEND="${RDEPEND}
     dev-python/catkin_pkg

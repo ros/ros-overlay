@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/tf
-    =dev-libs/libusb-1.0*
     virtual/pkgconfig
+    =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
-    ros-indigo/genmsg
     ros-indigo/message_generation
+    ros-indigo/genmsg
 "
 
 SLOT="0/0"

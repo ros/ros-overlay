@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/diagnostic_msgs
+    ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
 "

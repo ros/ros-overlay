@@ -3,21 +3,21 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="This stack contains the drivers and the controllers for Shadow Robot's EtherCAT "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/shadow-robot/sr-ros-interface-ethercat-release/archive/release/indigo/shadow_robot_ethercat/1.4.0-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="GPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_external_dependencies
-    ros-indigo/sr_edc_controller_configuration
-    ros-indigo/sr_edc_muscle_tools
-    ros-indigo/sr_robot_lib
-    ros-indigo/sr_edc_ethercat_drivers
     ros-indigo/sr_edc_launch
+    ros-indigo/sr_edc_muscle_tools
+    ros-indigo/sr_edc_ethercat_drivers
+    ros-indigo/sr_external_dependencies
+    ros-indigo/sr_robot_lib
+    ros-indigo/sr_edc_controller_configuration
 "
 DEPEND="${RDEPEND}
 "

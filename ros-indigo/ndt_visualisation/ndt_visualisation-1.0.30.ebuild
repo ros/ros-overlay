@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ndt_map
-    ros-indigo/pcl_ros
     ros-indigo/message_runtime
-    media-libs/mesa
+    ros-indigo/pcl_ros
     sci-libs/pcl
     media-libs/freeglut
+    media-libs/mesa
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

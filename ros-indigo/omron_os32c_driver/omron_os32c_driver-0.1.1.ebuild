@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/sensor_msgs
-    ros-indigo/odva_ethernetip
     ros-indigo/roscpp
+    ros-indigo/odva_ethernetip
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

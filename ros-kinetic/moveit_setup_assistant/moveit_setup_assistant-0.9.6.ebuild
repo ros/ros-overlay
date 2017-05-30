@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/srdfdom
     ros-kinetic/xacro
-    ros-kinetic/moveit_ros_planning
-    ros-kinetic/moveit_core
     ros-kinetic/moveit_ros_visualization
+    ros-kinetic/moveit_core
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/srdfdom
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}

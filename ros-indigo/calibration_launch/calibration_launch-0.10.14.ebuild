@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/joint_states_settler
-    ros-indigo/interval_intersection
     ros-indigo/monocam_settler
     ros-indigo/laser_cb_detector
+    ros-indigo/interval_intersection
     ros-indigo/urdfdom_py
 "
 DEPEND="${RDEPEND}

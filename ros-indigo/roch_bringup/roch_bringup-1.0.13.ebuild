@@ -12,36 +12,36 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_localization
-    ros-indigo/openni2_launch
-    ros-indigo/roch_control
-    ros-indigo/rocon_interaction_msgs
-    ros-indigo/nodelet
-    ros-indigo/tf
+    ros-indigo/rocon_app_manager_msgs
     ros-indigo/laser_filters
+    ros-indigo/rplidar_ros
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/rocon_bubble_icons
+    ros-indigo/tf2_ros
+    ros-indigo/robot_state_publisher
+    ros-indigo/roch_description
+    ros-indigo/nmea_comms
+    ros-indigo/roch_control
+    ros-indigo/imu_transformer
+    ros-indigo/nodelet
+    ros-indigo/rocon_interaction_msgs
+    ros-indigo/rospy
+    ros-indigo/depthimage_to_laserscan
+    ros-indigo/openni2_launch
+    ros-indigo/roch_capabilities
+    ros-indigo/realsense_camera
+    ros-indigo/robot_localization
+    ros-indigo/roch_safety_controller
+    ros-indigo/rocon_app_manager
+    ros-indigo/tf
+    ros-indigo/rgbd_launch
+    ros-indigo/imu_filter_madgwick
+    ros-indigo/roch_sensorpc
     ros-indigo/roch_base
     ros-indigo/freenect_launch
-    ros-indigo/zeroconf_avahi
-    ros-indigo/roch_description
-    ros-indigo/tf2_ros
-    ros-indigo/realsense_camera
-    ros-indigo/nmea_comms
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/roch_capabilities
     ros-indigo/microstrain_3dmgx2_imu
-    ros-indigo/roch_sensorpc
-    ros-indigo/depthimage_to_laserscan
-    ros-indigo/imu_filter_madgwick
-    ros-indigo/rocon_app_manager
-    ros-indigo/rospy
-    ros-indigo/imu_transformer
     ros-indigo/astra_launch
-    ros-indigo/rocon_bubble_icons
-    ros-indigo/rocon_app_manager_msgs
-    ros-indigo/rplidar_ros
-    ros-indigo/roch_safety_controller
-    ros-indigo/rgbd_launch
-    ros-indigo/robot_state_publisher
+    ros-indigo/zeroconf_avahi
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}

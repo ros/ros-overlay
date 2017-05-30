@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cost_map_core
     ros-indigo/nav_msgs
-    ros-indigo/ecl_build
-    ros-indigo/ecl_command_line
+    ros-indigo/ecl_console
     ros-indigo/cost_map_ros
     ros-indigo/roscpp
+    ros-indigo/ecl_build
     ros-indigo/cost_map_msgs
-    ros-indigo/ecl_console
+    ros-indigo/ecl_command_line
+    ros-indigo/cost_map_core
 "
 DEPEND="${RDEPEND}
 "

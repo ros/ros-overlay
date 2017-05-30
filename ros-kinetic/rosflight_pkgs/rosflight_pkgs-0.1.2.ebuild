@@ -12,9 +12,9 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosflight_utils
     ros-kinetic/rosflight_msgs
     ros-kinetic/rosflight
+    ros-kinetic/rosflight_utils
 "
 DEPEND="${RDEPEND}
 "

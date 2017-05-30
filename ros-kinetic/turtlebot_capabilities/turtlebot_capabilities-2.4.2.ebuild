@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_capabilities
     ros-kinetic/capabilities
+    ros-kinetic/std_capabilities
 "
 DEPEND="${RDEPEND}
 "

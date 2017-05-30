@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/master_discovery_fkie
     ros-kinetic/multimaster_msgs_fkie
     ros-kinetic/node_manager_fkie
     ros-kinetic/default_cfg_fkie
     ros-kinetic/master_sync_fkie
+    ros-kinetic/master_discovery_fkie
 "
 DEPEND="${RDEPEND}
 "

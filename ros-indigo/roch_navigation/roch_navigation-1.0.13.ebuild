@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roch_bringup
+    ros-indigo/nodelet
+    ros-indigo/frontier_exploration
     ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/navfn
+    ros-indigo/amcl
     ros-indigo/gmapping
     ros-indigo/dwa_local_planner
-    ros-indigo/frontier_exploration
-    ros-indigo/map_server
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
-    ros-indigo/base_local_planner
-    ros-indigo/amcl
     ros-indigo/roch_safety_controller
-    ros-indigo/move_base
-    ros-indigo/nodelet
+    ros-indigo/map_server
+    ros-indigo/base_local_planner
+    ros-indigo/sensor_msgs
     ros-indigo/tf
-    ros-indigo/roch_bringup
+    ros-indigo/navfn
+    ros-indigo/move_base
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

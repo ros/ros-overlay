@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/rosmaster
-    ros-kinetic/rosclean
-    ros-kinetic/rosout
-    ros-kinetic/rosparam
     ros-kinetic/rosunit
+    ros-kinetic/rosparam
+    ros-kinetic/rosclean
     ros-kinetic/roslib
-    dev-python/pyyaml
-    dev-python/paramiko
+    ros-kinetic/rosmaster
+    ros-kinetic/rosout
+    ros-kinetic/rosgraph_msgs
     dev-python/rospkg
+    dev-python/paramiko
+    dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
 "

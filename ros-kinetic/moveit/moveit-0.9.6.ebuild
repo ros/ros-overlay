@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_plugins
-    ros-kinetic/moveit_core
-    ros-kinetic/moveit_ros
-    ros-kinetic/moveit_commander
     ros-kinetic/moveit_setup_assistant
+    ros-kinetic/moveit_ros
     ros-kinetic/moveit_planners
+    ros-kinetic/moveit_core
+    ros-kinetic/moveit_plugins
+    ros-kinetic/moveit_commander
 "
 DEPEND="${RDEPEND}
 "

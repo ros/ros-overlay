@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_teleop
-    ros-kinetic/visualization_msgs
-    ros-kinetic/topic_tools
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/depth_image_proc
-    ros-kinetic/roch_msgs
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nodelet
+    ros-kinetic/topic_tools
     ros-kinetic/roch_bringup
+    ros-kinetic/roch_teleop
+    ros-kinetic/roch_msgs
+    ros-kinetic/depth_image_proc
+    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "

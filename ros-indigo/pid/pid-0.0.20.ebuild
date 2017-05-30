@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_updater
-    ros-indigo/std_msgs
-    ros-indigo/message_runtime
     ros-indigo/dynamic_reconfigure
     ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/message_runtime
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

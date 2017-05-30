@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rtt_roscomm
     ros-kinetic/rtt_actionlib_msgs
-    ros-kinetic/rtt_rosclock
+    ros-kinetic/actionlib
+    ros-kinetic/rtt_ros
     ros-kinetic/actionlib_msgs
     ros-kinetic/roscpp
-    ros-kinetic/rtt_roscomm
-    ros-kinetic/rtt_ros
-    ros-kinetic/actionlib
+    ros-kinetic/rtt_rosclock
 "
 DEPEND="${RDEPEND}
 "

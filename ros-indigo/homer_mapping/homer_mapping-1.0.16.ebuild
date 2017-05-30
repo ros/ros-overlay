@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/nav_msgs
-    ros-indigo/tf
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/homer_nav_libs
-    ros-indigo/roscpp
     ros-indigo/homer_mapnav_msgs
     ros-indigo/roslib
-    dev-qt/qtcore
-    dev-qt/qtcore
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/homer_nav_libs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
     dev-qt/qtgui
+    dev-qt/qtcore
+    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

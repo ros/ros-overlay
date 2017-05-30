@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_type_traits
     ros-kinetic/ecl_license
+    ros-kinetic/ecl_type_traits
 "
 DEPEND="${RDEPEND}
 "

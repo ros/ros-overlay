@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grid_map_visualization
-    ros-indigo/grid_map_core
-    ros-indigo/grid_map_demos
     ros-indigo/grid_map_filters
-    ros-indigo/grid_map_loader
-    ros-indigo/grid_map_cv
+    ros-indigo/grid_map_demos
     ros-indigo/grid_map_msgs
     ros-indigo/grid_map_ros
+    ros-indigo/grid_map_core
+    ros-indigo/grid_map_loader
+    ros-indigo/grid_map_visualization
+    ros-indigo/grid_map_cv
     ros-indigo/grid_map_rviz_plugin
 "
 DEPEND="${RDEPEND}

@@ -15,9 +15,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/actionlib_msgs
     ros-indigo/actionlib
-    ros-indigo/message_runtime
-    ros-indigo/rospy
     ros-indigo/diagnostic_msgs
+    ros-indigo/rospy
+    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

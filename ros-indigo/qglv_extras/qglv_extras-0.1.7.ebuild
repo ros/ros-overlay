@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ecl_build
-    ros-indigo/qglv_opengl
     ros-indigo/sophus
+    ros-indigo/qglv_opengl
     x11-libs/libQGLViewer
     dev-cpp/eigen
 "

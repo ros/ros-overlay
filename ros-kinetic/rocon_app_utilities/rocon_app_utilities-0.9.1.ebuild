@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rocon_console
     ros-kinetic/rocon_uri
+    ros-kinetic/rocon_console
     ros-kinetic/rocon_python_utils
     ros-kinetic/roslaunch
     dev-python/rospkg

@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/actionlib_lisp
-    ros-kinetic/cl_transforms_stamped
-    ros-kinetic/roslisp
     ros-kinetic/cl_utils
     ros-kinetic/tf2_msgs
+    ros-kinetic/cl_transforms_stamped
+    ros-kinetic/roslisp
 "
 DEPEND="${RDEPEND}
 "

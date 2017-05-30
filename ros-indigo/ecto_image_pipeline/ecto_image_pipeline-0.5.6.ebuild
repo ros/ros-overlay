@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecto_ros
-    ros-indigo/ecto_opencv
     ros-indigo/ecto
+    ros-indigo/ecto_opencv
+    ros-indigo/ecto_ros
     ros-indigo/opencv_candidate
-    dev-libs/boost
     dev-cpp/eigen
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/urdf2inventor
+    ros-indigo/roscpp
+    ros-indigo/eigen_conversions
+    ros-indigo/urdf
     ros-indigo/urdf_viewer
     ros-indigo/baselib_binding
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/eigen_conversions
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

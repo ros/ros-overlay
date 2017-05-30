@@ -12,16 +12,16 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/object_msgs_tools
-    ros-indigo/object_msgs
-    ros-indigo/gazebo_world_plugin_loader
     ros-indigo/nav_msgs
     ros-indigo/gazebo_ros
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
+    ros-indigo/object_msgs
+    ros-indigo/gazebo_world_plugin_loader
+    ros-indigo/object_msgs_tools
     ros-indigo/roscpp
-    ros-indigo/shape_msgs
     ros-indigo/eigen_conversions
+    ros-indigo/std_msgs
+    ros-indigo/shape_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

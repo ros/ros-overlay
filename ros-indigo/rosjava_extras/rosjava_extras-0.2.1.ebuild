@@ -12,10 +12,10 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/sensor_msgs
     ros-indigo/rosjava_build_tools
     ros-indigo/rosjava_bootstrap
     ros-indigo/rosjava_core
-    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/rosbag
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/pluginlib
-    ros-kinetic/std_msgs
     ros-kinetic/image_transport
     ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rosbag
+    ros-kinetic/std_msgs
+    ros-kinetic/cv_bridge
     media-libs/libtheora
     media-libs/libogg
 "

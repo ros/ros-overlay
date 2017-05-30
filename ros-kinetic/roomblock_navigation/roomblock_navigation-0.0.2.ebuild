@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/amcl
+    ros-kinetic/rviz
     ros-kinetic/fake_localization
+    ros-kinetic/amcl
     ros-kinetic/map_server
     ros-kinetic/move_base
-    ros-kinetic/rviz
 "
 DEPEND="${RDEPEND}
 "

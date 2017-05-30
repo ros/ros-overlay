@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gps_common
     ros-indigo/gpsd_client
+    ros-indigo/gps_common
 "
 DEPEND="${RDEPEND}
 "

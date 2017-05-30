@@ -12,11 +12,11 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/joint_state_controller
+    ros-kinetic/robot_state_publisher
     ros-kinetic/joint_trajectory_controller
     ros-kinetic/effort_controllers
     ros-kinetic/controller_manager
-    ros-kinetic/robot_state_publisher
-    ros-kinetic/joint_state_controller
 "
 DEPEND="${RDEPEND}
 "

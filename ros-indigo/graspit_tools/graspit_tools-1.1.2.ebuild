@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/jaco_graspit_sample
-    ros-indigo/urdf2graspit
     ros-indigo/grasp_planning_graspit_msgs
-    ros-indigo/grasp_planning_graspit_ros
     ros-indigo/grasp_planning_graspit
+    ros-indigo/urdf2graspit
+    ros-indigo/grasp_planning_graspit_ros
 "
 DEPEND="${RDEPEND}
 "

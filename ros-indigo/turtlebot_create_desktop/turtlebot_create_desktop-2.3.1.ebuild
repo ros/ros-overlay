@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/create_dashboard
     ros-indigo/create_gazebo_plugins
+    ros-indigo/create_dashboard
 "
 DEPEND="${RDEPEND}
 "

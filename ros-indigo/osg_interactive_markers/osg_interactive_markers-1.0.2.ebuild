@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/osg_markers
-    ros-indigo/visualization_msgs
     ros-indigo/roscpp
     ros-indigo/osg_utils
+    ros-indigo/visualization_msgs
     ros-indigo/tf
     ros-indigo/interactive_markers
     dev-games/openscenegraph

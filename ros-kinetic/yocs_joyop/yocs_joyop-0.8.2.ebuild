@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_time
-    ros-kinetic/joy
-    ros-kinetic/ecl_exceptions
+    ros-kinetic/yocs_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/joy
+    ros-kinetic/roscpp
+    ros-kinetic/ecl_time
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/yocs_msgs
+    ros-kinetic/ecl_exceptions
 "
 DEPEND="${RDEPEND}
 "

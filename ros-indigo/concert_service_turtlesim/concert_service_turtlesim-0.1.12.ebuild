@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gateway_msgs
-    ros-indigo/rocon_std_msgs
-    ros-indigo/rospy
-    ros-indigo/rocon_gateway_utils
-    ros-indigo/rocon_launch
-    ros-indigo/std_msgs
     ros-indigo/concert_service_msgs
-    ros-indigo/turtlesim
-    ros-indigo/rocon_python_utils
-    ros-indigo/rocon_console
-    ros-indigo/concert_service_utilities
+    ros-indigo/rocon_gateway_utils
     ros-indigo/rocon_app_manager_msgs
+    ros-indigo/rospy
+    ros-indigo/rocon_std_msgs
+    ros-indigo/rocon_python_utils
+    ros-indigo/std_msgs
+    ros-indigo/concert_service_utilities
+    ros-indigo/gateway_msgs
     ros-indigo/rocon_python_comms
+    ros-indigo/turtlesim
+    ros-indigo/rocon_console
+    ros-indigo/rocon_launch
 "
 DEPEND="${RDEPEND}
 "

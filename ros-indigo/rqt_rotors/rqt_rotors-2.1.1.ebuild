@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_gui
-    ros-indigo/rospy
     ros-indigo/mavros_msgs
+    ros-indigo/rospy
     ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}

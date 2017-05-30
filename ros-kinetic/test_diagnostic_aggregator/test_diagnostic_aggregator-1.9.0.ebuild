@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diagnostic_aggregator
     ros-kinetic/roscpp
-    ros-kinetic/rospy
     ros-kinetic/pluginlib
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/rospy
+    ros-kinetic/diagnostic_aggregator
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

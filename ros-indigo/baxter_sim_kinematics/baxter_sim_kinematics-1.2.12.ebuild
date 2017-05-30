@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
     ros-indigo/tf_conversions
-    ros-indigo/kdl_parser
     ros-indigo/moveit_ros_planning_interface
-    ros-indigo/std_msgs
     ros-indigo/baxter_core_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/kdl_parser
     ros-indigo/tf
+    ros-indigo/gazebo_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

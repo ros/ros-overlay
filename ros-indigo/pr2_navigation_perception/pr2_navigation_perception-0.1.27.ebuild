@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/topic_tools
+    ros-indigo/laser_filters
     ros-indigo/filters
-    ros-indigo/pr2_navigation_self_filter
+    ros-indigo/geometry_msgs
     ros-indigo/message_filters
     ros-indigo/laser_geometry
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/topic_tools
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/laser_tilt_controller_filter
     ros-indigo/pcl_ros
     ros-indigo/pr2_machine
+    ros-indigo/pr2_navigation_self_filter
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/semantic_point_annotator
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/laser_filters
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

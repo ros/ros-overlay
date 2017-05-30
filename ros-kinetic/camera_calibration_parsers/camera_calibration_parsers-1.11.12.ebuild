@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp_serialization
     ros-kinetic/roscpp
+    ros-kinetic/roscpp_serialization
     dev-libs/boost
     dev-cpp/yaml-cpp
 "

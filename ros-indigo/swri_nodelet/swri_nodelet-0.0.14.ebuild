@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nodelet
+    ros-indigo/roscpp
     ros-indigo/rosbash
     ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/nodelet
 "
 DEPEND="${RDEPEND}
 "

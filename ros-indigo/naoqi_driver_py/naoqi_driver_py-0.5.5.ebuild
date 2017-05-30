@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/nav_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/naoqi_bridge_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/rospy
     ros-indigo/roslaunch
-    ros-indigo/humanoid_nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/nav_msgs
     ros-indigo/actionlib
+    ros-indigo/naoqi_bridge_msgs
+    ros-indigo/humanoid_nav_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
 "

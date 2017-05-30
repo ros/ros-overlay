@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosservice
     ros-kinetic/rospy
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/rosservice
     ros-kinetic/message_runtime
     ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
-    ros-kinetic/roscpp_serialization
     ros-kinetic/message_generation
+    ros-kinetic/roscpp_serialization
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

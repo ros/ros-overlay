@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/route_network
-    ros-indigo/geodesy
     ros-indigo/osm_cartography
     ros-indigo/geographic_msgs
+    ros-indigo/geodesy
+    ros-indigo/route_network
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

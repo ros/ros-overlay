@@ -7,18 +7,18 @@ DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.19.0-0.tar.gz"
 
-LICENSE="||( BSD GPLv3 LGPLv3 )"
+LICENSE="|| ( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_toolbox
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/mavros_extras
-    ros-kinetic/roscpp
-    ros-kinetic/tf2_ros
-    ros-kinetic/eigen_conversions
+    ros-kinetic/geometry_msgs
     ros-kinetic/mavros
+    ros-kinetic/roscpp
+    ros-kinetic/eigen_conversions
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2_ros
+    ros-kinetic/control_toolbox
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

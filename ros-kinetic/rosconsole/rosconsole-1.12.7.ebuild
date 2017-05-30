@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosbuild
     ros-kinetic/rostime
     ros-kinetic/cpp_common
-    ros-kinetic/rosbuild
-    dev-libs/apr
     dev-libs/log4cxx
+    dev-libs/apr
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rosunit

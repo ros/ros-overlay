@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pluginlib
-    ros-kinetic/rostime
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/rostime
     ros-kinetic/tf
     dev-libs/boost
 "

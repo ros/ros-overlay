@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/roscpp
     ros-indigo/oculus_sdk
+    ros-indigo/roscpp
+    ros-indigo/rviz
     ros-indigo/tf
     dev-qt/qtopengl
+    dev-games/ogre
     dev-qt/qtcore
     dev-libs/boost
-    dev-games/ogre
 "
 DEPEND="${RDEPEND}
 "

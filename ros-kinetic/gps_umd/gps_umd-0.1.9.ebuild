@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/gps_common
     ros-kinetic/gpsd_client
+    ros-kinetic/gps_common
 "
 DEPEND="${RDEPEND}
 "

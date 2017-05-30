@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/yocs_controllers
-    ros-indigo/pluginlib
-    ros-indigo/kobuki_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
+    ros-indigo/pluginlib
+    ros-indigo/yocs_controllers
+    ros-indigo/geometry_msgs
+    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/kobuki_msgs
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/ecl_threads
 "
 DEPEND="${RDEPEND}

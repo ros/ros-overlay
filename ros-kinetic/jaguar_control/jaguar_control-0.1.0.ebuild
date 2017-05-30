@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/joint_state_controller
-    ros-kinetic/robot_localization
-    ros-kinetic/joy
-    ros-kinetic/diff_drive_controller
+    ros-kinetic/twist_mux
     ros-kinetic/joint_trajectory_controller
     ros-kinetic/controller_manager
-    ros-kinetic/teleop_twist_joy
-    ros-kinetic/twist_mux
+    ros-kinetic/joy
+    ros-kinetic/joint_state_controller
+    ros-kinetic/robot_localization
+    ros-kinetic/diff_drive_controller
     ros-kinetic/rostopic
+    ros-kinetic/teleop_twist_joy
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslaunch

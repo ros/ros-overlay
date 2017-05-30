@@ -12,11 +12,11 @@ LICENSE="Apache License 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlebot3_navigation
     ros-kinetic/turtlebot3_teleop
     ros-kinetic/turtlebot3_slam
-    ros-kinetic/turtlebot3_description
     ros-kinetic/turtlebot3_bringup
+    ros-kinetic/turtlebot3_navigation
+    ros-kinetic/turtlebot3_description
 "
 DEPEND="${RDEPEND}
 "

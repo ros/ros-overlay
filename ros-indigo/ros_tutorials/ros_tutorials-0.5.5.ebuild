@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlesim
     ros-indigo/roscpp_tutorials
     ros-indigo/rospy_tutorials
+    ros-indigo/turtlesim
 "
 DEPEND="${RDEPEND}
 "

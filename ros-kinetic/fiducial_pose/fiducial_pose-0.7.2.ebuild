@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/fiducial_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/opencv3
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/tf
-    ros-kinetic/opencv3
 "
 DEPEND="${RDEPEND}
 "

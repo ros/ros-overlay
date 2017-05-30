@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
-    ros-kinetic/swri_math_util
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/std_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/swri_image_util
-    ros-kinetic/marti_common_msgs
-    ros-kinetic/swri_transform_util
-    ros-kinetic/swri_route_util
-    ros-kinetic/marti_nav_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/marti_visualization_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/swri_yaml_util
-    ros-kinetic/visualization_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/marti_nav_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/swri_math_util
     ros-kinetic/stereo_msgs
     ros-kinetic/mapviz
-    dev-qt/qtopengl
+    ros-kinetic/swri_transform_util
+    ros-kinetic/swri_yaml_util
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
+    ros-kinetic/swri_route_util
+    ros-kinetic/marti_common_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/marti_visualization_msgs
+    ros-kinetic/swri_image_util
     dev-qt/qtwidgets
-    dev-qt/qtgui
     dev-qt/qtcore
+    dev-qt/qtopengl
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

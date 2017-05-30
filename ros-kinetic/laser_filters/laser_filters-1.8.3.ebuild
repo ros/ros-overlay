@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/filters
     ros-kinetic/pluginlib
-    ros-kinetic/laser_geometry
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/message_filters
-    ros-kinetic/tf
     ros-kinetic/angles
+    ros-kinetic/filters
+    ros-kinetic/message_filters
+    ros-kinetic/laser_geometry
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

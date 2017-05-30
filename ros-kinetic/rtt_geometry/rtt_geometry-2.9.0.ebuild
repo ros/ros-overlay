@@ -13,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kdl_typekit
     ros-kinetic/eigen_typekit
+    ros-kinetic/kdl_typekit
 "
 DEPEND="${RDEPEND}
 "

@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
-    ros-lunar/cv_bridge
-    ros-lunar/std_msgs
-    ros-lunar/rosbag
-    ros-lunar/message_runtime
     ros-lunar/pluginlib
     ros-lunar/image_transport
-    media-libs/libogg
+    ros-lunar/message_runtime
+    ros-lunar/rosbag
+    ros-lunar/std_msgs
+    ros-lunar/cv_bridge
     media-libs/libtheora
+    media-libs/libogg
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation

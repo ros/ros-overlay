@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rgbd_launch
-    ros-kinetic/tf
     ros-kinetic/nodelet
+    ros-kinetic/tf
+    ros-kinetic/rgbd_launch
     ros-kinetic/freenect_camera
     ros-kinetic/image_proc
 "

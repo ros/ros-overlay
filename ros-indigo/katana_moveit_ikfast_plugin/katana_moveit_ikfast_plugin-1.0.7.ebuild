@@ -7,14 +7,14 @@ DESCRIPTION="The katana_moveit_ikfast_plugin package"
 HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/indigo/katana_moveit_ikfast_plugin/1.0.7-0.tar.gz"
 
-LICENSE="||( BSD Apache )"
+LICENSE="|| ( BSD Apache )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/moveit_core
-    ros-indigo/pluginlib
     ros-indigo/roscpp
+    ros-indigo/pluginlib
+    ros-indigo/moveit_core
+    ros-indigo/tf_conversions
     virtual/lapack
 "
 DEPEND="${RDEPEND}

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/master_discovery_fkie
     ros-indigo/multimaster_msgs_fkie
     ros-indigo/node_manager_fkie
     ros-indigo/default_cfg_fkie
     ros-indigo/master_sync_fkie
+    ros-indigo/master_discovery_fkie
 "
 DEPEND="${RDEPEND}
 "

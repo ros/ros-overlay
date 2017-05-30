@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf_parser_plugin
-    ros-indigo/resource_retriever
     ros-indigo/collada_parser
-    ros-indigo/kdl_parser
-    ros-indigo/joint_state_publisher
+    ros-indigo/resource_retriever
+    ros-indigo/urdf_parser_plugin
     ros-indigo/urdf
     ros-indigo/collada_urdf
+    ros-indigo/kdl_parser
+    ros-indigo/joint_state_publisher
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}

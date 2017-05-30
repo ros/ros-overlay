@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/sensor_msgs
     ros-kinetic/rosconsole
     ros-kinetic/opencv3
-    ros-kinetic/sensor_msgs
     dev-libs/boost
     dev-lang/python
 "

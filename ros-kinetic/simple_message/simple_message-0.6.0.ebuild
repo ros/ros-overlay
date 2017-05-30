@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/industrial_msgs
     ros-kinetic/roscpp
+    ros-kinetic/industrial_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros_control
-    ros-indigo/gazebo_ros
     ros-indigo/baxter_sim_hardware
-    ros-indigo/baxter_core_msgs
+    ros-indigo/gazebo_ros
     ros-indigo/controller_manager_msgs
+    ros-indigo/baxter_description
+    ros-indigo/gazebo_ros_control
+    ros-indigo/baxter_core_msgs
     ros-indigo/roscpp
     ros-indigo/tf2_ros
-    ros-indigo/baxter_description
 "
 DEPEND="${RDEPEND}
 "

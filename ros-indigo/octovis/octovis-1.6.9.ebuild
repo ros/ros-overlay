@@ -12,16 +12,16 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/octomap
     ros-indigo/catkin
+    ros-indigo/octomap
     x11-libs/libQGLViewer
     dev-qt/qtgui
     dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtopengl
-    dev-qt/qtcore
     x11-libs/libQGLViewer
+    dev-qt/qtcore
+    dev-qt/qtopengl
 "
 
 SLOT="0/0"

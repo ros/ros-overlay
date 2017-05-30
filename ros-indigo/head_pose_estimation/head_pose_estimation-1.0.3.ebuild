@@ -12,19 +12,19 @@ LICENSE="Microsoft Shared Source"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/face_detector
-    ros-indigo/rospy
-    ros-indigo/people_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/message_filters
-    ros-indigo/geometry_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/image_transport
-    ros-indigo/tf
     ros-indigo/angles
+    ros-indigo/rospy
+    ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/people_msgs
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/face_detector
+    ros-indigo/tf
+    ros-indigo/cv_bridge
     dev-python/numpy
 "
 DEPEND="${RDEPEND}

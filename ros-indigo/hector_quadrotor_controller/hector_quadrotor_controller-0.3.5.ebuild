@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_uav_msgs
-    ros-indigo/std_srvs
     ros-indigo/nav_msgs
-    ros-indigo/controller_interface
     ros-indigo/geometry_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/sensor_msgs
+    ros-indigo/hector_uav_msgs
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
+    ros-indigo/hardware_interface
+    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
 "

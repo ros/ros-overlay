@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trac_ik_kinematics_plugin
-    ros-indigo/trac_ik_lib
     ros-indigo/trac_ik_examples
+    ros-indigo/trac_ik_lib
+    ros-indigo/trac_ik_kinematics_plugin
 "
 DEPEND="${RDEPEND}
 "

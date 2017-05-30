@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/python_orocos_kdl
-    ros-kinetic/orocos_kdl
     ros-kinetic/geometry_msgs
+    ros-kinetic/orocos_kdl
+    ros-kinetic/python_orocos_kdl
     ros-kinetic/kdl_conversions
     ros-kinetic/tf
     dev-cpp/eigen

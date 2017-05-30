@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_config
-    ros-indigo/ecl_type_traits
     ros-indigo/ecl_license
+    ros-indigo/ecl_type_traits
+    ros-indigo/ecl_config
 "
 DEPEND="${RDEPEND}
 "

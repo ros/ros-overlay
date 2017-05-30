@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pluginlib
-    ros-kinetic/realtime_tools
-    ros-kinetic/controller_interface
     ros-kinetic/geometry_msgs
-    ros-kinetic/hardware_interface
     ros-kinetic/roscpp
+    ros-kinetic/realtime_tools
+    ros-kinetic/hardware_interface
+    ros-kinetic/controller_interface
 "
 DEPEND="${RDEPEND}
 "

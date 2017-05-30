@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grizzly_gazebo_plugins
-    ros-indigo/grizzly_motion
-    ros-indigo/hector_gazebo_plugins
-    ros-indigo/grizzly_navigation
-    ros-indigo/gazebo_ros
     ros-indigo/grizzly_description
+    ros-indigo/gazebo_ros
+    ros-indigo/grizzly_gazebo_plugins
+    ros-indigo/grizzly_navigation
+    ros-indigo/hector_gazebo_plugins
+    ros-indigo/grizzly_motion
 "
 DEPEND="${RDEPEND}
     ros-indigo/grizzly_msgs

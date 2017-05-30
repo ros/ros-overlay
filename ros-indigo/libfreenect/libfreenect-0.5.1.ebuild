@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/catkin
     x11-libs/libXi
-    x11-libs/libXmu
     =dev-libs/libusb-1.0*
+    x11-libs/libXmu
     media-libs/freeglut
 "
 DEPEND="${RDEPEND}

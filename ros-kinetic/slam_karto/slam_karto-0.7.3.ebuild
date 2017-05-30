@@ -13,15 +13,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
     ros-kinetic/visualization_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/sparse_bundle_adjustment
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_filters
+    ros-kinetic/roscpp
     ros-kinetic/open_karto
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/rosconsole
+    ros-kinetic/sparse_bundle_adjustment
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,8 +12,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_script_server
     ros-indigo/cob_android_msgs
+    ros-indigo/cob_script_server
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}

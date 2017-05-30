@@ -12,17 +12,17 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/rqt_gui
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/fzi_icl_core
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/xacro
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/fzi_icl_comm
+    ros-kinetic/rospy
+    ros-kinetic/xacro
+    ros-kinetic/rqt_gui
     ros-kinetic/roscpp
     ros-kinetic/urdf
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

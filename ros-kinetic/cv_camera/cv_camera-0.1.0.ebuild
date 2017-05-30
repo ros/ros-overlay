@@ -13,17 +13,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
     ros-kinetic/image_transport
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
     media-libs/opencv
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/roslint
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

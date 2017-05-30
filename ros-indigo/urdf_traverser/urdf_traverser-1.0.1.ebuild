@@ -13,10 +13,10 @@ LICENSE="BSD (3-clause)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslint
     ros-indigo/baselib_binding
-    ros-indigo/eigen_conversions
+    ros-indigo/roslint
     ros-indigo/roscpp
+    ros-indigo/eigen_conversions
     ros-indigo/urdf
 "
 DEPEND="${RDEPEND}

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rviz
-    ros-kinetic/rqt_gui
     ros-kinetic/rqt_gui_cpp
     ros-kinetic/pluginlib
+    ros-kinetic/rqt_gui
+    ros-kinetic/rviz
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

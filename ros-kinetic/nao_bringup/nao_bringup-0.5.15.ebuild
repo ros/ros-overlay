@@ -14,12 +14,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/naoqi_pose
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/naoqi_driver_py
-    ros-kinetic/naoqi_driver
-    ros-kinetic/robot_state_publisher
     ros-kinetic/nao_description
+    ros-kinetic/naoqi_driver
     ros-kinetic/naoqi_sensors_py
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/robot_state_publisher
+    ros-kinetic/naoqi_driver_py
 "
 DEPEND="${RDEPEND}
 "

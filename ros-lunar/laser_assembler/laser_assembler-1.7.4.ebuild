@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf
-    ros-lunar/sensor_msgs
+    ros-lunar/pluginlib
     ros-lunar/filters
+    ros-lunar/message_filters
     ros-lunar/laser_geometry
     ros-lunar/message_runtime
-    ros-lunar/pluginlib
-    ros-lunar/message_filters
     ros-lunar/roscpp
+    ros-lunar/sensor_msgs
+    ros-lunar/tf
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation

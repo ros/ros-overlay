@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/bag_tools
     ros-kinetic/plot_tools
-    ros-kinetic/tf_tools
     ros-kinetic/launch_tools
     ros-kinetic/pointcloud_tools
-    ros-kinetic/bag_tools
+    ros-kinetic/tf_tools
 "
 DEPEND="${RDEPEND}
 "

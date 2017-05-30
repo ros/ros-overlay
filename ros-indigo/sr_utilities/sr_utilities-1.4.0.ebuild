@@ -12,10 +12,10 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf
-    ros-indigo/rospy
     ros-indigo/sensor_msgs
     ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/rospy
     ros-indigo/sr_robot_msgs
 "
 DEPEND="${RDEPEND}

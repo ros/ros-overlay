@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
     ros-kinetic/tf
+    ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/unique_id
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/geographic_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/unique_id
+    ros-kinetic/sensor_msgs
     ros-kinetic/uuid_msgs
     ros-kinetic/tf
     dev-python/pyproj

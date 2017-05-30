@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rospy
     ros-kinetic/nav_msgs
+    ros-kinetic/rospy
     ros-kinetic/geometry_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_filters
+    ros-kinetic/roscpp
     ros-kinetic/tf
+    ros-kinetic/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-kinetic/angles

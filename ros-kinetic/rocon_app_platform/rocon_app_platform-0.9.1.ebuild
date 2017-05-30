@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rocon_app_utilities
     ros-kinetic/rocon_app_manager
     ros-kinetic/rocon_apps
-    ros-kinetic/rocon_app_utilities
 "
 DEPEND="${RDEPEND}
 "

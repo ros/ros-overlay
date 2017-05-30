@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-libs/boost
-    dev-util/rosdep
-    dev-libs/tinyxml2
-    dev-python/catkin_pkg
     virtual/pkgconfig
     dev-lang/python
+    dev-libs/tinyxml2
+    dev-util/rosdep
+    dev-libs/boost
+    dev-python/catkin_pkg
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

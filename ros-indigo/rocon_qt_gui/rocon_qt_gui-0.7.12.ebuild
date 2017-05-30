@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_qt_teleop
-    ros-indigo/rocon_qt_app_manager
-    ros-indigo/concert_qt_map_annotation
-    ros-indigo/rocon_qt_library
-    ros-indigo/rocon_qt_listener
-    ros-indigo/rocon_remocon
-    ros-indigo/concert_qt_teleop
-    ros-indigo/rocon_gateway_graph
     ros-indigo/concert_qt_make_a_map
-    ros-indigo/rocon_qt_master_info
+    ros-indigo/rocon_gateway_graph
+    ros-indigo/rocon_qt_app_manager
+    ros-indigo/rocon_remocon
+    ros-indigo/rocon_qt_listener
     ros-indigo/concert_conductor_graph
+    ros-indigo/rocon_qt_library
+    ros-indigo/rocon_qt_teleop
+    ros-indigo/rocon_qt_master_info
+    ros-indigo/concert_qt_map_annotation
     ros-indigo/concert_admin_app
+    ros-indigo/concert_qt_teleop
     ros-indigo/concert_qt_service_info
 "
 DEPEND="${RDEPEND}

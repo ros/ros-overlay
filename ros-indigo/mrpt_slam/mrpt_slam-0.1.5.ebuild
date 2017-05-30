@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/mrpt_rbpf_slam
-    ros-indigo/mrpt_ekf_slam_2d
     ros-indigo/mrpt_ekf_slam_3d
     ros-indigo/mrpt_icp_slam_2d
+    ros-indigo/mrpt_ekf_slam_2d
 "
 DEPEND="${RDEPEND}
 "

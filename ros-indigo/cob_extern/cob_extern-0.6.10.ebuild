@@ -7,14 +7,14 @@ DESCRIPTION="The cob_extern stack contains third party libraries needed for oper
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/cob_extern/0.6.10-0.tar.gz"
 
-LICENSE="||( LGPL proprietary )"
+LICENSE="|| ( LGPL proprietary )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/libopengm
     ros-indigo/libdlib
     ros-indigo/libntcan
     ros-indigo/libpcan
+    ros-indigo/libopengm
     ros-indigo/libphidgets
 "
 DEPEND="${RDEPEND}

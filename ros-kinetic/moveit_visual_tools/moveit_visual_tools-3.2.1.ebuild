@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf_conversions
-    ros-kinetic/visualization_msgs
-    ros-kinetic/graph_msgs
-    ros-kinetic/trajectory_msgs
     ros-kinetic/cmake_modules
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/moveit_ros_robot_interaction
-    ros-kinetic/roscpp
-    ros-kinetic/rviz_visual_tools
+    ros-kinetic/graph_msgs
     ros-kinetic/roslint
-    ros-kinetic/moveit_core
+    ros-kinetic/tf_conversions
+    ros-kinetic/geometry_msgs
+    ros-kinetic/moveit_ros_robot_interaction
+    ros-kinetic/rviz_visual_tools
+    ros-kinetic/roscpp
     ros-kinetic/eigen_conversions
+    ros-kinetic/moveit_core
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "

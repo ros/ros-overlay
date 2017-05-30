@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_navigation
-    ros-indigo/octomap_rviz_plugins
-    ros-indigo/visualization_msgs
-    ros-indigo/move_base_msgs
     ros-indigo/actionlib
+    ros-indigo/move_base_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/octomap_rviz_plugins
+    ros-indigo/turtlebot_navigation
 "
 DEPEND="${RDEPEND}
     ros-indigo/octomap_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/pcl_ros
     ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/octomap_ros
 "
 

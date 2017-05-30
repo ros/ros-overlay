@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_cpp
+    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}

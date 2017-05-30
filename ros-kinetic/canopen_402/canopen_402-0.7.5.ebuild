@@ -12,8 +12,8 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/class_loader
     ros-kinetic/canopen_master
+    ros-kinetic/class_loader
 "
 DEPEND="${RDEPEND}
 "

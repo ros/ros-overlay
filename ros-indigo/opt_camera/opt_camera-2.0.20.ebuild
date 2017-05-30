@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/image_proc
-    ros-indigo/cv_bridge
     ros-indigo/dynamic_reconfigure
-    ros-indigo/camera_calibration_parsers
     ros-indigo/rospack
-    ros-indigo/sensor_msgs
+    ros-indigo/image_proc
+    ros-indigo/camera_calibration_parsers
     ros-indigo/compressed_image_transport
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslang

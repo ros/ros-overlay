@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf_conversions
-    ros-kinetic/kdl_parser
     ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/urdf
+    ros-kinetic/kdl_parser
+    ros-kinetic/tf_conversions
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_base
-    ros-indigo/laser_pipeline
     ros-indigo/perception_pcl
-    ros-indigo/image_transport_plugins
     ros-indigo/image_pipeline
-    ros-indigo/image_common
     ros-indigo/vision_opencv
+    ros-indigo/image_transport_plugins
+    ros-indigo/laser_pipeline
+    ros-indigo/ros_base
+    ros-indigo/image_common
 "
 DEPEND="${RDEPEND}
 "

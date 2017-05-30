@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostime
-    ros-kinetic/roscpp_traits
-    ros-kinetic/cpp_common
     ros-kinetic/roscpp_serialization
+    ros-kinetic/cpp_common
+    ros-kinetic/roscpp_traits
+    ros-kinetic/rostime
     ros-kinetic/genpy
 "
 DEPEND="${RDEPEND}

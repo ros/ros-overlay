@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rviz
     ros-kinetic/roscpp
-    dev-qt/qtwidgets
+    ros-kinetic/rviz
     dev-qt/qtgui
     dev-qt/qtcore
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

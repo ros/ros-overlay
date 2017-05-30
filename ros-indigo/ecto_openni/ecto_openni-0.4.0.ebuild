@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/ecto
+    ros-indigo/cv_bridge
+    dev-libs/boost
     dev-libs/OpenNi
     =dev-libs/libusb-1.0*
-    dev-libs/boost
 "
 DEPEND="${RDEPEND}
 "

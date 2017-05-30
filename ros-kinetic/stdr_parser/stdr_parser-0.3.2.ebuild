@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/stdr_msgs
-    ros-kinetic/roslib
     ros-kinetic/roscpp
-    dev-libs/tinyxml
+    ros-kinetic/roslib
     dev-cpp/yaml-cpp
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

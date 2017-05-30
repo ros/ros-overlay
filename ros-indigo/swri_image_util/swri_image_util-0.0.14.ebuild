@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rospy
-    ros-indigo/image_geometry
-    ros-indigo/swri_math_util
-    ros-indigo/nav_msgs
-    ros-indigo/message_filters
     ros-indigo/cmake_modules
-    ros-indigo/swri_opencv_util
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/camera_calibration_parsers
     ros-indigo/nodelet
-    ros-indigo/roscpp
-    ros-indigo/tf
+    ros-indigo/image_geometry
+    ros-indigo/swri_opencv_util
+    ros-indigo/nav_msgs
     ros-indigo/image_transport
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/rospy
+    ros-indigo/swri_math_util
     ros-indigo/roslib
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/cv_bridge
     dev-cpp/eigen
     dev-qt/qtcore
 "

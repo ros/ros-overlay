@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roomblock_navigation
+    ros-kinetic/roomblock_mapping
     ros-kinetic/roomblock_bringup
     ros-kinetic/roomblock_description
-    ros-kinetic/roomblock_mapping
+    ros-kinetic/roomblock_navigation
 "
 DEPEND="${RDEPEND}
 "

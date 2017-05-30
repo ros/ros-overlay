@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
     ros-indigo/fanuc_m20ia_moveit_plugins
-    ros-indigo/moveit_ros_visualization
-    ros-indigo/moveit_ros_warehouse
-    ros-indigo/warehouse_ros
-    ros-indigo/xacro
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
-    ros-indigo/moveit_simple_controller_manager
-    ros-indigo/moveit_fake_controller_manager
-    ros-indigo/rviz
+    ros-indigo/industrial_robot_simulator
     ros-indigo/fanuc_m20ia_support
     ros-indigo/moveit_planners_ompl
-    ros-indigo/industrial_robot_simulator
+    ros-indigo/xacro
+    ros-indigo/moveit_simple_controller_manager
+    ros-indigo/warehouse_ros
+    ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_fake_controller_manager
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/rviz
+    ros-indigo/robot_state_publisher
+    ros-indigo/moveit_ros_warehouse
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

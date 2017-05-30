@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jsk_footstep_planner
-    ros-indigo/eus_qp
-    ros-indigo/eus_nlopt
-    ros-indigo/jsk_footstep_controller
     ros-indigo/joy_mouse
-    ros-indigo/jsk_calibration
-    ros-indigo/jsk_ik_server
+    ros-indigo/eus_nlopt
+    ros-indigo/jsk_footstep_planner
     ros-indigo/eus_qpoases
+    ros-indigo/jsk_ik_server
+    ros-indigo/jsk_calibration
+    ros-indigo/jsk_footstep_controller
     ros-indigo/jsk_teleop_joy
+    ros-indigo/eus_qp
 "
 DEPEND="${RDEPEND}
 "

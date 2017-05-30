@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf
     ros-indigo/xacro
     ros-indigo/create_description
-    ros-indigo/joint_state_publisher
+    ros-indigo/urdf
     ros-indigo/rviz
     ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

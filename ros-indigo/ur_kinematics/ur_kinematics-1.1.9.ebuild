@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
     ros-indigo/pluginlib
-    ros-indigo/moveit_kinematics
+    ros-indigo/tf_conversions
     ros-indigo/geometry_msgs
+    ros-indigo/moveit_kinematics
     ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

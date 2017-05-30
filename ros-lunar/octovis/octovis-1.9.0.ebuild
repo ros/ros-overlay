@@ -12,11 +12,11 @@ LICENSE="GPLv2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/octomap
     ros-lunar/catkin
+    ros-lunar/octomap
+    x11-libs/libQGLViewer
     dev-qt/qtgui
     dev-qt/qtopengl
-    x11-libs/libQGLViewer
 "
 DEPEND="${RDEPEND}
     x11-libs/libQGLViewer

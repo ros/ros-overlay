@@ -13,15 +13,15 @@ LICENSE="BSD, except for source files individually marked otherwise"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/household_objects_database_msgs
-    ros-indigo/rosservice
-    ros-indigo/rospy
-    ros-indigo/manipulation_msgs
-    ros-indigo/actionlib
-    ros-indigo/rosgraph
-    ros-indigo/roscpp
-    ros-indigo/roslib
     ros-indigo/sql_database
+    ros-indigo/household_objects_database_msgs
+    ros-indigo/rosgraph
+    ros-indigo/manipulation_msgs
+    ros-indigo/rospy
+    ros-indigo/actionlib
+    ros-indigo/rosservice
+    ros-indigo/roslib
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
     ros-indigo/tf

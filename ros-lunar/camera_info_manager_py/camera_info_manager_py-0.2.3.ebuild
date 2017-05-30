@@ -16,8 +16,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/rospy
     ros-lunar/sensor_msgs
-    dev-python/rospkg
     dev-python/pyyaml
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

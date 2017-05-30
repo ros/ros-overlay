@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_config
-    ros-indigo/ecl_mpl
-    ros-indigo/ecl_formatters
-    ros-indigo/ecl_type_traits
-    ros-indigo/ecl_exceptions
-    ros-indigo/ecl_errors
-    ros-indigo/ecl_license
-    ros-indigo/ecl_utilities
     ros-indigo/ecl_converters
+    ros-indigo/ecl_errors
+    ros-indigo/ecl_config
+    ros-indigo/ecl_utilities
+    ros-indigo/ecl_formatters
+    ros-indigo/ecl_mpl
+    ros-indigo/ecl_exceptions
+    ros-indigo/ecl_license
+    ros-indigo/ecl_type_traits
 "
 DEPEND="${RDEPEND}
 "

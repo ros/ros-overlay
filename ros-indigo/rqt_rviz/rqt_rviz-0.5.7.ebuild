@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_cpp
     ros-indigo/pluginlib
+    ros-indigo/rqt_gui
+    ros-indigo/rviz
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

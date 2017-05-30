@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/std_srvs
-    ros-indigo/roslib
     ros-indigo/tf2
     ros-indigo/geometry_msgs
+    ros-indigo/actionlib
+    ros-indigo/tf2_ros
+    ros-indigo/roslib
     ros-indigo/move_base_msgs
     ros-indigo/roscpp
-    ros-indigo/tf2_ros
-    ros-indigo/actionlib
     ros-indigo/interactive_world_msgs
+    ros-indigo/rail_manipulation_msgs
+    ros-indigo/std_srvs
     dev-libs/jsoncpp
+    net-misc/curl
     dev-cpp/yaml-cpp
     dev-libs/boost
-    net-misc/curl
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

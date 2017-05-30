@@ -15,15 +15,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/industrial_msgs
     ros-indigo/control_msgs
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/industrial_utils
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/simple_message
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
+    ros-indigo/simple_message
+    ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/industrial_utils
 "
 DEPEND="${RDEPEND}
 "

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grasping_msgs
-    ros-indigo/actionlib
-    ros-indigo/geometry_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/moveit_python
-    ros-indigo/roscpp
-    ros-indigo/shape_msgs
-    ros-indigo/message_runtime
     ros-indigo/moveit_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/moveit_python
+    ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/grasping_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/shape_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

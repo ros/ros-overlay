@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rostest
-    ros-kinetic/gazebo_ros
     ros-kinetic/collada_urdf
+    ros-kinetic/gazebo_ros
     dev-python/lxml
 "
 DEPEND="${RDEPEND}

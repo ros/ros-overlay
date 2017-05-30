@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/face_detector
     ros-indigo/rospy
-    ros-indigo/pr2_gripper_sensor_action
+    ros-indigo/actionlib
     ros-indigo/pr2_gripper_sensor_controller
-    ros-indigo/pr2_gripper_sensor_msgs
     ros-indigo/roscpp
     ros-indigo/sound_play
-    ros-indigo/actionlib
+    ros-indigo/pr2_gripper_sensor_action
+    ros-indigo/pr2_gripper_sensor_msgs
+    ros-indigo/face_detector
 "
 DEPEND="${RDEPEND}
 "

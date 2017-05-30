@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/libg2o
-    ros-kinetic/tf_conversions
-    ros-kinetic/visualization_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/nav_msgs
-    ros-kinetic/nav_core
-    ros-kinetic/base_local_planner
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/costmap_converter
-    ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/message_runtime
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/pluginlib
+    ros-kinetic/visualization_msgs
+    ros-kinetic/tf_conversions
+    ros-kinetic/nav_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/nav_core
+    ros-kinetic/message_runtime
+    ros-kinetic/libg2o
+    ros-kinetic/roscpp
+    ros-kinetic/costmap_converter
+    ros-kinetic/std_msgs
+    ros-kinetic/base_local_planner
+    ros-kinetic/tf
     ros-kinetic/interactive_markers
+    ros-kinetic/costmap_2d
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

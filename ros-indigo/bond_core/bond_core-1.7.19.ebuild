@@ -3,18 +3,19 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="A bond allows two processes, A and B, to know when the other has
+    terminated,"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/indigo/bond_core/1.7.19-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bond
     ros-indigo/smclib
     ros-indigo/bondpy
+    ros-indigo/bond
     ros-indigo/bondcpp
 "
 DEPEND="${RDEPEND}

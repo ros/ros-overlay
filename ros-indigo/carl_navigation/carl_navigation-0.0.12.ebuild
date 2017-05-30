@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
     ros-indigo/rail_maps
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
+    ros-indigo/gmapping
+    ros-indigo/rail_collada_models
+    ros-indigo/actionlib_msgs
+    ros-indigo/dwa_local_planner
+    ros-indigo/message_runtime
+    ros-indigo/move_base
+    ros-indigo/move_base_msgs
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/carl_description
+    ros-indigo/tf
     ros-indigo/navfn
     ros-indigo/robot_pose_publisher
-    ros-indigo/rail_collada_models
-    ros-indigo/actionlib
-    ros-indigo/actionlib_msgs
-    ros-indigo/carl_description
-    ros-indigo/dwa_local_planner
-    ros-indigo/gmapping
-    ros-indigo/nav_msgs
-    ros-indigo/roslib
-    ros-indigo/geometry_msgs
-    ros-indigo/move_base_msgs
-    ros-indigo/tf
-    ros-indigo/roscpp
     ros-indigo/costmap_2d
-    ros-indigo/move_base
-    ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}

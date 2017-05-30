@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/microstrain_3dmgx2_imu
+    ros-indigo/husky_control
+    ros-indigo/um7
+    ros-indigo/lms1xx
     ros-indigo/husky_description
-    ros-indigo/imu_transformer
+    ros-indigo/husky_base
+    ros-indigo/nmea_comms
+    ros-indigo/nmea_navsat_driver
+    ros-indigo/ur_modern_driver
+    ros-indigo/robot_upstart
     ros-indigo/robot_localization
     ros-indigo/um6
-    ros-indigo/um7
-    ros-indigo/ur_modern_driver
-    ros-indigo/imu_filter_madgwick
-    ros-indigo/nmea_comms
-    ros-indigo/robot_upstart
-    ros-indigo/husky_control
+    ros-indigo/microstrain_3dmgx2_imu
     ros-indigo/tf2_ros
-    ros-indigo/nmea_navsat_driver
-    ros-indigo/husky_base
+    ros-indigo/imu_transformer
     ros-indigo/tf
-    ros-indigo/lms1xx
+    ros-indigo/imu_filter_madgwick
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}

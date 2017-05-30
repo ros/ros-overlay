@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/robot_mechanism_controllers
-    ros-indigo/pr2_moveit_plugins
-    ros-indigo/vs060
-    ros-indigo/robot_state_publisher
     ros-indigo/moveit_planners_ompl
     ros-indigo/moveit_ros_visualization
+    ros-indigo/pr2_moveit_plugins
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/robot_state_publisher
+    ros-indigo/vs060
+    ros-indigo/robot_mechanism_controllers
 "
 DEPEND="${RDEPEND}
 "

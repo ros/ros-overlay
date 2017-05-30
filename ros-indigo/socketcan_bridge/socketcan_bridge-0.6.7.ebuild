@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/can_msgs
     ros-indigo/roscpp
+    ros-indigo/can_msgs
     ros-indigo/socketcan_interface
 "
 DEPEND="${RDEPEND}

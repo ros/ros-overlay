@@ -12,13 +12,13 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
     ros-kinetic/roscpp
+    ros-kinetic/pluginlib
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/hardware_interface
     ros-kinetic/cmake_modules
+    ros-kinetic/hardware_interface
 "
 
 SLOT="0/0"

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hrpsys_ros_bridge
     ros-indigo/rosnode_rtc
-    ros-indigo/openrtm_tools
-    ros-indigo/openrtm_ros_bridge
-    ros-indigo/hrpsys_tools
     ros-indigo/rtmbuild
+    ros-indigo/hrpsys_ros_bridge
+    ros-indigo/openrtm_tools
+    ros-indigo/hrpsys_tools
+    ros-indigo/openrtm_ros_bridge
 "
 DEPEND="${RDEPEND}
 "

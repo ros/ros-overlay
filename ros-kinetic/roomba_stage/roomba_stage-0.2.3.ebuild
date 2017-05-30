@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stage_ros
     ros-kinetic/fake_localization
+    ros-kinetic/stage_ros
     ros-kinetic/map_server
     ros-kinetic/move_base
 "

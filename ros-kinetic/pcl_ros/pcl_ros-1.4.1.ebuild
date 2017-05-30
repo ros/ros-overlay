@@ -13,29 +13,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosbag
-    ros-kinetic/nodelet_topic_tools
-    ros-kinetic/pluginlib
-    ros-kinetic/pcl_msgs
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/nodelet
+    ros-kinetic/pluginlib
     ros-kinetic/tf2_eigen
     ros-kinetic/message_filters
+    ros-kinetic/pcl_msgs
+    ros-kinetic/rosbag
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
     ros-kinetic/pcl_conversions
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nodelet_topic_tools
     sci-libs/pcl
     sci-libs/vtk
-    dev-cpp/eigen
     sci-libs/proj
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosconsole
-    ros-kinetic/genmsg
     ros-kinetic/cmake_modules
     ros-kinetic/roslib
+    ros-kinetic/genmsg
+    ros-kinetic/rosconsole
 "
 
 SLOT="0/0"

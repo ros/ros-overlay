@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_srvs
+    ros-indigo/angles
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
+    ros-indigo/message_runtime
     ros-indigo/lama_msgs
     ros-indigo/roscpp
-    ros-indigo/message_runtime
-    ros-indigo/angles
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

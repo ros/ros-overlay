@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/grid_map_core
-    ros-kinetic/visualization_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/grid_map_msgs
     ros-kinetic/grid_map_ros
-    ros-kinetic/sensor_msgs
+    ros-kinetic/grid_map_core
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/visualization_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}

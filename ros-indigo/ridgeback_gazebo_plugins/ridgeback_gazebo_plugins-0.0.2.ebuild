@@ -15,9 +15,9 @@ RDEPEND="
     ros-indigo/nav_msgs
     ros-indigo/gazebo_ros
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

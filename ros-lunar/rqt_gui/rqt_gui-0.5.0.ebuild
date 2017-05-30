@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/qt_gui
     ros-lunar/catkin
+    ros-lunar/qt_gui
 "
 DEPEND="${RDEPEND}
 "

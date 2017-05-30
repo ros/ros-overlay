@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/unique_id
-    ros-indigo/rospy
-    ros-indigo/concert_scheduler_requests
-    ros-indigo/rocon_std_msgs
-    ros-indigo/scheduler_msgs
     ros-indigo/rocon_app_manager_msgs
+    ros-indigo/rospy
+    ros-indigo/rocon_std_msgs
+    ros-indigo/concert_scheduler_requests
+    ros-indigo/unique_id
     ros-indigo/concert_msgs
+    ros-indigo/scheduler_msgs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/roslint
+    ros-indigo/rostest
     dev-python/catkin_pkg
 "
 

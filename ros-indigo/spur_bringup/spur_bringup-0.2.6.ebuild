@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/teleop_twist_keyboard
+    ros-indigo/laser_filters
     ros-indigo/joy
     ros-indigo/urg_node
     ros-indigo/spur_controller
     ros-indigo/dynamixel_controllers
     ros-indigo/teleop_twist_joy
-    ros-indigo/laser_filters
+    ros-indigo/teleop_twist_keyboard
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

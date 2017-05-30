@@ -12,14 +12,14 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/stdr_robot
-    ros-indigo/stdr_msgs
     ros-indigo/nav_msgs
-    ros-indigo/stdr_server
-    ros-indigo/roslib
     ros-indigo/stdr_parser
-    ros-indigo/sensor_msgs
+    ros-indigo/stdr_server
+    ros-indigo/stdr_msgs
+    ros-indigo/roslib
+    ros-indigo/stdr_robot
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
     dev-qt/qtcore
 "

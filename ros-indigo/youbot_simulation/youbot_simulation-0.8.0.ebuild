@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/youbot_gazebo_robot
-    ros-indigo/youbot_gazebo_control
     ros-indigo/youbot_gazebo_worlds
+    ros-indigo/youbot_gazebo_control
 "
 DEPEND="${RDEPEND}
 "

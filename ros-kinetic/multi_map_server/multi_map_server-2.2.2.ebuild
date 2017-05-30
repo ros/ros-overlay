@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rospy
     ros-kinetic/nav_msgs
-    ros-kinetic/map_server
+    ros-kinetic/rospy
     ros-kinetic/roscpp
+    ros-kinetic/map_server
     ros-kinetic/tf
+    ros-kinetic/rosconsole
     dev-cpp/yaml-cpp
     media-libs/sdl-image
 "

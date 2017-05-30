@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ackermann_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/nav_msgs
     ros-kinetic/robotnik_msgs
+    ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/diagnostic_msgs
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/message_runtime
     ros-kinetic/tf
-    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/ackermann_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

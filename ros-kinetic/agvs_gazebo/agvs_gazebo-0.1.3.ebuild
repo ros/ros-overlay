@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/joint_state_controller
-    ros-kinetic/std_srvs
-    ros-kinetic/effort_controllers
-    ros-kinetic/gazebo_ros
-    ros-kinetic/std_msgs
-    ros-kinetic/velocity_controllers
-    ros-kinetic/roscpp
-    ros-kinetic/agvs_description
-    ros-kinetic/agvs_pad
-    ros-kinetic/tf
     ros-kinetic/agvs_robot_control
+    ros-kinetic/gazebo_ros
+    ros-kinetic/agvs_pad
+    ros-kinetic/joint_state_controller
+    ros-kinetic/roscpp
+    ros-kinetic/effort_controllers
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/velocity_controllers
+    ros-kinetic/agvs_description
 "
 DEPEND="${RDEPEND}
 "

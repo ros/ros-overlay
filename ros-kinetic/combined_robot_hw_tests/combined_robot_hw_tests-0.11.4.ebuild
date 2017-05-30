@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/hardware_interface
     ros-kinetic/roscpp
-    ros-kinetic/controller_manager
     ros-kinetic/combined_robot_hw
     ros-kinetic/controller_manager_tests
+    ros-kinetic/hardware_interface
+    ros-kinetic/controller_manager
 "
 DEPEND="${RDEPEND}
 "

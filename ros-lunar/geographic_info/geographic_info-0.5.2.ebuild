@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geodesy
     ros-lunar/geographic_msgs
+    ros-lunar/geodesy
 "
 DEPEND="${RDEPEND}
 "

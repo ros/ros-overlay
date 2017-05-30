@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mongodb_store
-    ros-indigo/mongodb_store_msgs
     ros-indigo/roseus
+    ros-indigo/mongodb_store_msgs
+    ros-indigo/mongodb_store
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

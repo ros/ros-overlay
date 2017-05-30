@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     dev-cpp/gtest
     dev-python/nose
-    dev-python/catkin_pkg
-    dev-python/empy
     dev-lang/python
+    dev-python/empy
+    dev-python/catkin_pkg
 "
 DEPEND="${RDEPEND}
 "

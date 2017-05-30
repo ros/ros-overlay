@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/octomap_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/nav_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/octomap
-    ros-kinetic/octomap_ros
-    ros-kinetic/pcl_conversions
-    ros-kinetic/nodelet
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/octomap_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/nav_msgs
+    ros-kinetic/octomap
+    ros-kinetic/std_srvs
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/octomap_ros
+    ros-kinetic/sensor_msgs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

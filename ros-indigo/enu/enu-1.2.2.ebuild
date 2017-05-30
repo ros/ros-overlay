@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
+    ros-indigo/swiftnav
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
-    ros-indigo/swiftnav
+    ros-indigo/sensor_msgs
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
 "

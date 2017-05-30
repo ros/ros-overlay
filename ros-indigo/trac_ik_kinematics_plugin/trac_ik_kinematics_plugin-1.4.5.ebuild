@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trac_ik_lib
-    ros-indigo/tf_conversions
-    ros-indigo/moveit_core
-    ros-indigo/pluginlib
     ros-indigo/roscpp
+    ros-indigo/pluginlib
+    ros-indigo/moveit_core
+    ros-indigo/tf_conversions
+    ros-indigo/trac_ik_lib
 "
 DEPEND="${RDEPEND}
 "

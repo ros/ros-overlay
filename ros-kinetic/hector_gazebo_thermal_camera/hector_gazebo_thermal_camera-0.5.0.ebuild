@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/gazebo_plugins
     ros-kinetic/roscpp
+    ros-kinetic/gazebo_plugins
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

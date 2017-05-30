@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rospy
     ros-indigo/image_geometry
-    ros-indigo/std_srvs
-    ros-indigo/sensor_msgs
+    ros-indigo/rospy
     ros-indigo/message_filters
+    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

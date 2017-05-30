@@ -13,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/image_geometry
-    ros-indigo/tf2
     ros-indigo/nodelet
-    ros-indigo/tf2_ros
+    ros-indigo/image_geometry
     ros-indigo/image_transport
+    ros-indigo/tf2_ros
     ros-indigo/eigen_conversions
+    ros-indigo/tf2
+    ros-indigo/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_filters
     ros-indigo/cmake_modules
-    ros-indigo/sensor_msgs
+    ros-indigo/message_filters
     ros-indigo/stereo_msgs
+    ros-indigo/sensor_msgs
 "
 
 SLOT="0/0"

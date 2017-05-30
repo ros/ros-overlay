@@ -13,18 +13,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rospy
+    ros-indigo/serial
+    ros-indigo/actionlib
     ros-indigo/flir_ptu_description
-    ros-indigo/tf
+    ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
+    ros-indigo/tf
     ros-indigo/diagnostic_updater
-    ros-indigo/actionlib
-    ros-indigo/serial
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslaunch
     ros-indigo/roslint
+    ros-indigo/roslaunch
     dev-libs/boost
 "
 

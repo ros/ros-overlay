@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_msgs
-    ros-kinetic/control_toolbox
-    ros-kinetic/nav_msgs
-    ros-kinetic/realtime_tools
-    ros-kinetic/controller_interface
-    ros-kinetic/hardware_interface
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
-    ros-kinetic/tf
-    ros-kinetic/forward_command_controller
     ros-kinetic/angles
+    ros-kinetic/nav_msgs
+    ros-kinetic/forward_command_controller
+    ros-kinetic/roscpp
+    ros-kinetic/controller_interface
+    ros-kinetic/urdf
+    ros-kinetic/realtime_tools
+    ros-kinetic/control_msgs
+    ros-kinetic/tf
+    ros-kinetic/hardware_interface
+    ros-kinetic/control_toolbox
 "
 DEPEND="${RDEPEND}
 "

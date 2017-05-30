@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosbuild
     ros-indigo/rostime
     ros-indigo/cpp_common
-    ros-indigo/rosbuild
-    dev-libs/apr
     dev-libs/log4cxx
+    dev-libs/apr
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosunit

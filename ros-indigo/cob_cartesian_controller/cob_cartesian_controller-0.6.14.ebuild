@@ -12,28 +12,28 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_twist_controller
     ros-indigo/visualization_msgs
+    ros-indigo/topic_tools
     ros-indigo/rospy
-    ros-indigo/cob_frame_tracker
-    ros-indigo/std_srvs
-    ros-indigo/actionlib_msgs
     ros-indigo/xacro
     ros-indigo/geometry_msgs
-    ros-indigo/topic_tools
-    ros-indigo/std_msgs
-    ros-indigo/rviz
-    ros-indigo/robot_state_publisher
-    ros-indigo/cob_srvs
-    ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/cob_twist_controller
+    ros-indigo/rviz
+    ros-indigo/std_srvs
+    ros-indigo/robot_state_publisher
+    ros-indigo/tf
+    ros-indigo/cob_frame_tracker
+    ros-indigo/cob_srvs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
     ros-indigo/roslint
+    ros-indigo/message_generation
 "
 
 SLOT="0/0"

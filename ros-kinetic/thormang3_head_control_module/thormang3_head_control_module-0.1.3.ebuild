@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robotis_framework_common
-    ros-kinetic/std_msgs
-    ros-kinetic/robotis_math
-    ros-kinetic/roscpp
     ros-kinetic/cmake_modules
+    ros-kinetic/roscpp
+    ros-kinetic/robotis_math
+    ros-kinetic/std_msgs
+    ros-kinetic/robotis_framework_common
 "
 DEPEND="${RDEPEND}
     ros-kinetic/thormang3_head_control_module_msgs

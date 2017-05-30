@@ -12,10 +12,10 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_ethercat_model
-    ros-indigo/sr_ronex_hardware_interface
     ros-indigo/rostest
     ros-indigo/roscpp
+    ros-indigo/ros_ethercat_model
+    ros-indigo/sr_ronex_hardware_interface
 "
 DEPEND="${RDEPEND}
 "

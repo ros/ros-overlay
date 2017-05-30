@@ -12,27 +12,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/fanuc_lrmate200ic_support
-    ros-indigo/fanuc_m10ia_moveit_config
+    ros-indigo/fanuc_m430ia_moveit_plugins
     ros-indigo/fanuc_m20ia_moveit_plugins
     ros-indigo/fanuc_m20ia_support
     ros-indigo/fanuc_lrmate200ic_moveit_config
-    ros-indigo/fanuc_m430ia_moveit_plugins
-    ros-indigo/fanuc_lrmate200ic5l_moveit_config
+    ros-indigo/fanuc_m16ib_moveit_plugins
     ros-indigo/fanuc_lrmate200ic_moveit_plugins
-    ros-indigo/fanuc_m430ia2p_moveit_config
-    ros-indigo/fanuc_m16ib20_moveit_config
+    ros-indigo/fanuc_lrmate200ic_support
     ros-indigo/fanuc_m20ia10l_moveit_config
-    ros-indigo/fanuc_m430ia_support
+    ros-indigo/fanuc_lrmate200ic5h_moveit_config
+    ros-indigo/fanuc_m20ia_moveit_config
+    ros-indigo/fanuc_m16ib_support
+    ros-indigo/fanuc_m10ia_moveit_config
+    ros-indigo/fanuc_m10ia_moveit_plugins
+    ros-indigo/fanuc_m430ia2f_moveit_config
+    ros-indigo/fanuc_m430ia2p_moveit_config
+    ros-indigo/fanuc_lrmate200ic5l_moveit_config
+    ros-indigo/fanuc_m10ia_support
     ros-indigo/fanuc_resources
     ros-indigo/fanuc_driver
-    ros-indigo/fanuc_m10ia_support
-    ros-indigo/fanuc_m10ia_moveit_plugins
-    ros-indigo/fanuc_m16ib_moveit_plugins
-    ros-indigo/fanuc_m16ib_support
-    ros-indigo/fanuc_m20ia_moveit_config
-    ros-indigo/fanuc_m430ia2f_moveit_config
-    ros-indigo/fanuc_lrmate200ic5h_moveit_config
+    ros-indigo/fanuc_m16ib20_moveit_config
+    ros-indigo/fanuc_m430ia_support
 "
 DEPEND="${RDEPEND}
 "

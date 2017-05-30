@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
+DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
+HOMEPAGE="http://wiki.ros.org/clear_costmap_recovery"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/clear_costmap_recovery/1.12.13-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
@@ -15,8 +15,8 @@ RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/nav_core
     ros-indigo/roscpp
-    ros-indigo/costmap_2d
     ros-indigo/tf
+    ros-indigo/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/twist_mux
     ros-indigo/joy
     ros-indigo/urg_node
-    ros-indigo/mrp2_description
-    ros-indigo/robot_state_publisher
     ros-indigo/joy_teleop
-    ros-indigo/twist_mux
+    ros-indigo/robot_state_publisher
+    ros-indigo/mrp2_description
 "
 DEPEND="${RDEPEND}
 "

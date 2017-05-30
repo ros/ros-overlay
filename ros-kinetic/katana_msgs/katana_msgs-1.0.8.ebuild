@@ -12,9 +12,9 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/sensor_msgs
     ros-kinetic/message_runtime
     ros-kinetic/actionlib_msgs
-    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

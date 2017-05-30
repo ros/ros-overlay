@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="concert software farm meta package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/concert_software_farm-release/archive/release/indigo/concert_software_farm/0.0.3-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 

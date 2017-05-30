@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/robotis_framework_common
-    ros-kinetic/robotis_device
     ros-kinetic/robotis_controller
+    ros-kinetic/robotis_device
 "
 DEPEND="${RDEPEND}
 "

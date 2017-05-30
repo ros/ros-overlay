@@ -13,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/resource_retriever
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/message_generation
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/tf
-    ros-indigo/visp
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
+    ros-indigo/message_generation
+    ros-indigo/geometry_msgs
+    ros-indigo/image_proc
     ros-indigo/image_transport
     ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/image_proc
+    ros-indigo/roscpp
+    ros-indigo/visp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/resource_retriever
 "
 DEPEND="${RDEPEND}
 "

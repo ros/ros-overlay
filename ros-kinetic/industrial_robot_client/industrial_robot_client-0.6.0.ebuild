@@ -15,15 +15,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/industrial_msgs
     ros-kinetic/control_msgs
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/industrial_utils
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
-    ros-kinetic/simple_message
     ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/simple_message
+    ros-kinetic/urdf
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/industrial_utils
 "
 DEPEND="${RDEPEND}
 "

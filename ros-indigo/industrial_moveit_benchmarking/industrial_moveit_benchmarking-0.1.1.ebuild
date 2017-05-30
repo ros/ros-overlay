@@ -12,13 +12,13 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/constrained_ik
-    ros-indigo/stomp_moveit
     ros-indigo/pluginlib
-    ros-indigo/roscpp
+    ros-indigo/constrained_ik
     ros-indigo/industrial_collision_detection
-    ros-indigo/moveit_ros_planning
+    ros-indigo/roscpp
     ros-indigo/moveit_core
+    ros-indigo/stomp_moveit
+    ros-indigo/moveit_ros_planning
 "
 DEPEND="${RDEPEND}
 "

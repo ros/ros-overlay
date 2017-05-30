@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diagnostic_updater
     ros-kinetic/sensor_msgs
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
+    ros-kinetic/diagnostic_updater
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}

@@ -12,28 +12,28 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/topic_tools
     ros-kinetic/rosservice
-    ros-kinetic/rostest
-    ros-kinetic/rosbag
-    ros-kinetic/roscpp
-    ros-kinetic/roswtf
-    ros-kinetic/ros
-    ros-kinetic/rosmsg
-    ros-kinetic/std_srvs
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/xmlrpcpp
     ros-kinetic/rosnode
+    ros-kinetic/roslisp
+    ros-kinetic/rosmaster
+    ros-kinetic/rosbag
+    ros-kinetic/rostopic
+    ros-kinetic/rostest
+    ros-kinetic/roswtf
+    ros-kinetic/rospy
     ros-kinetic/roslaunch
     ros-kinetic/rosparam
+    ros-kinetic/roscpp
+    ros-kinetic/std_srvs
     ros-kinetic/rosconsole
-    ros-kinetic/rosmaster
-    ros-kinetic/roslisp
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/message_filters
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/rospy
     ros-kinetic/rosgraph
-    ros-kinetic/topic_tools
+    ros-kinetic/message_filters
+    ros-kinetic/ros
     ros-kinetic/rosout
-    ros-kinetic/rostopic
+    ros-kinetic/rosmsg
 "
 DEPEND="${RDEPEND}
 "

@@ -15,22 +15,22 @@ RDEPEND="
     ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-indigo/cv_bridge
-    ros-indigo/roseus
-    ros-indigo/rospy
     ros-indigo/image_geometry
-    ros-indigo/roseus_smach
-    ros-indigo/jsk_maps
-    ros-indigo/pr2eus
-    ros-indigo/jsk_perception
-    ros-indigo/std_srvs
+    ros-indigo/rospy
     ros-indigo/nav_msgs
-    ros-indigo/move_base_msgs
-    ros-indigo/std_msgs
-    ros-indigo/message_generation
-    ros-indigo/roscpp
-    ros-indigo/sound_play
     ros-indigo/image_transport
+    ros-indigo/pr2eus
+    ros-indigo/message_generation
+    ros-indigo/roseus_smach
+    ros-indigo/jsk_perception
+    ros-indigo/roscpp
+    ros-indigo/roseus
+    ros-indigo/jsk_maps
+    ros-indigo/move_base_msgs
+    ros-indigo/sound_play
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/cv_bridge
 "
 
 SLOT="0/0"

@@ -3,19 +3,19 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="rqt package for visualization and management of capabilities"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_capabilities-release/archive/release/indigo/rqt_capabilities/0.1.2-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_graph
-    ros-indigo/rospy
     ros-indigo/qt_dotgraph
     ros-indigo/rqt_gui_py
+    ros-indigo/rqt_graph
+    ros-indigo/rospy
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

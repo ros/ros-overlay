@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/ecl_converters
+    ros-kinetic/sophus
+    ros-kinetic/ecl_math
     ros-kinetic/ecl_formatters
+    ros-kinetic/ecl_eigen
+    ros-kinetic/ecl_build
     ros-kinetic/ecl_exceptions
     ros-kinetic/ecl_license
-    ros-kinetic/ecl_build
-    ros-kinetic/ecl_eigen
-    ros-kinetic/ecl_converters
-    ros-kinetic/ecl_math
-    ros-kinetic/sophus
 "
 DEPEND="${RDEPEND}
 "

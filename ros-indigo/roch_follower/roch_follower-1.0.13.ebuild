@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roch_teleop
-    ros-indigo/visualization_msgs
-    ros-indigo/topic_tools
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/depth_image_proc
-    ros-indigo/roch_msgs
     ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/topic_tools
     ros-indigo/roch_bringup
+    ros-indigo/roch_teleop
+    ros-indigo/roch_msgs
+    ros-indigo/depth_image_proc
+    ros-indigo/roscpp
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
 "

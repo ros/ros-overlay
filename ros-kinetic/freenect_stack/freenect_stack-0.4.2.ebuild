@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/freenect_camera
     ros-kinetic/freenect_launch
+    ros-kinetic/freenect_camera
 "
 DEPEND="${RDEPEND}
 "

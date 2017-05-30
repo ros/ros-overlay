@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-indigo/rosjava_build_tools
+    ros-indigo/rocon_interaction_msgs
     ros-indigo/rosjava_bootstrap
     ros-indigo/rocon_std_msgs
-    ros-indigo/rocon_interaction_msgs
     ros-indigo/rosjava_core
-    ros-indigo/rosjava_build_tools
     ros-indigo/rosjava_messages
 "
 

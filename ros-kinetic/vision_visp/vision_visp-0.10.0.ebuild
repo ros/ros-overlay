@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visp_hand2eye_calibration
-    ros-kinetic/visp_tracker
-    ros-kinetic/visp_auto_tracker
-    ros-kinetic/visp_camera_calibration
     ros-kinetic/visp_bridge
+    ros-kinetic/visp_hand2eye_calibration
+    ros-kinetic/visp_auto_tracker
+    ros-kinetic/visp_tracker
+    ros-kinetic/visp_camera_calibration
 "
 DEPEND="${RDEPEND}
 "

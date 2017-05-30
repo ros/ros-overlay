@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosgraph
     ros-indigo/qt_gui_py_common
     ros-indigo/rqt_gui
-    ros-indigo/rosgraph
-    ros-indigo/rqt_gui_py
-    ros-indigo/std_msgs
+    ros-indigo/rostopic
     ros-indigo/qwt_dependency
+    ros-indigo/std_msgs
     ros-indigo/python_qt_binding
     ros-indigo/rqt_py_common
-    ros-indigo/rostopic
+    ros-indigo/rqt_gui_py
+    dev-python/rospkg
     dev-python/numpy
     dev-python/matplotlib
-    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
 "

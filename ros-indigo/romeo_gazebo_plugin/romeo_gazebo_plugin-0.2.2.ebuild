@@ -12,13 +12,13 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/romeo_description
-    ros-indigo/gazebo_ros_control
-    ros-indigo/ros_controllers
-    ros-indigo/gazebo_ros
     ros-indigo/romeo_control
-    ros-indigo/gazebo_plugins
     ros-indigo/ros_control
+    ros-indigo/gazebo_ros
+    ros-indigo/gazebo_ros_control
+    ros-indigo/gazebo_plugins
+    ros-indigo/ros_controllers
+    ros-indigo/romeo_description
 "
 DEPEND="${RDEPEND}
 "

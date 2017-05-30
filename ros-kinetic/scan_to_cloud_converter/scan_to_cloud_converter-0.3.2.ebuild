@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/pcl_conversions
     ros-kinetic/pcl_ros
-    ros-kinetic/roscpp
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/teleop_tools_msgs
-    ros-kinetic/rospy
     ros-kinetic/sensor_msgs
     ros-kinetic/actionlib
+    ros-kinetic/teleop_tools_msgs
     ros-kinetic/rostopic
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "

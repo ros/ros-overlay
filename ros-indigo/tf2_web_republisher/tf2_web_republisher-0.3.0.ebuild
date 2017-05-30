@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/geometry_msgs
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/roscpp
     ros-indigo/tf2_ros
     ros-indigo/tf

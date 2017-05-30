@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/hardware_interface
     ros-indigo/pluginlib
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

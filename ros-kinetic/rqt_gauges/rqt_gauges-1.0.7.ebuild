@@ -12,11 +12,11 @@ LICENSE="see License.txt"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/rqt_gui
     ros-kinetic/rqt_gui_cpp
     ros-kinetic/roscpp
+    ros-kinetic/rqt_gui
+    ros-kinetic/pluginlib
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslint

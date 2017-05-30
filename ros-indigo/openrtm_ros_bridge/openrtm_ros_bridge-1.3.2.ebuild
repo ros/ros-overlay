@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
     ros-indigo/openrtm_tools
     ros-indigo/roscpp
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation
-    ros-indigo/rostest
     ros-indigo/rtmbuild
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

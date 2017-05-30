@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/joy_listener
-    ros-kinetic/easy_markers
-    ros-kinetic/kalman_filter
     ros-kinetic/rosbaglive
+    ros-kinetic/kalman_filter
+    ros-kinetic/easy_markers
+    ros-kinetic/joy_listener
 "
 DEPEND="${RDEPEND}
 "

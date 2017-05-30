@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roslib
-    ros-lunar/rosconsole
-    ros-lunar/sensor_msgs
     ros-lunar/pluginlib
     ros-lunar/message_filters
+    ros-lunar/roslib
     ros-lunar/roscpp
+    ros-lunar/sensor_msgs
+    ros-lunar/rosconsole
 "
 DEPEND="${RDEPEND}
 "

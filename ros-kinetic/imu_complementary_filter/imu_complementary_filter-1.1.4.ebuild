@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_filters
+    ros-kinetic/roscpp
+    ros-kinetic/tf
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/tf
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

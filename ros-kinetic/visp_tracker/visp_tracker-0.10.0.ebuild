@@ -13,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/resource_retriever
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/tf
-    ros-kinetic/visp
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rospy
+    ros-kinetic/message_generation
+    ros-kinetic/geometry_msgs
+    ros-kinetic/image_proc
     ros-kinetic/image_transport
     ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_proc
+    ros-kinetic/roscpp
+    ros-kinetic/visp
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
+    ros-kinetic/resource_retriever
 "
 DEPEND="${RDEPEND}
 "

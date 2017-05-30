@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rosbag
-    ros-indigo/roslib
     ros-indigo/diagnostic_msgs
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

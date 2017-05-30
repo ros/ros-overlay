@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/pluginlib
     ros-kinetic/nav_core
-    ros-kinetic/costmap_2d
     ros-kinetic/roscpp
     ros-kinetic/base_local_planner
     ros-kinetic/tf
+    ros-kinetic/costmap_2d
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

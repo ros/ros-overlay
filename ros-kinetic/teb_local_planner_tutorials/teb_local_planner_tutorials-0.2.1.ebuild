@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/teb_local_planner
-    ros-kinetic/stage_ros
-    ros-kinetic/move_base
-    ros-kinetic/map_server
     ros-kinetic/amcl
+    ros-kinetic/map_server
+    ros-kinetic/stage_ros
+    ros-kinetic/teb_local_planner
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "

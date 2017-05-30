@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/control_msgs
     ros-indigo/denso_controller
     ros-indigo/checkerboard_detector
-    ros-indigo/control_msgs
     ros-indigo/vs060_moveit_config
 "
 DEPEND="${RDEPEND}

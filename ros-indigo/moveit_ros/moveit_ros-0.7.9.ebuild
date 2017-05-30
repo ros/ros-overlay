@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_manipulation
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/moveit_ros_warehouse
-    ros-indigo/moveit_ros_benchmarks
-    ros-indigo/moveit_ros_benchmarks_gui
-    ros-indigo/moveit_ros_perception
     ros-indigo/moveit_ros_planning_interface
     ros-indigo/moveit_ros_robot_interaction
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/moveit_ros_perception
+    ros-indigo/moveit_ros_manipulation
+    ros-indigo/moveit_ros_planning
+    ros-indigo/moveit_ros_benchmarks_gui
+    ros-indigo/moveit_ros_benchmarks
+    ros-indigo/moveit_ros_warehouse
 "
 DEPEND="${RDEPEND}
 "

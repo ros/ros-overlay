@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/grid_map_msgs
-    ros-indigo/rviz
     ros-indigo/grid_map_ros
+    ros-indigo/rviz
+    dev-qt/qtcore
     dev-qt/qtgui
     dev-qt/qtwidgets
-    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
     ros-kinetic/rosserial_client
     ros-kinetic/rosserial_msgs
     ros-kinetic/rospy
+    ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-kinetic/nav_msgs
+    ros-kinetic/message_generation
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/message_generation
     ros-kinetic/sensor_msgs
 "
 

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roch_teleop
-    ros-indigo/robot_pose_publisher
-    ros-indigo/warehouse_ros
-    ros-indigo/world_canvas_server
+    ros-indigo/nodelet
+    ros-indigo/roch_bringup
     ros-indigo/roch_follower
     ros-indigo/roch_navigation
+    ros-indigo/world_canvas_server
     ros-indigo/topic_tools
-    ros-indigo/nodelet
+    ros-indigo/warehouse_ros
     ros-indigo/compressed_image_transport
+    ros-indigo/roch_teleop
     ros-indigo/tf
-    ros-indigo/roch_bringup
+    ros-indigo/robot_pose_publisher
 "
 DEPEND="${RDEPEND}
 "

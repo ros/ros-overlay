@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/controller_manager
     ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/controller_manager
-    ros-indigo/roscpp
-    ros-indigo/sensor_msgs
-    ros-indigo/naoqi_libqi
     ros-indigo/naoqi_libqicore
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/naoqi_libqi
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/hardware_interface
 "
 DEPEND="${RDEPEND}
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
 "
 
 SLOT="0/0"

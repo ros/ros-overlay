@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/navfn
-    ros-indigo/rotate_recovery
-    ros-indigo/fetch_depth_layer
     ros-indigo/voxel_grid
-    ros-indigo/base_local_planner
-    ros-indigo/slam_karto
-    ros-indigo/move_base_msgs
-    ros-indigo/map_server
-    ros-indigo/costmap_2d
-    ros-indigo/amcl
-    ros-indigo/move_base
-    ros-indigo/clear_costmap_recovery
     ros-indigo/fetch_maps
+    ros-indigo/amcl
+    ros-indigo/slam_karto
+    ros-indigo/clear_costmap_recovery
+    ros-indigo/move_base
+    ros-indigo/move_base_msgs
+    ros-indigo/fetch_depth_layer
+    ros-indigo/map_server
+    ros-indigo/base_local_planner
+    ros-indigo/rotate_recovery
+    ros-indigo/navfn
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
 "

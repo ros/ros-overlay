@@ -13,24 +13,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/rostest
-    ros-indigo/map_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/pluginlib
-    ros-indigo/nav_msgs
     ros-indigo/voxel_grid
-    ros-indigo/laser_geometry
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/pluginlib
+    ros-indigo/visualization_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/rosconsole
     ros-indigo/geometry_msgs
+    ros-indigo/message_filters
+    ros-indigo/laser_geometry
+    ros-indigo/message_runtime
     ros-indigo/pcl_ros
+    ros-indigo/roscpp
+    ros-indigo/map_msgs
     ros-indigo/sensor_msgs
     ros-indigo/std_msgs
-    ros-indigo/roscpp
+    ros-indigo/rostest
     ros-indigo/tf
-    ros-indigo/message_filters
     ros-indigo/pcl_conversions
-    ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

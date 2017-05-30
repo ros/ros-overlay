@@ -12,15 +12,15 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/pluginlib
+    ros-kinetic/message_runtime
     ros-kinetic/roslib
+    ros-kinetic/socketcan_interface
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
     ros-kinetic/std_srvs
     ros-kinetic/canopen_master
     ros-kinetic/diagnostic_updater
-    ros-kinetic/std_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/message_runtime
-    ros-kinetic/socketcan_interface
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

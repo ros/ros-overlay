@@ -12,19 +12,19 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/tf_conversions
-    ros-indigo/visualization_msgs
     ros-indigo/cmake_modules
-    ros-indigo/pcl_ros
-    ros-indigo/message_generation
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/message_runtime
+    ros-indigo/visualization_msgs
+    ros-indigo/tf_conversions
+    ros-indigo/message_generation
     ros-indigo/image_transport
+    ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/roscpp
     ros-indigo/eigen_conversions
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

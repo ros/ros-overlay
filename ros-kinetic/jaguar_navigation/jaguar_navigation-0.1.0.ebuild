@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/navfn
+    ros-kinetic/frontier_exploration
+    ros-kinetic/amcl
     ros-kinetic/gmapping
     ros-kinetic/dwa_local_planner
-    ros-kinetic/frontier_exploration
     ros-kinetic/map_server
     ros-kinetic/base_local_planner
-    ros-kinetic/amcl
+    ros-kinetic/navfn
     ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}

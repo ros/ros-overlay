@@ -12,12 +12,12 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/urdf_vehicle_kinematic
     ros-indigo/nav_msgs
     ros-indigo/four_wheel_steering_msgs
     ros-indigo/realtime_tools
-    ros-indigo/controller_interface
     ros-indigo/tf
-    ros-indigo/urdf_vehicle_kinematic
+    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
 "

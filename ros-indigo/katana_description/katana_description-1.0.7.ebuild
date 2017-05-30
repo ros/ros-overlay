@@ -12,12 +12,12 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/transmission_interface
     ros-indigo/urdf
+    ros-indigo/transmission_interface
 "
 DEPEND="${RDEPEND}
-    ros-indigo/ivcon
     ros-indigo/convex_decomposition
+    ros-indigo/ivcon
 "
 
 SLOT="0/0"

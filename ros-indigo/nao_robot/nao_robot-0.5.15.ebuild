@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nao_apps
-    ros-indigo/nao_bringup
     ros-indigo/nao_description
+    ros-indigo/nao_bringup
+    ros-indigo/nao_apps
 "
 DEPEND="${RDEPEND}
 "

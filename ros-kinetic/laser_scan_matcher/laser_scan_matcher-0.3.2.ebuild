@@ -7,19 +7,19 @@ DESCRIPTION=""
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_scan_matcher/0.3.2-0.tar.gz"
 
-LICENSE="||( BSD LGPLv3 )"
+LICENSE="|| ( BSD LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/csm
-    ros-kinetic/geometry_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/pcl_conversions
+    ros-kinetic/nav_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/csm
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

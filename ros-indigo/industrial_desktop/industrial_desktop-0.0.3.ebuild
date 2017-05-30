@@ -7,15 +7,15 @@ DESCRIPTION="The industrial_desktop package contains all "released" packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/industrial_metapackages-release/archive/release/indigo/industrial_desktop/0.0.3-0.tar.gz"
 
-LICENSE="||( BSD Apache 2.0 )"
+LICENSE="|| ( BSD Apache 2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/motoman
     ros-indigo/fanuc
+    ros-indigo/motoman
     ros-indigo/universal_robot
-    ros-indigo/industrial_core
     ros-indigo/abb
+    ros-indigo/industrial_core
 "
 DEPEND="${RDEPEND}
 "

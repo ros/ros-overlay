@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
     ros-indigo/geometry_msgs
+    ros-indigo/tf2
     ros-indigo/cmake_modules
 "
 DEPEND="${RDEPEND}

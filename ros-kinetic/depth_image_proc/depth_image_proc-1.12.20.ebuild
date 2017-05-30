@@ -13,20 +13,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/image_geometry
-    ros-kinetic/tf2
     ros-kinetic/nodelet
-    ros-kinetic/tf2_ros
+    ros-kinetic/image_geometry
     ros-kinetic/image_transport
+    ros-kinetic/tf2_ros
     ros-kinetic/eigen_conversions
+    ros-kinetic/tf2
+    ros-kinetic/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/message_filters
     ros-kinetic/cmake_modules
-    ros-kinetic/sensor_msgs
+    ros-kinetic/message_filters
     ros-kinetic/stereo_msgs
+    ros-kinetic/sensor_msgs
 "
 
 SLOT="0/0"

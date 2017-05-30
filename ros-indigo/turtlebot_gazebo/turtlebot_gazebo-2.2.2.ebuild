@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_navigation
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/turtlebot_description
     ros-indigo/depthimage_to_laserscan
+    ros-indigo/yocs_cmd_vel_mux
     ros-indigo/gazebo_ros
-    ros-indigo/kobuki_gazebo_plugins
     ros-indigo/xacro
-    ros-indigo/turtlebot_bringup
-    ros-indigo/robot_state_publisher
     ros-indigo/robot_pose_ekf
+    ros-indigo/turtlebot_description
+    ros-indigo/kobuki_gazebo_plugins
+    ros-indigo/turtlebot_navigation
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/robot_state_publisher
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

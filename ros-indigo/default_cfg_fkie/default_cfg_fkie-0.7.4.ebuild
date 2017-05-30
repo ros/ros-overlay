@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslib
     ros-indigo/multimaster_msgs_fkie
-    ros-indigo/rospy
     ros-indigo/roslaunch
+    ros-indigo/rospy
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
 "

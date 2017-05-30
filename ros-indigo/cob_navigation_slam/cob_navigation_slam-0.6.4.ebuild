@@ -12,10 +12,10 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_mapping_slam
-    ros-indigo/cob_navigation_config
-    ros-indigo/cob_navigation_global
     ros-indigo/rviz
+    ros-indigo/cob_mapping_slam
+    ros-indigo/cob_navigation_global
+    ros-indigo/cob_navigation_config
 "
 DEPEND="${RDEPEND}
 "

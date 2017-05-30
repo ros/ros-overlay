@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/rostime
     ros-indigo/roscpp_serialization
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/rostime
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

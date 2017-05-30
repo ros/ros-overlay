@@ -12,20 +12,20 @@ LICENSE="LGPL, BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/brics_actuator
-    ros-indigo/control_msgs
-    ros-indigo/std_srvs
-    ros-indigo/trajectory_msgs
     ros-indigo/nav_msgs
-    ros-indigo/pr2_msgs
-    ros-indigo/youbot_driver
+    ros-indigo/brics_actuator
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/tf
-    ros-indigo/roscpp
+    ros-indigo/rosconsole
     ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/youbot_driver
+    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
+    ros-indigo/tf
+    ros-indigo/pr2_msgs
 "
 DEPEND="${RDEPEND}
 "

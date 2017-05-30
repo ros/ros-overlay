@@ -12,36 +12,36 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/dynamic_tf_publisher
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/roseus
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/urdf
-    ros-kinetic/message_runtime
-    ros-kinetic/actionlib
-    ros-kinetic/interactive_markers
-    ros-kinetic/tf_conversions
-    ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/rviz
-    ros-kinetic/message_filters
     ros-kinetic/roslib
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rviz
+    ros-kinetic/dynamic_tf_publisher
+    ros-kinetic/tf_conversions
     ros-kinetic/moveit_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/roseus
     ros-kinetic/eigen_conversions
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/sensor_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/jsk_rviz_plugins
+    ros-kinetic/urdf
+    ros-kinetic/roscpp
+    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/tf
+    ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/interactive_markers
     dev-cpp/yaml-cpp
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosbuild
+    ros-kinetic/message_generation
     ros-kinetic/mk
     ros-kinetic/cmake_modules
-    ros-kinetic/message_generation
+    ros-kinetic/rosbuild
 "
 
 SLOT="0/0"

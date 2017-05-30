@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/tf
     ros-lunar/rospy
     ros-lunar/diagnostic_updater
-    ros-lunar/tf
     app-admin/hddtemp
 "
 DEPEND="${RDEPEND}

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rviz
-    ros-indigo/object_recognition_msgs
     ros-indigo/pluginlib
+    ros-indigo/object_recognition_msgs
     ros-indigo/object_recognition_ros
     dev-libs/boost
 "

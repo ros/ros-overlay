@@ -13,9 +13,9 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/rosgraph
     ros-indigo/rosnode
+    ros-indigo/rosgraph
+    ros-indigo/rospy
     ros-indigo/ros_statistics_msgs
     ros-indigo/ros_topology_msgs
     dev-python/psutil

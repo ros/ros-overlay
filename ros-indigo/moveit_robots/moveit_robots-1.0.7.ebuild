@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/atlas_v3_moveit_config
-    ros-indigo/clam_moveit_config
     ros-indigo/baxter_ikfast_left_arm_plugin
     ros-indigo/atlas_moveit_config
+    ros-indigo/baxter_moveit_config
+    ros-indigo/atlas_v3_moveit_config
+    ros-indigo/clam_moveit_config
     ros-indigo/r2_moveit_generated
     ros-indigo/baxter_ikfast_right_arm_plugin
-    ros-indigo/baxter_moveit_config
 "
 DEPEND="${RDEPEND}
 "

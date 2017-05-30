@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/swri_transform_util
-    ros-kinetic/marti_nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/marti_nav_msgs
+    ros-kinetic/swri_transform_util
 "
 DEPEND="${RDEPEND}
 "

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pr2_position_scripts
-    ros-indigo/rospy
     ros-indigo/std_srvs
+    ros-indigo/rospy
     ros-indigo/roslib
 "
 DEPEND="${RDEPEND}

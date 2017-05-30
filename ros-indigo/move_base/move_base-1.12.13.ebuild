@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/navfn
-    ros-indigo/rotate_recovery
-    ros-indigo/base_local_planner
-    ros-indigo/rospy
     ros-indigo/dynamic_reconfigure
-    ros-indigo/nav_core
-    ros-indigo/nav_msgs
-    ros-indigo/roscpp
-    ros-indigo/std_srvs
-    ros-indigo/std_msgs
-    ros-indigo/costmap_2d
-    ros-indigo/visualization_msgs
-    ros-indigo/tf
-    ros-indigo/geometry_msgs
-    ros-indigo/message_runtime
     ros-indigo/pluginlib
-    ros-indigo/clear_costmap_recovery
-    ros-indigo/move_base_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
     ros-indigo/actionlib
+    ros-indigo/nav_core
+    ros-indigo/clear_costmap_recovery
+    ros-indigo/message_runtime
+    ros-indigo/move_base_msgs
+    ros-indigo/roscpp
+    ros-indigo/rotate_recovery
+    ros-indigo/std_msgs
+    ros-indigo/base_local_planner
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/navfn
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
     ros-indigo/cmake_modules
+    ros-indigo/message_generation
 "
 
 SLOT="0/0"

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
     ros-indigo/pluginlib
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/actionlib
+    ros-indigo/moveit_fake_controller_manager
+    ros-indigo/moveit_core
     ros-indigo/moveit_ros_perception
     ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/moveit_ros_planning_interface
-    ros-indigo/moveit_fake_controller_manager
     ros-indigo/aubo_msgs
-    ros-indigo/moveit_core
-    ros-indigo/actionlib
+    ros-indigo/sensor_msgs
+    ros-indigo/control_msgs
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

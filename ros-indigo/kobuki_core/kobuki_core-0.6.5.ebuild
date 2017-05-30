@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/kobuki_dock_drive
     ros-indigo/kobuki_driver
     ros-indigo/kobuki_ftdi
-    ros-indigo/kobuki_dock_drive
 "
 DEPEND="${RDEPEND}
 "

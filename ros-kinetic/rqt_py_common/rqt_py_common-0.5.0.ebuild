@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosbag
     ros-kinetic/rospy
-    ros-kinetic/qt_gui
     ros-kinetic/actionlib
-    ros-kinetic/genpy
-    ros-kinetic/python_qt_binding
+    ros-kinetic/qt_gui
     ros-kinetic/roslib
     ros-kinetic/rostopic
+    ros-kinetic/rosbag
+    ros-kinetic/python_qt_binding
+    ros-kinetic/genpy
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/std_msgs
     ros-kinetic/genmsg
+    ros-kinetic/std_msgs
 "
 
 SLOT="0/0"

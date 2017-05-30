@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jsk_interactive_marker
-    ros-indigo/rospy
-    ros-indigo/jsk_baxter_startup
-    ros-indigo/jsk_perception
-    ros-indigo/jsk_2016_01_baxter_apc
-    ros-indigo/jsk_rqt_plugins
-    ros-indigo/jsk_2015_05_baxter_apc
-    ros-indigo/jsk_apc2015_common
-    ros-indigo/jsk_topic_tools
-    ros-indigo/jsk_rviz_plugins
-    ros-indigo/xacro
     ros-indigo/jsk_arc2017_common
-    ros-indigo/jsk_apc2016_common
-    ros-indigo/robot_state_publisher
+    ros-indigo/jsk_interactive_marker
+    ros-indigo/jsk_2015_05_baxter_apc
+    ros-indigo/jsk_rviz_plugins
+    ros-indigo/jsk_baxter_startup
+    ros-indigo/rospy
+    ros-indigo/xacro
+    ros-indigo/jsk_rqt_plugins
     ros-indigo/jsk_data
+    ros-indigo/jsk_perception
+    ros-indigo/jsk_topic_tools
+    ros-indigo/jsk_apc2015_common
+    ros-indigo/robot_state_publisher
     ros-indigo/jsk_recognition_utils
+    ros-indigo/jsk_apc2016_common
+    ros-indigo/jsk_2016_01_baxter_apc
 "
 DEPEND="${RDEPEND}
     ros-indigo/roseus

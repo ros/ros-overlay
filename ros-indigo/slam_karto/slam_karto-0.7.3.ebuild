@@ -13,15 +13,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
     ros-indigo/visualization_msgs
     ros-indigo/nav_msgs
-    ros-indigo/sparse_bundle_adjustment
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/message_filters
+    ros-indigo/roscpp
     ros-indigo/open_karto
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/rosconsole
+    ros-indigo/sparse_bundle_adjustment
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
-    ros-indigo/urdf_parser_plugin
     ros-indigo/rosconsole_bridge
+    ros-indigo/urdf_parser_plugin
     ros-indigo/roscpp
     dev-libs/urdfdom_headers
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

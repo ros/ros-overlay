@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/nodelet
     ros-kinetic/kobuki_random_walker
     ros-kinetic/kobuki_auto_docking
-    ros-kinetic/nodelet
 "
 DEPEND="${RDEPEND}
 "

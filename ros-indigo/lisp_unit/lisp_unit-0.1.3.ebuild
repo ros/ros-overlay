@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="3rd party library: A unit testing framework for common lisp."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/cram_3rdparty-release/archive/release/indigo/lisp_unit/0.1.3-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="GPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 

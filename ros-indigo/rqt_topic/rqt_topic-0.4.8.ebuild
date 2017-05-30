@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
+    ros-indigo/rostopic
     ros-indigo/std_msgs
     ros-indigo/python_qt_binding
-    ros-indigo/rostopic
+    ros-indigo/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

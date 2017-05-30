@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hardware_interface
     ros-indigo/roscpp
+    ros-indigo/hardware_interface
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}

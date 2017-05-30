@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2
-    ros-kinetic/orocos_kdl
-    ros-kinetic/tf2_ros
     ros-kinetic/cmake_modules
+    ros-kinetic/tf2_ros
+    ros-kinetic/orocos_kdl
+    ros-kinetic/tf2
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

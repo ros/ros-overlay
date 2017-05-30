@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/baxter_common
+    ros-indigo/baxter_tools
     ros-indigo/baxter_examples
     ros-indigo/baxter_interface
-    ros-indigo/baxter_tools
 "
 DEPEND="${RDEPEND}
 "

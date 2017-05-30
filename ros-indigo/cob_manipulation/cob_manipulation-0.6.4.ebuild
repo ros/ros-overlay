@@ -12,16 +12,16 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_tray_monitor
-    ros-indigo/cob_obstacle_distance_moveit
-    ros-indigo/cob_kinematics
     ros-indigo/cob_lookat_action
-    ros-indigo/cob_moveit_config
     ros-indigo/cob_pick_place_action
-    ros-indigo/cob_collision_monitor
     ros-indigo/cob_moveit_interface
     ros-indigo/cob_tactiletools
+    ros-indigo/cob_obstacle_distance_moveit
+    ros-indigo/cob_tray_monitor
+    ros-indigo/cob_collision_monitor
+    ros-indigo/cob_moveit_config
     ros-indigo/cob_grasp_generation
+    ros-indigo/cob_kinematics
 "
 DEPEND="${RDEPEND}
 "

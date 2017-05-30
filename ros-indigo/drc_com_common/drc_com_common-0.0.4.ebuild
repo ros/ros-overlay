@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roseus_remote
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/rospy
+    ros-indigo/message_runtime
+    ros-indigo/roslib
     ros-indigo/roseus
     ros-indigo/visualization_msgs
-    ros-indigo/rospy
-    ros-indigo/jsk_robot_utils
-    ros-indigo/roslib
     ros-indigo/jsk_recognition_msgs
+    ros-indigo/jsk_robot_utils
     ros-indigo/jsk_network_tools
-    ros-indigo/message_runtime
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/roseus_remote
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

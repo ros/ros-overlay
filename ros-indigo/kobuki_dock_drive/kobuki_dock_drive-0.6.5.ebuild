@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ecl_threads
-    ros-indigo/ecl_geometry
     ros-indigo/ecl_linear_algebra
+    ros-indigo/ecl_geometry
 "
 DEPEND="${RDEPEND}
     ros-indigo/ecl_build

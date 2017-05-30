@@ -13,11 +13,11 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/image_transport
     ros-indigo/dynamic_reconfigure
+    ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}

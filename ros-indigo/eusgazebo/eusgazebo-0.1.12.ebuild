@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
     ros-indigo/collada_urdf_jsk_patch
+    ros-indigo/gazebo_msgs
     ros-indigo/roseus
     ros-indigo/message_runtime
     ros-indigo/gazebo_ros

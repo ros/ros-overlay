@@ -13,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
     ros-indigo/schunk_sdh
+    ros-indigo/gazebo_msgs
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}

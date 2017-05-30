@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/smarthome_common_driver
-    ros-indigo/smarthome_comm_msgs
-    ros-indigo/smarthome_media_model
-    ros-indigo/rosjava_dynamic_reconfigure
     ros-indigo/smarthome_media_msgs
+    ros-indigo/smarthome_comm_msgs
+    ros-indigo/rosjava_dynamic_reconfigure
+    ros-indigo/smarthome_media_model
     ros-indigo/rosjava_core
 "
 DEPEND="${RDEPEND}

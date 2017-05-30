@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ros_madplay_player
     ros-kinetic/ros_mpg321_player
+    ros-kinetic/ros_madplay_player
 "
 DEPEND="${RDEPEND}
 "

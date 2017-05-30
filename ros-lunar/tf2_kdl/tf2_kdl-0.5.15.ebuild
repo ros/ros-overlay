@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/cmake_modules
+    ros-lunar/tf2_ros
     ros-lunar/orocos_kdl
     ros-lunar/tf2
-    ros-lunar/tf2_ros
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

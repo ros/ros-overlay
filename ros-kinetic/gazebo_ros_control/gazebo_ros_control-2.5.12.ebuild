@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/transmission_interface
-    ros-kinetic/control_toolbox
     ros-kinetic/pluginlib
     ros-kinetic/joint_limits_interface
-    ros-kinetic/gazebo_ros
-    ros-kinetic/hardware_interface
-    ros-kinetic/std_msgs
-    ros-kinetic/controller_manager
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
     ros-kinetic/angles
+    ros-kinetic/controller_manager
+    ros-kinetic/gazebo_ros
+    ros-kinetic/roscpp
+    ros-kinetic/transmission_interface
+    ros-kinetic/urdf
+    ros-kinetic/std_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/control_toolbox
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

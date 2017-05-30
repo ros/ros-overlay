@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hironx_ros_bridge
     ros-indigo/hironx_moveit_config
     ros-indigo/hironx_calibration
+    ros-indigo/hironx_ros_bridge
 "
 DEPEND="${RDEPEND}
 "

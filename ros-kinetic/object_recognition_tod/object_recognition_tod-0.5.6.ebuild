@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecto_openni
     ros-kinetic/ecto_opencv
-    ros-kinetic/ecto
-    ros-kinetic/opencv_candidate
     ros-kinetic/object_recognition_core
+    ros-kinetic/ecto
+    ros-kinetic/ecto_openni
+    ros-kinetic/opencv_candidate
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/arbotix_controllers
-    ros-indigo/arbotix_sensors
-    ros-indigo/arbotix_firmware
-    ros-indigo/arbotix_msgs
     ros-indigo/arbotix_python
+    ros-indigo/arbotix_sensors
+    ros-indigo/arbotix_controllers
+    ros-indigo/arbotix_msgs
+    ros-indigo/arbotix_firmware
 "
 DEPEND="${RDEPEND}
 "

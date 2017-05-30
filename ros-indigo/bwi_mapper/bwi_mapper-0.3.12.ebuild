@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/map_server
+    ros-indigo/cv_bridge
     ros-indigo/nav_msgs
     dev-cpp/yaml-cpp
 "

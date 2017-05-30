@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/navigation
     ros-kinetic/gmapping
+    ros-kinetic/navigation
 "
 DEPEND="${RDEPEND}
 "

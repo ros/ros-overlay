@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/ecl_converters
+    ros-indigo/sophus
+    ros-indigo/ecl_math
     ros-indigo/ecl_formatters
+    ros-indigo/ecl_eigen
+    ros-indigo/ecl_build
     ros-indigo/ecl_exceptions
     ros-indigo/ecl_license
-    ros-indigo/ecl_build
-    ros-indigo/ecl_eigen
-    ros-indigo/ecl_converters
-    ros-indigo/ecl_math
-    ros-indigo/sophus
 "
 DEPEND="${RDEPEND}
 "

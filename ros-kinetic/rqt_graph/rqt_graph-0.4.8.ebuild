@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosservice
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/qt_dotgraph
+    ros-kinetic/rosnode
+    ros-kinetic/rosgraph
     ros-kinetic/rospy
     ros-kinetic/rqt_gui
-    ros-kinetic/rosgraph
-    ros-kinetic/rqt_gui_py
-    ros-kinetic/rosnode
-    ros-kinetic/python_qt_binding
+    ros-kinetic/rosservice
     ros-kinetic/roslib
+    ros-kinetic/qt_dotgraph
     ros-kinetic/rostopic
+    ros-kinetic/python_qt_binding
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

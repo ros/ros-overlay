@@ -12,9 +12,9 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gazebo_plugins
     ros-indigo/pr2_gazebo
     ros-indigo/pr2_controller_configuration_gazebo
+    ros-indigo/pr2_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 "

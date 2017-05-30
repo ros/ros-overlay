@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/rospy
     ros-kinetic/camera_info_manager
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/rospack
+    ros-kinetic/rospy
     ros-kinetic/image_transport
+    ros-kinetic/geometry_msgs
     ros-kinetic/message_runtime
     ros-kinetic/roslib
-    ros-kinetic/rospack
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

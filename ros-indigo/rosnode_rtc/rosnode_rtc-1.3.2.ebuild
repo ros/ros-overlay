@@ -17,9 +17,9 @@ RDEPEND="
     ros-indigo/openrtm_tools
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rospy
-    ros-indigo/roscpp_tutorials
     ros-indigo/rostopic
+    ros-indigo/roscpp_tutorials
+    ros-indigo/rospy
 "
 
 SLOT="0/0"

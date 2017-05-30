@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_localization
-    ros-indigo/joy
-    ros-indigo/diff_drive_controller
-    ros-indigo/imu_sensor_controller
-    ros-indigo/joint_trajectory_controller
-    ros-indigo/geometry_msgs
-    ros-indigo/controller_manager
-    ros-indigo/roscpp
-    ros-indigo/rostopic
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/teleop_twist_joy
     ros-indigo/twist_mux
+    ros-indigo/joint_trajectory_controller
+    ros-indigo/controller_manager
+    ros-indigo/geometry_msgs
+    ros-indigo/joy
     ros-indigo/joint_state_controller
+    ros-indigo/roscpp
+    ros-indigo/diff_drive_controller
+    ros-indigo/robot_localization
+    ros-indigo/rostopic
+    ros-indigo/imu_sensor_controller
+    ros-indigo/teleop_twist_joy
+    ros-indigo/interactive_marker_twist_server
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

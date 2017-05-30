@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
-    ros-indigo/sensor_msgs
-    ros-indigo/tf2_sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/tf2_ros
+    ros-indigo/tf2_sensor_msgs
     ros-indigo/message_filters
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/tf2
+    ros-indigo/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

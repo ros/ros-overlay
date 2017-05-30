@@ -12,26 +12,26 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/rosbag_storage
-    ros-indigo/naoqi_bridge_msgs
-    ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
-    ros-indigo/naoqi_libqi
-    ros-indigo/naoqi_libqicore
-    ros-indigo/robot_state_publisher
-    ros-indigo/tf2_ros
     ros-indigo/image_transport
+    ros-indigo/naoqi_libqicore
+    ros-indigo/tf2_ros
+    ros-indigo/orocos_kdl
+    ros-indigo/naoqi_bridge_msgs
+    ros-indigo/naoqi_libqi
+    ros-indigo/robot_state_publisher
+    ros-indigo/kdl_parser
+    ros-indigo/cv_bridge
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosgraph_msgs
     ros-indigo/tf2_geometry_msgs
-    ros-indigo/tf2_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/diagnostic_updater
     ros-indigo/diagnostic_msgs
+    ros-indigo/tf2_msgs
+    ros-indigo/diagnostic_updater
+    ros-indigo/sensor_msgs
+    ros-indigo/rosgraph_msgs
 "
 
 SLOT="0/0"

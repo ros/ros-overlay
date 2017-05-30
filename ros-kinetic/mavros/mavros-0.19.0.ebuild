@@ -8,29 +8,29 @@ DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros/0.19.0-0.tar.gz"
 
-LICENSE="||( GPLv3 LGPLv3 BSD )"
+LICENSE="|| ( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/mavlink
-    ros-kinetic/rospy
     ros-kinetic/pluginlib
-    ros-kinetic/std_srvs
+    ros-kinetic/mavros_msgs
+    ros-kinetic/rospy
+    ros-kinetic/libmavconn
+    ros-kinetic/geometry_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/rosconsole_bridge
-    ros-kinetic/geometry_msgs
-    ros-kinetic/libmavconn
-    ros-kinetic/mavros_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/eigen_conversions
     ros-kinetic/tf2_ros
+    ros-kinetic/std_srvs
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/eigen_conversions
     ros-kinetic/diagnostic_msgs
-    dev-libs/boost
+    ros-kinetic/std_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/mavlink
     dev-cpp/eigen
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

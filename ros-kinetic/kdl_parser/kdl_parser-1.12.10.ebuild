@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/rosconsole
     ros-kinetic/orocos_kdl
-    ros-kinetic/roscpp
     ros-kinetic/urdf
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/cmake_modules
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

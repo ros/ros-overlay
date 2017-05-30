@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/gencpp
     ros-kinetic/genmsg
     ros-kinetic/gennodejs
     ros-kinetic/geneus
-    ros-kinetic/gencpp
     ros-kinetic/genpy
     ros-kinetic/genlisp
 "

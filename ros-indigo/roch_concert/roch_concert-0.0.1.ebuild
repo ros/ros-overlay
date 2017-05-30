@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/concert_service_admin
-    ros-indigo/concert_service_teleop
     ros-indigo/concert_service_indoor_2d_map_prep
     ros-indigo/concert_master
+    ros-indigo/concert_service_teleop
+    ros-indigo/concert_service_admin
 "
 DEPEND="${RDEPEND}
 "

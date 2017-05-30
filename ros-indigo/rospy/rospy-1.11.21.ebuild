@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosgraph_msgs
     ros-indigo/rosgraph
-    ros-indigo/genpy
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
     ros-indigo/roslib
-    dev-python/pyyaml
-    dev-python/numpy
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/genpy
+    ros-indigo/rosgraph_msgs
     dev-python/rospkg
+    dev-python/numpy
+    dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
 "

@@ -12,18 +12,18 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_srvs
-    ros-indigo/cob_utilities
-    ros-indigo/control_msgs
     ros-indigo/rospy
+    ros-indigo/actionlib
     ros-indigo/std_srvs
+    ros-indigo/cob_generic_can
     ros-indigo/cob_canopen_motor
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/cob_generic_can
-    ros-indigo/actionlib
     ros-indigo/diagnostic_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/control_msgs
+    ros-indigo/cob_utilities
+    ros-indigo/cob_srvs
 "
 DEPEND="${RDEPEND}
 "

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/hector_pose_estimation
-    ros-indigo/hector_uav_msgs
     ros-indigo/nodelet
+    ros-indigo/hector_uav_msgs
 "
 DEPEND="${RDEPEND}
 "

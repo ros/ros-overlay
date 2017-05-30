@@ -12,21 +12,21 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_control_msgs
-    ros-indigo/tf_conversions
-    ros-indigo/rospy
     ros-indigo/cmake_modules
-    ros-indigo/moveit_ros_perception
     ros-indigo/geometric_shapes
-    ros-indigo/geometry_msgs
+    ros-indigo/moveit_msgs
+    ros-indigo/cob_control_msgs
+    ros-indigo/rospy
     ros-indigo/moveit_ros_planning_interface
+    ros-indigo/geometry_msgs
+    ros-indigo/tf_conversions
+    ros-indigo/eigen_conversions
+    ros-indigo/moveit_core
+    ros-indigo/moveit_ros_perception
+    ros-indigo/fcl
     ros-indigo/roscpp
     ros-indigo/tf
     ros-indigo/cob_srvs
-    ros-indigo/fcl
-    ros-indigo/moveit_core
-    ros-indigo/eigen_conversions
-    ros-indigo/moveit_msgs
     dev-cpp/eigen
     dev-libs/boost
 "

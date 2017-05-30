@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecto_ros
-    ros-indigo/ecto
     ros-indigo/sensor_msgs
+    ros-indigo/ecto
+    ros-indigo/ecto_ros
     ros-indigo/pcl_conversions
     dev-libs/boost
 "

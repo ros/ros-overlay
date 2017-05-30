@@ -12,15 +12,15 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_ronex_external_protocol
     ros-indigo/sr_ronex_msgs
-    ros-indigo/sr_ronex_launch
+    ros-indigo/sr_ronex_transmissions
     ros-indigo/sr_ronex_hardware_interface
+    ros-indigo/sr_ronex_drivers
     ros-indigo/sr_ronex_utilities
     ros-indigo/sr_ronex_examples
     ros-indigo/sr_ronex_controllers
-    ros-indigo/sr_ronex_drivers
-    ros-indigo/sr_ronex_transmissions
+    ros-indigo/sr_ronex_external_protocol
+    ros-indigo/sr_ronex_launch
 "
 DEPEND="${RDEPEND}
 "

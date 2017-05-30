@@ -12,19 +12,19 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/control_msgs
+    ros-indigo/moveit_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/katana_msgs
     ros-indigo/kni
-    ros-indigo/control_msgs
-    ros-indigo/std_srvs
-    ros-indigo/trajectory_msgs
     ros-indigo/roslib
-    ros-indigo/tf
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/moveit_msgs
-    ros-indigo/actionlib
+    ros-indigo/sensor_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
     sci-libs/armadillo
 "
 DEPEND="${RDEPEND}

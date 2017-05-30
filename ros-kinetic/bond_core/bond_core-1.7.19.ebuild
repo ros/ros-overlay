@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/bond
     ros-kinetic/smclib
     ros-kinetic/bondpy
+    ros-kinetic/bond
     ros-kinetic/bondcpp
 "
 DEPEND="${RDEPEND}

@@ -13,15 +13,15 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
     ros-indigo/pluginlib
-    ros-indigo/path_navigation_msgs
+    ros-indigo/moveit_msgs
+    ros-indigo/geometry_msgs
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/roscpp
+    ros-indigo/path_navigation_msgs
     ros-indigo/moveit_core
-    ros-indigo/moveit_msgs
+    ros-indigo/roscpp
+    ros-indigo/control_msgs
 "
 DEPEND="${RDEPEND}
 "

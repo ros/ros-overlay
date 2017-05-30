@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nodelet
     ros-indigo/pluginlib
     ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
-    ros-indigo/nodelet
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/angles
     ros-indigo/rostest
     ros-indigo/pcl_conversions
-    ros-indigo/angles
 "
 
 SLOT="0/0"

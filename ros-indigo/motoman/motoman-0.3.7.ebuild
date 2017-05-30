@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/motoman_sia10d_support
-    ros-indigo/motoman_sia5d_support
-    ros-indigo/motoman_driver
-    ros-indigo/motoman_sia20d_support
-    ros-indigo/motoman_sia20d_moveit_config
     ros-indigo/motoman_mh5_support
+    ros-indigo/motoman_sia20d_support
+    ros-indigo/motoman_driver
+    ros-indigo/motoman_sia5d_support
+    ros-indigo/motoman_sia10d_support
+    ros-indigo/motoman_sia20d_moveit_config
 "
 DEPEND="${RDEPEND}
 "

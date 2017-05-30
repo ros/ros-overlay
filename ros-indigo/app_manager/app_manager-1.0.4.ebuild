@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_runtime
-    ros-indigo/rosgraph
     ros-indigo/rosunit
+    ros-indigo/rosgraph
     ros-indigo/rospy
     ros-indigo/roslaunch
 "

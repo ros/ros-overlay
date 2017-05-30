@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/cob_description
     ros-indigo/raw_description
-    ros-indigo/cob_srvs
     ros-indigo/cob_msgs
+    ros-indigo/cob_srvs
 "
 DEPEND="${RDEPEND}
 "

@@ -17,8 +17,8 @@ RDEPEND="
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
     ros-lunar/rosunit
+    ros-lunar/rostest
     dev-libs/boost
 "
 

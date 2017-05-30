@@ -13,18 +13,18 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
+    ros-indigo/schunk_libm5api
     ros-indigo/std_srvs
-    ros-indigo/trajectory_msgs
+    ros-indigo/libntcan
+    ros-indigo/roscpp
+    ros-indigo/diagnostic_msgs
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/roscpp
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
     ros-indigo/urdf
-    ros-indigo/cob_srvs
-    ros-indigo/schunk_libm5api
     ros-indigo/libpcan
-    ros-indigo/libntcan
-    ros-indigo/diagnostic_msgs
+    ros-indigo/cob_srvs
     sys-kernel/linux-headers
 "
 DEPEND="${RDEPEND}

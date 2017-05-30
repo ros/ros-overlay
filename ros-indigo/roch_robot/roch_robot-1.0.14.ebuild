@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roch_capabilities
-    ros-indigo/roch_base
+    ros-indigo/roch_description
     ros-indigo/roch_sensorpc
+    ros-indigo/roch_msgs
+    ros-indigo/roch_base
+    ros-indigo/roch_capabilities
+    ros-indigo/roch_ftdi
     ros-indigo/roch_safety_controller
     ros-indigo/roch_control
-    ros-indigo/roch_description
-    ros-indigo/roch_msgs
-    ros-indigo/roch_ftdi
 "
 DEPEND="${RDEPEND}
 "

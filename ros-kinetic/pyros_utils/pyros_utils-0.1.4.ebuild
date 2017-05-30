@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph
     ros-kinetic/rostest
+    ros-kinetic/rosgraph
     ros-kinetic/rospy
     ros-kinetic/roslaunch
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin_pip
     ros-kinetic/roslint
+    ros-kinetic/catkin_pip
 "
 
 SLOT="0/0"

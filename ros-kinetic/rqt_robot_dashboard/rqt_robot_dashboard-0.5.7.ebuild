@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rqt_robot_monitor
     ros-kinetic/rqt_console
     ros-kinetic/rospy
-    ros-kinetic/rqt_robot_monitor
-    ros-kinetic/qt_gui
-    ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
     ros-kinetic/rqt_nav_view
-    ros-kinetic/python_qt_binding
+    ros-kinetic/rqt_gui
+    ros-kinetic/qt_gui
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/python_qt_binding
+    ros-kinetic/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/control_msgs
-    ros-indigo/moveit_core
-    ros-indigo/pluginlib
-    ros-indigo/actionlib
     ros-indigo/roscpp
+    ros-indigo/moveit_core
+    ros-indigo/actionlib
+    ros-indigo/pluginlib
 "
 DEPEND="${RDEPEND}
 "

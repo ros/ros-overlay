@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_geometry
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/class_loader
-    ros-kinetic/costmap_2d
-    ros-kinetic/pcl_conversions
-    ros-kinetic/tf
-    ros-kinetic/rtabmap
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/pcl_ros
-    ros-kinetic/tf2_ros
-    ros-kinetic/image_transport
-    ros-kinetic/tf_conversions
     ros-kinetic/nav_msgs
-    ros-kinetic/image_transport_plugins
     ros-kinetic/laser_geometry
+    ros-kinetic/image_transport_plugins
+    ros-kinetic/std_msgs
     ros-kinetic/rviz
-    ros-kinetic/octomap_ros
-    ros-kinetic/message_filters
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/cv_bridge
-    ros-kinetic/visualization_msgs
-    ros-kinetic/rospy
-    ros-kinetic/move_base_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/tf2_ros
+    ros-kinetic/tf_conversions
+    ros-kinetic/rtabmap
+    ros-kinetic/image_transport
     ros-kinetic/stereo_msgs
     ros-kinetic/eigen_conversions
+    ros-kinetic/sensor_msgs
+    ros-kinetic/pcl_conversions
+    ros-kinetic/cv_bridge
+    ros-kinetic/costmap_2d
+    ros-kinetic/nodelet
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rospy
+    ros-kinetic/move_base_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/octomap_ros
+    ros-kinetic/std_srvs
+    ros-kinetic/visualization_msgs
+    ros-kinetic/tf
+    ros-kinetic/image_geometry
+    ros-kinetic/class_loader
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/pcl_ros
 "
 DEPEND="${RDEPEND}
     sci-libs/pcl

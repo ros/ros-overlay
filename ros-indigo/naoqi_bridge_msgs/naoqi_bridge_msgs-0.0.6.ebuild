@@ -12,14 +12,14 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/genmsg
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/actionlib_msgs
     ros-indigo/message_runtime
+    ros-indigo/genmsg
+    ros-indigo/std_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

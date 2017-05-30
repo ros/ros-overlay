@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
-    media-libs/mesa
-    dev-libs/boost
     sci-libs/fftw
+    dev-libs/boost
+    media-libs/mesa
     dev-games/openscenegraph
 "
 DEPEND="${RDEPEND}

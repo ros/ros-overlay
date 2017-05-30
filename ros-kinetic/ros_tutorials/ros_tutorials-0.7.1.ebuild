@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlesim
     ros-kinetic/roscpp_tutorials
     ros-kinetic/rospy_tutorials
+    ros-kinetic/turtlesim
 "
 DEPEND="${RDEPEND}
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
     ros-indigo/ndt_map
-    ros-indigo/ndt_registration
-    ros-indigo/std_srvs
     ros-indigo/laser_geometry
-    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
     ros-indigo/ndt_visualisation
     ros-indigo/message_runtime
-    media-libs/mesa
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/ndt_registration
     sci-libs/pcl
+    media-libs/mesa
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

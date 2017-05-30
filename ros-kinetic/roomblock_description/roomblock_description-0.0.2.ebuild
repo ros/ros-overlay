@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/urdf
     ros-kinetic/xacro
     ros-kinetic/create_description
-    ros-kinetic/joint_state_publisher
+    ros-kinetic/urdf
     ros-kinetic/rviz
     ros-kinetic/robot_state_publisher
+    ros-kinetic/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

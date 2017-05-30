@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roseus
     ros-kinetic/control_msgs
-    ros-kinetic/moveit_msgs
     ros-kinetic/pr2eus
+    ros-kinetic/roseus
+    ros-kinetic/moveit_msgs
 "
 DEPEND="${RDEPEND}
 "

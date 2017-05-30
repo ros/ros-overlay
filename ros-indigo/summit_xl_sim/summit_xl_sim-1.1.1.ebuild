@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/summit_xl_sim_bringup
-    ros-indigo/summit_xl_robot_control
-    ros-indigo/summit_xl_control
     ros-indigo/summit_xl_gazebo
+    ros-indigo/summit_xl_control
+    ros-indigo/summit_xl_robot_control
 "
 DEPEND="${RDEPEND}
 "

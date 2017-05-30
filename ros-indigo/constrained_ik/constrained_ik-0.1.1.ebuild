@@ -12,18 +12,18 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/pluginlib
-    ros-indigo/industrial_collision_detection
     ros-indigo/cmake_modules
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/pluginlib
+    ros-indigo/tf_conversions
+    ros-indigo/industrial_collision_detection
     ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/moveit_ros_planning
     ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning
     ros-indigo/eigen_conversions
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/kdl_parser
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

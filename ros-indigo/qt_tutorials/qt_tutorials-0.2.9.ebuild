@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/qt_build
+    ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/message_runtime
-    ros-indigo/roscpp
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}

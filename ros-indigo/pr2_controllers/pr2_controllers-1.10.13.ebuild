@@ -13,15 +13,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ethercat_trigger_controllers
-    ros-indigo/control_toolbox
-    ros-indigo/pr2_head_action
-    ros-indigo/pr2_gripper_action
+    ros-indigo/pr2_calibration_controllers
     ros-indigo/joint_trajectory_action
     ros-indigo/single_joint_position_action
-    ros-indigo/pr2_controllers_msgs
-    ros-indigo/pr2_calibration_controllers
-    ros-indigo/robot_mechanism_controllers
     ros-indigo/pr2_mechanism_controllers
+    ros-indigo/pr2_head_action
+    ros-indigo/pr2_gripper_action
+    ros-indigo/pr2_controllers_msgs
+    ros-indigo/robot_mechanism_controllers
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
 "

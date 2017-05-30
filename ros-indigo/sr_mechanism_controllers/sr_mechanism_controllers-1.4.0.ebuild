@@ -13,28 +13,28 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/ros_ethercat_model
     ros-indigo/control_msgs
-    ros-indigo/control_toolbox
     ros-indigo/pluginlib
+    ros-indigo/angles
+    ros-indigo/sr_robot_msgs
+    ros-indigo/controller_manager_msgs
+    ros-indigo/actionlib
+    ros-indigo/sr_utilities
+    ros-indigo/roscpp
+    ros-indigo/ros_ethercat_model
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
     ros-indigo/std_srvs
     ros-indigo/sr_hardware_interface
-    ros-indigo/realtime_tools
-    ros-indigo/sr_robot_msgs
-    ros-indigo/controller_interface
-    ros-indigo/std_msgs
-    ros-indigo/controller_manager_msgs
-    ros-indigo/velocity_controllers
-    ros-indigo/roscpp
-    ros-indigo/sr_utilities
     ros-indigo/xmlrpcpp
-    ros-indigo/actionlib
-    ros-indigo/angles
+    ros-indigo/rosconsole
+    ros-indigo/velocity_controllers
+    ros-indigo/controller_interface
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
     dev-libs/tinyxml
 "
 

@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/controller_manager
     ros-kinetic/rospy
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/hardware_interface
-    ros-kinetic/controller_manager
-    ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
-    ros-kinetic/naoqi_libqi
     ros-kinetic/naoqi_libqicore
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/naoqi_libqi
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/hardware_interface
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/diagnostic_updater
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
 "
 
 SLOT="0/0"

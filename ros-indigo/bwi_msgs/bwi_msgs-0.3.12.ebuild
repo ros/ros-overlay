@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bwi_planning_common
-    ros-indigo/actionlib_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/actionlib_msgs
     ros-indigo/std_msgs
     ros-indigo/message_runtime
+    ros-indigo/bwi_planning_common
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

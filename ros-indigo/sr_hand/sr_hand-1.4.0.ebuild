@@ -13,23 +13,23 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/self_test
-    ros-indigo/gazebo_msgs
-    ros-indigo/control_msgs
-    ros-indigo/rospy
-    ros-indigo/urdf
-    ros-indigo/std_srvs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/gazebo_ros
+    ros-indigo/control_msgs
+    ros-indigo/self_test
+    ros-indigo/rospy
     ros-indigo/sr_robot_msgs
+    ros-indigo/controller_manager_msgs
+    ros-indigo/gazebo_ros
+    ros-indigo/sr_utilities
+    ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/diagnostic_msgs
     ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/controller_manager_msgs
-    ros-indigo/roscpp
-    ros-indigo/sr_utilities
+    ros-indigo/std_srvs
     ros-indigo/robot_state_publisher
-    ros-indigo/roslib
-    ros-indigo/diagnostic_msgs
+    ros-indigo/gazebo_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

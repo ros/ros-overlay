@@ -15,9 +15,9 @@ RDEPEND="
     ros-kinetic/grid_map_msgs
     ros-kinetic/grid_map_ros
     ros-kinetic/rviz
-    dev-qt/qtwidgets
     dev-qt/qtcore
     dev-qt/qtgui
+    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

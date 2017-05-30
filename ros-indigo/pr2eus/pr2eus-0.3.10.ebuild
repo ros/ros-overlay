@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostest
-    ros-indigo/roseus
+    ros-indigo/dynamic_reconfigure
     ros-indigo/control_msgs
     ros-indigo/nav_msgs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/pr2_msgs
-    ros-indigo/pr2_description
     ros-indigo/pr2_controllers_msgs
     ros-indigo/move_base_msgs
     ros-indigo/sound_play
+    ros-indigo/roseus
     ros-indigo/euscollada
+    ros-indigo/rostest
+    ros-indigo/pr2_description
+    ros-indigo/pr2_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosgraph_msgs

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_planning
-    ros-indigo/trajectory_msgs
-    ros-indigo/orocos_kdl
     ros-indigo/pluginlib
     ros-indigo/moveit_core
+    ros-indigo/orocos_kdl
+    ros-indigo/moveit_ros_planning
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

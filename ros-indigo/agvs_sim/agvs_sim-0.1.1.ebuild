@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/agvs_sim_bringup
-    ros-indigo/agvs_gazebo
-    ros-indigo/agvs_control
     ros-indigo/agvs_robot_control
+    ros-indigo/agvs_sim_bringup
+    ros-indigo/agvs_control
+    ros-indigo/agvs_gazebo
 "
 DEPEND="${RDEPEND}
 "

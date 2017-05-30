@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/robot_state_publisher
-    ros-indigo/rviz
     ros-indigo/flir_ptu_description
     ros-indigo/joint_state_publisher
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -3,22 +3,22 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="ROS Wrapper for the Segway RMP Ethernet Python Driver"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gt-rail-release/ros_ethernet_rmp-release/archive/release/indigo/ros_ethernet_rmp/0.0.8-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rmp_msgs
-    ros-indigo/rospy
     ros-indigo/nav_msgs
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
     ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/battery_monitor_rmp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

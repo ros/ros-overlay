@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/python_orocos_kdl
     ros-kinetic/cmake_modules
-    ros-kinetic/tf2
+    ros-kinetic/python_orocos_kdl
     ros-kinetic/sensor_msgs
+    ros-kinetic/tf2
     ros-kinetic/tf2_ros
     dev-cpp/eigen
 "

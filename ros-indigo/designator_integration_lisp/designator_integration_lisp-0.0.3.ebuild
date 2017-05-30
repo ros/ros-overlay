@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cl_tf2
-    ros-indigo/roslisp
     ros-indigo/alexandria
+    ros-indigo/cl_tf2
     ros-indigo/designator_integration_msgs
+    ros-indigo/roslisp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/rqt_console
     ros-kinetic/rospy
     ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
     ros-kinetic/python_qt_binding
     ros-kinetic/rqt_py_common
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

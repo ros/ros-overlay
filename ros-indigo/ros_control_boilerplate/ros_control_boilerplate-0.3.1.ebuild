@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
-    ros-indigo/control_toolbox
-    ros-indigo/transmission_interface
-    ros-indigo/std_msgs
     ros-indigo/joint_limits_interface
-    ros-indigo/ros_controllers
-    ros-indigo/hardware_interface
     ros-indigo/controller_manager
+    ros-indigo/actionlib
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/rosparam_shortcuts
+    ros-indigo/control_toolbox
+    ros-indigo/std_msgs
     ros-indigo/trajectory_msgs
     ros-indigo/control_msgs
-    ros-indigo/urdf
     ros-indigo/sensor_msgs
-    ros-indigo/actionlib
-    ros-indigo/rosparam_shortcuts
+    ros-indigo/ros_controllers
+    ros-indigo/hardware_interface
+    ros-indigo/transmission_interface
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

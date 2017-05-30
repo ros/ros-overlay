@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gmapping
     ros-indigo/xacro
-    ros-indigo/map_server
-    ros-indigo/urdf
     ros-indigo/amcl
+    ros-indigo/gmapping
+    ros-indigo/urdf
+    ros-indigo/map_server
     ros-indigo/move_base
 "
 DEPEND="${RDEPEND}

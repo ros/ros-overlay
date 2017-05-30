@@ -12,30 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_driver
-    ros-kinetic/pluginlib
-    ros-kinetic/kobuki_msgs
-    ros-kinetic/kobuki_ftdi
-    ros-kinetic/ecl_sigslots
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/tf
-    ros-kinetic/kobuki_keyop
-    ros-kinetic/kobuki_rapps
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/diagnostic_aggregator
-    ros-kinetic/kobuki_safety_controller
-    ros-kinetic/nav_msgs
-    ros-kinetic/capabilities
-    ros-kinetic/ecl_streams
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/rospy
-    ros-kinetic/ecl_exceptions
-    ros-kinetic/sensor_msgs
-    ros-kinetic/ecl_threads
     ros-kinetic/angles
+    ros-kinetic/nav_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/kobuki_safety_controller
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/kobuki_rapps
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/ecl_exceptions
+    ros-kinetic/ecl_threads
+    ros-kinetic/nodelet
+    ros-kinetic/ecl_sigslots
+    ros-kinetic/rospy
+    ros-kinetic/capabilities
+    ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/kobuki_ftdi
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/pluginlib
+    ros-kinetic/ecl_streams
+    ros-kinetic/geometry_msgs
+    ros-kinetic/kobuki_msgs
+    ros-kinetic/kobuki_keyop
+    ros-kinetic/kobuki_driver
 "
 DEPEND="${RDEPEND}
 "

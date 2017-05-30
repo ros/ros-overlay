@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rostime
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/xmlrpcpp
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/rostime
+    ros-kinetic/rosconsole
+    ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
-    ros-kinetic/message_generation
-    ros-kinetic/rosunit
     ros-kinetic/cpp_common
+    ros-kinetic/rosunit
+    ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

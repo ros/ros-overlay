@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros_control
-    ros-indigo/ros_controllers
-    ros-indigo/effort_controllers
-    ros-indigo/gazebo_ros
-    ros-indigo/ur_description
     ros-indigo/joint_trajectory_controller
     ros-indigo/controller_manager
-    ros-indigo/robot_state_publisher
+    ros-indigo/gazebo_ros
+    ros-indigo/ur_description
+    ros-indigo/gazebo_ros_control
     ros-indigo/joint_state_controller
+    ros-indigo/effort_controllers
+    ros-indigo/robot_state_publisher
+    ros-indigo/ros_controllers
 "
 DEPEND="${RDEPEND}
 "

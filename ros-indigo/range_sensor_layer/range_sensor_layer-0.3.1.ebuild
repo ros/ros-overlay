@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/pluginlib
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/costmap_2d
     ros-indigo/angles
+    ros-indigo/rospy
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
 "

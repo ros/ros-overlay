@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jaco_interaction
+    ros-indigo/jaco_sdk
+    ros-indigo/wpi_jaco_wrapper
     ros-indigo/mico_moveit_config
     ros-indigo/jaco_description
-    ros-indigo/jaco_moveit_config
-    ros-indigo/wpi_jaco_wrapper
-    ros-indigo/jaco_sdk
     ros-indigo/mico_description
+    ros-indigo/jaco_moveit_config
+    ros-indigo/jaco_interaction
     ros-indigo/jaco_teleop
     ros-indigo/wpi_jaco_msgs
 "

@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_controllers_interface
-    ros-indigo/control_toolbox
-    ros-indigo/robot_controllers
-    ros-indigo/trajectory_msgs
-    ros-indigo/gazebo_ros
-    ros-indigo/xacro
-    ros-indigo/geometry_msgs
-    ros-indigo/gazebo_plugins
-    ros-indigo/rgbd_launch
-    ros-indigo/image_proc
-    ros-indigo/depth_image_proc
-    ros-indigo/fetch_description
     ros-indigo/nodelet
+    ros-indigo/gazebo_ros
+    ros-indigo/geometry_msgs
+    ros-indigo/image_proc
     ros-indigo/actionlib
+    ros-indigo/depth_image_proc
+    ros-indigo/rgbd_launch
+    ros-indigo/xacro
+    ros-indigo/robot_controllers_interface
+    ros-indigo/gazebo_plugins
+    ros-indigo/trajectory_msgs
+    ros-indigo/robot_controllers
+    ros-indigo/fetch_description
+    ros-indigo/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-indigo/angles

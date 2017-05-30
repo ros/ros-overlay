@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_robot_dashboard
-    ros-indigo/kobuki_msgs
     ros-indigo/rospy
+    ros-indigo/kobuki_msgs
 "
 DEPEND="${RDEPEND}
 "

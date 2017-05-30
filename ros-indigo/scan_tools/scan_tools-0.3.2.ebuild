@@ -7,16 +7,16 @@ DESCRIPTION="Laser scan processing tools."
 HOMEPAGE="http://ros.org/wiki/scan_tools"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/scan_tools/0.3.2-0.tar.gz"
 
-LICENSE="||( BSD LGPLv3 )"
+LICENSE="|| ( BSD LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ncd_parser
-    ros-indigo/laser_ortho_projector
     ros-indigo/laser_scan_splitter
     ros-indigo/laser_scan_matcher
     ros-indigo/polar_scan_matcher
+    ros-indigo/ncd_parser
     ros-indigo/scan_to_cloud_converter
+    ros-indigo/laser_ortho_projector
     ros-indigo/laser_scan_sparsifier
 "
 DEPEND="${RDEPEND}

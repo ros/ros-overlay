@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kobuki_safety_controller
-    ros-kinetic/joy
-    ros-kinetic/geometry_msgs
-    ros-kinetic/turtlebot_bringup
-    ros-kinetic/roscpp
     ros-kinetic/yocs_velocity_smoother
+    ros-kinetic/geometry_msgs
+    ros-kinetic/joy
+    ros-kinetic/roscpp
+    ros-kinetic/kobuki_safety_controller
+    ros-kinetic/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

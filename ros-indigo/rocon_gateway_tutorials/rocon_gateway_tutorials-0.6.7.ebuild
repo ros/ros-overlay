@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/rocon_hub
     ros-indigo/rocon_gateway
-    ros-indigo/zeroconf_avahi
     ros-indigo/rocon_gateway_graph
+    ros-indigo/zeroconf_avahi
 "
 DEPEND="${RDEPEND}
 "

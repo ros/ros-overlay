@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf
     ros-indigo/roscpp
+    ros-indigo/tf
     ros-indigo/serial
 "
 DEPEND="${RDEPEND}

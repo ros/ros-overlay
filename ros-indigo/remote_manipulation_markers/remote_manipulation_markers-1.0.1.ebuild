@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/visualization_msgs
-    ros-indigo/std_srvs
-    ros-indigo/actionlib_msgs
     ros-indigo/rail_segmentation
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/message_runtime
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
+    ros-indigo/rail_manipulation_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/visualization_msgs
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

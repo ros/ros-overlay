@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_msgs
     ros-kinetic/rospy
-    ros-kinetic/dynamixel_msgs
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/dynamixel_driver
     ros-kinetic/actionlib
+    ros-kinetic/dynamixel_msgs
+    ros-kinetic/dynamixel_driver
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/control_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

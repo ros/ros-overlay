@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/dynamic_reconfigure
-    ros-indigo/people_msgs
     ros-indigo/roscpp
+    ros-indigo/people_msgs
     ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}

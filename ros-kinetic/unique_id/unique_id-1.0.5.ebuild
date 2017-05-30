@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/uuid_msgs
-    ros-kinetic/rospy
     ros-kinetic/roscpp
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 "

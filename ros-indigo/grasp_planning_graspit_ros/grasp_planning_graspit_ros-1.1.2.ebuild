@@ -12,10 +12,10 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/manipulation_msgs
-    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/roscpp
+    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/grasp_planning_graspit
+    ros-indigo/manipulation_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

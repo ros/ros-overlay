@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/pcl_conversions
     ros-indigo/pcl_ros
-    ros-indigo/roscpp
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

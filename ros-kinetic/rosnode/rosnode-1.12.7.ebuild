@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph
     ros-kinetic/rostopic
+    ros-kinetic/rosgraph
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

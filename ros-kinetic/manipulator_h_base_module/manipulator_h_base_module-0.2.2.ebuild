@@ -14,16 +14,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
-    ros-kinetic/robotis_device
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
     ros-kinetic/cmake_modules
+    ros-kinetic/robotis_device
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/dynamixel_sdk
-    ros-kinetic/manipulator_h_kinematics_dynamics
-    ros-kinetic/robotis_math
     ros-kinetic/manipulator_h_base_module_msgs
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/robotis_math
+    ros-kinetic/manipulator_h_kinematics_dynamics
 "
 
 SLOT="0/0"

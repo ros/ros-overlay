@@ -16,14 +16,14 @@ RDEPEND="
     ros-indigo/sensor_msgs
     ros-indigo/tf
     dev-lang/python
-    dev-python/pillow
+    dev-python/pyside
+    dev-python/PyQt4
     dev-python/numpy
     dev-python/matplotlib
-    dev-python/pyopengl
-    dev-python/PyQt4
     media-libs/freeglut
-    dev-python/pyside
+    dev-python/pyopengl
     dev-libs/scipy
+    dev-python/pillow
 "
 DEPEND="${RDEPEND}
 "

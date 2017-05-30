@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/cob_navigation
-    ros-indigo/cob_bringup
     ros-indigo/cob_manipulation
+    ros-indigo/cob_bringup
 "
 DEPEND="${RDEPEND}
 "

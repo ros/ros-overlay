@@ -12,15 +12,15 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/std_srvs
     ros-indigo/cmake_modules
-    ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
+    ros-indigo/orocos_kdl
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/kdl_parser
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

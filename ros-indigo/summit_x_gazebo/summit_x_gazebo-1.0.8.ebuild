@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/summit_x_robot_control
     ros-indigo/summit_x_description
-    ros-indigo/std_srvs
     ros-indigo/gazebo_ros
-    ros-indigo/summit_x_control
     ros-indigo/xacro
-    ros-indigo/std_msgs
+    ros-indigo/summit_x_robot_control
     ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/summit_x_control
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

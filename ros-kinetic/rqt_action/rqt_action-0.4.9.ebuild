@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rqt_py_common
     ros-kinetic/rqt_msg
+    ros-kinetic/rqt_py_common
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

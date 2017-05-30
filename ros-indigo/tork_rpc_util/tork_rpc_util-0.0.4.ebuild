@@ -15,10 +15,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/genpy
-    ros-indigo/std_msgs
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/message_runtime
+    ros-indigo/std_msgs
+    ros-indigo/genpy
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslint

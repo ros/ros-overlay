@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/grid_map_msgs
     ros-indigo/grid_map_ros
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

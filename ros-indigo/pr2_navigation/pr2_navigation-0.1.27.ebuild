@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_navigation_self_filter
-    ros-indigo/pr2_navigation_teleop
-    ros-indigo/pr2_navigation_perception
-    ros-indigo/pr2_navigation_config
-    ros-indigo/pr2_navigation_local
-    ros-indigo/pr2_navigation_global
-    ros-indigo/laser_tilt_controller_filter
     ros-indigo/pr2_navigation_slam
     ros-indigo/pr2_move_base
+    ros-indigo/laser_tilt_controller_filter
+    ros-indigo/pr2_navigation_teleop
+    ros-indigo/pr2_navigation_perception
+    ros-indigo/pr2_navigation_self_filter
+    ros-indigo/pr2_navigation_local
     ros-indigo/semantic_point_annotator
+    ros-indigo/pr2_navigation_global
+    ros-indigo/pr2_navigation_config
 "
 DEPEND="${RDEPEND}
 "

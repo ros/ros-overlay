@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/rospy
     ros-indigo/camera_info_manager
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/camera_calibration_parsers
+    ros-indigo/rospack
+    ros-indigo/rospy
     ros-indigo/image_transport
+    ros-indigo/geometry_msgs
     ros-indigo/message_runtime
     ros-indigo/roslib
-    ros-indigo/rospack
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/robotis_math
     ros-kinetic/roscpp
+    ros-kinetic/robotis_math
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

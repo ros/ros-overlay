@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tetris_description
-    ros-indigo/gazebo_ros_control
+    ros-indigo/rosbash
     ros-indigo/gazebo_ros
     ros-indigo/xacro
+    ros-indigo/gazebo_ros_control
     ros-indigo/gazebo_plugins
+    ros-indigo/tetris_description
     ros-indigo/robot_state_publisher
-    ros-indigo/rosbash
 "
 DEPEND="${RDEPEND}
 "

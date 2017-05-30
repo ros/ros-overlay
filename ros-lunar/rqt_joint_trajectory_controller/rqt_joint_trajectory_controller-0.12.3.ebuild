@@ -12,11 +12,11 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/controller_manager_msgs
     ros-lunar/rospy
+    ros-lunar/controller_manager_msgs
+    ros-lunar/rqt_gui
     ros-lunar/trajectory_msgs
     ros-lunar/control_msgs
-    ros-lunar/rqt_gui
     ros-lunar/rqt_gui_py
 "
 DEPEND="${RDEPEND}

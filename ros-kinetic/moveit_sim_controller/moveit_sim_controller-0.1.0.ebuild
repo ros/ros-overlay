@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosparam_shortcuts
-    ros-kinetic/moveit_ros_planning
-    ros-kinetic/moveit_core
-    ros-kinetic/ros_control_boilerplate
     ros-kinetic/roscpp
+    ros-kinetic/ros_control_boilerplate
+    ros-kinetic/moveit_core
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/rosparam_shortcuts
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslint

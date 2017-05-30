@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trajectory_msgs
+    ros-indigo/genmsg
     ros-indigo/std_msgs
     ros-indigo/message_runtime
-    ros-indigo/genmsg
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

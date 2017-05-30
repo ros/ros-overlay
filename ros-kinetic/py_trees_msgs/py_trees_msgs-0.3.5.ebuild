@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/uuid_msgs
+    ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/actionlib_msgs
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

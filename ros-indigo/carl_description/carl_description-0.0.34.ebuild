@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/robot_state_publisher
-    ros-indigo/joint_state_publisher
     ros-indigo/jaco_description
+    ros-indigo/joint_state_publisher
     ros-indigo/xacro
 "
 DEPEND="${RDEPEND}

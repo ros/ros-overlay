@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ros_comm
-    ros-indigo/ros
-    ros-indigo/rosgraph_msgs
-    ros-indigo/genmsg
-    ros-indigo/std_srvs
-    ros-indigo/common_msgs
-    ros-indigo/gencpp
-    ros-indigo/roslisp
-    ros-indigo/roscpp_core
     ros-indigo/cmake_modules
-    ros-indigo/rosconsole_bridge
-    ros-indigo/genpy
-    ros-indigo/std_msgs
-    ros-indigo/message_generation
-    ros-indigo/rosbag_migration_rule
-    ros-indigo/genlisp
-    ros-indigo/message_runtime
     ros-indigo/rospack
+    ros-indigo/gencpp
+    ros-indigo/message_generation
+    ros-indigo/common_msgs
+    ros-indigo/rosconsole_bridge
+    ros-indigo/std_srvs
+    ros-indigo/rosgraph_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roslisp
+    ros-indigo/genmsg
     ros-indigo/catkin
+    ros-indigo/ros
+    ros-indigo/rosbag_migration_rule
+    ros-indigo/genpy
+    ros-indigo/roscpp_core
+    ros-indigo/std_msgs
+    ros-indigo/ros_comm
+    ros-indigo/genlisp
 "
 DEPEND="${RDEPEND}
 "

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>fxm@ipa.fhg.de</email>
+      <name>Felix Messmer</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_control/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

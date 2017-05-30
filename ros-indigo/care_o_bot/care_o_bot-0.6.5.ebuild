@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_navigation
-    ros-indigo/cob_manipulation
-    ros-indigo/care_o_bot_simulation
     ros-indigo/care_o_bot_robot
+    ros-indigo/care_o_bot_simulation
+    ros-indigo/cob_manipulation
+    ros-indigo/cob_navigation
 "
 DEPEND="${RDEPEND}
 "

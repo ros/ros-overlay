@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosh_robot
     ros-indigo/rosh_common
     ros-indigo/rosh_geometry
+    ros-indigo/rosh_robot
 "
 DEPEND="${RDEPEND}
 "

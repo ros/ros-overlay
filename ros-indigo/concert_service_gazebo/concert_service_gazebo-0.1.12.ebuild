@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rocon_gateway_utils
+    ros-indigo/rospy
+    ros-indigo/rocon_std_msgs
+    ros-indigo/turtlebot_gazebo
+    ros-indigo/rocon_python_utils
+    ros-indigo/roslib
     ros-indigo/gateway_msgs
     ros-indigo/kobuki_gazebo
-    ros-indigo/rospy
-    ros-indigo/rocon_gateway_utils
     ros-indigo/rocon_console
-    ros-indigo/turtlebot_gazebo
-    ros-indigo/rocon_std_msgs
-    ros-indigo/roslib
     ros-indigo/rocon_launch
-    ros-indigo/rocon_python_utils
 "
 DEPEND="${RDEPEND}
 "

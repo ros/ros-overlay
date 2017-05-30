@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segbot_bringup
+    ros-indigo/fake_localization
     ros-indigo/segbot_navigation
     ros-indigo/gazebo_ros
+    ros-indigo/segbot_bringup
+    ros-indigo/gazebo_plugins
     ros-indigo/map_server
     ros-indigo/rviz
     ros-indigo/segbot_description
-    ros-indigo/fake_localization
-    ros-indigo/gazebo_plugins
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

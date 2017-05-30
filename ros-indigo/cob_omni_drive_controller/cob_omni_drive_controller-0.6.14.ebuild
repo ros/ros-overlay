@@ -12,19 +12,19 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf
-    ros-indigo/std_srvs
-    ros-indigo/nav_msgs
-    ros-indigo/realtime_tools
-    ros-indigo/controller_interface
-    ros-indigo/hardware_interface
-    ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/message_runtime
-    ros-indigo/tf
     ros-indigo/angles
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/std_srvs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/hardware_interface
+    ros-indigo/controller_interface
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

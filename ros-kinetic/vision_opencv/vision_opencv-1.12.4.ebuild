@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/image_geometry
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

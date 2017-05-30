@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pr2_controller_interface
+    ros-indigo/pr2_controller_manager
     ros-indigo/pr2_hardware_interface
     ros-indigo/pr2_mechanism_model
-    ros-indigo/pr2_controller_manager
     ros-indigo/pr2_mechanism_diagnostics
 "
 DEPEND="${RDEPEND}

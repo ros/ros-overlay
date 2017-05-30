@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
     ros-indigo/sr_robot_msgs
-    ros-indigo/std_msgs
+    ros-indigo/rqt_gui
     ros-indigo/sr_visualization_icons
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

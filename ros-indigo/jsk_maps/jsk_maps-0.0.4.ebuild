@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/euslisp
-    ros-indigo/multi_map_server
-    ros-indigo/geometry_msgs
     ros-indigo/jsk_rviz_plugins
+    ros-indigo/geometry_msgs
+    ros-indigo/euslisp
     ros-indigo/jskeus
+    ros-indigo/multi_map_server
     media-gfx/imagemagick
 "
 DEPEND="${RDEPEND}

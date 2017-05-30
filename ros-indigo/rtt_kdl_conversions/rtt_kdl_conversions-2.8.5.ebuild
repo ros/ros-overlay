@@ -12,8 +12,8 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kdl_conversions
     ros-indigo/rtt
+    ros-indigo/kdl_conversions
 "
 DEPEND="${RDEPEND}
 "

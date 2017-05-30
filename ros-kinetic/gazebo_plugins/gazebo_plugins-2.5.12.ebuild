@@ -12,30 +12,30 @@ LICENSE="BSD, Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/angles
+    ros-kinetic/nav_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2_ros
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/message_generation
+    ros-kinetic/sensor_msgs
     ros-kinetic/rostest
+    ros-kinetic/cv_bridge
+    ros-kinetic/camera_info_manager
+    ros-kinetic/nodelet
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/rospy
     ros-kinetic/polled_camera
     ros-kinetic/roscpp
-    ros-kinetic/nodelet
-    ros-kinetic/tf
-    ros-kinetic/std_srvs
-    ros-kinetic/camera_info_manager
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/urdf
-    ros-kinetic/tf2_ros
-    ros-kinetic/image_transport
-    ros-kinetic/rosconsole
-    ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/gazebo_msgs
-    ros-kinetic/cv_bridge
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/rospy
     ros-kinetic/trajectory_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/rosconsole
     ros-kinetic/gazebo_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/angles
+    ros-kinetic/geometry_msgs
+    ros-kinetic/gazebo_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

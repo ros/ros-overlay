@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet_tutorial_math
-    ros-lunar/turtle_actionlib
     ros-lunar/actionlib_tutorials
     ros-lunar/pluginlib_tutorials
+    ros-lunar/turtle_actionlib
+    ros-lunar/nodelet_tutorial_math
 "
 DEPEND="${RDEPEND}
 "

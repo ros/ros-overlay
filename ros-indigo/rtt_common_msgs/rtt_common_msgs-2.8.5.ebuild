@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rtt_actionlib_msgs
-    ros-indigo/rtt_sensor_msgs
-    ros-indigo/rtt_diagnostic_msgs
     ros-indigo/rtt_geometry_msgs
-    ros-indigo/rtt_nav_msgs
-    ros-indigo/rtt_trajectory_msgs
+    ros-indigo/rtt_visualization_msgs
+    ros-indigo/rtt_actionlib_msgs
+    ros-indigo/rtt_diagnostic_msgs
     ros-indigo/rtt_stereo_msgs
     ros-indigo/rtt_shape_msgs
-    ros-indigo/rtt_visualization_msgs
+    ros-indigo/rtt_sensor_msgs
+    ros-indigo/rtt_nav_msgs
+    ros-indigo/rtt_trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

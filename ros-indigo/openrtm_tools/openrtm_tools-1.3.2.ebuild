@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rtshell
-    ros-indigo/rosbash
-    ros-indigo/openrtm_aist
     ros-indigo/openrtm_aist_python
+    ros-indigo/rosbash
+    ros-indigo/rtshell
+    ros-indigo/openrtm_aist
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

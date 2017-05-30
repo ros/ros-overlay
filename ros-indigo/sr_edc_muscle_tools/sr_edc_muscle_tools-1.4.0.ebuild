@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/sr_hand
     ros-indigo/std_msgs
     ros-indigo/rospy
-    ros-indigo/sr_hand
 "
 DEPEND="${RDEPEND}
 "

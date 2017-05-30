@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/nodelet_topic_tools
-    ros-kinetic/image_geometry
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/image_transport
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_geometry
+    ros-kinetic/image_transport
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/nodelet_topic_tools
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     dev-libs/boost

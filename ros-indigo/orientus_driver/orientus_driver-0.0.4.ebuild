@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/sensor_msgs
     ros-indigo/orientus_sdk_c
+    ros-indigo/roscpp
     ros-indigo/geometry_msgs
     ros-indigo/diagnostic_updater
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

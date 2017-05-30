@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/tf_conversions
-    ros-indigo/cv_bridge
     ros-indigo/pluginlib
+    ros-indigo/tf_conversions
     ros-indigo/moveit_msgs
-    ros-indigo/image_transport
-    ros-indigo/roscpp
-    ros-indigo/urdf
     ros-indigo/octomap
     ros-indigo/message_filters
+    ros-indigo/image_transport
+    ros-indigo/roscpp
     ros-indigo/moveit_core
+    ros-indigo/urdf
     ros-indigo/sensor_msgs
     ros-indigo/tf
-    media-libs/mesa
+    ros-indigo/rosconsole
+    ros-indigo/cv_bridge
     media-libs/freeglut
     media-libs/glew
+    media-libs/mesa
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

@@ -12,10 +12,10 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joint_qualification_controllers
-    ros-indigo/pr2_counterbalance_check
-    ros-indigo/pr2_self_test_msgs
     ros-indigo/pr2_bringup_tests
+    ros-indigo/joint_qualification_controllers
+    ros-indigo/pr2_self_test_msgs
+    ros-indigo/pr2_counterbalance_check
 "
 DEPEND="${RDEPEND}
 "

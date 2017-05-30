@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
+    ros-indigo/topic_tools
+    ros-indigo/rosbag_storage
     ros-indigo/rospy
+    ros-indigo/roslib
+    ros-indigo/roscpp
     ros-indigo/genmsg
     ros-indigo/genpy
-    ros-indigo/topic_tools
-    ros-indigo/roscpp
-    ros-indigo/rosbag_storage
+    ros-indigo/rosconsole
     ros-indigo/xmlrpcpp
-    ros-indigo/roslib
-    dev-libs/boost
     dev-python/rospkg
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roscpp_serialization
     ros-indigo/cpp_common
+    ros-indigo/roscpp_serialization
     dev-python/pillow
 "
 

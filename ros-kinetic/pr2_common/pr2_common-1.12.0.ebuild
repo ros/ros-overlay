@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pr2_description
     ros-kinetic/pr2_machine
-    ros-kinetic/pr2_dashboard_aggregator
     ros-kinetic/pr2_msgs
+    ros-kinetic/pr2_dashboard_aggregator
+    ros-kinetic/pr2_description
 "
 DEPEND="${RDEPEND}
 "

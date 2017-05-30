@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/serial
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/controller_manager
     ros-indigo/joint_state_controller
     ros-indigo/diff_drive_controller
-    ros-indigo/nav_msgs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/geometry_msgs
-    ros-indigo/hardware_interface
-    ros-indigo/controller_manager
     ros-indigo/tf
-    ros-indigo/serial
+    ros-indigo/hardware_interface
 "
 DEPEND="${RDEPEND}
     ros-indigo/roscpp

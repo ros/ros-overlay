@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/python_qt_binding
     ros-indigo/rqt_gui
-    ros-indigo/rospy
     ros-indigo/rqt_gui_py
+    ros-indigo/rospy
+    ros-indigo/python_qt_binding
     dev-python/psutil
 "
 DEPEND="${RDEPEND}

@@ -12,19 +12,19 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/message_generation
+    ros-kinetic/geometry_msgs
+    ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
     ros-kinetic/gazebo_msgs
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roslib
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/roscpp
-    ros-kinetic/tf
+    sci-electronics/gazebo
+    sci-electronics/gazebo
     dev-libs/tinyxml
-    sci-electronics/gazebo
-    sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

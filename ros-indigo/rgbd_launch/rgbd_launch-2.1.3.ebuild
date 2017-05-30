@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/depth_image_proc
     ros-indigo/nodelet
     ros-indigo/tf
+    ros-indigo/depth_image_proc
     ros-indigo/image_proc
 "
 DEPEND="${RDEPEND}

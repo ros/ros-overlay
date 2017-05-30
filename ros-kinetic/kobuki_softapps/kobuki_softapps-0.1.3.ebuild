@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/rviz
     ros-kinetic/fake_localization
+    ros-kinetic/kobuki_softnode
     ros-kinetic/map_server
     ros-kinetic/move_base
-    ros-kinetic/kobuki_softnode
 "
 DEPEND="${RDEPEND}
 "

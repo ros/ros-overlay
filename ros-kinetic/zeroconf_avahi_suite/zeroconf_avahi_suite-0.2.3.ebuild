@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/zeroconf_avahi
     ros-kinetic/zeroconf_avahi_demos
+    ros-kinetic/zeroconf_avahi
 "
 DEPEND="${RDEPEND}
 "

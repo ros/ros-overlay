@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
-    ros-lunar/tf
     ros-lunar/orocos_kdl
     ros-lunar/python_orocos_kdl
     ros-lunar/kdl_conversions
+    ros-lunar/tf
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

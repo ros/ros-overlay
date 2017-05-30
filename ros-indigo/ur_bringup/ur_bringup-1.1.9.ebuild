@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2_ros
     ros-indigo/ur_driver
+    ros-indigo/tf2_ros
     ros-indigo/ur_description
 "
 DEPEND="${RDEPEND}

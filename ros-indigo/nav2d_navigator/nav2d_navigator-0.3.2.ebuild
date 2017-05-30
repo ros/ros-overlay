@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
-    ros-indigo/std_srvs
-    ros-indigo/actionlib_msgs
-    ros-indigo/tf
     ros-indigo/geometry_msgs
-    ros-indigo/nav2d_operator
-    ros-indigo/roscpp
-    ros-indigo/nav2d_msgs
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/nav2d_operator
+    ros-indigo/std_srvs
+    ros-indigo/nav2d_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

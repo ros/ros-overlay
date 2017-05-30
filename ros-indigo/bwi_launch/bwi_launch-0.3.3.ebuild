@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segbot_bringup
     ros-indigo/bwi_msgs
-    ros-indigo/segbot_navigation
-    ros-indigo/utexas_gdc
-    ros-indigo/bwi_tools
     ros-indigo/bwi_kr_execution
-    ros-indigo/segbot_logical_translator
     ros-indigo/segbot_simulation_apps
     ros-indigo/segbot_gazebo
-    ros-indigo/multi_level_map_server
-    ros-indigo/segbot_gui
+    ros-indigo/segbot_navigation
     ros-indigo/multi_level_map_utils
+    ros-indigo/bwi_tools
+    ros-indigo/segbot_gui
+    ros-indigo/multi_level_map_server
+    ros-indigo/segbot_bringup
+    ros-indigo/segbot_logical_translator
+    ros-indigo/utexas_gdc
 "
 DEPEND="${RDEPEND}
 "

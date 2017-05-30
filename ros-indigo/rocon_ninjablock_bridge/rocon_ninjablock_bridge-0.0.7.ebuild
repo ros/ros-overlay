@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_device_msgs
     ros-indigo/rocon_iot_bridge
+    ros-indigo/rocon_device_msgs
     ros-indigo/rospy
     ros-indigo/rocon_std_msgs
 "

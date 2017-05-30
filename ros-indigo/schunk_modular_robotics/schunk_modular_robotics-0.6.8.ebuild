@@ -12,12 +12,12 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/schunk_libm5api
+    ros-indigo/schunk_simulated_tactile_sensors
+    ros-indigo/schunk_description
+    ros-indigo/schunk_sdhx
     ros-indigo/schunk_sdh
     ros-indigo/schunk_powercube_chain
-    ros-indigo/schunk_libm5api
-    ros-indigo/schunk_sdhx
-    ros-indigo/schunk_description
-    ros-indigo/schunk_simulated_tactile_sensors
 "
 DEPEND="${RDEPEND}
 "

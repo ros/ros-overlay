@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/wpi_jaco_msgs
+    ros-indigo/rail_segmentation
+    ros-indigo/joy
+    ros-indigo/actionlib
     ros-indigo/roscpp
     ros-indigo/carl_moveit
     ros-indigo/std_msgs
-    ros-indigo/rail_segmentation
-    ros-indigo/joy
     ros-indigo/sensor_msgs
-    ros-indigo/actionlib
+    ros-indigo/wpi_jaco_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/std_srvs

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nodelet
+    ros-indigo/roscpp
     ros-indigo/qt_gui
     ros-indigo/qt_gui_cpp
-    ros-indigo/roscpp
-    ros-indigo/nodelet
 "
 DEPEND="${RDEPEND}
 "

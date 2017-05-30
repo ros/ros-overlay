@@ -13,13 +13,13 @@ LICENSE="LGPL and Apache2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/camera_info_manager
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/rospy
+    ros-kinetic/octomap
+    ros-kinetic/sensor_msgs
     ros-kinetic/camera_info_manager_py
     ros-kinetic/naoqi_driver_py
-    ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/octomap
-    ros-kinetic/dynamic_reconfigure
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

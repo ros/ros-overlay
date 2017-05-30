@@ -12,14 +12,14 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robbie_architecture
     ros-indigo/nav_msgs
-    ros-indigo/tf
-    ros-indigo/sensor_msgs
     ros-indigo/homer_mapnav_msgs
-    ros-indigo/homer_nav_libs
-    ros-indigo/roscpp
     ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/robbie_architecture
+    ros-indigo/homer_nav_libs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

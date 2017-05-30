@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosbag
+    ros-indigo/hector_mapping
     ros-indigo/gmapping
     ros-indigo/slam_karto
+    ros-indigo/rosbag
     ros-indigo/map_server
-    ros-indigo/robot_state_publisher
     ros-indigo/rviz
-    ros-indigo/hector_mapping
+    ros-indigo/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "

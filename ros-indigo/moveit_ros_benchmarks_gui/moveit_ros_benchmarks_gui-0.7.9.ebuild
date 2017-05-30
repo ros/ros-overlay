@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_warehouse
-    ros-indigo/moveit_ros_benchmarks
-    ros-indigo/rviz
-    ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
-    ros-indigo/eigen_conversions
-    ros-indigo/tf
     ros-indigo/moveit_ros_visualization
+    ros-indigo/roscpp
+    ros-indigo/eigen_conversions
+    ros-indigo/moveit_ros_planning
+    ros-indigo/rviz
+    ros-indigo/moveit_ros_benchmarks
+    ros-indigo/tf
+    ros-indigo/moveit_ros_warehouse
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

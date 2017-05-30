@@ -12,16 +12,16 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosgraph_msgs
-    ros-lunar/geometry_msgs
-    ros-lunar/tf
     ros-lunar/dynamic_reconfigure
-    ros-lunar/roslib
-    ros-lunar/std_msgs
     ros-lunar/gazebo_dev
-    ros-lunar/gazebo_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/roslib
     ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/std_srvs
+    ros-lunar/tf
+    ros-lunar/gazebo_msgs
+    ros-lunar/rosgraph_msgs
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

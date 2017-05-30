@@ -13,23 +13,23 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/kobuki_dock_drive
+    ros-indigo/nodelet
+    ros-indigo/pluginlib
     ros-indigo/rospy
     ros-indigo/nav_msgs
-    ros-indigo/roscpp
-    ros-indigo/ecl_linear_algebra
-    ros-indigo/kobuki_msgs
-    ros-indigo/std_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/ecl_threads
     ros-indigo/message_filters
     ros-indigo/geometry_msgs
-    ros-indigo/kobuki_dock_drive
-    ros-indigo/pluginlib
-    ros-indigo/ecl_geometry
-    ros-indigo/nodelet
     ros-indigo/actionlib
+    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/ecl_linear_algebra
+    ros-indigo/actionlib_msgs
+    ros-indigo/kobuki_msgs
+    ros-indigo/roscpp
+    ros-indigo/ecl_geometry
     ros-indigo/kdl_conversions
+    ros-indigo/std_msgs
+    ros-indigo/ecl_threads
 "
 DEPEND="${RDEPEND}
 "

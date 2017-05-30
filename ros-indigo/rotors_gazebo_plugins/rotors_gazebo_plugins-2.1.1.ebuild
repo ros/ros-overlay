@@ -12,25 +12,25 @@ LICENSE="ASL 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_srvs
-    ros-indigo/roscpp
-    ros-indigo/rosbag
-    ros-indigo/gazebo_ros
-    ros-indigo/mav_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/octomap_msgs
-    ros-indigo/octomap_ros
-    ros-indigo/rotors_comm
     ros-indigo/octomap
-    ros-indigo/tf
-    ros-indigo/cv_bridge
+    ros-indigo/geometry_msgs
+    ros-indigo/gazebo_ros
+    ros-indigo/rosbag
+    ros-indigo/roscpp
+    ros-indigo/rotors_comm
     ros-indigo/rotors_control
+    ros-indigo/octomap_ros
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/mav_msgs
+    ros-indigo/cv_bridge
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules
-    dev-libs/protobuf
     sci-electronics/gazebo
+    dev-libs/protobuf
 "
 
 SLOT="0/0"

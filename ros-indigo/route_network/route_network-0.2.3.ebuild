@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/geographic_msgs
     ros-indigo/rospy
     ros-indigo/geodesy
-    ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/geographic_msgs
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/nav_msgs
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

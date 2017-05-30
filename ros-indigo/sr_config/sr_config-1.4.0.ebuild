@@ -12,8 +12,8 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_cyberglove_config
     ros-indigo/sr_ethercat_hand_config
+    ros-indigo/sr_cyberglove_config
 "
 DEPEND="${RDEPEND}
 "

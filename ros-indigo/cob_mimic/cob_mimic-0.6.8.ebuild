@@ -15,9 +15,9 @@ RDEPEND="
     ros-indigo/rospy
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/std_msgs
     ros-indigo/message_runtime
     ros-indigo/roslib
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

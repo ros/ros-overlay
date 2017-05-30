@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    media-libs/mesa
     x11-libs/libQGLViewer
-    x11-libs/libXmu
     x11-libs/libXi
+    x11-libs/libXmu
+    media-libs/mesa
     media-libs/freeglut
 "
 DEPEND="${RDEPEND}

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trajectory_msgs
     ros-indigo/tf
     ros-indigo/arbotix_python
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

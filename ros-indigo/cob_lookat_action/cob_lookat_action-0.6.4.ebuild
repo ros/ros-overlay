@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
-    ros-indigo/rospy
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/roscpp
     ros-indigo/moveit_msgs
-    ros-indigo/message_runtime
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

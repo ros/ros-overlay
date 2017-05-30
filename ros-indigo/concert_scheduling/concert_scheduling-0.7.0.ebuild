@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/concert_simple_scheduler
     ros-indigo/concert_scheduler_requests
     ros-indigo/concert_resource_pool
-    ros-indigo/concert_simple_scheduler
 "
 DEPEND="${RDEPEND}
 "

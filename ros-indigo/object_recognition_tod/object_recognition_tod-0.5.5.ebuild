@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecto_openni
-    ros-indigo/ecto
     ros-indigo/ecto_opencv
     ros-indigo/object_recognition_core
+    ros-indigo/ecto
+    ros-indigo/ecto_openni
     ros-indigo/opencv_candidate
 "
 DEPEND="${RDEPEND}

@@ -14,16 +14,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/rospy
     ros-indigo/rosservice
-    ros-indigo/roscpp
-    ros-indigo/roslib
-    ros-indigo/std_msgs
     ros-indigo/message_runtime
+    ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation
-    ros-indigo/rostest
     ros-indigo/roscpp_serialization
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

@@ -12,8 +12,8 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/controller_manager
     ros-kinetic/robot_state_publisher
+    ros-kinetic/controller_manager
 "
 DEPEND="${RDEPEND}
 "

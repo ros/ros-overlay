@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/laser_proc
-    ros-indigo/tf
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/diagnostic_updater
     ros-indigo/dynamic_reconfigure
+    ros-indigo/laser_proc
+    ros-indigo/roscpp
     ros-indigo/urg_c
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/rosconsole
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

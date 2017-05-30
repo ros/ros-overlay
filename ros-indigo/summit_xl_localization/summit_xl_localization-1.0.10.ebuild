@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2_geometry_msgs
-    ros-indigo/robot_localization
-    ros-indigo/std_srvs
-    ros-indigo/nav_msgs
     ros-indigo/tf2
-    ros-indigo/robotnik_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/geographic_msgs
-    ros-indigo/tf2_ros
+    ros-indigo/robotnik_msgs
+    ros-indigo/mavros_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
     ros-indigo/message_filters
     ros-indigo/message_runtime
+    ros-indigo/robot_localization
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf2_geometry_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf2_ros
     ros-indigo/tf
-    ros-indigo/mavros_msgs
 "
 DEPEND="${RDEPEND}
 "

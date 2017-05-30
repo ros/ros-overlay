@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecto_image_pipeline
     ros-kinetic/ecto
+    ros-kinetic/ecto_image_pipeline
     ros-kinetic/sensor_msgs
-    dev-libs/boost
-    dev-db/couchdb
     net-misc/curl
+    dev-db/couchdb
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

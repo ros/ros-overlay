@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/rosbag
-    ros-kinetic/geometry_msgs
     ros-kinetic/ecto
     ros-kinetic/message_generation
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/rosbag
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
-    ros-kinetic/message_runtime
+    ros-kinetic/cv_bridge
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosmsg
-    ros-kinetic/nav_msgs
     ros-kinetic/cmake_modules
+    ros-kinetic/nav_msgs
     ros-kinetic/sensor_msgs
+    ros-kinetic/rosmsg
 "
 
 SLOT="0/0"

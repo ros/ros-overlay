@@ -12,9 +12,9 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole_bridge
     ros-indigo/roscpp_serialization
     ros-indigo/roscpp
+    ros-indigo/rosconsole_bridge
     ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/kobuki_qtestsuite
-    ros-kinetic/kobuki_dashboard
     ros-kinetic/kobuki_gazebo
+    ros-kinetic/kobuki_dashboard
     ros-kinetic/kobuki_gazebo_plugins
     ros-kinetic/kobuki_rviz_launchers
 "

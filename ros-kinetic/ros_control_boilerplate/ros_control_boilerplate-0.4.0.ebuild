@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/transmission_interface
-    ros-kinetic/control_msgs
-    ros-kinetic/control_toolbox
     ros-kinetic/joint_limits_interface
-    ros-kinetic/rosparam_shortcuts
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/hardware_interface
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/controller_manager
+    ros-kinetic/actionlib
     ros-kinetic/roscpp
     ros-kinetic/urdf
-    ros-kinetic/actionlib
+    ros-kinetic/rosparam_shortcuts
+    ros-kinetic/control_toolbox
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/control_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/transmission_interface
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

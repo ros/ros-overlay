@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/pluginlib
-    ros-kinetic/urdf_parser_plugin
     ros-kinetic/rosconsole_bridge
+    ros-kinetic/urdf_parser_plugin
     ros-kinetic/roscpp
     dev-libs/urdfdom_headers
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/cmake_modules
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

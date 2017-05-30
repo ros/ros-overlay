@@ -12,18 +12,18 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/katana_description
-    ros-indigo/urdf
-    ros-indigo/gazebo_ros
-    ros-indigo/xacro
     ros-indigo/joint_trajectory_controller
-    ros-indigo/controller_manager_msgs
-    ros-indigo/std_msgs
+    ros-indigo/katana_description
     ros-indigo/controller_manager
-    ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
-    ros-indigo/katana_gazebo_plugins
+    ros-indigo/xacro
+    ros-indigo/gazebo_ros
+    ros-indigo/controller_manager_msgs
     ros-indigo/actionlib
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/robot_state_publisher
+    ros-indigo/katana_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 "

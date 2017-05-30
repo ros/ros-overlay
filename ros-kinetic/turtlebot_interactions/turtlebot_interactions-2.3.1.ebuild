@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/turtlebot_interactive_markers
     ros-kinetic/turtlebot_rviz_launchers
+    ros-kinetic/turtlebot_interactive_markers
     ros-kinetic/turtlebot_dashboard
 "
 DEPEND="${RDEPEND}

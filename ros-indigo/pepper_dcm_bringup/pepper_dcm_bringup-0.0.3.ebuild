@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/naoqi_dcm_driver
+    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_ros_planning
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/orocos_kdl
     ros-kinetic/pluginlib
     ros-kinetic/moveit_core
+    ros-kinetic/orocos_kdl
+    ros-kinetic/moveit_ros_planning
+    ros-kinetic/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 "

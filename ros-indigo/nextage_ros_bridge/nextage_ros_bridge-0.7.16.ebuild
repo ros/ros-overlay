@@ -7,7 +7,7 @@ DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/rtmros_nextage-release/archive/release/indigo/nextage_ros_bridge/0.7.16-0.tar.gz"
 
-LICENSE="||( BSD MIT )"
+LICENSE="|| ( BSD MIT )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="

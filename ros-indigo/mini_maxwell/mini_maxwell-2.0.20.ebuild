@@ -15,8 +15,8 @@ RDEPEND="
     ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslib
     ros-indigo/cmake_modules
+    ros-indigo/roslib
 "
 
 SLOT="0/0"

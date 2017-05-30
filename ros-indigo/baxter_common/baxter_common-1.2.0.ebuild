@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/baxter_maintenance_msgs
     ros-indigo/baxter_core_msgs
+    ros-indigo/baxter_maintenance_msgs
     ros-indigo/baxter_description
     ros-indigo/rethink_ee_description
 "

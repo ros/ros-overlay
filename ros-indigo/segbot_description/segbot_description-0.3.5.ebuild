@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
     ros-indigo/velodyne_gazebo_plugins
-    ros-indigo/velodyne_description
     ros-indigo/pr2_description
+    ros-indigo/velodyne_description
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
 "

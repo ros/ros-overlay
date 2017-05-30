@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
-    ros-lunar/roslib
-    ros-lunar/rosconsole
-    ros-lunar/std_msgs
-    ros-lunar/message_runtime
     ros-lunar/roscpp_serialization
-    ros-lunar/rostime
-    ros-lunar/roscpp
     ros-lunar/std_srvs
+    ros-lunar/message_runtime
+    ros-lunar/roslib
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
+    ros-lunar/rostime
+    ros-lunar/rosconsole
     dev-qt/qtcore
     dev-qt/qtgui
 "

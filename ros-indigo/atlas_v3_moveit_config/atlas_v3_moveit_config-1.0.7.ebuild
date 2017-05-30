@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
     ros-indigo/moveit_ros_move_group
     ros-indigo/atlas_moveit_config
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
 "

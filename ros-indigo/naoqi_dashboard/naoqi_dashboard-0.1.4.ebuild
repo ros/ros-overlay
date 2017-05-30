@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rqt_robot_dashboard
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/rqt_robot_monitor
     ros-indigo/diagnostic_common_diagnostics
     ros-indigo/naoqi_bridge_msgs
     ros-indigo/diagnostic_msgs
+    ros-indigo/rqt_robot_monitor
+    ros-indigo/diagnostic_aggregator
 "
 DEPEND="${RDEPEND}
 "

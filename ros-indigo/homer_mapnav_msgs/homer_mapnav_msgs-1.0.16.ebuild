@@ -12,14 +12,14 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/message_runtime
     ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
     ros-indigo/nav_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/genmsg
     ros-indigo/cmake_modules
     ros-indigo/message_generation
-    ros-indigo/genmsg
 "
 
 SLOT="0/0"

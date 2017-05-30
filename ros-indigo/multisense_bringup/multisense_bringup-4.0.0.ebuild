@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/multisense_description
     ros-indigo/multisense_ros
+    ros-indigo/multisense_description
 "
 DEPEND="${RDEPEND}
 "

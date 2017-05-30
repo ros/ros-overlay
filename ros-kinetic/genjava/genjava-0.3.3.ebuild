@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosjava_bootstrap
     ros-kinetic/rosjava_build_tools
     ros-kinetic/genmsg
+    ros-kinetic/rosjava_bootstrap
     dev-python/rospkg
     dev-python/catkin_pkg
 "

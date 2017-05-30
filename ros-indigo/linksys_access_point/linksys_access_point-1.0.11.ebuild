@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/access_point_control
     ros-indigo/dynamic_reconfigure
-    ros-indigo/rospy
+    ros-indigo/access_point_control
     ros-indigo/ieee80211_channels
+    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
 "

@@ -17,8 +17,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules
     media-libs/mesa
-    dev-libs/boost
     media-libs/opencv
+    dev-libs/boost
 "
 
 SLOT="0/0"

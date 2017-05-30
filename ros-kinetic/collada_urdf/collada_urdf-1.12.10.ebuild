@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/urdf
+    ros-kinetic/geometric_shapes
+    ros-kinetic/angles
     ros-kinetic/collada_parser
     ros-kinetic/resource_retriever
-    ros-kinetic/geometric_shapes
     ros-kinetic/roscpp
+    ros-kinetic/urdf
     ros-kinetic/tf
-    ros-kinetic/angles
-    dev-libs/urdfdom_headers
-    media-libs/assimp
     media-libs/collada-dom
+    dev-libs/urdfdom_headers
     dev-libs/urdfdom
+    media-libs/assimp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

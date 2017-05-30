@@ -12,17 +12,17 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_phidgets
-    ros-indigo/rospy
-    ros-indigo/cob_script_server
-    ros-indigo/std_srvs
-    ros-indigo/cob_bringup
-    ros-indigo/std_msgs
     ros-indigo/topic_tools
+    ros-indigo/cob_bringup
+    ros-indigo/cob_script_server
+    ros-indigo/rospy
     ros-indigo/roslaunch
-    ros-indigo/cob_hardware_config
-    ros-indigo/cob_cam3d_throttle
     ros-indigo/diagnostic_msgs
+    ros-indigo/cob_cam3d_throttle
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/cob_phidgets
+    ros-indigo/cob_hardware_config
 "
 DEPEND="${RDEPEND}
 "

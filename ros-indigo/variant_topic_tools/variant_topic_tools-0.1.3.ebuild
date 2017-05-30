@@ -12,9 +12,9 @@ LICENSE="GNU Lesser General Public License (LGPL)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/variant_msgs
     ros-indigo/roslib
-    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
 "

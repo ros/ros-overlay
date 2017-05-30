@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_filters
+    ros-indigo/nodelet
+    ros-indigo/pluginlib
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
-    ros-indigo/pluginlib
-    ros-indigo/nodelet
 "
 DEPEND="${RDEPEND}
 "

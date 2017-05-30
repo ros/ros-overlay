@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/multisense_description
     ros-kinetic/multisense_ros
+    ros-kinetic/multisense_description
 "
 DEPEND="${RDEPEND}
 "

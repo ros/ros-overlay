@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/std_srvs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/sensor_msgs
     ros-kinetic/nodelet
     ros-kinetic/image_transport
+    ros-kinetic/std_srvs
     ros-kinetic/message_runtime
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

@@ -12,8 +12,8 @@ LICENSE="LGPLv2.1, modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
     ros-indigo/roscpp
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
 "

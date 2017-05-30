@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_tools
-    ros-kinetic/jsk_network_tools
+    ros-kinetic/dynamic_tf_publisher
     ros-kinetic/virtual_force_publisher
-    ros-kinetic/multi_map_server
+    ros-kinetic/jsk_tools
+    ros-kinetic/image_view2
     ros-kinetic/jsk_tilt_laser
     ros-kinetic/jsk_topic_tools
-    ros-kinetic/image_view2
-    ros-kinetic/dynamic_tf_publisher
+    ros-kinetic/jsk_network_tools
+    ros-kinetic/multi_map_server
 "
 DEPEND="${RDEPEND}
 "

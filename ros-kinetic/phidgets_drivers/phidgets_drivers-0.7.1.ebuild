@@ -12,9 +12,9 @@ LICENSE="BSD, LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/phidgets_imu
-    ros-kinetic/phidgets_api
     ros-kinetic/libphidget21
+    ros-kinetic/phidgets_api
+    ros-kinetic/phidgets_imu
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/controller_manager_msgs
-    ros-kinetic/controller_manager
-    ros-kinetic/robot_state_publisher
     ros-kinetic/twist_mux
+    ros-kinetic/controller_manager
+    ros-kinetic/controller_manager_msgs
     ros-kinetic/joint_state_controller
+    ros-kinetic/diff_drive_controller
+    ros-kinetic/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "

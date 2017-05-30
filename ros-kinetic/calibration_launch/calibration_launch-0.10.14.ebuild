@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/joint_states_settler
-    ros-kinetic/urdfdom_py
-    ros-kinetic/interval_intersection
     ros-kinetic/monocam_settler
     ros-kinetic/laser_cb_detector
+    ros-kinetic/interval_intersection
+    ros-kinetic/urdfdom_py
 "
 DEPEND="${RDEPEND}
 "

@@ -12,8 +12,8 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ethercat_grant
     ros-indigo/ros_ethercat_loop
+    ros-indigo/ethercat_grant
 "
 DEPEND="${RDEPEND}
 "

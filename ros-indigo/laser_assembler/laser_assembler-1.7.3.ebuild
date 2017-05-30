@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/filters
     ros-indigo/pluginlib
-    ros-indigo/laser_geometry
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
+    ros-indigo/filters
     ros-indigo/message_filters
+    ros-indigo/laser_geometry
     ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/message_generation
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

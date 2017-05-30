@@ -12,10 +12,10 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/lockfree
     ros-indigo/rosatomic
     ros-indigo/allocators
     ros-indigo/rosrt
+    ros-indigo/lockfree
 "
 DEPEND="${RDEPEND}
 "

@@ -12,23 +12,23 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/robbie_architecture
     ros-indigo/roscpp_serialization
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
     ros-indigo/message_runtime
+    ros-indigo/robbie_architecture
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
-    sci-libs/flann
-    media-libs/opencv
+    ros-indigo/cv_bridge
     dev-libs/boost
+    media-libs/opencv
+    sci-libs/flann
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslang
-    ros-indigo/genmsg
     ros-indigo/cmake_modules
     ros-indigo/message_generation
+    ros-indigo/roslang
     ros-indigo/roscpp
+    ros-indigo/genmsg
 "
 
 SLOT="0/0"

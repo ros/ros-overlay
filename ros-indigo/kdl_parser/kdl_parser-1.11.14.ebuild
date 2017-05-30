@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/rosconsole
     ros-indigo/orocos_kdl
-    ros-indigo/roscpp
     ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

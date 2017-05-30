@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp_serialization
-    ros-kinetic/rostime
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/roscpp_serialization
+    ros-kinetic/std_srvs
     ros-kinetic/message_runtime
     ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/rostime
+    ros-kinetic/rosconsole
     dev-qt/qtcore
     dev-qt/qtgui
 "

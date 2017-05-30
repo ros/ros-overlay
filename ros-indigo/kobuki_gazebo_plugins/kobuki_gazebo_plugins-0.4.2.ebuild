@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kobuki_msgs
     ros-indigo/nav_msgs
     ros-indigo/gazebo_ros
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
+    ros-indigo/kobuki_msgs
     ros-indigo/roscpp
     ros-indigo/gazebo_plugins
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
     ros-indigo/tf
     dev-libs/boost
 "

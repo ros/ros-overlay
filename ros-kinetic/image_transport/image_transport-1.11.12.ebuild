@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
     ros-kinetic/pluginlib
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_filters
     ros-kinetic/roslib
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/rosconsole
 "
 DEPEND="${RDEPEND}
 "

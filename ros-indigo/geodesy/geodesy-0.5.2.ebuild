@@ -13,11 +13,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geographic_msgs
-    ros-indigo/unique_id
-    ros-indigo/tf
-    ros-indigo/uuid_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/unique_id
     ros-indigo/sensor_msgs
+    ros-indigo/uuid_msgs
+    ros-indigo/tf
     dev-python/pyproj
 "
 DEPEND="${RDEPEND}

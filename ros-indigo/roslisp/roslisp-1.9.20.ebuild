@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rosgraph_msgs
+    ros-indigo/rospack
     ros-indigo/std_srvs
     ros-indigo/roslang
-    ros-indigo/rospack
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

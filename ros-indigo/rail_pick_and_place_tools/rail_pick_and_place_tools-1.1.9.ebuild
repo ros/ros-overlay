@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rail_pick_and_place_msgs
-    ros-indigo/std_srvs
-    ros-indigo/graspdb
     ros-indigo/rail_recognition
+    ros-indigo/actionlib
+    ros-indigo/std_srvs
     ros-indigo/roscpp
+    ros-indigo/rail_pick_and_place_msgs
     ros-indigo/rviz
     ros-indigo/rail_grasp_collection
-    ros-indigo/actionlib
+    ros-indigo/graspdb
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

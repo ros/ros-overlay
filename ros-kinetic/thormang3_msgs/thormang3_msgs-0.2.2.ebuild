@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/thormang3_manipulation_module_msgs
+    ros-kinetic/thormang3_action_module_msgs
+    ros-kinetic/thormang3_walking_module_msgs
     ros-kinetic/thormang3_head_control_module_msgs
     ros-kinetic/thormang3_offset_tuner_msgs
     ros-kinetic/thormang3_feet_ft_module_msgs
-    ros-kinetic/thormang3_action_module_msgs
-    ros-kinetic/thormang3_manipulation_module_msgs
-    ros-kinetic/thormang3_walking_module_msgs
 "
 DEPEND="${RDEPEND}
 "

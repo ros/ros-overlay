@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/topic_tools
+    ros-kinetic/rosbag_storage
+    ros-kinetic/roscpp_serialization
+    ros-kinetic/roscpp
     ros-kinetic/rosbag
     ros-kinetic/rostime
-    ros-kinetic/roscpp_serialization
-    ros-kinetic/topic_tools
-    ros-kinetic/roscpp
-    ros-kinetic/rosbag_storage
 "
 DEPEND="${RDEPEND}
 "

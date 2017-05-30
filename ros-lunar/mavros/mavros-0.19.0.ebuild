@@ -12,25 +12,25 @@ LICENSE="|| ( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
+    ros-lunar/pluginlib
     ros-lunar/mavros_msgs
+    ros-lunar/rospy
+    ros-lunar/libmavconn
+    ros-lunar/geometry_msgs
+    ros-lunar/nav_msgs
+    ros-lunar/rosconsole_bridge
+    ros-lunar/tf2_ros
+    ros-lunar/std_srvs
+    ros-lunar/message_runtime
+    ros-lunar/roscpp
     ros-lunar/eigen_conversions
     ros-lunar/diagnostic_msgs
-    ros-lunar/rospy
-    ros-lunar/sensor_msgs
     ros-lunar/std_msgs
+    ros-lunar/sensor_msgs
     ros-lunar/diagnostic_updater
-    ros-lunar/message_runtime
-    ros-lunar/pluginlib
-    ros-lunar/tf2_ros
-    ros-lunar/libmavconn
     ros-lunar/mavlink
-    ros-lunar/roscpp
-    ros-lunar/rosconsole_bridge
-    ros-lunar/std_srvs
-    ros-lunar/nav_msgs
-    dev-libs/boost
     dev-cpp/eigen
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

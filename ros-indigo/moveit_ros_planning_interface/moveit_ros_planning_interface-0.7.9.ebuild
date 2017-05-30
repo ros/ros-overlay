@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_manipulation
-    ros-indigo/rosconsole
-    ros-indigo/moveit_ros_move_group
     ros-indigo/tf_conversions
     ros-indigo/rospy
-    ros-indigo/moveit_ros_warehouse
-    ros-indigo/tf
-    ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
-    ros-indigo/eigen_conversions
     ros-indigo/actionlib
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/roscpp
+    ros-indigo/moveit_ros_manipulation
+    ros-indigo/eigen_conversions
+    ros-indigo/moveit_ros_planning
+    ros-indigo/tf
+    ros-indigo/rosconsole
+    ros-indigo/moveit_ros_warehouse
     dev-lang/python
 "
 DEPEND="${RDEPEND}

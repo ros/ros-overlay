@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/self_test
-    ros-indigo/sr_movements
     ros-indigo/sr_robot_msgs
     ros-indigo/sr_hand
     ros-indigo/roscpp
+    ros-indigo/sr_movements
     sci-visualization/gnuplot
 "
 DEPEND="${RDEPEND}

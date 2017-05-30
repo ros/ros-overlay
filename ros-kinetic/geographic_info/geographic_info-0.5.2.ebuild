@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geodesy
     ros-kinetic/geographic_msgs
+    ros-kinetic/geodesy
 "
 DEPEND="${RDEPEND}
 "

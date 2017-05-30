@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/multimaster_msgs
     ros-kinetic/tf2_relay
+    ros-kinetic/multimaster_msgs
     ros-kinetic/message_relay
     ros-kinetic/clock_relay
     ros-kinetic/multimaster_launch

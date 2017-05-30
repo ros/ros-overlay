@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/image_transport
     ros-indigo/gazebo_ros
     ros-indigo/roscpp
-    ros-indigo/nodelet
     ros-indigo/driver_base
-    ros-indigo/image_transport
     ros-indigo/gazebo_plugins
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
     sci-electronics/gazebo

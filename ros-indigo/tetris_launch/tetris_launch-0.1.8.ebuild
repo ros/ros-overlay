@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosbridge_server
-    ros-indigo/teleop_twist_keyboard
     ros-indigo/tetris_gazebo
+    ros-indigo/teleop_twist_keyboard
+    ros-indigo/rosbridge_server
 "
 DEPEND="${RDEPEND}
 "

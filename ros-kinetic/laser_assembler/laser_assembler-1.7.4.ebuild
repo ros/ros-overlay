@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/filters
     ros-kinetic/pluginlib
-    ros-kinetic/laser_geometry
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/filters
     ros-kinetic/message_filters
+    ros-kinetic/laser_geometry
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
     ros-kinetic/message_generation
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

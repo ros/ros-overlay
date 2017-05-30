@@ -18,8 +18,8 @@ DEPEND="${RDEPEND}
     ros-indigo/sensor_msgs
     ros-indigo/gps_common
     ros-indigo/roscpp
-    virtual/pkgconfig
     sci-geosciences/gpsd
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

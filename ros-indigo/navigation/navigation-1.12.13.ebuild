@@ -13,23 +13,23 @@ LICENSE="BSD,LGPL,LGPL (amcl)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_pose_ekf
-    ros-indigo/navfn
-    ros-indigo/rotate_recovery
-    ros-indigo/move_slow_and_clear
-    ros-indigo/dwa_local_planner
     ros-indigo/voxel_grid
-    ros-indigo/nav_core
-    ros-indigo/carrot_planner
-    ros-indigo/move_base_msgs
     ros-indigo/fake_localization
+    ros-indigo/move_slow_and_clear
+    ros-indigo/amcl
+    ros-indigo/robot_pose_ekf
+    ros-indigo/nav_core
     ros-indigo/costmap_2d
+    ros-indigo/clear_costmap_recovery
+    ros-indigo/dwa_local_planner
+    ros-indigo/global_planner
+    ros-indigo/move_base_msgs
+    ros-indigo/carrot_planner
+    ros-indigo/rotate_recovery
     ros-indigo/map_server
     ros-indigo/base_local_planner
-    ros-indigo/amcl
-    ros-indigo/global_planner
+    ros-indigo/navfn
     ros-indigo/move_base
-    ros-indigo/clear_costmap_recovery
 "
 DEPEND="${RDEPEND}
 "

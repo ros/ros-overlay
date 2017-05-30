@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/jsk_interactive
-    ros-kinetic/visualization_msgs
     ros-kinetic/jsk_interactive_marker
+    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_interactive
     ros-kinetic/rospy
     ros-kinetic/rviz
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/mk
     ros-kinetic/rosbuild
+    ros-kinetic/mk
 "
 
 SLOT="0/0"

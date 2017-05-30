@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/rviz
+    ros-indigo/grizzly_description
     ros-indigo/robot_state_publisher
     ros-indigo/joint_state_publisher
-    ros-indigo/grizzly_description
+    ros-indigo/interactive_marker_twist_server
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/ecl_build
-    ros-indigo/ecl_eigen
-    ros-indigo/grid_map_core
     ros-indigo/ecl_console
+    ros-indigo/grid_map_core
+    ros-indigo/ecl_eigen
 "
 DEPEND="${RDEPEND}
 "

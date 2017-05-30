@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/bwi_gazebo_entities
     ros-indigo/bwi_planning_common
     ros-indigo/map_server
     ros-indigo/gazebo_ros
-    ros-indigo/bwi_gazebo_entities
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
+    ros-indigo/controller_manager
+    ros-indigo/image_transport
     ros-indigo/baxter_sim_kinematics
     ros-indigo/baxter_core_msgs
-    ros-indigo/controller_manager
     ros-indigo/roscpp
-    ros-indigo/image_transport
+    ros-indigo/cv_bridge
     media-libs/opencv
 "
 DEPEND="${RDEPEND}

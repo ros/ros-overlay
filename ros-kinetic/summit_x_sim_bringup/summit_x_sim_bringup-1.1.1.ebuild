@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/summit_x_control
-    ros-kinetic/summit_x_description
-    ros-kinetic/summit_xl_pad
-    ros-kinetic/gazebo_ros
     ros-kinetic/twist_mux
+    ros-kinetic/summit_xl_pad
+    ros-kinetic/summit_x_description
+    ros-kinetic/gazebo_ros
 "
 DEPEND="${RDEPEND}
 "

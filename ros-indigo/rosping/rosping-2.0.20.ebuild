@@ -12,14 +12,14 @@ LICENSE="Boost Software License, Version 1.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
-    ros-indigo/mk
     ros-indigo/rosbuild
+    ros-indigo/mk
     ros-indigo/rosboost_cfg
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

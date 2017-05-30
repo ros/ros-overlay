@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosgraph
     ros-indigo/rostest
+    ros-indigo/rosgraph
     ros-indigo/rospy
     ros-indigo/roslaunch
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin_pip
     ros-indigo/roslint
+    ros-indigo/catkin_pip
 "
 
 SLOT="0/0"

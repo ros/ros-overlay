@@ -12,13 +12,13 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/smarthome_network_zeroconf
     ros-indigo/rosjava_dynamic_reconfigure
+    ros-indigo/smarthome_media_msgs_java
     ros-indigo/smarthome_comm_msgs_java
     ros-indigo/rosjava_core
-    ros-indigo/smarthome_heater_msgs_java
-    ros-indigo/smarthome_media_msgs_java
-    ros-indigo/smarthome_network_zeroconf
     ros-indigo/rosjava_messages
+    ros-indigo/smarthome_heater_msgs_java
 "
 DEPEND="${RDEPEND}
     ros-indigo/rosjava_build_tools

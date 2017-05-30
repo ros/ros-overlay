@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/people_velocity_tracker
-    ros-indigo/leg_detector
+    ros-indigo/people_tracking_filter
     ros-indigo/face_detector
     ros-indigo/people_msgs
-    ros-indigo/people_tracking_filter
+    ros-indigo/leg_detector
+    ros-indigo/people_velocity_tracker
 "
 DEPEND="${RDEPEND}
 "

@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/visualization_msgs
-    ros-indigo/aruco
-    ros-indigo/roscpp
-    ros-indigo/camera_calibration_parsers
     ros-indigo/image_transport
+    ros-indigo/aruco
     ros-indigo/message_runtime
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/roscpp
     ros-indigo/tf
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

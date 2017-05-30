@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/image_cb_detector
-    ros-kinetic/actionlib_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_filters
     ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
     ros-kinetic/settlerlib
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

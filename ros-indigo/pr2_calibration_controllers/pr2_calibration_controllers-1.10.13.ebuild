@@ -14,13 +14,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/realtime_tools
     ros-indigo/pr2_controller_interface
-    ros-indigo/std_msgs
     ros-indigo/roscpp
-    ros-indigo/robot_mechanism_controllers
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/std_msgs
+    ros-indigo/realtime_tools
     ros-indigo/pr2_mechanism_controllers
+    ros-indigo/robot_mechanism_controllers
 "
 DEPEND="${RDEPEND}
 "

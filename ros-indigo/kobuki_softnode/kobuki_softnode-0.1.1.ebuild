@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/kobuki_msgs
+    ros-indigo/nodelet
+    ros-indigo/yujin_maps
     ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/yujin_maps
-    ros-indigo/roscpp
-    ros-indigo/robot_state_publisher
     ros-indigo/kobuki_description
-    ros-indigo/nodelet
+    ros-indigo/kobuki_msgs
+    ros-indigo/roscpp
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/sensor_msgs
+    ros-indigo/robot_state_publisher
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

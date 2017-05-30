@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
+    ros-indigo/moveit_planners_ompl
     ros-indigo/industrial_robot_simulator
     ros-indigo/xacro
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
     ros-indigo/moveit_simple_controller_manager
-    ros-indigo/abb_irb6640_support
-    ros-indigo/moveit_planners_ompl
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/robot_state_publisher
+    ros-indigo/abb_irb6640_support
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

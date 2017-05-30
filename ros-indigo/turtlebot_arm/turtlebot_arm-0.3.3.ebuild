@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_arm_block_manipulation
-    ros-indigo/turtlebot_arm_kinect_calibration
-    ros-indigo/turtlebot_arm_moveit_demos
-    ros-indigo/turtlebot_arm_ikfast_plugin
     ros-indigo/turtlebot_arm_description
-    ros-indigo/turtlebot_arm_bringup
+    ros-indigo/turtlebot_arm_ikfast_plugin
+    ros-indigo/turtlebot_arm_moveit_demos
     ros-indigo/turtlebot_arm_moveit_config
+    ros-indigo/turtlebot_arm_kinect_calibration
+    ros-indigo/turtlebot_arm_block_manipulation
+    ros-indigo/turtlebot_arm_bringup
 "
 DEPEND="${RDEPEND}
 "

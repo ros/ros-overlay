@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosbag
     ros-indigo/rospy
-    ros-indigo/qt_gui
     ros-indigo/actionlib
-    ros-indigo/genpy
-    ros-indigo/python_qt_binding
+    ros-indigo/qt_gui
     ros-indigo/roslib
     ros-indigo/rostopic
+    ros-indigo/rosbag
+    ros-indigo/python_qt_binding
+    ros-indigo/genpy
 "
 DEPEND="${RDEPEND}
-    ros-indigo/std_msgs
     ros-indigo/genmsg
+    ros-indigo/std_msgs
 "
 
 SLOT="0/0"

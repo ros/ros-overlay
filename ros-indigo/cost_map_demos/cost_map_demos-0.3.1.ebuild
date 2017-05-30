@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/nav_msgs
-    ros-indigo/ecl_build
     ros-indigo/cost_map_visualisations
-    ros-indigo/cost_map_ros
-    ros-indigo/rviz
-    ros-indigo/costmap_2d
-    ros-indigo/roscpp
-    ros-indigo/tf
     ros-indigo/ecl_console
+    ros-indigo/cost_map_ros
+    ros-indigo/roscpp
+    ros-indigo/rviz
+    ros-indigo/ecl_build
+    ros-indigo/tf
+    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
 "

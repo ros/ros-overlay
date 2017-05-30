@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rosbag
-    ros-kinetic/roslib
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/roslib
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

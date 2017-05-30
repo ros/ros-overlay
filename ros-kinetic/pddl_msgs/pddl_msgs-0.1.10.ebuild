@@ -12,9 +12,9 @@ LICENSE="Apache License 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/actionlib
     ros-kinetic/message_runtime
     ros-kinetic/actionlib_msgs
-    ros-kinetic/actionlib
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
     ros-indigo/pluginlib
     ros-indigo/view_controller_msgs
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
     ros-indigo/cmake_modules

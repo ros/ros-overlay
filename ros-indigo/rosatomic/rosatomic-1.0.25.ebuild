@@ -7,7 +7,7 @@ DESCRIPTION="rosatomic provides the C++11-style atomic operations by pulling sym
 HOMEPAGE="http://ros.org/wiki/rosatomic"
 SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/indigo/rosatomic/1.0.25-0.tar.gz"
 
-LICENSE="||( BSD Boost )"
+LICENSE="|| ( BSD Boost )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="

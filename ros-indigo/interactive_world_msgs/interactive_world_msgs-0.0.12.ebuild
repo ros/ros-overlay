@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/message_runtime
     ros-indigo/geometry_msgs
     ros-indigo/rail_manipulation_msgs
+    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
 "
 DEPEND="${RDEPEND}

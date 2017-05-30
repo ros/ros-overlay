@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros_control
     ros-indigo/hector_quadrotor_controller
+    ros-indigo/gazebo_ros_control
 "
 DEPEND="${RDEPEND}
 "

@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/camera_calibration_parsers
     ros-kinetic/visp
 "
 DEPEND="${RDEPEND}

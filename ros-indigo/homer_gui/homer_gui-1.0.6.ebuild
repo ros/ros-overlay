@@ -12,29 +12,29 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/or_libs
-    ros-indigo/tf
-    ros-indigo/robbie_architecture
-    ros-indigo/geometry_msgs
-    ros-indigo/homer_nav_libs
-    ros-indigo/homer_mapnav_msgs
     ros-indigo/or_nodes
+    ros-indigo/geometry_msgs
+    ros-indigo/homer_mapnav_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roslib
+    ros-indigo/or_msgs
+    ros-indigo/or_libs
+    ros-indigo/robbie_architecture
+    ros-indigo/homer_nav_libs
     ros-indigo/roscpp
     ros-indigo/rviz
     ros-indigo/sensor_msgs
-    ros-indigo/or_msgs
-    ros-indigo/message_runtime
-    ros-indigo/roslib
     ros-indigo/std_msgs
-    media-libs/opencv
+    ros-indigo/tf
     sci-libs/pcl
     dev-cpp/eigen
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
-    ros-indigo/cv_bridge
-    ros-indigo/genmsg
     ros-indigo/message_generation
+    ros-indigo/genmsg
+    ros-indigo/cv_bridge
     dev-qt/qtcore
 "
 

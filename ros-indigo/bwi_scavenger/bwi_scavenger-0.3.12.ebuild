@@ -13,19 +13,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/visualization_msgs
     ros-indigo/bwi_msgs
-    ros-indigo/actionlib_msgs
     ros-indigo/bwi_kr_execution
-    ros-indigo/move_base_msgs
-    ros-indigo/pcl_ros
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/sound_play
     ros-indigo/image_transport
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/pcl_ros
+    ros-indigo/move_base_msgs
+    ros-indigo/roscpp
+    ros-indigo/sound_play
+    ros-indigo/std_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/cv_bridge
     dev-cpp/yaml-cpp
     dev-libs/boost
 "

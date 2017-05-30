@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/actionlib
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/actionlib_msgs
+    ros-kinetic/visualization_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/message_runtime
+    ros-kinetic/actionlib_msgs
     ros-kinetic/move_base_msgs
     ros-kinetic/roscpp
-    ros-kinetic/costmap_2d
-    ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
     ros-kinetic/tf
+    ros-kinetic/costmap_2d
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

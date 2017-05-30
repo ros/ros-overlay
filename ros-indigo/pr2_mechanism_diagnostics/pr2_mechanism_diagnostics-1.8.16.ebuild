@@ -14,14 +14,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/angles
     ros-indigo/rospy
-    ros-indigo/std_srvs
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/std_msgs
+    ros-indigo/pr2_mechanism_msgs
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/diagnostic_updater
-    ros-indigo/pr2_mechanism_msgs
     ros-indigo/diagnostic_msgs
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

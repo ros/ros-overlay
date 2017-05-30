@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/image_geometry
-    ros-kinetic/message_filters
-    ros-kinetic/sensor_msgs
-    ros-kinetic/stereo_msgs
-    ros-kinetic/image_proc
-    ros-kinetic/image_transport
-    ros-kinetic/nodelet
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/image_geometry
+    ros-kinetic/nodelet
+    ros-kinetic/image_transport
+    ros-kinetic/message_filters
+    ros-kinetic/image_proc
+    ros-kinetic/stereo_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

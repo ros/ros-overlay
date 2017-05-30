@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
     ros-indigo/tf_conversions
-    ros-indigo/tf2_kdl
-    ros-indigo/rostime
+    ros-indigo/rosconsole
     ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
-    ros-indigo/sensor_msgs
     ros-indigo/roscpp
+    ros-indigo/catkin
+    ros-indigo/tf2_kdl
+    ros-indigo/sensor_msgs
+    ros-indigo/rostime
     ros-indigo/tf2_ros
     ros-indigo/tf
-    ros-indigo/catkin
+    ros-indigo/kdl_parser
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/cmake_modules
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

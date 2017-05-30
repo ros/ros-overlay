@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
+    ros-indigo/dynamic_tf_publisher
     ros-indigo/jsk_interactive_marker
     ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/dynamic_tf_publisher
     ros-indigo/actionlib
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/mk
     ros-indigo/rosbuild
+    ros-indigo/mk
 "
 
 SLOT="0/0"

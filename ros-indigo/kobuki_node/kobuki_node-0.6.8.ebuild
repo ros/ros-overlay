@@ -12,30 +12,30 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kobuki_driver
-    ros-indigo/pluginlib
-    ros-indigo/kobuki_msgs
-    ros-indigo/kobuki_ftdi
-    ros-indigo/ecl_sigslots
-    ros-indigo/roscpp
-    ros-indigo/nodelet
-    ros-indigo/tf
-    ros-indigo/kobuki_keyop
-    ros-indigo/kobuki_rapps
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/diagnostic_updater
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/kobuki_safety_controller
-    ros-indigo/nav_msgs
-    ros-indigo/capabilities
-    ros-indigo/ecl_streams
-    ros-indigo/diagnostic_msgs
-    ros-indigo/rospy
-    ros-indigo/ecl_exceptions
-    ros-indigo/sensor_msgs
-    ros-indigo/ecl_threads
     ros-indigo/angles
+    ros-indigo/nav_msgs
+    ros-indigo/std_msgs
+    ros-indigo/kobuki_safety_controller
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/kobuki_rapps
+    ros-indigo/diagnostic_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/ecl_exceptions
+    ros-indigo/ecl_threads
+    ros-indigo/nodelet
+    ros-indigo/ecl_sigslots
+    ros-indigo/rospy
+    ros-indigo/capabilities
+    ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/kobuki_ftdi
+    ros-indigo/diagnostic_updater
+    ros-indigo/pluginlib
+    ros-indigo/ecl_streams
+    ros-indigo/geometry_msgs
+    ros-indigo/kobuki_msgs
+    ros-indigo/kobuki_keyop
+    ros-indigo/kobuki_driver
 "
 DEPEND="${RDEPEND}
 "

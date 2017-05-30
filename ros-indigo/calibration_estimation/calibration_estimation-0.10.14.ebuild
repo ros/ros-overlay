@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostest
-    ros-indigo/visualization_msgs
     ros-indigo/rospy
     ros-indigo/urdfdom_py
     ros-indigo/python_orocos_kdl
-    ros-indigo/sensor_msgs
     ros-indigo/calibration_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/rostest
+    ros-indigo/visualization_msgs
     dev-python/matplotlib
     dev-libs/scipy
 "

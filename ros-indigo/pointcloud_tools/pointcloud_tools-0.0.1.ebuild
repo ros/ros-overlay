@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pcl_ros
     ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/nav_msgs
+    ros-indigo/pcl_ros
 "
 DEPEND="${RDEPEND}
 "

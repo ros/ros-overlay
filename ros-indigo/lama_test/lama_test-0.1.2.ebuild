@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rviz
     ros-indigo/lama_interfaces
     ros-indigo/nj_escape_crossing
-    ros-indigo/pm_mcc
-    ros-indigo/nj_laser
-    ros-indigo/nj_oa_laser
-    ros-indigo/lj_costmap
-    ros-indigo/lj_laser_heading
-    ros-indigo/local_map
-    ros-indigo/rviz
     ros-indigo/nj_oa_costmap
-    ros-indigo/nj_costmap
+    ros-indigo/nj_oa_laser
+    ros-indigo/nj_laser
+    ros-indigo/pm_mcc
+    ros-indigo/lj_laser_heading
     ros-indigo/dfs_explorer
+    ros-indigo/nj_costmap
+    ros-indigo/local_map
+    ros-indigo/lj_costmap
 "
 DEPEND="${RDEPEND}
 "

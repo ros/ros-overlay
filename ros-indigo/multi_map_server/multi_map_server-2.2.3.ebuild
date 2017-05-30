@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/rospy
     ros-indigo/nav_msgs
-    ros-indigo/map_server
+    ros-indigo/rospy
     ros-indigo/roscpp
+    ros-indigo/map_server
     ros-indigo/tf
+    ros-indigo/rosconsole
     dev-cpp/yaml-cpp
     media-libs/sdl-image
 "

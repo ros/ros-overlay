@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/grid_map_msgs
     ros-kinetic/filters
-    ros-kinetic/grid_map_core
     ros-kinetic/grid_map_ros
+    ros-kinetic/grid_map_core
 "
 DEPEND="${RDEPEND}
 "

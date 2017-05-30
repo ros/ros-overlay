@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/catkin
     ros-kinetic/message_runtime
     ros-kinetic/message_generation
-    ros-kinetic/catkin
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

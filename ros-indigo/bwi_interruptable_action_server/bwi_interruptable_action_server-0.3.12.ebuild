@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/actionlib_tutorials
-    ros-indigo/std_srvs
-    ros-indigo/actionlib
     ros-indigo/roscpp
+    ros-indigo/actionlib
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/joint_state_publisher
     ros-indigo/ridgeback_description
+    ros-indigo/joint_state_publisher
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

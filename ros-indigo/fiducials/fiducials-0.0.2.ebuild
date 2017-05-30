@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/fiducial_detect
-    ros-indigo/fiducial_slam
     ros-indigo/fiducial_pose
+    ros-indigo/fiducial_slam
     ros-indigo/fiducial_lib
 "
 DEPEND="${RDEPEND}

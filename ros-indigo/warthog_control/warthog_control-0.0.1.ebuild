@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_localization
-    ros-indigo/joy
-    ros-indigo/diff_drive_controller
-    ros-indigo/rosserial_server
     ros-indigo/topic_tools
-    ros-indigo/controller_manager
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/teleop_twist_joy
     ros-indigo/twist_mux
+    ros-indigo/controller_manager
+    ros-indigo/joy
+    ros-indigo/rosserial_server
     ros-indigo/joint_state_controller
+    ros-indigo/robot_localization
+    ros-indigo/diff_drive_controller
+    ros-indigo/teleop_twist_joy
+    ros-indigo/interactive_marker_twist_server
 "
 DEPEND="${RDEPEND}
     ros-indigo/roslaunch

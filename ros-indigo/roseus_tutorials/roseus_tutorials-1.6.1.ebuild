@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ar_track_alvar
-    ros-indigo/visualization_msgs
-    ros-indigo/pr2eus
-    ros-indigo/uvc_camera
     ros-indigo/checkerboard_detector
-    ros-indigo/opencv_apps
-    ros-indigo/jsk_recognition_msgs
-    ros-indigo/image_view2
     ros-indigo/image_proc
+    ros-indigo/ar_track_alvar
+    ros-indigo/pr2eus
+    ros-indigo/image_view2
     ros-indigo/posedetection_msgs
+    ros-indigo/uvc_camera
+    ros-indigo/opencv_apps
+    ros-indigo/visualization_msgs
+    ros-indigo/jsk_recognition_msgs
 "
 DEPEND="${RDEPEND}
     ros-indigo/roseus

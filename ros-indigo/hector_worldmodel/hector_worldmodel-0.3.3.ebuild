@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_worldmodel_msgs
     ros-indigo/hector_worldmodel_geotiff_plugins
     ros-indigo/hector_object_tracker
+    ros-indigo/hector_worldmodel_msgs
 "
 DEPEND="${RDEPEND}
 "

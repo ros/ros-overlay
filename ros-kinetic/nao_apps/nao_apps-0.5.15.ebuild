@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/naoqi_pose
-    ros-kinetic/rospy
-    ros-kinetic/naoqi_bridge
-    ros-kinetic/std_srvs
-    ros-kinetic/actionlib
-    ros-kinetic/naoqi_driver_py
-    ros-kinetic/naoqi_bridge_msgs
-    ros-kinetic/naoqi_driver
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/humanoid_nav_msgs
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/naoqi_pose
+    ros-kinetic/naoqi_bridge
+    ros-kinetic/rospy
+    ros-kinetic/geometry_msgs
+    ros-kinetic/actionlib
+    ros-kinetic/naoqi_bridge_msgs
+    ros-kinetic/humanoid_nav_msgs
+    ros-kinetic/naoqi_driver
     ros-kinetic/diagnostic_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/naoqi_driver_py
 "
 DEPEND="${RDEPEND}
 "

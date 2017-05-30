@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/task_compiler
     ros-indigo/pddl_planner
     ros-indigo/pddl_msgs
     ros-indigo/pddl_planner_viewer
+    ros-indigo/task_compiler
 "
 DEPEND="${RDEPEND}
 "

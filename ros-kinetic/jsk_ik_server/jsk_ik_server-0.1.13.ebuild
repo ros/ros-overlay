@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
-    ros-kinetic/roseus
-    ros-kinetic/mk
     ros-kinetic/cmake_modules
-    ros-kinetic/tf
     ros-kinetic/moveit_msgs
+    ros-kinetic/mk
+    ros-kinetic/roseus
+    ros-kinetic/rostest
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 "

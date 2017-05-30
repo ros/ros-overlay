@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/naoqi_pose
-    ros-indigo/rospy
-    ros-indigo/naoqi_bridge
-    ros-indigo/std_srvs
-    ros-indigo/actionlib
-    ros-indigo/naoqi_driver_py
-    ros-indigo/naoqi_bridge_msgs
-    ros-indigo/naoqi_driver
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/humanoid_nav_msgs
     ros-indigo/dynamic_reconfigure
+    ros-indigo/naoqi_pose
+    ros-indigo/naoqi_bridge
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
+    ros-indigo/naoqi_bridge_msgs
+    ros-indigo/humanoid_nav_msgs
+    ros-indigo/naoqi_driver
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/naoqi_driver_py
 "
 DEPEND="${RDEPEND}
 "

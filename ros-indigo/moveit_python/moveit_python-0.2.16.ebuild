@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/actionlib
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/shape_msgs
     ros-indigo/moveit_msgs
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
+    ros-indigo/shape_msgs
+    ros-indigo/tf
     dev-libs/assimp
 "
 DEPEND="${RDEPEND}

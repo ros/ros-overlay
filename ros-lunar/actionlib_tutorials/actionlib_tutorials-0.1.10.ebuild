@@ -17,9 +17,9 @@ RDEPEND="
     ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
-    ros-lunar/message_generation
     ros-lunar/std_msgs
     ros-lunar/actionlib_msgs
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

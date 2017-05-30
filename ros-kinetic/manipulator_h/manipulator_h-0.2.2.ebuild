@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/manipulator_h_description
-    ros-kinetic/manipulator_h_gazebo
     ros-kinetic/manipulator_h_manager
-    ros-kinetic/manipulator_h_kinematics_dynamics
-    ros-kinetic/manipulator_h_bringup
-    ros-kinetic/manipulator_h_gui
     ros-kinetic/manipulator_h_base_module
     ros-kinetic/manipulator_h_base_module_msgs
+    ros-kinetic/manipulator_h_gazebo
+    ros-kinetic/manipulator_h_bringup
+    ros-kinetic/manipulator_h_gui
+    ros-kinetic/manipulator_h_kinematics_dynamics
 "
 DEPEND="${RDEPEND}
 "

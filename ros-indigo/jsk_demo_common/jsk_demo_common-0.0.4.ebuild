@@ -12,20 +12,20 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_navigation_self_filter
-    ros-indigo/roseus
-    ros-indigo/control_msgs
-    ros-indigo/roseus_mongo
-    ros-indigo/pr2eus
-    ros-indigo/jsk_maps
-    ros-indigo/jsk_perception
-    ros-indigo/roseus_smach
     ros-indigo/pr2_gripper_sensor_msgs
-    ros-indigo/pddl_planner
-    ros-indigo/joint_state_publisher
-    ros-indigo/robot_state_publisher
+    ros-indigo/pr2eus
     ros-indigo/jsk_hark_msgs
     ros-indigo/message_runtime
+    ros-indigo/jsk_perception
+    ros-indigo/pddl_planner
+    ros-indigo/pr2_navigation_self_filter
+    ros-indigo/jsk_maps
+    ros-indigo/roseus
+    ros-indigo/roseus_smach
+    ros-indigo/roseus_mongo
+    ros-indigo/control_msgs
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

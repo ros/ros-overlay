@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/social_navigation_layers
     ros-indigo/range_sensor_layer
+    ros-indigo/social_navigation_layers
 "
 DEPEND="${RDEPEND}
 "

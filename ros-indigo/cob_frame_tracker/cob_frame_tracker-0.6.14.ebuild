@@ -12,24 +12,24 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kdl_conversions
+    ros-indigo/dynamic_reconfigure
     ros-indigo/visualization_msgs
     ros-indigo/rospy
-    ros-indigo/control_toolbox
-    ros-indigo/std_srvs
-    ros-indigo/actionlib_msgs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/orocos_kdl
     ros-indigo/geometry_msgs
-    ros-indigo/kdl_parser
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/cob_srvs
-    ros-indigo/tf
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/std_srvs
+    ros-indigo/orocos_kdl
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/control_toolbox
+    ros-indigo/kdl_conversions
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/tf
+    ros-indigo/kdl_parser
     ros-indigo/interactive_markers
+    ros-indigo/cob_srvs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

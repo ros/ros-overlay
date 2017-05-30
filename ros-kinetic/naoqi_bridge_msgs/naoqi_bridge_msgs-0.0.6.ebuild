@@ -12,14 +12,14 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/genmsg
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/actionlib_msgs
     ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
+    ros-kinetic/actionlib_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/genmsg
+    ros-kinetic/std_msgs
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

@@ -13,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/orocos_kdl
     ros-lunar/python_orocos_kdl
+    ros-lunar/orocos_kdl
 "
 DEPEND="${RDEPEND}
 "

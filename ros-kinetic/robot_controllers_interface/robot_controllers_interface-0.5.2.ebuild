@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/robot_controllers_msgs
-    ros-kinetic/roscpp
     ros-kinetic/actionlib
     ros-kinetic/pluginlib
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "

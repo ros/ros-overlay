@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/message_runtime
     ros-indigo/roscpp
+    ros-indigo/message_runtime
     app-arch/bzip2
 "
 DEPEND="${RDEPEND}

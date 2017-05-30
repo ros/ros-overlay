@@ -13,13 +13,13 @@ LICENSE="LGPL and Apache2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/camera_info_manager
+    ros-indigo/dynamic_reconfigure
     ros-indigo/rospy
+    ros-indigo/octomap
+    ros-indigo/sensor_msgs
     ros-indigo/camera_info_manager_py
     ros-indigo/naoqi_driver_py
-    ros-indigo/camera_info_manager
-    ros-indigo/sensor_msgs
-    ros-indigo/octomap
-    ros-indigo/dynamic_reconfigure
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

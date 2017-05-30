@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
     ros-kinetic/camera_info_manager
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/nodelet
     ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

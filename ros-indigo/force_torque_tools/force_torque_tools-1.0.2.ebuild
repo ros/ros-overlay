@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gravity_compensation
     ros-indigo/force_torque_sensor_calib
+    ros-indigo/gravity_compensation
 "
 DEPEND="${RDEPEND}
 "

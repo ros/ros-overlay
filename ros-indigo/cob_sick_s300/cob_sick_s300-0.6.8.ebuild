@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

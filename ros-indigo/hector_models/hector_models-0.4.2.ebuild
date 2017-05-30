@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/hector_sensors_description
     ros-indigo/hector_xacro_tools
+    ros-indigo/hector_sensors_description
 "
 DEPEND="${RDEPEND}
 "

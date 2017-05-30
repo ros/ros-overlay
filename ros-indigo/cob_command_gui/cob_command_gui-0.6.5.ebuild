@@ -12,10 +12,10 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslib
     ros-indigo/cob_script_server
     ros-indigo/rospy
     ros-indigo/cob_msgs
+    ros-indigo/roslib
     dev-python/pygraphviz
 "
 DEPEND="${RDEPEND}

@@ -13,24 +13,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/rostest
-    ros-kinetic/map_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/nav_msgs
     ros-kinetic/voxel_grid
-    ros-kinetic/laser_geometry
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/pluginlib
+    ros-kinetic/visualization_msgs
+    ros-kinetic/nav_msgs
+    ros-kinetic/rosconsole
     ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/laser_geometry
+    ros-kinetic/message_runtime
     ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/map_msgs
     ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/rostest
     ros-kinetic/tf
-    ros-kinetic/message_filters
     ros-kinetic/pcl_conversions
-    ros-kinetic/message_runtime
-    ros-kinetic/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules

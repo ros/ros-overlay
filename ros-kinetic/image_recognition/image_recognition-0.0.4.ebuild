@@ -12,12 +12,12 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tensorflow_ros
-    ros-kinetic/image_recognition_util
-    ros-kinetic/image_recognition_rqt
     ros-kinetic/image_recognition_msgs
-    ros-kinetic/openface_ros
+    ros-kinetic/image_recognition_rqt
     ros-kinetic/tensorflow_ros_rqt
+    ros-kinetic/tensorflow_ros
+    ros-kinetic/openface_ros
+    ros-kinetic/image_recognition_util
     ros-kinetic/skybiometry_ros
 "
 DEPEND="${RDEPEND}

@@ -12,9 +12,9 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rviz_imu_plugin
     ros-indigo/imu_complementary_filter
     ros-indigo/imu_filter_madgwick
-    ros-indigo/rviz_imu_plugin
 "
 DEPEND="${RDEPEND}
 "

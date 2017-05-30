@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roch_bringup
     ros-indigo/roch_teleop
+    ros-indigo/roch_navigation
     ros-indigo/roch_rapps
     ros-indigo/roch_follower
-    ros-indigo/roch_navigation
-    ros-indigo/roch_bringup
 "
 DEPEND="${RDEPEND}
 "

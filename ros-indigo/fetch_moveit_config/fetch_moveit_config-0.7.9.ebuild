@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_move_group
     ros-indigo/moveit_planners_ompl
     ros-indigo/rospy
     ros-indigo/xacro
-    ros-indigo/joint_state_publisher
-    ros-indigo/moveit_python
     ros-indigo/moveit_simple_controller_manager
-    ros-indigo/moveit_fake_controller_manager
-    ros-indigo/robot_state_publisher
+    ros-indigo/moveit_python
     ros-indigo/fetch_description
     ros-indigo/moveit_ros_visualization
+    ros-indigo/moveit_fake_controller_manager
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/robot_state_publisher
+    ros-indigo/joint_state_publisher
 "
 DEPEND="${RDEPEND}
 "

@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roch_bringup
+    ros-kinetic/nodelet
+    ros-kinetic/frontier_exploration
     ros-kinetic/yocs_cmd_vel_mux
-    ros-kinetic/navfn
+    ros-kinetic/amcl
     ros-kinetic/gmapping
     ros-kinetic/dwa_local_planner
-    ros-kinetic/frontier_exploration
-    ros-kinetic/map_server
-    ros-kinetic/sensor_msgs
     ros-kinetic/roscpp
-    ros-kinetic/base_local_planner
-    ros-kinetic/amcl
     ros-kinetic/roch_safety_controller
-    ros-kinetic/move_base
-    ros-kinetic/nodelet
+    ros-kinetic/map_server
+    ros-kinetic/base_local_planner
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
-    ros-kinetic/roch_bringup
+    ros-kinetic/navfn
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
     ros-kinetic/roslaunch

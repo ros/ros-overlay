@@ -12,10 +12,10 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
-    ros-indigo/robot_mechanism_controllers
-    ros-indigo/position_controllers
     ros-indigo/urdf
+    ros-indigo/position_controllers
+    ros-indigo/robot_mechanism_controllers
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
 "

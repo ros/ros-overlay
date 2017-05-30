@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/yocs_msgs
     ros-indigo/rospy
-    ros-indigo/rocon_apps
     ros-indigo/rocon_std_msgs
-    ros-indigo/scheduler_msgs
     ros-indigo/rocon_uri
     ros-indigo/concert_software_farmer
     ros-indigo/concert_service_utilities
     ros-indigo/concert_msgs
-    ros-indigo/yocs_msgs
+    ros-indigo/scheduler_msgs
+    ros-indigo/rocon_apps
 "
 DEPEND="${RDEPEND}
 "

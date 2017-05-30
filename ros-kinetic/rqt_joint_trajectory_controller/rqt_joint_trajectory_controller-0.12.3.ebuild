@@ -12,12 +12,12 @@ LICENSE="Modified BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/control_msgs
     ros-kinetic/rospy
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/rqt_gui
-    ros-kinetic/rqt_gui_py
     ros-kinetic/controller_manager_msgs
+    ros-kinetic/rqt_gui
+    ros-kinetic/trajectory_msgs
+    ros-kinetic/control_msgs
+    ros-kinetic/rqt_gui_py
 "
 DEPEND="${RDEPEND}
 "

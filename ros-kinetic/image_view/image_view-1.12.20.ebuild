@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/cv_bridge
-    ros-kinetic/std_srvs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/nodelet
+    ros-kinetic/image_transport
     ros-kinetic/message_filters
     ros-kinetic/camera_calibration_parsers
-    ros-kinetic/nodelet
     ros-kinetic/roscpp
-    ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/std_srvs
+    ros-kinetic/rosconsole
+    ros-kinetic/cv_bridge
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
     ros-kinetic/stereo_msgs
+    ros-kinetic/sensor_msgs
 "
 
 SLOT="0/0"

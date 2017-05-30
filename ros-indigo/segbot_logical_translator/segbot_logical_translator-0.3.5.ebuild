@@ -13,21 +13,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/map_msgs
-    ros-indigo/multi_level_map_msgs
+    ros-indigo/dynamic_reconfigure
     ros-indigo/bwi_msgs
     ros-indigo/segbot_navigation
-    ros-indigo/utexas_gdc
-    ros-indigo/multi_level_map_utils
-    ros-indigo/actionlib
-    ros-indigo/bwi_mapper
     ros-indigo/nav_msgs
-    ros-indigo/tf
+    ros-indigo/multi_level_map_msgs
+    ros-indigo/message_filters
+    ros-indigo/actionlib
+    ros-indigo/multi_level_map_utils
     ros-indigo/move_base_msgs
     ros-indigo/roscpp
+    ros-indigo/map_msgs
     ros-indigo/bwi_planning_common
-    ros-indigo/message_filters
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/tf
+    ros-indigo/utexas_gdc
+    ros-indigo/bwi_mapper
 "
 DEPEND="${RDEPEND}
 "

@@ -12,25 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gateway_msgs
-    ros-indigo/rospy
-    ros-indigo/concert_service_admin
-    ros-indigo/std_srvs
-    ros-indigo/rocon_bubble_icons
-    ros-indigo/rocon_app_manager
-    ros-indigo/roscpp
-    ros-indigo/concert_service_turtlesim
-    ros-indigo/rocon_python_comms
-    ros-indigo/rocon_uri
-    ros-indigo/concert_master
-    ros-indigo/rocon_python_utils
-    ros-indigo/geometry_msgs
     ros-indigo/zeroconf_msgs
-    ros-indigo/concert_msgs
-    ros-indigo/zeroconf_avahi
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
+    ros-indigo/rocon_python_comms
     ros-indigo/concert_scheduler_requests
+    ros-indigo/concert_msgs
+    ros-indigo/concert_service_turtlesim
+    ros-indigo/rocon_python_utils
+    ros-indigo/roscpp
+    ros-indigo/concert_master
+    ros-indigo/rocon_app_manager
+    ros-indigo/rocon_uri
+    ros-indigo/gateway_msgs
+    ros-indigo/std_srvs
     ros-indigo/turtlesim
     ros-indigo/rocon_apps
+    ros-indigo/rocon_bubble_icons
+    ros-indigo/zeroconf_avahi
+    ros-indigo/concert_service_admin
 "
 DEPEND="${RDEPEND}
 "

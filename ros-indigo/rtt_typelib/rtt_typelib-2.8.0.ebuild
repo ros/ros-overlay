@@ -12,9 +12,9 @@ LICENSE="GPL v2 or later"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/typelib
     ros-indigo/rtt
     ros-indigo/catkin
+    ros-indigo/typelib
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_build
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
-    ros-indigo/sophus
     ros-indigo/cmake_modules
+    ros-indigo/sophus
+    ros-indigo/tf
+    ros-indigo/geometry_msgs
+    ros-indigo/ecl_build
 "
 DEPEND="${RDEPEND}
 "

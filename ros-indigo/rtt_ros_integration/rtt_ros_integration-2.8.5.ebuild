@@ -7,21 +7,21 @@ DESCRIPTION="This stack contains all software necessary to build systems using b
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/indigo/rtt_ros_integration/2.8.5-0.tar.gz"
 
-LICENSE="||( GPL BSD LGPL GPL + runtime exception )"
+LICENSE="|| ( GPL BSD LGPL GPL + runtime exception )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rtt_rosnode
-    ros-indigo/rtt_tf
-    ros-indigo/rtt_dynamic_reconfigure
-    ros-indigo/rtt_rosparam
-    ros-indigo/rtt_rosclock
-    ros-indigo/rtt_actionlib
-    ros-indigo/rtt_ros_msgs
-    ros-indigo/rtt_roscomm
-    ros-indigo/rtt_ros
     ros-indigo/rtt_rosdeployment
+    ros-indigo/rtt_actionlib
+    ros-indigo/rtt_rosnode
+    ros-indigo/rtt_roscomm
+    ros-indigo/rtt_ros_msgs
+    ros-indigo/rtt_rosparam
+    ros-indigo/rtt_dynamic_reconfigure
+    ros-indigo/rtt_ros
     ros-indigo/rtt_rospack
+    ros-indigo/rtt_rosclock
+    ros-indigo/rtt_tf
 "
 DEPEND="${RDEPEND}
 "

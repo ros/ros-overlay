@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/roslib
-    ros-indigo/pluginlib
     ros-indigo/roscpp
+    ros-indigo/rosconsole
+    ros-indigo/pluginlib
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

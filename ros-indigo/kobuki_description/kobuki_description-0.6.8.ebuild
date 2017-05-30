@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
     ros-indigo/urdf
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
 "

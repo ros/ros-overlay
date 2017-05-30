@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diff_drive_controller
-    ros-indigo/controller_manager_msgs
-    ros-indigo/controller_manager
-    ros-indigo/robot_state_publisher
     ros-indigo/twist_mux
+    ros-indigo/controller_manager
+    ros-indigo/controller_manager_msgs
     ros-indigo/joint_state_controller
+    ros-indigo/diff_drive_controller
+    ros-indigo/robot_state_publisher
 "
 DEPEND="${RDEPEND}
 "

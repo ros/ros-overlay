@@ -12,19 +12,19 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_omni_drive_controller
-    ros-indigo/cob_control_msgs
+    ros-indigo/cob_trajectory_controller
+    ros-indigo/cob_collision_velocity_filter
     ros-indigo/cob_base_velocity_smoother
-    ros-indigo/cob_control_mode_adapter
+    ros-indigo/cob_footprint_observer
+    ros-indigo/cob_control_msgs
+    ros-indigo/cob_cartesian_controller
+    ros-indigo/cob_omni_drive_controller
     ros-indigo/cob_twist_controller
+    ros-indigo/cob_undercarriage_ctrl_node
+    ros-indigo/cob_model_identifier
+    ros-indigo/cob_control_mode_adapter
     ros-indigo/cob_frame_tracker
     ros-indigo/cob_obstacle_distance
-    ros-indigo/cob_cartesian_controller
-    ros-indigo/cob_undercarriage_ctrl_node
-    ros-indigo/cob_footprint_observer
-    ros-indigo/cob_trajectory_controller
-    ros-indigo/cob_model_identifier
-    ros-indigo/cob_collision_velocity_filter
 "
 DEPEND="${RDEPEND}
 "

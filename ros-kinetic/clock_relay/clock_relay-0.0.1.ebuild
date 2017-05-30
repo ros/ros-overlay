@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/message_relay
     ros-kinetic/rosgraph_msgs
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/yocs_velocity_smoother
+    ros-indigo/yocs_virtual_sensor
+    ros-indigo/stdr_server
     ros-indigo/stdr_resources
     ros-indigo/navigation
-    ros-indigo/stdr_gui
-    ros-indigo/stdr_server
-    ros-indigo/turtlebot_bringup
-    ros-indigo/yocs_virtual_sensor
     ros-indigo/stdr_robot
-    ros-indigo/yocs_velocity_smoother
+    ros-indigo/stdr_gui
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

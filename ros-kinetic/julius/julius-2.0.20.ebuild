@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslib
-    ros-kinetic/mk
     ros-kinetic/rospack
+    ros-kinetic/mk
+    ros-kinetic/roslib
 "
 
 SLOT="0/0"

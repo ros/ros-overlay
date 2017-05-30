@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/fiducial_msgs
-    ros-kinetic/visualization_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/opencv3
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf2_geometry_msgs
     ros-kinetic/tf2
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/tf2_ros
-    ros-kinetic/image_transport
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/opencv3
+    ros-kinetic/visualization_msgs
+    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

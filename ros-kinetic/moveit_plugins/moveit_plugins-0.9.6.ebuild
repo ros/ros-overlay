@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/moveit_fake_controller_manager
-    ros-kinetic/moveit_ros_control_interface
     ros-kinetic/moveit_simple_controller_manager
+    ros-kinetic/moveit_ros_control_interface
+    ros-kinetic/moveit_fake_controller_manager
 "
 DEPEND="${RDEPEND}
 "

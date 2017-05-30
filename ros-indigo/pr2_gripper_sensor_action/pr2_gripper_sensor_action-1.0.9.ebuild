@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gripper_sensor_controller
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/pr2_gripper_sensor_controller
+    ros-indigo/roscpp
     ros-indigo/pr2_mechanism_model
+    ros-indigo/pr2_machine
+    ros-indigo/pr2_mechanism_controllers
     ros-indigo/pr2_gripper_sensor_msgs
     ros-indigo/pr2_controllers_msgs
-    ros-indigo/roscpp
-    ros-indigo/pr2_machine
     ros-indigo/robot_mechanism_controllers
-    ros-indigo/message_runtime
-    ros-indigo/pr2_mechanism_controllers
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/geometry_msgs
-    ros-indigo/moveit_ros_planning_interface
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/shape_msgs
     ros-indigo/moveit_msgs
+    ros-indigo/rospy
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/geometry_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/shape_msgs
+    ros-indigo/tf
     dev-lang/python
     dev-libs/assimp
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
-    ros-kinetic/roseus
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/control_msgs
     ros-kinetic/nav_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/pr2_msgs
-    ros-kinetic/pr2_description
     ros-kinetic/move_base_msgs
     ros-kinetic/sound_play
+    ros-kinetic/roseus
     ros-kinetic/euscollada
+    ros-kinetic/rostest
+    ros-kinetic/pr2_msgs
+    ros-kinetic/pr2_description
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rosgraph_msgs

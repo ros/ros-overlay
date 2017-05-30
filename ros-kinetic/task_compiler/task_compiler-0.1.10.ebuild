@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pddl_planner
     ros-kinetic/roseus_smach
+    ros-kinetic/pddl_planner
 "
 DEPEND="${RDEPEND}
 "

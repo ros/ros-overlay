@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/grid_map_visualization
-    ros-indigo/grid_map_loader
-    ros-indigo/grid_map_cv
-    ros-indigo/grid_map_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/grid_map_msgs
     ros-indigo/grid_map_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/grid_map_rviz_plugin
+    ros-indigo/grid_map_loader
     ros-indigo/roscpp
+    ros-indigo/grid_map_visualization
+    ros-indigo/grid_map_cv
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/grid_map_rviz_plugin
 "
 DEPEND="${RDEPEND}
 "

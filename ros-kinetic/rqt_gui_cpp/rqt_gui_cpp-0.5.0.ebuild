@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/nodelet
+    ros-kinetic/roscpp
     ros-kinetic/qt_gui
     ros-kinetic/qt_gui_cpp
-    ros-kinetic/roscpp
-    ros-kinetic/nodelet
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

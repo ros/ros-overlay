@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
     ros-indigo/sensor_msgs
+    ros-indigo/rosconsole
     dev-lang/python
-    media-libs/opencv
     dev-libs/boost
+    media-libs/opencv
     media-libs/opencv
 "
 DEPEND="${RDEPEND}

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cv_bridge
-    ros-kinetic/grid_map_visualization
-    ros-kinetic/grid_map_loader
-    ros-kinetic/grid_map_cv
-    ros-kinetic/grid_map_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/grid_map_msgs
     ros-kinetic/grid_map_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/grid_map_rviz_plugin
+    ros-kinetic/grid_map_loader
     ros-kinetic/roscpp
+    ros-kinetic/grid_map_visualization
+    ros-kinetic/grid_map_cv
+    ros-kinetic/sensor_msgs
+    ros-kinetic/cv_bridge
+    ros-kinetic/grid_map_rviz_plugin
 "
 DEPEND="${RDEPEND}
 "

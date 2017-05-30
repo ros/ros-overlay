@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/pluginlib
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/rosconsole
     ros-indigo/bondcpp
-    ros-indigo/pluginlib
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
     sys-apps/util-linux
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rospy
     ros-indigo/cmake_modules
+    ros-indigo/rospy
     ros-indigo/message_generation
 "
 

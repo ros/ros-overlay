@@ -12,13 +12,13 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/gazebo_ros
+    ros-kinetic/actionlib
     ros-kinetic/katana_msgs
+    ros-kinetic/sensor_msgs
+    ros-kinetic/trajectory_msgs
     ros-kinetic/control_msgs
     ros-kinetic/control_toolbox
-    ros-kinetic/trajectory_msgs
-    ros-kinetic/gazebo_ros
-    ros-kinetic/sensor_msgs
-    ros-kinetic/actionlib
 "
 DEPEND="${RDEPEND}
 "

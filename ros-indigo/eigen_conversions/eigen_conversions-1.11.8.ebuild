@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/orocos_kdl
     ros-indigo/geometry_msgs
+    ros-indigo/orocos_kdl
     ros-indigo/std_msgs
     dev-cpp/eigen
 "

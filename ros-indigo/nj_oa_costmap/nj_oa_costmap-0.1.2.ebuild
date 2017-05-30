@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/map_ray_caster
-    ros-indigo/nj_oa_laser
     ros-indigo/nav_msgs
-    ros-indigo/lama_jockeys
     ros-indigo/geometry_msgs
+    ros-indigo/nj_oa_laser
     ros-indigo/roscpp
+    ros-indigo/lama_jockeys
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}

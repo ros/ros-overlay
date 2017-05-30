@@ -13,8 +13,8 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros
     ros-indigo/roscpp
+    ros-indigo/gazebo_ros
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

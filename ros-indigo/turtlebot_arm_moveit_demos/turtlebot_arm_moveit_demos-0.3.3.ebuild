@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/moveit_commander
-    ros-indigo/trajectory_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/tf
     ros-indigo/moveit_msgs
+    ros-indigo/rospy
+    ros-indigo/geometry_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/moveit_commander
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

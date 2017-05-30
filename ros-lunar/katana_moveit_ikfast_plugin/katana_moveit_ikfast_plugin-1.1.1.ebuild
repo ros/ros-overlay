@@ -11,9 +11,9 @@ LICENSE="|| ( BSD Apache )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_core
     ros-lunar/roscpp
     ros-lunar/pluginlib
+    ros-lunar/moveit_core
     ros-lunar/tf_conversions
     virtual/lapack
 "

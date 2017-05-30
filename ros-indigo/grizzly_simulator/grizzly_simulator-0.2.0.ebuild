@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/grizzly_gazebo
     ros-indigo/grizzly_gazebo_plugins
+    ros-indigo/grizzly_gazebo
 "
 DEPEND="${RDEPEND}
 "

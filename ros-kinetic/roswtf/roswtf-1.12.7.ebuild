@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosservice
-    ros-kinetic/rosgraph
-    ros-kinetic/rosbuild
     ros-kinetic/rosnode
+    ros-kinetic/rosgraph
     ros-kinetic/roslaunch
+    ros-kinetic/rosbuild
+    ros-kinetic/rosservice
     ros-kinetic/roslib
-    dev-python/paramiko
     dev-python/rospkg
+    dev-python/paramiko
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

@@ -12,24 +12,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
-    ros-kinetic/urdf
-    ros-kinetic/resource_retriever
-    ros-kinetic/collada_parser
-    ros-kinetic/tf
-    ros-kinetic/roscpp
-    ros-kinetic/assimp_devel
     ros-kinetic/rospack
+    ros-kinetic/collada_parser
     ros-kinetic/collada_urdf
+    ros-kinetic/roscpp
+    ros-kinetic/urdf
+    ros-kinetic/rostest
+    ros-kinetic/tf
+    ros-kinetic/resource_retriever
+    ros-kinetic/assimp_devel
     media-libs/collada-dom
     dev-cpp/yaml-cpp
     dev-libs/urdfdom
     media-libs/qhull
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/mk
-    ros-kinetic/rosbuild
     ros-kinetic/cmake_modules
+    ros-kinetic/rosbuild
+    ros-kinetic/mk
     ros-kinetic/rosboost_cfg
 "
 

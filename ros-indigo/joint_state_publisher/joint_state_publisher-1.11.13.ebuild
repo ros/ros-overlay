@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
     ros-indigo/rospy
+    ros-indigo/sensor_msgs
     dev-python/wxpython
 "
 DEPEND="${RDEPEND}

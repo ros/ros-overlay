@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nodelet
-    ros-indigo/kobuki_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/pluginlib
+    ros-indigo/nodelet
     ros-indigo/roscpp
+    ros-indigo/pluginlib
+    ros-indigo/kobuki_msgs
 "
 DEPEND="${RDEPEND}
 "

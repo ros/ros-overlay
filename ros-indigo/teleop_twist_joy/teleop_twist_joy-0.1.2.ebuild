@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
     ros-indigo/joy
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
-    ros-indigo/roslaunch
     ros-indigo/roslint
+    ros-indigo/roslaunch
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

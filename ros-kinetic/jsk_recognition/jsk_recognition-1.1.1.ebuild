@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/resized_image_transport
-    ros-kinetic/jsk_pcl_ros
     ros-kinetic/checkerboard_detector
-    ros-kinetic/jsk_perception
-    ros-kinetic/jsk_recognition_msgs
-    ros-kinetic/imagesift
     ros-kinetic/jsk_recognition_utils
+    ros-kinetic/resized_image_transport
+    ros-kinetic/imagesift
+    ros-kinetic/jsk_perception
+    ros-kinetic/jsk_pcl_ros
+    ros-kinetic/jsk_recognition_msgs
 "
 DEPEND="${RDEPEND}
 "

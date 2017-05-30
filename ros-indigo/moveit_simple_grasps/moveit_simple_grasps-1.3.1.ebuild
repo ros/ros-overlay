@@ -12,24 +12,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/message_runtime
     ros-indigo/moveit_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/actionlib_msgs
     ros-indigo/moveit_visual_tools
+    ros-indigo/std_msgs
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/tf_conversions
-    ros-indigo/actionlib
     ros-indigo/cmake_modules
+    ros-indigo/tf_conversions
     ros-indigo/moveit_ros_planning_interface
     ros-indigo/message_generation
+    ros-indigo/actionlib
     ros-indigo/roscpp
-    ros-indigo/moveit_ros_planning
-    ros-indigo/moveit_core
     ros-indigo/eigen_conversions
+    ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning
     ros-indigo/tf
 "
 

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/kdl_parser
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/urdf
+    ros-indigo/kdl_parser
+    ros-indigo/tf_conversions
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

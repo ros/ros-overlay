@@ -12,22 +12,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_controllers_interface
-    ros-indigo/tf_conversions
-    ros-indigo/control_msgs
-    ros-indigo/urdf
     ros-indigo/pluginlib
-    ros-indigo/trajectory_msgs
-    ros-indigo/actionlib_msgs
+    ros-indigo/tf_conversions
     ros-indigo/nav_msgs
-    ros-indigo/orocos_kdl
-    ros-indigo/kdl_parser
     ros-indigo/geometry_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/tf
     ros-indigo/actionlib
+    ros-indigo/orocos_kdl
+    ros-indigo/actionlib_msgs
+    ros-indigo/robot_controllers_interface
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
+    ros-indigo/tf
+    ros-indigo/kdl_parser
 "
 DEPEND="${RDEPEND}
     ros-indigo/angles

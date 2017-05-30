@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roslang
-    ros-kinetic/rosclean
-    ros-kinetic/mk
-    ros-kinetic/rosbuild
-    ros-kinetic/rosboost_cfg
     ros-kinetic/rosunit
     ros-kinetic/rosbash
-    ros-kinetic/rosmake
-    ros-kinetic/roslib
-    ros-kinetic/catkin
     ros-kinetic/roscreate
+    ros-kinetic/rosbuild
+    ros-kinetic/roslang
+    ros-kinetic/mk
+    ros-kinetic/rosclean
+    ros-kinetic/roslib
+    ros-kinetic/rosboost_cfg
+    ros-kinetic/catkin
+    ros-kinetic/rosmake
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/openni2_launch
-    ros-indigo/kdl_parser
-    ros-indigo/calibration_launch
-    ros-indigo/orocos_kdl
     ros-indigo/calibration_estimation
+    ros-indigo/kdl_parser
+    ros-indigo/orocos_kdl
+    ros-indigo/calibration_launch
+    ros-indigo/openni2_launch
 "
 DEPEND="${RDEPEND}
 "

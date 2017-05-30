@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
-    ros-indigo/roslib
-    ros-indigo/rosatomic
-    ros-indigo/std_msgs
-    ros-indigo/allocators
-    ros-indigo/lockfree
     ros-indigo/rosunit
+    ros-indigo/lockfree
+    ros-indigo/roslib
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/rosatomic
+    ros-indigo/allocators
 "
 DEPEND="${RDEPEND}
 "

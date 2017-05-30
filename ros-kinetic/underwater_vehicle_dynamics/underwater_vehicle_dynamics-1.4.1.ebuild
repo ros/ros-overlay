@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/tf_conversions
-    ros-kinetic/rospy
     ros-kinetic/nav_msgs
+    ros-kinetic/rospy
     ros-kinetic/geometry_msgs
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs

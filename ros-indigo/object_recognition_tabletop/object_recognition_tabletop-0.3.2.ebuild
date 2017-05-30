@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
-    ros-indigo/moveit_core
-    ros-indigo/object_recognition_msgs
     ros-indigo/ecto
     ros-indigo/object_recognition_core
-    ros-indigo/opencv_candidate
+    ros-indigo/moveit_core
+    ros-indigo/object_recognition_msgs
     ros-indigo/tf
+    ros-indigo/opencv_candidate
     media-libs/assimp
 "
 DEPEND="${RDEPEND}

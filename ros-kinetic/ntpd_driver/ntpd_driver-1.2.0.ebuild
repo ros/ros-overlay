@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-kinetic/cmake_modules
     ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     dev-libs/poco
 "
 DEPEND="${RDEPEND}

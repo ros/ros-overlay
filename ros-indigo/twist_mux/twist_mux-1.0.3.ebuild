@@ -13,11 +13,11 @@ LICENSE="CC BY-NC-SA 4.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/twist_mux_msgs
-    ros-indigo/visualization_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/visualization_msgs
+    ros-indigo/twist_mux_msgs
     ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}

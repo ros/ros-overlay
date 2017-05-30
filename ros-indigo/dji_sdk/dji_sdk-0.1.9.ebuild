@@ -12,15 +12,15 @@ LICENSE="MIT"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/actionlib_msgs
     ros-indigo/nav_msgs
-    ros-indigo/dji_sdk_lib
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/message_runtime
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/dji_sdk_lib
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

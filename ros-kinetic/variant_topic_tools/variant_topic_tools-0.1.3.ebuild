@@ -12,9 +12,9 @@ LICENSE="GNU Lesser General Public License (LGPL)"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/roscpp
     ros-kinetic/variant_msgs
     ros-kinetic/roslib
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 "

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros
     ros-indigo/gazebo_ros_control
-    ros-indigo/nextage_moveit_config
     ros-indigo/nextage_description
+    ros-indigo/nextage_moveit_config
     ros-indigo/ros_controllers
+    ros-indigo/gazebo_ros
 "
 DEPEND="${RDEPEND}
 "

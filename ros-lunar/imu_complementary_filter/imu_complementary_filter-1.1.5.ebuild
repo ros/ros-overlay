@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_filters
-    ros-lunar/sensor_msgs
+    ros-lunar/roscpp
     ros-lunar/tf
     ros-lunar/std_msgs
-    ros-lunar/roscpp
+    ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

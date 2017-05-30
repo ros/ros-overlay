@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/nodelet
+    ros-indigo/image_transport
     ros-indigo/roslib
     ros-indigo/camera_calibration_parsers
     ros-indigo/roscpp
-    ros-indigo/image_transport
-    ros-indigo/nodelet
-    ros-indigo/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/roslaunch
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosgraph
     ros-indigo/tf2_py
     ros-indigo/rospy
-    ros-indigo/actionlib_msgs
-    ros-indigo/rosgraph
-    ros-indigo/tf2
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
-    ros-indigo/xmlrpcpp
     ros-indigo/message_filters
     ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/roscpp
     ros-indigo/tf2_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf2
+    ros-indigo/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 "

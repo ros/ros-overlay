@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/pr2_position_scripts
-    ros-indigo/map_store
     ros-indigo/gmapping
-    ros-indigo/tf
     ros-indigo/topic_tools
+    ros-indigo/map_store
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

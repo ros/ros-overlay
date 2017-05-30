@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/tf
+    ros-kinetic/std_msgs
     ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}

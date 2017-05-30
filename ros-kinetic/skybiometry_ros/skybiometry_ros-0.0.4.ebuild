@@ -12,9 +12,9 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/image_recognition_msgs
     ros-kinetic/cv_bridge
     ros-kinetic/rospy
-    ros-kinetic/image_recognition_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="CC BY-NC-SA 4.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
     ros-indigo/actionlib
+    ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/calibration_estimation
     ros-indigo/image_cb_detector
-    ros-indigo/interval_intersection
     ros-indigo/monocam_settler
-    ros-indigo/joint_states_settler
+    ros-indigo/calibration_estimation
     ros-indigo/laser_cb_detector
-    ros-indigo/calibration_launch
-    ros-indigo/calibration_msgs
     ros-indigo/settlerlib
+    ros-indigo/calibration_msgs
+    ros-indigo/calibration_launch
+    ros-indigo/interval_intersection
+    ros-indigo/joint_states_settler
 "
 DEPEND="${RDEPEND}
 "

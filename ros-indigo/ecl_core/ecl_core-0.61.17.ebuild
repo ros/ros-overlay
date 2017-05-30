@@ -13,27 +13,27 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_geometry
     ros-indigo/ecl_concepts
-    ros-indigo/ecl_linear_algebra
-    ros-indigo/ecl_mpl
-    ros-indigo/ecl_formatters
-    ros-indigo/ecl_statistics
-    ros-indigo/ecl_time
-    ros-indigo/ecl_ipc
-    ros-indigo/ecl_exceptions
-    ros-indigo/ecl_type_traits
-    ros-indigo/ecl_eigen
-    ros-indigo/ecl_sigslots
-    ros-indigo/ecl_devices
-    ros-indigo/ecl_utilities
     ros-indigo/ecl_converters
+    ros-indigo/ecl_sigslots
     ros-indigo/ecl_containers
-    ros-indigo/ecl_math
-    ros-indigo/ecl_threads
-    ros-indigo/ecl_command_line
     ros-indigo/ecl_streams
+    ros-indigo/ecl_utilities
+    ros-indigo/ecl_linear_algebra
+    ros-indigo/ecl_statistics
+    ros-indigo/ecl_ipc
+    ros-indigo/ecl_devices
+    ros-indigo/ecl_geometry
+    ros-indigo/ecl_formatters
+    ros-indigo/ecl_math
+    ros-indigo/ecl_time
+    ros-indigo/ecl_eigen
+    ros-indigo/ecl_threads
+    ros-indigo/ecl_exceptions
+    ros-indigo/ecl_command_line
+    ros-indigo/ecl_mpl
     ros-indigo/ecl_core_apps
+    ros-indigo/ecl_type_traits
 "
 DEPEND="${RDEPEND}
 "

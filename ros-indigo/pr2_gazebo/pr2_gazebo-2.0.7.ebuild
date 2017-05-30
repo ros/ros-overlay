@@ -12,29 +12,29 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gazebo_plugins
-    ros-indigo/robot_pose_ekf
-    ros-indigo/gazebo_plugins
+    ros-indigo/topic_tools
+    ros-indigo/pr2_dashboard_aggregator
+    ros-indigo/std_msgs
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/tf2_ros
+    ros-indigo/pr2_gripper_action
+    ros-indigo/pr2_msgs
+    ros-indigo/joint_trajectory_action
     ros-indigo/pr2_mechanism_controllers
     ros-indigo/stereo_image_proc
-    ros-indigo/xacro
-    ros-indigo/geometry_msgs
-    ros-indigo/pr2_dashboard_aggregator
-    ros-indigo/joint_trajectory_action
-    ros-indigo/single_joint_position_action
-    ros-indigo/std_msgs
-    ros-indigo/tf2_ros
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/fingertip_pressure
-    ros-indigo/pr2_gripper_action
-    ros-indigo/image_proc
-    ros-indigo/robot_mechanism_controllers
     ros-indigo/rospy
-    ros-indigo/pr2_head_action
-    ros-indigo/pr2_msgs
-    ros-indigo/pr2_description
-    ros-indigo/topic_tools
+    ros-indigo/image_proc
+    ros-indigo/xacro
+    ros-indigo/fingertip_pressure
+    ros-indigo/pr2_gazebo_plugins
+    ros-indigo/geometry_msgs
+    ros-indigo/robot_pose_ekf
     ros-indigo/pr2_controller_configuration_gazebo
+    ros-indigo/single_joint_position_action
+    ros-indigo/gazebo_plugins
+    ros-indigo/pr2_head_action
+    ros-indigo/pr2_description
+    ros-indigo/robot_mechanism_controllers
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}

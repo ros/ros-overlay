@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/message_generation
-    ros-lunar/message_runtime
     ros-lunar/catkin
+    ros-lunar/message_runtime
+    ros-lunar/message_generation
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

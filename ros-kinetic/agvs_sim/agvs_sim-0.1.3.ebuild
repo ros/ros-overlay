@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/agvs_sim_bringup
-    ros-kinetic/agvs_gazebo
-    ros-kinetic/agvs_control
     ros-kinetic/agvs_robot_control
+    ros-kinetic/agvs_sim_bringup
+    ros-kinetic/agvs_control
+    ros-kinetic/agvs_gazebo
 "
 DEPEND="${RDEPEND}
 "

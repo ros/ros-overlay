@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_bringup
     ros-indigo/visualization_msgs
     ros-indigo/roscpp
     ros-indigo/interactive_markers
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

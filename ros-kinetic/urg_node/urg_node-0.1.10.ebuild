@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosconsole
-    ros-kinetic/laser_proc
-    ros-kinetic/tf
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/nodelet
-    ros-kinetic/diagnostic_updater
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/laser_proc
+    ros-kinetic/roscpp
     ros-kinetic/urg_c
+    ros-kinetic/sensor_msgs
+    ros-kinetic/tf
+    ros-kinetic/rosconsole
+    ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}
 "

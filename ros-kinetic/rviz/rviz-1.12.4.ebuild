@@ -11,44 +11,44 @@ LICENSE="|| ( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/tf
-    ros-kinetic/interactive_markers
-    ros-kinetic/sensor_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/visualization_msgs
-    ros-kinetic/rosconsole
-    ros-kinetic/map_msgs
-    ros-kinetic/rosbag
-    ros-kinetic/pluginlib
+    ros-kinetic/nav_msgs
     ros-kinetic/laser_geometry
     ros-kinetic/roslib
-    ros-kinetic/nav_msgs
-    ros-kinetic/image_transport
-    ros-kinetic/python_qt_binding
-    ros-kinetic/media_export
-    ros-kinetic/message_filters
+    ros-kinetic/map_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/python_qt_binding
+    ros-kinetic/image_transport
+    ros-kinetic/rosbag
+    ros-kinetic/sensor_msgs
     ros-kinetic/resource_retriever
     ros-kinetic/rospy
-    ros-kinetic/urdf
+    ros-kinetic/media_export
     ros-kinetic/roscpp
+    ros-kinetic/urdf
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
+    ros-kinetic/rosconsole
+    ros-kinetic/visualization_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
+    ros-kinetic/interactive_markers
+    dev-cpp/eigen
+    media-libs/mesa
+    dev-qt/qtwidgets
+    dev-cpp/yaml-cpp
+    dev-qt/qtcore
     dev-qt/qtopengl
     dev-qt/qtgui
     dev-libs/tinyxml
-    dev-qt/qtcore
-    dev-cpp/yaml-cpp
     media-libs/assimp
-    media-libs/mesa
     dev-libs/urdfdom_headers
     dev-games/ogre
-    dev-cpp/eigen
-    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     ros-kinetic/cmake_modules
-    media-libs/assimp
     dev-qt/qtopengl
+    media-libs/assimp
     dev-qt/qtcore
 "
 

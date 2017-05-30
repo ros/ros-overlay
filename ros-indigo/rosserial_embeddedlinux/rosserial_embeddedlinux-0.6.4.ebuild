@@ -16,11 +16,11 @@ RDEPEND="
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosserial_client
+    ros-indigo/sensor_msgs
     ros-indigo/geometry_msgs
     ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/nav_msgs
+    ros-indigo/rosserial_client
 "
 
 SLOT="0/0"

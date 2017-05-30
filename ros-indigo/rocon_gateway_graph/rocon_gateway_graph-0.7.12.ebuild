@@ -13,16 +13,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rocon_gateway_utils
+    ros-indigo/rospy
     ros-indigo/qt_gui_py_common
-    ros-indigo/rocon_gateway
+    ros-indigo/rqt_gui
     ros-indigo/rosservice
     ros-indigo/qt_dotgraph
-    ros-indigo/rospy
-    ros-indigo/rocon_gateway_utils
-    ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
-    ros-indigo/python_qt_binding
     ros-indigo/rostopic
+    ros-indigo/python_qt_binding
+    ros-indigo/rocon_gateway
+    ros-indigo/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

@@ -12,8 +12,8 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/kdl_conversions
     ros-kinetic/rtt
+    ros-kinetic/kdl_conversions
 "
 DEPEND="${RDEPEND}
 "

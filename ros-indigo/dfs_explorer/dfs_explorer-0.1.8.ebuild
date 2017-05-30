@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/lama_interfaces
-    ros-indigo/rospy
     ros-indigo/actionlib
+    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
 "

@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/message_runtime
-    ros-kinetic/rospy
     ros-kinetic/rosserial_client
     ros-kinetic/rosserial_msgs
+    ros-kinetic/rospy
+    ros-kinetic/message_runtime
     dev-embedded/arduino
 "
 DEPEND="${RDEPEND}

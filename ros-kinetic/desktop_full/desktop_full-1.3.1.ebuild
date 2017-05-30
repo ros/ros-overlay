@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/perception
     ros-kinetic/desktop
     ros-kinetic/urdf_tutorial
+    ros-kinetic/perception
     ros-kinetic/simulators
 "
 DEPEND="${RDEPEND}

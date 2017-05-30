@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rqt_robot_dashboard
-    ros-kinetic/rqt_robot_steering
-    ros-kinetic/rqt_robot_monitor
-    ros-kinetic/rqt_tf_tree
-    ros-kinetic/rqt_rviz
     ros-kinetic/rqt_pose_view
     ros-kinetic/rqt_nav_view
-    ros-kinetic/rqt_runtime_monitor
+    ros-kinetic/rqt_rviz
     ros-kinetic/rqt_moveit
+    ros-kinetic/rqt_runtime_monitor
+    ros-kinetic/rqt_tf_tree
+    ros-kinetic/rqt_robot_steering
+    ros-kinetic/rqt_robot_monitor
 "
 DEPEND="${RDEPEND}
 "

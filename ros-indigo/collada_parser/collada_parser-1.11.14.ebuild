@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/roscpp
     ros-indigo/class_loader
     ros-indigo/urdf_parser_plugin
-    ros-indigo/roscpp
-    dev-libs/urdfdom_headers
     media-libs/collada-dom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
     ros-indigo/urdf

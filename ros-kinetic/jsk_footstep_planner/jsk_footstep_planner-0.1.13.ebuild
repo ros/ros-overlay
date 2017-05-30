@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roseus
-    ros-kinetic/visualization_msgs
-    ros-kinetic/jsk_interactive_marker
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/jsk_footstep_msgs
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/geometry_msgs
     ros-kinetic/jsk_rviz_plugins
-    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/jsk_interactive_marker
+    ros-kinetic/geometry_msgs
+    ros-kinetic/jsk_recognition_utils
     ros-kinetic/pcl_ros
     ros-kinetic/roscpp
-    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/roseus
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/visualization_msgs
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/jsk_footstep_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

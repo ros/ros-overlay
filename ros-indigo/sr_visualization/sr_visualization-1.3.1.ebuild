@@ -7,22 +7,22 @@ DESCRIPTION="This stack contains the different gui plugins used with the shadow 
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/shadow-robot/sr-visualization-release/archive/release/indigo/sr_visualization/1.3.1-0.tar.gz"
 
-LICENSE="||( GPL BSD )"
+LICENSE="|| ( GPL BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_gui_hand_calibration
-    ros-indigo/sr_gui_self_test
-    ros-indigo/sr_gui_bootloader
-    ros-indigo/sr_gui_motor_resetter
-    ros-indigo/sr_visualization_icons
-    ros-indigo/sr_gui_joint_slider
     ros-indigo/sr_gui_change_muscle_controllers
+    ros-indigo/sr_gui_hand_calibration
+    ros-indigo/sr_gui_bootloader
+    ros-indigo/sr_gui_self_test
     ros-indigo/sr_gui_controller_tuner
+    ros-indigo/sr_visualization_icons
+    ros-indigo/sr_gui_movement_recorder
     ros-indigo/sr_gui_grasp_controller
+    ros-indigo/sr_gui_motor_resetter
+    ros-indigo/sr_gui_joint_slider
     ros-indigo/sr_gui_change_controllers
     ros-indigo/sr_gui_muscle_driver_bootloader
-    ros-indigo/sr_gui_movement_recorder
 "
 DEPEND="${RDEPEND}
 "

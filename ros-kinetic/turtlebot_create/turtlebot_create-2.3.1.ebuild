@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/create_driver
-    ros-kinetic/create_description
     ros-kinetic/create_node
+    ros-kinetic/create_description
+    ros-kinetic/create_driver
 "
 DEPEND="${RDEPEND}
 "

@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-indigo/rviz
     ros-indigo/fake_localization
+    ros-indigo/kobuki_softnode
     ros-indigo/map_server
     ros-indigo/move_base
-    ros-indigo/kobuki_softnode
 "
 DEPEND="${RDEPEND}
 "

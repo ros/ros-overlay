@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/velodyne_msgs
-    ros-indigo/pluginlib
-    ros-indigo/roscpp
     ros-indigo/nodelet
-    ros-indigo/diagnostic_updater
+    ros-indigo/pluginlib
+    ros-indigo/velodyne_msgs
+    ros-indigo/roscpp
     ros-indigo/tf
+    ros-indigo/diagnostic_updater
     net-libs/libpcap
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
     ros-indigo/roslaunch
+    ros-indigo/rostest
 "
 
 SLOT="0/0"

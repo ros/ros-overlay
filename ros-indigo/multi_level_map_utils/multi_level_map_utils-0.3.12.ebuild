@@ -3,24 +3,24 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="Contains utilities like a level multiplexer, a level selector and other utility "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/utexas-bwi-gbp/bwi_common-release/archive/release/indigo/multi_level_map_utils/0.3.12-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/multi_level_map_msgs
-    ros-indigo/rospy
-    ros-indigo/qt_gui
-    ros-indigo/bwi_tools
     ros-indigo/nav_msgs
-    ros-indigo/rqt_gui
-    ros-indigo/rqt_gui_py
+    ros-indigo/multi_level_map_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/rospy
+    ros-indigo/rqt_gui
+    ros-indigo/bwi_tools
+    ros-indigo/qt_gui
     ros-indigo/python_qt_binding
+    ros-indigo/rqt_gui_py
 "
 DEPEND="${RDEPEND}
     dev-libs/boost

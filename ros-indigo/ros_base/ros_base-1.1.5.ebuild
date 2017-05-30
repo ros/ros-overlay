@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bond_core
-    ros-indigo/pluginlib
-    ros-indigo/nodelet_core
     ros-indigo/dynamic_reconfigure
-    ros-indigo/ros_core
+    ros-indigo/nodelet_core
+    ros-indigo/pluginlib
     ros-indigo/class_loader
     ros-indigo/actionlib
+    ros-indigo/bond_core
+    ros-indigo/ros_core
 "
 DEPEND="${RDEPEND}
 "

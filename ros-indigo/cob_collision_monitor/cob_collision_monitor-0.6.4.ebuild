@@ -12,12 +12,12 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
-    ros-indigo/moveit_ros_planning
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/tf
     ros-indigo/pluginlib
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/moveit_ros_planning
     ros-indigo/cob_moveit_config
+    ros-indigo/std_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
 "

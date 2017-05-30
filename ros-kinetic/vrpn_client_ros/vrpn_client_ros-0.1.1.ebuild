@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2_ros
     ros-kinetic/geometry_msgs
+    ros-kinetic/tf2_ros
     ros-kinetic/roscpp
     ros-kinetic/vrpn
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslaunch
     ros-kinetic/roslint
+    ros-kinetic/roslaunch
 "
 
 SLOT="0/0"

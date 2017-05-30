@@ -13,16 +13,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/ecl_containers
     ros-kinetic/ecl_config
     ros-kinetic/ecl_linear_algebra
-    ros-kinetic/ecl_mpl
     ros-kinetic/ecl_formatters
-    ros-kinetic/ecl_type_traits
+    ros-kinetic/ecl_mpl
+    ros-kinetic/ecl_math
+    ros-kinetic/ecl_build
     ros-kinetic/ecl_exceptions
     ros-kinetic/ecl_license
-    ros-kinetic/ecl_build
-    ros-kinetic/ecl_math
-    ros-kinetic/ecl_containers
+    ros-kinetic/ecl_type_traits
 "
 DEPEND="${RDEPEND}
 "

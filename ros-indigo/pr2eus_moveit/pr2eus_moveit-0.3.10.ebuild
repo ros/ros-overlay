@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roseus
     ros-indigo/control_msgs
-    ros-indigo/moveit_msgs
     ros-indigo/pr2eus
+    ros-indigo/roseus
+    ros-indigo/moveit_msgs
 "
 DEPEND="${RDEPEND}
 "

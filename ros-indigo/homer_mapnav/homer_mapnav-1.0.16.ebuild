@@ -12,11 +12,11 @@ LICENSE="LGPL-v2"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/homer_mapnav_msgs
     ros-indigo/homer_navigation
     ros-indigo/homer_mapping
     ros-indigo/homer_map_manager
     ros-indigo/homer_nav_libs
-    ros-indigo/homer_mapnav_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
+    ros-indigo/dynamic_reconfigure
     ros-indigo/control_msgs
     ros-indigo/rospy
-    ros-indigo/trajectory_msgs
-    ros-indigo/dynamic_reconfigure
     ros-indigo/xacro
-    ros-indigo/baxter_core_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/baxter_interface
     ros-indigo/actionlib
+    ros-indigo/baxter_interface
+    ros-indigo/baxter_core_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

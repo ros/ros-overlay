@@ -18,8 +18,8 @@ DEPEND="${RDEPEND}
     ros-kinetic/sensor_msgs
     ros-kinetic/gps_common
     ros-kinetic/roscpp
-    virtual/pkgconfig
     sci-geosciences/gpsd
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

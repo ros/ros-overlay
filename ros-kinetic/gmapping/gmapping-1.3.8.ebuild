@@ -13,10 +13,10 @@ LICENSE="CreativeCommons-by-nc-sa-2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/openslam_gmapping
-    ros-kinetic/nav_msgs
-    ros-kinetic/tf
     ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/nav_msgs
+    ros-kinetic/openslam_gmapping
 "
 DEPEND="${RDEPEND}
     ros-kinetic/rostest

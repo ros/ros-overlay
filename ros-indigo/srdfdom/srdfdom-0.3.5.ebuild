@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/urdfdom_py
-    dev-libs/urdfdom_headers
-    dev-libs/console_bridge
-    dev-libs/tinyxml
     dev-libs/boost
+    dev-libs/urdfdom_headers
+    dev-libs/tinyxml
+    dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
-    ros-indigo/urdf
     ros-indigo/cmake_modules
+    ros-indigo/urdf
 "
 
 SLOT="0/0"

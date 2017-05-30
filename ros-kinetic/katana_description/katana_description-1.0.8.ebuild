@@ -12,12 +12,12 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/transmission_interface
     ros-kinetic/urdf
+    ros-kinetic/transmission_interface
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/ivcon
     ros-kinetic/convex_decomposition
+    ros-kinetic/ivcon
 "
 
 SLOT="0/0"

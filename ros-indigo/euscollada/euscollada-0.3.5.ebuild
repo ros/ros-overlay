@@ -12,24 +12,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rostest
-    ros-indigo/urdf
-    ros-indigo/resource_retriever
-    ros-indigo/collada_parser
-    ros-indigo/tf
-    ros-indigo/roscpp
-    ros-indigo/assimp_devel
     ros-indigo/rospack
+    ros-indigo/collada_parser
     ros-indigo/collada_urdf
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/rostest
+    ros-indigo/tf
+    ros-indigo/resource_retriever
+    ros-indigo/assimp_devel
     media-libs/collada-dom
     dev-cpp/yaml-cpp
     dev-libs/urdfdom
     media-libs/qhull
 "
 DEPEND="${RDEPEND}
-    ros-indigo/mk
-    ros-indigo/rosbuild
     ros-indigo/cmake_modules
+    ros-indigo/rosbuild
+    ros-indigo/mk
     ros-indigo/rosboost_cfg
 "
 

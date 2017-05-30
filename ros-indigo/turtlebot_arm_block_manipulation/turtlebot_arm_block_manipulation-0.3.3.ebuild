@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/actionlib
+    ros-indigo/arbotix_msgs
     ros-indigo/actionlib_msgs
     ros-indigo/pcl_ros
-    ros-indigo/arbotix_msgs
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/roscpp
     ros-indigo/moveit_core
-    ros-indigo/actionlib
+    ros-indigo/visualization_msgs
     ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}

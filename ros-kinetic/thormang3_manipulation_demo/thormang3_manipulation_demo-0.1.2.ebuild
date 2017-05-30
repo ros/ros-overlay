@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/roscpp
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/thormang3_manipulation_module_msgs
     ros-kinetic/robotis_controller_msgs
+    ros-kinetic/thormang3_manipulation_module_msgs
 "
 
 SLOT="0/0"

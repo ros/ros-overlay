@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
-    ros-indigo/rospy
-    ros-indigo/trajectory_msgs
     ros-indigo/dynamic_reconfigure
-    ros-indigo/sensor_msgs
-    ros-indigo/ur_msgs
+    ros-indigo/rospy
     ros-indigo/actionlib
+    ros-indigo/ur_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/trajectory_msgs
+    ros-indigo/control_msgs
     dev-python/lxml
 "
 DEPEND="${RDEPEND}

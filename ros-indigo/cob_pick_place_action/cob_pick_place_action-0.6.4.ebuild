@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_grasp_generation
-    ros-indigo/cob_moveit_interface
+    ros-indigo/geometric_shapes
+    ros-indigo/moveit_msgs
     ros-indigo/rospy
-    ros-indigo/roscpp
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/cob_moveit_interface
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/shape_tools
     ros-indigo/actionlib_msgs
-    ros-indigo/std_msgs
-    ros-indigo/geometric_shapes
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/tf
     ros-indigo/message_runtime
-    ros-indigo/geometry_msgs
-    ros-indigo/moveit_ros_planning_interface
-    ros-indigo/moveit_msgs
-    ros-indigo/actionlib
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/cob_grasp_generation
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/rosh_common
-    ros-indigo/rosh
     ros-indigo/rosh_geometry
+    ros-indigo/rosh
 "
 DEPEND="${RDEPEND}
 "

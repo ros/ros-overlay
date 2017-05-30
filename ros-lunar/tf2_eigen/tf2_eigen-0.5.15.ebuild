@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
-    ros-lunar/cmake_modules
     ros-lunar/tf2
+    ros-lunar/cmake_modules
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

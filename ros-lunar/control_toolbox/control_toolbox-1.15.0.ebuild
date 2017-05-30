@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/roscpp
-    ros-lunar/message_runtime
-    ros-lunar/std_msgs
     ros-lunar/cmake_modules
-    ros-lunar/control_msgs
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/message_runtime
+    ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/realtime_tools
+    ros-lunar/control_msgs
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

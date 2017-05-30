@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/rail_pick_and_place_msgs
+    ros-indigo/tf2
+    ros-indigo/rail_segmentation
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/std_srvs
     ros-indigo/actionlib_msgs
-    ros-indigo/rail_segmentation
-    ros-indigo/graspdb
-    ros-indigo/tf2
-    ros-indigo/geometry_msgs
     ros-indigo/pcl_ros
-    ros-indigo/sensor_msgs
-    ros-indigo/std_msgs
     ros-indigo/roscpp
+    ros-indigo/rail_manipulation_msgs
     ros-indigo/pcl_conversions
-    ros-indigo/actionlib
+    ros-indigo/std_msgs
+    ros-indigo/sensor_msgs
+    ros-indigo/rail_pick_and_place_msgs
+    ros-indigo/graspdb
+    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
 "

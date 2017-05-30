@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/camera_calibration
     ros-kinetic/stereo_image_proc
-    ros-kinetic/image_rotate
-    ros-kinetic/image_publisher
+    ros-kinetic/camera_calibration
+    ros-kinetic/image_view
     ros-kinetic/image_proc
     ros-kinetic/depth_image_proc
-    ros-kinetic/image_view
+    ros-kinetic/image_publisher
+    ros-kinetic/image_rotate
 "
 DEPEND="${RDEPEND}
 "

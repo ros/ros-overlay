@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/rospy
     ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
+    ros-indigo/rospy
+    ros-indigo/diagnostic_aggregator
 "
 DEPEND="${RDEPEND}
 "

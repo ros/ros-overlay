@@ -7,19 +7,19 @@ DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/vrpn_client_ros-release/archive/release/indigo/vrpn_client_ros/0.1.0-0.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2_ros
     ros-indigo/geometry_msgs
+    ros-indigo/tf2_ros
     ros-indigo/roscpp
     ros-indigo/vrpn
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslaunch
     ros-indigo/roslint
+    ros-indigo/roslaunch
 "
 
 SLOT="0/0"

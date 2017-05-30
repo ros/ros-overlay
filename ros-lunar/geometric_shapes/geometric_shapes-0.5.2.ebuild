@@ -13,20 +13,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/random_numbers
+    ros-lunar/visualization_msgs
     ros-lunar/octomap
     ros-lunar/resource_retriever
-    ros-lunar/visualization_msgs
-    ros-lunar/shape_msgs
     ros-lunar/eigen_stl_containers
-    dev-libs/boost
-    media-libs/qhull
-    dev-libs/console_bridge
+    ros-lunar/shape_msgs
     dev-cpp/eigen
+    dev-libs/console_bridge
+    dev-libs/boost
     media-libs/assimp
+    media-libs/qhull
 "
 DEPEND="${RDEPEND}
-    media-libs/assimp
     virtual/pkgconfig
+    media-libs/assimp
 "
 
 SLOT="0/0"

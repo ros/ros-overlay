@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/rosbash
+    ros-kinetic/std_msgs
+    ros-kinetic/actionlib_tutorials
+    ros-kinetic/geneus
+    ros-kinetic/tf2_ros
+    ros-kinetic/jskeus
+    ros-kinetic/rosnode
+    ros-kinetic/rospack
+    ros-kinetic/actionlib
+    ros-kinetic/roslang
+    ros-kinetic/message_runtime
     ros-kinetic/rostest
+    ros-kinetic/sensor_msgs
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/actionlib_msgs
     ros-kinetic/roscpp
-    ros-kinetic/rosbash
-    ros-kinetic/tf
-    ros-kinetic/jskeus
-    ros-kinetic/rosmsg
-    ros-kinetic/geneus
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/rosnode
-    ros-kinetic/tf2_ros
-    ros-kinetic/actionlib
-    ros-kinetic/rospack
     ros-kinetic/euslisp
-    ros-kinetic/actionlib_tutorials
-    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/std_srvs
     ros-kinetic/visualization_msgs
-    ros-kinetic/roslang
-    ros-kinetic/sensor_msgs
-    ros-kinetic/message_runtime
+    ros-kinetic/tf
+    ros-kinetic/geometry_msgs
+    ros-kinetic/rosmsg
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rosbuild
-    ros-kinetic/rostopic
-    ros-kinetic/mk
-    ros-kinetic/message_generation
     ros-kinetic/angles
+    ros-kinetic/message_generation
+    ros-kinetic/mk
+    ros-kinetic/rostopic
+    ros-kinetic/rosbuild
     sys-apps/coreutils
 "
 

@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_marker_tutorials
-    ros-kinetic/interactive_marker_tutorials
     ros-kinetic/rviz_python_tutorial
-    ros-kinetic/rviz_plugin_tutorials
     ros-kinetic/librviz_tutorial
+    ros-kinetic/rviz_plugin_tutorials
+    ros-kinetic/interactive_marker_tutorials
+    ros-kinetic/visualization_marker_tutorials
 "
 DEPEND="${RDEPEND}
 "

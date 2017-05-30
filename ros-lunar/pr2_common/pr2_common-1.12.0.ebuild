@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/pr2_machine
-    ros-lunar/pr2_description
-    ros-lunar/pr2_dashboard_aggregator
     ros-lunar/pr2_msgs
+    ros-lunar/pr2_dashboard_aggregator
+    ros-lunar/pr2_description
 "
 DEPEND="${RDEPEND}
 "

@@ -12,35 +12,35 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosbash
+    ros-indigo/std_msgs
+    ros-indigo/actionlib_tutorials
+    ros-indigo/geneus
+    ros-indigo/tf2_ros
+    ros-indigo/jskeus
+    ros-indigo/rosnode
+    ros-indigo/rospack
+    ros-indigo/actionlib
+    ros-indigo/roslang
+    ros-indigo/message_runtime
     ros-indigo/rostest
+    ros-indigo/sensor_msgs
+    ros-indigo/dynamic_reconfigure
     ros-indigo/actionlib_msgs
     ros-indigo/roscpp
-    ros-indigo/rosbash
-    ros-indigo/tf
-    ros-indigo/jskeus
-    ros-indigo/rosmsg
-    ros-indigo/geneus
-    ros-indigo/std_srvs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/rosnode
-    ros-indigo/tf2_ros
-    ros-indigo/actionlib
-    ros-indigo/rospack
     ros-indigo/euslisp
-    ros-indigo/actionlib_tutorials
-    ros-indigo/dynamic_reconfigure
+    ros-indigo/std_srvs
     ros-indigo/visualization_msgs
-    ros-indigo/roslang
-    ros-indigo/sensor_msgs
-    ros-indigo/message_runtime
+    ros-indigo/tf
+    ros-indigo/geometry_msgs
+    ros-indigo/rosmsg
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosbuild
-    ros-indigo/rostopic
-    ros-indigo/mk
-    ros-indigo/message_generation
     ros-indigo/angles
+    ros-indigo/message_generation
+    ros-indigo/mk
+    ros-indigo/rostopic
+    ros-indigo/rosbuild
     sys-apps/coreutils
 "
 

@@ -13,14 +13,14 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/filters
-    ros-kinetic/control_msgs
+    ros-kinetic/geometry
+    ros-kinetic/diagnostics
+    ros-kinetic/xacro
+    ros-kinetic/executive_smach
     ros-kinetic/ros_base
     ros-kinetic/robot_model
-    ros-kinetic/geometry
-    ros-kinetic/xacro
-    ros-kinetic/diagnostics
+    ros-kinetic/control_msgs
     ros-kinetic/robot_state_publisher
-    ros-kinetic/executive_smach
 "
 DEPEND="${RDEPEND}
 "

@@ -12,16 +12,16 @@ LICENSE="TODO"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_srvs
-    ros-kinetic/geometry_msgs
     ros-kinetic/rosflight_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
+    ros-kinetic/std_srvs
     ros-kinetic/tf
+    dev-cpp/eigen
     dev-cpp/yaml-cpp
     dev-libs/boost
-    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
     dev-vcs/git

@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/rospy
     ros-indigo/nav_msgs
+    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/roscpp
     ros-indigo/message_filters
+    ros-indigo/roscpp
     ros-indigo/tf
+    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-indigo/angles

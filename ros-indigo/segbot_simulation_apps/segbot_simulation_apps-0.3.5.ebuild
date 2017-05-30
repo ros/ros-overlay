@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_msgs
-    ros-indigo/multi_level_map_msgs
     ros-indigo/bwi_msgs
-    ros-indigo/bwi_tools
+    ros-indigo/multi_level_map_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/std_msgs
-    ros-indigo/roscpp
+    ros-indigo/bwi_tools
     ros-indigo/bwi_planning_common
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
     ros-indigo/tf
+    ros-indigo/gazebo_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

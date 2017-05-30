@@ -13,13 +13,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ecl_geometry
-    ros-indigo/ecl_linear_algebra
-    ros-indigo/ecl_formatters
     ros-indigo/ecl_errors
-    ros-indigo/ecl_license
-    ros-indigo/ecl_build
+    ros-indigo/ecl_linear_algebra
+    ros-indigo/ecl_geometry
+    ros-indigo/ecl_formatters
     ros-indigo/ecl_math
+    ros-indigo/ecl_build
+    ros-indigo/ecl_license
 "
 DEPEND="${RDEPEND}
 "

@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/rospy
-    ros-kinetic/tf2
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf2_ros
     ros-kinetic/turtlesim
+    ros-kinetic/geometry_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
 "
 DEPEND="${RDEPEND}
 "

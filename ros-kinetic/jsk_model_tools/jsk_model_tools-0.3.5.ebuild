@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/eus_assimp
     ros-kinetic/euscollada
+    ros-kinetic/eus_assimp
 "
 DEPEND="${RDEPEND}
 "

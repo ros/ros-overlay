@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/thormang3_action_editor
     ros-kinetic/thormang3_offset_tuner_server
+    ros-kinetic/thormang3_action_editor
 "
 DEPEND="${RDEPEND}
 "

@@ -12,16 +12,16 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf
-    ros-kinetic/rosbag
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/roscpp
+    ros-kinetic/rosbag
+    ros-kinetic/tf
     ros-kinetic/nav_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
-    ros-kinetic/std_srvs
     ros-kinetic/message_filters
+    ros-kinetic/std_srvs
+    ros-kinetic/rostest
 "
 
 SLOT="0/0"

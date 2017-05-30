@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/hector_quadrotor_model
+    ros-indigo/hector_quadrotor_controller
     ros-indigo/hector_quadrotor_teleop
     ros-indigo/hector_quadrotor_description
-    ros-indigo/hector_quadrotor_model
     ros-indigo/hector_uav_msgs
-    ros-indigo/hector_quadrotor_controller
 "
 DEPEND="${RDEPEND}
 "

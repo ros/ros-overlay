@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/industrial_msgs
     ros-indigo/control_msgs
     ros-indigo/rospy
     ros-indigo/industrial_robot_client
-    ros-indigo/trajectory_msgs
     ros-indigo/std_msgs
+    ros-indigo/industrial_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/trajectory_msgs
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}

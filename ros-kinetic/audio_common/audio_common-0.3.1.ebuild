@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/audio_common_msgs
-    ros-kinetic/sound_play
     ros-kinetic/audio_capture
     ros-kinetic/audio_play
+    ros-kinetic/sound_play
+    ros-kinetic/audio_common_msgs
 "
 DEPEND="${RDEPEND}
 "

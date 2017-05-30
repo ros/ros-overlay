@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/geographic_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/marti_common_msgs
+    ros-kinetic/message_runtime
     ros-kinetic/std_msgs
     ros-kinetic/sensor_msgs
-    ros-kinetic/geographic_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/marti_common_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

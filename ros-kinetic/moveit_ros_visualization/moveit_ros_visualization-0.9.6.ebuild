@@ -12,16 +12,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/pluginlib
-    ros-kinetic/moveit_ros_warehouse
-    ros-kinetic/object_recognition_msgs
-    ros-kinetic/moveit_ros_perception
     ros-kinetic/geometric_shapes
+    ros-kinetic/rospy
     ros-kinetic/moveit_ros_planning_interface
     ros-kinetic/moveit_ros_robot_interaction
-    ros-kinetic/rviz
     ros-kinetic/roscpp
+    ros-kinetic/moveit_ros_perception
+    ros-kinetic/object_recognition_msgs
+    ros-kinetic/rviz
+    ros-kinetic/moveit_ros_warehouse
     ros-kinetic/interactive_markers
 "
 DEPEND="${RDEPEND}

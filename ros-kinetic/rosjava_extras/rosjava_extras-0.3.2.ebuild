@@ -12,10 +12,10 @@ LICENSE="Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/sensor_msgs
     ros-kinetic/rosjava_build_tools
     ros-kinetic/rosjava_bootstrap
     ros-kinetic/rosjava_core
-    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
 "

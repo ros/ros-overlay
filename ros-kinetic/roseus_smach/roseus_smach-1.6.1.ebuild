@@ -15,16 +15,16 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
-    ros-kinetic/roseus
-    ros-kinetic/euslisp
     ros-kinetic/smach
     ros-kinetic/actionlib_tutorials
-    ros-kinetic/std_msgs
-    ros-kinetic/smach_ros
+    ros-kinetic/actionlib
     ros-kinetic/smach_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/actionlib
+    ros-kinetic/roseus
+    ros-kinetic/euslisp
+    ros-kinetic/std_msgs
+    ros-kinetic/smach_ros
+    ros-kinetic/rostest
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

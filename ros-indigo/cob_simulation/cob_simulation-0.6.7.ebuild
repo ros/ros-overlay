@@ -12,10 +12,10 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_bringup_sim
     ros-indigo/cob_gazebo_worlds
-    ros-indigo/cob_gazebo_objects
+    ros-indigo/cob_bringup_sim
     ros-indigo/cob_gazebo
+    ros-indigo/cob_gazebo_objects
 "
 DEPEND="${RDEPEND}
 "

@@ -12,12 +12,12 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/nav_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/actionlib
     ros-indigo/actionlib_msgs
     ros-indigo/message_runtime
-    ros-indigo/geometry_msgs
     ros-indigo/control_msgs
-    ros-indigo/nav_msgs
-    ros-indigo/actionlib
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

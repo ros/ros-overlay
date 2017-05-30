@@ -12,9 +12,9 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_generic_can
-    ros-indigo/cob_utilities
     ros-indigo/roscpp
+    ros-indigo/cob_utilities
+    ros-indigo/cob_generic_can
 "
 DEPEND="${RDEPEND}
 "

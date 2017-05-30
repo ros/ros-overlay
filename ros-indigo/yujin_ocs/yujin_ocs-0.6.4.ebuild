@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/yocs_controllers
-    ros-indigo/yocs_joyop
-    ros-indigo/yocs_safety_controller
     ros-indigo/yocs_diff_drive_pose_controller
     ros-indigo/yocs_rapps
-    ros-indigo/yocs_waypoints_navi
-    ros-indigo/yocs_math_toolkit
-    ros-indigo/yocs_virtual_sensor
-    ros-indigo/yocs_velocity_smoother
     ros-indigo/yocs_keyop
+    ros-indigo/yocs_safety_controller
+    ros-indigo/yocs_controllers
+    ros-indigo/yocs_velocity_smoother
+    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/yocs_joyop
+    ros-indigo/yocs_virtual_sensor
+    ros-indigo/yocs_math_toolkit
+    ros-indigo/yocs_waypoints_navi
 "
 DEPEND="${RDEPEND}
 "

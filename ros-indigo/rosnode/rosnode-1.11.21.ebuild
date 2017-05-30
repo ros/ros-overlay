@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosgraph
     ros-indigo/rostopic
+    ros-indigo/rosgraph
 "
 DEPEND="${RDEPEND}
     ros-indigo/rostest

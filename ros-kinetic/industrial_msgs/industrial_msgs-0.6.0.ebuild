@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/trajectory_msgs
+    ros-kinetic/genmsg
     ros-kinetic/std_msgs
     ros-kinetic/message_runtime
-    ros-kinetic/genmsg
+    ros-kinetic/trajectory_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/message_generation

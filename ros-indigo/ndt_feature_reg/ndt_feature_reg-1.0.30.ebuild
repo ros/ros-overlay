@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
     ros-indigo/ndt_map
     ros-indigo/image_geometry
-    ros-indigo/ndt_registration
-    ros-indigo/std_srvs
-    ros-indigo/laser_geometry
-    ros-indigo/sensor_msgs
-    ros-indigo/ndt_visualisation
     ros-indigo/image_transport
+    ros-indigo/laser_geometry
+    ros-indigo/std_srvs
+    ros-indigo/ndt_visualisation
+    ros-indigo/cv_bridge
+    ros-indigo/sensor_msgs
+    ros-indigo/ndt_registration
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}

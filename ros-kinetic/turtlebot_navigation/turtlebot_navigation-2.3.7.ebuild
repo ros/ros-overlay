@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/turtlebot_bringup
+    ros-kinetic/amcl
     ros-kinetic/gmapping
     ros-kinetic/dwa_local_planner
-    ros-kinetic/turtlebot_bringup
+    ros-kinetic/roscpp
     ros-kinetic/map_server
     ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/amcl
-    ros-kinetic/move_base
     ros-kinetic/tf
+    ros-kinetic/move_base
 "
 DEPEND="${RDEPEND}
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosconsole
     ros-indigo/class_loader
     ros-indigo/roslib
-    ros-indigo/rosconsole
     dev-libs/boost
     dev-libs/tinyxml
 "

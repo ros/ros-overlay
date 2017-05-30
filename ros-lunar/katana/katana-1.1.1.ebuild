@@ -12,19 +12,19 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
-    ros-lunar/tf
-    ros-lunar/urdf
-    ros-lunar/roslib
+    ros-lunar/control_msgs
     ros-lunar/moveit_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/actionlib
+    ros-lunar/katana_msgs
+    ros-lunar/kni
+    ros-lunar/roslib
+    ros-lunar/roscpp
+    ros-lunar/urdf
     ros-lunar/sensor_msgs
     ros-lunar/trajectory_msgs
-    ros-lunar/control_msgs
-    ros-lunar/actionlib
-    ros-lunar/roscpp
     ros-lunar/std_srvs
-    ros-lunar/kni
-    ros-lunar/katana_msgs
+    ros-lunar/tf
     sci-libs/armadillo
 "
 DEPEND="${RDEPEND}

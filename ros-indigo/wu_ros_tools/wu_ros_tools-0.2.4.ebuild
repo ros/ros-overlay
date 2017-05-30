@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-indigo/catkinize_this
+    ros-indigo/rosbaglive
+    ros-indigo/easy_markers
+    ros-indigo/roswiki_node
+    ros-indigo/kalman_filter
     ros-indigo/joy_listener
     ros-indigo/manifest_cleaner
-    ros-indigo/roswiki_node
-    ros-indigo/catkinize_this
-    ros-indigo/easy_markers
-    ros-indigo/kalman_filter
-    ros-indigo/rosbaglive
 "
 DEPEND="${RDEPEND}
 "

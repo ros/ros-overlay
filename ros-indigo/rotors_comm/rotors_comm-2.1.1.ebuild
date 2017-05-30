@@ -16,9 +16,9 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
     ros-indigo/geometry_msgs
+    ros-indigo/octomap_msgs
     ros-indigo/cmake_modules
     ros-indigo/message_generation
-    ros-indigo/octomap_msgs
 "
 
 SLOT="0/0"

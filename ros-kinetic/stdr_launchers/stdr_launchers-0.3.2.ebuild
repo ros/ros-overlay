@@ -12,11 +12,11 @@ LICENSE="GPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stdr_gui
     ros-kinetic/stdr_resources
-    ros-kinetic/stdr_robot
-    ros-kinetic/rviz
+    ros-kinetic/stdr_gui
     ros-kinetic/stdr_server
+    ros-kinetic/rviz
+    ros-kinetic/stdr_robot
 "
 DEPEND="${RDEPEND}
 "

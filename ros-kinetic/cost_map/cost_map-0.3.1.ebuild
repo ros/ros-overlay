@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cost_map_msgs
+    ros-kinetic/cost_map_ros
     ros-kinetic/cost_map_visualisations
     ros-kinetic/cost_map_core
-    ros-kinetic/cost_map_ros
 "
 DEPEND="${RDEPEND}
 "

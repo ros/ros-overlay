@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kobuki_safety_controller
-    ros-indigo/joy
-    ros-indigo/geometry_msgs
-    ros-indigo/turtlebot_bringup
-    ros-indigo/roscpp
     ros-indigo/yocs_velocity_smoother
+    ros-indigo/geometry_msgs
+    ros-indigo/joy
+    ros-indigo/roscpp
+    ros-indigo/kobuki_safety_controller
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
 "

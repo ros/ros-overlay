@@ -12,18 +12,18 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cv_bridge
-    ros-indigo/rospy
-    ros-indigo/message_filters
     ros-indigo/cmake_modules
-    ros-indigo/polled_camera
-    ros-indigo/sensor_msgs
-    ros-indigo/cob_vision_utils
-    ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/image_transport
+    ros-indigo/message_filters
     ros-indigo/message_runtime
-    media-libs/opencv
+    ros-indigo/cob_vision_utils
+    ros-indigo/polled_camera
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/cv_bridge
     dev-libs/boost
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
     ros-indigo/message_generation

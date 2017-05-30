@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-indigo/turtlebot_bringup
+    ros-indigo/turtlebot_teleop
     ros-indigo/joint_state_publisher
     ros-indigo/rviz
-    ros-indigo/turtlebot_teleop
 "
 DEPEND="${RDEPEND}
 "

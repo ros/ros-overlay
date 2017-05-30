@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosconsole
-    ros-indigo/rosatomic
-    ros-indigo/roslib
     ros-indigo/allocators
+    ros-indigo/rosatomic
+    ros-indigo/rosconsole
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
 "

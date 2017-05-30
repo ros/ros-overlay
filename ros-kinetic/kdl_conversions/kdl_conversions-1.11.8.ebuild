@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/orocos_kdl
     ros-kinetic/geometry_msgs
+    ros-kinetic/orocos_kdl
 "
 DEPEND="${RDEPEND}
 "
