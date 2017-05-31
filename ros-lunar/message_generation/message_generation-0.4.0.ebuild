@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/gencpp
     ros-lunar/genmsg
     ros-lunar/gennodejs
+    ros-lunar/gencpp
     ros-lunar/geneus
-    ros-lunar/genpy
     ros-lunar/genlisp
+    ros-lunar/genpy
 "
 DEPEND="${RDEPEND}
 "

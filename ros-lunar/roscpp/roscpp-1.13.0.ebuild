@@ -12,19 +12,19 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/cpp_common
-    ros-lunar/roscpp_traits
-    ros-lunar/roscpp_serialization
     ros-lunar/message_runtime
     ros-lunar/std_msgs
-    ros-lunar/rostime
     ros-lunar/rosconsole
+    ros-lunar/rostime
     ros-lunar/rosgraph_msgs
     ros-lunar/xmlrpcpp
+    ros-lunar/roscpp_serialization
+    ros-lunar/cpp_common
+    ros-lunar/roscpp_traits
 "
 DEPEND="${RDEPEND}
-    ros-lunar/message_generation
     ros-lunar/roslang
+    ros-lunar/message_generation
     virtual/pkgconfig
 "
 

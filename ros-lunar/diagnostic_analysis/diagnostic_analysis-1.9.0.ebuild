@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosbag
-    ros-lunar/diagnostic_msgs
     ros-lunar/roslib
+    ros-lunar/diagnostic_msgs
+    ros-lunar/rosbag
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

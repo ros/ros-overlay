@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/image_transport
-    ros-lunar/roslib
-    ros-lunar/camera_calibration_parsers
-    ros-lunar/roscpp
     ros-lunar/sensor_msgs
+    ros-lunar/camera_calibration_parsers
+    ros-lunar/image_transport
+    ros-lunar/roscpp
+    ros-lunar/roslib
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

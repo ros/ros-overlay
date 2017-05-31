@@ -13,15 +13,15 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
-    ros-lunar/gazebo_dev
-    ros-lunar/geometry_msgs
-    ros-lunar/roslib
-    ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/std_srvs
     ros-lunar/tf
     ros-lunar/gazebo_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/std_srvs
+    ros-lunar/roscpp
     ros-lunar/rosgraph_msgs
+    ros-lunar/roslib
+    ros-lunar/gazebo_dev
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

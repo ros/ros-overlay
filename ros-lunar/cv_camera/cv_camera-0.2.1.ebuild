@@ -13,12 +13,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/camera_info_manager
-    ros-lunar/nodelet
-    ros-lunar/image_transport
     ros-lunar/opencv3
-    ros-lunar/roscpp
+    ros-lunar/nodelet
     ros-lunar/sensor_msgs
+    ros-lunar/image_transport
+    ros-lunar/roscpp
+    ros-lunar/camera_info_manager
     ros-lunar/cv_bridge
 "
 DEPEND="${RDEPEND}

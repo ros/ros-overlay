@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/roscpp
     ros-lunar/pcl_msgs
     sci-libs/pcl
     sci-libs/pcl

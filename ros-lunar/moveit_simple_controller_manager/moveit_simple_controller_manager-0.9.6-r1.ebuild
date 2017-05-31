@@ -15,8 +15,8 @@ RDEPEND="
     ros-lunar/control_msgs
     ros-lunar/roscpp
     ros-lunar/moveit_core
-    ros-lunar/actionlib
     ros-lunar/pluginlib
+    ros-lunar/actionlib
 "
 DEPEND="${RDEPEND}
 "

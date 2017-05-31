@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geometry_msgs
     ros-lunar/orocos_kdl
-    ros-lunar/python_orocos_kdl
-    ros-lunar/kdl_conversions
     ros-lunar/tf
+    ros-lunar/geometry_msgs
+    ros-lunar/kdl_conversions
+    ros-lunar/python_orocos_kdl
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

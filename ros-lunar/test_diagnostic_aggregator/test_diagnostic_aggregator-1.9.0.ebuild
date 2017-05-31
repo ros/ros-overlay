@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/pluginlib
-    ros-lunar/diagnostic_msgs
-    ros-lunar/rospy
     ros-lunar/diagnostic_aggregator
+    ros-lunar/pluginlib
+    ros-lunar/rospy
+    ros-lunar/diagnostic_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

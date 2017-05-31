@@ -13,15 +13,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
     ros-lunar/pluginlib
-    ros-lunar/image_transport
+    ros-lunar/dynamic_reconfigure
     ros-lunar/message_runtime
     ros-lunar/rosbag
     ros-lunar/std_msgs
+    ros-lunar/image_transport
     ros-lunar/cv_bridge
-    media-libs/libtheora
     media-libs/libogg
+    media-libs/libtheora
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation

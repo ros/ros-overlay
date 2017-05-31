@@ -12,12 +12,12 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/geographic_msgs
-    ros-lunar/geometry_msgs
-    ros-lunar/unique_id
-    ros-lunar/sensor_msgs
     ros-lunar/uuid_msgs
     ros-lunar/tf
+    ros-lunar/sensor_msgs
+    ros-lunar/unique_id
+    ros-lunar/geometry_msgs
+    ros-lunar/geographic_msgs
     dev-python/pyproj
 "
 DEPEND="${RDEPEND}

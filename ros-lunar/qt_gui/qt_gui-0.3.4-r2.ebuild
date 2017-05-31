@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/python_qt_binding
-    dev-python/rospkg
     x11-themes/tango-icon-theme
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
     dev-python/PyQt5

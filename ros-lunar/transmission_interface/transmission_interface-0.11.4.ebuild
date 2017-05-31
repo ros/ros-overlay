@@ -17,8 +17,8 @@ RDEPEND="
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cmake_modules
     ros-lunar/hardware_interface
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"

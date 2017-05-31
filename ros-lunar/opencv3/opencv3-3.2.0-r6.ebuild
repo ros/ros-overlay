@@ -13,19 +13,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    dev-lang/python
     dev-python/numpy
-    virtual/ffmpeg
     sci-libs/vtk
-    media-libs/libwebp
-    media-libs/libjpeg-turbo
+    dev-lang/python
     sys-libs/zlib
+    media-libs/libjpeg-turbo
+    virtual/ffmpeg
+    media-libs/libwebp
     media-libs/libpng
     dev-libs/protobuf
 "
 DEPEND="${RDEPEND}
-    media-libs/libv4l
     dev-libs/protobuf
+    media-libs/libv4l
     media-libs/tiff
 "
 

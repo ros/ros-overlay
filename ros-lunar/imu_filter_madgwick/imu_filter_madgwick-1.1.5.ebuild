@@ -12,16 +12,16 @@ LICENSE="GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf2
-    ros-lunar/nodelet
     ros-lunar/pluginlib
     ros-lunar/dynamic_reconfigure
-    ros-lunar/geometry_msgs
-    ros-lunar/message_filters
-    ros-lunar/roscpp
-    ros-lunar/tf2_geometry_msgs
-    ros-lunar/sensor_msgs
+    ros-lunar/nodelet
     ros-lunar/tf2_ros
+    ros-lunar/sensor_msgs
+    ros-lunar/tf2_geometry_msgs
+    ros-lunar/geometry_msgs
+    ros-lunar/roscpp
+    ros-lunar/tf2
+    ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
 "

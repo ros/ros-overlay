@@ -15,19 +15,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/dynamic_reconfigure
     ros-lunar/nodelet
-    ros-lunar/image_transport
-    ros-lunar/message_filters
     ros-lunar/camera_calibration_parsers
+    ros-lunar/rosconsole
+    ros-lunar/image_transport
     ros-lunar/roscpp
     ros-lunar/std_srvs
-    ros-lunar/rosconsole
     ros-lunar/cv_bridge
+    ros-lunar/message_filters
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
-    ros-lunar/message_generation
     ros-lunar/stereo_msgs
     ros-lunar/sensor_msgs
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

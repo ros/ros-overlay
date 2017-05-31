@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/class_loader
     ros-lunar/urdf_parser_plugin
-    media-libs/collada-dom
+    ros-lunar/class_loader
     dev-libs/urdfdom_headers
+    media-libs/collada-dom
 "
 DEPEND="${RDEPEND}
     ros-lunar/urdf

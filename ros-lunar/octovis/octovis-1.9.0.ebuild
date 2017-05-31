@@ -15,13 +15,13 @@ RDEPEND="
     ros-lunar/catkin
     ros-lunar/octomap
     x11-libs/libQGLViewer
-    dev-qt/qtgui
     dev-qt/qtopengl
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
+    dev-qt/qtopengl
     x11-libs/libQGLViewer
     dev-qt/qtcore
-    dev-qt/qtopengl
 "
 
 SLOT="0/0"

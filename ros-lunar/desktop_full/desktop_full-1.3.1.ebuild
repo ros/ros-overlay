@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/desktop
-    ros-lunar/urdf_tutorial
     ros-lunar/perception
     ros-lunar/simulators
+    ros-lunar/urdf_tutorial
 "
 DEPEND="${RDEPEND}
 "

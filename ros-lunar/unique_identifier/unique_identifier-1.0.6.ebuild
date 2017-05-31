@@ -14,8 +14,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/uuid_msgs
     ros-lunar/unique_id
+    ros-lunar/uuid_msgs
 "
 DEPEND="${RDEPEND}
 "

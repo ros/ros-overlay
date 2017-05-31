@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/mavlink
-    dev-libs/boost
     dev-libs/console_bridge
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
 "

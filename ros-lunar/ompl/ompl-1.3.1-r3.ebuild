@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-libs/boost
     dev-cpp/eigen
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig

@@ -13,14 +13,14 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roslz4
+    ros-lunar/rostime
+    ros-lunar/roscpp_serialization
     ros-lunar/cpp_common
     ros-lunar/roscpp_traits
-    ros-lunar/roscpp_serialization
-    ros-lunar/rostime
-    ros-lunar/roslz4
     app-arch/bzip2
-    dev-libs/console_bridge
     dev-libs/boost
+    dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
 "

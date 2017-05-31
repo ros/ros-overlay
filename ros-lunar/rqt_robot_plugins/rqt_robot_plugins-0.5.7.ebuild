@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_robot_dashboard
-    ros-lunar/rqt_pose_view
-    ros-lunar/rqt_nav_view
-    ros-lunar/rqt_rviz
     ros-lunar/rqt_moveit
+    ros-lunar/rqt_robot_steering
     ros-lunar/rqt_runtime_monitor
     ros-lunar/rqt_tf_tree
-    ros-lunar/rqt_robot_steering
+    ros-lunar/rqt_rviz
+    ros-lunar/rqt_nav_view
     ros-lunar/rqt_robot_monitor
+    ros-lunar/rqt_pose_view
+    ros-lunar/rqt_robot_dashboard
 "
 DEPEND="${RDEPEND}
 "

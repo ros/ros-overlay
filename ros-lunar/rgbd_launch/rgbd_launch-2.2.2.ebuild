@@ -13,10 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet
-    ros-lunar/tf2_ros
     ros-lunar/depth_image_proc
     ros-lunar/image_proc
+    ros-lunar/tf2_ros
+    ros-lunar/nodelet
 "
 DEPEND="${RDEPEND}
 "

@@ -11,45 +11,45 @@ LICENSE="|| ( BSD Creative Commons )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nav_msgs
-    ros-lunar/laser_geometry
-    ros-lunar/roslib
-    ros-lunar/map_msgs
-    ros-lunar/std_msgs
-    ros-lunar/python_qt_binding
-    ros-lunar/image_transport
     ros-lunar/rosbag
-    ros-lunar/sensor_msgs
-    ros-lunar/resource_retriever
-    ros-lunar/rospy
-    ros-lunar/media_export
+    ros-lunar/std_msgs
     ros-lunar/roscpp
-    ros-lunar/urdf
-    ros-lunar/std_srvs
-    ros-lunar/tf
-    ros-lunar/rosconsole
+    ros-lunar/roslib
+    ros-lunar/resource_retriever
+    ros-lunar/python_qt_binding
     ros-lunar/visualization_msgs
+    ros-lunar/map_msgs
+    ros-lunar/tf
+    ros-lunar/laser_geometry
+    ros-lunar/interactive_markers
     ros-lunar/pluginlib
     ros-lunar/geometry_msgs
+    ros-lunar/std_srvs
+    ros-lunar/nav_msgs
+    ros-lunar/urdf
+    ros-lunar/sensor_msgs
+    ros-lunar/rospy
+    ros-lunar/rosconsole
+    ros-lunar/image_transport
+    ros-lunar/media_export
     ros-lunar/message_filters
-    ros-lunar/interactive_markers
-    dev-cpp/eigen
-    media-libs/mesa
     dev-qt/qtwidgets
-    dev-cpp/yaml-cpp
     dev-qt/qtcore
-    dev-qt/qtopengl
-    dev-qt/qtgui
     dev-libs/tinyxml
+    dev-qt/qtgui
     media-libs/assimp
-    dev-libs/urdfdom_headers
+    dev-cpp/eigen
     dev-games/ogre
+    media-libs/mesa
+    dev-libs/urdfdom_headers
+    dev-cpp/yaml-cpp
+    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
-    dev-qt/qtopengl
     media-libs/assimp
     dev-qt/qtcore
+    dev-qt/qtopengl
 "
 
 SLOT="0/0"

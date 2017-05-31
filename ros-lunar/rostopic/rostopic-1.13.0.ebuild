@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/genpy
-    ros-lunar/rosbag
     ros-lunar/rospy
+    ros-lunar/rosbag
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

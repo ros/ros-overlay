@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/rviz_plugin_tutorials
+    ros-lunar/visualization_marker_tutorials
+    ros-lunar/interactive_marker_tutorials
     ros-lunar/rviz_python_tutorial
     ros-lunar/librviz_tutorial
-    ros-lunar/rviz_plugin_tutorials
-    ros-lunar/interactive_marker_tutorials
-    ros-lunar/visualization_marker_tutorials
 "
 DEPEND="${RDEPEND}
 "

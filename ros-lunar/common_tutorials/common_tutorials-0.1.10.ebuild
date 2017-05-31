@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib_tutorials
-    ros-lunar/pluginlib_tutorials
     ros-lunar/turtle_actionlib
+    ros-lunar/pluginlib_tutorials
     ros-lunar/nodelet_tutorial_math
 "
 DEPEND="${RDEPEND}

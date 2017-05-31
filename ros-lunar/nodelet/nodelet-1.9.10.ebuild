@@ -15,12 +15,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
     ros-lunar/pluginlib
     ros-lunar/message_runtime
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/rosconsole
+    ros-lunar/roscpp
     ros-lunar/bondcpp
-    sys-apps/util-linux
     dev-libs/boost
+    sys-apps/util-linux
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

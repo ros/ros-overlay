@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
-    ros-lunar/rosconsole
-    ros-lunar/pluginlib
     ros-lunar/roslib
+    ros-lunar/pluginlib
+    ros-lunar/rosconsole
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest

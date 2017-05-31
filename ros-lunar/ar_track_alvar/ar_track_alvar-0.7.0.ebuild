@@ -12,22 +12,22 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf2
+    ros-lunar/pcl_conversions
     ros-lunar/visualization_msgs
+    ros-lunar/message_runtime
+    ros-lunar/std_msgs
+    ros-lunar/tf
+    ros-lunar/sensor_msgs
     ros-lunar/dynamic_reconfigure
-    ros-lunar/rospy
-    ros-lunar/image_transport
+    ros-lunar/pcl_ros
     ros-lunar/geometry_msgs
     ros-lunar/ar_track_alvar_msgs
-    ros-lunar/resource_retriever
-    ros-lunar/message_runtime
-    ros-lunar/pcl_ros
+    ros-lunar/rospy
+    ros-lunar/image_transport
     ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/pcl_conversions
     ros-lunar/cv_bridge
+    ros-lunar/resource_retriever
+    ros-lunar/tf2
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}

@@ -12,15 +12,15 @@ LICENSE="BSD, GPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/katana_description
-    ros-lunar/katana_teleop
-    ros-lunar/katana_moveit_ikfast_plugin
-    ros-lunar/katana_msgs
-    ros-lunar/katana_gazebo_plugins
     ros-lunar/katana_arm_gazebo
-    ros-lunar/katana_tutorials
-    ros-lunar/kni
+    ros-lunar/katana_msgs
     ros-lunar/katana
+    ros-lunar/katana_moveit_ikfast_plugin
+    ros-lunar/katana_description
+    ros-lunar/kni
+    ros-lunar/katana_tutorials
+    ros-lunar/katana_teleop
+    ros-lunar/katana_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 "

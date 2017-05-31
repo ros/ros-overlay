@@ -15,8 +15,8 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-lunar/sensor_msgs
     ros-lunar/roscpp
+    ros-lunar/sensor_msgs
 "
 
 SLOT="0/0"

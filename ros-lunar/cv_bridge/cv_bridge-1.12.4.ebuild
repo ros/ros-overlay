@@ -16,8 +16,8 @@ RDEPEND="
     ros-lunar/sensor_msgs
     ros-lunar/rosconsole
     ros-lunar/opencv3
-    dev-libs/boost
     dev-lang/python
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
 "

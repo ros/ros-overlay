@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf
-    ros-lunar/eigen_conversions
     ros-lunar/kdl_conversions
     ros-lunar/angles
     ros-lunar/tf_conversions
+    ros-lunar/tf
+    ros-lunar/eigen_conversions
 "
 DEPEND="${RDEPEND}
 "

@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
-    ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/tf
+    ros-lunar/roscpp
     dev-python/numpy
     dev-cpp/eigen
     dev-libs/boost

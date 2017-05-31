@@ -12,10 +12,10 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet
     ros-lunar/roscpp
-    ros-lunar/qt_gui
     ros-lunar/qt_gui_cpp
+    ros-lunar/qt_gui
+    ros-lunar/nodelet
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore

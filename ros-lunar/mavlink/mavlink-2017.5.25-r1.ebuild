@@ -17,9 +17,9 @@ RDEPEND="
     dev-lang/python
 "
 DEPEND="${RDEPEND}
-    dev-python/future
     dev-python/lxml
     dev-python/setuptools
+    dev-python/future
 "
 
 SLOT="0/0"

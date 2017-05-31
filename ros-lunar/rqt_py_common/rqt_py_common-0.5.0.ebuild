@@ -13,18 +13,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/actionlib
+    ros-lunar/python_qt_binding
     ros-lunar/qt_gui
+    ros-lunar/rosbag
+    ros-lunar/rospy
     ros-lunar/roslib
     ros-lunar/rostopic
-    ros-lunar/rosbag
-    ros-lunar/python_qt_binding
+    ros-lunar/actionlib
     ros-lunar/genpy
 "
 DEPEND="${RDEPEND}
-    ros-lunar/genmsg
     ros-lunar/std_msgs
+    ros-lunar/genmsg
 "
 
 SLOT="0/0"

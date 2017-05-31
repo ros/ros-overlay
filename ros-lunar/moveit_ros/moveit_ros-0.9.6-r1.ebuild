@@ -12,15 +12,15 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/moveit_ros_planning_interface
-    ros-lunar/moveit_ros_robot_interaction
-    ros-lunar/moveit_ros_visualization
-    ros-lunar/moveit_ros_move_group
-    ros-lunar/moveit_ros_perception
-    ros-lunar/moveit_ros_manipulation
-    ros-lunar/moveit_ros_planning
-    ros-lunar/moveit_ros_benchmarks
     ros-lunar/moveit_ros_warehouse
+    ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_manipulation
+    ros-lunar/moveit_ros_planning_interface
+    ros-lunar/moveit_ros_move_group
+    ros-lunar/moveit_ros_visualization
+    ros-lunar/moveit_ros_perception
+    ros-lunar/moveit_ros_benchmarks
+    ros-lunar/moveit_ros_robot_interaction
 "
 DEPEND="${RDEPEND}
 "
