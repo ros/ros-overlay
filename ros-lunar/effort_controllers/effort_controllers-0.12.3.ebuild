@@ -13,12 +13,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
-    ros-lunar/forward_command_controller
-    ros-lunar/urdf
-    ros-lunar/realtime_tools
-    ros-lunar/control_msgs
-    ros-lunar/controller_interface
     ros-lunar/control_toolbox
+    ros-lunar/controller_interface
+    ros-lunar/forward_command_controller
+    ros-lunar/realtime_tools
+    ros-lunar/urdf
+    ros-lunar/control_msgs
 "
 DEPEND="${RDEPEND}
 "

@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/position_controllers
-    ros-lunar/joint_trajectory_controller
+    ros-lunar/effort_controllers
+    ros-lunar/imu_sensor_controller
+    ros-lunar/gripper_action_controller
+    ros-lunar/velocity_controllers
+    ros-lunar/joint_state_controller
     ros-lunar/force_torque_sensor_controller
     ros-lunar/forward_command_controller
-    ros-lunar/joint_state_controller
-    ros-lunar/effort_controllers
+    ros-lunar/position_controllers
     ros-lunar/diff_drive_controller
-    ros-lunar/gripper_action_controller
-    ros-lunar/imu_sensor_controller
+    ros-lunar/joint_trajectory_controller
     ros-lunar/rqt_joint_trajectory_controller
-    ros-lunar/velocity_controllers
 "
 DEPEND="${RDEPEND}
 "

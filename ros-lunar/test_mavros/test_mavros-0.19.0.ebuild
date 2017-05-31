@@ -11,13 +11,13 @@ LICENSE="|| ( BSD GPLv3 LGPLv3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/mavros_extras
-    ros-lunar/geometry_msgs
     ros-lunar/mavros
-    ros-lunar/roscpp
     ros-lunar/eigen_conversions
     ros-lunar/std_msgs
+    ros-lunar/mavros_extras
     ros-lunar/tf2_ros
+    ros-lunar/geometry_msgs
+    ros-lunar/roscpp
     ros-lunar/control_toolbox
     dev-cpp/eigen
 "

@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/dynamic_reconfigure
-    ros-lunar/roscpp
     ros-lunar/diagnostic_updater
     =dev-libs/libusb-1.0*
 "

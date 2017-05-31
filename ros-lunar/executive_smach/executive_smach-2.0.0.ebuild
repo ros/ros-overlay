@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/smach
     ros-lunar/smach_ros
     ros-lunar/smach_msgs
+    ros-lunar/smach
 "
 DEPEND="${RDEPEND}
 "

@@ -12,21 +12,21 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/moveit_core
     ros-lunar/pluginlib
-    ros-lunar/tf_conversions
-    ros-lunar/moveit_msgs
     ros-lunar/octomap
-    ros-lunar/message_filters
+    ros-lunar/tf
+    ros-lunar/tf_conversions
+    ros-lunar/sensor_msgs
+    ros-lunar/moveit_msgs
+    ros-lunar/rosconsole
     ros-lunar/image_transport
     ros-lunar/roscpp
-    ros-lunar/moveit_core
-    ros-lunar/urdf
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/rosconsole
     ros-lunar/cv_bridge
-    media-libs/freeglut
+    ros-lunar/message_filters
+    ros-lunar/urdf
     media-libs/glew
+    media-libs/freeglut
     media-libs/mesa
 "
 DEPEND="${RDEPEND}

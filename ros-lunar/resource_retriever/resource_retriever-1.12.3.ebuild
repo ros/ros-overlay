@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosconsole
     ros-lunar/roslib
+    ros-lunar/rosconsole
     net-misc/curl
     dev-python/rospkg
 "

@@ -13,17 +13,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/pluginlib
-    ros-lunar/filters
-    ros-lunar/message_filters
-    ros-lunar/laser_geometry
     ros-lunar/message_runtime
-    ros-lunar/roscpp
-    ros-lunar/sensor_msgs
     ros-lunar/tf
+    ros-lunar/sensor_msgs
+    ros-lunar/filters
+    ros-lunar/laser_geometry
+    ros-lunar/roscpp
+    ros-lunar/message_filters
 "
 DEPEND="${RDEPEND}
-    ros-lunar/message_generation
     ros-lunar/rostest
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

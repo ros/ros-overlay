@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosbag_storage
-    ros-lunar/roscpp
     ros-lunar/rosgraph_msgs
+    ros-lunar/roscpp
+    dev-qt/qtwidgets
     dev-qt/qtcore
     dev-qt/qtgui
-    dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
     dev-qt/qtopengl

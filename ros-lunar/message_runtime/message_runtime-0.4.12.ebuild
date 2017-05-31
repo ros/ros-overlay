@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roscpp_serialization
-    ros-lunar/cpp_common
-    ros-lunar/roscpp_traits
     ros-lunar/rostime
     ros-lunar/genpy
+    ros-lunar/roscpp_serialization
+    ros-lunar/roscpp_traits
+    ros-lunar/cpp_common
 "
 DEPEND="${RDEPEND}
 "

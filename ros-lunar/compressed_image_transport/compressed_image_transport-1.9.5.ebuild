@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/cv_bridge
     ros-lunar/image_transport
+    ros-lunar/cv_bridge
+    ros-lunar/dynamic_reconfigure
 "
 DEPEND="${RDEPEND}
 "

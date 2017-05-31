@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pcl_conversions
     ros-lunar/pcl_msgs
+    ros-lunar/pcl_conversions
     ros-lunar/pcl_ros
 "
 DEPEND="${RDEPEND}

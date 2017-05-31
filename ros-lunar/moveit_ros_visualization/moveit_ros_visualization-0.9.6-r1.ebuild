@@ -12,17 +12,17 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/geometric_shapes
-    ros-lunar/rospy
-    ros-lunar/moveit_ros_planning_interface
-    ros-lunar/moveit_ros_robot_interaction
-    ros-lunar/roscpp
-    ros-lunar/moveit_ros_perception
-    ros-lunar/object_recognition_msgs
-    ros-lunar/rviz
-    ros-lunar/moveit_ros_warehouse
     ros-lunar/interactive_markers
+    ros-lunar/moveit_ros_warehouse
+    ros-lunar/pluginlib
+    ros-lunar/object_recognition_msgs
+    ros-lunar/rospy
+    ros-lunar/geometric_shapes
+    ros-lunar/moveit_ros_planning_interface
+    ros-lunar/roscpp
+    ros-lunar/rviz
+    ros-lunar/moveit_ros_perception
+    ros-lunar/moveit_ros_robot_interaction
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen

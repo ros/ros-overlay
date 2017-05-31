@@ -12,18 +12,18 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/message_runtime
     ros-lunar/nodelet
-    ros-lunar/bondpy
+    ros-lunar/std_msgs
     ros-lunar/rospy
     ros-lunar/roslaunch
-    ros-lunar/message_runtime
-    ros-lunar/std_msgs
     ros-lunar/std_srvs
+    ros-lunar/bondpy
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
-    ros-lunar/message_generation
     ros-lunar/rostest
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

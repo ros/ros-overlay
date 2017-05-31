@@ -12,14 +12,14 @@ LICENSE="LGPLv3"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/canopen_402
-    ros-lunar/joint_limits_interface
-    ros-lunar/controller_manager
-    ros-lunar/filters
-    ros-lunar/controller_manager_msgs
     ros-lunar/canopen_chain_node
-    ros-lunar/urdf
     ros-lunar/hardware_interface
+    ros-lunar/canopen_402
+    ros-lunar/filters
+    ros-lunar/controller_manager
+    ros-lunar/joint_limits_interface
+    ros-lunar/urdf
+    ros-lunar/controller_manager_msgs
     dev-cpp/muParser
 "
 DEPEND="${RDEPEND}

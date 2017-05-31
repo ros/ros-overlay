@@ -12,8 +12,8 @@ LICENSE="BSD,LGPL,Apache 2.0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/gazebo_msgs
     ros-lunar/gazebo_plugins
+    ros-lunar/gazebo_msgs
     ros-lunar/gazebo_dev
     ros-lunar/gazebo_ros
 "

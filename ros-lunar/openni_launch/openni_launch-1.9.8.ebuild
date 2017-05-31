@@ -13,9 +13,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet
-    ros-lunar/openni_camera
     ros-lunar/rgbd_launch
+    ros-lunar/openni_camera
+    ros-lunar/nodelet
 "
 DEPEND="${RDEPEND}
     ros-lunar/roslaunch

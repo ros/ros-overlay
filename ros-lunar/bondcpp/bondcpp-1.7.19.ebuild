@@ -13,11 +13,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/smclib
     ros-lunar/roscpp
+    ros-lunar/smclib
     ros-lunar/bond
-    dev-libs/boost
     sys-apps/util-linux
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

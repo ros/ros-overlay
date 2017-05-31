@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    dev-libs/boost
-    dev-libs/poco
     dev-libs/console_bridge
+    dev-libs/poco
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules

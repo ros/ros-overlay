@@ -13,10 +13,10 @@ LICENSE="Public domain"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/roslisp
-    ros-lunar/rosemacs
     ros-lunar/slime_ros
     ros-lunar/slime_wrapper
+    ros-lunar/rosemacs
+    ros-lunar/roslisp
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}

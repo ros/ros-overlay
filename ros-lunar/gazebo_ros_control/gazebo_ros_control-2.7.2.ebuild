@@ -13,16 +13,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/pluginlib
-    ros-lunar/joint_limits_interface
+    ros-lunar/hardware_interface
+    ros-lunar/std_msgs
     ros-lunar/angles
-    ros-lunar/controller_manager
-    ros-lunar/gazebo_ros
     ros-lunar/roscpp
+    ros-lunar/controller_manager
+    ros-lunar/joint_limits_interface
     ros-lunar/transmission_interface
     ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/hardware_interface
     ros-lunar/control_toolbox
+    ros-lunar/gazebo_ros
 "
 DEPEND="${RDEPEND}
     ros-lunar/gazebo_dev

@@ -14,17 +14,17 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_runtime
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/rostime
     ros-lunar/rosconsole
+    ros-lunar/roscpp
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cpp_common
-    ros-lunar/rosunit
-    ros-lunar/message_generation
     ros-lunar/rostest
+    ros-lunar/rosunit
+    ros-lunar/cpp_common
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

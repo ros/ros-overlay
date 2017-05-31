@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/rqt_gui
-    ros-lunar/qt_gui
     ros-lunar/rospy
+    ros-lunar/qt_gui
 "
 DEPEND="${RDEPEND}
 "

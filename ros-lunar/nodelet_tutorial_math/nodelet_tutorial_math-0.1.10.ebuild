@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet
-    ros-lunar/roscpp
     ros-lunar/std_msgs
+    ros-lunar/roscpp
+    ros-lunar/nodelet
 "
 DEPEND="${RDEPEND}
 "

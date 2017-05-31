@@ -13,22 +13,22 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/tf2
-    ros-lunar/geometry_msgs
-    ros-lunar/message_filters
     ros-lunar/message_runtime
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     ros-lunar/sensor_msgs
     ros-lunar/tf2_ros
+    ros-lunar/geometry_msgs
     ros-lunar/rosconsole
+    ros-lunar/roscpp
+    ros-lunar/tf2
+    ros-lunar/message_filters
     ros-lunar/roswtf
     media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
     ros-lunar/angles
-    ros-lunar/message_generation
     ros-lunar/rostest
+    ros-lunar/message_generation
 "
 
 SLOT="0/0"

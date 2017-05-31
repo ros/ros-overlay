@@ -12,9 +12,9 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rqt_gui_cpp
     ros-lunar/rqt_gui
     ros-lunar/rqt_gui_py
+    ros-lunar/rqt_gui_cpp
 "
 DEPEND="${RDEPEND}
 "

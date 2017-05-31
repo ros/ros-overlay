@@ -12,13 +12,13 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/nodelet
+    ros-lunar/nodelet_topic_tools
     ros-lunar/dynamic_reconfigure
+    ros-lunar/nodelet
     ros-lunar/image_geometry
+    ros-lunar/sensor_msgs
     ros-lunar/image_transport
     ros-lunar/roscpp
-    ros-lunar/sensor_msgs
-    ros-lunar/nodelet_topic_tools
     ros-lunar/cv_bridge
 "
 DEPEND="${RDEPEND}

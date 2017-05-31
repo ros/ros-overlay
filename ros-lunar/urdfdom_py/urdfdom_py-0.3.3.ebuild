@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    dev-lang/python
     dev-python/lxml
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
 "

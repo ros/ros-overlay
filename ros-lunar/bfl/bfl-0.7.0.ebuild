@@ -13,8 +13,8 @@ LICENSE="LGPL"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/catkin
     ros-lunar/ros
+    ros-lunar/catkin
     dev-util/cppunit
 "
 DEPEND="${RDEPEND}

@@ -13,24 +13,24 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/nodelet
-    ros-lunar/pluginlib
+    ros-lunar/nodelet_topic_tools
     ros-lunar/tf2_eigen
+    ros-lunar/pcl_conversions
+    ros-lunar/nodelet
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/pluginlib
+    ros-lunar/rosbag
+    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
+    ros-lunar/tf
+    ros-lunar/roscpp
     ros-lunar/message_filters
     ros-lunar/pcl_msgs
-    ros-lunar/rosbag
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/pcl_conversions
-    ros-lunar/nodelet_topic_tools
     sci-libs/pcl
-    sci-libs/vtk
-    sci-libs/proj
-    dev-qt/qtcore
     dev-cpp/eigen
+    sci-libs/vtk
+    dev-qt/qtcore
+    sci-libs/proj
 "
 DEPEND="${RDEPEND}
     ros-lunar/roslib

@@ -17,9 +17,9 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
     ros-lunar/python_qt_binding
+    dev-qt/qtcore
+    dev-qt/qtcore
     virtual/pkgconfig
-    dev-qt/qtcore
-    dev-qt/qtcore
     dev-libs/tinyxml
 "
 

@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/turtle_tf
     ros-lunar/turtle_tf2
+    ros-lunar/turtle_tf
 "
 DEPEND="${RDEPEND}
 "

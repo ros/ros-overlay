@@ -12,11 +12,11 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
-    ros-lunar/rosunit
-    ros-lunar/rosgraph
+    ros-lunar/rosmaster
     ros-lunar/rospy
     ros-lunar/roslaunch
-    ros-lunar/rosmaster
+    ros-lunar/rosgraph
+    ros-lunar/rosunit
     dev-libs/boost
 "
 DEPEND="${RDEPEND}

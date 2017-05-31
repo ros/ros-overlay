@@ -11,15 +11,15 @@ LICENSE="|| ( GPLv3 LGPLv3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 RDEPEND="
+    ros-lunar/mavros
     ros-lunar/mavros_msgs
+    ros-lunar/visualization_msgs
+    ros-lunar/std_msgs
+    ros-lunar/tf
+    ros-lunar/sensor_msgs
     ros-lunar/geometry_msgs
     ros-lunar/roscpp
     ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/mavros
-    ros-lunar/visualization_msgs
-    ros-lunar/tf
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
