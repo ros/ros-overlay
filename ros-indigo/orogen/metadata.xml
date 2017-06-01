@@ -7,9 +7,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>hunter@openrobotics.org</email>
-      <name>Hunter L. Allen</name>
+      <email>orocos-dev@lists.mech.kuleuven.be</email>
+      <name>OCL Development Team</name>
     </maintainer>
-    <bugs-to>https://github.com/allenh1/p2os/issues</bugs-to>
+    <bugs-to>https://github.com/orocos-gbp/orogen/issues</bugs-to>
   </upstream>
 </pkgmetadata>
