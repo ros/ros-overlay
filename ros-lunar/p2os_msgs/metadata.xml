@@ -7,8 +7,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>allen286@purdue.edu</email>
-      <name>Hunter Allen</name>
+      <email>hunter@openrobotics.org</email>
+      <name>Hunter L. Allen</name>
     </maintainer>
     <bugs-to>https://github.com/allenh1/p2os/issues</bugs-to>
   </upstream>
