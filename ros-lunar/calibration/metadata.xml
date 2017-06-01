@@ -7,9 +7,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>hunter@openrobotics.org</email>
-      <name>Hunter L. Allen</name>
+      <email>vincent.rabaud@gmail.com</email>
+      <name>Vincent Rabaud</name>
     </maintainer>
-    <bugs-to>https://github.com/allenh1/p2os/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/calibration/issues</bugs-to>
   </upstream>
 </pkgmetadata>
