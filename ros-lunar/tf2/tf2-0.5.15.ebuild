@@ -6,11 +6,11 @@ EAPI=6
 DESCRIPTION="tf2 is the second generation of the transform library, which lets
     the user k"
 HOMEPAGE="http://www.ros.org/wiki/tf2"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/tf2/0.5.15-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/tf2/0.5.15-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -26,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

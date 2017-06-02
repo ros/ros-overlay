@@ -5,22 +5,22 @@ EAPI=6
 
 DESCRIPTION="rqt_robot_dashboard provides an infrastructure for building robot dashboard plug"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/lunar/rqt_robot_dashboard/0.5.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/lunar/rqt_robot_dashboard/0.5.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/rqt_robot_monitor
-    ros-lunar/rqt_console
-    ros-lunar/rospy
-    ros-lunar/rqt_nav_view
-    ros-lunar/rqt_gui
-    ros-lunar/qt_gui
     ros-lunar/diagnostic_msgs
     ros-lunar/python_qt_binding
+    ros-lunar/qt_gui
+    ros-lunar/rospy
+    ros-lunar/rqt_console
+    ros-lunar/rqt_gui
     ros-lunar/rqt_gui_py
+    ros-lunar/rqt_nav_view
+    ros-lunar/rqt_robot_monitor
 "
 DEPEND="${RDEPEND}
 "
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

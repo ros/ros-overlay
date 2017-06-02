@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION="Provides nodes to assemble point clouds from either LaserScan or PointCloud mess"
 HOMEPAGE="http://ros.org/wiki/laser_assembler"
-SRC_URI="https://github.com/ros-gbp/laser_assembler-release/archive/release/lunar/laser_assembler/1.7.4-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/laser_assembler-release/archive/release/lunar/laser_assembler/1.7.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
     ros-lunar/filters
-    ros-lunar/message_filters
     ros-lunar/laser_geometry
+    ros-lunar/message_filters
     ros-lunar/message_runtime
+    ros-lunar/pluginlib
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/tf
@@ -31,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

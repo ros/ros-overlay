@@ -5,17 +5,17 @@ EAPI=6
 
 DESCRIPTION="rqt_gui_cpp enables GUI plugins to use the C++ client library for ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_gui_cpp/0.5.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_gui_cpp/0.5.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/nodelet
-    ros-lunar/roscpp
     ros-lunar/qt_gui
     ros-lunar/qt_gui_cpp
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
     dev-qt/qtcore
@@ -26,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

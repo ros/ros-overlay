@@ -6,21 +6,21 @@ EAPI=6
 DESCRIPTION="rqt_py_common provides common functionality for rqt plugins written in Python.
  "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_py_common/0.5.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_py_common/0.5.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/actionlib
-    ros-lunar/qt_gui
-    ros-lunar/roslib
-    ros-lunar/rostopic
-    ros-lunar/rosbag
-    ros-lunar/python_qt_binding
     ros-lunar/genpy
+    ros-lunar/python_qt_binding
+    ros-lunar/qt_gui
+    ros-lunar/rosbag
+    ros-lunar/roslib
+    ros-lunar/rospy
+    ros-lunar/rostopic
 "
 DEPEND="${RDEPEND}
     ros-lunar/genmsg
@@ -32,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

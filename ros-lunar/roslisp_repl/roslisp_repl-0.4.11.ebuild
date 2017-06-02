@@ -6,15 +6,15 @@ EAPI=6
 DESCRIPTION="This package provides a script that launches Emacs with Slime (the
     Superior "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/roslisp_repl/0.4.11-0.tar.gz"
+SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/roslisp_repl/0.4.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Public domain"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/roslisp
     ros-lunar/rosemacs
+    ros-lunar/roslisp
     ros-lunar/slime_ros
     ros-lunar/slime_wrapper
     dev-lisp/sbcl
@@ -27,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

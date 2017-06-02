@@ -5,21 +5,21 @@ EAPI=6
 
 DESCRIPTION="roswtf is a tool for diagnosing issues with a running ROS system. Think of it as"
 HOMEPAGE="http://ros.org/wiki/roswtf"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/roswtf/1.13.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/roswtf/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/rosnode
+    ros-lunar/rosbuild
     ros-lunar/rosgraph
     ros-lunar/roslaunch
-    ros-lunar/rosbuild
-    ros-lunar/rosservice
     ros-lunar/roslib
-    dev-python/rospkg
+    ros-lunar/rosnode
+    ros-lunar/rosservice
     dev-python/paramiko
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

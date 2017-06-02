@@ -5,29 +5,29 @@ EAPI=6
 
 DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking library."
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
-SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/lunar/ar_track_alvar/0.7.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/lunar/ar_track_alvar/0.7.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
+    ros-lunar/ar_track_alvar_msgs
+    ros-lunar/cv_bridge
+    ros-lunar/dynamic_reconfigure
+    ros-lunar/geometry_msgs
+    ros-lunar/image_transport
+    ros-lunar/message_runtime
+    ros-lunar/pcl_conversions
+    ros-lunar/pcl_ros
+    ros-lunar/resource_retriever
+    ros-lunar/roscpp
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
+    ros-lunar/tf
     ros-lunar/tf2
     ros-lunar/visualization_msgs
-    ros-lunar/dynamic_reconfigure
-    ros-lunar/rospy
-    ros-lunar/image_transport
-    ros-lunar/geometry_msgs
-    ros-lunar/ar_track_alvar_msgs
-    ros-lunar/resource_retriever
-    ros-lunar/message_runtime
-    ros-lunar/pcl_ros
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/pcl_conversions
-    ros-lunar/cv_bridge
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
@@ -40,9 +40,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,23 +5,23 @@ EAPI=6
 
 DESCRIPTION="rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/lunar/rqt_tf_tree/0.5.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/lunar/rqt_tf_tree/0.5.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/rospy
     ros-lunar/geometry_msgs
-    ros-lunar/rqt_gui
-    ros-lunar/rqt_graph
-    ros-lunar/qt_dotgraph
-    ros-lunar/tf2_msgs
     ros-lunar/python_qt_binding
-    ros-lunar/tf2
-    ros-lunar/tf2_ros
+    ros-lunar/qt_dotgraph
+    ros-lunar/rospy
+    ros-lunar/rqt_graph
+    ros-lunar/rqt_gui
     ros-lunar/rqt_gui_py
+    ros-lunar/tf2
+    ros-lunar/tf2_msgs
+    ros-lunar/tf2_ros
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
@@ -32,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

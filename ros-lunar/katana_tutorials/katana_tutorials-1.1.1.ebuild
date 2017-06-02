@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="This package contains test and demo programs for the katana_driver stack."
 HOMEPAGE="http://ros.org/wiki/katana_tutorials"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_tutorials/1.1.1-0.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_tutorials/1.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/actionlib
-    ros-lunar/roscpp
     ros-lunar/control_msgs
+    ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/trajectory_msgs
 "
@@ -26,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

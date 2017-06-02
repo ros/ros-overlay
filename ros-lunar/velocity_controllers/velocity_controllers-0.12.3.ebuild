@@ -5,20 +5,20 @@ EAPI=6
 
 DESCRIPTION="velocity_controllers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/lunar/velocity_controllers/0.12.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/lunar/velocity_controllers/0.12.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/angles
-    ros-lunar/forward_command_controller
-    ros-lunar/urdf
-    ros-lunar/realtime_tools
     ros-lunar/control_msgs
-    ros-lunar/controller_interface
     ros-lunar/control_toolbox
+    ros-lunar/controller_interface
+    ros-lunar/forward_command_controller
+    ros-lunar/realtime_tools
+    ros-lunar/urdf
 "
 DEPEND="${RDEPEND}
 "
@@ -28,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,15 +5,15 @@ EAPI=6
 
 DESCRIPTION="The katana_moveit_ikfast_plugin package"
 HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_moveit_ikfast_plugin/1.1.1-0.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_moveit_ikfast_plugin/1.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD Apache )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "Apache" )"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/roscpp
-    ros-lunar/pluginlib
     ros-lunar/moveit_core
+    ros-lunar/pluginlib
+    ros-lunar/roscpp
     ros-lunar/tf_conversions
     virtual/lapack
 "
@@ -25,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

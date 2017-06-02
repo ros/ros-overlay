@@ -5,21 +5,21 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_extras/0.19.0-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_extras/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( GPLv3 LGPLv3 BSD )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/mavros_msgs
     ros-lunar/geometry_msgs
-    ros-lunar/roscpp
-    ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
     ros-lunar/mavros
-    ros-lunar/visualization_msgs
+    ros-lunar/mavros_msgs
+    ros-lunar/roscpp
+    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
     ros-lunar/tf
+    ros-lunar/urdf
+    ros-lunar/visualization_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

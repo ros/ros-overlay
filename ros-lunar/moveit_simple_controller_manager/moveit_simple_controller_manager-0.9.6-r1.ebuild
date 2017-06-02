@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION="A generic, simple controller manager plugin for MoveIt."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_simple_controller_manager/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_simple_controller_manager/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/control_msgs
-    ros-lunar/roscpp
-    ros-lunar/moveit_core
     ros-lunar/actionlib
+    ros-lunar/control_msgs
+    ros-lunar/moveit_core
     ros-lunar/pluginlib
+    ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 "
@@ -26,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

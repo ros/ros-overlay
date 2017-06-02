@@ -5,19 +5,19 @@ EAPI=6
 
 DESCRIPTION="Python and C++ interfaces for manipulating geodetic coordinates."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/release/lunar/geodesy/0.5.2-0.tar.gz"
+SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/release/lunar/geodesy/0.5.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/geographic_msgs
     ros-lunar/geometry_msgs
-    ros-lunar/unique_id
     ros-lunar/sensor_msgs
-    ros-lunar/uuid_msgs
     ros-lunar/tf
+    ros-lunar/unique_id
+    ros-lunar/uuid_msgs
     dev-python/pyproj
 "
 DEPEND="${RDEPEND}
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

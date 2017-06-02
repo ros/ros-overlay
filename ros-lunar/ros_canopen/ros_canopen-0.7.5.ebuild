@@ -5,20 +5,20 @@ EAPI=6
 
 DESCRIPTION="A generic canopen implementation for ROS"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/lunar/ros_canopen/0.7.5-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/lunar/ros_canopen/0.7.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/canopen_402
-    ros-lunar/canopen_motor_node
     ros-lunar/can_msgs
-    ros-lunar/socketcan_bridge
+    ros-lunar/canopen_402
     ros-lunar/canopen_chain_node
-    ros-lunar/socketcan_interface
     ros-lunar/canopen_master
+    ros-lunar/canopen_motor_node
+    ros-lunar/socketcan_bridge
+    ros-lunar/socketcan_interface
 "
 DEPEND="${RDEPEND}
 "
@@ -28,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

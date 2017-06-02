@@ -5,21 +5,21 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/roscpp"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/roscpp/1.13.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/roscpp/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/cpp_common
-    ros-lunar/roscpp_traits
-    ros-lunar/roscpp_serialization
     ros-lunar/message_runtime
-    ros-lunar/std_msgs
-    ros-lunar/rostime
     ros-lunar/rosconsole
+    ros-lunar/roscpp_serialization
+    ros-lunar/roscpp_traits
     ros-lunar/rosgraph_msgs
+    ros-lunar/rostime
+    ros-lunar/std_msgs
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
@@ -33,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

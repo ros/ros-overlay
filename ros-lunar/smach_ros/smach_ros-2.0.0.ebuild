@@ -5,19 +5,19 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/lunar/smach_ros/2.0.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/lunar/smach_ros/2.0.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/smach
-    ros-lunar/rospy
     ros-lunar/actionlib
     ros-lunar/actionlib_msgs
-    ros-lunar/smach_msgs
+    ros-lunar/rospy
     ros-lunar/rostopic
+    ros-lunar/smach
+    ros-lunar/smach_msgs
     ros-lunar/std_msgs
     ros-lunar/std_srvs
 "
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

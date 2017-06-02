@@ -5,24 +5,24 @@ EAPI=6
 
 DESCRIPTION="gazebo_ros_control"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_ros_control/2.7.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_ros_control/2.7.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/joint_limits_interface
     ros-lunar/angles
+    ros-lunar/control_toolbox
     ros-lunar/controller_manager
     ros-lunar/gazebo_ros
+    ros-lunar/hardware_interface
+    ros-lunar/joint_limits_interface
+    ros-lunar/pluginlib
     ros-lunar/roscpp
+    ros-lunar/std_msgs
     ros-lunar/transmission_interface
     ros-lunar/urdf
-    ros-lunar/std_msgs
-    ros-lunar/hardware_interface
-    ros-lunar/control_toolbox
 "
 DEPEND="${RDEPEND}
     ros-lunar/gazebo_dev
@@ -33,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

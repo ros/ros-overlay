@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="Holds the action description and relevant messages for the move_base package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/navigation_msgs-release/archive/release/lunar/move_base_msgs/1.13.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_msgs-release/archive/release/lunar/move_base_msgs/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
+    ros-lunar/actionlib_msgs
     ros-lunar/geometry_msgs
     ros-lunar/message_runtime
-    ros-lunar/actionlib_msgs
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -25,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

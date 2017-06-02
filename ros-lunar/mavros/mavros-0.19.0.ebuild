@@ -6,35 +6,35 @@ EAPI=6
 DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS
     with proxy for Groun"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/0.19.0-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( GPLv3 LGPLv3 BSD )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/mavros_msgs
-    ros-lunar/rospy
-    ros-lunar/libmavconn
-    ros-lunar/geometry_msgs
-    ros-lunar/nav_msgs
-    ros-lunar/rosconsole_bridge
-    ros-lunar/tf2_ros
-    ros-lunar/std_srvs
-    ros-lunar/message_runtime
-    ros-lunar/roscpp
-    ros-lunar/eigen_conversions
     ros-lunar/diagnostic_msgs
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
     ros-lunar/diagnostic_updater
+    ros-lunar/eigen_conversions
+    ros-lunar/geometry_msgs
+    ros-lunar/libmavconn
     ros-lunar/mavlink
+    ros-lunar/mavros_msgs
+    ros-lunar/message_runtime
+    ros-lunar/nav_msgs
+    ros-lunar/pluginlib
+    ros-lunar/rosconsole_bridge
+    ros-lunar/roscpp
+    ros-lunar/rospy
+    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
+    ros-lunar/std_srvs
+    ros-lunar/tf2_ros
     dev-cpp/eigen
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cmake_modules
     ros-lunar/angles
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"
@@ -42,9 +42,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 
