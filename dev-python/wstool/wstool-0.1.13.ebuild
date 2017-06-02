@@ -1,25 +1,14 @@
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-SCM=""
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="git-r3"
-	EGIT_REPO_URI="https://github.com/vcstools/wstool"
-fi
-
-inherit ${SCM} distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Commands to manage several local SCM repositories for ROS"
 HOMEPAGE="http://wiki.ros.org/wstool"
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="http://download.ros.org/downloads/${PN}/${P}.tar.gz
-		http://github.com/vcstools/wstool/archive/${PV}.tar.gz -> ${P}.tar.gz
-	"
-	KEYWORDS="~amd64 ~arm"
-fi
+
+SRC_URI="http://github.com/vcstools/wstool/archive/${PV}.tar.gz -> ${P}.tar.gz"
+
+KEYWORDS="amd64 x86 arm ~arm64"
 
 LICENSE="BSD"
 SLOT="0"
