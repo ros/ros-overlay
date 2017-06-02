@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_gui_cp
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/nodelet
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     dev-qt/qtcore
 "
 

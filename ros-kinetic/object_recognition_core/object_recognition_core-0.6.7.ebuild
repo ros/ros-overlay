@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="object_recognition_core contains tools to launch several recognition pipelines, "
 HOMEPAGE="http://wg-perception.github.io/object_recognition_core/"
-SRC_URI="https://github.com/ros-gbp/object_recognition_core-release/archive/release/kinetic/object_recognition_core/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_core-release/archive/release/kinetic/object_recognition_core/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/ecto
     ros-kinetic/ecto_image_pipeline
     ros-kinetic/sensor_msgs
-    net-misc/curl
-    dev-db/couchdb
     dev-libs/boost
+    dev-db/couchdb
+    net-misc/curl
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

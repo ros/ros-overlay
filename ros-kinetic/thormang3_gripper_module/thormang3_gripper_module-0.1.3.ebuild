@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="The thormang3_gripper_module package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_gripper_module/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_gripper_module/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
-    ros-kinetic/roscpp
     ros-kinetic/cmake_modules
     ros-kinetic/robotis_device
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/robotis_math
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Demonstrations for cost maps."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_demos/0.3.1-0.tar.gz"
+SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_demos/0.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
-    ros-indigo/cost_map_visualisations
-    ros-indigo/ecl_console
     ros-indigo/cost_map_ros
+    ros-indigo/cost_map_visualisations
+    ros-indigo/costmap_2d
+    ros-indigo/ecl_build
+    ros-indigo/ecl_console
+    ros-indigo/nav_msgs
     ros-indigo/roscpp
     ros-indigo/rviz
-    ros-indigo/ecl_build
     ros-indigo/tf
-    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

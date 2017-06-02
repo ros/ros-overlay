@@ -5,35 +5,36 @@ EAPI=6
 
 DESCRIPTION="The jsk_footstep_controller package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_footstep_controller/0.1.13-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_footstep_controller/0.1.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/tf_conversions
-    ros-indigo/message_generation
-    ros-indigo/message_filters
-    ros-indigo/jsk_footstep_planner
-    ros-indigo/jsk_footstep_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/sound_play
-    ros-indigo/jsk_pcl_ros
-    ros-indigo/urdf
-    ros-indigo/genmsg
     ros-indigo/diagnostic_msgs
-    ros-indigo/jsk_topic_tools
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/kdl_conversions
-    ros-indigo/tf
-    ros-indigo/kdl_parser
     ros-indigo/diagnostic_updater
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/genmsg
+    ros-indigo/geometry_msgs
+    ros-indigo/jsk_footstep_msgs
+    ros-indigo/jsk_footstep_planner
+    ros-indigo/jsk_pcl_ros
+    ros-indigo/jsk_topic_tools
+    ros-indigo/kdl_conversions
+    ros-indigo/kdl_parser
+    ros-indigo/message_filters
+    ros-indigo/message_generation
+    ros-indigo/sensor_msgs
+    ros-indigo/sound_play
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/tf2
+    ros-indigo/tf_conversions
+    ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -41,9 +42,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

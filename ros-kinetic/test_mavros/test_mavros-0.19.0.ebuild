@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.19.0-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPLv3 LGPLv3 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "GPLv3" "LGPLv3" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/mavros_extras
+    ros-kinetic/control_toolbox
+    ros-kinetic/eigen_conversions
     ros-kinetic/geometry_msgs
     ros-kinetic/mavros
+    ros-kinetic/mavros_extras
     ros-kinetic/roscpp
-    ros-kinetic/eigen_conversions
     ros-kinetic/std_msgs
     ros-kinetic/tf2_ros
-    ros-kinetic/control_toolbox
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/cmake_modules
     ros-kinetic/angles
+    ros-kinetic/catkin
+    ros-kinetic/cmake_modules
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

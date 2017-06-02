@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="An automatically generated package with all the configuration and launch files f"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/rtmros_nextage-release/archive/release/indigo/nextage_moveit_config/0.7.16-0.tar.gz"
+SRC_URI="https://github.com/tork-a/rtmros_nextage-release/archive/release/indigo/nextage_moveit_config/0.7.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/hironx_moveit_config
-    ros-indigo/moveit_ros_visualization
-    ros-indigo/trac_ik_kinematics_plugin
+    ros-indigo/moveit_planners
     ros-indigo/moveit_ros
     ros-indigo/moveit_ros_move_group
-    ros-indigo/moveit_planners
-    ros-indigo/pr2_moveit_plugins
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/moveit_ros_visualization
     ros-indigo/nextage_ros_bridge
+    ros-indigo/pr2_moveit_plugins
+    ros-indigo/trac_ik_kinematics_plugin
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

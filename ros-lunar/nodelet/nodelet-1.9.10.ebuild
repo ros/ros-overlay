@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/nodelet_core-release/archive/release/lunar/n
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/bondcpp
@@ -19,10 +19,11 @@ RDEPEND="
     ros-lunar/rosconsole
     ros-lunar/roscpp
     ros-lunar/std_msgs
-    sys-apps/util-linux
     dev-libs/boost
+    sys-apps/util-linux
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/message_generation
     ros-lunar/rospy

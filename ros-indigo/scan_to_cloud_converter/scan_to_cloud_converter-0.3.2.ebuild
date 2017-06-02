@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="Converts LaserScan to PointCloud messages."
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
-SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/scan_to_cloud_converter/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/scan_to_cloud_converter/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/pcl_conversions
     ros-indigo/pcl_ros
+    ros-indigo/roscpp
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     sci-libs/pcl
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

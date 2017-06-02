@@ -10,12 +10,13 @@ SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/lunar/mk/1.14.0-
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosbuild
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

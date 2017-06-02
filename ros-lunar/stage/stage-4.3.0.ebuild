@@ -9,17 +9,19 @@ SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/lunar/stage/4.
 
 LICENSE="GPL"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    media-libs/libjpeg-turbo
-    media-libs/mesa
     x11-libs/gtk+
     =x11-libs/fltk-1*
+    media-libs/libjpeg-turbo
+    media-libs/mesa
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     sys-devel/libtool
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

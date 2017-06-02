@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_service_caller-release/archive/release/l
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosservice
@@ -19,6 +19,7 @@ RDEPEND="
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

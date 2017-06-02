@@ -6,24 +6,25 @@ EAPI=6
 DESCRIPTION="Controllers to operate the digital output of the motor controller
     boards and"
 HOMEPAGE="http://www.ros.org/wiki/ethercat_trigger_controllers"
-SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/ethercat_trigger_controllers/1.10.13-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/ethercat_trigger_controllers/1.10.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/rospy
-    ros-indigo/message_runtime
-    ros-indigo/pr2_controller_interface
-    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
-    ros-indigo/std_msgs
+    ros-indigo/message_runtime
+    ros-indigo/pluginlib
+    ros-indigo/pr2_controller_interface
     ros-indigo/realtime_tools
+    ros-indigo/roscpp
+    ros-indigo/rospy
+    ros-indigo/std_msgs
     sys-devel/libtool
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

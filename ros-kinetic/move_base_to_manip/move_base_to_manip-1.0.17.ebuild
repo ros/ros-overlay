@@ -9,7 +9,7 @@ SRC_URI="https://github.com/UTNuclearRoboticsPublic/move_base_to_manip-release/a
 
 LICENSE="See license.txt"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
@@ -26,6 +26,7 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"

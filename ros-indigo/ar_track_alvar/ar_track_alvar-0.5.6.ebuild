@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking library."
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
-SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/indigo/ar_track_alvar/0.5.6-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/indigo/ar_track_alvar/0.5.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/ar_track_alvar_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/geometry_msgs
+    ros-indigo/image_transport
+    ros-indigo/message_runtime
+    ros-indigo/pcl_conversions
+    ros-indigo/pcl_ros
+    ros-indigo/resource_retriever
+    ros-indigo/roscpp
+    ros-indigo/rospy
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf
     ros-indigo/tf2
     ros-indigo/visualization_msgs
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/rospy
-    ros-indigo/image_transport
-    ros-indigo/geometry_msgs
-    ros-indigo/ar_track_alvar_msgs
-    ros-indigo/resource_retriever
-    ros-indigo/message_runtime
-    ros-indigo/pcl_ros
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/pcl_conversions
-    ros-indigo/cv_bridge
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/message_generation
 "
@@ -40,9 +41,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

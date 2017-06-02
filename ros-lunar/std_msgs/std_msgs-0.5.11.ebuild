@@ -9,12 +9,13 @@ SRC_URI="https://github.com/ros-gbp/std_msgs-release/archive/release/lunar/std_m
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

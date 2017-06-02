@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="MoveIt interface to OMPL"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_planners_ompl/0.7.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_planners_ompl/0.7.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/dynamic_reconfigure
+    ros-indigo/eigen_conversions
+    ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning
+    ros-indigo/ompl
     ros-indigo/pluginlib
     ros-indigo/roscpp
-    ros-indigo/moveit_core
-    ros-indigo/eigen_conversions
-    ros-indigo/moveit_ros_planning
     ros-indigo/tf
-    ros-indigo/ompl
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,31 +5,32 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/jsk_3rdparty/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/jsk_3rdparty/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/slic
+    ros-kinetic/assimp_devel
     ros-kinetic/bayesian_belief_networks
+    ros-kinetic/downward
+    ros-kinetic/ff
+    ros-kinetic/ffha
+    ros-kinetic/julius
     ros-kinetic/libcmt
     ros-kinetic/libsiftfast
-    ros-kinetic/julius
-    ros-kinetic/nlopt
-    ros-kinetic/rosping
-    ros-kinetic/rospatlite
-    ros-kinetic/ff
-    ros-kinetic/pgm_learner
-    ros-kinetic/voice_text
-    ros-kinetic/downward
-    ros-kinetic/ffha
     ros-kinetic/mini_maxwell
+    ros-kinetic/nlopt
     ros-kinetic/opt_camera
-    ros-kinetic/assimp_devel
+    ros-kinetic/pgm_learner
+    ros-kinetic/rospatlite
+    ros-kinetic/rosping
+    ros-kinetic/slic
+    ros-kinetic/voice_text
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -37,9 +38,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

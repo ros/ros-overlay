@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Rviz 3-D visualizer for planning algorithms implemented with the Open Motion Pla"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/ompl_visual_tools-release/archive/release/indigo/ompl_visual_tools/2.3.2-0.tar.gz"
+SRC_URI="https://github.com/davetcoleman/ompl_visual_tools-release/archive/release/indigo/ompl_visual_tools/2.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/graph_msgs
-    ros-indigo/moveit_planners_ompl
-    ros-indigo/roslib
-    ros-indigo/roscpp
     ros-indigo/moveit_core
+    ros-indigo/moveit_planners_ompl
     ros-indigo/moveit_visual_tools
-    ros-indigo/visualization_msgs
     ros-indigo/ompl
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

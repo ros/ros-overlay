@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Stdr version of turtlebot simulation. Convenient to test 2D-navigation related s"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/indigo/turtlebot_stdr/2.2.2-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/indigo/turtlebot_stdr/2.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/navigation
+    ros-indigo/stdr_gui
+    ros-indigo/stdr_resources
+    ros-indigo/stdr_robot
+    ros-indigo/stdr_server
+    ros-indigo/turtlebot_bringup
     ros-indigo/yocs_velocity_smoother
     ros-indigo/yocs_virtual_sensor
-    ros-indigo/stdr_server
-    ros-indigo/stdr_resources
-    ros-indigo/navigation
-    ros-indigo/stdr_robot
-    ros-indigo/stdr_gui
-    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="This contains CvBridge, which converts between ROS
     Image messages and OpenCV"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/indigo/cv_bridge/1.11.15-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/indigo/cv_bridge/1.11.15-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
     ros-indigo/rosconsole
-    dev-lang/python
+    ros-indigo/sensor_msgs
     dev-libs/boost
     media-libs/opencv
+    dev-lang/python
     media-libs/opencv
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

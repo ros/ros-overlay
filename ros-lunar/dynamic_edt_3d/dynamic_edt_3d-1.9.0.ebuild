@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/lunar/dynami
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
     ros-lunar/octomap
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

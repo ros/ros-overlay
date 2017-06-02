@@ -5,34 +5,35 @@ EAPI=6
 
 DESCRIPTION="Sawyer Roch robot driver"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_base/2.0.13-2.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_base/2.0.13-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nodelet
-    ros-kinetic/topic_tools
-    ros-kinetic/tf
     ros-kinetic/angles
     ros-kinetic/controller_manager
-    ros-kinetic/roch_description
+    ros-kinetic/diagnostic_aggregator
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
+    ros-kinetic/diff_drive_controller
     ros-kinetic/geometry_msgs
+    ros-kinetic/hardware_interface
+    ros-kinetic/nodelet
+    ros-kinetic/roch_control
+    ros-kinetic/roch_description
     ros-kinetic/roch_msgs
     ros-kinetic/roscpp
-    ros-kinetic/diff_drive_controller
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/diagnostic_aggregator
     ros-kinetic/sensor_msgs
-    ros-kinetic/roch_control
-    ros-kinetic/hardware_interface
-    ros-kinetic/diagnostic_updater
+    ros-kinetic/std_msgs
+    ros-kinetic/tf
+    ros-kinetic/topic_tools
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslint
+    ros-kinetic/catkin
     ros-kinetic/roslaunch
+    ros-kinetic/roslint
 "
 
 SLOT="0/0"
@@ -40,9 +41,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

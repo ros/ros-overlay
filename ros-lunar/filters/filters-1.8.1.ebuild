@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/filters-release/archive/release/lunar/filter
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/pluginlib
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/roslib
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
 "
 

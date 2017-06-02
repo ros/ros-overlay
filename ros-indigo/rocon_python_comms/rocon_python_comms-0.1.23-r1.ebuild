@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="Service pair libraries for pub/sub non-blocking services."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/indigo/rocon_python_comms/0.1.23-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/indigo/rocon_python_comms/0.1.23-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosnode
+    ros-indigo/genpy
+    ros-indigo/rocon_console
     ros-indigo/rocon_service_pair_msgs
     ros-indigo/rosgraph
-    ros-indigo/rospy
-    ros-indigo/rocon_console
-    ros-indigo/unique_id
-    ros-indigo/rosservice
     ros-indigo/roslib
+    ros-indigo/rosnode
+    ros-indigo/rospy
+    ros-indigo/rosservice
     ros-indigo/rostopic
-    ros-indigo/genpy
+    ros-indigo/unique_id
     ros-indigo/uuid_msgs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
     dev-python/catkin_pkg
 "
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

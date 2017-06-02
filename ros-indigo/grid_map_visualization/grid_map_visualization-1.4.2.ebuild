@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Configurable tool to visualize grid maps in RViz."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_visualization/1.4.2-0.tar.gz"
+SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_visualization/1.4.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
+    ros-indigo/grid_map_core
     ros-indigo/grid_map_msgs
     ros-indigo/grid_map_ros
-    ros-indigo/grid_map_core
+    ros-indigo/nav_msgs
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
-    ros-indigo/visualization_msgs
     ros-indigo/tf
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

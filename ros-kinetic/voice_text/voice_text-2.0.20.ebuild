@@ -5,15 +5,16 @@ EAPI=6
 
 DESCRIPTION="voice_text (www.voicetext.jp)"
 HOMEPAGE="http://ros.org/wiki/voice_text"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/voice_text/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/voice_text/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="HOYA License"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -21,9 +22,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

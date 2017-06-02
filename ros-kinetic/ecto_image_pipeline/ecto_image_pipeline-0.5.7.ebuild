@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Common tools for image based pipelines. Includes stereo and mono camera drivers,"
 HOMEPAGE="http://plasmodic.github.io/ecto_image_pipeline/"
-SRC_URI="https://github.com/ros-gbp/ecto_image_pipeline-release/archive/release/kinetic/ecto_image_pipeline/0.5.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ecto_image_pipeline-release/archive/release/kinetic/ecto_image_pipeline/0.5.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/ecto
     ros-kinetic/ecto_opencv
     ros-kinetic/ecto_ros
     ros-kinetic/opencv_candidate
-    dev-cpp/eigen
     dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

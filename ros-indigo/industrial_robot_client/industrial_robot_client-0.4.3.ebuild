@@ -6,26 +6,27 @@ EAPI=6
 DESCRIPTION="industrial robot client contains generic clients for connecting 
      to industr"
 HOMEPAGE="http://ros.org/wiki/industrial_robot_client"
-SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/industrial_robot_client/0.4.3-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/industrial_robot_client/0.4.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/industrial_msgs
-    ros-indigo/control_msgs
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
+    ros-indigo/control_msgs
+    ros-indigo/industrial_msgs
+    ros-indigo/industrial_utils
     ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/simple_message
-    ros-indigo/urdf
     ros-indigo/std_msgs
     ros-indigo/trajectory_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/industrial_utils
+    ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

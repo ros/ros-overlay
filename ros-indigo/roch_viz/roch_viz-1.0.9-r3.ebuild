@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Visualization configuration for SawYer roch"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch_viz-release/archive/release/indigo/roch_viz/1.0.9-3.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch_viz-release/archive/release/indigo/roch_viz/1.0.9-3.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_state_publisher
     ros-indigo/joint_state_publisher
-    ros-indigo/rviz_imu_plugin
+    ros-indigo/robot_state_publisher
     ros-indigo/roch_description
     ros-indigo/rviz
+    ros-indigo/rviz_imu_plugin
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

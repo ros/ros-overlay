@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/tf2_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib
@@ -26,6 +26,7 @@ RDEPEND="
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

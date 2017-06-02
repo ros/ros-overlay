@@ -10,16 +10,17 @@ SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/co
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/class_loader
     ros-lunar/roscpp
     ros-lunar/urdf_parser_plugin
-    dev-libs/urdfdom_headers
     dev-libs/collada-dom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/urdf
 "
 

@@ -6,16 +6,17 @@ EAPI=6
 DESCRIPTION="Log4cpp maintained by Orocos developers
     This version of log4cpp deviates fro"
 HOMEPAGE="http://log4cpp.sourceforge.net/"
-SRC_URI="https://github.com/orocos-gbp/log4cpp-release/archive/release/indigo/log4cpp/2.8.3-0.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/log4cpp-release/archive/release/indigo/log4cpp/2.8.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL v2.1 or later"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

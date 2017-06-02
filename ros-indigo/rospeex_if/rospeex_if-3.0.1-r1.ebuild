@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/rospeex/rospeex-release/archive/release/indigo/rospeex_if/3.0.1-1.tar.gz"
+SRC_URI="https://bitbucket.org/rospeex/rospeex-release/archive/release/indigo/rospeex_if/3.0.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-v2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospack
-    ros-indigo/rospy
-    ros-indigo/roslib
     ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/rospack
     ros-indigo/rospeex_core
-    ros-indigo/std_msgs
     ros-indigo/rospeex_msgs
+    ros-indigo/rospy
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

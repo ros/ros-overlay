@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="Extracts checkerboard corners from a dense laser snapshot.
      This package is "
 HOMEPAGE="http://www.ros.org/wiki/laser_cb_detector"
-SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/laser_cb_detector/0.10.14-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/laser_cb_detector/0.10.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/image_cb_detector
-    ros-kinetic/message_filters
     ros-kinetic/actionlib
     ros-kinetic/actionlib_msgs
-    ros-kinetic/settlerlib
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
     ros-kinetic/cv_bridge
+    ros-kinetic/image_cb_detector
+    ros-kinetic/message_filters
+    ros-kinetic/roscpp
+    ros-kinetic/settlerlib
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

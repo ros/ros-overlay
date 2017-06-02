@@ -5,30 +5,31 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_object_recognition/archive/release/indigo/or_libs/0.0.4-0.tar.gz"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_object_recognition/archive/release/indigo/or_libs/0.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-v2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp_serialization
+    ros-indigo/cv_bridge
     ros-indigo/message_runtime
     ros-indigo/robbie_architecture
-    ros-indigo/std_msgs
+    ros-indigo/roscpp_serialization
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/cv_bridge
     dev-libs/boost
-    media-libs/opencv
     sci-libs/flann
+    media-libs/opencv
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
-    ros-indigo/message_generation
-    ros-indigo/roslang
-    ros-indigo/roscpp
     ros-indigo/genmsg
+    ros-indigo/message_generation
+    ros-indigo/roscpp
+    ros-indigo/roslang
 "
 
 SLOT="0/0"
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

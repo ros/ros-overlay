@@ -6,24 +6,25 @@ EAPI=6
 DESCRIPTION="turtlebot_arm_block_manipulation contains a demo allowing the TurtleBot arm
     "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_arm-release/archive/release/indigo/turtlebot_arm_block_manipulation/0.3.3-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_arm-release/archive/release/indigo/turtlebot_arm_block_manipulation/0.3.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/actionlib
-    ros-indigo/arbotix_msgs
     ros-indigo/actionlib_msgs
+    ros-indigo/arbotix_msgs
+    ros-indigo/interactive_markers
+    ros-indigo/moveit_core
+    ros-indigo/moveit_ros_planning_interface
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/moveit_core
     ros-indigo/visualization_msgs
-    ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

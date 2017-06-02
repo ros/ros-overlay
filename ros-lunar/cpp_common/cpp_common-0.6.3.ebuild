@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/lunar/cp
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    dev-libs/console_bridge
     dev-libs/boost
+    dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

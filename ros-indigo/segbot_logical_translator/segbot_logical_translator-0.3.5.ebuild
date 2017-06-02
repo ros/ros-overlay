@@ -6,30 +6,31 @@ EAPI=6
 DESCRIPTION="High-level navigation application for the segbot allowing the segbot to
     appr"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_logical_translator/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_logical_translator/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/bwi_msgs
-    ros-indigo/segbot_navigation
-    ros-indigo/nav_msgs
-    ros-indigo/multi_level_map_msgs
-    ros-indigo/message_filters
     ros-indigo/actionlib
-    ros-indigo/multi_level_map_utils
-    ros-indigo/move_base_msgs
-    ros-indigo/roscpp
-    ros-indigo/map_msgs
+    ros-indigo/bwi_mapper
+    ros-indigo/bwi_msgs
     ros-indigo/bwi_planning_common
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/map_msgs
+    ros-indigo/message_filters
+    ros-indigo/move_base_msgs
+    ros-indigo/multi_level_map_msgs
+    ros-indigo/multi_level_map_utils
+    ros-indigo/nav_msgs
+    ros-indigo/roscpp
+    ros-indigo/segbot_navigation
     ros-indigo/tf
     ros-indigo/utexas_gdc
-    ros-indigo/bwi_mapper
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -37,9 +38,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Demo nodes to demonstrate the usage of the grid map library."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_demos/1.4.2-0.tar.gz"
+SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_demos/1.4.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/cv_bridge
     ros-kinetic/geometry_msgs
+    ros-kinetic/grid_map_cv
+    ros-kinetic/grid_map_loader
     ros-kinetic/grid_map_msgs
     ros-kinetic/grid_map_ros
-    ros-kinetic/grid_map_loader
-    ros-kinetic/roscpp
-    ros-kinetic/grid_map_visualization
-    ros-kinetic/grid_map_cv
-    ros-kinetic/sensor_msgs
-    ros-kinetic/cv_bridge
     ros-kinetic/grid_map_rviz_plugin
+    ros-kinetic/grid_map_visualization
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

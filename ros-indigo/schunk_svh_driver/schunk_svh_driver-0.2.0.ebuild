@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="SVH Driver wrapper to enable control of the Schunk five finger hand"
 HOMEPAGE="http://www.ros.org/wiki/schunk_svh_driver"
-SRC_URI="https://github.com/fzi-forschungszentrum-informatik/schunk_svh_driver-release/archive/release/indigo/schunk_svh_driver/0.2.0-0.tar.gz"
+SRC_URI="https://github.com/fzi-forschungszentrum-informatik/schunk_svh_driver-release/archive/release/indigo/schunk_svh_driver/0.2.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/dynamic_reconfigure
-    ros-indigo/fzi_icl_core
     ros-indigo/fzi_icl_comm
-    ros-indigo/rospy
-    ros-indigo/xacro
-    ros-indigo/rqt_gui
+    ros-indigo/fzi_icl_core
     ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
+    ros-indigo/rospy
+    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_py
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/urdf
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

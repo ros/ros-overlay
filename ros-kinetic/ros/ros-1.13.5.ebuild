@@ -5,24 +5,24 @@ EAPI=6
 
 DESCRIPTION="ROS packaging system"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/ros/1.13.5-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/ros/1.13.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosunit
-    ros-kinetic/rosbash
-    ros-kinetic/roscreate
-    ros-kinetic/rosbuild
-    ros-kinetic/roslang
-    ros-kinetic/mk
-    ros-kinetic/rosclean
-    ros-kinetic/roslib
-    ros-kinetic/rosboost_cfg
     ros-kinetic/catkin
+    ros-kinetic/mk
+    ros-kinetic/rosbash
+    ros-kinetic/rosboost_cfg
+    ros-kinetic/rosbuild
+    ros-kinetic/rosclean
+    ros-kinetic/roscreate
+    ros-kinetic/roslang
+    ros-kinetic/roslib
     ros-kinetic/rosmake
+    ros-kinetic/rosunit
 "
 DEPEND="${RDEPEND}
 "
@@ -32,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

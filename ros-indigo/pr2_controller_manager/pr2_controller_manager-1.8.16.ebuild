@@ -5,28 +5,29 @@ EAPI=6
 
 DESCRIPTION="The controller manager (CM) package provides the infrastructure to run controlle"
 HOMEPAGE="http://ros.org/pr2_controller_manager"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/indigo/pr2_controller_manager/1.8.16-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/indigo/pr2_controller_manager/1.8.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/rospy
-    ros-indigo/rosparam
-    ros-indigo/pr2_hardware_interface
-    ros-indigo/pr2_mechanism_msgs
-    ros-indigo/pr2_mechanism_diagnostics
-    ros-indigo/pr2_controller_interface
-    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
-    ros-indigo/realtime_tools
-    ros-indigo/sensor_msgs
+    ros-indigo/pluginlib
+    ros-indigo/pr2_controller_interface
     ros-indigo/pr2_description
+    ros-indigo/pr2_hardware_interface
+    ros-indigo/pr2_mechanism_diagnostics
     ros-indigo/pr2_mechanism_model
+    ros-indigo/pr2_mechanism_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/roscpp
+    ros-indigo/rosparam
+    ros-indigo/rospy
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/rostest
 "
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Localization Manager helps to localize robot's position with annotated informati"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_localization_manager/0.8.2-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_localization_manager/0.8.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/yocs_msgs
-    ros-kinetic/rospy
+    ros-kinetic/actionlib
     ros-kinetic/ar_track_alvar
     ros-kinetic/ar_track_alvar_msgs
-    ros-kinetic/actionlib
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/geometry_msgs
+    ros-kinetic/rospy
     ros-kinetic/std_msgs
     ros-kinetic/tf
+    ros-kinetic/yocs_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/roslint
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

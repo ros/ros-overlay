@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/smach_viewer"
-SRC_URI="https://github.com/jbohren/executive_smach_visualization-release/archive/release/indigo/smach_viewer/2.0.0-0.tar.gz"
+SRC_URI="https://github.com/jbohren/executive_smach_visualization-release/archive/release/indigo/smach_viewer/2.0.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/smach_msgs
     ros-indigo/smach_ros
     ros-indigo/xdot
-    ros-indigo/smach_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -9,17 +9,18 @@ SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospac
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    dev-python/catkin_pkg
     dev-libs/boost
     virtual/pkgconfig
+    dev-lang/python
+    dev-python/catkin_pkg
     dev-util/rosdep
     dev-libs/tinyxml2
-    dev-lang/python
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     dev-cpp/gtest
 "

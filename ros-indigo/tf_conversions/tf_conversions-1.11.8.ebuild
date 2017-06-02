@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="This package contains a set of conversion functions to convert
 common tf datatyp"
 HOMEPAGE="http://www.ros.org/wiki/tf_conversions"
-SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/indigo/tf_conversions/1.11.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/indigo/tf_conversions/1.11.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
+    ros-indigo/kdl_conversions
     ros-indigo/orocos_kdl
     ros-indigo/python_orocos_kdl
-    ros-indigo/kdl_conversions
     ros-indigo/tf
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

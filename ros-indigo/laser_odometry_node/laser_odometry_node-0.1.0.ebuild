@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="Node package of the laser_odometry project.
     It contains the ROS node that in"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/artivis/laser_odometry-release/archive/release/indigo/laser_odometry_node/0.1.0-0.tar.gz"
+SRC_URI="https://github.com/artivis/laser_odometry-release/archive/release/indigo/laser_odometry_node/0.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/topic_tools
+    ros-indigo/laser_odometry_core
     ros-indigo/pluginlib
     ros-indigo/roscpp
-    ros-indigo/laser_odometry_core
     ros-indigo/sensor_msgs
     ros-indigo/tf
+    ros-indigo/topic_tools
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

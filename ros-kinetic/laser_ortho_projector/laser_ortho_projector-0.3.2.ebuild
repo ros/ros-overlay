@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="The laser_ortho_projector package calculates orthogonal projections of LaserScan"
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
-SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_ortho_projector/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_ortho_projector/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nodelet
     ros-kinetic/geometry_msgs
     ros-kinetic/message_filters
+    ros-kinetic/nodelet
+    ros-kinetic/pcl_conversions
     ros-kinetic/pcl_ros
     ros-kinetic/roscpp
     ros-kinetic/sensor_msgs
     ros-kinetic/tf
-    ros-kinetic/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     sci-libs/pcl
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

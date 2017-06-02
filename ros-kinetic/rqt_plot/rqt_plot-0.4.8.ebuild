@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using dif"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph
-    ros-kinetic/qt_gui_py_common
-    ros-kinetic/rqt_gui
-    ros-kinetic/rostopic
-    ros-kinetic/qwt_dependency
-    ros-kinetic/std_msgs
     ros-kinetic/python_qt_binding
-    ros-kinetic/rqt_py_common
+    ros-kinetic/qt_gui_py_common
+    ros-kinetic/qwt_dependency
+    ros-kinetic/rosgraph
+    ros-kinetic/rostopic
+    ros-kinetic/rqt_gui
     ros-kinetic/rqt_gui_py
-    dev-python/rospkg
-    dev-python/numpy
+    ros-kinetic/rqt_py_common
+    ros-kinetic/std_msgs
     dev-python/matplotlib
+    dev-python/numpy
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

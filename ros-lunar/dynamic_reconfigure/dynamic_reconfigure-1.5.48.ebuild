@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_runtime
@@ -21,6 +21,7 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
     ros-lunar/roscpp_serialization
     ros-lunar/rostest

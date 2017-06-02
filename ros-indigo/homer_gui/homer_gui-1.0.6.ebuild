@@ -5,36 +5,37 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_gui/archive/release/indigo/homer_gui/1.0.6-0.tar.gz"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_gui/archive/release/indigo/homer_gui/1.0.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-v2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/or_nodes
     ros-indigo/geometry_msgs
     ros-indigo/homer_mapnav_msgs
-    ros-indigo/message_runtime
-    ros-indigo/roslib
-    ros-indigo/or_msgs
-    ros-indigo/or_libs
-    ros-indigo/robbie_architecture
     ros-indigo/homer_nav_libs
+    ros-indigo/message_runtime
+    ros-indigo/or_libs
+    ros-indigo/or_msgs
+    ros-indigo/or_nodes
+    ros-indigo/robbie_architecture
     ros-indigo/roscpp
+    ros-indigo/roslib
     ros-indigo/rviz
     ros-indigo/sensor_msgs
     ros-indigo/std_msgs
     ros-indigo/tf
-    sci-libs/pcl
-    dev-cpp/eigen
     dev-libs/boost
+    dev-cpp/eigen
     media-libs/opencv
+    sci-libs/pcl
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
-    ros-indigo/genmsg
+    ros-indigo/catkin
     ros-indigo/cv_bridge
+    ros-indigo/genmsg
+    ros-indigo/message_generation
     dev-qt/qtcore
 "
 
@@ -43,9 +44,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

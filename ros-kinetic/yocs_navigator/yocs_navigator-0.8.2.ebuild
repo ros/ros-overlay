@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Navigation module for robots"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_navigator/0.8.2-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_navigator/0.8.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/yocs_msgs
-    ros-kinetic/rospy
-    ros-kinetic/nav_msgs
     ros-kinetic/actionlib
-    ros-kinetic/yocs_math_toolkit
     ros-kinetic/move_base_msgs
+    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/rospy
     ros-kinetic/tf
+    ros-kinetic/yocs_math_toolkit
+    ros-kinetic/yocs_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="The pr2_calibration_controllers package contains the controllers
      used to br"
 HOMEPAGE="http://ros.org/wiki/pr2_calibration_controllers"
-SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/pr2_calibration_controllers/1.10.13-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/pr2_calibration_controllers/1.10.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/pr2_controller_interface
-    ros-indigo/roscpp
-    ros-indigo/pr2_mechanism_model
-    ros-indigo/std_msgs
-    ros-indigo/realtime_tools
     ros-indigo/pr2_mechanism_controllers
+    ros-indigo/pr2_mechanism_model
+    ros-indigo/realtime_tools
     ros-indigo/robot_mechanism_controllers
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

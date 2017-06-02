@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="This package provides starting scripts for Spur robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_bringup/0.2.6-0.tar.gz"
+SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_bringup/0.2.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/laser_filters
-    ros-indigo/joy
-    ros-indigo/urg_node
-    ros-indigo/spur_controller
     ros-indigo/dynamixel_controllers
+    ros-indigo/joy
+    ros-indigo/laser_filters
+    ros-indigo/spur_controller
     ros-indigo/teleop_twist_joy
     ros-indigo/teleop_twist_keyboard
+    ros-indigo/urg_node
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

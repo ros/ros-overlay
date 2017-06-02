@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="A collection of node(let)s that stream images from USB cameras (UVC)
      and pr"
 HOMEPAGE="http://ros.org/wiki/uvc_camera"
-SRC_URI="https://github.com/ktossell/camera_umd-release/archive/release/indigo/uvc_camera/0.2.4-0.tar.gz"
+SRC_URI="https://github.com/ktossell/camera_umd-release/archive/release/indigo/uvc_camera/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/camera_info_manager
-    ros-indigo/nodelet
     ros-indigo/image_transport
+    ros-indigo/nodelet
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
     media-libs/libv4l
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

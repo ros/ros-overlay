@@ -9,7 +9,7 @@ SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/rel
 
 LICENSE="Public Domain"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosemacs
@@ -18,6 +18,7 @@ RDEPEND="
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

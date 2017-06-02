@@ -10,16 +10,17 @@ SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/lu
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/gps_common
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
-    virtual/pkgconfig
     sci-geosciences/gpsd
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

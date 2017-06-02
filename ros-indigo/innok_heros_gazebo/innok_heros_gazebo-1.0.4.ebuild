@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="Innok Heros launch files for Gazebo6"
 HOMEPAGE="http://wiki.ros.org/Robots/Innok-Heros"
-SRC_URI="https://github.com/innokrobotics/innok_heros_gazebo-release/archive/release/indigo/innok_heros_gazebo/1.0.4-0.tar.gz"
+SRC_URI="https://github.com/innokrobotics/innok_heros_gazebo-release/archive/release/indigo/innok_heros_gazebo/1.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/robot_state_publisher
     ros-indigo/innok_heros_description
+    ros-indigo/robot_state_publisher
+    ros-indigo/rviz
     ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

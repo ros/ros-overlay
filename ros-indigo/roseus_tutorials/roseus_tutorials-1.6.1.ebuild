@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="roseus_tutorials"
 HOMEPAGE="http://ros.org/wiki/roseus_tutorials"
-SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/indigo/roseus_tutorials/1.6.1-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/indigo/roseus_tutorials/1.6.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/ar_track_alvar
     ros-indigo/checkerboard_detector
     ros-indigo/image_proc
-    ros-indigo/ar_track_alvar
-    ros-indigo/pr2eus
     ros-indigo/image_view2
-    ros-indigo/posedetection_msgs
-    ros-indigo/uvc_camera
-    ros-indigo/opencv_apps
-    ros-indigo/visualization_msgs
     ros-indigo/jsk_recognition_msgs
+    ros-indigo/opencv_apps
+    ros-indigo/posedetection_msgs
+    ros-indigo/pr2eus
+    ros-indigo/uvc_camera
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roseus
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

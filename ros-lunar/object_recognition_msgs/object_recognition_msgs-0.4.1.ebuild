@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/object_recognition_msgs-release/archive/rele
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib_msgs
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

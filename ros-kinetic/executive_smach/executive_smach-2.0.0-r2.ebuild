@@ -6,18 +6,19 @@ EAPI=6
 DESCRIPTION="This metapackage depends on the SMACH library and ROS SMACH integration
     pack"
 HOMEPAGE="http://ros.org/wiki/smach"
-SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/executive_smach/2.0.0-2.tar.gz"
+SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/executive_smach/2.0.0-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/smach
-    ros-kinetic/smach_ros
     ros-kinetic/smach_msgs
+    ros-kinetic/smach_ros
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

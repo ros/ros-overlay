@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://wiki.ros.org/base_local_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/voxel_grid
-    ros-kinetic/visualization_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/dynamic_reconfigure
     ros-kinetic/angles
-    ros-kinetic/nav_msgs
-    ros-kinetic/rospy
+    ros-kinetic/costmap_2d
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/geometry_msgs
     ros-kinetic/message_generation
     ros-kinetic/nav_core
+    ros-kinetic/nav_msgs
     ros-kinetic/pcl_ros
+    ros-kinetic/pluginlib
+    ros-kinetic/rosconsole
     ros-kinetic/roscpp
+    ros-kinetic/rospy
     ros-kinetic/std_msgs
     ros-kinetic/tf
-    ros-kinetic/rosconsole
-    ros-kinetic/costmap_2d
+    ros-kinetic/visualization_msgs
+    ros-kinetic/voxel_grid
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
     ros-kinetic/pcl_conversions
 "
@@ -40,9 +41,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

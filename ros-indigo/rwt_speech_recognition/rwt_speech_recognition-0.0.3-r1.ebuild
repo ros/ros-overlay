@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The rwt_speech_recognition package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/visualization_rwt-release/archive/release/indigo/rwt_speech_recognition/0.0.3-1.tar.gz"
+SRC_URI="https://github.com/tork-a/visualization_rwt-release/archive/release/indigo/rwt_speech_recognition/0.0.3-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rosbridge_server
     ros-indigo/roswww
     ros-indigo/rwt_utils_3rdparty
     ros-indigo/speech_recognition_msgs
-    ros-indigo/rosbridge_server
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

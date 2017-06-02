@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="driver for the KUKA youBot robot"
 HOMEPAGE="http://github.com/youbot/youbot_driver"
-SRC_URI="https://github.com/youbot-release/youbot_driver-release/archive/release/indigo/youbot_driver/1.1.0-0.tar.gz"
+SRC_URI="https://github.com/youbot-release/youbot_driver-release/archive/release/indigo/youbot_driver/1.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPLv2.1, modified BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/rosconsole
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

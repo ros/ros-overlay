@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optionally) magnetic "
 HOMEPAGE="http://www.mdpi.com/1424-8220/15/8/19302"
-SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/imu_complementary_filter/1.0.15-0.tar.gz"
+SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/imu_complementary_filter/1.0.15-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_filters
     ros-indigo/roscpp
-    ros-indigo/tf
-    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

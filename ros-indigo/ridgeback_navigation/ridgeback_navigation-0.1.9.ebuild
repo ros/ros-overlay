@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Launch files and code for autonomous navigation of the Ridgeback"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/ridgeback-release/archive/release/indigo/ridgeback_navigation/0.1.9-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/ridgeback-release/archive/release/indigo/ridgeback_navigation/0.1.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
     ros-indigo/amcl
     ros-indigo/gmapping
-    ros-indigo/urdf
     ros-indigo/map_server
     ros-indigo/move_base
+    ros-indigo/urdf
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="Messages used in PR2 hardware testing."
 HOMEPAGE="http://ros.org/wiki/pr2_self_test_msgs"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test_msgs/1.0.12-0.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test_msgs/1.0.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

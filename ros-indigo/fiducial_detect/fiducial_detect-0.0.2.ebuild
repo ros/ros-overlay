@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="The fiducials_ros package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/indigo/fiducial_detect/0.0.2-0.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/indigo/fiducial_detect/0.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/cv_bridge
     ros-indigo/image_transport
     ros-indigo/orocos_kdl
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
-    ros-indigo/tf2_geometry_msgs
     ros-indigo/tf2
+    ros-indigo/tf2_geometry_msgs
     ros-indigo/tf2_ros
     ros-indigo/visualization_msgs
-    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
-    ros-indigo/fiducial_pose
+    ros-indigo/catkin
     ros-indigo/fiducial_lib
+    ros-indigo/fiducial_pose
     media-libs/opencv
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

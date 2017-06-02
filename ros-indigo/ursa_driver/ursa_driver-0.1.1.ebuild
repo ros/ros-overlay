@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="ros package and c++ library to interface with the URSAII MCA"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mikehosmar/ursa_driver-release/archive/release/indigo/ursa_driver/0.1.1-0.tar.gz"
+SRC_URI="https://github.com/mikehosmar/ursa_driver-release/archive/release/indigo/ursa_driver/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="MIT"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_runtime
     ros-indigo/roscpp
+    ros-indigo/serial
     ros-indigo/std_msgs
     ros-indigo/std_srvs
-    ros-indigo/serial
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
     ros-indigo/roslaunch
 "
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

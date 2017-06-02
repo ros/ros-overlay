@@ -6,15 +6,16 @@ EAPI=6
 DESCRIPTION="A package containing several destruction scenarios for Gazebo,
     with the goal"
 HOMEPAGE="http://www.roboptics.pt"
-SRC_URI="https://github.com/roboptics/destruction_scenarios-release/archive/release/indigo/destruction_scenarios/1.0.0-0.tar.gz"
+SRC_URI="https://github.com/roboptics/destruction_scenarios-release/archive/release/indigo/destruction_scenarios/1.0.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,22 +6,23 @@ EAPI=6
 DESCRIPTION="Python ROS drivers for accessing an Axis camera's MJPG
     stream. Also provides"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/axis_camera-release/archive/release/indigo/axis_camera/0.2.0-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/axis_camera-release/archive/release/indigo/axis_camera/0.2.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/camera_info_manager_py
     ros-indigo/dynamic_reconfigure
-    ros-indigo/rospy
     ros-indigo/geometry_msgs
     ros-indigo/message_runtime
+    ros-indigo/rospy
     ros-indigo/sensor_msgs
     ros-indigo/tf
-    ros-indigo/camera_info_manager_py
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

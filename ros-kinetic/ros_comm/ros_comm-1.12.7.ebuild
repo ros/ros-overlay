@@ -5,37 +5,38 @@ EAPI=6
 
 DESCRIPTION="ROS communications-related packages, including core client libraries (roscpp, ro"
 HOMEPAGE="http://www.ros.org/wiki/ros_comm"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/ros_comm/1.12.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/ros_comm/1.12.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/topic_tools
-    ros-kinetic/rosservice
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/xmlrpcpp
-    ros-kinetic/rosnode
-    ros-kinetic/roslisp
-    ros-kinetic/rosmaster
-    ros-kinetic/rosbag
-    ros-kinetic/rostopic
-    ros-kinetic/rostest
-    ros-kinetic/roswtf
-    ros-kinetic/rospy
-    ros-kinetic/roslaunch
-    ros-kinetic/rosparam
-    ros-kinetic/roscpp
-    ros-kinetic/std_srvs
-    ros-kinetic/rosconsole
-    ros-kinetic/rosgraph
     ros-kinetic/message_filters
     ros-kinetic/ros
-    ros-kinetic/rosout
+    ros-kinetic/rosbag
+    ros-kinetic/rosconsole
+    ros-kinetic/roscpp
+    ros-kinetic/rosgraph
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/roslaunch
+    ros-kinetic/roslisp
+    ros-kinetic/rosmaster
     ros-kinetic/rosmsg
+    ros-kinetic/rosnode
+    ros-kinetic/rosout
+    ros-kinetic/rosparam
+    ros-kinetic/rospy
+    ros-kinetic/rosservice
+    ros-kinetic/rostest
+    ros-kinetic/rostopic
+    ros-kinetic/roswtf
+    ros-kinetic/std_srvs
+    ros-kinetic/topic_tools
+    ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -43,9 +44,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

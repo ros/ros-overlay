@@ -10,13 +10,14 @@ SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/lunar/bond
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_runtime
     ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

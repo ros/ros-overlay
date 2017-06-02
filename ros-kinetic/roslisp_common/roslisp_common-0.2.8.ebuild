@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="Common libraries to control ROS based robots. This stack contains
     an impleme"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/cl_tf
-    ros-kinetic/roslisp_utilities
-    ros-kinetic/cl_utils
-    ros-kinetic/cl_transforms
     ros-kinetic/actionlib_lisp
+    ros-kinetic/cl_tf
     ros-kinetic/cl_tf2
-    ros-kinetic/cl_urdf
+    ros-kinetic/cl_transforms
     ros-kinetic/cl_transforms_stamped
+    ros-kinetic/cl_urdf
+    ros-kinetic/cl_utils
+    ros-kinetic/roslisp_utilities
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

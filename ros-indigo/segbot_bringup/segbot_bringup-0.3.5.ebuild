@@ -6,27 +6,28 @@ EAPI=6
 DESCRIPTION="Contains launch files and runtime scripts necessary for running
     segbots in s"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_bringup/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_bringup/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/segway_rmp
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/xacro
     ros-indigo/bwi_logging
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/joint_state_publisher
+    ros-indigo/robot_state_publisher
+    ros-indigo/segbot_description
+    ros-indigo/segbot_sensors
+    ros-indigo/segway_rmp
     ros-indigo/smart_battery_msgs
     ros-indigo/stop_base
-    ros-indigo/robot_state_publisher
-    ros-indigo/segbot_sensors
     ros-indigo/tf
-    ros-indigo/joint_state_publisher
-    ros-indigo/segbot_description
+    ros-indigo/xacro
     dev-python/netifaces
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION="The jsk_demo_common package"
 HOMEPAGE="http://wiki.ros.org/jsk_demo_common"
-SRC_URI="https://github.com/tork-a/jsk_demos-release/archive/release/indigo/jsk_demo_common/0.0.4-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_demos-release/archive/release/indigo/jsk_demo_common/0.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_gripper_sensor_msgs
-    ros-indigo/pr2eus
-    ros-indigo/jsk_hark_msgs
-    ros-indigo/message_runtime
-    ros-indigo/jsk_perception
-    ros-indigo/pddl_planner
-    ros-indigo/pr2_navigation_self_filter
-    ros-indigo/jsk_maps
-    ros-indigo/roseus
-    ros-indigo/roseus_smach
-    ros-indigo/roseus_mongo
     ros-indigo/control_msgs
-    ros-indigo/robot_state_publisher
     ros-indigo/joint_state_publisher
+    ros-indigo/jsk_hark_msgs
+    ros-indigo/jsk_maps
+    ros-indigo/jsk_perception
+    ros-indigo/message_runtime
+    ros-indigo/pddl_planner
+    ros-indigo/pr2_gripper_sensor_msgs
+    ros-indigo/pr2_navigation_self_filter
+    ros-indigo/pr2eus
+    ros-indigo/robot_state_publisher
+    ros-indigo/roseus
+    ros-indigo/roseus_mongo
+    ros-indigo/roseus_smach
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

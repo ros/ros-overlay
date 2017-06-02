@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Main loop to run EtherCAT robot hardware."
 HOMEPAGE="http://www.shadowrobot.com/"
-SRC_URI="https://github.com/shadow-robot/ros_ethercat-release/archive/release/indigo/ros_ethercat_loop/0.3.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/ros_ethercat-release/archive/release/indigo/ros_ethercat_loop/0.3.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/ethercat_grant
     ros-indigo/controller_manager
-    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
-    ros-indigo/std_msgs
+    ros-indigo/diagnostic_updater
+    ros-indigo/ethercat_grant
+    ros-indigo/pluginlib
     ros-indigo/realtime_tools
     ros-indigo/ros_ethercat_hardware
     ros-indigo/ros_ethercat_model
-    ros-indigo/diagnostic_updater
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

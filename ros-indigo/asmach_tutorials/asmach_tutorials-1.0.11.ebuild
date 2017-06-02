@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="This package containes numerous examples of how to use SMACH. See the examples d"
 HOMEPAGE="http://ros.org/wiki/smach_tutorials"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/asmach_tutorials/1.0.11-0.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/asmach_tutorials/1.0.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
     ros-indigo/asmach
+    ros-indigo/rospy
     ros-indigo/smach_ros
     ros-indigo/turtlesim
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

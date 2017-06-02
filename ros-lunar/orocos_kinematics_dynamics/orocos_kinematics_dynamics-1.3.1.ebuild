@@ -10,13 +10,14 @@ SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/lunar/oroco
 
 LICENSE="LGPL"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/orocos_kdl
     ros-lunar/python_orocos_kdl
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

@@ -9,11 +9,12 @@ SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/lunar/rosboost_c
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

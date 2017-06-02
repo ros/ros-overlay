@@ -10,7 +10,7 @@ SRC_URI="https://github.com/orocos-gbp/orogen-release/archive/release/indigo/oro
 
 LICENSE="GPL v2 or later"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
@@ -20,10 +20,11 @@ RDEPEND="
     ros-indigo/typelib
     ros-indigo/utilrb
     dev-ruby/nokogiri
-    dev-lang/ruby
     dev-ruby/rake
+    dev-lang/ruby
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/nodelet_core-release/archive/release/lunar/n
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
@@ -20,6 +20,7 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

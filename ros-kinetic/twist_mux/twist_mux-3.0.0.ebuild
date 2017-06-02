@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="Twist multiplexer, which multiplex several velocity commands (topics) and
       "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/twist_mux-release/archive/release/kinetic/twist_mux/3.0.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/twist_mux-release/archive/release/kinetic/twist_mux/3.0.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="CC BY-NC-SA 4.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/diagnostic_updater
     ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
-    ros-kinetic/visualization_msgs
     ros-kinetic/twist_mux_msgs
-    ros-kinetic/diagnostic_updater
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/rostest
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

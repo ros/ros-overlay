@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_top-release/archive/release/lunar/rqt_to
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/python_qt_binding
@@ -19,6 +19,7 @@ RDEPEND="
     dev-python/psutil
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

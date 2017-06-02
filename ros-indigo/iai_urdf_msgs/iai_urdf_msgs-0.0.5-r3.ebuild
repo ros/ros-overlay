@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="Service definitions for manipulating the robot description."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_urdf_msgs/0.0.5-3.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_urdf_msgs/0.0.5-3.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_runtime
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

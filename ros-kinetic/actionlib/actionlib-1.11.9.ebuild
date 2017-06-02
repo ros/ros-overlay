@@ -6,22 +6,23 @@ EAPI=6
 DESCRIPTION="The actionlib stack provides a standardized interface for
     interfacing with p"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/message_runtime
     ros-kinetic/actionlib_msgs
+    ros-kinetic/message_runtime
     ros-kinetic/roscpp
-    ros-kinetic/std_msgs
+    ros-kinetic/rospy
     ros-kinetic/rostest
+    ros-kinetic/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="tf2_eigen"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_eigen/0.5.15-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_eigen/0.5.15-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/cmake_modules
     ros-indigo/geometry_msgs
     ros-indigo/tf2
-    ros-indigo/cmake_modules
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-cpp/eigen
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

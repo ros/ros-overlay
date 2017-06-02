@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="Creates CS/NodeAPI clearsilver documentation from source code files. Typical usa"
 HOMEPAGE="http://ros.org/wiki/roswiki_node"
-SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/roswiki_node/0.2.4-0.tar.gz"
+SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/roswiki_node/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

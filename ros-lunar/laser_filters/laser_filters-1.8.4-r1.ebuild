@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/laser_filters-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
@@ -23,6 +23,7 @@ RDEPEND="
     ros-lunar/tf
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
 "
 

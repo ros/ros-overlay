@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_msgs
@@ -23,6 +23,7 @@ RDEPEND="
     ros-lunar/rqt_robot_monitor
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

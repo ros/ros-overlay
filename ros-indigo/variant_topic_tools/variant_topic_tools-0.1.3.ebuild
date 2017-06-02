@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="Topic tools for treating messages as variant types."
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
-SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/indigo/variant_topic_tools/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/indigo/variant_topic_tools/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GNU Lesser General Public License (LGPL)"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/roscpp
-    ros-indigo/variant_msgs
     ros-indigo/roslib
+    ros-indigo/variant_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Localization Manager helps to localize robot's position with annotated informati"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/indigo/yocs_localization_manager/0.6.4-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/indigo/yocs_localization_manager/0.6.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/yocs_msgs
-    ros-indigo/rospy
+    ros-indigo/actionlib
     ros-indigo/ar_track_alvar
     ros-indigo/ar_track_alvar_msgs
-    ros-indigo/actionlib
+    ros-indigo/dynamic_reconfigure
     ros-indigo/geometry_msgs
+    ros-indigo/rospy
     ros-indigo/std_msgs
     ros-indigo/tf
+    ros-indigo/yocs_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslint
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

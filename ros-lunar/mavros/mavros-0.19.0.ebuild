@@ -9,7 +9,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_msgs
@@ -29,11 +29,12 @@ RDEPEND="
     ros-lunar/std_msgs
     ros-lunar/std_srvs
     ros-lunar/tf2_ros
-    dev-cpp/eigen
     dev-libs/boost
+    dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
     ros-lunar/angles
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="Visualization launchers and helpers for Jackal."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/indigo/jackal_viz/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/indigo/jackal_viz/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/jackal_description
@@ -17,6 +17,7 @@ RDEPEND="
     ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

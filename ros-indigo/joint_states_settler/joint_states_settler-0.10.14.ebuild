@@ -6,22 +6,23 @@ EAPI=6
 DESCRIPTION="Provides a node that reports how long a subset of joints has been
      settled. "
 HOMEPAGE="http://www.ros.org/wiki/joint_states_settler"
-SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/joint_states_settler/0.10.14-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/joint_states_settler/0.10.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp_serialization
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/settlerlib
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
     ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/roscpp_serialization
+    ros-indigo/settlerlib
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

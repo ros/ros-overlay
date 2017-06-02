@@ -10,7 +10,7 @@ SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/lunar/cv_camer
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/camera_info_manager
@@ -22,6 +22,7 @@ RDEPEND="
     ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/roslint
     ros-lunar/rostest
 "

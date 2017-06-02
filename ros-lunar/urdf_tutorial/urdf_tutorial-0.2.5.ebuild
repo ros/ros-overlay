@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/controller_manager
@@ -26,6 +26,7 @@ RDEPEND="
     ros-lunar/xacro
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/roslaunch
 "
 

@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="rqt_py_common provides common functionality for rqt plugins written in Python.
  "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/indigo/rqt_py_common/0.4.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/indigo/rqt_py_common/0.4.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/actionlib
-    ros-indigo/qt_gui
-    ros-indigo/roslib
-    ros-indigo/rostopic
-    ros-indigo/rosbag
-    ros-indigo/python_qt_binding
     ros-indigo/genpy
+    ros-indigo/python_qt_binding
+    ros-indigo/qt_gui
+    ros-indigo/rosbag
+    ros-indigo/roslib
+    ros-indigo/rospy
+    ros-indigo/rostopic
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/genmsg
     ros-indigo/std_msgs
 "
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

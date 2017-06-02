@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Bound incoming velocity messages according to robot velocity and acceleration li"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_velocity_smoother/0.8.2-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_velocity_smoother/0.8.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/ecl_threads
+    ros-kinetic/geometry_msgs
+    ros-kinetic/nav_msgs
     ros-kinetic/nodelet
     ros-kinetic/pluginlib
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/nav_msgs
-    ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
-    ros-kinetic/ecl_threads
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

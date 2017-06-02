@@ -9,7 +9,7 @@ SRC_URI="https://github.com/uos-gbp/sick_tim-release/archive/release/lunar/sick_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_updater
@@ -19,6 +19,7 @@ RDEPEND="
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     =dev-libs/libusb-1.0*
 "
 

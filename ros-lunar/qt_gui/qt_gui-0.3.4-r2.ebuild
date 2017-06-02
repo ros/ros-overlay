@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/python_qt_binding
@@ -17,8 +17,9 @@ RDEPEND="
     x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtcore
+    ros-lunar/catkin
     dev-python/PyQt5
+    dev-qt/qtcore
 "
 
 SLOT="0/0"

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_filters
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/tf
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Quickly load variables from rosparam with good command line error checking."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/rosparam_shortcuts-release/archive/release/indigo/rosparam_shortcuts/0.1.1-0.tar.gz"
+SRC_URI="https://github.com/davetcoleman/rosparam_shortcuts-release/archive/release/indigo/rosparam_shortcuts/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/roscpp
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
-    ros-indigo/roslint
     ros-indigo/eigen_conversions
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

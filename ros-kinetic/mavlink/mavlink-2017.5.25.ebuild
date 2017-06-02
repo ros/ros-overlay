@@ -6,17 +6,18 @@ EAPI=6
 DESCRIPTION="MAVLink message marshaling library.
   This package provides C-headers and C++11 "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.5.25-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.5.25-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
     dev-lang/python
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     dev-python/future
     dev-python/lxml
     dev-python/setuptools
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

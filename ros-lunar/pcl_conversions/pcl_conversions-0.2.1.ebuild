@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/pcl_conversions-release/archive/release/luna
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/pcl_msgs
@@ -20,6 +20,7 @@ RDEPEND="
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

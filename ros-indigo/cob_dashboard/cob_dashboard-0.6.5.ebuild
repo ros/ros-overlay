@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="cob_dashboard is a modified version of [[pr2_dashboard]]."
 HOMEPAGE="http://ros.org/wiki/cob_dashboard"
-SRC_URI="https://github.com/ipa320/cob_command_tools-release/archive/release/indigo/cob_dashboard/0.6.5-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_command_tools-release/archive/release/indigo/cob_dashboard/0.6.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_robot_dashboard
-    ros-indigo/rqt_gui
-    ros-indigo/rospy
     ros-indigo/cob_msgs
     ros-indigo/roslib
+    ros-indigo/rospy
+    ros-indigo/rqt_gui
+    ros-indigo/rqt_robot_dashboard
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="imu_pipeline"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/indigo/imu_pipeline/0.2.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/indigo/imu_pipeline/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPL )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "GPL" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/imu_transformer
     ros-indigo/imu_processors
+    ros-indigo/imu_transformer
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

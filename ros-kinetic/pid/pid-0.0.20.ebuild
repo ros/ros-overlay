@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Launch a PID control node."
 HOMEPAGE="http://wiki.ros.org/pid"
-SRC_URI="https://github.com/AndyZe/pid-release/archive/release/kinetic/pid/0.0.20-0.tar.gz"
+SRC_URI="https://github.com/AndyZe/pid-release/archive/release/kinetic/pid/0.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/diagnostic_updater
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/message_runtime
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/diagnostic_updater
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

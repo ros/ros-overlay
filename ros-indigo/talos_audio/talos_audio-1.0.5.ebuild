@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION="The audio package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/openrobotics-gbp/talos_audio-release/archive/release/indigo/talos_audio/1.0.5-0.tar.gz"
+SRC_URI="https://github.com/openrobotics-gbp/talos_audio-release/archive/release/indigo/talos_audio/1.0.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
+    ros-indigo/catkin
     ros-indigo/message_generation
     ros-indigo/message_runtime
     ros-indigo/roscpp
-    ros-indigo/catkin
+    ros-indigo/rospy
     ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
@@ -27,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

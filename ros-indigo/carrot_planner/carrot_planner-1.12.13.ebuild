@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to fol"
 HOMEPAGE="http://wiki.ros.org/carrot_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/carrot_planner/1.12.13-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/carrot_planner/1.12.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/nav_core
-    ros-indigo/roscpp
     ros-indigo/base_local_planner
-    ros-indigo/tf
     ros-indigo/costmap_2d
+    ros-indigo/nav_core
+    ros-indigo/pluginlib
+    ros-indigo/roscpp
+    ros-indigo/tf
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

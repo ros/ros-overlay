@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Single image rectification and color processing."
 HOMEPAGE="http://www.ros.org/wiki/image_proc"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_proc/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_proc/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nodelet
+    ros-kinetic/cv_bridge
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/image_geometry
     ros-kinetic/image_transport
+    ros-kinetic/nodelet
+    ros-kinetic/nodelet_topic_tools
     ros-kinetic/roscpp
     ros-kinetic/sensor_msgs
-    ros-kinetic/nodelet_topic_tools
-    ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-libs/boost
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

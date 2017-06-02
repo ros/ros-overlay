@@ -6,28 +6,29 @@ EAPI=6
 DESCRIPTION="A simple viewer for ROS image topics. Includes a specialized viewer
   for stereo"
 HOMEPAGE="http://www.ros.org/wiki/image_view"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_view/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_view/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/camera_calibration_parsers
+    ros-indigo/cv_bridge
     ros-indigo/dynamic_reconfigure
-    ros-indigo/nodelet
     ros-indigo/image_transport
     ros-indigo/message_filters
-    ros-indigo/camera_calibration_parsers
+    ros-indigo/nodelet
+    ros-indigo/rosconsole
     ros-indigo/roscpp
     ros-indigo/std_srvs
-    ros-indigo/rosconsole
-    ros-indigo/cv_bridge
     x11-libs/gtk+
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
-    ros-indigo/stereo_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/stereo_msgs
 "
 
 SLOT="0/0"
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

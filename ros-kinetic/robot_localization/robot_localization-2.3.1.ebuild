@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION="The robot_localization package provides nonlinear state estimation through senso"
 HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/release/kinetic/robot_localization/2.3.1-0.tar.gz"
+SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/release/kinetic/robot_localization/2.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cmake_modules
-    ros-kinetic/tf2
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
     ros-kinetic/geographic_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/message_filters
     ros-kinetic/message_runtime
+    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf2_geometry_msgs
     ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/tf2
+    ros-kinetic/tf2_geometry_msgs
     ros-kinetic/tf2_ros
-    ros-kinetic/diagnostic_updater
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/roslint
+    ros-kinetic/catkin
     ros-kinetic/message_generation
+    ros-kinetic/roslint
     dev-python/catkin_pkg
 "
 
@@ -39,9 +40,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

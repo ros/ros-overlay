@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/lunar/tr
 
 LICENSE="Modified BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/pluginlib
@@ -17,6 +17,7 @@ RDEPEND="
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/hardware_interface
 "

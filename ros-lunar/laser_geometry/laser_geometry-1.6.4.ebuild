@@ -10,18 +10,19 @@ SRC_URI="https://github.com/ros-gbp/laser_geometry-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
     ros-lunar/tf
-    dev-cpp/eigen
     dev-libs/boost
+    dev-cpp/eigen
     dev-python/numpy
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

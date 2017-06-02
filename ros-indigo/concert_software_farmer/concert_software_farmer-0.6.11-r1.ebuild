@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Concert Software farm is to manage software being utilised across services"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_software_farmer/0.6.11-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_software_farmer/0.6.11-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/rocon_std_msgs
+    ros-indigo/concert_msgs
+    ros-indigo/genpy
     ros-indigo/rocon_python_comms
     ros-indigo/rocon_python_utils
-    ros-indigo/genpy
-    ros-indigo/concert_msgs
+    ros-indigo/rocon_std_msgs
+    ros-indigo/rospy
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-python/catkin_pkg
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

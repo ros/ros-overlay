@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/luna
 
 LICENSE="BSD,LGPL,Apache 2.0"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/gazebo_dev
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/gazebo_ros
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

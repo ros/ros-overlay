@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="This stack holds packages for IPA default environment configuration."
 HOMEPAGE="http://ros.org/wiki/cob_environments"
-SRC_URI="https://github.com/ipa320/cob_environments-release/archive/release/indigo/cob_environments/0.6.4-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_environments-release/archive/release/indigo/cob_environments/0.6.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/cob_default_env_config
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

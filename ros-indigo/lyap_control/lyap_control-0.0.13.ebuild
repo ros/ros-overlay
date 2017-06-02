@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="A node to control nonlinear dynamic systems"
 HOMEPAGE="http://wiki.ros.org/lyap_control"
-SRC_URI="https://github.com/AndyZe/lyap_control-release/archive/release/indigo/lyap_control/0.0.13-0.tar.gz"
+SRC_URI="https://github.com/AndyZe/lyap_control-release/archive/release/indigo/lyap_control/0.0.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/message_runtime
     ros-indigo/roscpp
     ros-indigo/rospy
-    ros-indigo/message_runtime
     ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

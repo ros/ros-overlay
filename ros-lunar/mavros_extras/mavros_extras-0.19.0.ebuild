@@ -8,7 +8,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_extras/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -22,6 +22,7 @@ RDEPEND="
     ros-lunar/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

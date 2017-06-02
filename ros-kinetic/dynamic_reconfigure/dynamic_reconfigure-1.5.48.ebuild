@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.48-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.48-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
     ros-kinetic/rospy
     ros-kinetic/rosservice
-    ros-kinetic/message_runtime
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
     ros-kinetic/roscpp_serialization
     ros-kinetic/rostest
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

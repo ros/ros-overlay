@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="ROSH related packages. This is a temporary stack that is expected to go away aft"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OSUrobotics/rosh_robot_plugins-release/archive/release/indigo/rosh_robot_plugins/1.0.2-0.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/rosh_robot_plugins-release/archive/release/indigo/rosh_robot_plugins/1.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/rosh_common
@@ -17,6 +17,7 @@ RDEPEND="
     ros-indigo/rosh_robot
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

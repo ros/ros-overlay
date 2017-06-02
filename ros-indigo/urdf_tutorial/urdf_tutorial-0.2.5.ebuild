@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="This package contains a number of URDF tutorials."
 HOMEPAGE="http://ros.org/wiki/urdf_tutorial"
-SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/indigo/urdf_tutorial/0.2.5-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/indigo/urdf_tutorial/0.2.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/position_controllers
     ros-indigo/controller_manager
+    ros-indigo/diff_drive_controller
     ros-indigo/gazebo_ros
-    ros-indigo/xacro
     ros-indigo/gazebo_ros_control
     ros-indigo/joint_state_controller
-    ros-indigo/urdf
-    ros-indigo/diff_drive_controller
+    ros-indigo/joint_state_publisher
+    ros-indigo/position_controllers
+    ros-indigo/robot_state_publisher
     ros-indigo/rqt_robot_steering
     ros-indigo/rviz
-    ros-indigo/robot_state_publisher
-    ros-indigo/joint_state_publisher
+    ros-indigo/urdf
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

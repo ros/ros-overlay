@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -19,10 +19,12 @@ RDEPEND="
     ros-lunar/sensor_msgs
     ros-lunar/shape_msgs
     ros-lunar/tf
-    dev-libs/assimp
     dev-lang/python
+    dev-libs/assimp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"

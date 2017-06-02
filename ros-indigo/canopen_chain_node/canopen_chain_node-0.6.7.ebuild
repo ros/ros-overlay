@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="ROS node base implementation for CANopen chains with support for management serv"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/canopen_chain_node/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/canopen_chain_node/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/message_runtime
-    ros-indigo/roslib
-    ros-indigo/socketcan_interface
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/std_srvs
     ros-indigo/canopen_master
     ros-indigo/diagnostic_updater
+    ros-indigo/message_runtime
+    ros-indigo/pluginlib
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/socketcan_interface
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -9,16 +9,17 @@ SRC_URI="https://github.com/orocos-gbp/utilrb-release/archive/release/indigo/uti
 
 LICENSE="CeCILL-B (BSD-like)"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
-    dev-lang/ruby
+    dev-ruby/facets
     dev-ruby/hoe
     sys-libs/readline
-    dev-ruby/facets
+    dev-lang/ruby
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     sys-libs/readline
     dev-ruby/rake-compiler
 "

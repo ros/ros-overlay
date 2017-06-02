@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/kdl_parser-release/archive/release/lunar/kdl
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/orocos_kdl
@@ -18,7 +18,9 @@ RDEPEND="
     ros-lunar/urdfdom_py
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"

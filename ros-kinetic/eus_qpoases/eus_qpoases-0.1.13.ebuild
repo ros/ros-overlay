@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="eus_qpoases"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qpoases/0.1.13-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qpoases/0.1.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache License 2.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
     ros-kinetic/euslisp
+    ros-kinetic/rostest
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-vcs/subversion
 "
 
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

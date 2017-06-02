@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The laser_scan_sparsifier takes in a LaserScan message and sparsifies it."
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
-SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_scan_sparsifier/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_scan_sparsifier/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/sensor_msgs
     ros-kinetic/nodelet
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

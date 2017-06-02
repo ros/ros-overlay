@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ethz-asl/ethzasl_xsens_driver-release/archive/releas
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_msgs
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/tf
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

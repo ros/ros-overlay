@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/geometry_tutorials-release/archive/release/l
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -21,6 +21,7 @@ RDEPEND="
     ros-lunar/turtlesim
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

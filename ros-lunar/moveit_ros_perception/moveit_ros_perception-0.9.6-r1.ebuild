@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cv_bridge
@@ -25,11 +25,12 @@ RDEPEND="
     ros-lunar/tf
     ros-lunar/tf_conversions
     ros-lunar/urdf
+    media-libs/freeglut
     media-libs/glew
     media-libs/mesa
-    media-libs/freeglut
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     dev-cpp/eigen
 "
 

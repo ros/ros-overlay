@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol. Inclu"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/microstrain_3dmgx2_imu-release/archive/release/indigo/microstrain_3dmgx2_imu/1.5.12-2.tar.gz"
+SRC_URI="https://github.com/ros-gbp/microstrain_3dmgx2_imu-release/archive/release/indigo/microstrain_3dmgx2_imu/1.5.12-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/self_test
-    ros-indigo/std_srvs
+    ros-indigo/diagnostic_updater
     ros-indigo/message_runtime
     ros-indigo/roscpp
-    ros-indigo/std_msgs
+    ros-indigo/self_test
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
     ros-indigo/tf
-    ros-indigo/diagnostic_updater
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

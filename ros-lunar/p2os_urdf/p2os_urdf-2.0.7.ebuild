@@ -9,7 +9,7 @@ SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/p2os_urdf
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/urdf
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

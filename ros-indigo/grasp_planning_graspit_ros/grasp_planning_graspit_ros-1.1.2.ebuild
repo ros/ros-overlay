@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="ROS services for the grasp_planning_graspit package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/grasp_planning_graspit_ros/1.1.2-0.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/grasp_planning_graspit_ros/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
-    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/grasp_planning_graspit
+    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/manipulation_msgs
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslint
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

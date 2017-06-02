@@ -5,37 +5,38 @@ EAPI=6
 
 DESCRIPTION="jsk_topic_tools"
 HOMEPAGE="http://ros.org/wiki/jsk_topic_tools"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/jsk_topic_tools/2.2.3-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/jsk_topic_tools/2.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/topic_tools
-    ros-indigo/std_msgs
-    ros-indigo/rosnode
+    ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
     ros-indigo/dynamic_tf_publisher
+    ros-indigo/eigen_conversions
+    ros-indigo/geometry_msgs
     ros-indigo/image_transport
     ros-indigo/message_runtime
-    ros-indigo/sound_play
-    ros-indigo/rostopic
-    ros-indigo/eigen_conversions
-    ros-indigo/diagnostic_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/nodelet
-    ros-indigo/roslaunch
     ros-indigo/roscpp
+    ros-indigo/roslaunch
+    ros-indigo/rosnode
+    ros-indigo/rostime
+    ros-indigo/rostopic
+    ros-indigo/sensor_msgs
+    ros-indigo/sound_play
+    ros-indigo/std_msgs
     ros-indigo/std_srvs
     ros-indigo/tf
-    ros-indigo/diagnostic_updater
-    ros-indigo/geometry_msgs
-    ros-indigo/rostime
-    media-libs/opencv
+    ros-indigo/topic_tools
     dev-python/numpy
+    media-libs/opencv
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
     ros-indigo/rostest
 "
@@ -45,9 +46,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

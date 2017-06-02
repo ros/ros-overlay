@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="ROS device driver for Velodyne HDL-64E, and HDL-32 LIDARs."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-drivers-gbp/velodyne-release/archive/release/indigo/velodyne_driver/1.2.0-0.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/velodyne-release/archive/release/indigo/velodyne_driver/1.2.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/diagnostic_updater
     ros-indigo/nodelet
     ros-indigo/pluginlib
-    ros-indigo/velodyne_msgs
     ros-indigo/roscpp
     ros-indigo/tf
-    ros-indigo/diagnostic_updater
+    ros-indigo/velodyne_msgs
     net-libs/libpcap
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
     ros-indigo/rostest
 "
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

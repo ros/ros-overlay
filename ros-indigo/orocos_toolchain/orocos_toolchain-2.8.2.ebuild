@@ -5,21 +5,21 @@ EAPI=6
 
 DESCRIPTION="This package provides the entire orocos_toolchain"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/orocos-gbp/orocos_toolchain-release/archive/release/indigo/orocos_toolchain/2.8.2-0.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/orocos_toolchain-release/archive/release/indigo/orocos_toolchain/2.8.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL v2 + linking exception, LGPL v2, CeCILL-B, GPL v2 or later,"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rtt
-    ros-indigo/orogen
-    ros-indigo/log4cpp
-    ros-indigo/utilrb
-    ros-indigo/rtt_typelib
     ros-indigo/catkin
+    ros-indigo/log4cpp
     ros-indigo/ocl
+    ros-indigo/orogen
+    ros-indigo/rtt
+    ros-indigo/rtt_typelib
     ros-indigo/typelib
+    ros-indigo/utilrb
 "
 DEPEND="${RDEPEND}
 "
@@ -29,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="OMPL is a free sampling-based motion planning library."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.1-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     dev-libs/boost
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     dev-util/cmake
 "
 
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

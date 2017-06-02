@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="Tools related to the Mobile Robot Programming Toolkit (MRPT).
     Refer to http:"
 HOMEPAGE="http://wiki.ros.org/mrpt_navigation"
-SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_navigation/0.1.18-0.tar.gz"
+SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_navigation/0.1.18-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/mrpt_reactivenav2d
-    ros-kinetic/mrpt_local_obstacles
-    ros-kinetic/mrpt_msgs
-    ros-kinetic/mrpt_map
-    ros-kinetic/mrpt_tutorials
     ros-kinetic/mrpt_bridge
+    ros-kinetic/mrpt_local_obstacles
     ros-kinetic/mrpt_localization
+    ros-kinetic/mrpt_map
+    ros-kinetic/mrpt_msgs
     ros-kinetic/mrpt_rawlog
+    ros-kinetic/mrpt_reactivenav2d
+    ros-kinetic/mrpt_tutorials
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

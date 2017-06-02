@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="All packages related to the graspit"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/graspit_tools/1.1.2-0.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/graspit_tools/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jaco_graspit_sample
-    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/grasp_planning_graspit
-    ros-indigo/urdf2graspit
+    ros-indigo/grasp_planning_graspit_msgs
     ros-indigo/grasp_planning_graspit_ros
+    ros-indigo/jaco_graspit_sample
+    ros-indigo/urdf2graspit
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

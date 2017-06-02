@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="The core set of turtlebot 'app manager' apps are defined in this package."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_rapps/2.3.7-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_rapps/2.3.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_follower
-    ros-indigo/topic_tools
-    ros-indigo/kobuki_auto_docking
-    ros-indigo/warehouse_ros
-    ros-indigo/turtlebot_navigation
     ros-indigo/compressed_image_transport
-    ros-indigo/turtlebot_teleop
-    ros-indigo/world_canvas_server
-    ros-indigo/tf
+    ros-indigo/kobuki_auto_docking
     ros-indigo/robot_pose_publisher
+    ros-indigo/tf
+    ros-indigo/topic_tools
     ros-indigo/turtlebot_bringup
+    ros-indigo/turtlebot_follower
+    ros-indigo/turtlebot_navigation
+    ros-indigo/turtlebot_teleop
+    ros-indigo/warehouse_ros
+    ros-indigo/world_canvas_server
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

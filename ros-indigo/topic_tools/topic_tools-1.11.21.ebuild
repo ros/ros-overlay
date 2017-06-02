@@ -6,25 +6,26 @@ EAPI=6
 DESCRIPTION="Tools for directing, throttling, selecting, and otherwise messing with
     ROS t"
 HOMEPAGE="http://ros.org/wiki/topic_tools"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/topic_tools/1.11.21-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/topic_tools/1.11.21-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/message_runtime
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/rostime
     ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/rostime
+    ros-indigo/std_msgs
     ros-indigo/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cpp_common
-    ros-indigo/rosunit
     ros-indigo/message_generation
     ros-indigo/rostest
+    ros-indigo/rosunit
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

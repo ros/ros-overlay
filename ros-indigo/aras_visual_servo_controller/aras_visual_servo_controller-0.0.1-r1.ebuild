@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The aras_visual_servo package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/babaksit/aras_visual_servo-release/archive/release/indigo/aras_visual_servo_controller/0.0.1-1.tar.gz"
+SRC_URI="https://github.com/babaksit/aras_visual_servo-release/archive/release/indigo/aras_visual_servo_controller/0.0.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/cv_bridge
     ros-indigo/image_transport
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

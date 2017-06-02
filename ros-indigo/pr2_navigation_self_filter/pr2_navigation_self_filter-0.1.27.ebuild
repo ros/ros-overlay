@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Filters the robot's body out of point clouds."
 HOMEPAGE="http://ros.org/wiki/pr2_navigation_self_filter"
-SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/pr2_navigation_self_filter/0.1.27-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/pr2_navigation_self_filter/0.1.27-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
     ros-indigo/filters
     ros-indigo/pcl_ros
-    ros-indigo/urdf
+    ros-indigo/resource_retriever
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/tf
-    ros-indigo/resource_retriever
-    sci-physics/bullet
+    ros-indigo/urdf
+    ros-indigo/visualization_msgs
     media-libs/assimp
+    sci-physics/bullet
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     media-libs/assimp
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

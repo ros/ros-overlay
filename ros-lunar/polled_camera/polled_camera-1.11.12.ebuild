@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/image_common-release/archive/release/lunar/p
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/image_transport
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

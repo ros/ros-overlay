@@ -9,19 +9,20 @@ SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/lunar/octovi
 
 LICENSE="GPLv2"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
     ros-lunar/octomap
-    dev-qt/qtgui
     x11-libs/libQGLViewer
     dev-qt/qtopengl
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
+    x11-libs/libQGLViewer
     dev-qt/qtcore
     dev-qt/qtopengl
-    x11-libs/libQGLViewer
 "
 
 SLOT="0/0"

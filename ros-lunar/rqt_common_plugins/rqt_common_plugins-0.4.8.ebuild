@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_common_plugins-release/archive/release/l
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rqt_action
@@ -35,6 +35,7 @@ RDEPEND="
     ros-lunar/rqt_web
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

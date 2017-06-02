@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The marker_msgs package contains messages usable to setup a marker/fiducial syst"
 HOMEPAGE="http://wiki.ros.org/marker_msgs"
-SRC_URI="https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.5-0.tar.gz"
+SRC_URI="https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

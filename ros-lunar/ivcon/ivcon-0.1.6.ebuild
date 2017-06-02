@@ -11,11 +11,12 @@ SRC_URI="https://github.com/ros-gbp/ivcon-release/archive/release/lunar/ivcon/0.
 
 LICENSE="GPL"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

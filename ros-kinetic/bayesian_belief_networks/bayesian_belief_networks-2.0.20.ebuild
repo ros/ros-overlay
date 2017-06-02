@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The bayesian_belief_networks package form https://github.com/eBay/bayesian-belie"
 HOMEPAGE="https://github.com/eBay/bayesian-belief-networks"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache License, Version 2.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
     ros-kinetic/rospy
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
     ros-kinetic/mk
     dev-vcs/git
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Move the pr2 arm using inverse kinematics"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_arm_move_ik/0.0.5-4.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_arm_move_ik/0.0.5-4.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_common_action_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/tf
+    ros-indigo/geometry_msgs
+    ros-indigo/pr2_common_action_msgs
     ros-indigo/pr2_controllers_msgs
+    ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

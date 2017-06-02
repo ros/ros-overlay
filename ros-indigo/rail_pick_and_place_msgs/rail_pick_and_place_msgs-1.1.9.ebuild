@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Messages and Services for RAIL Pick and Place"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/rail_pick_and_place-release/archive/release/indigo/rail_pick_and_place_msgs/1.1.9-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/rail_pick_and_place-release/archive/release/indigo/rail_pick_and_place_msgs/1.1.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/geometry_msgs
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/rail_manipulation_msgs
     ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

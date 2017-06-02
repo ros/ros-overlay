@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Metapackage for CARL (Crowdsourcing for Autonomous Robot Learning) Robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/carl_bot-release/archive/release/indigo/carl_bot/0.0.34-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/carl_bot-release/archive/release/indigo/carl_bot/0.0.34-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/carl_bringup
-    ros-indigo/carl_interactive_manipulation
-    ros-indigo/carl_teleop
-    ros-indigo/carl_phidgets
-    ros-indigo/carl_tools
-    ros-indigo/carl_dynamixel
     ros-indigo/carl_description
+    ros-indigo/carl_dynamixel
+    ros-indigo/carl_interactive_manipulation
+    ros-indigo/carl_phidgets
+    ros-indigo/carl_teleop
+    ros-indigo/carl_tools
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

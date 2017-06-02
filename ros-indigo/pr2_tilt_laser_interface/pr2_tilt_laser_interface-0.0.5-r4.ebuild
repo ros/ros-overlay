@@ -6,25 +6,26 @@ EAPI=6
 DESCRIPTION="Provides a set of tools/actions for manipulating the pr2's tilting
     laser. Si"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_tilt_laser_interface/0.0.5-4.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_tilt_laser_interface/0.0.5-4.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/actionlib
-    ros-indigo/laser_geometry
     ros-indigo/actionlib_msgs
-    ros-indigo/pcl_ros
+    ros-indigo/laser_geometry
     ros-indigo/message_runtime
-    ros-indigo/roscpp
     ros-indigo/pcl_conversions
-    ros-indigo/sensor_msgs
+    ros-indigo/pcl_ros
     ros-indigo/pr2_msgs
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

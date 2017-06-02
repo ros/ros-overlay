@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="A framework for writing drivers that helps with runtime reconfiguration, diagnos"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/driver_common-release/archive/release/indigo/driver_base/1.6.8-2.tar.gz"
+SRC_URI="https://github.com/ros-gbp/driver_common-release/archive/release/indigo/driver_base/1.6.8-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/diagnostic_updater
     ros-indigo/dynamic_reconfigure
-    ros-indigo/self_test
     ros-indigo/message_runtime
     ros-indigo/roscpp
+    ros-indigo/self_test
     ros-indigo/std_msgs
-    ros-indigo/diagnostic_updater
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

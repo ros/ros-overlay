@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="A GUI plugin for interpolating between grasps."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-visualization-release/archive/release/indigo/sr_gui_grasp_controller/1.3.1-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-visualization-release/archive/release/indigo/sr_gui_grasp_controller/1.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_hand
-    ros-indigo/rqt_gui_py
-    ros-indigo/rqt_gui
-    ros-indigo/sr_visualization_icons
     ros-indigo/rospy
+    ros-indigo/rqt_gui
+    ros-indigo/rqt_gui_py
+    ros-indigo/sr_hand
+    ros-indigo/sr_visualization_icons
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

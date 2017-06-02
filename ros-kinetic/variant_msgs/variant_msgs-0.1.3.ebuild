@@ -6,17 +6,18 @@ EAPI=6
 DESCRIPTION="Variant messages are designed to accommodate the information content
     of any "
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
-SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_msgs/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_msgs/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GNU Lesser General Public License (LGPL)"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/std_msgs
     ros-kinetic/message_runtime
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

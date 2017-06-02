@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The static_tf package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wu-robotics/static_tf_release/archive/release/indigo/static_tf/0.0.1-1.tar.gz"
+SRC_URI="https://github.com/wu-robotics/static_tf_release/archive/release/indigo/static_tf/0.0.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/tf2_ros
-    ros-indigo/tf
     ros-indigo/rospy
+    ros-indigo/tf
+    ros-indigo/tf2_ros
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

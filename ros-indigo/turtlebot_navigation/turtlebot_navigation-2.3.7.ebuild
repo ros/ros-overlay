@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="turtlebot_navigation"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_navigation/2.3.7-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_navigation/2.3.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/turtlebot_bringup
     ros-indigo/amcl
-    ros-indigo/gmapping
     ros-indigo/dwa_local_planner
-    ros-indigo/roscpp
+    ros-indigo/gmapping
     ros-indigo/map_server
+    ros-indigo/move_base
+    ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/tf
-    ros-indigo/move_base
+    ros-indigo/turtlebot_bringup
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

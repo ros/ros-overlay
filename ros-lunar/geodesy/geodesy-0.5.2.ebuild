@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geographic_msgs
@@ -22,6 +22,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
     ros-lunar/angles
+    ros-lunar/catkin
     dev-python/catkin_pkg
 "
 

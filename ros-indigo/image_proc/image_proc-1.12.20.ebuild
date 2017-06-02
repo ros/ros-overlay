@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Single image rectification and color processing."
 HOMEPAGE="http://www.ros.org/wiki/image_proc"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_proc/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_proc/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nodelet
+    ros-indigo/cv_bridge
     ros-indigo/dynamic_reconfigure
     ros-indigo/image_geometry
     ros-indigo/image_transport
+    ros-indigo/nodelet
+    ros-indigo/nodelet_topic_tools
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
-    ros-indigo/nodelet_topic_tools
-    ros-indigo/cv_bridge
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-libs/boost
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

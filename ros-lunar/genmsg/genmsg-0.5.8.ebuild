@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/genmsg-release/archive/release/lunar/genmsg/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin

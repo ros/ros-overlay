@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="The pr2_teleop package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_teleop/0.5.21-1.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_teleop/0.5.21-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/topic_tools
-    ros-indigo/rospy
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
+    ros-indigo/geometry_msgs
+    ros-indigo/pr2_controllers_msgs
     ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/pr2_controllers_msgs
+    ros-indigo/topic_tools
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

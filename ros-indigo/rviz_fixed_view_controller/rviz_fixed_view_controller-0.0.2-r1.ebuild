@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="A simple rviz view controller that follows a TF frame."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rviz_fixed_view_controller-release/archive/release/indigo/rviz_fixed_view_controller/0.0.2-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rviz_fixed_view_controller-release/archive/release/indigo/rviz_fixed_view_controller/0.0.2-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

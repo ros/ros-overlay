@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="Generic framework for robot controls."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/indigo/robot_controllers_interface/0.5.2-0.tar.gz"
+SRC_URI="https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/indigo/robot_controllers_interface/0.5.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/robot_controllers_msgs
     ros-indigo/actionlib
     ros-indigo/pluginlib
+    ros-indigo/robot_controllers_msgs
     ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

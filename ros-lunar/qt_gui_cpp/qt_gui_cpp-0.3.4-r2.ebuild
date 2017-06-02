@@ -9,18 +9,19 @@ SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/pluginlib
     ros-lunar/qt_gui
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/python_qt_binding
-    dev-libs/tinyxml
-    dev-qt/qtcore
     virtual/pkgconfig
     dev-qt/qtcore
+    dev-qt/qtcore
+    dev-libs/tinyxml
 "
 
 SLOT="0/0"

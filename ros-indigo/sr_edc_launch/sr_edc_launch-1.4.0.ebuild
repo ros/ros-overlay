@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Package with launch files to start the needed nodes for the Shadow Robot EtherCA"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-ethercat-release/archive/release/indigo/sr_edc_launch/1.4.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-ethercat-release/archive/release/indigo/sr_edc_launch/1.4.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_ethercat_hand_config
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
+    ros-indigo/ros_ethercat
+    ros-indigo/roscpp
     ros-indigo/self_test
     ros-indigo/sr_description
-    ros-indigo/xacro
+    ros-indigo/sr_ethercat_hand_config
     ros-indigo/sr_mechanism_controllers
-    ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/diagnostic_msgs
-    ros-indigo/ros_ethercat
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/diagnostic_updater
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

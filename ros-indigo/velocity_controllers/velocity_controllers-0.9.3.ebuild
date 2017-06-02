@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="velocity_controllers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/indigo/velocity_controllers/0.9.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/indigo/velocity_controllers/0.9.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/angles
-    ros-indigo/forward_command_controller
-    ros-indigo/urdf
-    ros-indigo/realtime_tools
     ros-indigo/control_msgs
-    ros-indigo/controller_interface
     ros-indigo/control_toolbox
+    ros-indigo/controller_interface
+    ros-indigo/forward_command_controller
+    ros-indigo/realtime_tools
+    ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

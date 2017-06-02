@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="Tools for operating on shape messages."
 HOMEPAGE="http://www.ros.org/wiki/shape_tools"
-SRC_URI="https://github.com/ros-gbp/shape_tools-release/archive/release/indigo/shape_tools/0.2.1-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/shape_tools-release/archive/release/indigo/shape_tools/0.2.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/shape_msgs
 "
 
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

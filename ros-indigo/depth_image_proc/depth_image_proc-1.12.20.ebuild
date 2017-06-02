@@ -6,27 +6,28 @@ EAPI=6
 DESCRIPTION="Contains nodelets for processing depth images such as those
      produced by Ope"
 HOMEPAGE="http://ros.org/wiki/depth_image_proc"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/depth_image_proc/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/depth_image_proc/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nodelet
+    ros-indigo/cv_bridge
+    ros-indigo/eigen_conversions
     ros-indigo/image_geometry
     ros-indigo/image_transport
-    ros-indigo/tf2_ros
-    ros-indigo/eigen_conversions
+    ros-indigo/nodelet
     ros-indigo/tf2
-    ros-indigo/cv_bridge
+    ros-indigo/tf2_ros
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/message_filters
-    ros-indigo/stereo_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/stereo_msgs
 "
 
 SLOT="0/0"
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

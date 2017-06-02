@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Node/nodelet combination to transform sensor_msgs::Imu data from one frame into "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/kinetic/imu_transformer/0.2.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/kinetic/imu_transformer/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/tf2
-    ros-kinetic/nodelet
-    ros-kinetic/tf2_sensor_msgs
-    ros-kinetic/topic_tools
-    ros-kinetic/roslaunch
     ros-kinetic/geometry_msgs
     ros-kinetic/message_filters
+    ros-kinetic/nodelet
     ros-kinetic/roscpp
+    ros-kinetic/roslaunch
     ros-kinetic/sensor_msgs
-    ros-kinetic/tf2_ros
     ros-kinetic/tf
+    ros-kinetic/tf2
+    ros-kinetic/tf2_ros
+    ros-kinetic/tf2_sensor_msgs
+    ros-kinetic/topic_tools
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

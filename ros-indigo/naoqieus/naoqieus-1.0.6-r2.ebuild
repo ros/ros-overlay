@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The naoqieus package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/naoqieus/1.0.6-2.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/naoqieus/1.0.6-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2eus
-    ros-indigo/naoqi_driver
-    ros-indigo/nao_interaction_msgs
     ros-indigo/diagnostic_aggregator
+    ros-indigo/nao_interaction_msgs
+    ros-indigo/naoqi_driver
+    ros-indigo/pr2eus
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/euscollada
     ros-indigo/rostest
 "
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

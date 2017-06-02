@@ -5,30 +5,31 @@ EAPI=6
 
 DESCRIPTION="Hardware interface for YuMi, for use in roscontrol"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/yumi_hw/0.0.4-0.tar.gz"
+SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/yumi_hw/0.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/cmake_modules
-    ros-indigo/joint_limits_interface
+    ros-indigo/control_toolbox
+    ros-indigo/controller_interface
     ros-indigo/controller_manager
+    ros-indigo/hardware_interface
+    ros-indigo/joint_limits_interface
+    ros-indigo/kdl_parser
     ros-indigo/message_runtime
+    ros-indigo/realtime_tools
     ros-indigo/roscpp
+    ros-indigo/simple_message
+    ros-indigo/std_msgs
+    ros-indigo/tf
     ros-indigo/transmission_interface
     ros-indigo/urdf
-    ros-indigo/control_toolbox
-    ros-indigo/realtime_tools
-    ros-indigo/std_msgs
-    ros-indigo/simple_message
-    ros-indigo/tf
-    ros-indigo/kdl_parser
-    ros-indigo/hardware_interface
-    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -37,9 +38,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

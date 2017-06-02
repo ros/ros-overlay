@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/moveit_msgs-release/archive/release/lunar/mo
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib_msgs
@@ -23,6 +23,7 @@ RDEPEND="
     ros-lunar/trajectory_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

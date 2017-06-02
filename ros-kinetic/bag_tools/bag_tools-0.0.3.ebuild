@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="ROS tools and scripts related to bagfiles"
 HOMEPAGE="http://ros.org/wiki/bag_tools"
-SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/bag_tools/0.0.3-0.tar.gz"
+SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/bag_tools/0.0.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/stereo_image_proc
+    ros-kinetic/camera_calibration_parsers
+    ros-kinetic/cv_bridge
     ros-kinetic/image_geometry
-    ros-kinetic/rospy
     ros-kinetic/image_proc
     ros-kinetic/message_filters
-    ros-kinetic/camera_calibration_parsers
     ros-kinetic/rosbag
+    ros-kinetic/rospy
     ros-kinetic/sensor_msgs
-    ros-kinetic/cv_bridge
+    ros-kinetic/stereo_image_proc
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

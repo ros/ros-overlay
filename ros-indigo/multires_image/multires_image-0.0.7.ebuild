@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION="multires_image"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/multires_image/0.0.7-0.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/multires_image/0.0.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/rospy
     ros-indigo/gps_common
-    ros-indigo/swri_math_util
     ros-indigo/mapviz
+    ros-indigo/pluginlib
     ros-indigo/roscpp
+    ros-indigo/rospy
+    ros-indigo/swri_math_util
     ros-indigo/swri_transform_util
     ros-indigo/swri_yaml_util
     ros-indigo/tf
-    dev-qt/qtopengl
-    dev-qt/qtcore
     media-libs/opencv
+    dev-qt/qtcore
+    dev-qt/qtopengl
 "
 DEPEND="${RDEPEND}
-    dev-qt/qtopengl
+    ros-indigo/catkin
     dev-qt/qtcore
+    dev-qt/qtopengl
 "
 
 SLOT="0/0"
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Sets up the gazebo robot manager as a service to assist in spawning/killing robo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/concert_services-release/archive/release/indigo/concert_service_gazebo/0.1.12-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/concert_services-release/archive/release/indigo/concert_service_gazebo/0.1.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_gateway_utils
-    ros-indigo/rospy
-    ros-indigo/rocon_std_msgs
-    ros-indigo/turtlebot_gazebo
-    ros-indigo/rocon_python_utils
-    ros-indigo/roslib
     ros-indigo/gateway_msgs
     ros-indigo/kobuki_gazebo
     ros-indigo/rocon_console
+    ros-indigo/rocon_gateway_utils
     ros-indigo/rocon_launch
+    ros-indigo/rocon_python_utils
+    ros-indigo/rocon_std_msgs
+    ros-indigo/roslib
+    ros-indigo/rospy
+    ros-indigo/turtlebot_gazebo
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

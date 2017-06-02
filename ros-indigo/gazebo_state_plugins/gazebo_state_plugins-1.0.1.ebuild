@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Offers topics and services related to the state of the world in Gazebo."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/gazebo-pkgs-release/archive/release/indigo/gazebo_state_plugins/1.0.1-0.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/gazebo-pkgs-release/archive/release/indigo/gazebo_state_plugins/1.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
+    ros-indigo/eigen_conversions
     ros-indigo/gazebo_ros
-    ros-indigo/geometry_msgs
-    ros-indigo/object_msgs
     ros-indigo/gazebo_world_plugin_loader
+    ros-indigo/geometry_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/object_msgs
     ros-indigo/object_msgs_tools
     ros-indigo/roscpp
-    ros-indigo/eigen_conversions
-    ros-indigo/std_msgs
     ros-indigo/shape_msgs
+    ros-indigo/std_msgs
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

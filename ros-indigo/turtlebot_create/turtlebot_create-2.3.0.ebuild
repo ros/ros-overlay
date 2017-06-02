@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="Catkin metapackage for the turtlebot_create stack"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_create-release/archive/release/indigo/turtlebot_create/2.3.0-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_create-release/archive/release/indigo/turtlebot_create/2.3.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/create_node
     ros-indigo/create_description
     ros-indigo/create_driver
+    ros-indigo/create_node
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="The rwt_image_view package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/visualization_rwt-release/archive/release/indigo/rwt_image_view/0.0.3-1.tar.gz"
+SRC_URI="https://github.com/tork-a/visualization_rwt-release/archive/release/indigo/rwt_image_view/0.0.3-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rwt_utils_3rdparty
+    ros-indigo/message_runtime
     ros-indigo/mjpeg_server
     ros-indigo/rospy
     ros-indigo/roswww
-    ros-indigo/message_runtime
+    ros-indigo/rwt_utils_3rdparty
     ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

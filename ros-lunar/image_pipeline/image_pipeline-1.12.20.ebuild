@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/camera_calibration
@@ -21,6 +21,7 @@ RDEPEND="
     ros-lunar/stereo_image_proc
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

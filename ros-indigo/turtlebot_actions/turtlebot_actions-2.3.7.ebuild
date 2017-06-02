@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="turtlebot_actions provides several basic actionlib actions for the TurtleBot."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_actions/2.3.7-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/indigo/turtlebot_actions/2.3.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib
+    ros-indigo/actionlib_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/geometry_msgs
     ros-indigo/image_geometry
     ros-indigo/image_transport
-    ros-indigo/geometry_msgs
-    ros-indigo/actionlib
     ros-indigo/message_runtime
-    ros-indigo/actionlib_msgs
     ros-indigo/roscpp
     ros-indigo/tf
-    ros-indigo/cv_bridge
     ros-indigo/turtlebot_bringup
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/message_generation
 "
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

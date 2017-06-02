@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="sr_example is an example of a real package interfaced with our robot. Please ref"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_example/1.4.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_example/1.4.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/control_msgs
-    ros-indigo/sr_robot_msgs
-    ros-indigo/rospy
     ros-indigo/roscpp
-    ros-indigo/std_msgs
+    ros-indigo/rospy
     ros-indigo/sensor_msgs
+    ros-indigo/sr_robot_msgs
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

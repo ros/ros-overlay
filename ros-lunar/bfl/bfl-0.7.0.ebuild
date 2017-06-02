@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/bfl-release/archive/release/lunar/bfl/0.7.0-
 
 LICENSE="LGPL"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
@@ -18,6 +18,7 @@ RDEPEND="
     dev-util/cppunit
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

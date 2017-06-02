@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Allows manual control of a TF through the keyboard"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/tf_keyboard_cal-release/archive/release/indigo/tf_keyboard_cal/0.1.1-0.tar.gz"
+SRC_URI="https://github.com/davetcoleman/tf_keyboard_cal-release/archive/release/indigo/tf_keyboard_cal/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
+    ros-indigo/keyboard
     ros-indigo/roscpp
     ros-indigo/rosparam_shortcuts
-    ros-indigo/keyboard
     ros-indigo/tf
+    ros-indigo/tf2
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/roslib
 "
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

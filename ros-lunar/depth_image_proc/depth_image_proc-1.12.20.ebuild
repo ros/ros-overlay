@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cv_bridge
@@ -23,6 +23,7 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/message_filters
     ros-lunar/sensor_msgs

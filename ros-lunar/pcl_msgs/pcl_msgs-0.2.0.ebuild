@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/pcl_msgs-release/archive/release/lunar/pcl_m
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/message_runtime
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

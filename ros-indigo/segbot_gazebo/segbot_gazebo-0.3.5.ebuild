@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="bwi_gazebo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_gazebo/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_gazebo/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/fake_localization
-    ros-indigo/segbot_navigation
-    ros-indigo/gazebo_ros
-    ros-indigo/segbot_bringup
     ros-indigo/gazebo_plugins
+    ros-indigo/gazebo_ros
     ros-indigo/map_server
     ros-indigo/rviz
+    ros-indigo/segbot_bringup
     ros-indigo/segbot_description
+    ros-indigo/segbot_navigation
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

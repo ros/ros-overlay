@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Controller for a four wheel steering mobile base."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Romea/romea_controllers-release/archive/release/indigo/four_wheel_steering_controller/0.2.2-0.tar.gz"
+SRC_URI="https://github.com/Romea/romea_controllers-release/archive/release/indigo/four_wheel_steering_controller/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf_vehicle_kinematic
-    ros-indigo/nav_msgs
+    ros-indigo/controller_interface
     ros-indigo/four_wheel_steering_msgs
+    ros-indigo/nav_msgs
     ros-indigo/realtime_tools
     ros-indigo/tf
-    ros-indigo/controller_interface
+    ros-indigo/urdf_vehicle_kinematic
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

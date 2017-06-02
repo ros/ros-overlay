@@ -5,34 +5,35 @@ EAPI=6
 
 DESCRIPTION="Face detection in images."
 HOMEPAGE="http://ros.org/wiki/face_detector"
-SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.0.10-1.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.0.10-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_geometry
-    ros-kinetic/rospy
-    ros-kinetic/image_transport
-    ros-kinetic/geometry_msgs
     ros-kinetic/actionlib
-    ros-kinetic/people_msgs
     ros-kinetic/actionlib_msgs
-    ros-kinetic/stereo_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
-    ros-kinetic/rosbag
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/tf
-    ros-kinetic/openni_launch
     ros-kinetic/cv_bridge
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/geometry_msgs
+    ros-kinetic/image_geometry
+    ros-kinetic/image_transport
+    ros-kinetic/message_runtime
+    ros-kinetic/openni_launch
+    ros-kinetic/people_msgs
+    ros-kinetic/rosbag
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/stereo_msgs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -41,9 +42,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

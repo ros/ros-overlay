@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rospy
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/genpy
@@ -18,11 +18,12 @@ RDEPEND="
     ros-lunar/rosgraph_msgs
     ros-lunar/roslib
     ros-lunar/std_msgs
+    dev-python/numpy
     dev-python/rospkg
     dev-python/pyyaml
-    dev-python/numpy
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

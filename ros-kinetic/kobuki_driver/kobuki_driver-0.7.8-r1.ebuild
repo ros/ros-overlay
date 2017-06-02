@@ -6,22 +6,23 @@ EAPI=6
 DESCRIPTION="C++ driver library for Kobuki:
     Pure C++ driver library for Kobuki. This is f"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_driver/0.7.8-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_driver/0.7.8-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/ecl_command_line
     ros-kinetic/ecl_converters
-    ros-kinetic/ecl_sigslots
-    ros-kinetic/ecl_mobile_robot
     ros-kinetic/ecl_devices
     ros-kinetic/ecl_geometry
+    ros-kinetic/ecl_mobile_robot
+    ros-kinetic/ecl_sigslots
     ros-kinetic/ecl_time
-    ros-kinetic/ecl_command_line
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/ecl_build
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

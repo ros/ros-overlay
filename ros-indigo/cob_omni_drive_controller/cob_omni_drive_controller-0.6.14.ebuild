@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION="The cob_omni_drive_controller package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_omni_drive_controller/0.6.14-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_omni_drive_controller/0.6.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/angles
-    ros-indigo/nav_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/std_srvs
-    ros-indigo/message_runtime
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/std_msgs
-    ros-indigo/realtime_tools
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/hardware_interface
     ros-indigo/controller_interface
+    ros-indigo/geometry_msgs
+    ros-indigo/hardware_interface
+    ros-indigo/message_runtime
+    ros-indigo/nav_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
+    ros-indigo/urdf
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

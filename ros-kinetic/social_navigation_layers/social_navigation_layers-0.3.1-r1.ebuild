@@ -6,19 +6,20 @@ EAPI=6
 DESCRIPTION="Plugin-based layers for the navigation stack that 
   implement various social na"
 HOMEPAGE="http://ros.org/wiki/social_navigation_layers"
-SRC_URI="https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz"
+SRC_URI="https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/roscpp
-    ros-kinetic/people_msgs
     ros-kinetic/costmap_2d
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/people_msgs
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

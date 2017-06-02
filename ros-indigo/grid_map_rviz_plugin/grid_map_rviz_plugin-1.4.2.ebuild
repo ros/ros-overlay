@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="RViz plugin for displaying grid map messages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_rviz_plugin/1.4.2-0.tar.gz"
+SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_rviz_plugin/1.4.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/grid_map_msgs
@@ -20,6 +20,7 @@ RDEPEND="
     dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-qt/qtcore
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,19 +6,20 @@ EAPI=6
 DESCRIPTION="A ROS node that controls a Linksys access point with
     a Linksys WRT610n-compa"
 HOMEPAGE="http://ros.org/wiki/linksys_access_point"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/linksys_access_point/1.0.11-0.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/linksys_access_point/1.0.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
     ros-indigo/access_point_control
+    ros-indigo/dynamic_reconfigure
     ros-indigo/ieee80211_channels
     ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

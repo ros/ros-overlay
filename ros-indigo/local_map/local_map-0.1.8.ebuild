@@ -6,24 +6,25 @@ EAPI=6
 DESCRIPTION="The local_map package
 	  The local_map package takes as input a LaserScan messag"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_utilities-release/archive/release/indigo/local_map/0.1.8-0.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_utilities-release/archive/release/indigo/local_map/0.1.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/map_ray_caster
     ros-indigo/angles
-    ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/message_runtime
     ros-indigo/lama_msgs
+    ros-indigo/map_ray_caster
+    ros-indigo/message_runtime
+    ros-indigo/nav_msgs
     ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/tf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

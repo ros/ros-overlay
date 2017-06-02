@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="A multi-roslaunch (for single and multi-master systems)."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_launch/0.3.2-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_launch/0.3.2-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosbash
     ros-kinetic/rocon_console
     ros-kinetic/rocon_python_utils
-    ros-kinetic/rospy
+    ros-kinetic/rosbash
     ros-kinetic/roslaunch
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-python/catkin_pkg
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

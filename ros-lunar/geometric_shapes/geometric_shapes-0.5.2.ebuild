@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/geometric_shapes-release/archive/release/lun
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/eigen_stl_containers
@@ -18,13 +18,14 @@ RDEPEND="
     ros-lunar/resource_retriever
     ros-lunar/shape_msgs
     ros-lunar/visualization_msgs
-    dev-cpp/eigen
-    media-libs/qhull
-    dev-libs/console_bridge
     media-libs/assimp
     dev-libs/boost
+    dev-cpp/eigen
+    dev-libs/console_bridge
+    media-libs/qhull
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     media-libs/assimp
     virtual/pkgconfig
 "

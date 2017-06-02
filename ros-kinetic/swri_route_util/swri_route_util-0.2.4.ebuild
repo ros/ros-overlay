@@ -6,18 +6,19 @@ EAPI=6
 DESCRIPTION="This library provides functionality to simplify working with the
     navigation "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_route_util/0.2.4-0.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_route_util/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
     ros-kinetic/marti_nav_msgs
+    ros-kinetic/roscpp
     ros-kinetic/swri_transform_util
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

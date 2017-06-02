@@ -5,33 +5,34 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/jsk_robot/1.0.6-2.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/jsk_robot/1.0.6-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/jsk_201504_miraikan
-    ros-indigo/roseus_remote
-    ros-indigo/naoeus
-    ros-indigo/jsk_nao_startup
-    ros-indigo/jsk_robot_startup
-    ros-indigo/jsk_baxter_startup
-    ros-indigo/naoqieus
-    ros-indigo/jsk_pr2_calibration
-    ros-indigo/peppereus
-    ros-indigo/jsk_fetch_startup
-    ros-indigo/jsk_baxter_desktop
-    ros-indigo/fetcheus
     ros-indigo/baxtereus
-    ros-indigo/jsk_pr2_startup
-    ros-indigo/jsk_pepper_startup
-    ros-indigo/pr2_base_trajectory_action
-    ros-indigo/jsk_robot_utils
+    ros-indigo/fetcheus
+    ros-indigo/jsk_201504_miraikan
+    ros-indigo/jsk_baxter_desktop
+    ros-indigo/jsk_baxter_startup
     ros-indigo/jsk_baxter_web
+    ros-indigo/jsk_fetch_startup
+    ros-indigo/jsk_nao_startup
+    ros-indigo/jsk_pepper_startup
+    ros-indigo/jsk_pr2_calibration
+    ros-indigo/jsk_pr2_startup
+    ros-indigo/jsk_robot_startup
+    ros-indigo/jsk_robot_utils
+    ros-indigo/naoeus
+    ros-indigo/naoqieus
+    ros-indigo/peppereus
+    ros-indigo/pr2_base_trajectory_action
+    ros-indigo/roseus_remote
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -39,9 +40,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

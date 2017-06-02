@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="A friendly library for parsing HTTP request arguments, with built-in support for"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/webargs-rosrelease/archive/release/indigo/webargs/1.3.4-8.tar.gz"
+SRC_URI="https://github.com/asmodehn/webargs-rosrelease/archive/release/indigo/webargs/1.3.4-8.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/marshmallow
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/catkin_pip
 "
 
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -9,11 +9,12 @@ SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/p2os_doc/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

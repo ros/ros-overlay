@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="opt_camera"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/opt_camera/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/opt_camera/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/rospack
-    ros-indigo/image_proc
     ros-indigo/camera_calibration_parsers
     ros-indigo/compressed_image_transport
-    ros-indigo/sensor_msgs
     ros-indigo/cv_bridge
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/image_proc
+    ros-indigo/rospack
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslang
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

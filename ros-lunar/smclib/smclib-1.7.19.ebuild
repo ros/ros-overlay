@@ -10,11 +10,12 @@ SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/lunar/smcl
 
 LICENSE="Mozilla Public License Version 1.1"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

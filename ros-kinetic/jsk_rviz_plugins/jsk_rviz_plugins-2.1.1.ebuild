@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION="The jsk_rviz_plugins package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rviz_plugins/2.1.1-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rviz_plugins/2.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_geometry
-    ros-kinetic/message_generation
-    ros-kinetic/geometry_msgs
-    ros-kinetic/jsk_recognition_utils
-    ros-kinetic/jsk_hark_msgs
     ros-kinetic/cv_bridge
-    ros-kinetic/people_msgs
-    ros-kinetic/urdfdom_py
-    ros-kinetic/jsk_gui_msgs
-    ros-kinetic/view_controller_msgs
     ros-kinetic/diagnostic_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/rviz
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/geometry_msgs
+    ros-kinetic/image_geometry
     ros-kinetic/jsk_footstep_msgs
+    ros-kinetic/jsk_gui_msgs
+    ros-kinetic/jsk_hark_msgs
+    ros-kinetic/jsk_recognition_msgs
+    ros-kinetic/jsk_recognition_utils
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/message_generation
+    ros-kinetic/people_msgs
+    ros-kinetic/rviz
+    ros-kinetic/std_msgs
+    ros-kinetic/urdfdom_py
+    ros-kinetic/view_controller_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/mk
     ros-kinetic/rosbuild
 "
@@ -40,9 +41,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

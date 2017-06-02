@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Open source driver for the SICK Visionary-T 3D TOF camera."
 HOMEPAGE="http://wiki.ros.org/sick_visionary_t_driver"
-SRC_URI="https://github.com/SICKAG/sick_visionary_t-release/archive/release/indigo/sick_visionary_t_driver/0.0.3-1.tar.gz"
+SRC_URI="https://github.com/SICKAG/sick_visionary_t-release/archive/release/indigo/sick_visionary_t_driver/0.0.3-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/roslaunch
     ros-indigo/cv_bridge
     ros-indigo/image_transport
+    ros-indigo/roscpp
+    ros-indigo/roslaunch
+    ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="The advanced_robotics package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/vislab-tecnico-lisboa/ekf_localization-release/archive/release/indigo/ekf_localization/0.0.2-0.tar.gz"
+SRC_URI="https://github.com/vislab-tecnico-lisboa/ekf_localization-release/archive/release/indigo/ekf_localization/0.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/tf_conversions
-    ros-indigo/nav_msgs
-    ros-indigo/laser_geometry
-    ros-indigo/pcl_ros
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
     ros-indigo/bfl
+    ros-indigo/laser_geometry
+    ros-indigo/nav_msgs
+    ros-indigo/pcl_ros
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/tf_conversions
+    ros-indigo/visualization_msgs
     media-libs/opencv
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roscpp
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

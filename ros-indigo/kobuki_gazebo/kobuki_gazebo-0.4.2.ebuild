@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Kobuki simulation for Gazebo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/indigo/kobuki_gazebo/0.4.2-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/indigo/kobuki_gazebo/0.4.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_ros
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/kobuki_description
-    ros-indigo/kobuki_random_walker
     ros-indigo/gazebo_plugins
+    ros-indigo/gazebo_ros
+    ros-indigo/kobuki_description
     ros-indigo/kobuki_gazebo_plugins
+    ros-indigo/kobuki_random_walker
     ros-indigo/kobuki_safety_controller
     ros-indigo/robot_state_publisher
+    ros-indigo/yocs_cmd_vel_mux
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

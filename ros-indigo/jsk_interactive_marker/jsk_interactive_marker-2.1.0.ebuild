@@ -5,43 +5,44 @@ EAPI=6
 
 DESCRIPTION="jsk interactive markers"
 HOMEPAGE="http://ros.org/wiki/interactive_marker"
-SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/indigo/jsk_interactive_marker/2.1.0-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/indigo/jsk_interactive_marker/2.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/dynamic_tf_publisher
+    ros-indigo/eigen_conversions
+    ros-indigo/geometry_msgs
+    ros-indigo/interactive_markers
+    ros-indigo/jsk_footstep_msgs
+    ros-indigo/jsk_recognition_msgs
+    ros-indigo/jsk_rviz_plugins
+    ros-indigo/jsk_topic_tools
+    ros-indigo/message_filters
+    ros-indigo/message_runtime
+    ros-indigo/moveit_msgs
+    ros-indigo/pr2eus_moveit
+    ros-indigo/roscpp
+    ros-indigo/roseus
     ros-indigo/roslib
     ros-indigo/rviz
-    ros-indigo/dynamic_tf_publisher
-    ros-indigo/tf_conversions
-    ros-indigo/moveit_msgs
-    ros-indigo/actionlib
-    ros-indigo/message_runtime
-    ros-indigo/roseus
-    ros-indigo/eigen_conversions
-    ros-indigo/jsk_topic_tools
     ros-indigo/sensor_msgs
-    ros-indigo/pr2eus_moveit
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/jsk_rviz_plugins
-    ros-indigo/urdf
-    ros-indigo/roscpp
-    ros-indigo/visualization_msgs
-    ros-indigo/jsk_recognition_msgs
     ros-indigo/tf
-    ros-indigo/jsk_footstep_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/message_filters
-    ros-indigo/interactive_markers
-    dev-cpp/yaml-cpp
+    ros-indigo/tf_conversions
+    ros-indigo/urdf
+    ros-indigo/visualization_msgs
     dev-libs/tinyxml
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
+    ros-indigo/cmake_modules
     ros-indigo/message_generation
     ros-indigo/mk
-    ros-indigo/cmake_modules
     ros-indigo/rosbuild
 "
 
@@ -50,9 +51,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

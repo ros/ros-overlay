@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -27,6 +27,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
     ros-lunar/angles
+    ros-lunar/catkin
     ros-lunar/message_generation
     ros-lunar/rostest
 "

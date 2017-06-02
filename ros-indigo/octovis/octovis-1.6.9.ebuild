@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="octovis is visualization tool for the OctoMap library based on Qt and libQGLView"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/indigo/octovis/1.6.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/indigo/octovis/1.6.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
     ros-indigo/octomap
     x11-libs/libQGLViewer
-    dev-qt/qtgui
     dev-qt/qtopengl
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     x11-libs/libQGLViewer
     dev-qt/qtcore
     dev-qt/qtopengl
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

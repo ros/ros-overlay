@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Autonomous Exploration package for a Turtulebot equiped with RGBD Sensor(Kinect,"
 HOMEPAGE="http://wiki.ros.org/turtlebot_exploration_3d"
-SRC_URI="https://github.com/RobustFieldAutonomyLab/turtlebot_exploration_3d-release/archive/release/indigo/turtlebot_exploration_3d/0.0.9-0.tar.gz"
+SRC_URI="https://github.com/RobustFieldAutonomyLab/turtlebot_exploration_3d-release/archive/release/indigo/turtlebot_exploration_3d/0.0.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/actionlib
     ros-indigo/move_base_msgs
-    ros-indigo/visualization_msgs
     ros-indigo/octomap_rviz_plugins
     ros-indigo/turtlebot_navigation
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/octomap_msgs
+    ros-indigo/catkin
     ros-indigo/geometry_msgs
+    ros-indigo/octomap_msgs
+    ros-indigo/octomap_ros
     ros-indigo/pcl_ros
     ros-indigo/roscpp
     ros-indigo/std_msgs
-    ros-indigo/octomap_ros
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

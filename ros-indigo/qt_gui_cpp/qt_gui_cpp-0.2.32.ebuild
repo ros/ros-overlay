@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/indigo/qt_gui_cpp/0.2.32-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/indigo/qt_gui_cpp/0.2.32-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/pluginlib
     ros-indigo/qt_gui
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/python_qt_binding
-    virtual/pkgconfig
     dev-qt/qtcore
+    virtual/pkgconfig
     dev-qt/qtcore
     dev-libs/tinyxml
 "
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

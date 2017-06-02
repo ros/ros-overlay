@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="The VRPN is a library and set of servers that interfaces with virtual-reality sy"
 HOMEPAGE="https://github.com/vrpn/vrpn/wiki"
-SRC_URI="https://github.com/clearpath-gbp/vrpn-release/archive/release/kinetic/vrpn/0.7.33-9.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/vrpn-release/archive/release/kinetic/vrpn/0.7.33-9.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSL1.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

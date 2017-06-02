@@ -6,26 +6,27 @@ EAPI=6
 DESCRIPTION="This is a set of tools for recording from and playing back to ROS
     topics.  I"
 HOMEPAGE="http://ros.org/wiki/rosbag"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/rosbag/1.11.21-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/rosbag/1.11.21-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/topic_tools
-    ros-indigo/rosbag_storage
-    ros-indigo/rospy
-    ros-indigo/roslib
-    ros-indigo/roscpp
     ros-indigo/genmsg
     ros-indigo/genpy
+    ros-indigo/rosbag_storage
     ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/rospy
+    ros-indigo/topic_tools
     ros-indigo/xmlrpcpp
-    dev-python/rospkg
     dev-libs/boost
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cpp_common
     ros-indigo/roscpp_serialization
     dev-python/pillow
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

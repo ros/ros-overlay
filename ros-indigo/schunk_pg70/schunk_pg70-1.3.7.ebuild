@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="Xacro model and RS232 control node for basic communication with Schunk PG70 grip"
 HOMEPAGE="http://www.smartroboticsys.eu/"
-SRC_URI="https://github.com/SmartRoboticSystems/schunk_grippers-release/archive/release/indigo/schunk_pg70/1.3.7-0.tar.gz"
+SRC_URI="https://github.com/SmartRoboticSystems/schunk_grippers-release/archive/release/indigo/schunk_pg70/1.3.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/roscpp
-    ros-indigo/tf
     ros-indigo/serial
+    ros-indigo/tf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

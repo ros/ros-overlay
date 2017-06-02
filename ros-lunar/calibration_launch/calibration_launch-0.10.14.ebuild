@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/lunar/ca
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/interval_intersection
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/urdfdom_py
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

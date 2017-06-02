@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="This package is basically an OpenSceneGraph (OSG) adaptation of the Interactive "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/indigo/osg_interactive_markers/1.0.2-0.tar.gz"
+SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/indigo/osg_interactive_markers/1.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/osg_markers
-    ros-indigo/roscpp
-    ros-indigo/osg_utils
-    ros-indigo/visualization_msgs
-    ros-indigo/tf
     ros-indigo/interactive_markers
+    ros-indigo/osg_markers
+    ros-indigo/osg_utils
+    ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/visualization_msgs
     dev-games/openscenegraph
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

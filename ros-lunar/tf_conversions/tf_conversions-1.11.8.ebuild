@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf_co
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -21,6 +21,7 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 
