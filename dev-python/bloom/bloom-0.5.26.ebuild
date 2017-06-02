@@ -1,20 +1,12 @@
-EAPI=5
+EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
-
-SCM=""
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="git-r3"
-	EGIT_REPO_URI="https://github.com/ros-infrastructure/bloom"
-fi
 
 inherit distutils-r1
 
-DESCRIPTION="Commands to manage several local SCM repositories for ROS"
+DESCRIPTION="Package release manager for ROS."
 HOMEPAGE="http://wiki.ros.org/wstool"
-SRC_URI="http://download.ros.org/downloads/${PN}/${P}.tar.gz
-		http://github.com/ros-infrastructure/bloom/archive/${PV}.tar.gz -> ${P}.tar.gz
-		"
-KEYWORDS="~amd64 ~x86 ~arm"
+SRC_URI="http://github.com/ros-infrastructure/bloom/archive/${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="amd64 x86 arm ~arm64"
 
 LICENSE="BSD"
 SLOT="0"
