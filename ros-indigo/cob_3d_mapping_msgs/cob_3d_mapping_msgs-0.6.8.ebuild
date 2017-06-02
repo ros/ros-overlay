@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Message, service and action definitions for environment perception."
 HOMEPAGE="http://wiki.ros.org/cob_3d_mapping_msgs"
-SRC_URI="https://github.com/ipa320/cob_perception_common-release/archive/release/indigo/cob_3d_mapping_msgs/0.6.8-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_perception_common-release/archive/release/indigo/cob_3d_mapping_msgs/0.6.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
-    ros-indigo/cob_object_detection_msgs
     ros-indigo/actionlib_msgs
+    ros-indigo/cob_object_detection_msgs
+    ros-indigo/geometry_msgs
     ros-indigo/message_runtime
-    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

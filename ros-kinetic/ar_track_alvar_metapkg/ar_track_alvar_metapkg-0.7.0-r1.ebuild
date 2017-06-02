@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="Meta package for ROS ar_track_alvar related packages."
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
-SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/kinetic/ar_track_alvar_metapkg/0.7.0-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/kinetic/ar_track_alvar_metapkg/0.7.0-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/ar_track_alvar
     ros-kinetic/ar_track_alvar_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

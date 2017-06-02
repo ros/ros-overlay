@@ -9,16 +9,17 @@ SRC_URI="https://github.com/ros-gbp/pluginlib-release/archive/release/lunar/plug
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/class_loader
     ros-lunar/rosconsole
     ros-lunar/roslib
-    dev-libs/tinyxml
     dev-libs/boost
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

@@ -6,27 +6,28 @@ EAPI=6
 DESCRIPTION="Package which helps generate the MoveIt! moveit_msgs/CollisionObject
     message"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/moveit_object_handling/1.0.0-0.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/moveit_object_handling/1.0.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/gazebo_test_tools
     ros-indigo/convenience_ros_functions
-    ros-indigo/moveit_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/shape_tools
-    ros-indigo/object_msgs
-    ros-indigo/roscpp
     ros-indigo/eigen_conversions
     ros-indigo/gazebo_state_plugins
-    ros-indigo/std_msgs
+    ros-indigo/gazebo_test_tools
+    ros-indigo/geometry_msgs
+    ros-indigo/moveit_msgs
+    ros-indigo/object_msgs
+    ros-indigo/roscpp
     ros-indigo/sensor_msgs
     ros-indigo/shape_msgs
+    ros-indigo/shape_tools
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

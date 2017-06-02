@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_bag-release/archive/release/lunar/rqt_ba
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -26,6 +26,7 @@ RDEPEND="
     dev-python/pillow
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Overhead Camera System for Tracking AR Tags"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/rail_ceiling-release/archive/release/indigo/rail_ceiling/0.0.4-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/rail_ceiling-release/archive/release/indigo/rail_ceiling/0.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/usb_cam
-    ros-indigo/image_view
-    ros-indigo/xacro
     ros-indigo/ar_track_alvar
     ros-indigo/ar_track_alvar_msgs
     ros-indigo/geometry_msgs
-    ros-indigo/roslib
-    ros-indigo/roscpp
+    ros-indigo/image_view
     ros-indigo/robot_state_publisher
+    ros-indigo/roscpp
+    ros-indigo/roslib
     ros-indigo/tf
+    ros-indigo/usb_cam
+    ros-indigo/xacro
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     virtual/pkgconfig
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

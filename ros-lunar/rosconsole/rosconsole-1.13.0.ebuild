@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosco
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cpp_common
@@ -19,6 +19,7 @@ RDEPEND="
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rosunit
     dev-libs/boost
 "

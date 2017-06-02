@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="The pr2_moveit_tutorials package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit_pr2-release/archive/release/indigo/pr2_moveit_tutorials/0.6.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit_pr2-release/archive/release/indigo/pr2_moveit_tutorials/0.6.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/interactive_markers
+    ros-indigo/moveit_core
+    ros-indigo/moveit_fake_controller_manager
+    ros-indigo/moveit_ros_perception
+    ros-indigo/moveit_ros_planning_interface
     ros-indigo/pluginlib
     ros-indigo/pr2_arm_kinematics
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/pr2_moveit_config
-    ros-indigo/moveit_fake_controller_manager
     ros-indigo/pr2_moveit_plugins
-    ros-indigo/moveit_ros_perception
-    ros-indigo/moveit_core
-    ros-indigo/interactive_markers
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/geometric_shapes
 "
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

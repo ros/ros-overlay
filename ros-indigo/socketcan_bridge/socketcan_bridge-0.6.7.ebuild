@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="Provides nodes to convert messages from SocketCAN to a ROS Topic and vice versa."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/socketcan_bridge/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/socketcan_bridge/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/can_msgs
+    ros-indigo/roscpp
     ros-indigo/socketcan_interface
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

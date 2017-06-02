@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Parser for Semantic Robot Description Format (SRDF)."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/srdfdom-release/archive/release/kinetic/srdfdom/0.4.2-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/srdfdom-release/archive/release/kinetic/srdfdom/0.4.2-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/urdfdom_py
     dev-libs/boost
+    dev-libs/console_bridge
     dev-libs/urdfdom_headers
     dev-libs/tinyxml
-    dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
     ros-kinetic/urdf
 "
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

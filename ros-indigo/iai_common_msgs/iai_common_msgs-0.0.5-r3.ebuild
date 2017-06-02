@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION="Message definitions created and used by the Institute for Artificial Intelligenc"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_common_msgs/0.0.5-3.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_common_msgs/0.0.5-3.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/iai_content_msgs
-    ros-indigo/iai_kinematics_msgs
-    ros-indigo/scanning_table_msgs
-    ros-indigo/mln_robosherlock_msgs
-    ros-indigo/person_msgs
     ros-indigo/data_vis_msgs
-    ros-indigo/iai_robosherlock_actions
-    ros-indigo/grasp_stability_msgs
     ros-indigo/designator_integration_msgs
     ros-indigo/dna_extraction_msgs
-    ros-indigo/saphari_msgs
+    ros-indigo/grasp_stability_msgs
+    ros-indigo/iai_content_msgs
+    ros-indigo/iai_control_msgs
+    ros-indigo/iai_kinematics_msgs
+    ros-indigo/iai_robosherlock_actions
+    ros-indigo/iai_urdf_msgs
     ros-indigo/iai_wsg_50_msgs
     ros-indigo/json_prolog_msgs
+    ros-indigo/mln_robosherlock_msgs
+    ros-indigo/person_msgs
     ros-indigo/planning_msgs
-    ros-indigo/iai_urdf_msgs
-    ros-indigo/iai_control_msgs
+    ros-indigo/saphari_msgs
+    ros-indigo/scanning_table_msgs
     ros-indigo/sherlock_sim_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

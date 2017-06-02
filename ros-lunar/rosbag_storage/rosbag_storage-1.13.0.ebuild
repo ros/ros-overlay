@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosba
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cpp_common
@@ -18,11 +18,12 @@ RDEPEND="
     ros-lunar/roscpp_traits
     ros-lunar/roslz4
     ros-lunar/rostime
+    dev-libs/boost
     app-arch/bzip2
     dev-libs/console_bridge
-    dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

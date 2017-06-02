@@ -5,38 +5,40 @@ EAPI=6
 
 DESCRIPTION="mapviz"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz/0.2.3-0.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosapi
-    ros-kinetic/pluginlib
+    ros-kinetic/cv_bridge
     ros-kinetic/image_transport
-    ros-kinetic/rqt_gui
-    ros-kinetic/message_runtime
     ros-kinetic/marti_common_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/pluginlib
+    ros-kinetic/rosapi
     ros-kinetic/roscpp
+    ros-kinetic/rqt_gui
     ros-kinetic/rqt_gui_cpp
+    ros-kinetic/std_srvs
     ros-kinetic/swri_transform_util
     ros-kinetic/swri_yaml_util
-    ros-kinetic/std_srvs
     ros-kinetic/tf
-    ros-kinetic/cv_bridge
-    dev-qt/qtcore
-    dev-qt/qtopengl
     media-libs/freeglut
     media-libs/glew
-    x11-libs/libXmu
+    dev-qt/qtcore
     dev-qt/qtgui
-    x11-libs/libXi
+    dev-qt/qtopengl
     dev-qt/qtwidgets
+    x11-libs/libXi
+    x11-libs/libXmu
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
     dev-qt/qtopengl
+    virtual/pkgconfig
 "
 
 SLOT="0/0"
@@ -44,9 +46,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/co
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
@@ -19,12 +19,13 @@ RDEPEND="
     ros-lunar/roscpp
     ros-lunar/tf
     ros-lunar/urdf
-    dev-libs/urdfdom_headers
-    dev-libs/urdfdom
     media-libs/assimp
     dev-libs/collada-dom
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     media-libs/assimp
 "

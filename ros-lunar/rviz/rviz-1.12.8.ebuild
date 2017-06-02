@@ -8,7 +8,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/lunar/rviz/1.12.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( "BSD" "Creative Commons" )"
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -33,23 +33,24 @@ RDEPEND="
     ros-lunar/tf
     ros-lunar/urdf
     ros-lunar/visualization_msgs
-    dev-qt/qtopengl
     media-libs/assimp
-    dev-games/ogre
     dev-cpp/eigen
-    dev-libs/tinyxml
+    dev-games/ogre
     dev-qt/qtcore
-    dev-cpp/yaml-cpp
-    media-libs/mesa
     dev-qt/qtgui
+    dev-qt/qtopengl
     dev-qt/qtwidgets
     dev-libs/urdfdom_headers
+    media-libs/mesa
+    dev-libs/tinyxml
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
+    media-libs/assimp
     dev-qt/qtopengl
     dev-qt/qtcore
-    media-libs/assimp
 "
 
 SLOT="0/0"

@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="A catkin version of the C++ apriltags library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RIVeR-Lab-release/apriltags_ros-release/archive/release/indigo/apriltags/0.1.2-2.tar.gz"
+SRC_URI="https://github.com/RIVeR-Lab-release/apriltags_ros-release/archive/release/indigo/apriltags/0.1.2-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    media-libs/opencv
     dev-cpp/eigen
+    media-libs/opencv
     media-libs/libv4l
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

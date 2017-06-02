@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="roch Project"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch/2.0.11-0.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch/2.0.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_teleop
+    ros-kinetic/roch_follower
     ros-kinetic/roch_navigation
     ros-kinetic/roch_rapps
-    ros-kinetic/roch_follower
+    ros-kinetic/roch_teleop
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

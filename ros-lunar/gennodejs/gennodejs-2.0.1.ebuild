@@ -9,12 +9,13 @@ SRC_URI="https://github.com/RethinkRobotics-release/gennodejs-release/archive/re
 
 LICENSE="Apache 2.0"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/genmsg
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

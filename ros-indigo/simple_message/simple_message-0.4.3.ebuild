@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="simple_message defines a simple messaging connection and protocol for communicat"
 HOMEPAGE="http://ros.org/wiki/simple_message"
-SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/simple_message/0.4.3-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/simple_message/0.4.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/industrial_msgs
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

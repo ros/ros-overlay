@@ -10,12 +10,13 @@ SRC_URI="https://github.com/ros-gbp/python_qt_binding-release/archive/release/lu
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     dev-python/PyQt5
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rosbuild
     dev-qt/qtcore
 "

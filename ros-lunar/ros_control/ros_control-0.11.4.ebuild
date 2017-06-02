@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/lunar/ro
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/combined_robot_hw
@@ -24,6 +24,7 @@ RDEPEND="
     ros-lunar/transmission_interface
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

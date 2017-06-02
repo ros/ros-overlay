@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Messages used by py_trees_ros and some extras for the mock demos/tests."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stonier/py_trees_msgs-release/archive/release/kinetic/py_trees_msgs/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/stonier/py_trees_msgs-release/archive/release/kinetic/py_trees_msgs/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/actionlib_msgs
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/uuid_msgs
     ros-kinetic/message_runtime
     ros-kinetic/std_msgs
-    ros-kinetic/actionlib_msgs
+    ros-kinetic/uuid_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

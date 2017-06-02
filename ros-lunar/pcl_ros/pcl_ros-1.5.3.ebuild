@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
@@ -27,12 +27,13 @@ RDEPEND="
     ros-lunar/tf
     ros-lunar/tf2_eigen
     dev-cpp/eigen
+    sci-libs/pcl
+    sci-libs/vtk
     sci-libs/proj
     dev-qt/qtcore
-    sci-libs/vtk
-    sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/genmsg
     ros-lunar/rosconsole

@@ -6,25 +6,26 @@ EAPI=6
 DESCRIPTION="This package pulls in the Karto mapping library, and provides a ROS
      wrapper"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/slam_karto-release/archive/release/indigo/slam_karto/0.7.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/slam_karto-release/archive/release/indigo/slam_karto/0.7.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/nav_msgs
     ros-indigo/message_filters
-    ros-indigo/roscpp
+    ros-indigo/nav_msgs
     ros-indigo/open_karto
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
     ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/sparse_bundle_adjustment
+    ros-indigo/tf
+    ros-indigo/visualization_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

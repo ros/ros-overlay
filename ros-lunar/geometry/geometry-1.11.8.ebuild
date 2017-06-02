@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/geome
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/angles
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/tf_conversions
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

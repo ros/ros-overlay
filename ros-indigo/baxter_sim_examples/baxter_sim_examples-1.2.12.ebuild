@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="The baxter_sim_examples package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_examples/1.2.12-0.tar.gz"
+SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_examples/1.2.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospack
-    ros-indigo/rospy
-    ros-indigo/gazebo_ros
+    ros-indigo/baxter_core_msgs
     ros-indigo/baxter_gazebo
     ros-indigo/baxter_interface
-    ros-indigo/baxter_core_msgs
-    ros-indigo/gazebo_msgs
     ros-indigo/baxter_tools
+    ros-indigo/gazebo_msgs
+    ros-indigo/gazebo_ros
+    ros-indigo/rospack
+    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

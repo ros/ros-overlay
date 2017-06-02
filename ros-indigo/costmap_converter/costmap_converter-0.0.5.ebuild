@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d cell"
 HOMEPAGE="http://wiki.ros.org/costmap_converter"
-SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/indigo/costmap_converter/0.0.5-0.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/indigo/costmap_converter/0.0.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/costmap_2d
     ros-indigo/dynamic_reconfigure
-    ros-indigo/pluginlib
     ros-indigo/geometry_msgs
+    ros-indigo/pluginlib
     ros-indigo/roscpp
     ros-indigo/std_msgs
-    ros-indigo/costmap_2d
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

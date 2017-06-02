@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="Packages to run the KUKA youBot in the Gazebo simulation with ROS"
 HOMEPAGE="http://github.com/mas-group/youbot_simulation"
-SRC_URI="https://github.com/youbot-release/youbot_simulation-release/archive/release/indigo/youbot_simulation/0.8.0-0.tar.gz"
+SRC_URI="https://github.com/youbot-release/youbot_simulation-release/archive/release/indigo/youbot_simulation/0.8.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/youbot_gazebo_control
     ros-indigo/youbot_gazebo_robot
     ros-indigo/youbot_gazebo_worlds
-    ros-indigo/youbot_gazebo_control
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

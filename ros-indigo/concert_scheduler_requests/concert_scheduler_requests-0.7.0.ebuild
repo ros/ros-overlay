@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Python interfaces for managing ROCON scheduler requests."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/concert_scheduling-release/archive/release/indigo/concert_scheduler_requests/0.7.0-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/concert_scheduling-release/archive/release/indigo/concert_scheduler_requests/0.7.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/rospy
     ros-indigo/scheduler_msgs
     ros-indigo/unique_id
-    ros-indigo/rospy
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
+    ros-indigo/catkin
     ros-indigo/roslint
+    ros-indigo/rostest
     dev-python/catkin_pkg
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

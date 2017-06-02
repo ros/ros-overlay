@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="laser_filters_jsk_patch"
 HOMEPAGE="http://ros.org/wiki/laser_filters_jsk_patch"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/laser_filters_jsk_patch/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/laser_filters_jsk_patch/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/laser_filters
     ros-indigo/filters
+    ros-indigo/laser_filters
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/laser_geometry
     ros-indigo/mk
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

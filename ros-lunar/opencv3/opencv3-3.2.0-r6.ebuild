@@ -9,24 +9,25 @@ SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    sci-libs/vtk
     virtual/ffmpeg
-    dev-lang/python
-    sys-libs/zlib
-    dev-libs/protobuf
     media-libs/libjpeg-turbo
     media-libs/libpng
+    sci-libs/vtk
     media-libs/libwebp
+    dev-libs/protobuf
+    dev-lang/python
     dev-python/numpy
+    sys-libs/zlib
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
+    media-libs/tiff
     media-libs/libv4l
     dev-libs/protobuf
-    media-libs/tiff
 "
 
 SLOT="0/0"

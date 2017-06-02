@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="urdf models converted from euslisp"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_model_tools-release/archive/release/kinetic/eusurdf/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_model_tools-release/archive/release/kinetic/eusurdf/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rostest
     ros-kinetic/collada_urdf
     ros-kinetic/gazebo_ros
+    ros-kinetic/rostest
     dev-python/lxml
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/roseus
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

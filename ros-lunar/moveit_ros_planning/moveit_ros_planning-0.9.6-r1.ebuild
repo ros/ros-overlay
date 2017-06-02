@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/pluginlib
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     dev-cpp/eigen
 "
 

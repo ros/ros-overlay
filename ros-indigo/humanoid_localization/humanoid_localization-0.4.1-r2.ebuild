@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/humanoid_localization"
-SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/humanoid_localization/0.4.1-2.tar.gz"
+SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/humanoid_localization/0.4.1-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/visualization_msgs
-    ros-indigo/octomap_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_filters
     ros-indigo/nav_msgs
     ros-indigo/octomap
-    ros-indigo/message_filters
-    ros-indigo/geometry_msgs
-    ros-indigo/std_srvs
+    ros-indigo/octomap_msgs
+    ros-indigo/octomap_ros
+    ros-indigo/pcl_conversions
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/octomap_ros
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
     ros-indigo/tf
-    ros-indigo/pcl_conversions
+    ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

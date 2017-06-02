@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="The cob_model_identifier package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_model_identifier/0.6.14-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_model_identifier/0.6.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/cmake_modules
-    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/std_srvs
+    ros-indigo/kdl_parser
     ros-indigo/orocos_kdl
     ros-indigo/roscpp
+    ros-indigo/rospy
     ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
     ros-indigo/tf
-    ros-indigo/kdl_parser
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

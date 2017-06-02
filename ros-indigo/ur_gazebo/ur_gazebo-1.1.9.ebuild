@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Gazebo wrapper for the Universal UR5/10 robot arms."
 HOMEPAGE="http://ros.org/wiki/ur_gazebo"
-SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_gazebo/1.1.9-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_gazebo/1.1.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joint_trajectory_controller
     ros-indigo/controller_manager
+    ros-indigo/effort_controllers
     ros-indigo/gazebo_ros
-    ros-indigo/ur_description
     ros-indigo/gazebo_ros_control
     ros-indigo/joint_state_controller
-    ros-indigo/effort_controllers
+    ros-indigo/joint_trajectory_controller
     ros-indigo/robot_state_publisher
     ros-indigo/ros_controllers
+    ros-indigo/ur_description
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

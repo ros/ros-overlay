@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Baxter Gazebo plugins and launch files"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_gazebo/1.2.12-0.tar.gz"
+SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_gazebo/1.2.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/baxter_sim_hardware
-    ros-indigo/gazebo_ros
-    ros-indigo/controller_manager_msgs
-    ros-indigo/baxter_description
-    ros-indigo/gazebo_ros_control
     ros-indigo/baxter_core_msgs
+    ros-indigo/baxter_description
+    ros-indigo/baxter_sim_hardware
+    ros-indigo/controller_manager_msgs
+    ros-indigo/gazebo_ros
+    ros-indigo/gazebo_ros_control
     ros-indigo/roscpp
     ros-indigo/tf2_ros
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

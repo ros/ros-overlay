@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="Service pair libraries for pub/sub non-blocking services."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_python_comms/0.3.2-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_python_comms/0.3.2-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosnode
+    ros-kinetic/genpy
+    ros-kinetic/rocon_console
     ros-kinetic/rocon_service_pair_msgs
     ros-kinetic/rosgraph
-    ros-kinetic/rospy
-    ros-kinetic/rocon_console
-    ros-kinetic/unique_id
-    ros-kinetic/rosservice
     ros-kinetic/roslib
+    ros-kinetic/rosnode
+    ros-kinetic/rospy
+    ros-kinetic/rosservice
     ros-kinetic/rostopic
-    ros-kinetic/genpy
+    ros-kinetic/unique_id
     ros-kinetic/uuid_msgs
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/rostest
     dev-python/catkin_pkg
 "
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

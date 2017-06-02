@@ -10,17 +10,19 @@ SRC_URI="https://github.com/orocos-gbp/typelib-release/archive/release/indigo/ty
 
 LICENSE="CeCILL-B (BSD-like)"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
     ros-indigo/utilrb
-    dev-libs/libxml2
-    dev-cpp/gccxml
     dev-libs/boost
     dev-ruby/facets
+    dev-cpp/gccxml
+    dev-libs/libxml2
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
+    virtual/pkgconfig
 "
 
 SLOT="0/0"

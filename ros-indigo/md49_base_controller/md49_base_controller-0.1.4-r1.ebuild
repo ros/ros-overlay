@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="The md49_base_controller package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Scheik/md49_base_controller-release/archive/release/indigo/md49_base_controller/0.1.4-1.tar.gz"
+SRC_URI="https://github.com/Scheik/md49_base_controller-release/archive/release/indigo/md49_base_controller/0.1.4-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/geometry_msgs
-    ros-indigo/message_runtime
     ros-indigo/md49_messages
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
     ros-indigo/md49_serialport
+    ros-indigo/message_runtime
+    ros-indigo/roscpp
+    ros-indigo/rospy
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

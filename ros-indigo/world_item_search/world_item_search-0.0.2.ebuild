@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="World Object Search via Persistence Models"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/spatial_temporal_learning-release/archive/release/indigo/world_item_search/0.0.2-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/spatial_temporal_learning-release/archive/release/indigo/world_item_search/0.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/worldlib
     ros-indigo/roscpp
     ros-indigo/roslib
+    ros-indigo/worldlib
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

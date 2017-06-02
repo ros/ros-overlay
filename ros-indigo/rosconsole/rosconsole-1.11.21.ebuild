@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="ROS console output library."
 HOMEPAGE="http://www.ros.org/wiki/rosconsole"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/rosconsole/1.11.21-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/rosconsole/1.11.21-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/cpp_common
     ros-indigo/rosbuild
     ros-indigo/rostime
-    ros-indigo/cpp_common
-    dev-libs/log4cxx
     dev-libs/apr
+    dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rosunit
     dev-libs/boost
 "
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

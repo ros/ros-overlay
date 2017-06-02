@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/rele
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cv_bridge
@@ -20,10 +20,11 @@ RDEPEND="
     ros-lunar/pluginlib
     ros-lunar/rosbag
     ros-lunar/std_msgs
-    media-libs/libtheora
     media-libs/libogg
+    media-libs/libtheora
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

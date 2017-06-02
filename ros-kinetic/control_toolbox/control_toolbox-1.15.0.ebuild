@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="The control toolbox contains modules that are useful across all controllers."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/control_toolbox-release/archive/release/kinetic/control_toolbox/1.15.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/control_toolbox-release/archive/release/kinetic/control_toolbox/1.15.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cmake_modules
+    ros-kinetic/control_msgs
     ros-kinetic/dynamic_reconfigure
     ros-kinetic/message_runtime
+    ros-kinetic/realtime_tools
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
-    ros-kinetic/realtime_tools
-    ros-kinetic/control_msgs
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

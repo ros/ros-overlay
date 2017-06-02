@@ -9,14 +9,15 @@ SRC_URI="https://github.com/ros-gbp/urdfdom_py-release/archive/release/lunar/urd
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    dev-python/lxml
     dev-lang/python
+    dev-python/lxml
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"

@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_ros/2.0.0-2.tar.gz"
+SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_ros/2.0.0-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/smach
-    ros-kinetic/rospy
     ros-kinetic/actionlib
     ros-kinetic/actionlib_msgs
-    ros-kinetic/smach_msgs
+    ros-kinetic/rospy
     ros-kinetic/rostopic
+    ros-kinetic/smach
+    ros-kinetic/smach_msgs
     ros-kinetic/std_msgs
     ros-kinetic/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/rostest
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

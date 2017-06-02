@@ -5,15 +5,16 @@ EAPI=6
 
 DESCRIPTION="The ihmc_ros_common package provides common functionality for other IHMC ROS pac"
 HOMEPAGE="http://github.com/ihmcrobotics/ihmc_ros_core"
-SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_ros_java_adapter/0.9.2-0.tar.gz"
+SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_ros_java_adapter/0.9.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache 2.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -21,9 +22,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

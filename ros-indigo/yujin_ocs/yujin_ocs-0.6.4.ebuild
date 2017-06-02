@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Yujin Robot's open-source control software"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/indigo/yujin_ocs/0.6.4-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/indigo/yujin_ocs/0.6.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_diff_drive_pose_controller
-    ros-indigo/yocs_rapps
-    ros-indigo/yocs_keyop
-    ros-indigo/yocs_safety_controller
-    ros-indigo/yocs_controllers
-    ros-indigo/yocs_velocity_smoother
     ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/yocs_controllers
+    ros-indigo/yocs_diff_drive_pose_controller
     ros-indigo/yocs_joyop
-    ros-indigo/yocs_virtual_sensor
+    ros-indigo/yocs_keyop
     ros-indigo/yocs_math_toolkit
+    ros-indigo/yocs_rapps
+    ros-indigo/yocs_safety_controller
+    ros-indigo/yocs_velocity_smoother
+    ros-indigo/yocs_virtual_sensor
     ros-indigo/yocs_waypoints_navi
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

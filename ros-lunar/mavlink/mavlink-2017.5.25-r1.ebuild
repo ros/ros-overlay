@@ -10,16 +10,17 @@ SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/lunar/ma
 
 LICENSE="LGPLv3"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
     dev-lang/python
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
     dev-python/future
-    dev-python/setuptools
     dev-python/lxml
+    dev-python/setuptools
 "
 
 SLOT="0/0"

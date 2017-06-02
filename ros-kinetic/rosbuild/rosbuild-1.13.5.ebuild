@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="rosbuild contains scripts for managing the CMake-based build system for ROS."
 HOMEPAGE="http://ros.org/wiki/rosbuild"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbuild/1.13.5-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbuild/1.13.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
-    ros-kinetic/message_runtime
     ros-kinetic/message_generation
+    ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
     virtual/pkgconfig
@@ -25,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

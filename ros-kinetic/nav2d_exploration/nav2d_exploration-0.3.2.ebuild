@@ -6,22 +6,23 @@ EAPI=6
 DESCRIPTION="This package holds a collection of plugins for the RobotNavigator, that provide
 "
 HOMEPAGE="http://wiki.ros.org/robot_operator"
-SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_exploration/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_exploration/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav2d_navigator
-    ros-kinetic/pluginlib
-    ros-kinetic/visualization_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/geometry_msgs
+    ros-kinetic/nav2d_navigator
+    ros-kinetic/nav_msgs
+    ros-kinetic/pluginlib
     ros-kinetic/roscpp
     ros-kinetic/tf
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -7,17 +7,18 @@ DESCRIPTION="COLLADA 1.5 Robot Models Repository
 
     This repository is associated with the "
 HOMEPAGE="http://www.openrave.org/en/main/robots.html"
-SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/collada_robots/0.0.5-1.tar.gz"
+SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/collada_robots/0.0.5-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="T.D.B"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-    app-arch/unzip
+    ros-indigo/catkin
     dev-vcs/git
+    app-arch/unzip
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

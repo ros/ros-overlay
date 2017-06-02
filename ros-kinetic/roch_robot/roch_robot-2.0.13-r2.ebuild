@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Metapackage for SawYer roch robot software"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_robot/2.0.13-2.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_robot/2.0.13-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roch_bringup
-    ros-kinetic/roch_description
-    ros-kinetic/roch_sensorpc
-    ros-kinetic/roch_msgs
     ros-kinetic/roch_base
+    ros-kinetic/roch_bringup
     ros-kinetic/roch_capabilities
-    ros-kinetic/roch_ftdi
-    ros-kinetic/roch_safety_controller
     ros-kinetic/roch_control
+    ros-kinetic/roch_description
+    ros-kinetic/roch_ftdi
+    ros-kinetic/roch_msgs
+    ros-kinetic/roch_safety_controller
+    ros-kinetic/roch_sensorpc
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,15 +6,16 @@ EAPI=6
 DESCRIPTION="Deprecated
     "cob_utilities" subsumes a number of classes, which are used in t"
 HOMEPAGE="http://ros.org/wiki/cob_utilities"
-SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_utilities/0.6.8-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_utilities/0.6.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

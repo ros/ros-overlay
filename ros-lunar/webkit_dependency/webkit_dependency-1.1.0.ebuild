@@ -9,12 +9,13 @@ SRC_URI="https://github.com/ros-gbp/webkit_dependency-release/archive/release/lu
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     dev-python/PyQt5
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

@@ -5,40 +5,42 @@ EAPI=6
 
 DESCRIPTION="Core libraries used by MoveIt!"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_core/0.7.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_core/0.7.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/geometric_shapes
-    ros-indigo/octomap
-    ros-indigo/std_msgs
-    ros-indigo/srdfdom
-    ros-indigo/moveit_msgs
     ros-indigo/eigen_conversions
+    ros-indigo/eigen_stl_containers
     ros-indigo/fcl
-    ros-indigo/sensor_msgs
+    ros-indigo/geometric_shapes
+    ros-indigo/geometry_msgs
     ros-indigo/kdl_parser
+    ros-indigo/moveit_msgs
+    ros-indigo/octomap
+    ros-indigo/octomap_msgs
     ros-indigo/random_numbers
+    ros-indigo/rostime
+    ros-indigo/sensor_msgs
+    ros-indigo/srdfdom
+    ros-indigo/std_msgs
     ros-indigo/trajectory_msgs
     ros-indigo/visualization_msgs
-    ros-indigo/octomap_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/eigen_stl_containers
-    ros-indigo/rostime
+    media-libs/assimp
+    dev-libs/boost
     dev-cpp/eigen
     dev-libs/console_bridge
-    dev-libs/boost
     dev-libs/urdfdom
-    media-libs/assimp
     dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslib
+    ros-indigo/catkin
     ros-indigo/cmake_modules
+    ros-indigo/roslib
     ros-indigo/shape_msgs
+    virtual/pkgconfig
 "
 
 SLOT="0/0"
@@ -46,9 +48,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

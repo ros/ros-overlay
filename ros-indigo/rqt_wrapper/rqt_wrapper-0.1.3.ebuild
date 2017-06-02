@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="A wrapper for keeping rqt programs alive."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rqt_wrapper-release/archive/release/indigo/rqt_wrapper/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rqt_wrapper-release/archive/release/indigo/rqt_wrapper/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rqt_robot_monitor
-    ros-indigo/rosgraph
-    ros-indigo/rqt_plot
-    ros-indigo/qt_gui_py_common
-    ros-indigo/rqt_reconfigure
-    ros-indigo/rqt_gui
-    ros-indigo/rocon_python_utils
     ros-indigo/python_qt_binding
+    ros-indigo/qt_gui_py_common
     ros-indigo/rocon_console
+    ros-indigo/rocon_python_utils
+    ros-indigo/rosgraph
+    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_py
+    ros-indigo/rqt_plot
+    ros-indigo/rqt_reconfigure
+    ros-indigo/rqt_robot_monitor
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

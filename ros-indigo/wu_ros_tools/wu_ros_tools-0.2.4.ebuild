@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="A collection of tools for making a variety of generic ROS-related tasks easier."
 HOMEPAGE="http://ros.org/wiki/wu_ros_tools"
-SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/wu_ros_tools/0.2.4-0.tar.gz"
+SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/wu_ros_tools/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkinize_this
-    ros-indigo/rosbaglive
     ros-indigo/easy_markers
-    ros-indigo/roswiki_node
-    ros-indigo/kalman_filter
     ros-indigo/joy_listener
+    ros-indigo/kalman_filter
     ros-indigo/manifest_cleaner
+    ros-indigo/rosbaglive
+    ros-indigo/roswiki_node
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

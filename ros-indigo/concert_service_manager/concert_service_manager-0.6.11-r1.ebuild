@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Component responsible for launching and managing concert services."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_service_manager/0.6.11-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_service_manager/0.6.11-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/roslaunch
-    ros-indigo/rocon_interactions
-    ros-indigo/unique_id
-    ros-indigo/rocon_python_utils
-    ros-indigo/std_msgs
-    ros-indigo/genpy
     ros-indigo/concert_msgs
+    ros-indigo/genpy
     ros-indigo/rocon_console
+    ros-indigo/rocon_interactions
+    ros-indigo/rocon_python_utils
+    ros-indigo/roslaunch
+    ros-indigo/rospy
+    ros-indigo/std_msgs
+    ros-indigo/unique_id
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-python/catkin_pkg
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

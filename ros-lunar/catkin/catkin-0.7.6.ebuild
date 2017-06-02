@@ -9,16 +9,17 @@ SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/lunar/catkin/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    dev-python/catkin_pkg
-    dev-lang/python
-    dev-python/empy
     dev-cpp/gtest
+    dev-lang/python
+    dev-python/catkin_pkg
+    dev-python/empy
     dev-python/nose
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/r
 
 LICENSE="LGPLv3"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/canopen_402
@@ -23,6 +23,7 @@ RDEPEND="
     dev-cpp/muParser
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

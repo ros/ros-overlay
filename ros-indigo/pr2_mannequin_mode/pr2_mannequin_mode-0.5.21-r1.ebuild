@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The pr2_mannequin_mode package"
 HOMEPAGE="http://wiki.ros.org/pr2_mannequin_mode"
-SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_mannequin_mode/0.5.21-1.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_mannequin_mode/0.5.21-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_controllers_msgs
     ros-indigo/pr2_controller_manager
+    ros-indigo/pr2_controllers_msgs
     ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

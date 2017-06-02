@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="RVIZ plugin for IMU visualization"
 HOMEPAGE="http://ros.org/wiki/rviz_imu_plugin"
-SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/rviz_imu_plugin/1.1.4-0.tar.gz"
+SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/rviz_imu_plugin/1.1.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/roscpp
     ros-kinetic/rviz
-    dev-qt/qtgui
     dev-qt/qtcore
+    dev-qt/qtgui
     dev-qt/qtwidgets
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-qt/qtcore
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

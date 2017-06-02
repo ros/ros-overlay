@@ -9,13 +9,14 @@ SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/rel
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
     ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

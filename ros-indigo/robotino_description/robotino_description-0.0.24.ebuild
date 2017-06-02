@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The robotino_description package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/robotino_description/0.0.24-0.tar.gz"
+SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/robotino_description/0.0.24-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/gazebo_plugins
-    ros-indigo/xacro
     ros-indigo/gazebo_ros
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

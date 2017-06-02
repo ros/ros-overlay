@@ -5,15 +5,16 @@ EAPI=6
 
 DESCRIPTION="Launch and config files designed for use with the p2os stack."
 HOMEPAGE="http://ros.org/wiki/p2os-vanderbilt"
-SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_launch/2.0.6-0.tar.gz"
+SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_launch/2.0.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -21,9 +22,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

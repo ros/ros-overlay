@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="slider_gui"
 HOMEPAGE="http://ros.org/wiki/slider_gui"
-SRC_URI="https://github.com/pr2-gbp/pr2_hack_the_future-release/archive/release/indigo/slider_gui/1.1.0-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_hack_the_future-release/archive/release/indigo/slider_gui/1.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/korg_nanokontrol
-    ros-indigo/rospy
     ros-indigo/actionlib
-    ros-indigo/program_queue
-    ros-indigo/std_srvs
-    ros-indigo/pr2_mechanism_msgs
-    ros-indigo/sound_play
-    ros-indigo/trajectory_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/face_detector
+    ros-indigo/korg_nanokontrol
     ros-indigo/pr2_controllers_msgs
+    ros-indigo/pr2_mechanism_msgs
+    ros-indigo/program_queue
+    ros-indigo/rospy
     ros-indigo/rviz_backdrop
+    ros-indigo/sensor_msgs
+    ros-indigo/sound_play
+    ros-indigo/std_srvs
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

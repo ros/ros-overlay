@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_py_com
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib
@@ -23,6 +23,7 @@ RDEPEND="
     ros-lunar/rostopic
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/genmsg
     ros-lunar/std_msgs
 "

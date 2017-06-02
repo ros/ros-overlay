@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/lunar/d
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/common_tutorials
@@ -21,6 +21,7 @@ RDEPEND="
     ros-lunar/viz
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

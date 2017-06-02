@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Graphical frontend for interacting with joint_trajectory_controller instances."
 HOMEPAGE="http://wiki.ros.org/rqt_joint_trajectory_controller"
-SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/indigo/rqt_joint_trajectory_controller/0.9.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/indigo/rqt_joint_trajectory_controller/0.9.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Modified BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/controller_manager_msgs
-    ros-indigo/rqt_gui
-    ros-indigo/trajectory_msgs
     ros-indigo/control_msgs
+    ros-indigo/controller_manager_msgs
+    ros-indigo/rospy
+    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_py
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

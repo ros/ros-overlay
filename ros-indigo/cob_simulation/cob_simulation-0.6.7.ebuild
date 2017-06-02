@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The cob_simulation stack includes packages to work with Care-O-bot within simula"
 HOMEPAGE="http://ros.org/wiki/cob_simulation"
-SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_simulation/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_simulation/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_gazebo_worlds
     ros-indigo/cob_bringup_sim
     ros-indigo/cob_gazebo
     ros-indigo/cob_gazebo_objects
+    ros-indigo/cob_gazebo_worlds
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

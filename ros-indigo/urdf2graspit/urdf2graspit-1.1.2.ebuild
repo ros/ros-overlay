@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Conversion from URDF to the GraspIt! format."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/urdf2graspit/1.1.2-0.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/urdf2graspit/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/urdf2inventor
-    ros-indigo/roscpp
-    ros-indigo/eigen_conversions
-    ros-indigo/urdf
-    ros-indigo/urdf_viewer
     ros-indigo/baselib_binding
+    ros-indigo/eigen_conversions
+    ros-indigo/roscpp
+    ros-indigo/urdf
+    ros-indigo/urdf2inventor
+    ros-indigo/urdf_viewer
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslint
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

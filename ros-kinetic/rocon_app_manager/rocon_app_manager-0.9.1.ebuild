@@ -5,36 +5,37 @@ EAPI=6
 
 DESCRIPTION="The public interface and retaskable interface for a robot."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_app_platform-release/archive/release/kinetic/rocon_app_manager/0.9.1-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_app_platform-release/archive/release/kinetic/rocon_app_manager/0.9.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rocon_master_info
-    ros-kinetic/rocon_gateway_utils
-    ros-kinetic/rocon_app_manager_msgs
-    ros-kinetic/rospy
-    ros-kinetic/rocon_std_msgs
     ros-kinetic/capabilities
+    ros-kinetic/gateway_msgs
+    ros-kinetic/rocon_app_manager_msgs
+    ros-kinetic/rocon_app_utilities
+    ros-kinetic/rocon_apps
     ros-kinetic/rocon_console
+    ros-kinetic/rocon_gateway
+    ros-kinetic/rocon_gateway_utils
     ros-kinetic/rocon_hub
     ros-kinetic/rocon_interactions
+    ros-kinetic/rocon_master_info
+    ros-kinetic/rocon_python_comms
     ros-kinetic/rocon_python_utils
+    ros-kinetic/rocon_std_msgs
+    ros-kinetic/rocon_uri
     ros-kinetic/roslib
     ros-kinetic/rosmaster
-    ros-kinetic/rocon_uri
-    ros-kinetic/rocon_app_utilities
+    ros-kinetic/rospy
     ros-kinetic/std_msgs
-    ros-kinetic/gateway_msgs
-    ros-kinetic/rocon_python_comms
-    ros-kinetic/rocon_gateway
-    ros-kinetic/rocon_apps
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/rostest
+    ros-kinetic/catkin
     ros-kinetic/roslint
+    ros-kinetic/rostest
     dev-python/catkin_pkg
 "
 
@@ -43,9 +44,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

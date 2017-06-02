@@ -6,26 +6,27 @@ EAPI=6
 DESCRIPTION="The wiimote package allows ROS nodes to communicate with a Nintendo Wiimote
     "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/wiimote/1.11.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/wiimote/1.11.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
-    ros-kinetic/geometry_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
     ros-kinetic/genmsg
-    ros-kinetic/std_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/rospy
     ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    app-misc/cwiid
+    app-misc/cwiid
     dev-python/numpy
-    app-misc/cwiid
-    app-misc/cwiid
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/roslint
     app-misc/cwiid
 "
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

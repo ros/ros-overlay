@@ -5,25 +5,27 @@ EAPI=6
 
 DESCRIPTION="The find_object_2d package"
 HOMEPAGE="http://find-object.googlecode.com"
-SRC_URI="https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.1-5.tar.gz"
+SRC_URI="https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.1-5.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
+    ros-kinetic/cv_bridge
     ros-kinetic/image_transport
     ros-kinetic/message_filters
-    ros-kinetic/std_srvs
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf
-    ros-kinetic/cv_bridge
     ros-kinetic/qt_gui_cpp
+    ros-kinetic/roscpp
+    ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
+    ros-kinetic/genmsg
 "
 
 SLOT="0/0"
@@ -31,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

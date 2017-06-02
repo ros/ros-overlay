@@ -9,12 +9,13 @@ SRC_URI="https://github.com/ros-gbp/convex_decomposition-release/archive/release
 
 LICENSE="MIT"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     app-arch/unzip
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

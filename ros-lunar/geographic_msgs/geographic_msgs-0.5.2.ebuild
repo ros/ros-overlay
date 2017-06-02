@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/uuid_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

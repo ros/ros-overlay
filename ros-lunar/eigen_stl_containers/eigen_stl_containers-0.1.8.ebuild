@@ -10,12 +10,13 @@ SRC_URI="https://github.com/ros-gbp/eigen_stl_containers-release/archive/release
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

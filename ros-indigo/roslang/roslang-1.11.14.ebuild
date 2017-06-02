@@ -5,15 +5,15 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/roslang"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/indigo/roslang/1.11.14-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/indigo/roslang/1.11.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/genmsg
     ros-indigo/catkin
+    ros-indigo/genmsg
 "
 DEPEND="${RDEPEND}
 "
@@ -23,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="The Rigid Body Dynamics Library from http://rbdl.bitbucket.org"
 HOMEPAGE="https://bitbucket.org/rbdl/rbdl"
-SRC_URI="https://github.com/isura/rbdl-release/archive/release/indigo/rbdl/2.3.1-5.tar.gz"
+SRC_URI="https://github.com/isura/rbdl-release/archive/release/indigo/rbdl/2.3.1-5.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="zlib"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/catkin
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

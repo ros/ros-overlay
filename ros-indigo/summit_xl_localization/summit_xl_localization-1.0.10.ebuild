@@ -5,31 +5,32 @@ EAPI=6
 
 DESCRIPTION="The summit_xl_localization package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/indigo/summit_xl_localization/1.0.10-0.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/indigo/summit_xl_localization/1.0.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf2
     ros-indigo/geographic_msgs
-    ros-indigo/robotnik_msgs
-    ros-indigo/mavros_msgs
-    ros-indigo/nav_msgs
     ros-indigo/geometry_msgs
+    ros-indigo/mavros_msgs
     ros-indigo/message_filters
     ros-indigo/message_runtime
+    ros-indigo/nav_msgs
     ros-indigo/robot_localization
+    ros-indigo/robotnik_msgs
     ros-indigo/roscpp
-    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
-    ros-indigo/tf2_geometry_msgs
+    ros-indigo/std_msgs
     ros-indigo/std_srvs
-    ros-indigo/tf2_ros
     ros-indigo/tf
+    ros-indigo/tf2
+    ros-indigo/tf2_geometry_msgs
+    ros-indigo/tf2_ros
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -37,9 +38,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

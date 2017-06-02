@@ -6,33 +6,34 @@ EAPI=6
 DESCRIPTION="This is a ROS interface to the Shadow Robot's robotic hand. It
      contains bot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_hand/1.4.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_hand/1.4.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
     ros-indigo/control_msgs
-    ros-indigo/self_test
-    ros-indigo/rospy
-    ros-indigo/sr_robot_msgs
     ros-indigo/controller_manager_msgs
-    ros-indigo/gazebo_ros
-    ros-indigo/sr_utilities
-    ros-indigo/roslib
-    ros-indigo/roscpp
-    ros-indigo/urdf
     ros-indigo/diagnostic_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/std_srvs
-    ros-indigo/robot_state_publisher
+    ros-indigo/dynamic_reconfigure
     ros-indigo/gazebo_msgs
+    ros-indigo/gazebo_ros
+    ros-indigo/robot_state_publisher
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/rospy
+    ros-indigo/self_test
+    ros-indigo/sensor_msgs
+    ros-indigo/sr_robot_msgs
+    ros-indigo/sr_utilities
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/urdf
     sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -41,9 +42,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -6,19 +6,20 @@ EAPI=6
 DESCRIPTION="These are regression tests for the osm_cartography and
      route_network packag"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-geographic-info/open_street_map-release/archive/release/indigo/test_osm/0.2.3-0.tar.gz"
+SRC_URI="https://github.com/ros-geographic-info/open_street_map-release/archive/release/indigo/test_osm/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/osm_cartography
-    ros-indigo/geographic_msgs
     ros-indigo/geodesy
+    ros-indigo/geographic_msgs
+    ros-indigo/osm_cartography
     ros-indigo/route_network
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

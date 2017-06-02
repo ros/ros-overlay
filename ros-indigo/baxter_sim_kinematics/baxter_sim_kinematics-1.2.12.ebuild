@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Baxter Kinematics for the FK, IK and the gravity compensation calculations"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_kinematics/1.2.12-0.tar.gz"
+SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_kinematics/1.2.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/moveit_ros_planning_interface
     ros-indigo/baxter_core_msgs
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/kdl_parser
-    ros-indigo/tf
     ros-indigo/gazebo_msgs
+    ros-indigo/kdl_parser
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/tf_conversions
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

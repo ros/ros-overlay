@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/capabilities-release/archive/release/lunar/c
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/bondpy
@@ -22,6 +22,7 @@ RDEPEND="
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
     ros-lunar/rostest
 "

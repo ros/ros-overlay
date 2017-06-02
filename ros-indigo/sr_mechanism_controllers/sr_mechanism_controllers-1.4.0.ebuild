@@ -6,33 +6,34 @@ EAPI=6
 DESCRIPTION="The sr_mechanism_controllers package contains different types of
      controller"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_mechanism_controllers/1.4.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_mechanism_controllers/1.4.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/control_msgs
-    ros-indigo/pluginlib
-    ros-indigo/angles
-    ros-indigo/sr_robot_msgs
-    ros-indigo/controller_manager_msgs
     ros-indigo/actionlib
-    ros-indigo/sr_utilities
-    ros-indigo/roscpp
-    ros-indigo/ros_ethercat_model
-    ros-indigo/std_msgs
-    ros-indigo/realtime_tools
-    ros-indigo/std_srvs
-    ros-indigo/sr_hardware_interface
-    ros-indigo/xmlrpcpp
-    ros-indigo/rosconsole
-    ros-indigo/velocity_controllers
-    ros-indigo/controller_interface
+    ros-indigo/angles
+    ros-indigo/control_msgs
     ros-indigo/control_toolbox
+    ros-indigo/controller_interface
+    ros-indigo/controller_manager_msgs
+    ros-indigo/pluginlib
+    ros-indigo/realtime_tools
+    ros-indigo/ros_ethercat_model
+    ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/sr_hardware_interface
+    ros-indigo/sr_robot_msgs
+    ros-indigo/sr_utilities
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/velocity_controllers
+    ros-indigo/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/rostest
     dev-libs/tinyxml
@@ -43,9 +44,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

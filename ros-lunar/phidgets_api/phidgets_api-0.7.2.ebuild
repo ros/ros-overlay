@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/rel
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/libphidget21
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     =dev-libs/libusb-1.0*
 "
 

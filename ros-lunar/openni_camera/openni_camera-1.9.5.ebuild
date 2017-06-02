@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/openni_camera-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/camera_info_manager
@@ -24,6 +24,7 @@ RDEPEND="
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

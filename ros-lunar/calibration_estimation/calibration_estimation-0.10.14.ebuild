@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/lunar/ca
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/calibration_msgs
@@ -23,6 +23,7 @@ RDEPEND="
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

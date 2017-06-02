@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="This repository holds the current calibration data for Care-O-bot."
 HOMEPAGE="http://ros.org/wiki/cob_calibration_data"
-SRC_URI="https://github.com/ipa320/cob_calibration_data-release/archive/release/indigo/cob_calibration_data/0.6.6-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_calibration_data-release/archive/release/indigo/cob_calibration_data/0.6.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

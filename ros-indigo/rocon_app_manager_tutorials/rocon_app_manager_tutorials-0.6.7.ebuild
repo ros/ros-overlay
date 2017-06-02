@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Tutorials for the rocon app manager."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_tutorials-release/archive/release/indigo/rocon_app_manager_tutorials/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_tutorials-release/archive/release/indigo/rocon_app_manager_tutorials/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_master_info
-    ros-indigo/turtle_concert
-    ros-indigo/rocon_interactions
-    ros-indigo/rocon_remocon
-    ros-indigo/rocon_qt_listener
     ros-indigo/rocon_app_manager
-    ros-indigo/turtlesim
     ros-indigo/rocon_apps
+    ros-indigo/rocon_interactions
+    ros-indigo/rocon_master_info
+    ros-indigo/rocon_qt_listener
+    ros-indigo/rocon_remocon
     ros-indigo/rosbridge_server
+    ros-indigo/turtle_concert
+    ros-indigo/turtlesim
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,44 +5,46 @@ EAPI=6
 
 DESCRIPTION="RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/introlab/rtabmap_ros-release/archive/release/kinetic/rtabmap_ros/0.11.13-0.tar.gz"
+SRC_URI="https://github.com/introlab/rtabmap_ros-release/archive/release/kinetic/rtabmap_ros/0.11.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/laser_geometry
+    ros-kinetic/class_loader
+    ros-kinetic/costmap_2d
+    ros-kinetic/cv_bridge
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/eigen_conversions
+    ros-kinetic/geometry_msgs
+    ros-kinetic/image_geometry
+    ros-kinetic/image_transport
     ros-kinetic/image_transport_plugins
-    ros-kinetic/std_msgs
+    ros-kinetic/laser_geometry
+    ros-kinetic/message_filters
+    ros-kinetic/move_base_msgs
+    ros-kinetic/nav_msgs
+    ros-kinetic/nodelet
+    ros-kinetic/octomap_ros
+    ros-kinetic/pcl_conversions
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/rospy
+    ros-kinetic/rtabmap
     ros-kinetic/rviz
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/stereo_msgs
+    ros-kinetic/tf
     ros-kinetic/tf2_ros
     ros-kinetic/tf_conversions
-    ros-kinetic/rtabmap
-    ros-kinetic/image_transport
-    ros-kinetic/stereo_msgs
-    ros-kinetic/eigen_conversions
-    ros-kinetic/sensor_msgs
-    ros-kinetic/pcl_conversions
-    ros-kinetic/cv_bridge
-    ros-kinetic/costmap_2d
-    ros-kinetic/nodelet
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/rospy
-    ros-kinetic/move_base_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/octomap_ros
-    ros-kinetic/std_srvs
     ros-kinetic/visualization_msgs
-    ros-kinetic/tf
-    ros-kinetic/image_geometry
-    ros-kinetic/class_loader
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/pcl_ros
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
+    ros-kinetic/genmsg
     sci-libs/pcl
 "
 
@@ -51,9 +53,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/rgbd_launch-release/archive/release/lunar/rg
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/depth_image_proc
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/tf2_ros
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

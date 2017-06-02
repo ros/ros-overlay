@@ -5,30 +5,31 @@ EAPI=6
 
 DESCRIPTION="Clearpath Husky robot driver"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/husky_robot-release/archive/release/indigo/husky_base/0.2.6-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky_robot-release/archive/release/indigo/husky_base/0.2.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/husky_control
-    ros-indigo/topic_tools
     ros-indigo/controller_manager
-    ros-indigo/husky_description
-    ros-indigo/geometry_msgs
-    ros-indigo/roscpp
-    ros-indigo/diff_drive_controller
-    ros-indigo/diagnostic_msgs
-    ros-indigo/husky_msgs
     ros-indigo/diagnostic_aggregator
-    ros-indigo/sensor_msgs
-    ros-indigo/hardware_interface
+    ros-indigo/diagnostic_msgs
     ros-indigo/diagnostic_updater
+    ros-indigo/diff_drive_controller
+    ros-indigo/geometry_msgs
+    ros-indigo/hardware_interface
+    ros-indigo/husky_control
+    ros-indigo/husky_description
+    ros-indigo/husky_msgs
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/topic_tools
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslint
+    ros-indigo/catkin
     ros-indigo/roslaunch
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

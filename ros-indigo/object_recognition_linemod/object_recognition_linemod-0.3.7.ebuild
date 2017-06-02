@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="An object recognition pipeline that uses LINE-MOD from OpenCV"
 HOMEPAGE="https://github.com/wg-perception/linemod"
-SRC_URI="https://github.com/ros-gbp/object_recognition_linemod-release/archive/release/indigo/object_recognition_linemod/0.3.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_linemod-release/archive/release/indigo/object_recognition_linemod/0.3.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/object_recognition_renderer
-    ros-indigo/object_recognition_core
     ros-indigo/ecto
+    ros-indigo/object_recognition_core
+    ros-indigo/object_recognition_renderer
     ros-indigo/opencv_candidate
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

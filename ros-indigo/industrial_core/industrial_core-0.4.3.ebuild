@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="ROS-Industrial core stack contains packages and libraries for supporing industri"
 HOMEPAGE="http://ros.org/wiki/industrial_core"
-SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/industrial_core/0.4.3-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/indigo/industrial_core/0.4.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/industrial_robot_simulator
     ros-indigo/industrial_deprecated
-    ros-indigo/industrial_robot_client
-    ros-indigo/industrial_trajectory_filters
-    ros-indigo/simple_message
     ros-indigo/industrial_msgs
+    ros-indigo/industrial_robot_client
+    ros-indigo/industrial_robot_simulator
+    ros-indigo/industrial_trajectory_filters
     ros-indigo/industrial_utils
+    ros-indigo/simple_message
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

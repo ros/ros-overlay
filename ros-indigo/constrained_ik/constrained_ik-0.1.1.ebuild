@@ -5,28 +5,29 @@ EAPI=6
 
 DESCRIPTION="Constraint-based IK solver.  Good for high-DOF robots or underconstrained tasks."
 HOMEPAGE="http://ros.org/wiki/constrained_ik"
-SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/constrained_ik/0.1.1-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/constrained_ik/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache 2.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/cmake_modules
     ros-indigo/dynamic_reconfigure
-    ros-indigo/pluginlib
-    ros-indigo/tf_conversions
+    ros-indigo/eigen_conversions
     ros-indigo/industrial_collision_detection
-    ros-indigo/orocos_kdl
-    ros-indigo/roscpp
-    ros-indigo/urdf
+    ros-indigo/kdl_parser
     ros-indigo/moveit_core
     ros-indigo/moveit_ros_planning
-    ros-indigo/eigen_conversions
-    ros-indigo/kdl_parser
+    ros-indigo/orocos_kdl
+    ros-indigo/pluginlib
+    ros-indigo/roscpp
+    ros-indigo/tf_conversions
+    ros-indigo/urdf
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

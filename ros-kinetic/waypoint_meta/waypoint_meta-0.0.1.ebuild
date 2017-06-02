@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="Waypoint Meta package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/jihoonl/waypoint-release/archive/release/kinetic/waypoint_meta/0.0.1-0.tar.gz"
+SRC_URI="https://github.com/jihoonl/waypoint-release/archive/release/kinetic/waypoint_meta/0.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/waypoint_touring
     ros-kinetic/waypoint_generator
+    ros-kinetic/waypoint_touring
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

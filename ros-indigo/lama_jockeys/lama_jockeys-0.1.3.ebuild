@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="The lama_jockeys package contains base classes for learning,
   localizing, and n"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama-release/archive/release/indigo/lama_jockeys/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama-release/archive/release/indigo/lama_jockeys/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/lama_interfaces
     ros-indigo/actionlib
-    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
+    ros-indigo/lama_interfaces
     ros-indigo/lama_msgs
+    ros-indigo/message_runtime
     ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

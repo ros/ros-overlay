@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="Basic diagnostic_aggregator tests are  in the"
 HOMEPAGE="http://ros.org/wiki/test_diagnostic_aggregator"
-SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/test_diagnostic_aggregator/1.9.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/test_diagnostic_aggregator/1.9.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/roscpp
-    ros-kinetic/pluginlib
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/rospy
     ros-kinetic/diagnostic_aggregator
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/roscpp
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/rostest
 "
 
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

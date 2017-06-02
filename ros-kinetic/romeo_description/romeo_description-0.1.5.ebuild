@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="The romeo_description package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_description/0.1.5-0.tar.gz"
+SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_description/0.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/xacro
     ros-kinetic/message_filters
-    ros-kinetic/roscpp
-    ros-kinetic/urdf
-    ros-kinetic/sensor_msgs
     ros-kinetic/robot_state_publisher
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/tf
+    ros-kinetic/urdf
+    ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Keyboard teleoperation for Kobuki: relays commands from a keyboard to Kobuki."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/indigo/kobuki_keyop/0.6.8-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/indigo/kobuki_keyop/0.6.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_velocity_smoother
-    ros-indigo/geometry_msgs
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/kobuki_msgs
-    ros-indigo/roscpp
-    ros-indigo/ecl_time
-    ros-indigo/std_msgs
-    ros-indigo/std_srvs
     ros-indigo/ecl_exceptions
     ros-indigo/ecl_threads
+    ros-indigo/ecl_time
+    ros-indigo/geometry_msgs
+    ros-indigo/kobuki_msgs
+    ros-indigo/roscpp
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
+    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/yocs_velocity_smoother
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

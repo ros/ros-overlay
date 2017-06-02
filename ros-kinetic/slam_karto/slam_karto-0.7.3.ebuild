@@ -6,25 +6,26 @@ EAPI=6
 DESCRIPTION="This package pulls in the Karto mapping library, and provides a ROS
      wrapper"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/slam_karto-release/archive/release/kinetic/slam_karto/0.7.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/slam_karto-release/archive/release/kinetic/slam_karto/0.7.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/visualization_msgs
-    ros-kinetic/nav_msgs
     ros-kinetic/message_filters
-    ros-kinetic/roscpp
+    ros-kinetic/nav_msgs
     ros-kinetic/open_karto
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf
     ros-kinetic/rosconsole
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/sparse_bundle_adjustment
+    ros-kinetic/tf
+    ros-kinetic/visualization_msgs
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

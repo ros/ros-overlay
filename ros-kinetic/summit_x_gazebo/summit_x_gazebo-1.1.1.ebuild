@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="Launch files and world files to start the models in gazebo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/summit_x_sim-release/archive/release/kinetic/summit_x_gazebo/1.1.1-0.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/summit_x_sim-release/archive/release/kinetic/summit_x_gazebo/1.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/summit_x_description
     ros-kinetic/gazebo_ros
-    ros-kinetic/xacro
-    ros-kinetic/summit_x_robot_control
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/std_srvs
     ros-kinetic/summit_x_control
+    ros-kinetic/summit_x_description
+    ros-kinetic/summit_x_robot_control
     ros-kinetic/tf
+    ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

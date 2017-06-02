@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/messa
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosconsole
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
     ros-lunar/rosunit
     dev-libs/boost

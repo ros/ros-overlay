@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION="octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to ot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/indigo/octomap_server/0.6.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/indigo/octomap_server/0.6.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/dynamic_reconfigure
-    ros-indigo/octomap_msgs
-    ros-indigo/nodelet
     ros-indigo/nav_msgs
+    ros-indigo/nodelet
     ros-indigo/octomap
-    ros-indigo/std_srvs
+    ros-indigo/octomap_msgs
+    ros-indigo/octomap_ros
+    ros-indigo/pcl_conversions
     ros-indigo/pcl_ros
     ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/octomap_ros
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/std_srvs
     ros-indigo/visualization_msgs
-    ros-indigo/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     sci-libs/pcl
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

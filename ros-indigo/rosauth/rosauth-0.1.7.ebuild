@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="Server Side tools for Authorization and Authentication of ROS Clients"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/rosauth-release/archive/release/indigo/rosauth/0.1.7-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/rosauth-release/archive/release/indigo/rosauth/0.1.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roscpp
     ros-indigo/message_runtime
+    ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
+    ros-indigo/catkin
     ros-indigo/message_generation
+    ros-indigo/rostest
     dev-libs/openssl
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

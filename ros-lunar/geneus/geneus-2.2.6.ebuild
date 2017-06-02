@@ -9,12 +9,13 @@ SRC_URI="https://github.com/tork-a/geneus-release/archive/release/lunar/geneus/2
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/genmsg
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

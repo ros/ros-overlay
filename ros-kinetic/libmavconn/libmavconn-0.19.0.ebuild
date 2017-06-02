@@ -6,10 +6,10 @@ EAPI=6
 DESCRIPTION="MAVLink communication library.
     This library provide unified connection handl"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.19.0-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( GPLv3 LGPLv3 BSD )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/mavlink
@@ -17,6 +17,7 @@ RDEPEND="
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

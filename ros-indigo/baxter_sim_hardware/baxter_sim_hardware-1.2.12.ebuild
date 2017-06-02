@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Publishes the state information and emulates few hardware interfaces for use wit"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_hardware/1.2.12-0.tar.gz"
+SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_hardware/1.2.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/controller_manager
-    ros-indigo/image_transport
-    ros-indigo/baxter_sim_kinematics
     ros-indigo/baxter_core_msgs
-    ros-indigo/roscpp
+    ros-indigo/baxter_sim_kinematics
+    ros-indigo/controller_manager
     ros-indigo/cv_bridge
+    ros-indigo/image_transport
+    ros-indigo/roscpp
     media-libs/opencv
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
     ros-indigo/std_msgs
     ros-indigo/tf
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

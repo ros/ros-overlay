@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="A simple, flexible and scalable 2D multi-robot simulator."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/indigo/stdr_simulator/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/indigo/stdr_simulator/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/stdr_gui
     ros-indigo/stdr_launchers
+    ros-indigo/stdr_msgs
     ros-indigo/stdr_parser
-    ros-indigo/stdr_server
     ros-indigo/stdr_resources
     ros-indigo/stdr_robot
-    ros-indigo/stdr_msgs
     ros-indigo/stdr_samples
-    ros-indigo/stdr_gui
+    ros-indigo/stdr_server
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

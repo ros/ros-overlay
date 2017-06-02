@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/pr2_common-release/archive/release/lunar/pr2
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/pr2_dashboard_aggregator
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/pr2_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

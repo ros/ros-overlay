@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="resized_image_transport"
 HOMEPAGE="http://ros.org/wiki/resized_image_transport"
-SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/resized_image_transport/1.1.1-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/resized_image_transport/1.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nodelet
-    ros-kinetic/image_transport
-    ros-kinetic/std_srvs
-    ros-kinetic/message_runtime
-    ros-kinetic/jsk_topic_tools
-    ros-kinetic/sensor_msgs
     ros-kinetic/cv_bridge
+    ros-kinetic/image_transport
+    ros-kinetic/jsk_topic_tools
+    ros-kinetic/message_runtime
+    ros-kinetic/nodelet
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

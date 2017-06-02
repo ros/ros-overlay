@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="URDF description for Heron"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/heron-release/archive/release/indigo/heron_description/0.2.2-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/heron-release/archive/release/indigo/heron_description/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/lms1xx
     ros-indigo/robot_state_publisher
     ros-indigo/urdf
     ros-indigo/xacro
-    ros-indigo/lms1xx
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Driver for IDS Imaging uEye cameras."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/kmhallen/ueye-release/archive/release/indigo/ueye/0.0.10-0.tar.gz"
+SRC_URI="https://github.com/kmhallen/ueye-release/archive/release/indigo/ueye/0.0.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/nodelet
-    ros-indigo/image_transport
-    ros-indigo/roslib
     ros-indigo/camera_calibration_parsers
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/image_transport
+    ros-indigo/nodelet
     ros-indigo/roscpp
+    ros-indigo/roslib
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
     ros-indigo/rostest
 "
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

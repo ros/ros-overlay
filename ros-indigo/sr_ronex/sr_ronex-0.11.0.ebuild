@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="This stack contains the different packages related to the RoNeX (Robot Nervous S"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ronex-release/archive/release/indigo/sr_ronex/0.11.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ronex-release/archive/release/indigo/sr_ronex/0.11.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/sr_ronex_controllers
+    ros-indigo/sr_ronex_drivers
+    ros-indigo/sr_ronex_examples
+    ros-indigo/sr_ronex_external_protocol
+    ros-indigo/sr_ronex_hardware_interface
+    ros-indigo/sr_ronex_launch
     ros-indigo/sr_ronex_msgs
     ros-indigo/sr_ronex_transmissions
-    ros-indigo/sr_ronex_hardware_interface
-    ros-indigo/sr_ronex_drivers
     ros-indigo/sr_ronex_utilities
-    ros-indigo/sr_ronex_examples
-    ros-indigo/sr_ronex_controllers
-    ros-indigo/sr_ronex_external_protocol
-    ros-indigo/sr_ronex_launch
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

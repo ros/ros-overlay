@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Package for interfacing to the ROSflight autopilot firmware over MAVLink"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/0.1.2-0.tar.gz"
+SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/0.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosflight_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
-    ros-kinetic/std_msgs
+    ros-kinetic/rosflight_msgs
     ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/std_srvs
     ros-kinetic/tf
+    dev-libs/boost
     dev-cpp/eigen
     dev-cpp/yaml-cpp
-    dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-vcs/git
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

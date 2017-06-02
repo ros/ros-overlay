@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/paulbovbel/frontier_exploration-release/archive/release/indigo/frontier_exploration/0.3.0-0.tar.gz"
+SRC_URI="https://github.com/paulbovbel/frontier_exploration-release/archive/release/indigo/frontier_exploration/0.3.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
-    ros-indigo/visualization_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
-    ros-indigo/message_runtime
     ros-indigo/actionlib_msgs
+    ros-indigo/costmap_2d
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
     ros-indigo/move_base_msgs
     ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/tf
-    ros-indigo/costmap_2d
+    ros-indigo/visualization_msgs
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
     sci-libs/pcl
 "
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

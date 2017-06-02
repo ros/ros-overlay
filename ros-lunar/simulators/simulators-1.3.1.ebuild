@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/lunar/s
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/gazebo_ros_pkgs
@@ -19,6 +19,7 @@ RDEPEND="
     ros-lunar/stage_ros
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

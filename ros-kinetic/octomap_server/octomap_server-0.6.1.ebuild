@@ -5,29 +5,30 @@ EAPI=6
 
 DESCRIPTION="octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to ot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/dynamic_reconfigure
-    ros-kinetic/octomap_msgs
-    ros-kinetic/nodelet
     ros-kinetic/nav_msgs
+    ros-kinetic/nodelet
     ros-kinetic/octomap
-    ros-kinetic/std_srvs
+    ros-kinetic/octomap_msgs
+    ros-kinetic/octomap_ros
+    ros-kinetic/pcl_conversions
     ros-kinetic/pcl_ros
     ros-kinetic/roscpp
-    ros-kinetic/std_msgs
-    ros-kinetic/octomap_ros
     ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
     ros-kinetic/visualization_msgs
-    ros-kinetic/pcl_conversions
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     sci-libs/pcl
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

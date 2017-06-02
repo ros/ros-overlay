@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/control_toolbox-release/archive/release/luna
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cmake_modules
@@ -22,6 +22,7 @@ RDEPEND="
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

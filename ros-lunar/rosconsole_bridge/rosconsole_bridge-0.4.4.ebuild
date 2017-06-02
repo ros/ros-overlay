@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/lu
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosconsole
     dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

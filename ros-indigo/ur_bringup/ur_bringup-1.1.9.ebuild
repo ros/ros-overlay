@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The ur_bringup package"
 HOMEPAGE="http://ros.org/wiki/ur_bringup"
-SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_bringup/1.1.9-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_bringup/1.1.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/ur_driver
     ros-indigo/tf2_ros
     ros-indigo/ur_description
+    ros-indigo/ur_driver
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

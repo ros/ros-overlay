@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Grasp generation for Care-O-bot based on OpenRAVE"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_grasp_generation/0.6.4-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_grasp_generation/0.6.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_msgs
-    ros-indigo/rospy
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
-    ros-indigo/message_runtime
-    ros-indigo/roslib
     ros-indigo/actionlib_msgs
-    ros-indigo/trajectory_msgs
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/moveit_msgs
+    ros-indigo/roslib
+    ros-indigo/rospy
     ros-indigo/tf
+    ros-indigo/trajectory_msgs
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

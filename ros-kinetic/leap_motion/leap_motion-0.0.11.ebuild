@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="ROS driver for the Leap Motion gesture sensor"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/leap_motion-release/archive/release/kinetic/leap_motion/0.0.11-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/leap_motion-release/archive/release/kinetic/leap_motion/0.0.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/camera_calibration_parsers
     ros-kinetic/camera_info_manager
+    ros-kinetic/geometry_msgs
+    ros-kinetic/image_transport
+    ros-kinetic/message_runtime
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
     ros-kinetic/rospack
     ros-kinetic/rospy
-    ros-kinetic/image_transport
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/roslib
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,28 +5,30 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt that offer simpler interfaces to planning and execution"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_ros_planning_interface/0.7.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_ros_planning_interface/0.7.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/tf_conversions
-    ros-indigo/rospy
     ros-indigo/actionlib
-    ros-indigo/moveit_ros_move_group
-    ros-indigo/roscpp
-    ros-indigo/moveit_ros_manipulation
     ros-indigo/eigen_conversions
+    ros-indigo/moveit_ros_manipulation
+    ros-indigo/moveit_ros_move_group
     ros-indigo/moveit_ros_planning
-    ros-indigo/tf
-    ros-indigo/rosconsole
     ros-indigo/moveit_ros_warehouse
+    ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/rospy
+    ros-indigo/tf
+    ros-indigo/tf_conversions
     dev-lang/python
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
+    dev-python/catkin_pkg
 "
 
 SLOT="0/0"
@@ -34,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

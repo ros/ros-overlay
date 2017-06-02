@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="ROSH plugin for packages in the common stack"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OSUrobotics/rosh_robot_plugins-release/archive/release/indigo/rosh_common/1.0.2-0.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/rosh_robot_plugins-release/archive/release/indigo/rosh_common/1.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosh
-    ros-indigo/rospy
-    ros-indigo/nav_msgs
     ros-indigo/actionlib
+    ros-indigo/nav_msgs
+    ros-indigo/rosh
     ros-indigo/roslib
-    ros-indigo/rostopic
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
     ros-indigo/rosmsg
+    ros-indigo/rospy
+    ros-indigo/rostopic
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

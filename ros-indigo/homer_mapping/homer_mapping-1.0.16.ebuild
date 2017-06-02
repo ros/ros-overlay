@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_mapnav/archive/release/indigo/homer_mapping/1.0.16-0.tar.gz"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_mapnav/archive/release/indigo/homer_mapping/1.0.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL-v2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
     ros-indigo/homer_mapnav_msgs
-    ros-indigo/roslib
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
     ros-indigo/homer_nav_libs
+    ros-indigo/nav_msgs
+    ros-indigo/roscpp
+    ros-indigo/roslib
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
     ros-indigo/tf
+    dev-qt/qtcore
+    dev-qt/qtcore
     dev-qt/qtgui
-    dev-qt/qtcore
-    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

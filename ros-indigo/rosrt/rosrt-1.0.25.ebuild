@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="rosrt provides classes for interfacing with ROS from within realtime systems, su"
 HOMEPAGE="http://ros.org/wiki/rosrt"
-SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/indigo/rosrt/1.0.25-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/indigo/rosrt/1.0.25-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rosunit
-    ros-indigo/lockfree
-    ros-indigo/roslib
-    ros-indigo/roscpp
-    ros-indigo/std_msgs
-    ros-indigo/rosatomic
     ros-indigo/allocators
+    ros-indigo/lockfree
+    ros-indigo/rosatomic
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/rosunit
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="jsk_interactive"
 HOMEPAGE="http://ros.org/wiki/jsk_interactive"
-SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/indigo/jsk_interactive/2.1.0-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_visualization-release/archive/release/indigo/jsk_interactive/2.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib
     ros-indigo/dynamic_tf_publisher
+    ros-indigo/geometry_msgs
     ros-indigo/jsk_interactive_marker
     ros-indigo/rospy
-    ros-indigo/geometry_msgs
-    ros-indigo/actionlib
     ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rosbuild
+    ros-indigo/catkin
     ros-indigo/mk
+    ros-indigo/rosbuild
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

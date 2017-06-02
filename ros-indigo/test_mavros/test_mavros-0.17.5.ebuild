@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/indigo/test_mavros/0.17.5-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/indigo/test_mavros/0.17.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPLv3 LGPLv3 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "GPLv3" "LGPLv3" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/mavros_extras
+    ros-indigo/control_toolbox
+    ros-indigo/eigen_conversions
     ros-indigo/geometry_msgs
     ros-indigo/mavros
+    ros-indigo/mavros_extras
     ros-indigo/roscpp
-    ros-indigo/eigen_conversions
     ros-indigo/std_msgs
     ros-indigo/tf2_ros
-    ros-indigo/control_toolbox
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/cmake_modules
     ros-indigo/angles
+    ros-indigo/catkin
+    ros-indigo/cmake_modules
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

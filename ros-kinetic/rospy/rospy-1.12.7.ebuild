@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/rospy"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rospy/1.12.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rospy/1.12.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
-    ros-kinetic/std_msgs
     ros-kinetic/genpy
+    ros-kinetic/roscpp
+    ros-kinetic/rosgraph
     ros-kinetic/rosgraph_msgs
-    dev-python/rospkg
+    ros-kinetic/roslib
+    ros-kinetic/std_msgs
     dev-python/numpy
+    dev-python/rospkg
     dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

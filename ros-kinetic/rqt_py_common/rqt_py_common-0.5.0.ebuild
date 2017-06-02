@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="rqt_py_common provides common functionality for rqt plugins written in Python.
  "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_py_common/0.5.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_py_common/0.5.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rospy
     ros-kinetic/actionlib
-    ros-kinetic/qt_gui
-    ros-kinetic/roslib
-    ros-kinetic/rostopic
-    ros-kinetic/rosbag
-    ros-kinetic/python_qt_binding
     ros-kinetic/genpy
+    ros-kinetic/python_qt_binding
+    ros-kinetic/qt_gui
+    ros-kinetic/rosbag
+    ros-kinetic/roslib
+    ros-kinetic/rospy
+    ros-kinetic/rostopic
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/genmsg
     ros-kinetic/std_msgs
 "
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

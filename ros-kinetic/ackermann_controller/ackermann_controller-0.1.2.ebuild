@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="The ackermann_controller package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/easymov/ackermann_controller-release/archive/release/kinetic/ackermann_controller/0.1.2-0.tar.gz"
+SRC_URI="https://github.com/easymov/ackermann_controller-release/archive/release/kinetic/ackermann_controller/0.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/angles
-    ros-kinetic/nav_msgs
-    ros-kinetic/forward_command_controller
-    ros-kinetic/roscpp
-    ros-kinetic/controller_interface
-    ros-kinetic/urdf
-    ros-kinetic/realtime_tools
     ros-kinetic/control_msgs
-    ros-kinetic/tf
-    ros-kinetic/hardware_interface
     ros-kinetic/control_toolbox
+    ros-kinetic/controller_interface
+    ros-kinetic/forward_command_controller
+    ros-kinetic/hardware_interface
+    ros-kinetic/nav_msgs
+    ros-kinetic/realtime_tools
+    ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/urdf
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

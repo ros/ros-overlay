@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="This is a meta package for robotics in concert(a.k.a rocon)"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon-release/archive/release/indigo/rocon/0.7.2-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon-release/archive/release/indigo/rocon/0.7.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_multimaster
     ros-indigo/concert_services
-    ros-indigo/rocon_concert
-    ros-indigo/rocon_qt_gui
-    ros-indigo/rocon_tutorials
-    ros-indigo/rocon_tools
     ros-indigo/rocon_app_platform
+    ros-indigo/rocon_concert
     ros-indigo/rocon_msgs
+    ros-indigo/rocon_multimaster
+    ros-indigo/rocon_qt_gui
+    ros-indigo/rocon_tools
+    ros-indigo/rocon_tutorials
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

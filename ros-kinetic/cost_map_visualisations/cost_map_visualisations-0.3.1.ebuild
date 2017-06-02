@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Visualisation tools for cost maps."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_visualisations/0.3.1-0.tar.gz"
+SRC_URI="https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_visualisations/0.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/ecl_console
-    ros-kinetic/cost_map_ros
-    ros-kinetic/roscpp
-    ros-kinetic/ecl_build
-    ros-kinetic/cost_map_msgs
-    ros-kinetic/ecl_command_line
     ros-kinetic/cost_map_core
+    ros-kinetic/cost_map_msgs
+    ros-kinetic/cost_map_ros
+    ros-kinetic/ecl_build
+    ros-kinetic/ecl_command_line
+    ros-kinetic/ecl_console
+    ros-kinetic/nav_msgs
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

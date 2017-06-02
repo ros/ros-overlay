@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="pr2_counterbalance_check"
 HOMEPAGE="http://ros.org/wiki/pr2_counterbalance_check"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_counterbalance_check/1.0.12-0.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_counterbalance_check/1.0.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/joint_qualification_controllers
     ros-indigo/actionlib
-    ros-indigo/pr2_self_test_msgs
+    ros-indigo/joint_qualification_controllers
     ros-indigo/pr2_controller_configuration
     ros-indigo/pr2_controller_manager
-    ros-indigo/std_msgs
     ros-indigo/pr2_controllers_msgs
+    ros-indigo/pr2_self_test_msgs
+    ros-indigo/rospy
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

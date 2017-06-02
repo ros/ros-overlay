@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="Launch files for Summit XL simulation."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_sim_bringup/1.0.9-2.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_sim_bringup/1.0.9-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/summit_xl_description
-    ros-kinetic/summit_xl_control
-    ros-kinetic/summit_xl_pad
     ros-kinetic/gazebo_ros
+    ros-kinetic/summit_xl_control
+    ros-kinetic/summit_xl_description
+    ros-kinetic/summit_xl_pad
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/roslaunch
 "
 
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

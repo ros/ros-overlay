@@ -9,16 +9,17 @@ SRC_URI="https://github.com/ros-gbp/srdfdom-release/archive/release/lunar/srdfdo
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/urdfdom_py
-    dev-libs/urdfdom_headers
-    dev-libs/console_bridge
-    dev-libs/tinyxml
     dev-libs/boost
+    dev-libs/console_bridge
+    dev-libs/urdfdom_headers
+    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/urdf
 "

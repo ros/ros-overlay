@@ -10,13 +10,14 @@ SRC_URI="https://github.com/ros-gbp/realtime_tools-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/roscpp
     ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

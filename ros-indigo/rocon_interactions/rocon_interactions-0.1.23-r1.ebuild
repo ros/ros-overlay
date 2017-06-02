@@ -5,31 +5,32 @@ EAPI=6
 
 DESCRIPTION="Interaction management for human interactive agents in the concert."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/indigo/rocon_interactions/0.1.23-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/indigo/rocon_interactions/0.1.23-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rocon_app_manager_msgs
-    ros-indigo/rocon_interaction_msgs
-    ros-indigo/rospy
-    ros-indigo/rocon_std_msgs
-    ros-indigo/rocon_python_comms
-    ros-indigo/unique_id
-    ros-indigo/rocon_icons
-    ros-indigo/rocon_python_utils
-    ros-indigo/rocon_uri
-    ros-indigo/std_msgs
     ros-indigo/genpy
-    ros-indigo/rocon_console
+    ros-indigo/rocon_app_manager_msgs
     ros-indigo/rocon_bubble_icons
+    ros-indigo/rocon_console
+    ros-indigo/rocon_icons
+    ros-indigo/rocon_interaction_msgs
+    ros-indigo/rocon_python_comms
+    ros-indigo/rocon_python_utils
+    ros-indigo/rocon_std_msgs
+    ros-indigo/rocon_uri
+    ros-indigo/rospy
+    ros-indigo/std_msgs
+    ros-indigo/unique_id
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
-    ros-indigo/rostest
+    ros-indigo/catkin
     ros-indigo/roslint
+    ros-indigo/rostest
     dev-python/catkin_pkg
 "
 
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

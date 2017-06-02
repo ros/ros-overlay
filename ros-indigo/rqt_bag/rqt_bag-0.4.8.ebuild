@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="rqt_bag provides a GUI plugin for displaying and replaying ROS bag files."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_bag-release/archive/release/indigo/rqt_bag/0.4.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_bag-release/archive/release/indigo/rqt_bag/0.4.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/python_qt_binding
+    ros-indigo/rosbag
+    ros-indigo/rosgraph_msgs
+    ros-indigo/roslib
     ros-indigo/rosnode
     ros-indigo/rospy
     ros-indigo/rqt_gui
-    ros-indigo/roslib
-    ros-indigo/rosbag
-    ros-indigo/python_qt_binding
-    ros-indigo/rosgraph_msgs
     ros-indigo/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

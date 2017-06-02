@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="The concert framework modules."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/rocon_concert/0.6.11-1.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/rocon_concert/0.6.11-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/concert_service_link_graph
-    ros-indigo/concert_utilities
-    ros-indigo/concert_schedulers
-    ros-indigo/concert_service_manager
-    ros-indigo/concert_master
-    ros-indigo/rocon_tf_reconstructor
-    ros-indigo/concert_software_farmer
-    ros-indigo/concert_service_utilities
     ros-indigo/concert_conductor
+    ros-indigo/concert_master
+    ros-indigo/concert_schedulers
+    ros-indigo/concert_service_link_graph
+    ros-indigo/concert_service_manager
+    ros-indigo/concert_service_utilities
+    ros-indigo/concert_software_farmer
+    ros-indigo/concert_utilities
+    ros-indigo/rocon_tf_reconstructor
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

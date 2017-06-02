@@ -11,13 +11,14 @@ SRC_URI="https://github.com/ros-geographic-info/unique_identifier-release/archiv
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/unique_id
     ros-lunar/uuid_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

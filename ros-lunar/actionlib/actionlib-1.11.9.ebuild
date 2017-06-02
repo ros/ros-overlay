@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/lunar/acti
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib_msgs
@@ -22,6 +22,7 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

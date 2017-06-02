@@ -9,7 +9,7 @@ SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_
 
 LICENSE="BSD, GPL"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/imu_complementary_filter
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/rviz_imu_plugin
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

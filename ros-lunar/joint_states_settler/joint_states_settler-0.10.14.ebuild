@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/lunar/jo
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib
@@ -22,6 +22,7 @@ RDEPEND="
     ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

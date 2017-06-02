@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/di
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_updater
@@ -18,6 +18,7 @@ RDEPEND="
     app-admin/hddtemp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

@@ -6,16 +6,17 @@ EAPI=6
 DESCRIPTION="This package contains the description (mechanical, kinematic, visual,
   etc.) of"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_description/1.12.0-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_description/1.12.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/convex_decomposition
     ros-kinetic/ivcon
 "
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -8,25 +8,26 @@ DESCRIPTION="roseus_smach
      * Euslisp state machine class. it will be moved.
      * Messa"
 HOMEPAGE="http://ros.org/wiki/roseus_smach"
-SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/indigo/roseus_smach/1.6.1-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/indigo/roseus_smach/1.6.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/smach
-    ros-indigo/actionlib_tutorials
     ros-indigo/actionlib
-    ros-indigo/smach_msgs
+    ros-indigo/actionlib_tutorials
+    ros-indigo/euslisp
     ros-indigo/message_runtime
     ros-indigo/roseus
-    ros-indigo/euslisp
-    ros-indigo/std_msgs
-    ros-indigo/smach_ros
     ros-indigo/rostest
+    ros-indigo/smach
+    ros-indigo/smach_msgs
+    ros-indigo/smach_ros
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

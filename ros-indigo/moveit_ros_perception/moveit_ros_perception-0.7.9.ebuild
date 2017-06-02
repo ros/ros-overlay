@@ -5,31 +5,32 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt connecting to perception"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_ros_perception/0.7.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/moveit_ros_perception/0.7.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/tf_conversions
+    ros-indigo/cv_bridge
+    ros-indigo/image_transport
+    ros-indigo/message_filters
+    ros-indigo/moveit_core
     ros-indigo/moveit_msgs
     ros-indigo/octomap
-    ros-indigo/message_filters
-    ros-indigo/image_transport
+    ros-indigo/pluginlib
+    ros-indigo/rosconsole
     ros-indigo/roscpp
-    ros-indigo/moveit_core
-    ros-indigo/urdf
     ros-indigo/sensor_msgs
     ros-indigo/tf
-    ros-indigo/rosconsole
-    ros-indigo/cv_bridge
+    ros-indigo/tf_conversions
+    ros-indigo/urdf
     media-libs/freeglut
     media-libs/glew
     media-libs/mesa
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
 "
 
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

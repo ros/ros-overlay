@@ -6,30 +6,31 @@ EAPI=6
 DESCRIPTION="Robot scavenger hunt interfaces for the Building-Wide Intelligence
     project o"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/bwi_common-release/archive/release/indigo/bwi_scavenger/0.3.12-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/bwi_common-release/archive/release/indigo/bwi_scavenger/0.3.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/bwi_msgs
-    ros-indigo/bwi_kr_execution
-    ros-indigo/image_transport
     ros-indigo/actionlib
     ros-indigo/actionlib_msgs
+    ros-indigo/bwi_kr_execution
+    ros-indigo/bwi_msgs
+    ros-indigo/cv_bridge
+    ros-indigo/image_transport
     ros-indigo/message_runtime
-    ros-indigo/pcl_ros
     ros-indigo/move_base_msgs
+    ros-indigo/pcl_ros
     ros-indigo/roscpp
     ros-indigo/sound_play
     ros-indigo/std_msgs
     ros-indigo/visualization_msgs
-    ros-indigo/cv_bridge
-    dev-cpp/yaml-cpp
     dev-libs/boost
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

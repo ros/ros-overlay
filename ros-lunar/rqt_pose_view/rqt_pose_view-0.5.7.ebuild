@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/rqt_pose_view-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -25,6 +25,7 @@ RDEPEND="
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

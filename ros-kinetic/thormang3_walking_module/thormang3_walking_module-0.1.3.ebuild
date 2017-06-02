@@ -6,26 +6,27 @@ EAPI=6
 DESCRIPTION="This package is a motion module for thormang3 walking.
     This package provides"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_walking_module/0.1.3-0.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_walking_module/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cmake_modules
+    ros-kinetic/eigen_conversions
+    ros-kinetic/robotis_controller_msgs
     ros-kinetic/robotis_framework_common
+    ros-kinetic/robotis_math
+    ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/thormang3_balance_control
     ros-kinetic/thormang3_kinematics_dynamics
     ros-kinetic/thormang3_walking_module_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/eigen_conversions
-    ros-kinetic/thormang3_balance_control
-    ros-kinetic/std_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/robotis_math
-    ros-kinetic/robotis_controller_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

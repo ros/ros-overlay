@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ros-gbp/nodelet_core-release/archive/release/lunar/n
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/nodelet
     ros-lunar/nodelet_topic_tools
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

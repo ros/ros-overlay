@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="An rqt plugin for SLAM using concert robots"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_qt_gui-release/archive/release/indigo/concert_qt_make_a_map/0.7.12-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_qt_gui-release/archive/release/indigo/concert_qt_make_a_map/0.7.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
     ros-indigo/qt_gui_py_common
-    ros-indigo/rqt_gui
-    ros-indigo/rocon_qt_library
-    ros-indigo/tf
     ros-indigo/rocon_console
+    ros-indigo/rocon_qt_library
+    ros-indigo/rospy
+    ros-indigo/rqt_gui
     ros-indigo/rqt_gui_py
+    ros-indigo/tf
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -9,13 +9,14 @@ SRC_URI="https://github.com/ktossell/libuvc-release/archive/release/lunar/libuvc
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

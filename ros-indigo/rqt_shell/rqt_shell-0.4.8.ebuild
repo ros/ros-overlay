@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="rqt_shell is a Python GUI plugin providing an interactive shell."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_shell-release/archive/release/indigo/rqt_shell/0.4.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_shell-release/archive/release/indigo/rqt_shell/0.4.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/python_qt_binding
+    ros-indigo/qt_gui
     ros-indigo/qt_gui_py_common
     ros-indigo/rqt_gui
-    ros-indigo/qt_gui
-    ros-indigo/python_qt_binding
     ros-indigo/rqt_gui_py
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

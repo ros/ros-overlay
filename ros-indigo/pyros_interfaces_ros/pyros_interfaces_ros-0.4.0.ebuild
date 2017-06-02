@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="Dynamic ROS interface for Pyros"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/pyros-rosinterface-rosrelease/archive/release/indigo/pyros_interfaces_ros/0.4.0-0.tar.gz"
+SRC_URI="https://github.com/asmodehn/pyros-rosinterface-rosrelease/archive/release/indigo/pyros_interfaces_ros/0.4.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/std_msgs
+    ros-indigo/message_runtime
     ros-indigo/pyros_common
     ros-indigo/pyros_utils
     ros-indigo/rospy
-    ros-indigo/message_runtime
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslint
-    ros-indigo/message_generation
+    ros-indigo/catkin
     ros-indigo/catkin_pip
+    ros-indigo/message_generation
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

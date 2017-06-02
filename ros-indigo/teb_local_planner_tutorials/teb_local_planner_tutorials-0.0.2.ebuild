@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="The teb_local_planner_tutorials package"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner_tutorials"
-SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/indigo/teb_local_planner_tutorials/0.0.2-0.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/indigo/teb_local_planner_tutorials/0.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/navigation
     ros-indigo/stage_ros
     ros-indigo/teb_local_planner
-    ros-indigo/navigation
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

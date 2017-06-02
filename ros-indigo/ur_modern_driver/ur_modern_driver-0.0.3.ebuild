@@ -5,28 +5,29 @@ EAPI=6
 
 DESCRIPTION="The new driver for the UR3/UR5/UR10 robot arms from universal robots"
 HOMEPAGE="http://wiki.ros.org/ur_modern_driver"
-SRC_URI="https://github.com/clearpath-gbp/ur_modern_driver-release/archive/release/indigo/ur_modern_driver/0.0.3-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/ur_modern_driver-release/archive/release/indigo/ur_modern_driver/0.0.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Beerware"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib
+    ros-indigo/control_msgs
     ros-indigo/controller_manager
     ros-indigo/geometry_msgs
-    ros-indigo/ur_description
-    ros-indigo/actionlib
-    ros-indigo/roscpp
-    ros-indigo/ur_msgs
-    ros-indigo/std_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/trajectory_msgs
-    ros-indigo/control_msgs
-    ros-indigo/tf
-    ros-indigo/ros_controllers
     ros-indigo/hardware_interface
+    ros-indigo/ros_controllers
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/trajectory_msgs
+    ros-indigo/ur_description
+    ros-indigo/ur_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

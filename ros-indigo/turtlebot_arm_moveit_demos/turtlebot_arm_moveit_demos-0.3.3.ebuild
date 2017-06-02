@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="The turtlebot_arm_moveit_demos package contains scripts to start playing with a "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_arm-release/archive/release/indigo/turtlebot_arm_moveit_demos/0.3.3-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_arm-release/archive/release/indigo/turtlebot_arm_moveit_demos/0.3.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/geometry_msgs
+    ros-indigo/moveit_commander
     ros-indigo/moveit_msgs
     ros-indigo/rospy
-    ros-indigo/geometry_msgs
-    ros-indigo/trajectory_msgs
-    ros-indigo/moveit_commander
     ros-indigo/tf
+    ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

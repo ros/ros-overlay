@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="A metapackage which extends ros_core and includes other basic non-robot tools li"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/indigo/ros_base/1.1.5-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/indigo/ros_base/1.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib
+    ros-indigo/bond_core
+    ros-indigo/class_loader
     ros-indigo/dynamic_reconfigure
     ros-indigo/nodelet_core
     ros-indigo/pluginlib
-    ros-indigo/class_loader
-    ros-indigo/actionlib
-    ros-indigo/bond_core
     ros-indigo/ros_core
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

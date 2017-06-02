@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="Storage manager for OccupancyGrid maps.  Supports naming the most
     recent map"
 HOMEPAGE="http://ros.org/wiki/map_store"
-SRC_URI="https://github.com/ros-gbp/map_store-release/archive/release/indigo/map_store/0.3.1-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/map_store-release/archive/release/indigo/map_store/0.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/message_runtime
     ros-indigo/nav_msgs
+    ros-indigo/rosconsole
+    ros-indigo/roscpp
     ros-indigo/rospy
     ros-indigo/warehouse_ros
-    ros-indigo/message_runtime
-    ros-indigo/roscpp
-    ros-indigo/rosconsole
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

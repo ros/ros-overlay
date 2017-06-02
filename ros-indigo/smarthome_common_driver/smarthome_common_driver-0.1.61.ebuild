@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="This package is Common interface for RosJava."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosalfred-release/smarthome_common_driver-release/archive/release/indigo/smarthome_common_driver/0.1.61-0.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/smarthome_common_driver-release/archive/release/indigo/smarthome_common_driver/0.1.61-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/smarthome_network_zeroconf
-    ros-indigo/rosjava_dynamic_reconfigure
-    ros-indigo/smarthome_media_msgs_java
-    ros-indigo/smarthome_comm_msgs_java
     ros-indigo/rosjava_core
+    ros-indigo/rosjava_dynamic_reconfigure
     ros-indigo/rosjava_messages
+    ros-indigo/smarthome_comm_msgs_java
     ros-indigo/smarthome_heater_msgs_java
+    ros-indigo/smarthome_media_msgs_java
+    ros-indigo/smarthome_network_zeroconf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rosjava_build_tools
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

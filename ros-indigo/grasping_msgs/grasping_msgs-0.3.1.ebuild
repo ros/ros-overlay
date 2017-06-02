@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Messages for describing objects and how to grasp them."
 HOMEPAGE="http://ros.org/wiki/grasping_msgs"
-SRC_URI="https://github.com/mikeferguson/grasping_msgs-gbp/archive/release/indigo/grasping_msgs/0.3.1-0.tar.gz"
+SRC_URI="https://github.com/mikeferguson/grasping_msgs-gbp/archive/release/indigo/grasping_msgs/0.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
+    ros-indigo/geometry_msgs
     ros-indigo/message_runtime
+    ros-indigo/moveit_msgs
     ros-indigo/sensor_msgs
     ros-indigo/shape_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

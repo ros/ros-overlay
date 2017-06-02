@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="A package for mobile base control for SPUR omni-directional mobile manipulator r"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_controller/0.2.6-0.tar.gz"
+SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_controller/0.2.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joint_state_controller
+    ros-indigo/controller_manager
     ros-indigo/effort_controllers
+    ros-indigo/joint_state_controller
     ros-indigo/joint_state_publisher
     ros-indigo/robot_pose_ekf
-    ros-indigo/controller_manager
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="Simple tools and catkin modules for rosjava development."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosjava-release/rosjava_build_tools-release/archive/release/kinetic/rosjava_build_tools/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/rosjava-release/rosjava_build_tools-release/archive/release/kinetic/rosjava_build_tools/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/catkin
-    dev-java/sun-jdk
     dev-java/ant
+    dev-java/sun-jdk
 "
 DEPEND="${RDEPEND}
 "
@@ -24,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

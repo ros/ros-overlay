@@ -5,37 +5,38 @@ EAPI=6
 
 DESCRIPTION="jsk_topic_tools"
 HOMEPAGE="http://ros.org/wiki/jsk_topic_tools"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/jsk_topic_tools/2.2.2-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/jsk_topic_tools/2.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/topic_tools
-    ros-kinetic/std_msgs
-    ros-kinetic/rosnode
+    ros-kinetic/diagnostic_msgs
+    ros-kinetic/diagnostic_updater
     ros-kinetic/dynamic_tf_publisher
+    ros-kinetic/eigen_conversions
+    ros-kinetic/geometry_msgs
     ros-kinetic/image_transport
     ros-kinetic/message_runtime
-    ros-kinetic/sound_play
-    ros-kinetic/rostopic
-    ros-kinetic/eigen_conversions
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/sensor_msgs
     ros-kinetic/nodelet
-    ros-kinetic/roslaunch
     ros-kinetic/roscpp
+    ros-kinetic/roslaunch
+    ros-kinetic/rosnode
+    ros-kinetic/rostime
+    ros-kinetic/rostopic
+    ros-kinetic/sensor_msgs
+    ros-kinetic/sound_play
+    ros-kinetic/std_msgs
     ros-kinetic/std_srvs
     ros-kinetic/tf
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/geometry_msgs
-    ros-kinetic/rostime
-    media-libs/opencv
+    ros-kinetic/topic_tools
     dev-python/numpy
+    media-libs/opencv
     dev-libs/scipy
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
     ros-kinetic/rostest
 "
@@ -45,9 +46,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

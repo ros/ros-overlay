@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="This package provides a simple GUI for operating Care-O-bot."
 HOMEPAGE="http://www.ros.org/wiki/cob_command_gui"
-SRC_URI="https://github.com/ipa320/cob_command_tools-release/archive/release/indigo/cob_command_gui/0.6.5-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_command_tools-release/archive/release/indigo/cob_command_gui/0.6.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/cob_script_server
-    ros-indigo/rospy
     ros-indigo/cob_msgs
+    ros-indigo/cob_script_server
     ros-indigo/roslib
+    ros-indigo/rospy
     dev-python/pygraphviz
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

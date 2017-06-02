@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="phue wrapper package to use in rocon"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_devices-release/archive/release/indigo/rocon_hue/0.0.7-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_devices-release/archive/release/indigo/rocon_hue/0.0.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/roslint
-    ros-indigo/rocon_python_hue
     ros-indigo/rocon_device_msgs
+    ros-indigo/rocon_python_hue
+    ros-indigo/roslint
     ros-indigo/rospy
     dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

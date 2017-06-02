@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Navigation related tutorials."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/navigation_tutorials-release/archive/release/indigo/navigation_tutorials/0.2.3-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_tutorials-release/archive/release/indigo/navigation_tutorials/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/point_cloud_publisher_tutorial
     ros-indigo/laser_scan_publisher_tutorial
-    ros-indigo/odometry_publisher_tutorial
     ros-indigo/navigation_stage
-    ros-indigo/roomba_stage
+    ros-indigo/odometry_publisher_tutorial
+    ros-indigo/point_cloud_publisher_tutorial
     ros-indigo/robot_setup_tf_tutorial
+    ros-indigo/roomba_stage
     ros-indigo/simple_navigation_goals_tutorial
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

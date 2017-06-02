@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="This package contains a tool to convert Unified Robot Description Format (URDF) "
 HOMEPAGE="http://ros.org/wiki/collada_urdf"
-SRC_URI="https://github.com/ros-gbp/collada_urdf-release/archive/release/kinetic/collada_urdf/1.12.10-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/collada_urdf-release/archive/release/kinetic/collada_urdf/1.12.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/geometric_shapes
     ros-kinetic/angles
     ros-kinetic/collada_parser
+    ros-kinetic/geometric_shapes
     ros-kinetic/resource_retriever
     ros-kinetic/roscpp
-    ros-kinetic/urdf
     ros-kinetic/tf
-    media-libs/collada-dom
-    dev-libs/urdfdom_headers
-    dev-libs/urdfdom
+    ros-kinetic/urdf
     media-libs/assimp
+    dev-libs/collada-dom
+    dev-libs/urdfdom
+    dev-libs/urdfdom_headers
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
     media-libs/assimp
 "
@@ -34,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="publish end effector's force, which is estmated from joint torque value"
 HOMEPAGE="http://ros.org/wiki/virtual_force_publisher"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/virtual_force_publisher/2.2.2-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/virtual_force_publisher/2.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/geometry_msgs
-    ros-kinetic/urdf
     ros-kinetic/kdl_parser
-    ros-kinetic/tf_conversions
     ros-kinetic/sensor_msgs
+    ros-kinetic/tf_conversions
+    ros-kinetic/urdf
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

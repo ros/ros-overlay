@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Provides teleoperation using joysticks or keyboard."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot-release/archive/release/indigo/turtlebot_teleop/2.3.14-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot-release/archive/release/indigo/turtlebot_teleop/2.3.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/yocs_velocity_smoother
     ros-indigo/geometry_msgs
     ros-indigo/joy
-    ros-indigo/roscpp
     ros-indigo/kobuki_safety_controller
+    ros-indigo/roscpp
     ros-indigo/turtlebot_bringup
+    ros-indigo/yocs_velocity_smoother
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

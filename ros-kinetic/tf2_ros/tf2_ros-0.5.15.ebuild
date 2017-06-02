@@ -5,27 +5,28 @@ EAPI=6
 
 DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python and "
 HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_ros/0.5.15-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_ros/0.5.15-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosgraph
-    ros-kinetic/tf2_py
-    ros-kinetic/rospy
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_filters
     ros-kinetic/actionlib
     ros-kinetic/actionlib_msgs
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_filters
     ros-kinetic/roscpp
-    ros-kinetic/tf2_msgs
+    ros-kinetic/rosgraph
+    ros-kinetic/rospy
     ros-kinetic/std_msgs
     ros-kinetic/tf2
+    ros-kinetic/tf2_msgs
+    ros-kinetic/tf2_py
     ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

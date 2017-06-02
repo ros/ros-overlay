@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The cob_extern stack contains third party libraries needed for operating Care-O-"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/cob_extern/0.6.10-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/cob_extern/0.6.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( LGPL proprietary )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "LGPL" "proprietary" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/libdlib
     ros-indigo/libntcan
-    ros-indigo/libpcan
     ros-indigo/libopengm
+    ros-indigo/libpcan
     ros-indigo/libphidgets
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

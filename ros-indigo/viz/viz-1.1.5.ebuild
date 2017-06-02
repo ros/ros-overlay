@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="A metapackage to aggregate several packages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/indigo/viz/1.1.5-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/indigo/viz/1.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/rqt_common_plugins
     ros-indigo/ros_base
+    ros-indigo/rqt_common_plugins
     ros-indigo/rqt_robot_plugins
+    ros-indigo/rviz
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

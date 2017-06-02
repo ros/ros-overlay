@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/message_generation-release/archive/release/l
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/gencpp
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/genpy
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

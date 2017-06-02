@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="image_transport should always be used to subscribe to and publish images. It pro"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/image_common-release/archive/release/kinetic/image_transport/1.11.12-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_common-release/archive/release/kinetic/image_transport/1.11.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/pluginlib
     ros-kinetic/message_filters
-    ros-kinetic/roslib
-    ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
+    ros-kinetic/pluginlib
     ros-kinetic/rosconsole
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

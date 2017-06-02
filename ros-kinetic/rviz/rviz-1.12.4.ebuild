@@ -5,50 +5,51 @@ EAPI=6
 
 DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/kinetic/rviz/1.12.4-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/kinetic/rviz/1.12.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD Creative Commons )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "Creative Commons" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/nav_msgs
-    ros-kinetic/laser_geometry
-    ros-kinetic/roslib
-    ros-kinetic/map_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/python_qt_binding
+    ros-kinetic/geometry_msgs
     ros-kinetic/image_transport
-    ros-kinetic/rosbag
-    ros-kinetic/sensor_msgs
-    ros-kinetic/resource_retriever
-    ros-kinetic/rospy
+    ros-kinetic/interactive_markers
+    ros-kinetic/laser_geometry
+    ros-kinetic/map_msgs
     ros-kinetic/media_export
+    ros-kinetic/message_filters
+    ros-kinetic/nav_msgs
+    ros-kinetic/pluginlib
+    ros-kinetic/python_qt_binding
+    ros-kinetic/resource_retriever
+    ros-kinetic/rosbag
+    ros-kinetic/rosconsole
     ros-kinetic/roscpp
-    ros-kinetic/urdf
+    ros-kinetic/roslib
+    ros-kinetic/rospy
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
     ros-kinetic/std_srvs
     ros-kinetic/tf
-    ros-kinetic/rosconsole
+    ros-kinetic/urdf
     ros-kinetic/visualization_msgs
-    ros-kinetic/pluginlib
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/interactive_markers
-    dev-cpp/eigen
-    media-libs/mesa
-    dev-qt/qtwidgets
-    dev-cpp/yaml-cpp
-    dev-qt/qtcore
-    dev-qt/qtopengl
-    dev-qt/qtgui
-    dev-libs/tinyxml
     media-libs/assimp
-    dev-libs/urdfdom_headers
+    dev-cpp/eigen
     dev-games/ogre
+    dev-qt/qtcore
+    dev-qt/qtgui
+    dev-qt/qtopengl
+    dev-qt/qtwidgets
+    dev-libs/urdfdom_headers
+    media-libs/mesa
+    dev-libs/tinyxml
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/cmake_modules
-    dev-qt/qtopengl
     media-libs/assimp
+    dev-qt/qtopengl
     dev-qt/qtcore
 "
 
@@ -57,9 +58,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="Unofficial driver and ROS node for Razer Hydra"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/razer_hydra-release/archive/release/indigo/razer_hydra/0.2.1-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/razer_hydra-release/archive/release/indigo/razer_hydra/0.2.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Public Domain"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
@@ -17,12 +17,13 @@ RDEPEND="
     ros-indigo/roscpp
     ros-indigo/std_msgs
     ros-indigo/tf
-    virtual/pkgconfig
     =dev-libs/libusb-1.0*
+    virtual/pkgconfig
 "
 DEPEND="${RDEPEND}
-    ros-indigo/message_generation
+    ros-indigo/catkin
     ros-indigo/genmsg
+    ros-indigo/message_generation
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

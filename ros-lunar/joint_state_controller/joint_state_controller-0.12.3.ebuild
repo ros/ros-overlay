@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/luna
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/controller_interface
@@ -20,6 +20,7 @@ RDEPEND="
     ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

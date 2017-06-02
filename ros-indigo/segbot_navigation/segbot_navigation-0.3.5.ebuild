@@ -6,28 +6,29 @@ EAPI=6
 DESCRIPTION="Contains launch files for running the ROS navigation stack on the segbot
     usi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_navigation/0.3.5-0.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/segbot-release/archive/release/indigo/segbot_navigation/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
-    ros-indigo/geometry_msgs
     ros-indigo/amcl
-    ros-indigo/gmapping
-    ros-indigo/global_planner
-    ros-indigo/move_base_msgs
     ros-indigo/bwi_interruptable_action_server
-    ros-indigo/segbot_bringup
     ros-indigo/eband_local_planner
+    ros-indigo/geometry_msgs
+    ros-indigo/global_planner
+    ros-indigo/gmapping
     ros-indigo/map_server
-    ros-indigo/rviz
-    ros-indigo/std_srvs
     ros-indigo/move_base
+    ros-indigo/move_base_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/rviz
+    ros-indigo/segbot_bringup
+    ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

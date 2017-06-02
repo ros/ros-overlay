@@ -5,15 +5,16 @@ EAPI=6
 
 DESCRIPTION="meshes for the Aldebaran Robotics NAO"
 HOMEPAGE="http://github.com/vrabaud/nao_meshes/"
-SRC_URI="https://github.com/ros-naoqi/nao_meshes-release/archive/release/indigo/nao_meshes/0.1.11-0.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/nao_meshes-release/archive/release/indigo/nao_meshes/0.1.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-java/sun-jdk
 "
 
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

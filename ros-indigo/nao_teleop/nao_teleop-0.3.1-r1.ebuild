@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Teleoperation (gamepad or joystick) for the Nao humanoid"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/nao_extras-release/archive/release/indigo/nao_teleop/0.3.1-1.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/nao_extras-release/archive/release/indigo/nao_teleop/0.3.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/joy
     ros-indigo/actionlib
+    ros-indigo/joy
     ros-indigo/naoqi_bridge_msgs
     ros-indigo/roscpp
-    ros-indigo/std_msgs
     ros-indigo/sensor_msgs
+    ros-indigo/std_msgs
     ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

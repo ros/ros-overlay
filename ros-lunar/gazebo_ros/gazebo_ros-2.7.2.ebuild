@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/luna
 
 LICENSE="Apache 2.0"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/dynamic_reconfigure
@@ -25,6 +25,7 @@ RDEPEND="
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/cmake_modules
 "
 

@@ -5,34 +5,35 @@ EAPI=6
 
 DESCRIPTION="Sawyer Roch robot driver"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/indigo/roch_base/1.0.14-0.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/indigo/roch_base/1.0.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nodelet
-    ros-indigo/topic_tools
-    ros-indigo/tf
     ros-indigo/angles
     ros-indigo/controller_manager
-    ros-indigo/roch_description
+    ros-indigo/diagnostic_aggregator
+    ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
+    ros-indigo/diff_drive_controller
     ros-indigo/geometry_msgs
+    ros-indigo/hardware_interface
+    ros-indigo/nodelet
+    ros-indigo/roch_control
+    ros-indigo/roch_description
     ros-indigo/roch_msgs
     ros-indigo/roscpp
-    ros-indigo/diff_drive_controller
-    ros-indigo/diagnostic_msgs
-    ros-indigo/std_msgs
-    ros-indigo/diagnostic_aggregator
     ros-indigo/sensor_msgs
-    ros-indigo/roch_control
-    ros-indigo/hardware_interface
-    ros-indigo/diagnostic_updater
+    ros-indigo/std_msgs
+    ros-indigo/tf
+    ros-indigo/topic_tools
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslint
+    ros-indigo/catkin
     ros-indigo/roslaunch
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -40,9 +41,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

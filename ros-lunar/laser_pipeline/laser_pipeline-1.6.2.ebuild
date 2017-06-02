@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/laser_pipeline-release/archive/release/lunar
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/laser_assembler
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/laser_geometry
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

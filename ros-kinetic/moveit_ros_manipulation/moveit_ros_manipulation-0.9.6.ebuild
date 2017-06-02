@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt used for manipulation"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.6-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/pluginlib
-    ros-kinetic/moveit_msgs
     ros-kinetic/actionlib
-    ros-kinetic/moveit_ros_move_group
-    ros-kinetic/roscpp
+    ros-kinetic/dynamic_reconfigure
     ros-kinetic/moveit_core
+    ros-kinetic/moveit_msgs
+    ros-kinetic/moveit_ros_move_group
     ros-kinetic/moveit_ros_planning
-    ros-kinetic/tf
+    ros-kinetic/pluginlib
     ros-kinetic/rosconsole
+    ros-kinetic/roscpp
+    ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     dev-cpp/eigen
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

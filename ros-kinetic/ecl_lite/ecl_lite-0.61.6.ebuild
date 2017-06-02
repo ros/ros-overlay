@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="Libraries and utilities for embedded and low-level linux development."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_lite-release/archive/release/kinetic/ecl_lite/0.61.6-0.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_lite-release/archive/release/kinetic/ecl_lite/0.61.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/ecl_io
-    ros-kinetic/ecl_errors
     ros-kinetic/ecl_config
     ros-kinetic/ecl_converters_lite
-    ros-kinetic/ecl_time_lite
+    ros-kinetic/ecl_errors
+    ros-kinetic/ecl_io
     ros-kinetic/ecl_sigslots_lite
+    ros-kinetic/ecl_time_lite
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

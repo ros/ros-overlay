@@ -9,12 +9,13 @@ SRC_URI="https://github.com/rohbotics/xv_11_laser_driver-release/archive/release
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
 "

@@ -6,17 +6,18 @@ EAPI=6
 DESCRIPTION="Metapackage grouping the packages C++ and Common LISP library
     packages for R"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/designator_integration-release/archive/release/indigo/designator_integration/0.0.3-0.tar.gz"
+SRC_URI="https://github.com/code-iai-release/designator_integration-release/archive/release/indigo/designator_integration/0.0.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/designator_integration_lisp
     ros-indigo/designator_integration_cpp
+    ros-indigo/designator_integration_lisp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

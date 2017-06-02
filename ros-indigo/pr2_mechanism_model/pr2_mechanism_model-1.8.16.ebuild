@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/pr2_mechanism_model"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/indigo/pr2_mechanism_model/1.8.16-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/indigo/pr2_mechanism_model/1.8.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
     ros-indigo/angles
+    ros-indigo/hardware_interface
+    ros-indigo/kdl_parser
+    ros-indigo/pluginlib
     ros-indigo/pr2_hardware_interface
     ros-indigo/roscpp
     ros-indigo/urdf
-    ros-indigo/kdl_parser
-    ros-indigo/hardware_interface
     dev-libs/urdfdom
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/cmake_modules
-    ros-indigo/rosunit
     ros-indigo/rostest
+    ros-indigo/rosunit
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

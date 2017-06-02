@@ -8,25 +8,26 @@ DESCRIPTION="roseus_smach
      * Euslisp state machine class. it will be moved.
      * Messa"
 HOMEPAGE="http://ros.org/wiki/roseus_smach"
-SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.6.1-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.6.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/smach
-    ros-kinetic/actionlib_tutorials
     ros-kinetic/actionlib
-    ros-kinetic/smach_msgs
+    ros-kinetic/actionlib_tutorials
+    ros-kinetic/euslisp
     ros-kinetic/message_runtime
     ros-kinetic/roseus
-    ros-kinetic/euslisp
-    ros-kinetic/std_msgs
-    ros-kinetic/smach_ros
     ros-kinetic/rostest
+    ros-kinetic/smach
+    ros-kinetic/smach_msgs
+    ros-kinetic/smach_ros
+    ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -35,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

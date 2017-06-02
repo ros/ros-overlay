@@ -5,28 +5,29 @@ EAPI=6
 
 DESCRIPTION="Segmentation Functionality from the RAIL Lab"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/rail_segmentation/archive/release/indigo/rail_segmentation/0.1.10-0.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/rail_segmentation/archive/release/indigo/rail_segmentation/0.1.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/message_runtime
+    ros-indigo/pcl_conversions
+    ros-indigo/pcl_ros
+    ros-indigo/rail_manipulation_msgs
+    ros-indigo/roscpp
+    ros-indigo/roslib
+    ros-indigo/sensor_msgs
+    ros-indigo/std_srvs
+    ros-indigo/tf
     ros-indigo/tf2
     ros-indigo/tf2_ros
-    ros-indigo/std_srvs
-    ros-indigo/message_runtime
-    ros-indigo/pcl_ros
-    ros-indigo/roslib
-    ros-indigo/roscpp
-    ros-indigo/rail_manipulation_msgs
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/pcl_conversions
-    dev-cpp/yaml-cpp
     dev-libs/boost
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
     virtual/pkgconfig
 "
@@ -36,9 +37,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

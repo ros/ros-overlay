@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="A generic canopen implementation for ROS"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/ros_canopen/0.6.7-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/ros_canopen/0.6.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/canopen_402
-    ros-indigo/canopen_motor_node
     ros-indigo/can_msgs
-    ros-indigo/socketcan_bridge
+    ros-indigo/canopen_402
     ros-indigo/canopen_chain_node
-    ros-indigo/socketcan_interface
     ros-indigo/canopen_master
+    ros-indigo/canopen_motor_node
+    ros-indigo/socketcan_bridge
+    ros-indigo/socketcan_interface
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

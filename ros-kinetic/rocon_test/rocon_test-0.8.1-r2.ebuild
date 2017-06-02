@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Rocon test framework (i.e. multi-launch rostest framework)."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_test/0.8.1-2.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_test/0.8.1-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosunit
-    ros-kinetic/rospy
-    ros-kinetic/roslaunch
-    ros-kinetic/rocon_python_utils
-    ros-kinetic/rostest
     ros-kinetic/rocon_console
     ros-kinetic/rocon_launch
+    ros-kinetic/rocon_python_utils
+    ros-kinetic/roslaunch
+    ros-kinetic/rospy
+    ros-kinetic/rostest
+    ros-kinetic/rosunit
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,16 +5,17 @@ EAPI=6
 
 DESCRIPTION="Teleop PS3 joystick application for the pr2"
 HOMEPAGE="http://ros.org/wiki/teleop"
-SRC_URI="https://github.com/pr2-gbp/pr2_ps3_joystick_app-release/archive/release/indigo/pr2_ps3_joystick_app/1.0.2-1.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_ps3_joystick_app-release/archive/release/indigo/pr2_ps3_joystick_app/1.0.2-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/pr2_teleop_general
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -22,9 +23,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,35 +5,36 @@ EAPI=6
 
 DESCRIPTION="turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base fun"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot-release/archive/release/indigo/turtlebot_bringup/2.3.14-0.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot-release/archive/release/indigo/turtlebot_bringup/2.3.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/kobuki_capabilities
-    ros-indigo/kobuki_node
-    ros-indigo/yocs_cmd_vel_mux
+    ros-indigo/astra_launch
+    ros-indigo/create_node
     ros-indigo/depthimage_to_laserscan
-    ros-indigo/turtlebot_capabilities
-    ros-indigo/robot_pose_ekf
+    ros-indigo/diagnostic_aggregator
     ros-indigo/freenect_launch
     ros-indigo/kobuki_bumper2pc
-    ros-indigo/openni2_launch
-    ros-indigo/turtlebot_description
-    ros-indigo/laptop_battery_monitor
-    ros-indigo/realsense_camera
-    ros-indigo/rocon_app_manager
+    ros-indigo/kobuki_capabilities
+    ros-indigo/kobuki_node
     ros-indigo/kobuki_safety_controller
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/rocon_bubble_icons
+    ros-indigo/laptop_battery_monitor
+    ros-indigo/openni2_launch
+    ros-indigo/realsense_camera
+    ros-indigo/robot_pose_ekf
     ros-indigo/robot_state_publisher
-    ros-indigo/astra_launch
+    ros-indigo/rocon_app_manager
+    ros-indigo/rocon_bubble_icons
+    ros-indigo/turtlebot_capabilities
+    ros-indigo/turtlebot_description
+    ros-indigo/yocs_cmd_vel_mux
     ros-indigo/zeroconf_avahi
-    ros-indigo/create_node
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -41,9 +42,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

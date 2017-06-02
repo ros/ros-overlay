@@ -10,7 +10,7 @@ SRC_URI="https://github.com/ros-gbp/openni_launch-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/nodelet
@@ -18,6 +18,7 @@ RDEPEND="
     ros-lunar/rgbd_launch
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/roslaunch
 "
 

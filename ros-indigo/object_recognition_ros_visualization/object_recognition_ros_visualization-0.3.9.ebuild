@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork dete"
 HOMEPAGE="wg-perception.github.io/object_recognition_ros"
-SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/indigo/object_recognition_ros_visualization/0.3.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/indigo/object_recognition_ros_visualization/0.3.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rviz
-    ros-indigo/pluginlib
     ros-indigo/object_recognition_msgs
     ros-indigo/object_recognition_ros
+    ros-indigo/pluginlib
+    ros-indigo/rviz
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

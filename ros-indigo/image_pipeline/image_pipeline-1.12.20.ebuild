@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="image_pipeline fills the gap between getting raw images from a camera driver and"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_pipeline/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_pipeline/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/stereo_image_proc
     ros-indigo/camera_calibration
-    ros-indigo/image_view
-    ros-indigo/image_proc
     ros-indigo/depth_image_proc
+    ros-indigo/image_proc
     ros-indigo/image_publisher
     ros-indigo/image_rotate
+    ros-indigo/image_view
+    ros-indigo/stereo_image_proc
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

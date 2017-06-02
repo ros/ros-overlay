@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/vrpn_client_ros-release/archive/release/indigo/vrpn_client_ros/0.1.0-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/vrpn_client_ros-release/archive/release/indigo/vrpn_client_ros/0.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/geometry_msgs
-    ros-indigo/tf2_ros
     ros-indigo/roscpp
+    ros-indigo/tf2_ros
     ros-indigo/vrpn
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslint
+    ros-indigo/catkin
     ros-indigo/roslaunch
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

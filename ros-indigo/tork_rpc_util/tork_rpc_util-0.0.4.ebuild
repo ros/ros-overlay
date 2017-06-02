@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="This package provides abstract RPC (Remote Procedure Call) structure for
   highe"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/tork_rpc-release/archive/release/indigo/tork_rpc_util/0.0.4-0.tar.gz"
+SRC_URI="https://github.com/tork-a/tork_rpc-release/archive/release/indigo/tork_rpc_util/0.0.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache License 2.0"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/rospy
-    ros-indigo/geometry_msgs
     ros-indigo/actionlib
-    ros-indigo/message_runtime
-    ros-indigo/std_msgs
     ros-indigo/genpy
+    ros-indigo/geometry_msgs
+    ros-indigo/message_runtime
+    ros-indigo/rospy
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/roslint
+    ros-indigo/catkin
     ros-indigo/message_generation
+    ros-indigo/roslint
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

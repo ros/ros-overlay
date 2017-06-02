@@ -5,17 +5,18 @@ EAPI=6
 
 DESCRIPTION="Darknet is an open source neural network framework written in C and CUDA. It is "
 HOMEPAGE="http://pjreddie.com/darknet/"
-SRC_URI="https://github.com/tork-a/darknet-release/archive/release/indigo/darknet/2016.11.27-2.tar.gz"
+SRC_URI="https://github.com/tork-a/darknet-release/archive/release/indigo/darknet/2016.11.27-2.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="YOLO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     media-libs/opencv
     nvidia-cuda-toolkit
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     nvidia-cuda-dev
 "
 
@@ -24,9 +25,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The pr2_self_test package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test/1.0.12-0.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test/1.0.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="TODO"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pr2_bringup_tests
     ros-indigo/joint_qualification_controllers
-    ros-indigo/pr2_self_test_msgs
+    ros-indigo/pr2_bringup_tests
     ros-indigo/pr2_counterbalance_check
+    ros-indigo/pr2_self_test_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

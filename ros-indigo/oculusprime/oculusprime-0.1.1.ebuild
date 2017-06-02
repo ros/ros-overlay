@@ -9,7 +9,7 @@ SRC_URI="https://github.com/xaxxontech/oculusprime_ros-release/archive/release/i
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/amcl
@@ -29,6 +29,7 @@ RDEPEND="
     ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"

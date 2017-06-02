@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="pr2eus"
 HOMEPAGE="http://ros.org/wiki/pr2eus"
-SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/indigo/pr2eus/0.3.10-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/indigo/pr2eus/0.3.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/dynamic_reconfigure
     ros-indigo/control_msgs
+    ros-indigo/dynamic_reconfigure
+    ros-indigo/euscollada
+    ros-indigo/move_base_msgs
     ros-indigo/nav_msgs
     ros-indigo/pr2_controllers_msgs
-    ros-indigo/move_base_msgs
-    ros-indigo/sound_play
-    ros-indigo/roseus
-    ros-indigo/euscollada
-    ros-indigo/rostest
     ros-indigo/pr2_description
     ros-indigo/pr2_msgs
+    ros-indigo/roseus
+    ros-indigo/rostest
+    ros-indigo/sound_play
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rosgraph_msgs
 "
 
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

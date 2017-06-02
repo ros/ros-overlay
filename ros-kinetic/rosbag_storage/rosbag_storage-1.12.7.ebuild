@@ -6,23 +6,24 @@ EAPI=6
 DESCRIPTION="This is a set of tools for recording from and playing back ROS
     message witho"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cpp_common
-    ros-kinetic/roscpp_traits
     ros-kinetic/roscpp_serialization
-    ros-kinetic/rostime
+    ros-kinetic/roscpp_traits
     ros-kinetic/roslz4
+    ros-kinetic/rostime
+    dev-libs/boost
     app-arch/bzip2
     dev-libs/console_bridge
-    dev-libs/boost
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

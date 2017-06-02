@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="A pure-python interaface to the MoveIt! ROS API."
 HOMEPAGE="http://ros.org/wiki/moveit_python"
-SRC_URI="https://github.com/mikeferguson/moveit_python-release/archive/release/kinetic/moveit_python/0.2.17-1.tar.gz"
+SRC_URI="https://github.com/mikeferguson/moveit_python-release/archive/release/kinetic/moveit_python/0.2.17-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/actionlib
+    ros-kinetic/geometry_msgs
     ros-kinetic/moveit_msgs
     ros-kinetic/rospy
-    ros-kinetic/geometry_msgs
-    ros-kinetic/actionlib
     ros-kinetic/shape_msgs
     ros-kinetic/tf
     dev-libs/assimp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

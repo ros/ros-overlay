@@ -9,16 +9,17 @@ SRC_URI="https://github.com/ros-drivers-gbp/libfreenect-ros-release/archive/rele
 
 LICENSE="Apache 2.0"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    x11-libs/libXmu
+    media-libs/freeglut
     =dev-libs/libusb-1.0*
     x11-libs/libXi
-    media-libs/freeglut
+    x11-libs/libXmu
 "
 DEPEND="${RDEPEND}
+    dev-util/cmake
 "
 
 SLOT="0/0"

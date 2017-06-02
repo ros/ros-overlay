@@ -5,23 +5,24 @@ EAPI=6
 
 DESCRIPTION="roswtf is a tool for diagnosing issues with a running ROS system. Think of it as"
 HOMEPAGE="http://ros.org/wiki/roswtf"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/rosnode
+    ros-kinetic/rosbuild
     ros-kinetic/rosgraph
     ros-kinetic/roslaunch
-    ros-kinetic/rosbuild
-    ros-kinetic/rosservice
     ros-kinetic/roslib
-    dev-python/rospkg
+    ros-kinetic/rosnode
+    ros-kinetic/rosservice
     dev-python/paramiko
+    dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/rostest
 "
 
@@ -30,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

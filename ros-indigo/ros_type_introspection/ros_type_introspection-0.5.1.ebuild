@@ -6,21 +6,22 @@ EAPI=6
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize
   RO"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
-SRC_URI="https://github.com/facontidavide/ros_type_introspection-release/archive/release/indigo/ros_type_introspection/0.5.1-0.tar.gz"
+SRC_URI="https://github.com/facontidavide/ros_type_introspection-release/archive/release/indigo/ros_type_introspection/0.5.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/topic_tools
-    ros-indigo/rosbag_storage
-    ros-indigo/roscpp_serialization
-    ros-indigo/roscpp
     ros-indigo/rosbag
+    ros-indigo/rosbag_storage
+    ros-indigo/roscpp
+    ros-indigo/roscpp_serialization
     ros-indigo/rostime
+    ros-indigo/topic_tools
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

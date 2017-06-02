@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="The spur_2dnav package holds common configuration options for running SPUR in 2D"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_2dnav/0.2.6-0.tar.gz"
+SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur_2dnav/0.2.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/amcl
-    ros-indigo/gmapping
     ros-indigo/dwa_local_planner
-    ros-indigo/turtlebot_navigation
+    ros-indigo/gmapping
     ros-indigo/map_server
-    ros-indigo/tf
     ros-indigo/move_base
+    ros-indigo/tf
+    ros-indigo/turtlebot_navigation
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rostest
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

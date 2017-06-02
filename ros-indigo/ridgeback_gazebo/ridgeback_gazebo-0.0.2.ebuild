@@ -5,22 +5,23 @@ EAPI=6
 
 DESCRIPTION="Launchfiles to use Ridgeback in Gazebo."
 HOMEPAGE="http://wiki.ros.org/ridgeback_gazebo"
-SRC_URI="https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/indigo/ridgeback_gazebo/0.0.2-0.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/indigo/ridgeback_gazebo/0.0.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/gazebo_plugins
     ros-indigo/gazebo_ros
-    ros-indigo/ridgeback_description
     ros-indigo/gazebo_ros_control
-    ros-indigo/ridgeback_gazebo_plugins
     ros-indigo/hector_gazebo_plugins
     ros-indigo/ridgeback_control
-    ros-indigo/gazebo_plugins
+    ros-indigo/ridgeback_description
+    ros-indigo/ridgeback_gazebo_plugins
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/roslaunch
 "
 
@@ -29,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,20 +5,21 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/sicktoolbox_wrapper-release/archive/release/indigo/sicktoolbox_wrapper/2.5.3-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/sicktoolbox_wrapper-release/archive/release/indigo/sicktoolbox_wrapper/2.5.3-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sensor_msgs
-    ros-indigo/roscpp
-    ros-indigo/rosconsole
     ros-indigo/diagnostic_updater
+    ros-indigo/rosconsole
+    ros-indigo/roscpp
+    ros-indigo/sensor_msgs
     ros-indigo/sicktoolbox
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -26,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

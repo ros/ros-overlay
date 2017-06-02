@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="evarobot_navigation provides roslaunch script files to navigate the Evarobot."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/inomuh/evapc_ros-release/archive/release/indigo/evarobot_navigation/0.0.6-1.tar.gz"
+SRC_URI="https://github.com/inomuh/evapc_ros-release/archive/release/indigo/evarobot_navigation/0.0.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/master_sync_fkie
-    ros-indigo/frontier_exploration
     ros-indigo/amcl
-    ros-indigo/gmapping
     ros-indigo/evarobot_state_publisher
-    ros-indigo/rplidar_ros
-    ros-indigo/roscpp
+    ros-indigo/frontier_exploration
+    ros-indigo/gmapping
     ros-indigo/map_server
     ros-indigo/master_discovery_fkie
+    ros-indigo/master_sync_fkie
     ros-indigo/move_base
+    ros-indigo/roscpp
+    ros-indigo/rplidar_ros
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,18 +5,19 @@ EAPI=6
 
 DESCRIPTION="catkinized common interface for turn table"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/scanning_table_msgs/0.0.5-3.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/scanning_table_msgs/0.0.5-3.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3+"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/actionlib_msgs
     ros-indigo/message_runtime
     ros-indigo/std_msgs
-    ros-indigo/actionlib_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

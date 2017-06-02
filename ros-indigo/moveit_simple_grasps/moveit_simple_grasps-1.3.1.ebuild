@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION="A basic grasp generator for simple objects such as blocks or cylinders for use w"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/moveit_simple_grasps-release/archive/release/indigo/moveit_simple_grasps/1.3.1-0.tar.gz"
+SRC_URI="https://github.com/davetcoleman/moveit_simple_grasps-release/archive/release/indigo/moveit_simple_grasps/1.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/moveit_msgs
+    ros-indigo/actionlib_msgs
     ros-indigo/geometry_msgs
     ros-indigo/message_runtime
-    ros-indigo/actionlib_msgs
+    ros-indigo/moveit_msgs
     ros-indigo/moveit_visual_tools
     ros-indigo/std_msgs
     ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/cmake_modules
-    ros-indigo/tf_conversions
-    ros-indigo/moveit_ros_planning_interface
-    ros-indigo/message_generation
     ros-indigo/actionlib
-    ros-indigo/roscpp
+    ros-indigo/catkin
+    ros-indigo/cmake_modules
     ros-indigo/eigen_conversions
+    ros-indigo/message_generation
     ros-indigo/moveit_core
     ros-indigo/moveit_ros_planning
+    ros-indigo/moveit_ros_planning_interface
+    ros-indigo/roscpp
     ros-indigo/tf
+    ros-indigo/tf_conversions
 "
 
 SLOT="0/0"
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

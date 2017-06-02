@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/se
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/diagnostic_msgs
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
 "
 

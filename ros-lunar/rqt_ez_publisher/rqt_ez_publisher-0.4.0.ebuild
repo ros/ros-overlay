@@ -9,7 +9,7 @@ SRC_URI="https://github.com/OTL/rqt_ez_publisher-release/archive/release/lunar/r
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -21,6 +21,7 @@ RDEPEND="
     ros-lunar/tf2_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/rostest
     dev-python/catkin_pkg
 "

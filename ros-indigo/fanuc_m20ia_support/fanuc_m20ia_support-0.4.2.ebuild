@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/fanuc-release/archive/release/indigo/fanuc_m20ia_support/0.4.2-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/fanuc-release/archive/release/indigo/fanuc_m20ia_support/0.4.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/xacro
-    ros-indigo/rviz
-    ros-indigo/robot_state_publisher
-    ros-indigo/fanuc_resources
     ros-indigo/fanuc_driver
+    ros-indigo/fanuc_resources
     ros-indigo/joint_state_publisher
+    ros-indigo/robot_state_publisher
+    ros-indigo/rviz
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -27,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION="turtle_actionlib demonstrates how to write an action server and client with the "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/turtle_actionlib/0.1.10-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/turtle_actionlib/0.1.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
     ros-kinetic/angles
     ros-kinetic/geometry_msgs
-    ros-kinetic/actionlib
     ros-kinetic/message_runtime
-    ros-kinetic/actionlib_msgs
+    ros-kinetic/rosconsole
     ros-kinetic/roscpp
     ros-kinetic/std_msgs
     ros-kinetic/turtlesim
-    ros-kinetic/rosconsole
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
 "
 
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

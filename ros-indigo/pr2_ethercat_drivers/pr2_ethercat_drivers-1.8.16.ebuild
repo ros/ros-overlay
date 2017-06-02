@@ -6,16 +6,17 @@ EAPI=6
 DESCRIPTION="This stack contains drivers for the ethercat system and the peripherals
     that"
 HOMEPAGE="http://ros.org/wiki/pr2_ethercat_drivers"
-SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/indigo/pr2_ethercat_drivers/1.8.16-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/indigo/pr2_ethercat_drivers/1.8.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPL )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "GPL" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/fingertip_pressure
     ros-indigo/ethercat_hardware
+    ros-indigo/fingertip_pressure
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -23,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

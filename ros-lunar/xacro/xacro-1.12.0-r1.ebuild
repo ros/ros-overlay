@@ -11,12 +11,13 @@ SRC_URI="https://github.com/ros-gbp/xacro-release/archive/release/lunar/xacro/1.
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/roslaunch
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/roslint
 "
 

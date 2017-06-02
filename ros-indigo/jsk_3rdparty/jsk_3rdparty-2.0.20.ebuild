@@ -5,32 +5,33 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/jsk_3rdparty/2.0.20-0.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/jsk_3rdparty/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/slic
+    ros-indigo/assimp_devel
     ros-indigo/bayesian_belief_networks
+    ros-indigo/downward
+    ros-indigo/ff
+    ros-indigo/ffha
+    ros-indigo/julius
     ros-indigo/libcmt
     ros-indigo/libsiftfast
-    ros-indigo/rostwitter
-    ros-indigo/julius
-    ros-indigo/nlopt
-    ros-indigo/rosping
-    ros-indigo/rospatlite
-    ros-indigo/ff
-    ros-indigo/pgm_learner
-    ros-indigo/voice_text
-    ros-indigo/downward
-    ros-indigo/ffha
     ros-indigo/mini_maxwell
+    ros-indigo/nlopt
     ros-indigo/opt_camera
-    ros-indigo/assimp_devel
+    ros-indigo/pgm_learner
+    ros-indigo/rospatlite
+    ros-indigo/rosping
+    ros-indigo/rostwitter
+    ros-indigo/slic
+    ros-indigo/voice_text
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -38,9 +39,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

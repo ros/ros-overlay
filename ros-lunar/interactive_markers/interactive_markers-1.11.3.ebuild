@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/interactive_markers-release/archive/release/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/rosconsole
@@ -21,6 +21,7 @@ RDEPEND="
     ros-lunar/visualization_msgs
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
 "
 
 SLOT="0/0"

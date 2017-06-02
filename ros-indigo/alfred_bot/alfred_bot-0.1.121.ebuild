@@ -5,21 +5,22 @@ EAPI=6
 
 DESCRIPTION="This package is bot of Alfred Assitant for ROS. This package is part of Alfred A"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosalfred-release/alfred_bot-release/archive/release/indigo/alfred_bot/0.1.121-0.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/alfred_bot-release/archive/release/indigo/alfred_bot/0.1.121-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/smarthome_common_driver
-    ros-indigo/smarthome_media_msgs
-    ros-indigo/smarthome_comm_msgs
-    ros-indigo/rosjava_dynamic_reconfigure
-    ros-indigo/smarthome_media_model
     ros-indigo/rosjava_core
+    ros-indigo/rosjava_dynamic_reconfigure
+    ros-indigo/smarthome_comm_msgs
+    ros-indigo/smarthome_common_driver
+    ros-indigo/smarthome_media_model
+    ros-indigo/smarthome_media_msgs
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/rosjava_build_tools
 "
 
@@ -28,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

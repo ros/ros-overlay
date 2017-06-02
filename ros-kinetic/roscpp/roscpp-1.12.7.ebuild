@@ -5,24 +5,25 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/roscpp"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roscpp/1.12.7-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roscpp/1.12.7-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-kinetic/cpp_common
-    ros-kinetic/roscpp_traits
-    ros-kinetic/roscpp_serialization
     ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
-    ros-kinetic/rostime
     ros-kinetic/rosconsole
+    ros-kinetic/roscpp_serialization
+    ros-kinetic/roscpp_traits
     ros-kinetic/rosgraph_msgs
+    ros-kinetic/rostime
+    ros-kinetic/std_msgs
     ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
+    ros-kinetic/catkin
     ros-kinetic/message_generation
     ros-kinetic/roslang
     virtual/pkgconfig
@@ -33,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

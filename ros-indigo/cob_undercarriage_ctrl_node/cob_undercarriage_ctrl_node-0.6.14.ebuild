@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="cob_undercarriage_ctrl_node implements a controller for the omnidirectional base"
 HOMEPAGE="http://ros.org/wiki/cob_undercarriage_ctrl_node"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_undercarriage_ctrl_node/0.6.14-0.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_undercarriage_ctrl_node/0.6.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/nav_msgs
-    ros-indigo/geometry_msgs
-    ros-indigo/cob_omni_drive_controller
-    ros-indigo/roscpp
-    ros-indigo/urdf
-    ros-indigo/diagnostic_msgs
-    ros-indigo/control_msgs
-    ros-indigo/diagnostic_updater
-    ros-indigo/tf
     ros-indigo/cob_msgs
+    ros-indigo/cob_omni_drive_controller
+    ros-indigo/control_msgs
+    ros-indigo/diagnostic_msgs
+    ros-indigo/diagnostic_updater
+    ros-indigo/geometry_msgs
+    ros-indigo/nav_msgs
+    ros-indigo/roscpp
+    ros-indigo/tf
+    ros-indigo/urdf
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -31,9 +32,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

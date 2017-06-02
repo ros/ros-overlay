@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/lunar/
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
@@ -21,10 +21,11 @@ RDEPEND="
     ros-lunar/rostime
     ros-lunar/std_msgs
     ros-lunar/std_srvs
-    dev-qt/qtgui
     dev-qt/qtcore
+    dev-qt/qtgui
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
     dev-qt/qtcore
     dev-qt/qtcore

@@ -5,26 +5,27 @@ EAPI=6
 
 DESCRIPTION="Contains different useful controllers to use with the RoNeX."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ronex-release/archive/release/indigo/sr_ronex_controllers/0.11.0-0.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ronex-release/archive/release/indigo/sr_ronex_controllers/0.11.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="LGPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/sr_ronex_msgs
-    ros-indigo/pluginlib
-    ros-indigo/sr_ronex_hardware_interface
+    ros-indigo/controller_interface
     ros-indigo/controller_manager_msgs
-    ros-indigo/sr_ronex_drivers
-    ros-indigo/sr_ronex_utilities
-    ros-indigo/roscpp
+    ros-indigo/pluginlib
     ros-indigo/ros_ethercat_model
+    ros-indigo/roscpp
+    ros-indigo/sr_ronex_drivers
+    ros-indigo/sr_ronex_hardware_interface
+    ros-indigo/sr_ronex_msgs
+    ros-indigo/sr_ronex_utilities
     ros-indigo/std_msgs
     ros-indigo/std_srvs
-    ros-indigo/controller_interface
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

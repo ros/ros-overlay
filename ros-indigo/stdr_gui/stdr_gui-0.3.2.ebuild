@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="A gui in Qt for visualizing purposes in STDR Simulator."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/indigo/stdr_gui/0.3.2-0.tar.gz"
+SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/indigo/stdr_gui/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="GPLv3"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-indigo/nav_msgs
-    ros-indigo/stdr_parser
-    ros-indigo/stdr_server
-    ros-indigo/stdr_msgs
-    ros-indigo/roslib
-    ros-indigo/stdr_robot
     ros-indigo/roscpp
+    ros-indigo/roslib
     ros-indigo/sensor_msgs
+    ros-indigo/stdr_msgs
+    ros-indigo/stdr_parser
+    ros-indigo/stdr_robot
+    ros-indigo/stdr_server
     ros-indigo/tf
     dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     dev-qt/qtcore
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

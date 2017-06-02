@@ -5,19 +5,20 @@ EAPI=6
 
 DESCRIPTION="The industrial_desktop package contains all "released" packages"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/industrial_metapackages-release/archive/release/indigo/industrial_desktop/0.0.3-0.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_metapackages-release/archive/release/indigo/industrial_desktop/0.0.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD Apache 2.0 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "Apache 2.0" )"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/abb
     ros-indigo/fanuc
+    ros-indigo/industrial_core
     ros-indigo/motoman
     ros-indigo/universal_robot
-    ros-indigo/abb
-    ros-indigo/industrial_core
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
 "
 
 SLOT="0/0"
@@ -25,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

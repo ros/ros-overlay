@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-gbp/navigation_msgs-release/archive/release/luna
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/actionlib_msgs
@@ -17,6 +17,7 @@ RDEPEND="
     ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
+    ros-lunar/catkin
     ros-lunar/message_generation
 "
 

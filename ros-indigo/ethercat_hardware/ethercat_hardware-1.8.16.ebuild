@@ -5,25 +5,26 @@ EAPI=6
 
 DESCRIPTION="Package for creating a hardware interface to the robot using the EtherCAT motor "
 HOMEPAGE="http://ros.org/wiki/ethercat_hardware"
-SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/indigo/ethercat_hardware/1.8.16-0.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/indigo/ethercat_hardware/1.8.16-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-indigo/pluginlib
-    ros-indigo/eml
-    ros-indigo/pr2_hardware_interface
-    ros-indigo/message_runtime
-    ros-indigo/roscpp
     ros-indigo/diagnostic_msgs
-    ros-indigo/realtime_tools
-    ros-indigo/pr2_msgs
     ros-indigo/diagnostic_updater
+    ros-indigo/eml
+    ros-indigo/message_runtime
+    ros-indigo/pluginlib
+    ros-indigo/pr2_hardware_interface
+    ros-indigo/pr2_msgs
+    ros-indigo/realtime_tools
+    ros-indigo/roscpp
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}
+    ros-indigo/catkin
     ros-indigo/message_generation
 "
 
@@ -32,9 +33,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 
