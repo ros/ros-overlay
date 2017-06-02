@@ -22,6 +22,7 @@ RDEPEND="
     ros-lunar/rqt_py_common
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-lunar/catkin
 "
 
@@ -46,6 +47,8 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
