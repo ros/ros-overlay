@@ -7,7 +7,7 @@ DESCRIPTION="Standalone Python library for the Catkin package system."
 HOMEPAGE="http://wiki.ros.org/catkin_pkg"
 SRC_URI="https://github.com/ros-infrastructure/catkin_pkg/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-3"
 SLOT="0"
 KEYWORDS="amd64 x86 arm ~arm64"
 
