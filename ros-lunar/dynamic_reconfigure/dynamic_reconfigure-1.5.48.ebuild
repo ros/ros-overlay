@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/lunar/dynamic_reconfigure/1.5.48-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/lunar/dynamic_reconfigure/1.5.48-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
+    ros-lunar/message_runtime
+    ros-lunar/roscpp
+    ros-lunar/roslib
     ros-lunar/rospy
     ros-lunar/rosservice
-    ros-lunar/message_runtime
-    ros-lunar/roslib
-    ros-lunar/roscpp
     ros-lunar/std_msgs
     dev-libs/boost
 "
@@ -31,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

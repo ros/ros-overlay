@@ -5,20 +5,20 @@ EAPI=6
 
 DESCRIPTION="The control toolbox contains modules that are useful across all controllers."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/control_toolbox-release/archive/release/lunar/control_toolbox/1.15.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/control_toolbox-release/archive/release/lunar/control_toolbox/1.15.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/cmake_modules
+    ros-lunar/control_msgs
     ros-lunar/dynamic_reconfigure
     ros-lunar/message_runtime
+    ros-lunar/realtime_tools
     ros-lunar/roscpp
     ros-lunar/std_msgs
-    ros-lunar/realtime_tools
-    ros-lunar/control_msgs
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

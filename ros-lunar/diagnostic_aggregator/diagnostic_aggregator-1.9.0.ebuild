@@ -5,20 +5,20 @@ EAPI=6
 
 DESCRIPTION="diagnostic_aggregator"
 HOMEPAGE="http://www.ros.org/wiki/diagnostic_aggregator"
-SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/diagnostic_aggregator/1.9.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/diagnostic_aggregator/1.9.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/bondpy
-    ros-lunar/rospy
-    ros-lunar/roscpp
-    ros-lunar/diagnostic_msgs
-    ros-lunar/xmlrpcpp
     ros-lunar/bondcpp
+    ros-lunar/bondpy
+    ros-lunar/diagnostic_msgs
+    ros-lunar/pluginlib
+    ros-lunar/roscpp
+    ros-lunar/rospy
+    ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
     ros-lunar/rostest
@@ -29,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

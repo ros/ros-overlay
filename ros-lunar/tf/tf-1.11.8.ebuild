@@ -6,23 +6,23 @@ EAPI=6
 DESCRIPTION="tf is a package that lets the user keep track of multiple coordinate
 frames over"
 HOMEPAGE="http://www.ros.org/wiki/tf"
-SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.11.8-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.11.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/tf2
     ros-lunar/geometry_msgs
     ros-lunar/message_filters
     ros-lunar/message_runtime
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/sensor_msgs
-    ros-lunar/tf2_ros
     ros-lunar/rosconsole
+    ros-lunar/roscpp
     ros-lunar/roswtf
+    ros-lunar/sensor_msgs
+    ros-lunar/std_msgs
+    ros-lunar/tf2
+    ros-lunar/tf2_ros
     media-gfx/graphviz
 "
 DEPEND="${RDEPEND}
@@ -36,9 +36,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

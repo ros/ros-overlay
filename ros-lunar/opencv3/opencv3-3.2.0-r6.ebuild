@@ -5,23 +5,23 @@ EAPI=6
 
 DESCRIPTION="OpenCV 3.x"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv3/3.2.0-6.tar.gz"
+SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv3/3.2.0-6.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    dev-lang/python
-    dev-python/numpy
-    virtual/ffmpeg
     sci-libs/vtk
-    media-libs/libwebp
-    media-libs/libjpeg-turbo
+    virtual/ffmpeg
+    dev-lang/python
     sys-libs/zlib
-    media-libs/libpng
     dev-libs/protobuf
+    media-libs/libjpeg-turbo
+    media-libs/libpng
+    media-libs/libwebp
+    dev-python/numpy
 "
 DEPEND="${RDEPEND}
     media-libs/libv4l
@@ -34,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

@@ -5,36 +5,36 @@ EAPI=6
 
 DESCRIPTION="Core libraries used by MoveIt!"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_core/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_core/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/geometric_shapes
-    ros-lunar/octomap
-    ros-lunar/std_msgs
-    ros-lunar/srdfdom
-    ros-lunar/moveit_msgs
     ros-lunar/eigen_conversions
-    ros-lunar/sensor_msgs
-    ros-lunar/kdl_parser
-    ros-lunar/random_numbers
-    ros-lunar/urdf
-    ros-lunar/trajectory_msgs
-    ros-lunar/visualization_msgs
-    ros-lunar/octomap_msgs
-    ros-lunar/geometry_msgs
     ros-lunar/eigen_stl_containers
+    ros-lunar/geometric_shapes
+    ros-lunar/geometry_msgs
+    ros-lunar/kdl_parser
+    ros-lunar/moveit_msgs
+    ros-lunar/octomap
+    ros-lunar/octomap_msgs
+    ros-lunar/random_numbers
     ros-lunar/rostime
-    dev-cpp/eigen
-    sci-libs/fcl
-    dev-libs/console_bridge
-    dev-libs/boost
+    ros-lunar/sensor_msgs
+    ros-lunar/srdfdom
+    ros-lunar/std_msgs
+    ros-lunar/trajectory_msgs
+    ros-lunar/urdf
+    ros-lunar/visualization_msgs
     dev-libs/urdfdom
     media-libs/assimp
+    dev-cpp/eigen
+    dev-libs/boost
     dev-libs/urdfdom_headers
+    dev-libs/console_bridge
+    sci-libs/fcl
 "
 DEPEND="${RDEPEND}
     ros-lunar/roslib
@@ -46,9 +46,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

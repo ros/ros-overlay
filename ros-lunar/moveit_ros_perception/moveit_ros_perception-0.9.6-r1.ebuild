@@ -5,29 +5,29 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt connecting to perception"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_perception/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_perception/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/pluginlib
-    ros-lunar/tf_conversions
+    ros-lunar/cv_bridge
+    ros-lunar/image_transport
+    ros-lunar/message_filters
+    ros-lunar/moveit_core
     ros-lunar/moveit_msgs
     ros-lunar/octomap
-    ros-lunar/message_filters
-    ros-lunar/image_transport
+    ros-lunar/pluginlib
+    ros-lunar/rosconsole
     ros-lunar/roscpp
-    ros-lunar/moveit_core
-    ros-lunar/urdf
     ros-lunar/sensor_msgs
     ros-lunar/tf
-    ros-lunar/rosconsole
-    ros-lunar/cv_bridge
-    media-libs/freeglut
+    ros-lunar/tf_conversions
+    ros-lunar/urdf
     media-libs/glew
     media-libs/mesa
+    media-libs/freeglut
 "
 DEPEND="${RDEPEND}
     dev-cpp/eigen
@@ -38,9 +38,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

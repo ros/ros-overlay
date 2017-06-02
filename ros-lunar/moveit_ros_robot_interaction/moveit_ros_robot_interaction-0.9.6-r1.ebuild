@@ -5,19 +5,19 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt that offer interaction via interactive markers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_robot_interaction/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_robot_interaction/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
+    ros-lunar/eigen_conversions
+    ros-lunar/interactive_markers
+    ros-lunar/moveit_ros_planning
     ros-lunar/pluginlib
     ros-lunar/roscpp
-    ros-lunar/eigen_conversions
-    ros-lunar/moveit_ros_planning
     ros-lunar/tf
-    ros-lunar/interactive_markers
 "
 DEPEND="${RDEPEND}
 "
@@ -27,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

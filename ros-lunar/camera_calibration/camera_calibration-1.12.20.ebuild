@@ -6,19 +6,19 @@ EAPI=6
 DESCRIPTION="camera_calibration allows easy calibration of monocular or stereo
      cameras u"
 HOMEPAGE="http://www.ros.org/wiki/camera_calibration"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar/camera_calibration/1.12.20-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/lunar/camera_calibration/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
+    ros-lunar/cv_bridge
     ros-lunar/image_geometry
-    ros-lunar/rospy
     ros-lunar/message_filters
+    ros-lunar/rospy
     ros-lunar/sensor_msgs
     ros-lunar/std_srvs
-    ros-lunar/cv_bridge
 "
 DEPEND="${RDEPEND}
 "
@@ -28,9 +28,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

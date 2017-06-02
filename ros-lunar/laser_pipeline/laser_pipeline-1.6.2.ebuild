@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="Meta-package of libraries for processing laser data, including converting laser "
 HOMEPAGE="http://www.ros.org/wiki/laser_pipeline"
-SRC_URI="https://github.com/ros-gbp/laser_pipeline-release/archive/release/lunar/laser_pipeline/1.6.2-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/laser_pipeline-release/archive/release/lunar/laser_pipeline/1.6.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/laser_assembler
-    ros-lunar/laser_geometry
     ros-lunar/laser_filters
+    ros-lunar/laser_geometry
 "
 DEPEND="${RDEPEND}
 "
@@ -24,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

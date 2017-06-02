@@ -5,25 +5,25 @@ EAPI=6
 
 DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_mavros/0.19.0-0.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPLv3 LGPLv3 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="|| ( "BSD" "GPLv3" "LGPLv3" )"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/mavros_extras
+    ros-lunar/control_toolbox
+    ros-lunar/eigen_conversions
     ros-lunar/geometry_msgs
     ros-lunar/mavros
+    ros-lunar/mavros_extras
     ros-lunar/roscpp
-    ros-lunar/eigen_conversions
     ros-lunar/std_msgs
     ros-lunar/tf2_ros
-    ros-lunar/control_toolbox
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-lunar/cmake_modules
     ros-lunar/angles
+    ros-lunar/cmake_modules
 "
 
 SLOT="0/0"
@@ -31,9 +31,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

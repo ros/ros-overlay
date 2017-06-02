@@ -5,19 +5,19 @@ EAPI=6
 
 DESCRIPTION="ROS Package Tool"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospack/2.4.1-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospack/2.4.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    virtual/pkgconfig
-    dev-lang/python
-    dev-libs/tinyxml2
-    dev-util/rosdep
-    dev-libs/boost
     dev-python/catkin_pkg
+    dev-libs/boost
+    virtual/pkgconfig
+    dev-util/rosdep
+    dev-libs/tinyxml2
+    dev-lang/python
 "
 DEPEND="${RDEPEND}
     ros-lunar/cmake_modules
@@ -29,9 +29,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

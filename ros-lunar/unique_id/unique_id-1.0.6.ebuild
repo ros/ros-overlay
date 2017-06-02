@@ -5,16 +5,16 @@ EAPI=6
 
 DESCRIPTION="ROS Python and C++ interfaces for universally unique identifiers."
 HOMEPAGE="http://ros.org/wiki/unique_id"
-SRC_URI="https://github.com/ros-geographic-info/unique_identifier-release/archive/release/lunar/unique_id/1.0.6-0.tar.gz"
+SRC_URI="https://github.com/ros-geographic-info/unique_identifier-release/archive/release/lunar/unique_id/1.0.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/uuid_msgs
     ros-lunar/roscpp
     ros-lunar/rospy
+    ros-lunar/uuid_msgs
 "
 DEPEND="${RDEPEND}
 "
@@ -24,9 +24,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

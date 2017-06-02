@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION="Generates a configuration package that makes it easy to use MoveIt!"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_setup_assistant/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_setup_assistant/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/xacro
-    ros-lunar/moveit_ros_visualization
     ros-lunar/moveit_core
     ros-lunar/moveit_ros_planning
+    ros-lunar/moveit_ros_visualization
     ros-lunar/srdfdom
+    ros-lunar/xacro
     dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
@@ -27,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

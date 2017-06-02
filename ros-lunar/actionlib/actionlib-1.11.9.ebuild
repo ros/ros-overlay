@@ -6,19 +6,19 @@ EAPI=6
 DESCRIPTION="The actionlib stack provides a standardized interface for
     interfacing with p"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/lunar/actionlib/1.11.9-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/actionlib-release/archive/release/lunar/actionlib/1.11.9-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/rospy
-    ros-lunar/message_runtime
     ros-lunar/actionlib_msgs
+    ros-lunar/message_runtime
     ros-lunar/roscpp
-    ros-lunar/std_msgs
+    ros-lunar/rospy
     ros-lunar/rostest
+    ros-lunar/std_msgs
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
@@ -30,9 +30,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

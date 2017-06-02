@@ -5,17 +5,17 @@ EAPI=6
 
 DESCRIPTION="A ROS driver for the SICK TiM series of laser scanners."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/uos-gbp/sick_tim-release/archive/release/lunar/sick_tim/0.0.10-0.tar.gz"
+SRC_URI="https://github.com/uos-gbp/sick_tim-release/archive/release/lunar/sick_tim/0.0.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/sensor_msgs
+    ros-lunar/diagnostic_updater
     ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
-    ros-lunar/diagnostic_updater
+    ros-lunar/sensor_msgs
     =dev-libs/libusb-1.0*
 "
 DEPEND="${RDEPEND}
@@ -27,9 +27,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

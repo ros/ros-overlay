@@ -5,35 +5,35 @@ EAPI=6
 
 DESCRIPTION="ROS communications-related packages, including core client libraries (roscpp, ro"
 HOMEPAGE="http://www.ros.org/wiki/ros_comm"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/ros_comm/1.13.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/ros_comm/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/topic_tools
-    ros-lunar/rosservice
-    ros-lunar/rosgraph_msgs
-    ros-lunar/xmlrpcpp
-    ros-lunar/rosnode
-    ros-lunar/roslisp
-    ros-lunar/rosmaster
-    ros-lunar/rosbag
-    ros-lunar/rostopic
-    ros-lunar/rostest
-    ros-lunar/roswtf
-    ros-lunar/rospy
-    ros-lunar/roslaunch
-    ros-lunar/rosparam
-    ros-lunar/roscpp
-    ros-lunar/std_srvs
-    ros-lunar/rosconsole
-    ros-lunar/rosgraph
     ros-lunar/message_filters
     ros-lunar/ros
-    ros-lunar/rosout
+    ros-lunar/rosbag
+    ros-lunar/rosconsole
+    ros-lunar/roscpp
+    ros-lunar/rosgraph
+    ros-lunar/rosgraph_msgs
+    ros-lunar/roslaunch
+    ros-lunar/roslisp
+    ros-lunar/rosmaster
     ros-lunar/rosmsg
+    ros-lunar/rosnode
+    ros-lunar/rosout
+    ros-lunar/rosparam
+    ros-lunar/rospy
+    ros-lunar/rosservice
+    ros-lunar/rostest
+    ros-lunar/rostopic
+    ros-lunar/roswtf
+    ros-lunar/std_srvs
+    ros-lunar/topic_tools
+    ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 "
@@ -43,9 +43,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

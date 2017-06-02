@@ -5,24 +5,24 @@ EAPI=6
 
 DESCRIPTION="Components of MoveIt that offer simpler interfaces to planning and execution"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_planning_interface/0.9.6-1.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_planning_interface/0.9.6-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
-    ros-lunar/tf_conversions
-    ros-lunar/rospy
     ros-lunar/actionlib
-    ros-lunar/moveit_ros_move_group
-    ros-lunar/roscpp
-    ros-lunar/moveit_ros_manipulation
     ros-lunar/eigen_conversions
+    ros-lunar/moveit_ros_manipulation
+    ros-lunar/moveit_ros_move_group
     ros-lunar/moveit_ros_planning
-    ros-lunar/tf
-    ros-lunar/rosconsole
     ros-lunar/moveit_ros_warehouse
+    ros-lunar/rosconsole
+    ros-lunar/roscpp
+    ros-lunar/rospy
+    ros-lunar/tf
+    ros-lunar/tf_conversions
     dev-lang/python
 "
 DEPEND="${RDEPEND}
@@ -34,9 +34,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

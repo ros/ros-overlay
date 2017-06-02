@@ -5,18 +5,18 @@ EAPI=6
 
 DESCRIPTION=""
 HOMEPAGE="http://ros.org/wiki/rosservice"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosservice/1.13.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosservice/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/genpy
-    ros-lunar/rosmsg
     ros-lunar/rosgraph
-    ros-lunar/rospy
     ros-lunar/roslib
+    ros-lunar/rosmsg
+    ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
 "
@@ -26,9 +26,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 

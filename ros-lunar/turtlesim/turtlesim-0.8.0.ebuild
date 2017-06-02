@@ -5,24 +5,24 @@ EAPI=6
 
 DESCRIPTION="turtlesim is a tool made for teaching ROS and ROS packages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/lunar/turtlesim/0.8.0-0.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/lunar/turtlesim/0.8.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+KEYWORDS="x86 amd64 arm arm64"
 
 RDEPEND="
     ros-lunar/geometry_msgs
-    ros-lunar/roscpp_serialization
-    ros-lunar/std_srvs
     ros-lunar/message_runtime
-    ros-lunar/roslib
-    ros-lunar/roscpp
-    ros-lunar/std_msgs
-    ros-lunar/rostime
     ros-lunar/rosconsole
-    dev-qt/qtcore
+    ros-lunar/roscpp
+    ros-lunar/roscpp_serialization
+    ros-lunar/roslib
+    ros-lunar/rostime
+    ros-lunar/std_msgs
+    ros-lunar/std_srvs
     dev-qt/qtgui
+    dev-qt/qtcore
 "
 DEPEND="${RDEPEND}
     ros-lunar/message_generation
@@ -35,9 +35,7 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    wget -O ${P}.tar.gz ${SRC_URI}
-    tar -xf ${P}.tar.gz
-    rm -f ${P}.tar.gz
+    default
     mv *${P}* ${P}
 }
 
