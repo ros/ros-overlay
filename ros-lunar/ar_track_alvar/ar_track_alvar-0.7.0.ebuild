@@ -7,7 +7,7 @@ DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag trac
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/lunar/ar_track_alvar/0.7.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

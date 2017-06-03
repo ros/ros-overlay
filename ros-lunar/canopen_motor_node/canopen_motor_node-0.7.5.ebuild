@@ -7,7 +7,7 @@ DESCRIPTION="This package extends the canopen_chain_node with specialized handli
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/lunar/canopen_motor_node/0.7.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPLv3"
+LICENSE="LGPL-3"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

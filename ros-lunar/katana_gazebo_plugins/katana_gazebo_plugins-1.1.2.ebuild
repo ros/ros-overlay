@@ -7,7 +7,7 @@ DESCRIPTION="This package provides Gazebo plugins to simulate the Katana arm."
 HOMEPAGE="http://ros.org/wiki/katana_gazebo_plugins"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_gazebo_plugins/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

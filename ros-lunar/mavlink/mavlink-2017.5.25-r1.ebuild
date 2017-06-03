@@ -8,7 +8,7 @@ DESCRIPTION="MAVLink message marshaling library.
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/lunar/mavlink/2017.5.25-1.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPLv3"
+LICENSE="LGPL-3"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

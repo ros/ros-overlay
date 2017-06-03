@@ -7,7 +7,7 @@ DESCRIPTION="API and ROS drivers for Phidgets devices"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_drivers/0.7.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD, LGPL"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

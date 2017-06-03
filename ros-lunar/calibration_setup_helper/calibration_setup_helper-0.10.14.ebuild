@@ -7,7 +7,7 @@ DESCRIPTION="This package contains a script to generate calibration launch and c
 HOMEPAGE="http://ros.org/wiki/calibration_setup_helper"
 SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/lunar/calibration_setup_helper/0.10.14-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

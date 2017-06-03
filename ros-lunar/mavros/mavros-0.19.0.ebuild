@@ -8,7 +8,7 @@ DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( "GPLv3" "LGPLv3" "BSD" )"
+LICENSE="|| ( GPL-3 LGPL-3 BSD )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="

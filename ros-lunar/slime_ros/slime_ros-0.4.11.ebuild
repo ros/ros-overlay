@@ -7,7 +7,7 @@ DESCRIPTION="Extensions for slime to assist in working with ROS packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/slime_ros/0.4.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Public Domain"
+LICENSE=""
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
