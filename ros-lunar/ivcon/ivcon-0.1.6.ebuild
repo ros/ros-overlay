@@ -9,7 +9,7 @@ Used to generate '.iv' files from '.stl' files.  This p"
 HOMEPAGE="https://sourceforge.net/projects/ivcon/"
 SRC_URI="https://github.com/ros-gbp/ivcon-release/archive/release/lunar/ivcon/0.1.6-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

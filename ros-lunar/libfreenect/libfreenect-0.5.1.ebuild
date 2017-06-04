@@ -7,7 +7,7 @@ DESCRIPTION="Open source libraries that will enable the Kinect to be used with W
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/libfreenect-ros-release/archive/release/lunar/libfreenect/0.5.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

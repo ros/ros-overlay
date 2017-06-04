@@ -7,7 +7,7 @@ DESCRIPTION="This package contains an URDF description of the Katana arm and all
 HOMEPAGE="http://ros.org/wiki/katana_description"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_description/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

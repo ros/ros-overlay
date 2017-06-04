@@ -7,7 +7,7 @@ DESCRIPTION="This package contains messages specific to the Neuronics Katana arm
 HOMEPAGE="http://ros.org/wiki/katana_msgs"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_msgs/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

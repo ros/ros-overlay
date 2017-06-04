@@ -8,7 +8,7 @@ DESCRIPTION="The State Machine Compiler (SMC) from http://smc.sourceforge.net/
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/lunar/smclib/1.7.19-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Mozilla Public License Version 1.1"
+LICENSE="MPL-1.1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

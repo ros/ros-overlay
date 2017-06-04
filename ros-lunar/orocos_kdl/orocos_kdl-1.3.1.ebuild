@@ -8,7 +8,7 @@ DESCRIPTION="This package contains a recent version of the Kinematics and Dynami
 HOMEPAGE="http://wiki.ros.org/orocos_kdl"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/lunar/orocos_kdl/1.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
