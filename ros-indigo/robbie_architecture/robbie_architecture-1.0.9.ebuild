@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/robbie_architecture/archive/release/indigo/robbie_architecture/1.0.9-0.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="robbie_architecture"
+HOMEPAGE="http://ros.org/wiki/robbie_architecture"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/robbie_architecture/repository/archive.tar.gz?ref=release/indigo/robbie_architecture/1.0.9-0 -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -15,6 +15,7 @@ RDEPEND="
     ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
     ros-indigo/cmake_modules
     dev-libs/boost
@@ -43,6 +44,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

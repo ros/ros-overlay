@@ -7,7 +7,7 @@ DESCRIPTION="Library for computing transformations in arbitrary graph structures
 HOMEPAGE="http://wiki.ros.org/transform_graph"
 SRC_URI="https://github.com/jstnhuang-release/transform_graph-release/archive/release/indigo/transform_graph/0.1.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -20,6 +20,7 @@ RDEPEND="
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
 "
 
@@ -44,6 +45,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

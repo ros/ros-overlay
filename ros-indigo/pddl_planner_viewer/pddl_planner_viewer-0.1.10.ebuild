@@ -7,7 +7,7 @@ DESCRIPTION="a viewer of pddl_planner."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_planning-release/archive/release/indigo/pddl_planner_viewer/0.1.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache License 2.0"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -15,6 +15,7 @@ RDEPEND="
     ros-indigo/pddl_planner
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
 "
 
@@ -39,6 +40,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
