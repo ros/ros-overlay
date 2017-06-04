@@ -7,7 +7,7 @@ DESCRIPTION="ROS wrapper for slime"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/slime_wrapper/0.4.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Public domain"
+LICENSE=""
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

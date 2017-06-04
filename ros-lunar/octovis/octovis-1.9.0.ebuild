@@ -7,7 +7,7 @@ DESCRIPTION="octovis is visualization tool for the OctoMap library based on Qt a
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/lunar/octovis/1.9.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPLv2"
+LICENSE="GPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

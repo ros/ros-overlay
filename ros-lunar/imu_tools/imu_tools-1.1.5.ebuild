@@ -7,8 +7,7 @@ DESCRIPTION="Various tools for IMU devices"
 HOMEPAGE="http://ros.org/wiki/imu_tools"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_tools/1.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD, GPL"
-
+LICENSE="|| ( BSD GPL-1 )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="

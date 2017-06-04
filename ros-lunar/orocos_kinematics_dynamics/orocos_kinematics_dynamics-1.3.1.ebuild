@@ -8,7 +8,7 @@ DESCRIPTION="This package depends on a recent version of the Kinematics and Dyna
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/lunar/orocos_kinematics_dynamics/1.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

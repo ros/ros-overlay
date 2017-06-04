@@ -7,7 +7,7 @@ DESCRIPTION="A generic canopen implementation for ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/lunar/ros_canopen/0.7.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

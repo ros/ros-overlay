@@ -7,7 +7,7 @@ DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/lunar/rviz/1.12.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( "BSD" "Creative Commons" )"
+LICENSE="|| ( BSD CC-BY-SA-3.0 )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="

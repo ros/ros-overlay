@@ -7,7 +7,7 @@ DESCRIPTION="This package provides tele-operation nodes to control the Neuronics
 HOMEPAGE="http://ros.org/wiki/katana_teleop"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_teleop/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
