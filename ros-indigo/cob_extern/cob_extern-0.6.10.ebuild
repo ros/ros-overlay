@@ -7,7 +7,7 @@ DESCRIPTION="The cob_extern stack contains third party libraries needed for oper
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/cob_extern/0.6.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( "LGPL" "proprietary" )"
+LICENSE="|| ( LGPL-2 proprietary )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
@@ -18,6 +18,7 @@ RDEPEND="
     ros-indigo/libphidgets
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
 "
 
@@ -42,6 +43,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>komei.sugiura@nict.go.jp</email>
+      <name>Komei Sugiura</name>
+    </maintainer>
+    <bugs-to>https://bitbucket.org/rospeex/rospeex/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

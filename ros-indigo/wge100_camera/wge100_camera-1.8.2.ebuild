@@ -8,7 +8,7 @@ DESCRIPTION="A ROS node and assorted tools to provide access to the WGE100
 HOMEPAGE="http://www.ros.org/wiki/wge100_camera"
 SRC_URI="https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/indigo/wge100_camera/1.8.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL because of list.h; other files released under BSD"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -27,6 +27,7 @@ RDEPEND="
     ros-indigo/timestamp_tools
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
     ros-indigo/message_generation
     ros-indigo/rostest
@@ -53,6 +54,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

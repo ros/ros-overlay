@@ -7,8 +7,7 @@ DESCRIPTION="Open source driver for the SICK Visionary-T 3D TOF camera."
 HOMEPAGE="http://wiki.ros.org/sick_visionary_t_driver"
 SRC_URI="https://github.com/SICKAG/sick_visionary_t-release/archive/release/indigo/sick_visionary_t_driver/0.0.3-1.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)"
-
+LICENSE="|| ( Apache-1.0 Version2.0(http://www.apache.org/licenses/LICENSE-2.0) )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
@@ -19,6 +18,7 @@ RDEPEND="
     ros-indigo/sensor_msgs
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
 "
 
@@ -43,6 +43,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

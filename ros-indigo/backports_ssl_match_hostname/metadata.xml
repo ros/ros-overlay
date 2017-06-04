@@ -7,9 +7,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>asmodehn@gmail.com</email>
-      <name>AlexV</name>
+      <email>ueda@jsk.t.u-tokyo.ac.jp</email>
+      <name>Ryohei Ueda</name>
     </maintainer>
-    <bugs-to>https://github.com/asmodehn/backports.ssl_match_hostname-rosrelease/issues</bugs-to>
+    <bugs-to>https://github.com/start-jsk/denso/issues</bugs-to>
   </upstream>
 </pkgmetadata>

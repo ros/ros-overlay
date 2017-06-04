@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="This package defines messages used in rospeex."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/rospeex/rospeex-release/archive/release/indigo/rospeex_msgs/3.0.1-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://bitbucket.org/rospeex/rospeex-release/get/release/indigo/rospeex_msgs/3.0.1-1.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -17,6 +17,7 @@ RDEPEND="
     ros-indigo/std_srvs
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
     ros-indigo/message_generation
 "
@@ -42,6 +43,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

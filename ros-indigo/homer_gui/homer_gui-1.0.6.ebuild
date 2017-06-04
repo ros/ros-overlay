@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="commander interface"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_gui/archive/release/indigo/homer_gui/1.0.6-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_gui/repository/archive.tar.gz?ref=release/indigo/homer_gui/1.0.6-0 -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="LGPL-3"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -32,6 +32,7 @@ RDEPEND="
     sci-libs/pcl
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
     ros-indigo/cv_bridge
     ros-indigo/genmsg
@@ -60,6 +61,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

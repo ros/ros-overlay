@@ -3,19 +3,24 @@
 
 EAPI=6
 
-DESCRIPTION="The ssl.match_hostname() function from Python 3.5"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/backports.ssl_match_hostname-rosrelease/archive/release/indigo/backports_ssl_match_hostname/3.5.0-5.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/start-jsk/denso-release/archive/release/indigo/denso/1.1.8-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Python software Foundation License"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-indigo/denso_controller
+    ros-indigo/denso_launch
+    ros-indigo/vs060
+    ros-indigo/vs060_gazebo
+    ros-indigo/vs060_moveit_config
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-indigo/catkin
-    ros-indigo/catkin_pip
 "
 
 SLOT="0/0"
@@ -39,6 +44,14 @@ src_compile() {
 src_install() {
     cd ../../work
     source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
