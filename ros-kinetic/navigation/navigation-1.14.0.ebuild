@@ -8,8 +8,7 @@ DESCRIPTION="A 2D navigation stack that takes in information from odometry, sens
 HOMEPAGE="http://wiki.ros.org/navigation"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD,LGPL,LGPL (amcl)"
-
+LICENSE="|| ( BSD LGPL-2 LGPL-2 )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
@@ -32,6 +31,7 @@ RDEPEND="
     ros-kinetic/voxel_grid
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
 "
 
@@ -58,6 +58,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

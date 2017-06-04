@@ -3,29 +3,27 @@
 
 EAPI=6
 
-DESCRIPTION="Package for interfacing to the ROSflight autopilot firmware over MAVLink"
+DESCRIPTION="Supporting utilities for ROSflight packages"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/0.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_utils/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="TODO"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
+    ros-kinetic/gazebo_msgs
     ros-kinetic/geometry_msgs
     ros-kinetic/roscpp
     ros-kinetic/rosflight_msgs
+    ros-kinetic/rosgraph_msgs
+    ros-kinetic/rospy
     ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
     ros-kinetic/std_srvs
-    ros-kinetic/tf
-    dev-libs/boost
-    dev-cpp/eigen
-    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
-    dev-vcs/git
 "
 
 SLOT="0/0"
@@ -51,6 +49,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

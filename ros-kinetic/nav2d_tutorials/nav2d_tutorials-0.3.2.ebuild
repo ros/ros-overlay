@@ -7,7 +7,7 @@ DESCRIPTION="Contains a set of tutorials that run 2D-Navigation within Stage-Sim
 HOMEPAGE="http://wiki.ros.org/nav2d_tutorials"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_tutorials/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPLv3"
+LICENSE="GPL-3"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -21,6 +21,7 @@ RDEPEND="
     ros-kinetic/nav2d_remote
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
 "
 
@@ -47,6 +48,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

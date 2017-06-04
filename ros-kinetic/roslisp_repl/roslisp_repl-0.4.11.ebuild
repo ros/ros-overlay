@@ -8,7 +8,7 @@ DESCRIPTION="This package provides a script that launches Emacs with Slime (the
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/kinetic/roslisp_repl/0.4.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Public domain"
+LICENSE=""
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -20,6 +20,7 @@ RDEPEND="
     dev-lisp/sbcl
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
 "
 
@@ -46,6 +47,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
