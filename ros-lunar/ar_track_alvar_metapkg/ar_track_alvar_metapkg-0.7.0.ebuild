@@ -7,7 +7,7 @@ DESCRIPTION="Meta package for ROS ar_track_alvar related packages."
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/lunar/ar_track_alvar_metapkg/0.7.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

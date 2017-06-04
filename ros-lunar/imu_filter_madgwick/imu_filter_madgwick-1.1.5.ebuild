@@ -7,7 +7,7 @@ DESCRIPTION="Filter which fuses angular velocities, accelerations, and (optional
 HOMEPAGE="http://ros.org/wiki/imu_filter_madgwick"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_filter_madgwick/1.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

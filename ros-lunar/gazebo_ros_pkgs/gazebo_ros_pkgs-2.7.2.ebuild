@@ -7,8 +7,7 @@ DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_ros_pkgs/2.7.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD,LGPL,Apache 2.0"
-
+LICENSE="|| ( BSD LGPL-2 Apache-2.0 )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="

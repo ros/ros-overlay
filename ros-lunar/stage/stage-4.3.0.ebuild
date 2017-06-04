@@ -7,7 +7,7 @@ DESCRIPTION="Mobile robot simulator http://rtv.github.com/Stage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/lunar/stage/4.3.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

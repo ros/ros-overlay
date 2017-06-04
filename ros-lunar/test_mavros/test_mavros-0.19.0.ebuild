@@ -7,7 +7,7 @@ DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( "BSD" "GPLv3" "LGPLv3" )"
+LICENSE="|| ( BSD GPL-3 LGPL-3 )"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="

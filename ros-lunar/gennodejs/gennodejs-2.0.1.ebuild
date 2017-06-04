@@ -7,7 +7,7 @@ DESCRIPTION="Javascript ROS message and service generators."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/lunar/gennodejs/2.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

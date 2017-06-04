@@ -8,7 +8,7 @@ DESCRIPTION="This package contains the python bindings PyKDL for the Kinematics 
 HOMEPAGE="http://wiki.ros.org/python_orocos_kdl"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/lunar/python_orocos_kdl/1.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 

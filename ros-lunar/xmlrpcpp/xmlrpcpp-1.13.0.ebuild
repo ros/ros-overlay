@@ -8,7 +8,7 @@ DESCRIPTION="XmlRpc++ is a C++ implementation of the XML-RPC protocol. This vers
 HOMEPAGE="http://xmlrpcpp.sourceforge.net"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/xmlrpcpp/1.13.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
