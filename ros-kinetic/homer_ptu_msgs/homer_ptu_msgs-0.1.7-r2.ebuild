@@ -3,11 +3,11 @@
 
 EAPI=6
 
-DESCRIPTION=""
+DESCRIPTION="The ptu_msgs package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_ptu_msgs/0.1.7-2 -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-v2"
+LICENSE="TODO"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -17,6 +17,7 @@ RDEPEND="
     ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
     ros-kinetic/message_generation
 "
@@ -44,6 +45,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

@@ -8,7 +8,7 @@ DESCRIPTION="This package pulls in the Karto mapping library, and provides a ROS
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/slam_karto-release/archive/release/kinetic/slam_karto/0.7.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -25,6 +25,7 @@ RDEPEND="
     dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-kinetic/catkin
     ros-kinetic/cmake_modules
 "
@@ -52,6 +53,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

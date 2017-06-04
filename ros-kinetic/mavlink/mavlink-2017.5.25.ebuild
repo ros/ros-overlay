@@ -8,7 +8,7 @@ DESCRIPTION="MAVLink message marshaling library.
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.5.25-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPLv3"
+LICENSE="LGPL-3"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -17,6 +17,7 @@ RDEPEND="
     dev-lang/python
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     dev-util/cmake
     dev-python/future
     dev-python/lxml
@@ -46,6 +47,12 @@ src_install() {
     source /${ROS_PREFIX}/setup.bash
     export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
     catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}

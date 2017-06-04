@@ -5,4 +5,11 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vseib@todo.todo</email>
+      <name>vseib</name>
+    </maintainer>
+    <bugs-to>https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs/issues</bugs-to>
+  </upstream>
 </pkgmetadata>
