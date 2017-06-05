@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
@@ -34,7 +34,11 @@ src_configure() {
 }
 
 src_compile() {
-    echo ""
+    mkdir ${WORKDIR}/${P}/build
+    mkdir ${WORKDIR}/${P}/devel
+    cd ${WORKDIR}/${P}/build
+    cmake -DCMAKE_INSTALL_PREFIX=/${ROS_PREFIX} -DCMAKE_PREFIX_PATH=/${ROS_PREFIX} -DCATKIN_DEVEL_PREFIX=../devel ..
+    make -j$(nproc) -l$(nproc) || die
 }
 
 src_install() {
@@ -48,7 +52,8 @@ src_install() {
         mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
     fi
 
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    cd ${P}/build
+    make install || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}

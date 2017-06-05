@@ -7,7 +7,7 @@ DESCRIPTION="Transmission Interface."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/lunar/transmission_interface/0.11.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Modified BSD"
+LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
     ros-lunar/hardware_interface
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
@@ -38,7 +38,11 @@ src_configure() {
 }
 
 src_compile() {
-    echo ""
+    mkdir ${WORKDIR}/${P}/build
+    mkdir ${WORKDIR}/${P}/devel
+    cd ${WORKDIR}/${P}/build
+    cmake -DCMAKE_INSTALL_PREFIX=/${ROS_PREFIX} -DCMAKE_PREFIX_PATH=/${ROS_PREFIX} -DCATKIN_DEVEL_PREFIX=../devel ..
+    make -j$(nproc) -l$(nproc) || die
 }
 
 src_install() {
@@ -52,7 +56,8 @@ src_install() {
         mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
     fi
 
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    cd ${P}/build
+    make install || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
