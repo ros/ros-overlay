@@ -17,14 +17,13 @@ RDEPEND="
     ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
-    dev-python/catkin
     ros-lunar/actionlib_msgs
     ros-lunar/catkin
     ros-lunar/message_generation
     ros-lunar/std_msgs
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
@@ -39,21 +38,16 @@ src_configure() {
 }
 
 src_compile() {
-    echo ""
+    mkdir ${WORKDIR}/${P}/build
+    mkdir ${WORKDIR}/${P}/devel
+    cd ${WORKDIR}/${P}/build
+    cmake -DCMAKE_INSTALL_PREFIX=${D}/${ROS_PREFIX} -DCMAKE_PREFIX_PATH=/${ROS_PREFIX} -DCATKIN_DEVEL_PREFIX=../devel ..
+    make -j$(nproc) -l$(nproc) || die
 }
 
 src_install() {
-    cd ../../work
-    source /${ROS_PREFIX}/setup.bash
-    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
-        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
-    fi
-
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
+    cd ${WORKDIR}/${P}/build
+    make install || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
