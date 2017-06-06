@@ -7,7 +7,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="OpenCV 3.x"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv3/3.2.0-7.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv3/3.2.0-8.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -47,7 +47,7 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
