@@ -5,9 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION=""
-HOMEPAGE="http://ros.org/wiki/roscpp_serialization"
-SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/lunar/roscpp_serialization/0.6.3-0.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="Time and Duration implementations for C++ libraries, including roscpp."
+HOMEPAGE="http://ros.org/wiki/rostime"
+SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/lunar/rostime/0.6.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -15,8 +15,7 @@ KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/cpp_common
-    ros-lunar/roscpp_traits
-    ros-lunar/rostime
+    dev-libs/boost
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
@@ -37,7 +36,7 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
