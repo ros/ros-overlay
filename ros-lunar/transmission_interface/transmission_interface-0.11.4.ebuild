@@ -7,7 +7,7 @@ DESCRIPTION="Transmission Interface."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/lunar/transmission_interface/0.11.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
+LICENSE="Modified BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
@@ -17,12 +17,13 @@ RDEPEND="
     dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
+    dev-python/catkin
     ros-lunar/catkin
     ros-lunar/cmake_modules
     ros-lunar/hardware_interface
 "
 
-SLOT="0"
+SLOT="0/0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
@@ -37,16 +38,21 @@ src_configure() {
 }
 
 src_compile() {
-    mkdir ${WORKDIR}/${P}/build
-    mkdir ${WORKDIR}/${P}/devel
-    cd ${WORKDIR}/${P}/build
-    cmake -DCMAKE_INSTALL_PREFIX=${D}/${ROS_PREFIX} -DCMAKE_PREFIX_PATH=/${ROS_PREFIX} -DCATKIN_DEVEL_PREFIX=../devel ..
-    make -j$(nproc) -l$(nproc) || die
+    echo ""
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
-    make install || die
+    cd ../../work
+    source /${ROS_PREFIX}/setup.bash
+    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
+    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
+        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
+    fi
+
+    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
     if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
         rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
         rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
