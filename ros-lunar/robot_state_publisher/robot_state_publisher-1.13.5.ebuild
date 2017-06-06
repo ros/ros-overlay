@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION=""
 HOMEPAGE="http://wiki.ros.org/robot_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_state_publisher-release/archive/release/lunar/robot_state_publisher/1.13.5-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -44,12 +46,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }

@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="Node for the SP1 Stereo Vision System by Nerian Vision Technologies"
 HOMEPAGE="http://wiki.ros.org/nerian_sp1"
 SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/lunar/nerian_sp1/1.6.2-1.tar.gz -> ${P}-${PV}.tar.gz"
@@ -40,12 +42,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }

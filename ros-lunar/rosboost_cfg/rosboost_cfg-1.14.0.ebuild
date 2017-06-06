@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="Contains scripts used by the rosboost-cfg tool for determining cflags/lflags/etc"
 HOMEPAGE="http://ros.org/wiki/rosboost_cfg"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/lunar/rosboost_cfg/1.14.0-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -32,12 +34,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }

@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="Compressed_depth_image_transport provides a plugin to image_transport for transp"
 HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
 SRC_URI="https://github.com/ros-gbp/image_transport_plugins-release/archive/release/lunar/compressed_depth_image_transport/1.9.5-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -35,12 +37,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }

@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="rqt_gui provides the main to start an instance of the ROS integrated graphical u"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt_gui/0.5.0-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -33,12 +35,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }

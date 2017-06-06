@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="This package contains a tool to convert Unified Robot Description Format (URDF) "
 HOMEPAGE="http://ros.org/wiki/collada_urdf"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/collada_urdf/1.12.9-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -45,12 +47,13 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
+        -DPYTHON_EXECUTABLE="/opt/ros/lunar/env.sh python3.5"
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
+    cd ${WORKDIR}/${P}_build
     make install || die
 }
