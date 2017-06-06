@@ -12,14 +12,14 @@ LICENSE="BSD"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    dev-cpp/gtest
-    dev-lang/python
-    dev-python/catkin_pkg
-    dev-python/empy
-    dev-python/nose
+	dev-cpp/gtest
+	dev-lang/python
+	dev-python/catkin_pkg
+	dev-python/empy
+	dev-python/nose
 "
 DEPEND="${RDEPEND}
-    dev-util/cmake
+	dev-util/cmake
 "
 
 SLOT="0"
@@ -27,24 +27,24 @@ CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/lunar"
 
 src_unpack() {
-    default
-    mv *${P}* ${P}
-    cd ${P}
-    epatch "${PATCHFILES}/*"
+	default
+	mv *${P}* ${P}
+	cd ${P}
+	epatch "${PATCHFILES}/*"
 }
 
 src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DCATKIN_BUILD_BINARY_PATCKAGE=1
-     )
-    cmake-utils_src_configure
+	append-cxxflags "-std=c++11"
+	export DEST_SETUP_DIR="/${ROS_PREFIX}"
+	local mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
+		-DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+		-DCATKIN_BUILD_BINARY_PATCKAGE=0
+	 )
+	cmake-utils_src_configure
 }
 
 src_install() {
-    cd ${WORKDIR}/${P}/build
-    make install || die
+	cd ${WORKDIR}/${P}/build
+	make install || die
 }
