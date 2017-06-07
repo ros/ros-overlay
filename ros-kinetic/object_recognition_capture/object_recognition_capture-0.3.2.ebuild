@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="Capture is a set of tools to capture objects in 3D and perform odometry"
 HOMEPAGE="http://wg-perception.github.io/capture"
 SRC_URI="https://github.com/ros-gbp/object_recognition_capture-release/archive/release/kinetic/object_recognition_capture/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -21,11 +23,10 @@ RDEPEND="
     dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    dev-python/catkin
     ros-kinetic/catkin
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
@@ -35,28 +36,18 @@ src_unpack() {
 }
 
 src_configure() {
-    mkdir ${WORKDIR}/src
-    cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
-}
-
-src_compile() {
-    echo ""
+    append-cxxflags "-std=c++11"
+    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    local mycmakeargs=(
+        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
+     )
+    cmake-utils_src_configure
 }
 
 src_install() {
-    cd ../../work
-    source /${ROS_PREFIX}/setup.bash
-    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
-        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
-    fi
-
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
-        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
-    fi
+    cd ${WORKDIR}/${P}_build
+    make install || die
 }

@@ -5,11 +5,4 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
-  <upstream>
-    <maintainer status="active">
-      <email>fpolster@uni-koblenz.de</email>
-      <name>Florian Polster</name>
-    </maintainer>
-    <bugs-to>https://gitlab.uni-koblenz.de/robbie/homer_mapping/issues</bugs-to>
-  </upstream>
 </pkgmetadata>
