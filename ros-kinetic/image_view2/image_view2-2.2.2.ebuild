@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="A simple viewer for ROS image topics with draw-on features"
 HOMEPAGE="http://ros.org/wiki/image_view2"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
@@ -27,13 +29,12 @@ RDEPEND="
     ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
-    dev-python/catkin
     ros-kinetic/catkin
     ros-kinetic/message_generation
     ros-kinetic/rostest
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/kinetic"
 
@@ -43,28 +44,18 @@ src_unpack() {
 }
 
 src_configure() {
-    mkdir ${WORKDIR}/src
-    cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
-}
-
-src_compile() {
-    echo ""
+    append-cxxflags "-std=c++11"
+    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    local mycmakeargs=(
+        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DCATKIN_BUILD_BINARY_PACKAGE=1
+     )
+    cmake-utils_src_configure
 }
 
 src_install() {
-    cd ../../work
-    source /${ROS_PREFIX}/setup.bash
-    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
-        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
-    fi
-
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
-        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
-    fi
+    cd ${WORKDIR}/${P}_build
+    make install || die
 }
