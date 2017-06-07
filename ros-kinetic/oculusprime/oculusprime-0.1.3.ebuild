@@ -5,31 +5,33 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="OpenCV 3.x"
+DESCRIPTION="Oculus Prime ROS Interface"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/kinetic/opencv3/3.2.0-5.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/xaxxontech/oculusprime_ros-release/archive/release/kinetic/oculusprime/0.1.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    ros-kinetic/catkin
-    virtual/ffmpeg
-    media-libs/jasper
-    virtual/jpeg
-    media-libs/libpng
-    sci-libs/vtk
-    dev-libs/protobuf
-    dev-lang/python
-    dev-python/numpy
-    sys-libs/zlib
+    ros-kinetic/amcl
+    ros-kinetic/depthimage_to_laserscan
+    ros-kinetic/dwa_local_planner
+    ros-kinetic/dynamic_reconfigure
+    ros-kinetic/gmapping
+    ros-kinetic/map_server
+    ros-kinetic/move_base
+    ros-kinetic/nodelet
+    ros-kinetic/openni2_camera
+    ros-kinetic/openni2_launch
+    ros-kinetic/pcl_ros
+    ros-kinetic/roscpp
+    ros-kinetic/rospy
+    ros-kinetic/std_msgs
+    ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
-    dev-util/cmake
-    media-libs/tiff
-    media-libs/libv4l
-    dev-libs/protobuf
+    ros-kinetic/catkin
 "
 
 SLOT="0"
@@ -47,6 +49,7 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
