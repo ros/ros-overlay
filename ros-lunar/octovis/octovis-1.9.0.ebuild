@@ -17,14 +17,14 @@ RDEPEND="
     ros-lunar/catkin
     ros-lunar/octomap
     x11-libs/libQGLViewer
-    =dev-qt/qtopengl:4
-    =dev-qt/qtgui:4
+    dev-qt/qtopengl:4
+    dev-qt/qtgui:4
 "
 DEPEND="${RDEPEND}
     dev-util/cmake
     x11-libs/libQGLViewer
-    =dev-qt/qtcore:4
-    =dev-qt/qtopengl:4
+    dev-qt/qtcore:4
+    dev-qt/qtopengl:4
 "
 
 SLOT="0"

@@ -22,7 +22,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
-    =dev-qt/qtcore:5
+    dev-qt/qtcore:5
 "
 
 SLOT="0"

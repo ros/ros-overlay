@@ -24,7 +24,7 @@ RDEPEND="
     ros-lunar/rosconsole
     ros-lunar/roscpp
     ros-lunar/std_srvs
-    =x11-libs/gtk+:2
+    x11-libs/gtk+:2
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin

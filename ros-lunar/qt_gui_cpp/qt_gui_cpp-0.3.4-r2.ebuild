@@ -21,8 +21,8 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
     ros-lunar/python_qt_binding
     virtual/pkgconfig
-    =dev-qt/qtcore:5
-    =dev-qt/qtcore:5
+    dev-qt/qtcore:5
+    dev-qt/qtcore:5
     dev-libs/tinyxml
 "
 

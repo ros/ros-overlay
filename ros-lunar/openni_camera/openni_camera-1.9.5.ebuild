@@ -22,7 +22,7 @@ RDEPEND="
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
     dev-libs/OpenNi
-    =virtual/libusb:1
+    virtual/libusb:1
     dev-libs/log4cxx
 "
 DEPEND="${RDEPEND}

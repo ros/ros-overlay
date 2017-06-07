@@ -18,13 +18,13 @@ RDEPEND="
     ros-lunar/rosbag_storage
     ros-lunar/roscpp
     ros-lunar/rosgraph_msgs
-    =dev-qt/qtcore:5
-    =dev-qt/qtgui:5
-    =dev-qt/qtwidgets:5
+    dev-qt/qtcore:5
+    dev-qt/qtgui:5
+    dev-qt/qtwidgets:5
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
-    =dev-qt/qtopengl:5
+    dev-qt/qtopengl:5
 "
 
 SLOT="0"

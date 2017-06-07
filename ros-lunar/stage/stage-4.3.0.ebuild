@@ -15,8 +15,8 @@ KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    =x11-libs/gtk+:2
-    =x11-libs/fltk-1*
+    x11-libs/gtk+:2
+    x11-libs/fltk-1*
     virtual/jpeg
     virtual/opengl
 "

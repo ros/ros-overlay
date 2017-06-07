@@ -32,7 +32,7 @@ RDEPEND="
     sci-libs/pcl
     sci-libs/vtk
     sci-libs/proj
-    =dev-qt/qtcore:5
+    dev-qt/qtcore:5
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin

@@ -16,7 +16,7 @@ KEYWORDS="x86 amd64 arm ~arm64"
 RDEPEND="
     ros-lunar/catkin
     media-libs/freeglut
-    =virtual/libusb:1
+    virtual/libusb:1
     x11-libs/libXi
     x11-libs/libXmu
 "
