@@ -14,8 +14,8 @@ LICENSE="Apache-2.0"
 KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
-    =sci-electronics/gazebo-7*
-    =sci-electronics/gazebo-7*
+    sci-electronics/gazebo-7*
+    sci-electronics/gazebo-7*
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin

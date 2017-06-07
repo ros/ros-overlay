@@ -38,10 +38,10 @@ RDEPEND="
     media-libs/assimp
     dev-cpp/eigen
     dev-games/ogre
-    =dev-qt/qtcore:5
-    =dev-qt/qtgui:5
-    =dev-qt/qtopengl:5
-    =dev-qt/qtwidgets:5
+    dev-qt/qtcore:5
+    dev-qt/qtgui:5
+    dev-qt/qtopengl:5
+    dev-qt/qtwidgets:5
     dev-libs/urdfdom_headers
     virtual/opengl
     dev-libs/tinyxml
@@ -51,8 +51,8 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
     ros-lunar/cmake_modules
     media-libs/assimp
-    =dev-qt/qtopengl:5
-    =dev-qt/qtcore:5
+    dev-qt/qtopengl:5
+    dev-qt/qtcore:5
 "
 
 SLOT="0"

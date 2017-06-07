@@ -15,11 +15,11 @@ KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/libphidget21
-    =virtual/libusb:1
+    virtual/libusb:1
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
-    =virtual/libusb:1
+    virtual/libusb:1
 "
 
 SLOT="0"

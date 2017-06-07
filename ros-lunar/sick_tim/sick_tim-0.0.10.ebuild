@@ -18,11 +18,11 @@ RDEPEND="
     ros-lunar/dynamic_reconfigure
     ros-lunar/roscpp
     ros-lunar/sensor_msgs
-    =virtual/libusb:1
+    virtual/libusb:1
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
-    =virtual/libusb:1
+    virtual/libusb:1
 "
 
 SLOT="0"

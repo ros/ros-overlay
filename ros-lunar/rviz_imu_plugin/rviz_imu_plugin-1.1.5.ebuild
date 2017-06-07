@@ -16,13 +16,13 @@ KEYWORDS="x86 amd64 arm ~arm64"
 RDEPEND="
     ros-lunar/roscpp
     ros-lunar/rviz
-    =dev-qt/qtcore:5
-    =dev-qt/qtgui:5
-    =dev-qt/qtwidgets:5
+    dev-qt/qtcore:5
+    dev-qt/qtgui:5
+    dev-qt/qtwidgets:5
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
-    =dev-qt/qtcore:5
+    dev-qt/qtcore:5
 "
 
 SLOT="0"

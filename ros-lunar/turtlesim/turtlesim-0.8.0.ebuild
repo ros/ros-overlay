@@ -23,14 +23,14 @@ RDEPEND="
     ros-lunar/rostime
     ros-lunar/std_msgs
     ros-lunar/std_srvs
-    =dev-qt/qtcore:5
-    =dev-qt/qtgui:5
+    dev-qt/qtcore:5
+    dev-qt/qtgui:5
 "
 DEPEND="${RDEPEND}
     ros-lunar/catkin
     ros-lunar/message_generation
-    =dev-qt/qtcore:5
-    =dev-qt/qtcore:5
+    dev-qt/qtcore:5
+    dev-qt/qtcore:5
 "
 
 SLOT="0"

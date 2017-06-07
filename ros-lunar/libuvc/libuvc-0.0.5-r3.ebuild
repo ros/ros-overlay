@@ -15,7 +15,7 @@ KEYWORDS="x86 amd64 arm ~arm64"
 
 RDEPEND="
     ros-lunar/catkin
-    =virtual/libusb:1
+    virtual/libusb:1
 "
 DEPEND="${RDEPEND}
     dev-util/cmake
