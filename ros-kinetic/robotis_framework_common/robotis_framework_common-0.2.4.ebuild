@@ -7,7 +7,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="The package contains commonly used Headers for the ROBOTIS Framework."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework_common/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework_common/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -36,7 +36,7 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
