@@ -1,0 +1,40 @@
+diff --git a/cfg/CropDecimate.cfg b/cfg/CropDecimate.cfg
+index e00ff75..50bbb2a 100755
+--- a/cfg/CropDecimate.cfg
++++ b/cfg/CropDecimate.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='image_proc'
+ 
+diff --git a/cfg/Debayer.cfg b/cfg/Debayer.cfg
+index b5bc6d9..90cfdef 100755
+--- a/cfg/Debayer.cfg
++++ b/cfg/Debayer.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='image_proc'
+ 
+diff --git a/cfg/Rectify.cfg b/cfg/Rectify.cfg
+index c264cd2..d4633a9 100755
+--- a/cfg/Rectify.cfg
++++ b/cfg/Rectify.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='image_proc'
+ 
+diff --git a/cfg/Resize.cfg b/cfg/Resize.cfg
+index a299654..bff5428 100755
+--- a/cfg/Resize.cfg
++++ b/cfg/Resize.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ from dynamic_reconfigure.parameter_generator_catkin import *
+ 
