@@ -42,13 +42,21 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_BUILD_BINARY_PACKAGE=0
      )
     cmake-utils_src_configure
 }
 
+src_compile() {
+gcc ${FILESDIR}/ros-python.c -o ${WORKDIR}/${P}/ros-python-lunar || die 'could not compile ros-python!'
+    cmake-utils_src_compile
+}
+
 src_install() {
+    cd ${WORKDIR}/${P}
+    mkdir -p ${D}/usr/bin
+    cp ros-python-lunar ${D}/usr/bin || die 'could not install ros-python!'
     cd ${WORKDIR}/${P}_build
     make install || die
 }
