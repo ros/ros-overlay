@@ -34,8 +34,8 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
