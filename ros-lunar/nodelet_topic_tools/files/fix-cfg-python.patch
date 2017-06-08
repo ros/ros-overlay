@@ -1,0 +1,10 @@
+diff --git a/cfg/NodeletThrottle.cfg b/cfg/NodeletThrottle.cfg
+index 6ec3a68..865848b 100755
+--- a/cfg/NodeletThrottle.cfg
++++ b/cfg/NodeletThrottle.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ from dynamic_reconfigure.parameter_generator_catkin import *
+ 
