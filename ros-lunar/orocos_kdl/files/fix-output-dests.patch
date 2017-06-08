@@ -1,7 +1,7 @@
-diff --git a/orocos_kdl/KDLConfig.cmake.in b/orocos_kdl/KDLConfig.cmake.in
+diff --git a/KDLConfig.cmake.in b/KDLConfig.cmake.in
 index a0fe0b3..fc88e0d 100644
---- a/orocos_kdl/KDLConfig.cmake.in
-+++ b/orocos_kdl/KDLConfig.cmake.in
+--- a/KDLConfig.cmake.in
++++ b/KDLConfig.cmake.in
 @@ -5,7 +5,7 @@
  #  orocos_kdl_PKGCONFIG_DIR - directory containing the .pc pkgconfig files
  
