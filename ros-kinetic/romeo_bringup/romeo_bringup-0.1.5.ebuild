@@ -13,6 +13,7 @@ SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/ki
 LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-kinetic/naoqi_driver
@@ -38,8 +39,9 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure

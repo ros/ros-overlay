@@ -13,6 +13,7 @@ SRC_URI="https://github.com/ethz-asl/rqt_multiplot_plugin-release/archive/releas
 LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-kinetic/rosbag
@@ -41,8 +42,9 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
