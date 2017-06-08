@@ -5,13 +5,14 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="C++ client library to access semantic maps within the world canvas framework."
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/world_canvas_libs-release/archive/release/kinetic/world_canvas_client_cpp/0.2.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="LGPL-2"
 
 KEYWORDS="x86 amd64 arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-kinetic/roscpp
@@ -39,8 +40,9 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure

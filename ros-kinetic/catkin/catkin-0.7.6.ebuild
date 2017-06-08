@@ -12,6 +12,7 @@ SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catki
 LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     dev-cpp/gtest
@@ -39,13 +40,22 @@ src_configure() {
     local mycmakeargs=(
         -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/site-packages/python3.5
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
         -DCATKIN_BUILD_BINARY_PACKAGE=0
      )
     cmake-utils_src_configure
 }
 
+src_compile() {
+    gcc ${FILESDIR}/ros-python.c -o ${WORKDIR}/${P}/ros-python-kinetic || die 'could not compile ros-python!'
+    cmake-utils_src_compile
+}
+
 src_install() {
+    cd ${WORKDIR}/${P}
+    mkdir -p ${D}/usr/bin
+    cp ros-python-kinetic ${D}/usr/bin || die 'could not install ros-python!'
     cd ${WORKDIR}/${P}_build
     make install || die
 }
