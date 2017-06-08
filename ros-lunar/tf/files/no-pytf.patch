@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 8077561..1418a47 100644
+index 8077561..1decdd2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -122,16 +122,16 @@ include_directories(${PYTHON_INCLUDE_PATH})
@@ -26,3 +26,18 @@ index 8077561..1418a47 100644
  endif()
  
  if(CATKIN_ENABLE_TESTING AND NOT ANDROID)
+@@ -149,10 +149,10 @@ install(TARGETS ${PROJECT_NAME} tf_echo tf_empty_listener tf_change_notifier tf_
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+ 
+-if(NOT ANDROID)
+-install(TARGETS pytf_py
+-  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/${PYTHON_INSTALL_DIR}/tf)
+-endif()
++# if(NOT ANDROID)
++# install(TARGETS pytf_py
++#   LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/${PYTHON_INSTALL_DIR}/tf)
++# endif()
+ 
+ # Install rosrun-able scripts
+ install(PROGRAMS 
