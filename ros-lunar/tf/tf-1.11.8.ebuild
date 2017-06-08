@@ -41,6 +41,9 @@ ROS_PREFIX="opt/ros/lunar"
 src_unpack() {
     default
     mv *${P}* ${P}
+    cd ${P}
+    EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+                 EPATCH_FORCE="yes" epatch
 }
 
 src_configure() {
