@@ -5,10 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The manipulator_h_gazebo package
-    This package provides GAZEBO simulation env"
+DESCRIPTION="The package that manages device information of ROBOTIS robots.
+    This package "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_gazebo/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_device/0.2.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,6 +16,9 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/roscpp
+    ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin

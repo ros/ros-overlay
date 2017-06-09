@@ -5,9 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="Package for TurtleBot3 fake node. With this package, simple tests can be done wi"
+DESCRIPTION="ROS packages for the turtlebot3 simulation (meta package)"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_fake/0.1.4-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_simulations/0.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -15,13 +15,8 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/geometry_msgs
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf
-    ros-kinetic/turtlebot3_msgs
+    ros-kinetic/turtlebot3_fake
+    ros-kinetic/turtlebot3_gazebo
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin

@@ -7,7 +7,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="ROS packages for the robotis_framework (meta package)"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework/0.2.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 

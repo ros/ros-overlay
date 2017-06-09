@@ -5,10 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The manipulator_h_kinematics_dynamics package
-    This packages provides library"
+DESCRIPTION="SMACH is a task-level architecture for rapidly creating complex robot
+    behavi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_kinematics_dynamics/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach/2.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,12 +16,9 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/robotis_math
 "
 
 SLOT="0"
