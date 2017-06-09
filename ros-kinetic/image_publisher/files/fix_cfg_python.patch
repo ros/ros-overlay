@@ -1,0 +1,10 @@
+diff --git a/cfg/ImagePublisher.cfg b/cfg/ImagePublisher.cfg
+index 6b17660..75a5fd6 100755
+--- a/cfg/ImagePublisher.cfg
++++ b/cfg/ImagePublisher.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-kinetic
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2010, Willow Garage, Inc.

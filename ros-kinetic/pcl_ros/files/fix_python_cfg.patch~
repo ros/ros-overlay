@@ -1,0 +1,150 @@
+diff --git a/cfg/CropBox.cfg b/cfg/CropBox.cfg
+index 8031493..1868b7f 100755
+--- a/cfg/CropBox.cfg
++++ b/cfg/CropBox.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/EuclideanClusterExtraction.cfg b/cfg/EuclideanClusterExtraction.cfg
+index e9607f4..0c11247 100755
+--- a/cfg/EuclideanClusterExtraction.cfg
++++ b/cfg/EuclideanClusterExtraction.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='pcl_ros'
+ 
+diff --git a/cfg/ExtractIndices.cfg b/cfg/ExtractIndices.cfg
+index debcb65..4a36945 100755
+--- a/cfg/ExtractIndices.cfg
++++ b/cfg/ExtractIndices.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/ExtractPolygonalPrismData.cfg b/cfg/ExtractPolygonalPrismData.cfg
+index 0705aea..b43890d 100755
+--- a/cfg/ExtractPolygonalPrismData.cfg
++++ b/cfg/ExtractPolygonalPrismData.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='pcl_ros'
+ 
+diff --git a/cfg/Feature.cfg b/cfg/Feature.cfg
+index aaf9ee9..755598c 100755
+--- a/cfg/Feature.cfg
++++ b/cfg/Feature.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='pcl_ros'
+ 
+diff --git a/cfg/Filter.cfg b/cfg/Filter.cfg
+index 398af1a..9c7cac7 100755
+--- a/cfg/Filter.cfg
++++ b/cfg/Filter.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/MLS.cfg b/cfg/MLS.cfg
+index 7f9ff8f..6582146 100755
+--- a/cfg/MLS.cfg
++++ b/cfg/MLS.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='pcl_ros'
+ 
+diff --git a/cfg/RadiusOutlierRemoval.cfg b/cfg/RadiusOutlierRemoval.cfg
+index d54962e..3e015a1 100755
+--- a/cfg/RadiusOutlierRemoval.cfg
++++ b/cfg/RadiusOutlierRemoval.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/SACSegmentation.cfg b/cfg/SACSegmentation.cfg
+index 013e8cc..d6a899b 100755
+--- a/cfg/SACSegmentation.cfg
++++ b/cfg/SACSegmentation.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ PACKAGE='pcl_ros'
+ 
+diff --git a/cfg/SACSegmentationFromNormals.cfg b/cfg/SACSegmentationFromNormals.cfg
+index e54cbf0..792a9ee 100755
+--- a/cfg/SACSegmentationFromNormals.cfg
++++ b/cfg/SACSegmentationFromNormals.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/SACSegmentation_common.py b/cfg/SACSegmentation_common.py
+index d093890..0deab3e 100644
+--- a/cfg/SACSegmentation_common.py
++++ b/cfg/SACSegmentation_common.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/SegmentDifferences.cfg b/cfg/SegmentDifferences.cfg
+index 1a17a7c..a99d40c 100755
+--- a/cfg/SegmentDifferences.cfg
++++ b/cfg/SegmentDifferences.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE='pcl_ros'
+diff --git a/cfg/StatisticalOutlierRemoval.cfg b/cfg/StatisticalOutlierRemoval.cfg
+index 4640b83..fdd3058 100755
+--- a/cfg/StatisticalOutlierRemoval.cfg
++++ b/cfg/StatisticalOutlierRemoval.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/VoxelGrid.cfg b/cfg/VoxelGrid.cfg
+index 332f1f0..3c21d97 100755
+--- a/cfg/VoxelGrid.cfg
++++ b/cfg/VoxelGrid.cfg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff --git a/cfg/common.py b/cfg/common.py
+index e04347a..65317ec 100644
+--- a/cfg/common.py
++++ b/cfg/common.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/ros-python-lunar
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
