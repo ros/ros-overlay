@@ -5,10 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The manipulator_h_description package
-    This package includes URDF model of RO"
+DESCRIPTION="The main package that controls THORMANG3."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_description/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_controller/0.2.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,6 +15,16 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
+    ros-kinetic/cmake_modules
+    ros-kinetic/dynamixel_sdk
+    ros-kinetic/robotis_controller_msgs
+    ros-kinetic/robotis_device
+    ros-kinetic/robotis_framework_common
+    ros-kinetic/roscpp
+    ros-kinetic/roslib
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin

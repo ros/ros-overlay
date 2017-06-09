@@ -5,11 +5,11 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION=""
+DESCRIPTION="C++ client library to access semantic maps within the world canvas framework."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/world_canvas_libs-release/archive/release/kinetic/world_canvas_client_cpp/0.2.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"

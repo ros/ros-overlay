@@ -5,10 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="SMACH is a task-level architecture for rapidly creating complex robot
-    behavi"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach/2.0.0-2.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_ros/2.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,9 +15,18 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
+    ros-kinetic/actionlib
+    ros-kinetic/actionlib_msgs
+    ros-kinetic/rospy
+    ros-kinetic/rostopic
+    ros-kinetic/smach
+    ros-kinetic/smach_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
+    ros-kinetic/rostest
 "
 
 SLOT="0"

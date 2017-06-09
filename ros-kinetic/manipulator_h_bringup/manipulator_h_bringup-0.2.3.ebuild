@@ -5,10 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The manipulator_h_manager package
-    This package describes robot manager to ex"
+DESCRIPTION="The manipulator_h_bringup package
+    This package includes launch file to descr"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_manager/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_bringup/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,17 +16,9 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/robotis_controller
-    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/cmake_modules
-    ros-kinetic/dynamixel_sdk
-    ros-kinetic/manipulator_h_base_module
-    ros-kinetic/robotis_controller_msgs
-    ros-kinetic/robotis_device
-    ros-kinetic/robotis_framework_common
 "
 
 SLOT="0"

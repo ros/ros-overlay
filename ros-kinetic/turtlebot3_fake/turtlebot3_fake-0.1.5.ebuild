@@ -5,29 +5,26 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The manipulator_h_base_module package
-    This package describes basic function "
+DESCRIPTION="Package for TurtleBot3 fake node. With this package, simple tests can be done wi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_base_module/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_fake/0.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="Apache-2.0"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
     ros-kinetic/geometry_msgs
-    ros-kinetic/robotis_device
+    ros-kinetic/nav_msgs
     ros-kinetic/roscpp
+    ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
+    ros-kinetic/tf
+    ros-kinetic/turtlebot3_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/dynamixel_sdk
-    ros-kinetic/manipulator_h_base_module_msgs
-    ros-kinetic/manipulator_h_kinematics_dynamics
-    ros-kinetic/robotis_math
 "
 
 SLOT="0"

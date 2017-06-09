@@ -5,9 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The package contains commonly used Headers for the ROBOTIS Framework."
+DESCRIPTION="The manipulator_h_gui package
+    This package provides simple GUI to control RO"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework_common/0.2.4-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_gui/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -15,11 +16,17 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/robotis_device
+    ros-kinetic/cmake_modules
+    ros-kinetic/eigen_conversions
+    ros-kinetic/geometry_msgs
+    ros-kinetic/qt_build
     ros-kinetic/roscpp
+    dev-qt/qtcore:4
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
+    ros-kinetic/manipulator_h_base_module_msgs
+    ros-kinetic/robotis_controller_msgs
 "
 
 SLOT="0"

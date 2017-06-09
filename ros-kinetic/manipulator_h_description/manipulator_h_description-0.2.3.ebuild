@@ -5,9 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="ROS packages for the ROBOTIS MANIPULATOR-H (meta package)"
+DESCRIPTION="The manipulator_h_description package
+    This package includes URDF model of RO"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h/0.2.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_description/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -15,14 +16,6 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/manipulator_h_base_module
-    ros-kinetic/manipulator_h_base_module_msgs
-    ros-kinetic/manipulator_h_bringup
-    ros-kinetic/manipulator_h_description
-    ros-kinetic/manipulator_h_gazebo
-    ros-kinetic/manipulator_h_gui
-    ros-kinetic/manipulator_h_kinematics_dynamics
-    ros-kinetic/manipulator_h_manager
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin

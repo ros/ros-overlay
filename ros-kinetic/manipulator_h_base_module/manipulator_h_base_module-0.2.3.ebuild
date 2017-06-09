@@ -5,10 +5,10 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="this package contains a set of messages that are used by the introspection
-    i"
+DESCRIPTION="The manipulator_h_base_module package
+    This package describes basic function "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_msgs/2.0.0-2.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_base_module/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,12 +16,17 @@ KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/message_runtime
+    ros-kinetic/cmake_modules
+    ros-kinetic/geometry_msgs
+    ros-kinetic/manipulator_h_kinematics_dynamics
+    ros-kinetic/robotis_framework_common
+    ros-kinetic/robotis_math
+    ros-kinetic/roscpp
     ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/message_generation
+    ros-kinetic/manipulator_h_base_module_msgs
 "
 
 SLOT="0"

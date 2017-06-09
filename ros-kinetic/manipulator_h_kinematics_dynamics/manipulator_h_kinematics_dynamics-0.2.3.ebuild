@@ -5,21 +5,23 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="ROS packages for the turtlebot3 simulation (meta package)"
+DESCRIPTION="The manipulator_h_kinematics_dynamics package
+    This packages provides library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_simulations/0.1.4-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_kinematics_dynamics/0.2.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="BSD"
 
 KEYWORDS="x86 amd64 arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/turtlebot3_fake
-    ros-kinetic/turtlebot3_gazebo
+    ros-kinetic/cmake_modules
+    ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
+    ros-kinetic/robotis_math
 "
 
 SLOT="0"
