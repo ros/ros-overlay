@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>krirobo@gmail.com</email>
+      <name>Kristof Robot</name>
+    </maintainer>
+    <bugs-to>https://github.com/KristofRobot/razor_imu_9dof/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
