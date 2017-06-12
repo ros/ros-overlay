@@ -5,37 +5,21 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The robot_localization package provides nonlinear state estimation through senso"
-HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/release/kinetic/robot_localization/2.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="Binpicking utils metapackage"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/binpicking_utils/0.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/cmake_modules
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/diagnostic_updater
-    ros-kinetic/geographic_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_filters
-    ros-kinetic/message_runtime
-    ros-kinetic/nav_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/sensor_msgs
-    ros-kinetic/std_msgs
-    ros-kinetic/tf2
-    ros-kinetic/tf2_geometry_msgs
-    ros-kinetic/tf2_ros
-    dev-cpp/eigen
+    ros-kinetic/bin_pose_emulator
+    ros-kinetic/bin_pose_msgs
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/message_generation
-    ros-kinetic/roslint
-    dev-python/catkin_pkg
 "
 
 SLOT="0"

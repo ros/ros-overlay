@@ -5,29 +5,28 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION=""
+DESCRIPTION="Messages for use with robot_controllers framework."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/bin_pose_emulator/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/indigo/robot_controllers_msgs/0.5.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/bin_pose_msgs
-    ros-kinetic/roscpp
-    ros-kinetic/tf
-    ros-kinetic/visualization_msgs
-    dev-cpp/yaml-cpp
+    ros-indigo/actionlib_msgs
+    ros-indigo/message_runtime
+    ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
+    ros-indigo/catkin
+    ros-indigo/message_generation
 "
 
 SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_PREFIX="opt/ros/indigo"
 
 src_unpack() {
     default
@@ -42,7 +41,7 @@ src_configure() {
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
         -DCATKIN_BUILD_BINARY_PACKAGE=1
      )
     cmake-utils_src_configure
