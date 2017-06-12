@@ -8,7 +8,7 @@ HOMEPAGE="http://wiki.ros.org/wstool"
 
 SRC_URI="http://github.com/vcstools/wstool/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="amd64 x86 arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 LICENSE="BSD"
 SLOT="0"
