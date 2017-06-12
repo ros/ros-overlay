@@ -9,7 +9,7 @@ SRC_URI="https://github.com/ros-infrastructure/catkin_pkg/archive/${PV}.tar.gz -
 
 LICENSE="BSD-3"
 SLOT="0"
-KEYWORDS="amd64 x86 arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
 		dev-python/python-dateutil[${PYTHON_USEDEP}]"
