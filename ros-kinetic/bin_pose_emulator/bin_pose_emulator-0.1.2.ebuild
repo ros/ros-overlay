@@ -5,24 +5,24 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The bin_pose_msgs package"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/bin_pose_msgs/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/bin_pose_emulator/0.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/genmsg
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_runtime
-    ros-kinetic/std_msgs
+    ros-kinetic/bin_pose_msgs
+    ros-kinetic/roscpp
+    ros-kinetic/tf
+    ros-kinetic/visualization_msgs
+    dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/message_generation
 "
 
 SLOT="0"
