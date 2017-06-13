@@ -12,7 +12,7 @@ SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/
 
 LICENSE="LGPL-3"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

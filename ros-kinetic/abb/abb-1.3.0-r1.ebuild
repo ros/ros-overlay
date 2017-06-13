@@ -10,7 +10,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.0-1.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD Apache-2.0 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

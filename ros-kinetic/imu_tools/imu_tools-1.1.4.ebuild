@@ -10,7 +10,7 @@ HOMEPAGE="http://ros.org/wiki/imu_tools"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_tools/1.1.4-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD GPL-1 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

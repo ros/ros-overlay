@@ -10,7 +10,7 @@ HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_moveit_ikfast_plugin/1.1.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD Apache-1.0 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

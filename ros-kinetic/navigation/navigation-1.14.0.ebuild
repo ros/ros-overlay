@@ -11,7 +11,7 @@ HOMEPAGE="http://wiki.ros.org/navigation"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2 LGPL-2 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
