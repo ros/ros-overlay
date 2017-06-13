@@ -11,7 +11,7 @@ SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs-release/repository/
 
 LICENSE="LGPL-2"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

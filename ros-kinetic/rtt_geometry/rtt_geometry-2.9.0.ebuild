@@ -12,7 +12,7 @@ SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kine
 
 LICENSE="LGPL-2"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

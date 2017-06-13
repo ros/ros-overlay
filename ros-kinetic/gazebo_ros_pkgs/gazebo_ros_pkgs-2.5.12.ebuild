@@ -10,7 +10,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_pkgs/2.5.12-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2 Apache-2.0 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

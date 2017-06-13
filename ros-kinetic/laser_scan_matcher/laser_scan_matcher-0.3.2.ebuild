@@ -10,7 +10,7 @@ HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_scan_matcher/0.3.2-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-3 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

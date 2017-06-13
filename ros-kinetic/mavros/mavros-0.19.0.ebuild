@@ -11,7 +11,7 @@ HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros/0.19.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( GPL-3 LGPL-3 BSD )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

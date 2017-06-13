@@ -10,7 +10,7 @@ HOMEPAGE="http://ros.org/wiki/rosping"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rosping/2.0.20-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( CC-BY-SA-3.0 CC-BY-SA-3.0 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

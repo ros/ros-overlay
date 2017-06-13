@@ -11,7 +11,7 @@ SRC_URI="https://github.com/ros-drivers-gbp/libfreenect-ros-release/archive/rele
 
 LICENSE="Apache-2.0"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
