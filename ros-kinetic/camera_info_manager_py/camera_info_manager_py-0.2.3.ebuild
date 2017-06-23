@@ -13,7 +13,7 @@ SRC_URI="https://github.com/ros-gbp/camera_info_manager_py-release/archive/relea
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
