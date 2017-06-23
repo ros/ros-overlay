@@ -12,7 +12,7 @@ SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/kinetic/cv_cam
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

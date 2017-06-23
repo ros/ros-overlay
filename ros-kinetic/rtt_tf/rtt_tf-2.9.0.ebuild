@@ -11,7 +11,7 @@ SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/relea
 
 LICENSE="GPL-1"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

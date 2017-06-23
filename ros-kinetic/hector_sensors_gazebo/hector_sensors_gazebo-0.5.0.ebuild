@@ -11,7 +11,7 @@ SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archi
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="

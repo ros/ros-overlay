@@ -11,7 +11,7 @@ SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/re
 
 LICENSE="BSD"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
@@ -47,7 +47,7 @@ RDEPEND="
     ros-kinetic/tf
     ros-kinetic/tf2_ros
     ros-kinetic/zeroconf_avahi
-    dev-libs/scipy
+    sci-libs/scipy
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin

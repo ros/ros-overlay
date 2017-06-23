@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ros-gbp/bfl-release/archive/release/kinetic/bfl/0.7.
 
 LICENSE="LGPL-2"
 
-KEYWORDS="~x86 ~amd64 ~arm ~~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
