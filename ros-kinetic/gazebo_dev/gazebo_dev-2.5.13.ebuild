@@ -5,9 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION=""
+DESCRIPTION="Provides a cmake config for the default version of Gazebo for the ROS distributi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros/2.5.12-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_dev/2.5.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -15,23 +15,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/gazebo_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/message_generation
-    ros-kinetic/roscpp
-    ros-kinetic/rosgraph_msgs
-    ros-kinetic/roslib
-    ros-kinetic/std_msgs
-    ros-kinetic/std_srvs
-    ros-kinetic/tf
     sci-electronics/gazebo
     =sci-electronics/gazebo-7*
-    dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/cmake_modules
 "
 
 SLOT="0"
@@ -41,9 +29,6 @@ ROS_PREFIX="opt/ros/kinetic"
 src_unpack() {
     default
     mv *${P}* ${P}
-    cd ${P}
-    EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
-                 EPATCH_FORCE="yes" epatch
 }
 
 src_configure() {
@@ -55,7 +40,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
