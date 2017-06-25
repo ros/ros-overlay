@@ -42,7 +42,7 @@ src_unpack() {
     default
     mv *${P}* ${P}
     cd ${P}
-    EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+    EPATCH_SOURCE="${FILESDIR}"EPATCH_SUFFIX="patch" \
                  EPATCH_FORCE="yes" epatch
 }
 
@@ -55,7 +55,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

@@ -7,7 +7,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_plugins/2.5.12-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_plugins/2.5.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="|| ( BSD Apache-2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -17,12 +17,13 @@ RDEPEND="
     ros-kinetic/angles
     ros-kinetic/camera_info_manager
     ros-kinetic/cv_bridge
+    ros-kinetic/diagnostic_updater
     ros-kinetic/dynamic_reconfigure
+    ros-kinetic/gazebo_dev
     ros-kinetic/gazebo_msgs
-    ros-kinetic/gazebo_ros
     ros-kinetic/geometry_msgs
     ros-kinetic/image_transport
-    ros-kinetic/message_generation
+    ros-kinetic/message_runtime
     ros-kinetic/nav_msgs
     ros-kinetic/nodelet
     ros-kinetic/polled_camera
@@ -30,7 +31,6 @@ RDEPEND="
     ros-kinetic/roscpp
     ros-kinetic/rosgraph_msgs
     ros-kinetic/rospy
-    ros-kinetic/rostest
     ros-kinetic/sensor_msgs
     ros-kinetic/std_msgs
     ros-kinetic/std_srvs
@@ -38,11 +38,10 @@ RDEPEND="
     ros-kinetic/tf2_ros
     ros-kinetic/trajectory_msgs
     ros-kinetic/urdf
-    =sci-electronics/gazebo-7*
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
-    ros-kinetic/diagnostic_updater
+    ros-kinetic/message_generation
 "
 
 SLOT="0"
@@ -53,7 +52,7 @@ src_unpack() {
     default
     mv *${P}* ${P}
     cd ${P}
-    EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+    EPATCH_SOURCE="${FILESDIR}"EPATCH_SUFFIX="patch" \
                  EPATCH_FORCE="yes" epatch
 }
 
@@ -66,7 +65,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

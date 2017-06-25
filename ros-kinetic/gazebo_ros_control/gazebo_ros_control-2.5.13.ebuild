@@ -7,7 +7,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="gazebo_ros_control"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_control/2.5.12-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_control/2.5.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,10 +26,10 @@ RDEPEND="
     ros-kinetic/std_msgs
     ros-kinetic/transmission_interface
     ros-kinetic/urdf
-    =sci-electronics/gazebo-7*
 "
 DEPEND="${RDEPEND}
     ros-kinetic/catkin
+    ros-kinetic/gazebo_dev
 "
 
 SLOT="0"
@@ -50,7 +50,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

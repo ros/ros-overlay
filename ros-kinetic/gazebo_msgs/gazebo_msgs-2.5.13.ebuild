@@ -5,9 +5,9 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="Low-level build system macros and infrastructure for ROS."
+DESCRIPTION="Message and service data structures for interacting with Gazebo from ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.6-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_msgs/2.5.13-0.tar.gz -> ${P}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -15,14 +15,16 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    dev-cpp/gtest
-    dev-lang/python
-    dev-python/catkin_pkg
-    dev-python/empy
-    dev-python/nose
+    ros-kinetic/geometry_msgs
+    ros-kinetic/message_runtime
+    ros-kinetic/sensor_msgs
+    ros-kinetic/std_msgs
+    ros-kinetic/std_srvs
+    ros-kinetic/trajectory_msgs
 "
 DEPEND="${RDEPEND}
-    dev-util/cmake
+    ros-kinetic/catkin
+    ros-kinetic/message_generation
 "
 
 SLOT="0"
@@ -32,9 +34,6 @@ ROS_PREFIX="opt/ros/kinetic"
 src_unpack() {
     default
     mv *${P}* ${P}
-    cd ${P}
-    EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
-                 EPATCH_FORCE="yes" epatch
 }
 
 src_configure() {
@@ -45,20 +44,14 @@ src_configure() {
         -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
-        -DCATKIN_BUILD_BINARY_PACKAGE=0
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
 
-src_compile() {
-    gcc ${FILESDIR}/ros-python.c -o ${WORKDIR}/${P}/ros-python-kinetic || die 'could not compile ros-python!'
-    cmake-utils_src_compile
-}
-
 src_install() {
-    cd ${WORKDIR}/${P}
-    mkdir -p ${D}/usr/bin
-    cp ros-python-kinetic ${D}/usr/bin || die 'could not install ros-python!'
     cd ${WORKDIR}/${P}_build
     make install || die
 }
