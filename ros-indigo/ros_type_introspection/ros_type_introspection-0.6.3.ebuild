@@ -5,26 +5,23 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="PlotJuggler: juggle with data"
-HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
-SRC_URI="https://github.com/facontidavide/plotjuggler-release/archive/release/indigo/plotjuggler/1.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize
+  RO"
+HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
+SRC_URI="https://github.com/facontidavide/ros_type_introspection-release/archive/release/indigo/ros_type_introspection/0.6.3-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-indigo/ros_type_introspection
     ros-indigo/rosbag
     ros-indigo/rosbag_storage
     ros-indigo/roscpp
     ros-indigo/roscpp_serialization
     ros-indigo/rostime
     ros-indigo/topic_tools
-    sys-devel/binutils
-    dev-qt/qtsvg:5
-    dev-qt/qtcore:5
 "
 DEPEND="${RDEPEND}
     ros-indigo/catkin
@@ -48,7 +45,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

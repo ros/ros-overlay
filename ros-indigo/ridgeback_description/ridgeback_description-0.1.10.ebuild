@@ -5,32 +5,24 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="A package to support MongoDB-based storage and analysis for data from a ROS syst"
-HOMEPAGE="http://www.ros.org/wiki/mongodb_store"
-SRC_URI="https://github.com/strands-project-releases/mongodb_store/archive/release/indigo/mongodb_store/0.1.29-1.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="URDF robot description for Ridgeback"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/clearpath-gbp/ridgeback-release/archive/release/indigo/ridgeback_description/0.1.10-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-indigo/geometry_msgs
-    ros-indigo/mongodb_store_msgs
-    ros-indigo/roscpp
-    ros-indigo/rospy
-    ros-indigo/std_msgs
-    ros-indigo/std_srvs
-    dev-db/mongodb
-    dev-db/mongodb
-    dev-python/pymongo
+    ros-indigo/lms1xx
+    ros-indigo/robot_state_publisher
+    ros-indigo/urdf
+    ros-indigo/xacro
 "
 DEPEND="${RDEPEND}
     ros-indigo/catkin
-    ros-indigo/message_generation
-    ros-indigo/rostest
-    dev-libs/openssl
-    dev-python/catkin_pkg
+    ros-indigo/roslaunch
 "
 
 SLOT="0"
@@ -51,7 +43,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

@@ -5,23 +5,21 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The mongodb_store_msgs package"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/strands-project-releases/mongodb_store/archive/release/indigo/mongodb_store_msgs/0.1.29-1.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="pr2eus_tutorials"
+HOMEPAGE="http://ros.org/wiki/pr2eus_tutorials"
+SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/indigo/pr2eus_tutorials/0.3.11-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-indigo/actionlib
-    ros-indigo/actionlib_msgs
-    ros-indigo/message_generation
-    ros-indigo/message_runtime
+    ros-indigo/jsk_pcl_ros
+    ros-indigo/pr2eus
+    ros-indigo/roseus_tutorials
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
     ros-indigo/catkin
 "
 
@@ -43,7 +41,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
