@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="A simple viewer for ROS image topics. Includes a specialized viewer
   for stereo"
 HOMEPAGE="http://www.ros.org/wiki/image_view"
@@ -10,7 +12,8 @@ SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indig
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-indigo/camera_calibration_parsers
@@ -22,17 +25,16 @@ RDEPEND="
     ros-indigo/rosconsole
     ros-indigo/roscpp
     ros-indigo/std_srvs
-    x11-libs/gtk+
+    x11-libs/gtk+:2
 "
 DEPEND="${RDEPEND}
-    dev-python/catkin
     ros-indigo/catkin
     ros-indigo/message_generation
     ros-indigo/sensor_msgs
     ros-indigo/stereo_msgs
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
@@ -42,28 +44,21 @@ src_unpack() {
 }
 
 src_configure() {
-    mkdir ${WORKDIR}/src
-    cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
-}
+    append-cxxflags "-std=c++11"
+    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    local mycmakeargs=(
+        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
 
-src_compile() {
-    echo ""
+     )
+    cmake-utils_src_configure
 }
 
 src_install() {
-    cd ../../work
-    source /${ROS_PREFIX}/setup.bash
-    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
-        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
-    fi
-
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
-        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
-    fi
+    cd ${WORKDIR}/${P}_build
+    make install || die
 }

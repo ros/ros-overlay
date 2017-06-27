@@ -5,29 +5,23 @@ EAPI=6
 
 inherit cmake-utils eutils
 
-DESCRIPTION="The mongodb_log package"
-HOMEPAGE="http://ros.org/wiki/mongodb_log"
-SRC_URI="https://github.com/strands-project-releases/mongodb_store/archive/release/indigo/mongodb_log/0.1.29-1.tar.gz -> ${P}-${PV}.tar.gz"
+DESCRIPTION="An automatically generated package with all the configuration and launch files f"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/ros-gbp/moveit_pr2-release/archive/release/indigo/pr2_moveit_config/0.6.5-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-indigo/mongodb_store
-    ros-indigo/rosgraph
-    ros-indigo/roslib
-    ros-indigo/rospy
-    ros-indigo/rostopic
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    dev-db/mongodb
-    dev-python/pymongo
+    ros-indigo/joint_state_publisher
+    ros-indigo/moveit_ros_move_group
+    ros-indigo/pr2_description
+    ros-indigo/robot_state_publisher
 "
 DEPEND="${RDEPEND}
     ros-indigo/catkin
-    dev-libs/openssl
 "
 
 SLOT="0"
@@ -48,7 +42,8 @@ src_configure() {
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
