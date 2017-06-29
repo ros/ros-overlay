@@ -8,11 +8,12 @@ inherit cmake-utils eutils
 DESCRIPTION="Base dependencies and support libraries for ROS.
     roslib contains many of the"
 HOMEPAGE="http://ros.org/wiki/roslib"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/lunar/roslib/1.14.0-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/lunar/roslib/1.14.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-lunar/catkin
@@ -23,9 +24,9 @@ DEPEND="${RDEPEND}
     dev-libs/boost
 "
 
-SLOT="0"
+SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/lunar"
+ROS_PREFIX="/opt/ros/lunar"
 
 src_unpack() {
     default
@@ -34,13 +35,15 @@ src_unpack() {
 
 src_configure() {
     append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    export DEST_SETUP_DIR="${ROS_PREFIX}"
     local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
