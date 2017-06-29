@@ -7,10 +7,11 @@ inherit cmake-utils eutils
 
 DESCRIPTION="Various tools for IMU devices"
 HOMEPAGE="http://ros.org/wiki/imu_tools"
-SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_tools/1.1.5-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_tools/1.1.5-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
-LICENSE="|| ( BSD GPL-1 )"
-KEYWORDS="x86 amd64 arm ~arm64"
+LICENSE="( BSD CC-BY-SA-3.0 )"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-lunar/imu_complementary_filter
@@ -21,9 +22,9 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
 "
 
-SLOT="0"
+SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/lunar"
+ROS_PREFIX="/opt/ros/lunar"
 
 src_unpack() {
     default
@@ -32,13 +33,15 @@ src_unpack() {
 
 src_configure() {
     append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    export DEST_SETUP_DIR="${ROS_PREFIX}"
     local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

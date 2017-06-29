@@ -7,11 +7,12 @@ inherit cmake-utils eutils
 
 DESCRIPTION="This package contains standard capability interfaces, which describe common robo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/std_capabilities-release/archive/release/lunar/std_capabilities/0.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/std_capabilities-release/archive/release/lunar/std_capabilities/0.1.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
-KEYWORDS="x86 amd64 arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
 "
@@ -19,9 +20,9 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
 "
 
-SLOT="0"
+SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/lunar"
+ROS_PREFIX="/opt/ros/lunar"
 
 src_unpack() {
     default
@@ -30,13 +31,15 @@ src_unpack() {
 
 src_configure() {
     append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    export DEST_SETUP_DIR="${ROS_PREFIX}"
     local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }

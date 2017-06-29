@@ -8,7 +8,7 @@ inherit cmake-utils eutils
 DESCRIPTION="This package provides a simple script to write simple launch files
     that can "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_nodelet/0.3.0-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_nodelet/0.3.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,9 +25,9 @@ DEPEND="${RDEPEND}
     ros-lunar/catkin
 "
 
-SLOT="0"
+SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/lunar"
+ROS_PREFIX="/opt/ros/lunar"
 
 src_unpack() {
     default
@@ -36,14 +36,15 @@ src_unpack() {
 
 src_configure() {
     append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    export DEST_SETUP_DIR="${ROS_PREFIX}"
     local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
         -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
         -DCATKIN_ENABLE_TESTING=OFF
         -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACKAGE=1
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
+
      )
     cmake-utils_src_configure
 }
