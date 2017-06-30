@@ -8,8 +8,7 @@ DESCRIPTION="This stack contains all descriptions, drivers and bringup facilitie
 HOMEPAGE="http://ros.org/wiki/katana_driver"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_driver/1.1.2-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
-LICENSE="( BSD )"
-CC-BY-SA-3.0 )"
+LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 

@@ -8,8 +8,7 @@ DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic re
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_plugins/2.7.2-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
-LICENSE="( BSD )"
-CC-BY-SA-3.0 )"
+LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
