@@ -220,7 +220,7 @@ ros-cmake_src_configure() {
 # @FUNCTION: ros-catkin_src_compile
 # @DESCRIPTION:
 # Builds a catkin-based package.
-ros-catkin_src_compile() {
+ros-cmake_src_compile() {
 #	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 #		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 #			export CMAKE_USE_DIR="${BUILD_DIR}"
