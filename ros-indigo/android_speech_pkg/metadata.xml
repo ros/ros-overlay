@@ -5,11 +5,4 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
-  <upstream>
-    <maintainer status="active">
-      <email>raphael@uni-koblenz.de</email>
-      <name>Raphael Memmesheimer</name>
-    </maintainer>
-    <bugs-to>https://gitlab.uni-koblenz.de/robbie/homer_android_speech/issues</bugs-to>
-  </upstream>
 </pkgmetadata>

@@ -3,23 +3,25 @@
 
 EAPI=6
 
+inherit cmake-utils eutils
+
 DESCRIPTION="driver for the KUKA youBot robot"
 HOMEPAGE="http://github.com/youbot/youbot_driver"
 SRC_URI="https://github.com/youbot-release/youbot_driver-release/archive/release/indigo/youbot_driver/1.1.0-0.tar.gz -> ${P}-${PV}.tar.gz"
 
-LICENSE="|| ( LGPL-2 modifiedBSD )"
-KEYWORDS="x86 amd64 arm ~arm64"
+LICENSE="|| ( LGPL-2 CC-BY-SA-3.0 )"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
     ros-indigo/rosconsole
     ros-indigo/roscpp
 "
 DEPEND="${RDEPEND}
-    dev-python/catkin
     ros-indigo/catkin
 "
 
-SLOT="0/0"
+SLOT="0"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 ROS_PREFIX="opt/ros/indigo"
 
@@ -29,28 +31,21 @@ src_unpack() {
 }
 
 src_configure() {
-    mkdir ${WORKDIR}/src
-    cp -R ${WORKDIR}/${P} ${WORKDIR}/src/${P}
-}
+    append-cxxflags "-std=c++11"
+    export DEST_SETUP_DIR="/${ROS_PREFIX}"
+    local mycmakeargs=(
+        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
+        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
+        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+        -DCATKIN_ENABLE_TESTING=OFF
+        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
+        -DCATKIN_BUILD_BINARY_PACAKGE=1
 
-src_compile() {
-    echo ""
+     )
+    cmake-utils_src_configure
 }
 
 src_install() {
-    cd ../../work
-    source /${ROS_PREFIX}/setup.bash
-    export PYTHONPATH="/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib/python3.5/site-packages:${PYTHONPATH}"
-    export PYTHONPATH="${D}/${ROS_PREFIX}/lib64/python3.5/site-packages:${PYTHONPATH}"
-    if [[ ! -d ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages ]]; then
-        mkdir -p ${D}/${ROS_PREFIX}/lib64/python3.5/site-packages
-    fi
-
-    catkin_make_isolated --install --install-space="${D}/${ROS_PREFIX}" || die
-    if [[ -e /${ROS_PREFIX}/setup.bash ]]; then
-        rm -f ${D}/${ROS_PREFIX}/{.catkin,_setup_util.py,env.sh,setup.bash,setup.sh}
-        rm -f ${D}/${ROS_PREFIX}/{setup.zsh,.rosinstall}
-    fi
+    cd ${WORKDIR}/${P}_build
+    make install || die
 }

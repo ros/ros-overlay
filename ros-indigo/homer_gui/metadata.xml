@@ -5,11 +5,4 @@
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
-  <upstream>
-    <maintainer status="active">
-      <email>vseib@uni-koblenz.de</email>
-      <name>Viktor Seib</name>
-    </maintainer>
-    <bugs-to>https://gitlab.uni-koblenz.de/robbie/homer_gui/issues</bugs-to>
-  </upstream>
 </pkgmetadata>
