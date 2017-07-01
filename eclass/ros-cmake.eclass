@@ -23,7 +23,7 @@ esac
 # @DESCRIPTION:
 # URL of the upstream repository. Usually on github.
 # Serves for fetching tarballs, live ebuilds and inferring the meta-package name.
-EGIT_REPO_URI="${ROS_REPO_URI}"
+# EGIT_REPO_URI="${ROS_REPO_URI}"
 
 # @ECLASS-VARIABLE: ROS_SUBDIR
 # @DEFAULT_UNSET
@@ -37,11 +37,11 @@ EGIT_REPO_URI="${ROS_REPO_URI}"
 # Tells the eclass the package has python code and forwards it to python-r1.eclass.
 PYTHON_ECLASS=""
 CATKIN_PYTHON_USEDEP=""
+# PYTHON_COMPAT="[ python2_7, python3_5 ]"
 if [ -n "${PYTHON_COMPAT}" ] ; then
 	PYTHON_ECLASS="python-r1"
 fi
-
-inherit ${SCM} ${PYTHON_ECLASS} cmake-utils flag-o-matic eutils
+inherit ${SCM} cmake-utils flag-o-matic eutils
 
 CATKIN_DO_PYTHON_MULTIBUILD=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
@@ -119,14 +119,15 @@ CATKIN_MESSAGES_EUS_USEDEP="ros_messages_eus(-)"
 # Use it as cat/pkg[${CATKIN_MESSAGES_NODEJS_USEDEP}] to indicate a dependency on the nodejs messages of cat/pkg.
 CATKIN_MESSAGES_NODEJS_USEDEP="ros_messages_nodejs(-)"
 
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SRC_URI=""
-	KEYWORDS=""
-	S=${WORKDIR}/${P}/${ROS_SUBDIR}
-else
-	SRC_URI="${ROS_REPO_URI}/archive/${VER_PREFIX}${PV%_*}${VER_SUFFIX}.tar.gz -> ${ROS_REPO_URI##*/}-${PV}.tar.gz"
-	S=${WORKDIR}/${VER_PREFIX}${ROS_REPO_URI##*/}-${PV}${VER_SUFFIX}/${ROS_SUBDIR}
-fi
+# if [ "${PV#9999}" != "${PV}" ] ; then
+# 	SRC_URI=""
+# 	KEYWORDS=""
+#	S=${WORKDIR}/${P}/${ROS_SUBDIR}
+# else
+# 	SRC_URI="${ROS_REPO_URI}/archive/${VER_PREFIX}${PV%_*}${VER_SUFFIX}.tar.gz -> ${ROS_REPO_URI##*/}-${PV}.tar.gz"
+#	S=${WORKDIR}/${VER_PREFIX}${ROS_REPO_URI##*/}-${PV}${VER_SUFFIX}/${ROS_SUBDIR}
+# fi
+S=${WORKDIR}/${P}
 
 HOMEPAGE="http://wiki.ros.org/${PN}"
 
@@ -157,7 +158,6 @@ ros-cmake_src_prepare() {
 
 	# Most packages require C++11 these days. Do it here, in src_prepare so that
 	# ebuilds can override it in src_configure.
-	append-cxxflags '-std=c++11'
 }
 
 # @FUNCTION: ros-catkin_src_configure_internal
@@ -189,8 +189,9 @@ ros-cmake_src_prepare() {
 # @DESCRIPTION:
 # Configures a catkin-based package.
 ros-cmake_src_configure() {
-	export CATKIN_PREFIX_PATH="${EPREFIX}/${ROS_PREFIX}"
-	export ROS_ROOT="${EPREFIX}/${ROS_PREFIX}"
+	append-cxxflags '-std=c++11'
+	export CATKIN_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
+	export ROS_ROOT="${EPREFIX%/}/${ROS_PREFIX}"
 	if [ -n "${CATKIN_HAS_MESSAGES}" ] ; then
 		ROS_LANG_DISABLE=""
 		use ros_messages_cxx    || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gencpp"
@@ -200,16 +201,17 @@ ros-cmake_src_configure() {
 		use ros_messages_nodejs || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gennodejs"
 		export ROS_LANG_DISABLE
 	fi
-	local sitedir="$(python_get_sitedir)"
+	local sitedir="/${ROS_PREFIX}/lib/python3.5/site-packages"
 	export DEST_SETUP_DIR="${ROS_PREFIX}"
 	local mycmakeargs=(
-		"$(cmake-utils_use test CATKIN_ENABLE_TESTING)"
+		"$(usex test CATKIN_ENABLE_TESTING)"
+		"-DPYTHON_INSTALL_DIR=lib/python3.5/site-packages"
 		"-DPYTHON_EXECUTABLE=/usr/bin/ros-python-${ROS_DISTRO}"
 		"-DCATKIN_BUILD_BINARY_PACKAGE=1"
-		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT}}/${ROS_PREFIX}"
-		"-DCMAKE_INSTALL_PREFIX=${EROOT}/${ROS_PREFIX}"
-		"${mycatkincmakeargs[@]}"
+		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT}}${ROS_PREFIX}"
+		"-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}"
 	)
+	cmake-utils_src_configure
 # 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 #		python_foreach_impl ros-cmake_src_configure_internal "${@}"
 #	else
@@ -272,7 +274,7 @@ ros-cmake_src_install_with_python() {
 	if [ ! -f "${T}/.catkin_python_symlinks_generated" -a -d "${D}/${PYTHON_SCRIPTDIR}" ]; then
 		dodir /usr/bin
 		for i in "${D}/${PYTHON_SCRIPTDIR}"/* ; do
-			dosym ../lib/python-exec/python-exec2 "/${ROS_PREFIX}/bin/${i##*/}"
+			dosym ../lib/python-exec/python-exec2 "/${ROS_PREFIX%/}/${i##*/}"
 		done
 		touch "${T}/.catkin_python_symlinks_generated" || die
 	fi
@@ -285,7 +287,7 @@ ros-cmake_src_install() {
 #	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 #		python_foreach_impl ros-catkin_src_install_with_python "${@}"
 	#	else
-	ros-cmake_src_install_with_python
+#	ros-cmake_src_install_with_python
 	cmake-utils_src_install
 #	fi
 }
