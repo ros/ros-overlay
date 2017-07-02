@@ -7,8 +7,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>t@t.com</email>
-      <name>k-okada</name>
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
     </maintainer>
     <bugs-to>https://github.com/tork-a/jsk_3rdparty/issues</bugs-to>
   </upstream>
