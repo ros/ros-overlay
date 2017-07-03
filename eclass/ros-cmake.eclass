@@ -37,7 +37,6 @@ esac
 # Tells the eclass the package has python code and forwards it to python-r1.eclass.
 PYTHON_ECLASS=""
 CATKIN_PYTHON_USEDEP=""
-# PYTHON_COMPAT="[ python2_7, python3_5 ]"
 if [ -n "${PYTHON_COMPAT}" ] ; then
 	PYTHON_ECLASS="python-r1"
 fi
@@ -145,39 +144,32 @@ ros-cmake_src_unpack() {
 # by installing a recursive CMakeLists.txt to handle bundles.
 ros-cmake_src_prepare() {
 	# If no multibuild, just use cmake IN_SOURCE support
-	# [ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -z "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && export CMAKE_IN_SOURCE_BUILD=yes
+	[ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -z "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && export CMAKE_IN_SOURCE_BUILD=yes
 
 	cmake-utils_src_prepare
 
-# 	if [ ! -f "${S}/CMakeLists.txt" ] ; then
-#		catkin_init_workspace || die
-#	fi
-
 	# If python multibuild, copy the sources
-	# [ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && python_copy_sources
-
-	# Most packages require C++11 these days. Do it here, in src_prepare so that
-	# ebuilds can override it in src_configure.
+	[ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && python_copy_sources
 }
 
 # @FUNCTION: ros-catkin_src_configure_internal
 # @DESCRIPTION:
 # Internal decoration of cmake-utils_src_configure to handle multiple python installs.
-# ros-cmake_src_configure_internal() {
-#	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-#		local sitedir="$(python_get_sitedir)"
-#		local mycmakeargs=(
-#			"${mycmakeargs[@]}"
-#			-DPYTHON_EXECUTABLE="${PYTHON}"
-#			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}/${ROS_PREFIX}"
-#		)
-#		python_export PYTHON_SCRIPTDIR
-#		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
-#			export CMAKE_USE_DIR="${BUILD_DIR}"
-#		fi
-#	fi
-#	cmake-utils_src_configure "${@}"
-# }
+ros-cmake_src_configure_internal() {
+	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		local sitedir="$(python_get_sitedir)"
+		local mycmakeargs=(
+			"${mycmakeargs[@]}"
+			-DPYTHON_EXECUTABLE="${PYTHON}"
+			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}/${ROS_PREFIX}"
+		)
+		python_export PYTHON_SCRIPTDIR
+		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
+			export CMAKE_USE_DIR="${BUILD_DIR}"
+		fi
+	fi
+	cmake-utils_src_configure "${@}"
+}
 
 # @VARIABLE: mycatkincmakeargs
 # @DEFAULT_UNSET
@@ -205,62 +197,60 @@ ros-cmake_src_configure() {
 	export DEST_SETUP_DIR="${ROS_PREFIX}"
 	local mycmakeargs=(
 		"$(usex test CATKIN_ENABLE_TESTING)"
-		"-DPYTHON_INSTALL_DIR=lib/python3.5/site-packages"
-		"-DPYTHON_EXECUTABLE=/usr/bin/ros-python-${ROS_DISTRO}"
 		"-DCATKIN_BUILD_BINARY_PACKAGE=1"
 		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT}}${ROS_PREFIX}"
 		"-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}"
 	)
 	cmake-utils_src_configure
-# 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-#		python_foreach_impl ros-cmake_src_configure_internal "${@}"
-#	else
-#		ros-cmake_src_configure_internal "${@}"
-#	fi
+	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		python_foreach_impl ros-cmake_src_configure_internal "${@}"
+	else
+		ros-cmake_src_configure_internal "${@}"
+	fi
 }
 
 # @FUNCTION: ros-catkin_src_compile
 # @DESCRIPTION:
 # Builds a catkin-based package.
 ros-cmake_src_compile() {
-#	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-#		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
-#			export CMAKE_USE_DIR="${BUILD_DIR}"
-#		fi
-#		python_foreach_impl cmake-utils_src_compile "${@}"
-#	else
-	cmake-utils_src_compile
-#	fi
+	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
+			export CMAKE_USE_DIR="${BUILD_DIR}"
+		fi
+		python_foreach_impl cmake-utils_src_compile "${@}"
+	else
+		cmake-utils_src_compile
+	fi
 }
 
 # @FUNCTION: ros-catkin_src_test_internal
 # @DESCRIPTION:
 # Decorator around cmake-utils_src_test to ensure tests are built before running them.
-#ros-catkin_src_test_internal() {
-#	cd "${BUILD_DIR}" || die
+ros-cmake_src_test_internal() {
+	cd "${BUILD_DIR}" || die
 	# Regenerate env for tests, PYTHONPATH is not set properly otherwise...
-#	if [ -f catkin_generated/generate_cached_setup.py ] ; then
-#		einfo "Regenerating setup_cached.sh for tests"
-#		${PYTHON:-python} catkin_generated/generate_cached_setup.py || die
-#	fi
+	if [ -f catkin_generated/generate_cached_setup.py ] ; then
+		einfo "Regenerating setup_cached.sh for tests"
+		${PYTHON:-python} catkin_generated/generate_cached_setup.py || die
+	fi
 	# Using cmake-utils_src_make with nonfatal does not work and breaks e.g.
 	# dev-ros/rviz.
-#	if nonfatal emake tests -n &> /dev/null ; then
-#		cmake-utils_src_make tests
-#	fi
-#	cmake-utils_src_test "${@}"
-#}
+	if nonfatal emake tests -n &> /dev/null ; then
+		cmake-utils_src_make tests
+	fi
+	cmake-utils_src_test "${@}"
+}
 
 # @FUNCTION: ros-catkin_src_test
 # @DESCRIPTION:
 # Run the tests of a catkin-based package.
-# ros-catkin_src_test() {
-#	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-#		python_foreach_impl ros-catkin_src_test_internal "${@}"
-#	else
-#		ros-catkin_src_test_internal "${@}"
-#	fi
-# }
+ros-catkin_src_test() {
+	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		python_foreach_impl ros-catkin_src_test_internal "${@}"
+	else
+		ros-catkin_src_test_internal "${@}"
+	fi
+}
 
 # @FUNCTION: ros-catkin_src_install_with_python
 # @DESCRIPTION:
@@ -274,7 +264,7 @@ ros-cmake_src_install_with_python() {
 	if [ ! -f "${T}/.catkin_python_symlinks_generated" -a -d "${D}/${PYTHON_SCRIPTDIR}" ]; then
 		dodir /usr/bin
 		for i in "${D}/${PYTHON_SCRIPTDIR}"/* ; do
-			dosym ../lib/python-exec/python-exec2 "/${ROS_PREFIX%/}/${i##*/}"
+			dosym ../lib/python-exec/python-exec2 "/usr/bin/${i##*/}"
 		done
 		touch "${T}/.catkin_python_symlinks_generated" || die
 	fi
@@ -284,12 +274,12 @@ ros-cmake_src_install_with_python() {
 # @DESCRIPTION:
 # Installs a catkin-based package.
 ros-cmake_src_install() {
-#	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-#		python_foreach_impl ros-catkin_src_install_with_python "${@}"
-	#	else
-#	ros-cmake_src_install_with_python
-	cmake-utils_src_install
-#	fi
+	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		python_foreach_impl ros-cmake_src_install_with_python "${@}"
+	else
+		ros-cmake_src_install_with_python
+		cmake-utils_src_install
+	fi
 }
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install
