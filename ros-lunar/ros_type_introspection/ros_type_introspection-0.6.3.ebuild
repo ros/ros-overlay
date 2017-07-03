@@ -13,8 +13,6 @@ SRC_URI="https://github.com/facontidavide/ros_type_introspection-release/archive
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/rosbag
 	ros-lunar/rosbag_storage

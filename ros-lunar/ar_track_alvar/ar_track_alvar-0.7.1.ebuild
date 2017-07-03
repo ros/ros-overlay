@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/ar_track_alvar-release/archive/release/lunar
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/ar_track_alvar_msgs
 	ros-lunar/cv_bridge

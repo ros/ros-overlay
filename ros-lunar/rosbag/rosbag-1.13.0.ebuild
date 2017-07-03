@@ -13,8 +13,6 @@ SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/rosba
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/genmsg
 	ros-lunar/genpy

@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/lunar/jo
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/python_qt_binding
 	ros-lunar/rospy

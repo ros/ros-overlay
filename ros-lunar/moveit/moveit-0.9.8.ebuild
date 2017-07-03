@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit/
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/moveit_commander
 	ros-lunar/moveit_core

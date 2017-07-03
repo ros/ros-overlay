@@ -11,8 +11,6 @@ SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/
 
 LICENSE="( BSD Apache-1.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/moveit_core
 	ros-lunar/pluginlib

@@ -11,8 +11,6 @@ SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/test_ma
 
 LICENSE="( BSD GPL-3 LGPL-3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/control_toolbox
 	ros-lunar/eigen_conversions

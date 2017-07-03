@@ -12,8 +12,6 @@ SRC_URI="https://github.com/tork-a/jsk_common_msgs-release/archive/release/lunar
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/geometry_msgs
 	ros-lunar/message_runtime

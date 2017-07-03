@@ -12,8 +12,6 @@ SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/p2os_tele
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/geometry_msgs
 	ros-lunar/sensor_msgs

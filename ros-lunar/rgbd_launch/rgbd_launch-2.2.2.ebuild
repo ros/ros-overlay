@@ -13,8 +13,6 @@ SRC_URI="https://github.com/ros-gbp/rgbd_launch-release/archive/release/lunar/rg
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/depth_image_proc
 	ros-lunar/image_proc

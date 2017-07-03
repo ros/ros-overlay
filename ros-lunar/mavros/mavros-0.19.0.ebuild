@@ -12,8 +12,6 @@ SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros/
 
 LICENSE="( GPL-3 LGPL-3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/diagnostic_msgs
 	ros-lunar/diagnostic_updater

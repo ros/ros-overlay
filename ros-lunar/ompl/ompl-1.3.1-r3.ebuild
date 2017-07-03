@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/lunar/ompl/1.3.
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	dev-libs/boost
 	dev-cpp/eigen

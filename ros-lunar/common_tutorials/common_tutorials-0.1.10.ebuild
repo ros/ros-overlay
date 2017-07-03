@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/lun
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/actionlib_tutorials
 	ros-lunar/nodelet_tutorial_math

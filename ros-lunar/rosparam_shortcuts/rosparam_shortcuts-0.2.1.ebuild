@@ -12,8 +12,6 @@ SRC_URI="https://github.com/davetcoleman/rosparam_shortcuts-release/archive/rele
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/roscpp
 	dev-cpp/eigen

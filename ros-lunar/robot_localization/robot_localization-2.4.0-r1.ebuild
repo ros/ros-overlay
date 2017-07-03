@@ -12,8 +12,6 @@ SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/relea
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/cmake_modules
 	ros-lunar/diagnostic_msgs

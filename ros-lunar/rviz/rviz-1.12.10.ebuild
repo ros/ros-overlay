@@ -11,8 +11,6 @@ SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/lunar/rviz/1.12
 
 LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/geometry_msgs
 	ros-lunar/image_transport

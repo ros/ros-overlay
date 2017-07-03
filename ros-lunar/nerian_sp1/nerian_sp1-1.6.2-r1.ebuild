@@ -12,8 +12,6 @@ SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/lun
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/cv_bridge
 	ros-lunar/message_runtime

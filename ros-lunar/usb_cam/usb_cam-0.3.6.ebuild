@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/usb_cam-release/archive/release/lunar/usb_ca
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/camera_info_manager
 	ros-lunar/image_transport

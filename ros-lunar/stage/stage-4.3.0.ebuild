@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/lunar/stage/4.
 LICENSE="GPL-1"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/catkin
 	x11-libs/gtk+:2

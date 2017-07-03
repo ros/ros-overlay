@@ -11,8 +11,6 @@ SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/luna
 
 LICENSE="( BSD LGPL-2 Apache-2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/gazebo_dev
 	ros-lunar/gazebo_msgs

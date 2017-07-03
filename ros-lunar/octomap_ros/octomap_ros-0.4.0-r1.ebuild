@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/octomap_ros-release/archive/release/lunar/oc
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/octomap
 	ros-lunar/octomap_msgs

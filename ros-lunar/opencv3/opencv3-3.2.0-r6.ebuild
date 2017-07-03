@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/lunar/opencv
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/catkin
 	virtual/ffmpeg
@@ -39,6 +37,6 @@ ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
-	cmake-utils_src_configure
+	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
+	python_foreach_impl ros-cmake_src_configure_internal
 }
-

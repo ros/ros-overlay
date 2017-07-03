@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/lunar/geom
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/tf2
 	ros-lunar/tf2_bullet

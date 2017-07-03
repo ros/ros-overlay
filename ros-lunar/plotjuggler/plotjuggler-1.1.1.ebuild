@@ -12,8 +12,6 @@ SRC_URI="https://github.com/facontidavide/plotjuggler-release/archive/release/lu
 LICENSE="LGPL-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/ros_type_introspection
 	ros-lunar/rosbag

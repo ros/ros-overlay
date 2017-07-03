@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/di
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/diagnostic_aggregator
 	ros-lunar/diagnostic_analysis

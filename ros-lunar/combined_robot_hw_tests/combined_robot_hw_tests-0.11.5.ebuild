@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/lunar/co
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/combined_robot_hw
 	ros-lunar/controller_manager

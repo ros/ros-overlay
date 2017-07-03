@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/qwt_dependency-release/archive/release/lunar
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 "
 DEPEND="${RDEPEND}

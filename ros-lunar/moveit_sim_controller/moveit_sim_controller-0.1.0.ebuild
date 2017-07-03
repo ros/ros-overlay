@@ -12,8 +12,6 @@ SRC_URI="https://github.com/davetcoleman/moveit_sim_controller-release/archive/r
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/moveit_core
 	ros-lunar/moveit_ros_planning

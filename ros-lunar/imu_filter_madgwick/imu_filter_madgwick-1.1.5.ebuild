@@ -12,8 +12,6 @@ SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_
 LICENSE="GPL-1"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/dynamic_reconfigure
 	ros-lunar/geometry_msgs

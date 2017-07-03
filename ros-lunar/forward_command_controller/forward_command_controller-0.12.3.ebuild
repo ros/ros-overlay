@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/luna
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/controller_interface
 	ros-lunar/hardware_interface

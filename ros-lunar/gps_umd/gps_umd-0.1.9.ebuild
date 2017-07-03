@@ -12,8 +12,6 @@ SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/lu
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/gps_common
 	ros-lunar/gpsd_client

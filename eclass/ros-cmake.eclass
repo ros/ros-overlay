@@ -128,6 +128,16 @@ HOMEPAGE="http://wiki.ros.org/${PN}"
 ros-cmake_src_unpack() {
 	default
 	mv *${P}* ${P}
+	if [[ ! -f ${P}/CMakeLists.txt ]]; then
+		cd ${P}
+		for dir in $(ls); do
+			if [[ -d $dir ]]; then
+				cd $dir
+				mv * ..
+				cd ..
+			fi
+		done
+	fi
 }
 
 # @FUNCTION: ros-catkin_src_prepare
@@ -148,12 +158,16 @@ ros-cmake_src_prepare() {
 # @DESCRIPTION:
 # Internal decoration of cmake-utils_src_configure to handle multiple python installs.
 ros-cmake_src_configure_internal() {
+	if [ -f /${ROS_PREFIX}/setup.bash ]; then
+		source /${ROS_PREFIX}/setup.bash
+	fi
+
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		local sitedir="$(python_get_sitedir)"
 		local mycmakeargs=(
 			"${mycmakeargs[@]}"
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}/usr/}"
+			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}}/${ROS_PREFIX}"
 		)
 		python_export PYTHON_SCRIPTDIR
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
@@ -173,6 +187,10 @@ ros-cmake_src_configure_internal() {
 # @DESCRIPTION:
 # Configures a catkin-based package.
 ros-cmake_src_configure() {
+	if [ -f /${ROS_PREFIX}/setup.bash ]; then
+		source /${ROS_PREFIX}/setup.bash
+	fi
+
 	append-cxxflags '-std=c++11'
 	export CATKIN_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
 	export ROS_ROOT="${EPREFIX%/}/${ROS_PREFIX}"
@@ -189,7 +207,7 @@ ros-cmake_src_configure() {
 	local mycmakeargs=(
 		"$(usex test CATKIN_ENABLE_TESTING)"
 		"-DCATKIN_BUILD_BINARY_PACKAGE=1"
-		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT}}${ROS_PREFIX}"
+		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}"
 		"-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}"
 	)
 	cmake-utils_src_configure
@@ -204,6 +222,10 @@ ros-cmake_src_configure() {
 # @DESCRIPTION:
 # Builds a catkin-based package.
 ros-cmake_src_compile() {
+	if [ -f /${ROS_PREFIX}/setup.bash ]; then
+		source /${ROS_PREFIX}/setup.bash
+	fi
+
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 			export CMAKE_USE_DIR="${BUILD_DIR}"
@@ -247,6 +269,7 @@ ros-catkin_src_test() {
 # @DESCRIPTION:
 # Decorator around cmake-utils_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
 ros-cmake_src_install_with_python() {
+	python_scriptinto /${ROS_PREFIX}/bin
 	python_export PYTHON_SCRIPTDIR
 	if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"

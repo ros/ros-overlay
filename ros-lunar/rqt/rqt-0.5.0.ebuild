@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/lunar/rqt/0.5.0-
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/rqt_gui
 	ros-lunar/rqt_gui_cpp

@@ -12,8 +12,6 @@ SRC_URI="https://github.com/ros-gbp/collada_urdf-release/archive/release/lunar/c
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
 	ros-lunar/angles
 	ros-lunar/collada_parser
