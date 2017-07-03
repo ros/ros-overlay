@@ -47,7 +47,7 @@ src_configure() {
 }
 
 src_compile() {
-	${CC} ${FILESDIR}/ros-python.c -o ${WORKDIR}/${P}/ros-python-lunar || die 'could not build ros-python!'
+	gcc ${FILESDIR}/ros-python.c -o ${WORKDIR}/${P}/ros-python-lunar || die 'could not build ros-python!'
 	ros-cmake_src_compile
 }
 
