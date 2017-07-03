@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="Low-level build system macros and infrastructure for ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/lunar/catkin/0.7.6-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/lunar/catkin/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,8 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/cmake
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -36,10 +36,11 @@ src_prepare() {
 }
 
 src_configure() {
+local sitedir="$(python_get_sitedir)"
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_PREFIX=/${ROS_PREFIX}
 		-DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-		-DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
+		-DPYTHON_INSTALL_DIR=${sitedir#${EPREFIX}}/${ROS_PREFIX}
 		-DCATKIN_BUILD_BINARY_PACKAGE=0
 	)
 	python_foreach_impl ros-cmake_src_configure_internal

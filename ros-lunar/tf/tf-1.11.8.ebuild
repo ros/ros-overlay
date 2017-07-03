@@ -5,10 +5,11 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="tf is a package that lets the user keep track of multiple coordinate
 frames over"
 HOMEPAGE="http://www.ros.org/wiki/tf"
-SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.11.8-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/lunar/tf/1.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,8 +34,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/rostest
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -42,6 +42,6 @@ src_prepare() {
 	cd ${P}
 	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" epatch
-ros-cmake_src_prepare
+	ros-cmake_src_prepare
 }
 

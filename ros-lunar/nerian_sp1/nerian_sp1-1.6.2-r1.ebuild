@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="Node for the SP1 Stereo Vision System by Nerian Vision Technologies"
 HOMEPAGE="http://wiki.ros.org/nerian_sp1"
-SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/lunar/nerian_sp1/1.6.2-1.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/lunar/nerian_sp1/1.6.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -26,8 +27,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/message_generation
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

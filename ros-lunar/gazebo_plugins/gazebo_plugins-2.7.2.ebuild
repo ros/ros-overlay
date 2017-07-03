@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_plugins/2.7.2-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/lunar/gazebo_plugins/2.7.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -42,8 +43,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/message_generation
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -51,6 +51,6 @@ src_prepare() {
 	cd ${P}
 	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" epatch
-ros-cmake_src_prepare
+	ros-cmake_src_prepare
 }
 
