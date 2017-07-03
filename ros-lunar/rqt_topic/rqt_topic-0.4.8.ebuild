@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="rqt_topic provides a GUI plugin for displaying debug information about ROS topic"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_topic-release/archive/release/lunar/rqt_topic/0.4.8-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,42 +14,19 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/python_qt_binding
-    ros-lunar/rostopic
-    ros-lunar/rqt_gui
-    ros-lunar/rqt_gui_py
-    ros-lunar/std_msgs
-    dev-python/rospkg
+	ros-lunar/python_qt_binding
+	ros-lunar/rostopic
+	ros-lunar/rqt_gui
+	ros-lunar/rqt_gui_py
+	ros-lunar/std_msgs
+	dev-python/rospkg
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
+	ros-lunar/catkin
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="Mobile robot simulator http://rtv.github.com/Stage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/lunar/stage/4.3.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,42 +14,25 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/catkin
-    x11-libs/gtk+:2
-    =x11-libs/fltk-1*
-    virtual/jpeg
-    virtual/opengl
+	ros-lunar/catkin
+	x11-libs/gtk+:2
+	=x11-libs/fltk-1*
+	virtual/jpeg
+	virtual/opengl
 "
 DEPEND="${RDEPEND}
-    dev-util/cmake
-    sys-devel/libtool
-    virtual/pkgconfig
+	dev-util/cmake
+	sys-devel/libtool
+	virtual/pkgconfig
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
-
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
+	filter-flags '-std=*'
+	cmake-utils_src_configure
 }
 
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

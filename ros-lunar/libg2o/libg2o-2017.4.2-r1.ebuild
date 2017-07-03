@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="The libg2o library from http://openslam.org/g2o.html"
 HOMEPAGE="https://github.com/RainerKuemmerle/g2o"
 SRC_URI="https://github.com/ros-gbp/libg2o-release/archive/release/lunar/libg2o/2017.4.2-1.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,41 +14,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/catkin
-    dev-libs/boost
-    dev-cpp/eigen
-    virtual/opengl
-    sci-libs/suitesparse
+	ros-lunar/catkin
+	dev-libs/boost
+	dev-cpp/eigen
+	virtual/opengl
+	sci-libs/suitesparse
 "
 DEPEND="${RDEPEND}
-    dev-util/cmake
+	dev-util/cmake
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

@@ -3,9 +3,8 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
-DESCRIPTION=""
+inherit ros-cmake
+DESCRIPTION="NONE"
 HOMEPAGE="http://wiki.ros.org/robot_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_state_publisher-release/archive/release/lunar/robot_state_publisher/1.13.5-0.tar.gz -> ${PN}-${PV}.tar.gz"
 
@@ -15,48 +14,25 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/catkin
-    ros-lunar/kdl_parser
-    ros-lunar/orocos_kdl
-    ros-lunar/rosconsole
-    ros-lunar/roscpp
-    ros-lunar/rostime
-    ros-lunar/sensor_msgs
-    ros-lunar/tf
-    ros-lunar/tf2_kdl
-    ros-lunar/tf2_ros
-    dev-cpp/eigen
+	ros-lunar/catkin
+	ros-lunar/kdl_parser
+	ros-lunar/orocos_kdl
+	ros-lunar/rosconsole
+	ros-lunar/roscpp
+	ros-lunar/rostime
+	ros-lunar/sensor_msgs
+	ros-lunar/tf
+	ros-lunar/tf2_kdl
+	ros-lunar/tf2_ros
+	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-lunar/rostest
-    dev-libs/urdfdom_headers
+	ros-lunar/rostest
+	dev-libs/urdfdom_headers
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

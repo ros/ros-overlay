@@ -40,7 +40,7 @@ CATKIN_PYTHON_USEDEP=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
 	PYTHON_ECLASS="python-r1"
 fi
-inherit ${SCM} cmake-utils flag-o-matic eutils
+inherit ${SCM} ${PYTHON_ECLASS} cmake-utils flag-o-matic
 
 CATKIN_DO_PYTHON_MULTIBUILD=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
@@ -118,14 +118,6 @@ CATKIN_MESSAGES_EUS_USEDEP="ros_messages_eus(-)"
 # Use it as cat/pkg[${CATKIN_MESSAGES_NODEJS_USEDEP}] to indicate a dependency on the nodejs messages of cat/pkg.
 CATKIN_MESSAGES_NODEJS_USEDEP="ros_messages_nodejs(-)"
 
-# if [ "${PV#9999}" != "${PV}" ] ; then
-# 	SRC_URI=""
-# 	KEYWORDS=""
-#	S=${WORKDIR}/${P}/${ROS_SUBDIR}
-# else
-# 	SRC_URI="${ROS_REPO_URI}/archive/${VER_PREFIX}${PV%_*}${VER_SUFFIX}.tar.gz -> ${ROS_REPO_URI##*/}-${PV}.tar.gz"
-#	S=${WORKDIR}/${VER_PREFIX}${ROS_REPO_URI##*/}-${PV}${VER_SUFFIX}/${ROS_SUBDIR}
-# fi
 S=${WORKDIR}/${P}
 
 HOMEPAGE="http://wiki.ros.org/${PN}"
@@ -161,7 +153,7 @@ ros-cmake_src_configure_internal() {
 		local mycmakeargs=(
 			"${mycmakeargs[@]}"
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}/${ROS_PREFIX}"
+			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}/usr/}"
 		)
 		python_export PYTHON_SCRIPTDIR
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
@@ -193,7 +185,6 @@ ros-cmake_src_configure() {
 		use ros_messages_nodejs || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gennodejs"
 		export ROS_LANG_DISABLE
 	fi
-	local sitedir="/${ROS_PREFIX}/lib/python3.5/site-packages"
 	export DEST_SETUP_DIR="${ROS_PREFIX}"
 	local mycmakeargs=(
 		"$(usex test CATKIN_ENABLE_TESTING)"
@@ -219,7 +210,7 @@ ros-cmake_src_compile() {
 		fi
 		python_foreach_impl cmake-utils_src_compile "${@}"
 	else
-		cmake-utils_src_compile
+		cmake-utils_src_compile "${@}"
 	fi
 }
 
@@ -277,8 +268,7 @@ ros-cmake_src_install() {
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ros-cmake_src_install_with_python "${@}"
 	else
-		ros-cmake_src_install_with_python
-		cmake-utils_src_install
+		cmake-utils_src_install "${@}"
 	fi
 }
 

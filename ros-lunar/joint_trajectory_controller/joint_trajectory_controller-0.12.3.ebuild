@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="Controller for executing joint-space trajectories on a group of joints."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/lunar/joint_trajectory_controller/0.12.3-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,47 +14,24 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/actionlib
-    ros-lunar/angles
-    ros-lunar/control_msgs
-    ros-lunar/control_toolbox
-    ros-lunar/controller_interface
-    ros-lunar/hardware_interface
-    ros-lunar/realtime_tools
-    ros-lunar/roscpp
-    ros-lunar/trajectory_msgs
-    ros-lunar/urdf
+	ros-lunar/actionlib
+	ros-lunar/angles
+	ros-lunar/control_msgs
+	ros-lunar/control_toolbox
+	ros-lunar/controller_interface
+	ros-lunar/hardware_interface
+	ros-lunar/realtime_tools
+	ros-lunar/roscpp
+	ros-lunar/trajectory_msgs
+	ros-lunar/urdf
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
-    ros-lunar/cmake_modules
+	ros-lunar/catkin
+	ros-lunar/cmake_modules
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

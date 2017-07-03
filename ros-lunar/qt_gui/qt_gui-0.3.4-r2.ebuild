@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interface ba"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt_gui/0.3.4-2.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,41 +14,18 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/python_qt_binding
-    dev-python/rospkg
-    x11-themes/tango-icon-theme
+	ros-lunar/python_qt_binding
+	dev-python/rospkg
+	x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
-    dev-python/PyQt5
-    dev-qt/qtcore:5
+	ros-lunar/catkin
+	dev-python/PyQt5
+	dev-qt/qtcore:5
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

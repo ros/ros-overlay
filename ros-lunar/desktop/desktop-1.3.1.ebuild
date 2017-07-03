@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="A metapackage to aggregate several packages."
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/lunar/desktop/1.3.1-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,43 +14,20 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/common_tutorials
-    ros-lunar/geometry_tutorials
-    ros-lunar/robot
-    ros-lunar/ros_tutorials
-    ros-lunar/roslint
-    ros-lunar/visualization_tutorials
-    ros-lunar/viz
+	ros-lunar/common_tutorials
+	ros-lunar/geometry_tutorials
+	ros-lunar/robot
+	ros-lunar/ros_tutorials
+	ros-lunar/roslint
+	ros-lunar/visualization_tutorials
+	ros-lunar/viz
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
+	ros-lunar/catkin
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

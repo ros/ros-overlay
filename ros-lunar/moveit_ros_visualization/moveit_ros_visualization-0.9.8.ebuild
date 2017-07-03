@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="Components of MoveIt that offer visualization"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/moveit_ros_visualization/0.9.8-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,49 +14,26 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/geometric_shapes
-    ros-lunar/interactive_markers
-    ros-lunar/moveit_ros_perception
-    ros-lunar/moveit_ros_planning_interface
-    ros-lunar/moveit_ros_robot_interaction
-    ros-lunar/moveit_ros_warehouse
-    ros-lunar/object_recognition_msgs
-    ros-lunar/pluginlib
-    ros-lunar/roscpp
-    ros-lunar/rospy
-    ros-lunar/rviz
+	ros-lunar/geometric_shapes
+	ros-lunar/interactive_markers
+	ros-lunar/moveit_ros_perception
+	ros-lunar/moveit_ros_planning_interface
+	ros-lunar/moveit_ros_robot_interaction
+	ros-lunar/moveit_ros_warehouse
+	ros-lunar/object_recognition_msgs
+	ros-lunar/pluginlib
+	ros-lunar/roscpp
+	ros-lunar/rospy
+	ros-lunar/rviz
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
-    dev-cpp/eigen
-    virtual/pkgconfig
+	ros-lunar/catkin
+	dev-cpp/eigen
+	virtual/pkgconfig
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

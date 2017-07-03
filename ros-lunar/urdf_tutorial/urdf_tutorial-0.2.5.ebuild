@@ -3,8 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eutils
-
+inherit ros-cmake
 DESCRIPTION="This package contains a number of URDF tutorials."
 HOMEPAGE="http://ros.org/wiki/urdf_tutorial"
 SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/lunar/urdf_tutorial/0.2.5-0.tar.gz -> ${PN}-${PV}.tar.gz"
@@ -15,49 +14,26 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 PYTHON_DEPEND="3::3.5"
 
 RDEPEND="
-    ros-lunar/controller_manager
-    ros-lunar/diff_drive_controller
-    ros-lunar/gazebo_ros
-    ros-lunar/gazebo_ros_control
-    ros-lunar/joint_state_controller
-    ros-lunar/joint_state_publisher
-    ros-lunar/position_controllers
-    ros-lunar/robot_state_publisher
-    ros-lunar/rqt_robot_steering
-    ros-lunar/rviz
-    ros-lunar/urdf
-    ros-lunar/xacro
+	ros-lunar/controller_manager
+	ros-lunar/diff_drive_controller
+	ros-lunar/gazebo_ros
+	ros-lunar/gazebo_ros_control
+	ros-lunar/joint_state_controller
+	ros-lunar/joint_state_publisher
+	ros-lunar/position_controllers
+	ros-lunar/robot_state_publisher
+	ros-lunar/rqt_robot_steering
+	ros-lunar/rviz
+	ros-lunar/urdf
+	ros-lunar/xacro
 "
 DEPEND="${RDEPEND}
-    ros-lunar/catkin
-    ros-lunar/roslaunch
+	ros-lunar/catkin
+	ros-lunar/roslaunch
 "
 
 SLOT="lunar"
 CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/lunar"
+ROS_DISTRO="lunar"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-lunar
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
