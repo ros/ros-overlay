@@ -2,6 +2,7 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 DESCRIPTION="This package contains a class for converting from a 2D laser scan as defined by

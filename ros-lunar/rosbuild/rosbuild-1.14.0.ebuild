@@ -2,6 +2,7 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 DESCRIPTION="rosbuild contains scripts for managing the CMake-based build system for ROS."

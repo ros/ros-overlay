@@ -2,6 +2,7 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 DESCRIPTION="Provides a node that reports how long a subset of joints has been

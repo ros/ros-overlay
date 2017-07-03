@@ -2,6 +2,7 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 DESCRIPTION="CiA(r) CANopen 301 master implementation with support for interprocess master sy"
