@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="ROS messages for publishing graphs of different data types"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/graph_msgs-release/archive/release/lunar/graph_msgs/0.1.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/davetcoleman/graph_msgs-release/archive/release/lunar/graph_msgs/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,8 +23,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/message_generation
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="Extensions for slime to assist in working with ROS packages"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/slime_ros/0.4.11-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/lunar/slime_ros/0.4.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="CC-BY-SA-3.0"
 
@@ -22,8 +23,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/catkin
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

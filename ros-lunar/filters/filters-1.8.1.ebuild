@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="This library provides a standardized interface for processing data as a sequence"
 HOMEPAGE="http://ros.org/wiki/filters"
-SRC_URI="https://github.com/ros-gbp/filters-release/archive/release/lunar/filters/1.8.1-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/filters-release/archive/release/lunar/filters/1.8.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,8 +24,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/rostest
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

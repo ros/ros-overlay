@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt_gui_cpp/0.3.4-2.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/lunar/qt_gui_cpp/0.3.4-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,8 +26,7 @@ DEPEND="${RDEPEND}
 	dev-libs/tinyxml
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

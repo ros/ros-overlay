@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="This package provides Gazebo plugins to simulate the Katana arm."
 HOMEPAGE="http://ros.org/wiki/katana_gazebo_plugins"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_gazebo_plugins/1.1.2-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_gazebo_plugins/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -25,8 +26,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/catkin
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

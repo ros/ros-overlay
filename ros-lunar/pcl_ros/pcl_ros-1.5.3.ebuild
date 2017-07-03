@@ -5,10 +5,11 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred
   bridge"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/lunar/pcl_ros/1.5.3-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/lunar/pcl_ros/1.5.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -41,8 +42,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/roslib
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -50,6 +50,6 @@ src_prepare() {
 	cd ${P}
 	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" epatch
-ros-cmake_src_prepare
+	ros-cmake_src_prepare
 }
 

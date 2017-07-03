@@ -5,10 +5,11 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="The diagnostic_analysis package can convert a log of diagnostics data
 	into a"
 HOMEPAGE="http://www.ros.org/wiki/diagnostics_analysis"
-SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/diagnostic_analysis/1.9.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/lunar/diagnostic_analysis/1.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,8 +24,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/rostest
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

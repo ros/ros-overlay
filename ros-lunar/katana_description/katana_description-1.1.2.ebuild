@@ -5,9 +5,10 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="This package contains an URDF description of the Katana arm and all supporting m"
 HOMEPAGE="http://ros.org/wiki/katana_description"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_description/1.1.2-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/lunar/katana_description/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -22,8 +23,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/ivcon
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

@@ -5,10 +5,11 @@ EAPI=6
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
+
 DESCRIPTION="A rosout GUI viewer developed at Southwest Research Insititute as an
 	 altern"
 HOMEPAGE="http://ros.org/wiki/swri_console"
-SRC_URI="https://github.com/swri-robotics-gbp/swri_console-release/archive/release/lunar/swri_console/1.0.0-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/swri_console-release/archive/release/lunar/swri_console/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,8 +27,7 @@ DEPEND="${RDEPEND}
 	dev-qt/qtopengl:5
 "
 
-SLOT="lunar"
-CMAKE_BUILD_TYPE=RelWithDebInfo
+SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
