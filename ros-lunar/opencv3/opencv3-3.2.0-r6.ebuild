@@ -38,6 +38,5 @@ ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
 	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
-	python_foreach_impl ros-cmake_src_configure_internal
+	ros-cmake_src_configure
 }
-

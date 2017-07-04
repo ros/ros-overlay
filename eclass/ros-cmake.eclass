@@ -128,16 +128,6 @@ HOMEPAGE="http://wiki.ros.org/${PN}"
 ros-cmake_src_unpack() {
 	default
 	mv *${P}* ${P}
-	if [[ ! -f ${P}/CMakeLists.txt ]]; then
-		cd ${P}
-		for dir in $(ls); do
-			if [[ -d $dir ]]; then
-				cd $dir
-				mv * ..
-				cd ..
-			fi
-		done
-	fi
 }
 
 # @FUNCTION: ros-catkin_src_prepare
@@ -164,10 +154,13 @@ ros-cmake_src_configure_internal() {
 
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		local sitedir="$(python_get_sitedir)"
+		local sitedir="${sitedir/\/usr\//}"
+		local sitedir="${sitedir/lib64/lib}"
+		local sitedir="${sitedir/lib/lib64}"
 		local mycmakeargs=(
-			"${mycmakeargs[@]}"
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			-DPYTHON_INSTALL_DIR="${sitedir#${EPREFIX}}/${ROS_PREFIX}"
+			"-DPYTHON_INSTALL_DIR=${sitedir}"
+			"${mycmakeargs[@]}"
 		)
 		python_export PYTHON_SCRIPTDIR
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
@@ -204,11 +197,14 @@ ros-cmake_src_configure() {
 		export ROS_LANG_DISABLE
 	fi
 	export DEST_SETUP_DIR="${ROS_PREFIX}"
+	if [ -z $BUILD_BINARY ]; then
+		export BUILD_BINARY="1"
+	fi
 	local mycmakeargs=(
 		"$(usex test CATKIN_ENABLE_TESTING)"
-		"-DCATKIN_BUILD_BINARY_PACKAGE=1"
-		"-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}"
-		"-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}"
+		-DCATKIN_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
+		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}
+		-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}
 	)
 	cmake-utils_src_configure
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
