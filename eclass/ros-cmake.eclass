@@ -151,7 +151,6 @@ ros-cmake_src_configure_internal() {
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
 		source /${ROS_PREFIX}/setup.bash
 	fi
-
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		local sitedir="$(python_get_sitedir)"
 		local sitedir="${sitedir/\/usr\//}"
@@ -205,6 +204,7 @@ ros-cmake_src_configure() {
 		-DCATKIN_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
 		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}
 		-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}
+		${mycmakeargs[@]}
 	)
 	cmake-utils_src_configure
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
