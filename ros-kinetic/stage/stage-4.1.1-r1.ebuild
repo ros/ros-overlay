@@ -27,11 +27,6 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
+CPP11="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
-src_configure() {
-	filter-flags '-std=*'
-	ros-cmake_src_configure
-}
-

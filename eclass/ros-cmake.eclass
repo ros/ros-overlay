@@ -151,6 +151,9 @@ ros-cmake_src_configure_internal() {
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
 		source /${ROS_PREFIX}/setup.bash
 	fi
+	if [[ -z $CPP11 ]]; then
+		append-cxxflags '-std=c++11'
+	fi
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		local sitedir="$(python_get_sitedir)"
 		local sitedir="${sitedir/\/usr\//}"
@@ -182,8 +185,10 @@ ros-cmake_src_configure() {
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
 		source /${ROS_PREFIX}/setup.bash
 	fi
+	if [[ -z $CPP11 ]]; then
+		append-cxxflags '-std=c++11'
+	fi
 
-	append-cxxflags '-std=c++11'
 	export CATKIN_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
 	export ROS_ROOT="${EPREFIX%/}/${ROS_PREFIX}"
 	if [ -n "${CATKIN_HAS_MESSAGES}" ] ; then
@@ -195,7 +200,7 @@ ros-cmake_src_configure() {
 		use ros_messages_nodejs || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gennodejs"
 		export ROS_LANG_DISABLE
 	fi
-	export DEST_SETUP_DIR="${ROS_PREFIX}"
+	export DEST_SETUP_DIR="/${ROS_PREFIX}"
 	if [ -z $BUILD_BINARY ]; then
 		export BUILD_BINARY="1"
 	fi
@@ -221,6 +226,8 @@ ros-cmake_src_compile() {
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
 		source /${ROS_PREFIX}/setup.bash
 	fi
+
+	rm -f ${WORKDIR}/${P}/README* # prevents conflicts
 
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
