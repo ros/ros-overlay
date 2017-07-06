@@ -6,8 +6,8 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides a set of typedef'"'"'s that allow
-  using Eigen datatypes in S'"
+DESCRIPTION="This package provides a set of typedef's that allow
+  using Eigen datatypes in S"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/eigen_stl_containers-release/archive/release/kinetic/eigen_stl_containers/0.1.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
