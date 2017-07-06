@@ -2,60 +2,35 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="object_recognition_core contains tools to launch several recognition pipelines, "
+DESCRIPTION="'object_recognition_core contains tools to launch several recognition pipelines, '"
 HOMEPAGE="wg-perception.github.io/object_recognition_ros"
-SRC_URI="https://github.com/ros-gbp/object_recognition_ros-release/archive/release/indigo/object_recognition_ros/0.3.5-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_ros-release/archive/release/indigo/object_recognition_ros/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/actionlib
-    ros-indigo/ecto
-    ros-indigo/ecto_image_pipeline
-    ros-indigo/ecto_ros
-    ros-indigo/geometric_shapes
-    ros-indigo/object_recognition_core
-    ros-indigo/object_recognition_msgs
-    ros-indigo/pluginlib
-    ros-indigo/rostopic
-    dev-libs/boost
+	ros-indigo/actionlib
+	ros-indigo/ecto
+	ros-indigo/ecto_image_pipeline
+	ros-indigo/ecto_ros
+	ros-indigo/geometric_shapes
+	ros-indigo/object_recognition_core
+	ros-indigo/object_recognition_msgs
+	ros-indigo/pluginlib
+	ros-indigo/rostopic
+	dev-libs/boost
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
-    ros-indigo/cmake_modules
+	ros-indigo/catkin
+	ros-indigo/cmake_modules
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

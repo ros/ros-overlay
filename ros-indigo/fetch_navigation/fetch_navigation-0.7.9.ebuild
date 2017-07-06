@@ -2,62 +2,37 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Configuration and launch files for running ROS navigation on Fetch."
+DESCRIPTION="'Configuration and launch files for running ROS navigation on Fetch.'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/indigo/fetch_navigation/0.7.9-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/indigo/fetch_navigation/0.7.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/amcl
-    ros-indigo/base_local_planner
-    ros-indigo/clear_costmap_recovery
-    ros-indigo/costmap_2d
-    ros-indigo/fetch_depth_layer
-    ros-indigo/fetch_maps
-    ros-indigo/map_server
-    ros-indigo/move_base
-    ros-indigo/move_base_msgs
-    ros-indigo/navfn
-    ros-indigo/rotate_recovery
-    ros-indigo/slam_karto
-    ros-indigo/voxel_grid
+	ros-indigo/amcl
+	ros-indigo/base_local_planner
+	ros-indigo/clear_costmap_recovery
+	ros-indigo/costmap_2d
+	ros-indigo/fetch_depth_layer
+	ros-indigo/fetch_maps
+	ros-indigo/map_server
+	ros-indigo/move_base
+	ros-indigo/move_base_msgs
+	ros-indigo/navfn
+	ros-indigo/rotate_recovery
+	ros-indigo/slam_karto
+	ros-indigo/voxel_grid
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

@@ -2,58 +2,33 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="This package configures the move_base stack and makes use of the gmapping and am"
+DESCRIPTION="'This package configures the move_base stack and makes use of the gmapping and am'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/indigo/rb1_base_2dnav/1.0.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/indigo/rb1_base_2dnav/1.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/amcl
-    ros-indigo/gmapping
-    ros-indigo/map_server
-    ros-indigo/message_runtime
-    ros-indigo/move_base
-    ros-indigo/robot_pose_ekf
-    ros-indigo/rviz
-    ros-indigo/std_msgs
-    ros-indigo/tf
+	ros-indigo/amcl
+	ros-indigo/gmapping
+	ros-indigo/map_server
+	ros-indigo/message_runtime
+	ros-indigo/move_base
+	ros-indigo/robot_pose_ekf
+	ros-indigo/rviz
+	ros-indigo/std_msgs
+	ros-indigo/tf
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

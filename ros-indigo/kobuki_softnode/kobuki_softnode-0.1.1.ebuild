@@ -2,60 +2,35 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="ROS nodelet for fake Kobuki."
+DESCRIPTION="'ROS nodelet for fake Kobuki.'"
 HOMEPAGE="http://ros.org/wiki/kobuki"
-SRC_URI="https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/indigo/kobuki_softnode/0.1.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/indigo/kobuki_softnode/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/diagnostic_aggregator
-    ros-indigo/geometry_msgs
-    ros-indigo/kobuki_description
-    ros-indigo/kobuki_msgs
-    ros-indigo/nav_msgs
-    ros-indigo/nodelet
-    ros-indigo/robot_state_publisher
-    ros-indigo/roscpp
-    ros-indigo/sensor_msgs
-    ros-indigo/tf
-    ros-indigo/yujin_maps
+	ros-indigo/diagnostic_aggregator
+	ros-indigo/geometry_msgs
+	ros-indigo/kobuki_description
+	ros-indigo/kobuki_msgs
+	ros-indigo/nav_msgs
+	ros-indigo/nodelet
+	ros-indigo/robot_state_publisher
+	ros-indigo/roscpp
+	ros-indigo/sensor_msgs
+	ros-indigo/tf
+	ros-indigo/yujin_maps
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

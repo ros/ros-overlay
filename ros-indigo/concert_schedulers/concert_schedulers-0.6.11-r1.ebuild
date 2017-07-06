@@ -2,60 +2,35 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Various schedulers for the concert"
+DESCRIPTION="'Various schedulers for the concert'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_schedulers/0.6.11-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_schedulers/0.6.11-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/concert_msgs
-    ros-indigo/concert_scheduler_requests
-    ros-indigo/rocon_app_manager_msgs
-    ros-indigo/rocon_console
-    ros-indigo/rocon_python_utils
-    ros-indigo/rocon_uri
-    ros-indigo/rosgraph
-    ros-indigo/rospy
-    ros-indigo/scheduler_msgs
-    ros-indigo/unique_id
-    ros-indigo/uuid_msgs
+	ros-indigo/concert_msgs
+	ros-indigo/concert_scheduler_requests
+	ros-indigo/rocon_app_manager_msgs
+	ros-indigo/rocon_console
+	ros-indigo/rocon_python_utils
+	ros-indigo/rocon_uri
+	ros-indigo/rosgraph
+	ros-indigo/rospy
+	ros-indigo/scheduler_msgs
+	ros-indigo/unique_id
+	ros-indigo/uuid_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
