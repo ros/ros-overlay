@@ -2,58 +2,33 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="ROS-Industrial support for ABB manipulators (metapackage)."
+DESCRIPTION="'ROS-Industrial support for ABB manipulators (metapackage).'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.0-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="|| ( BSD Apache-2.0 )"
+LICENSE="( BSD Apache-2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/abb_driver
-    ros-kinetic/abb_irb2400_moveit_config
-    ros-kinetic/abb_irb2400_moveit_plugins
-    ros-kinetic/abb_irb2400_support
-    ros-kinetic/abb_irb4400_support
-    ros-kinetic/abb_irb5400_support
-    ros-kinetic/abb_irb6600_support
-    ros-kinetic/abb_irb6640_moveit_config
-    ros-kinetic/abb_irb6640_support
-    ros-kinetic/abb_resources
+	ros-kinetic/abb_driver
+	ros-kinetic/abb_irb2400_moveit_config
+	ros-kinetic/abb_irb2400_moveit_plugins
+	ros-kinetic/abb_irb2400_support
+	ros-kinetic/abb_irb4400_support
+	ros-kinetic/abb_irb5400_support
+	ros-kinetic/abb_irb6600_support
+	ros-kinetic/abb_irb6640_moveit_config
+	ros-kinetic/abb_irb6640_support
+	ros-kinetic/abb_resources
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

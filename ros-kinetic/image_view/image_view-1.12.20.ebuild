@@ -2,66 +2,38 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="A simple viewer for ROS image topics. Includes a specialized viewer
-  for stereo"
+DESCRIPTION="'A simple viewer for ROS image topics. Includes a specialized viewer
+  for stereo'"
 HOMEPAGE="http://www.ros.org/wiki/image_view"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_view/1.12.20-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_view/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/camera_calibration_parsers
-    ros-kinetic/cv_bridge
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/image_transport
-    ros-kinetic/message_filters
-    ros-kinetic/nodelet
-    ros-kinetic/rosconsole
-    ros-kinetic/roscpp
-    ros-kinetic/std_srvs
-    x11-libs/gtk+:2
+	ros-kinetic/camera_calibration_parsers
+	ros-kinetic/cv_bridge
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/image_transport
+	ros-kinetic/message_filters
+	ros-kinetic/nodelet
+	ros-kinetic/rosconsole
+	ros-kinetic/roscpp
+	ros-kinetic/std_srvs
+	x11-libs/gtk+:2
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
-    ros-kinetic/message_generation
-    ros-kinetic/sensor_msgs
-    ros-kinetic/stereo_msgs
+	ros-kinetic/catkin
+	ros-kinetic/message_generation
+	ros-kinetic/sensor_msgs
+	ros-kinetic/stereo_msgs
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-    cd ${P}
-    EPATCH_SOURCE="${FILESDIR}"EPATCH_SUFFIX="patch" \
-                 EPATCH_FORCE="yes" epatch
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

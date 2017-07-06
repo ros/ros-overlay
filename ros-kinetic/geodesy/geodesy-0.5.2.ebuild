@@ -2,58 +2,33 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Python and C++ interfaces for manipulating geodetic coordinates."
+DESCRIPTION="'Python and C++ interfaces for manipulating geodetic coordinates.'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geodesy/0.5.2-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geodesy/0.5.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/geographic_msgs
-    ros-kinetic/geometry_msgs
-    ros-kinetic/sensor_msgs
-    ros-kinetic/tf
-    ros-kinetic/unique_id
-    ros-kinetic/uuid_msgs
-    dev-python/pyproj
+	ros-kinetic/geographic_msgs
+	ros-kinetic/geometry_msgs
+	ros-kinetic/sensor_msgs
+	ros-kinetic/tf
+	ros-kinetic/unique_id
+	ros-kinetic/uuid_msgs
+	dev-python/pyproj
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/angles
-    ros-kinetic/catkin
-    dev-python/catkin_pkg
+	ros-kinetic/angles
+	ros-kinetic/catkin
+	dev-python/catkin_pkg
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

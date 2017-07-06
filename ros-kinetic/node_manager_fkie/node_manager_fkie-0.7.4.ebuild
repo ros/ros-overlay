@@ -2,68 +2,43 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Graphical interface, written in PySide, to manage the running and 
-     configur"
+DESCRIPTION="'Graphical interface, written in PySide, to manage the running and 
+	 configur'"
 HOMEPAGE="http://ros.org/wiki/node_manager_fkie"
-SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/node_manager_fkie/0.7.4-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/node_manager_fkie/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="|| ( BSD CC-BY-SA-3.0 )"
+LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/default_cfg_fkie
-    ros-kinetic/diagnostic_msgs
-    ros-kinetic/dynamic_reconfigure
-    ros-kinetic/master_discovery_fkie
-    ros-kinetic/master_sync_fkie
-    ros-kinetic/multimaster_msgs_fkie
-    ros-kinetic/python_qt_binding
-    ros-kinetic/rosgraph
-    ros-kinetic/roslaunch
-    ros-kinetic/roslib
-    ros-kinetic/rosmsg
-    ros-kinetic/rospy
-    ros-kinetic/rosservice
-    ros-kinetic/rqt_gui
-    ros-kinetic/rqt_reconfigure
-    dev-python/docutils
-    dev-python/paramiko
-    app-misc/screen
-    x11-terms/xterm
+	ros-kinetic/default_cfg_fkie
+	ros-kinetic/diagnostic_msgs
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/master_discovery_fkie
+	ros-kinetic/master_sync_fkie
+	ros-kinetic/multimaster_msgs_fkie
+	ros-kinetic/python_qt_binding
+	ros-kinetic/rosgraph
+	ros-kinetic/roslaunch
+	ros-kinetic/roslib
+	ros-kinetic/rosmsg
+	ros-kinetic/rospy
+	ros-kinetic/rosservice
+	ros-kinetic/rqt_gui
+	ros-kinetic/rqt_reconfigure
+	dev-python/docutils
+	dev-python/paramiko
+	app-misc/screen
+	x11-terms/xterm
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
