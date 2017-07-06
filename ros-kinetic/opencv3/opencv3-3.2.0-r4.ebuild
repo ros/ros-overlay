@@ -37,7 +37,12 @@ ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
-	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
+	filter-flags '-march=*' '-mtune=*'
+	if [[ $(gcc-major-version) -gt 4 ]]; then
+		local mycmakeargs=(
+			-DWITH_CUDA=OFF
+		)
+		ewarn "nvcc does not support GCC > 4, so cuda has been disabled."
+	fi
 	ros-cmake_src_configure
 }
-
