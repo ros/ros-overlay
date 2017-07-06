@@ -2,56 +2,31 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindi"
+DESCRIPTION="'qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindi'"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_cpp/0.3.4-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_cpp/0.3.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/pluginlib
-    ros-kinetic/qt_gui
+	ros-kinetic/pluginlib
+	ros-kinetic/qt_gui
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
-    ros-kinetic/python_qt_binding
-    virtual/pkgconfig
-    dev-qt/qtcore:5
-    dev-qt/qtcore:5
-    dev-libs/tinyxml
+	ros-kinetic/catkin
+	ros-kinetic/python_qt_binding
+	virtual/pkgconfig
+	dev-qt/qtcore:5
+	dev-qt/qtcore:5
+	dev-libs/tinyxml
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

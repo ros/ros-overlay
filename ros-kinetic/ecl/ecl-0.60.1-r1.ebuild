@@ -2,54 +2,29 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Metapackage bringing all of ecl together."
+DESCRIPTION="'Metapackage bringing all of ecl together.'"
 HOMEPAGE="http://www.ros.org/wiki/ecl"
-SRC_URI="https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/kinetic/ecl/0.60.1-1.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/kinetic/ecl/0.60.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-kinetic/ecl_core
-    ros-kinetic/ecl_lite
-    ros-kinetic/ecl_manipulation
-    ros-kinetic/ecl_navigation
-    ros-kinetic/ecl_tools
+	ros-kinetic/ecl_core
+	ros-kinetic/ecl_lite
+	ros-kinetic/ecl_manipulation
+	ros-kinetic/ecl_navigation
+	ros-kinetic/ecl_tools
 "
 DEPEND="${RDEPEND}
-    ros-kinetic/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/kinetic"
+ROS_DISTRO="kinetic"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-kinetic
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
