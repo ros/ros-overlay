@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
+CPP11="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -39,4 +40,3 @@ src_prepare() {
 	EPATCH_FORCE="yes" epatch
 	ros-cmake_src_prepare
 }
-
