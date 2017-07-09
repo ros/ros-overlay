@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Filter which fuses angular velocities, accelerations, and (optionally) magnetic '"
+DESCRIPTION="Filter which fuses angular velocities, accelerations, and optionally magnetic "
 HOMEPAGE="http://ros.org/wiki/imu_filter_madgwick"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_filter_madgwick/1.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

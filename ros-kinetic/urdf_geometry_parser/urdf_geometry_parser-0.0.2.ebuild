@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Extract geometry value of a vehicle from urdf'"
+DESCRIPTION="Extract geometry value of a vehicle from urdf"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/urdf_geometry_parser-release/archive/release/kinetic/urdf_geometry_parser/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

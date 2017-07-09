@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'turtlesim is a tool made for teaching ROS and ROS packages.'"
+DESCRIPTION="turtlesim is a tool made for teaching ROS and ROS packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/turtlesim/0.7.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

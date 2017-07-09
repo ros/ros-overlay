@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Most implementations (windows, posix, ...) have slightly different api for 
-	'"
+DESCRIPTION="Most implementations windows, posix,  have slightly different api for	 "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_lite-release/archive/release/kinetic/ecl_io/0.61.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

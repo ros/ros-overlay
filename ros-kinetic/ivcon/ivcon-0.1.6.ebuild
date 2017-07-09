@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Mesh Conversion Utility
-
-Used to generate '"'"'.iv'"'"' files from '"'"'.stl'"'"' files.  This p'"
+DESCRIPTION="Mesh Conversion UtilityUsed to generate iv files from stl files  This p"
 HOMEPAGE="https://sourceforge.net/projects/ivcon/"
 SRC_URI="https://github.com/ros-gbp/ivcon-release/archive/release/kinetic/ivcon/0.1.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

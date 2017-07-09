@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="''"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/kinetic/qb_hand_hardware_interface/1.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

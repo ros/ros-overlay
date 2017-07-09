@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The libg2o library from http://openslam.org/g2o.html'"
+DESCRIPTION="The libg2o library from http://openslamorg/g2ohtml"
 HOMEPAGE="https://github.com/RainerKuemmerle/g2o"
 SRC_URI="https://github.com/ros-gbp/libg2o-release/archive/release/kinetic/libg2o/2016.4.24-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides service calls for getting ros meta-information, like list of
-	topics'"
+DESCRIPTION="Provides service calls for getting ros metainformation, like list of	topics"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosapi/0.7.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

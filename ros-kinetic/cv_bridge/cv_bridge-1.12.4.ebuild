@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This contains CvBridge, which converts between ROS
-	Image messages and OpenCV'"
+DESCRIPTION="This contains CvBridge, which converts between ROS	Image messages and OpenCV"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/cv_bridge/1.12.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

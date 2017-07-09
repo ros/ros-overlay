@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Interaction management for human interactive agents in the concert.'"
+DESCRIPTION="Interaction management for human interactive agents in the concert"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_interactions/0.3.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

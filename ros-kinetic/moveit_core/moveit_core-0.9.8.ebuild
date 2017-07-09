@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Core libraries used by MoveIt!'"
+DESCRIPTION="Core libraries used by MoveIt!"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_core/0.9.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

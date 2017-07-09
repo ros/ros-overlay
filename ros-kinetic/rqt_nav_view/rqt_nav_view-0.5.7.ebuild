@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_nav_view provides a gui for viewing navigation maps and paths.'"
+DESCRIPTION="rqt_nav_view provides a gui for viewing navigation maps and paths"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_nav_view-release/archive/release/kinetic/rqt_nav_view/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Soft kobuki impementation meta package'"
+DESCRIPTION="Soft kobuki impementation meta package"
 HOMEPAGE="http://ros.org/wiki/kobuki"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/kinetic/kobuki_soft/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

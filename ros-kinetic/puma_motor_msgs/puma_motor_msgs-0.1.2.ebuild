@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages specific to Puma.'"
+DESCRIPTION="Messages specific to Puma"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/puma_motor_driver-release/archive/release/kinetic/puma_motor_msgs/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

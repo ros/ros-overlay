@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'task_compiler
-
-	 Compiler that translate task description in PDDL (Planning D'"
+DESCRIPTION="task_compiler	 Compiler that translate task description in PDDL Planning D"
 HOMEPAGE="http://ros.org/wiki/task_compiler"
 SRC_URI="https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/task_compiler/0.1.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

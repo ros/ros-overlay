@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Metapacakge that installs all available planners for MoveIt'"
+DESCRIPTION="Metapacakge that installs all available planners for MoveIt"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_planners/0.9.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'System-wide logging mechanism for messages sent to the /rosout topic.'"
+DESCRIPTION="Systemwide logging mechanism for messages sent to the /rosout topic"
 HOMEPAGE="http://ros.org/wiki/rosout"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosout/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

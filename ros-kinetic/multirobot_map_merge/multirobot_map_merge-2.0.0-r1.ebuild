@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Merging multiple maps without knowledge of initial
-  positions of robots.'"
+DESCRIPTION="Merging multiple maps without knowledge of initial  positions of robots"
 HOMEPAGE="http://wiki.ros.org/multirobot_map_merge"
 SRC_URI="https://github.com/hrnr/m-explore-release/archive/release/kinetic/multirobot_map_merge/2.0.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

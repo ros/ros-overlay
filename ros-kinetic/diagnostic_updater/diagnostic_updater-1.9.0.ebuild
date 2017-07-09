@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'diagnostic_updater contains tools for easily updating diagnostics. it is commonl'"
+DESCRIPTION="diagnostic_updater contains tools for easily updating diagnostics it is commonl"
 HOMEPAGE="http://www.ros.org/wiki/diagnostic_updater"
 SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/diagnostic_updater/1.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

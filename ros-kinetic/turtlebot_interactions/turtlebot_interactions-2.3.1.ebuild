@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Catkin meta-package for turtlebot_interactions'"
+DESCRIPTION="Catkin metapackage for turtlebot_interactions"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_interactions-release/archive/release/kinetic/turtlebot_interactions/2.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

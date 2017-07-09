@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable '"
+DESCRIPTION="Robotindependent Gazebo plugins for sensors, motors and dynamic reconfigurable "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_plugins/2.5.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

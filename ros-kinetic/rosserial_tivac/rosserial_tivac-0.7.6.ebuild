@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosserial_tivac package provides the required hardware definitions for compiling'"
+DESCRIPTION="rosserial_tivac package provides the required hardware definitions for compiling"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_tivac/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains the source code for testing and comparing trac_ik'"
+DESCRIPTION="This package contains the source code for testing and comparing trac_ik"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_examples/1.4.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

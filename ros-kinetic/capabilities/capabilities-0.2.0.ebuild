@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Package which implements capabilities, including code to parse capability interf'"
+DESCRIPTION="Package which implements capabilities, including code to parse capability interf"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/capabilities-release/archive/release/kinetic/capabilities/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

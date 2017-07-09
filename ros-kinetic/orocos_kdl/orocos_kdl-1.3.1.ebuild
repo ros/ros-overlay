@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a recent version of the Kinematics and Dynamics
-	Librar'"
+DESCRIPTION="This package contains a recent version of the Kinematics and Dynamics	Librar"
 HOMEPAGE="http://wiki.ros.org/orocos_kdl"
 SRC_URI="https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Laser scan processing tools.'"
+DESCRIPTION="Laser scan processing tools"
 HOMEPAGE="http://ros.org/wiki/scan_tools"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/scan_tools/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

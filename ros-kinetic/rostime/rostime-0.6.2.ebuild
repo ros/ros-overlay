@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Time and Duration implementations for C++ libraries, including roscpp.'"
+DESCRIPTION="Time and Duration implementations for C libraries, including roscpp"
 HOMEPAGE="http://ros.org/wiki/rostime"
 SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/rostime/0.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The tf2_py package'"
+DESCRIPTION="The tf2_py package"
 HOMEPAGE="http://ros.org/wiki/tf2_py"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_py/0.5.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains the launch files that load the required controller interfa'"
+DESCRIPTION="This package contains the launch files that load the required controller interfa"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_control/1.0.9-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

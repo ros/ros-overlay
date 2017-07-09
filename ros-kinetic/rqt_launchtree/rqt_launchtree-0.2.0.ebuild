@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An RQT plugin for hierarchical launchfile configuration introspection.'"
+DESCRIPTION="An RQT plugin for hierarchical launchfile configuration introspection"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/pschillinger/rqt_launchtree-release/archive/release/kinetic/rqt_launchtree/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

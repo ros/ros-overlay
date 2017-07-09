@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Object_recognition_msgs contains the ROS message and the actionlib definition us'"
+DESCRIPTION="Object_recognition_msgs contains the ROS message and the actionlib definition us"
 HOMEPAGE="http://www.ros.org/wiki/object_recognition"
 SRC_URI="https://github.com/ros-gbp/object_recognition_msgs-release/archive/release/kinetic/object_recognition_msgs/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred
-  bridge'"
+DESCRIPTION="PCL Point Cloud Library ROS interface stack PCLROS is the preferred  bridge"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/kinetic/pcl_ros/1.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

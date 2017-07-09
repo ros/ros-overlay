@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages for describing objects and how to grasp them.'"
+DESCRIPTION="Messages for describing objects and how to grasp them"
 HOMEPAGE="http://ros.org/wiki/grasping_msgs"
 SRC_URI="https://github.com/mikeferguson/grasping_msgs-gbp/archive/release/kinetic/grasping_msgs/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

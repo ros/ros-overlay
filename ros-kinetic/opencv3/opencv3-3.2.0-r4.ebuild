@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'OpenCV 3.x'"
+DESCRIPTION="OpenCV 3x"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/kinetic/opencv3/3.2.0-4.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
@@ -37,12 +37,7 @@ ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
-	filter-flags '-march=*' '-mtune=*'
-	if [[ $(gcc-major-version) -gt 4 ]]; then
-		local mycmakeargs=(
-			-DWITH_CUDA=OFF
-		)
-		ewarn "nvcc does not support GCC > 4, so cuda has been disabled."
-	fi
+	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
 	ros-cmake_src_configure
 }
+

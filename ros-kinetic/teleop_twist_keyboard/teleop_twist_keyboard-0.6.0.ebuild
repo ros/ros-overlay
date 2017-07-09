@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Generic keyboard teleop for twist robots.'"
+DESCRIPTION="Generic keyboard teleop for twist robots"
 HOMEPAGE="http://wiki.ros.org/teleop_twist_keyboard"
 SRC_URI="https://github.com/ros-gbp/teleop_twist_keyboard-release/archive/release/kinetic/teleop_twist_keyboard/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'(Python Distribution) A carefully curated collection of Root Certificates for va'"
+DESCRIPTION="Python Distribution A carefully curated collection of Root Certificates for va"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/certifi-rosrelease/archive/release/kinetic/certifi/2015.11.20-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

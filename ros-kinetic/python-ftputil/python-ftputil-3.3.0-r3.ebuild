@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'a high-level FTP client library for Python'"
+DESCRIPTION="a highlevel FTP client library for Python"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/ftputil-rosrelease/archive/release/kinetic/python-ftputil/3.3.0-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

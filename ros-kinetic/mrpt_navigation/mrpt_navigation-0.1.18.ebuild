@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Tools related to the Mobile Robot Programming Toolkit (MRPT).
-	Refer to http:'"
+DESCRIPTION="Tools related to the Mobile Robot Programming Toolkit MRPT	Refer to http:"
 HOMEPAGE="http://wiki.ros.org/mrpt_navigation"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_navigation/0.1.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

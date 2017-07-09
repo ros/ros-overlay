@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on '"
+DESCRIPTION="The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on "
 HOMEPAGE="http://wiki.ros.org/robot_pose_ekf"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/robot_pose_ekf/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

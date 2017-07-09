@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The metapackage to combine the nodes required to establish and manage a multimas'"
+DESCRIPTION="The metapackage to combine the nodes required to establish and manage a multimas"
 HOMEPAGE="http://ros.org/wiki/multimaster_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/multimaster_fkie/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

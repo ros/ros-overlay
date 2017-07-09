@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_robot_steering provides a GUI plugin for steering a robot using Twist messag'"
+DESCRIPTION="rqt_robot_steering provides a GUI plugin for steering a robot using Twist messag"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/kinetic/rqt_robot_steering/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides low level IO for Robotis Dynamixel servos.
-	Fully suppo'"
+DESCRIPTION="This package provides low level IO for Robotis Dynamixel servos	Fully suppo"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_driver/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

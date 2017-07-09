@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Processors for sensor_msgs::Imu data'"
+DESCRIPTION="Processors for sensor_msgs::Imu data"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/kinetic/imu_processors/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

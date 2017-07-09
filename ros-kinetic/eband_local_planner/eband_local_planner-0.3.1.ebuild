@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'eband_local_planner implements a plugin to the
-	base_local_planner. It implem'"
+DESCRIPTION="eband_local_planner implements a plugin to the	base_local_planner It implem"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/utexas-bwi-gbp/eband_local_planner-release/archive/release/kinetic/eband_local_planner/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

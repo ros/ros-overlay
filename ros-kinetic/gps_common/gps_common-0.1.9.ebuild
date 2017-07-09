@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'GPS messages and common routines for use in GPS drivers'"
+DESCRIPTION="GPS messages and common routines for use in GPS drivers"
 HOMEPAGE="http://ros.org/wiki/gps_common"
 SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gps_common/0.1.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

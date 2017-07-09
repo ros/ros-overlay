@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Stage version of turtlebot simulation. Convenient to test 2D-navigation related '"
+DESCRIPTION="Stage version of turtlebot simulation Convenient to test 2Dnavigation related "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_stage/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

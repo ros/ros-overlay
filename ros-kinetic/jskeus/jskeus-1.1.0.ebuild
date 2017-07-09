@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'EusLisp software developed and used by JSK at The University of Tokyo'"
+DESCRIPTION="EusLisp software developed and used by JSK at The University of Tokyo"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jskeus-release/archive/release/kinetic/jskeus/1.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

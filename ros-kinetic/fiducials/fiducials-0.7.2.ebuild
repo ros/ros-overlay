@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Localization using fiducial markers'"
+DESCRIPTION="Localization using fiducial markers"
 HOMEPAGE="http://wiki.ros.org/fiducials"
 SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/fiducials/0.7.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Combined Robot HW class.'"
+DESCRIPTION="Combined Robot HW class"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/combined_robot_hw/0.11.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

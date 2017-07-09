@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Template based exceptions - these are simple and practical
-	 and avoid the pr'"
+DESCRIPTION="Template based exceptions  these are simple and practical	 and avoid the pr"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_exceptions/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

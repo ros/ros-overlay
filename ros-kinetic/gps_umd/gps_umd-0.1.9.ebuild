@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'gps_umd metapackage'"
+DESCRIPTION="gps_umd metapackage"
 HOMEPAGE="http://ros.org/wiki/gps_umd"
 SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gps_umd/0.1.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

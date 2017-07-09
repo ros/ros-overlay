@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides nodes to convert messages from SocketCAN to a ROS Topic and vice versa.'"
+DESCRIPTION="Provides nodes to convert messages from SocketCAN to a ROS Topic and vice versa"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_bridge/0.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

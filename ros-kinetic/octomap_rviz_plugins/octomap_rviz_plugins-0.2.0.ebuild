@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A set of plugins for displaying occupancy information decoded from binary octoma'"
+DESCRIPTION="A set of plugins for displaying occupancy information decoded from binary octoma"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_rviz_plugins-release/archive/release/kinetic/octomap_rviz_plugins/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

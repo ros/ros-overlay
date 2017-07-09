@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages for describing aspects of a wireless network, connection, etc.'"
+DESCRIPTION="Messages for describing aspects of a wireless network, connection, etc"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/wireless-release/archive/release/kinetic/wireless_msgs/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

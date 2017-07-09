@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Conversion functions between KDL and geometry_msgs types.'"
+DESCRIPTION="Conversion functions between KDL and geometry_msgs types"
 HOMEPAGE="http://ros.org/wiki/kdl_conversions"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/kdl_conversions/1.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

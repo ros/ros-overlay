@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Dynamixel-workbench is dynamixel solution for ROS.
-	This metapackage can help'"
+DESCRIPTION="Dynamixelworkbench is dynamixel solution for ROS	This metapackage can help"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench/0.1.5-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

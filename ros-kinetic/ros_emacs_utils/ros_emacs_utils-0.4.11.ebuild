@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A metapackage of Emacs utils for ROS.
-	Only there for simplifying the release'"
+DESCRIPTION="A metapackage of Emacs utils for ROS	Only there for simplifying the release"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/kinetic/ros_emacs_utils/0.4.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

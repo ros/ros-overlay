@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'C++ implementation of Lie Groups using Eigen.'"
+DESCRIPTION="C implementation of Lie Groups using Eigen"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/sophus-release/archive/release/kinetic/sophus/0.9.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

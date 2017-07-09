@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Universal grid map library to manage two-dimensional grid maps with multiple dat'"
+DESCRIPTION="Universal grid map library to manage twodimensional grid maps with multiple dat"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_core/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

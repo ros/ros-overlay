@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Geometry Library'"
+DESCRIPTION="Geometry Library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/geometry/1.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

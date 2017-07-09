@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides a ROS interface to Ubiquity Robotics Magni motor controllers'"
+DESCRIPTION="Provides a ROS interface to Ubiquity Robotics Magni motor controllers"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/kinetic/ubiquity_motor/0.5.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

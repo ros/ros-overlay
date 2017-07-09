@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosserial_xbee provides tools to do point to multipoint communication
-	 betwe'"
+DESCRIPTION="rosserial_xbee provides tools to do point to multipoint communication	 betwe"
 HOMEPAGE="http://ros.org/wiki/rosserial_xbee"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_xbee/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

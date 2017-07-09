@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_geotiff provides a node that can be used to save occupancy grid map, robo'"
+DESCRIPTION="hector_geotiff provides a node that can be used to save occupancy grid map, robo"
 HOMEPAGE="http://ros.org/wiki/hector_geotiff"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_geotiff/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

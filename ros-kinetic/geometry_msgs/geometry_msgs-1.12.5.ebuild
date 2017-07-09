@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'geometry_msgs provides messages for common geometric primitives
-	such as poin'"
+DESCRIPTION="geometry_msgs provides messages for common geometric primitives	such as poin"
 HOMEPAGE="http://wiki.ros.org/geometry_msgs"
 SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/geometry_msgs/1.12.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

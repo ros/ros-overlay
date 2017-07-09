@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="abrul#text"
 HOMEPAGE="http://wiki.ros.org/dynpick_driver"
 SRC_URI="https://github.com/tork-a/dynpick_driver-release/archive/release/kinetic/dynpick_driver/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This stack contains packages that are used to interface with Robotis
-	Dynamix'"
+DESCRIPTION="This stack contains packages that are used to interface with Robotis	Dynamix"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_motor/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

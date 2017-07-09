@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Listens on a ImageFeatures topic, and waits for the data to settle.
-	 This pa'"
+DESCRIPTION="Listens on a ImageFeatures topic, and waits for the data to settle	 This pa"
 HOMEPAGE="http://www.ros.org/wiki/monocam_settler"
 SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/monocam_settler/0.10.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

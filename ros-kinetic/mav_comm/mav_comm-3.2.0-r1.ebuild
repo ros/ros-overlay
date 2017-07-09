@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Contains messages and services for MAV communication'"
+DESCRIPTION="Contains messages and services for MAV communication"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/mav_comm-release/archive/release/kinetic/mav_comm/3.2.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

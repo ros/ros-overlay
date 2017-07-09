@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/nao_robot-release/archive/release/kinetic/nao_robot/0.5.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

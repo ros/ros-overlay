@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a configurable node, services and a spawner script
-	   '"
+DESCRIPTION="This package contains a configurable node, services and a spawner script	   "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_controllers/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'OMPL is a free sampling-based motion planning library.'"
+DESCRIPTION="OMPL is a free samplingbased motion planning library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

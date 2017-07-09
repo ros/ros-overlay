@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'message_to_tf translates pose information from different kind of common_msgs mes'"
+DESCRIPTION="message_to_tf translates pose information from different kind of common_msgs mes"
 HOMEPAGE="http://ros.org/wiki/message_to_tf"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/message_to_tf/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

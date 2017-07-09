@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Command to print aggregated diagnostic contents to the command line'"
+DESCRIPTION="Command to print aggregated diagnostic contents to the command line"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/rosdiagnostic/1.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

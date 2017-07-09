@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Stack with interesting ROS tools'"
+DESCRIPTION="Stack with interesting ROS tools"
 HOMEPAGE="http://ros.org/wiki/srv_tools"
 SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/srv_tools/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

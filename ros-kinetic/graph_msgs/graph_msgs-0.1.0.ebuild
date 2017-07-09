@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS messages for publishing graphs of different data types'"
+DESCRIPTION="ROS messages for publishing graphs of different data types"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/graph_msgs-release/archive/release/kinetic/graph_msgs/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

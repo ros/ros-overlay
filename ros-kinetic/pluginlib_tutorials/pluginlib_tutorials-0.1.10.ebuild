@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The pluginlib_tutorials package'"
+DESCRIPTION="The pluginlib_tutorials package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/pluginlib_tutorials/0.1.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

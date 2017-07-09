@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The ncd_parser package reads in .alog data files from the New College Dataset an'"
+DESCRIPTION="The ncd_parser package reads in alog data files from the New College Dataset an"
 HOMEPAGE="http://wiki.ros.org/ncd_parser"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/ncd_parser/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

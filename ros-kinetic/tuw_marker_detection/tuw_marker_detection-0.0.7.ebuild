@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The tuw_marker_detection package'"
+DESCRIPTION="The tuw_marker_detection package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_marker_detection/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

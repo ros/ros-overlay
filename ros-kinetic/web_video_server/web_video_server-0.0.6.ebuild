@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'HTTP Streaming of ROS Image Topics in Multiple Formats'"
+DESCRIPTION="HTTP Streaming of ROS Image Topics in Multiple Formats"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/web_video_server-release/archive/release/kinetic/web_video_server/0.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

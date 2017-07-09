@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Mobile robot simulator http://rtv.github.com/Stage'"
+DESCRIPTION="Mobile robot simulator http://rtvgithubcom/Stage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/kinetic/stage/4.1.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
-CPP11="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_configure() {
+	filter-flags '-std=*'
+	ros-cmake_src_configure
+}
+

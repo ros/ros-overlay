@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides ROS specific hooks for stage'"
+DESCRIPTION="This package provides ROS specific hooks for stage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/stage_ros-release/archive/release/kinetic/stage_ros/1.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
-CPP11="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
@@ -40,3 +39,4 @@ src_prepare() {
 	EPATCH_FORCE="yes" epatch
 	ros-cmake_src_prepare
 }
+

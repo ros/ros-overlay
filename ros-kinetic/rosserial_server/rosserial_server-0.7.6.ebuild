@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The rosserial_server package provides a C++ implementation of the rosserial serv'"
+DESCRIPTION="The rosserial_server package provides a C implementation of the rosserial serv"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_server/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

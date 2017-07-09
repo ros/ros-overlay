@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="bra#text"
 HOMEPAGE="http://ros.org/wiki/rosping"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rosping/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

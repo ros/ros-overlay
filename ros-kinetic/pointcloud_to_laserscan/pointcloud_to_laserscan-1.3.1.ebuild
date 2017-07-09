@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Converts a 3D Point Cloud into a 2D laser scan. This is useful for making device'"
+DESCRIPTION="Converts a 3D Point Cloud into a 2D laser scan This is useful for making device"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/pointcloud_to_laserscan-release/archive/release/kinetic/pointcloud_to_laserscan/1.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

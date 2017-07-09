@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package is a node that can playing mp3 file.
-	This package is using mpg3'"
+DESCRIPTION="This package is a node that can playing mp3 file	This package is using mpg3"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Utility-release/archive/release/kinetic/ros_mpg321_player/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

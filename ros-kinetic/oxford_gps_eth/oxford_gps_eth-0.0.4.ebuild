@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Ethernet interface to OxTS GPS receivers (NCOM packet structure)'"
+DESCRIPTION="Ethernet interface to OxTS GPS receivers NCOM packet structure"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/kinetic/oxford_gps_eth/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

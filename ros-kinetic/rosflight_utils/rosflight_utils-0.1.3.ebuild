@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Supporting utilities for ROSflight packages'"
+DESCRIPTION="Supporting utilities for ROSflight packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_utils/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

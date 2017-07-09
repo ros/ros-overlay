@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Control for Pepper robot'"
+DESCRIPTION="Control for Pepper robot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/pepper_virtual-release/archive/release/kinetic/pepper_control/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

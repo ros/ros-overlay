@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package configures the move_base stack and makes use of the gmapping and am'"
+DESCRIPTION="This package configures the move_base stack and makes use of the gmapping and am"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_2dnav/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

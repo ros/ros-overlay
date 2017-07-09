@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A 2D navigation stack that takes in information from odometry, sensor
-		st'"
+DESCRIPTION="A 2D navigation stack that takes in information from odometry, sensor		st"
 HOMEPAGE="http://wiki.ros.org/navigation"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

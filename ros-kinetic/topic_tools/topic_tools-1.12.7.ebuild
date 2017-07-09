@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Tools for directing, throttling, selecting, and otherwise messing with
-	ROS t'"
+DESCRIPTION="Tools for directing, throttling, selecting, and otherwise messing with	ROS t"
 HOMEPAGE="http://ros.org/wiki/topic_tools"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/topic_tools/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

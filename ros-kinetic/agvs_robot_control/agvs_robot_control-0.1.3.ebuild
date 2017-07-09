@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The agvs_robot_control package. Robot controller that interacts with Gazebo moto'"
+DESCRIPTION="The agvs_robot_control package Robot controller that interacts with Gazebo moto"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_robot_control/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

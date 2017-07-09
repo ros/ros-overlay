@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The thormang3_balance_control package
-	This balance control is based on PD co'"
+DESCRIPTION="The thormang3_balance_control package	This balance control is based on PD co"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_balance_control/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

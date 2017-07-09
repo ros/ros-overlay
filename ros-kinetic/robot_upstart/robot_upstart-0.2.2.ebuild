@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The robot_upstart package provides scripts which may be used to install
-	and '"
+DESCRIPTION="The robot_upstart package provides scripts which may be used to install	and "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/robot_upstart-release/archive/release/kinetic/robot_upstart/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

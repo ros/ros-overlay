@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages and services for the controller manager.'"
+DESCRIPTION="Messages and services for the controller manager"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_manager_msgs/0.11.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

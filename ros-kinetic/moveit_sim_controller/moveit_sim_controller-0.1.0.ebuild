@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A simulation interface for a hardware interface for ros_control, and loads defau'"
+DESCRIPTION="A simulation interface for a hardware interface for ros_control, and loads defau"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/moveit_sim_controller-release/archive/release/kinetic/moveit_sim_controller/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

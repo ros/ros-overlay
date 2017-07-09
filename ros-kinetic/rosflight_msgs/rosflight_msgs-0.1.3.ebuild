@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Message and service definitions for the ROSflight ROS stack'"
+DESCRIPTION="Message and service definitions for the ROSflight ROS stack"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_msgs/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

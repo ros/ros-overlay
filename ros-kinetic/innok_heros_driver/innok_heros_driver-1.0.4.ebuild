@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Driver for the Innok Heros robot plattform'"
+DESCRIPTION="Driver for the Innok Heros robot plattform"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/innokrobotics/innok_heros_driver-release/archive/release/kinetic/innok_heros_driver/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

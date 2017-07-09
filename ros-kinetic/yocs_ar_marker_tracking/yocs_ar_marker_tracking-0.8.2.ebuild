@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Collecting, tracking and generating statistics for ar markers from ar_track_alva'"
+DESCRIPTION="Collecting, tracking and generating statistics for ar markers from ar_track_alva"
 HOMEPAGE="http://wiki.ros.org/yocs_ar_marker_tracking"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_ar_marker_tracking/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

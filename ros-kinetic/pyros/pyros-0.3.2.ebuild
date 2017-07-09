@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides Python to ROS multiprocess API, useful for using ROS from different mul'"
+DESCRIPTION="Provides Python to ROS multiprocess API, useful for using ROS from different mul"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/pyros-rosrelease/archive/release/kinetic/pyros/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

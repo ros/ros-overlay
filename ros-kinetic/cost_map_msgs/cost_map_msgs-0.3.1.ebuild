@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Definition of cost map messages (related to the grid map message type).'"
+DESCRIPTION="Definition of cost map messages related to the grid map message type"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_msgs/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

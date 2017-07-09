@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The image_recognition_msgs package'"
+DESCRIPTION="The image_recognition_msgs package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/image_recognition_msgs/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

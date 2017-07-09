@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This includes a suite of programs demo'"'"'ing various aspects of the
-	 ecl_core.'"
+DESCRIPTION="This includes a suite of programs demoing various aspects of the	 ecl_core"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_core_apps/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

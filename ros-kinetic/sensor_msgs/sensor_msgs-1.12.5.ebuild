@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package defines messages for commonly used sensors, including
-	cameras a'"
+DESCRIPTION="This package defines messages for commonly used sensors, including	cameras a"
 HOMEPAGE="http://ros.org/wiki/sensor_msgs"
 SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/sensor_msgs/1.12.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

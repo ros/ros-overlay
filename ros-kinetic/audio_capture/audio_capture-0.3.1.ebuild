@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Transports audio from a source to a destination. Audio sources can come
-	  fr'"
+DESCRIPTION="Transports audio from a source to a destination Audio sources can come	  fr"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_capture/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

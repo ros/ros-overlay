@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package is a library for using ATI'"'"'s transducer.
-	This package describes'"
+DESCRIPTION="This package is a library for using ATIs transducer	This package describes"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/ati_ft_sensor/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

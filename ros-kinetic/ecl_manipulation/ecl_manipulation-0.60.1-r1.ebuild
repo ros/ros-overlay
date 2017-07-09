@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Includes basic manipulation related structures as well as a few 
-	algorithms '"
+DESCRIPTION="Includes basic manipulation related structures as well as a few	 algorithms "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/kinetic/ecl_manipulation/0.60.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

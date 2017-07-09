@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosbuild contains scripts for managing the CMake-based build system for ROS.'"
+DESCRIPTION="rosbuild contains scripts for managing the CMakebased build system for ROS"
 HOMEPAGE="http://ros.org/wiki/rosbuild"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbuild/1.13.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

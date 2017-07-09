@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Examples showing how to use C++ and Python client libraries to access semantic
- '"
+DESCRIPTION="Examples showing how to use C and Python client libraries to access semantic "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/world_canvas_libs-release/archive/release/kinetic/world_canvas_client_examples/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Meta-package for the universal variant library.'"
+DESCRIPTION="Metapackage for the universal variant library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

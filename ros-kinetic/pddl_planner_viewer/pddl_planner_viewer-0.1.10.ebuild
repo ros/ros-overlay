@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'a viewer of pddl_planner.'"
+DESCRIPTION="a viewer of pddl_planner"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/pddl_planner_viewer/0.1.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

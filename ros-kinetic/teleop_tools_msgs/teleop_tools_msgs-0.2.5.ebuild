@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The teleop_tools_msgs package'"
+DESCRIPTION="The teleop_tools_msgs package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/teleop_tools_msgs/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.'"
+DESCRIPTION="rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/kinetic/rqt_tf_tree/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

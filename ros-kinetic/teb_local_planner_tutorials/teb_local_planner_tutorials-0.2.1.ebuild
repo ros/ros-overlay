@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The teb_local_planner_tutorials package'"
+DESCRIPTION="The teb_local_planner_tutorials package"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner_tutorials"
 SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/kinetic/teb_local_planner_tutorials/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

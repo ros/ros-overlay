@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'USB Video Class driver library'"
+DESCRIPTION="USB Video Class driver library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ktossell/libuvc-release/archive/release/kinetic/libuvc/0.0.5-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

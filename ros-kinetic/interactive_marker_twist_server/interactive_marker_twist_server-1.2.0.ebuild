@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Interactive control for generic Twist-based robots using interactive markers'"
+DESCRIPTION="Interactive control for generic Twistbased robots using interactive markers"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/kinetic/interactive_marker_twist_server/1.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

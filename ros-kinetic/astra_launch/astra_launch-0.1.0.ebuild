@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Drivers for Orbbec Astra Devices.'"
+DESCRIPTION="Drivers for Orbbec Astra Devices"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/astra_launch-release/archive/release/kinetic/astra_launch/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

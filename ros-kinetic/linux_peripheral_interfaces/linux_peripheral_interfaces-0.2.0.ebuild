@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple scripts which help utilise, monitor, interact with computer
-	 hardware'"
+DESCRIPTION="Simple scripts which help utilise, monitor, interact with computer	 hardware"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/linux_peripheral_interfaces/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

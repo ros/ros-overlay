@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A Python-based implementation of the ROS serial protocol.'"
+DESCRIPTION="A Pythonbased implementation of the ROS serial protocol"
 HOMEPAGE="http://ros.org/wiki/rosserial_python"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_python/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

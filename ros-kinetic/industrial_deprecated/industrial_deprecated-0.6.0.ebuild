@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The Industrial deprecated package contains nodes, launch files, etc... that are '"
+DESCRIPTION="The Industrial deprecated package contains nodes, launch files, etc that are "
 HOMEPAGE="http://ros.org/wiki/industrial_deprecated"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_deprecated/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

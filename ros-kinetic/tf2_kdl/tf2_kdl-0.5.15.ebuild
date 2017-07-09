@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'KDL binding for tf2'"
+DESCRIPTION="KDL binding for tf2"
 HOMEPAGE="http://ros.org/wiki/tf2"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2_kdl/0.5.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

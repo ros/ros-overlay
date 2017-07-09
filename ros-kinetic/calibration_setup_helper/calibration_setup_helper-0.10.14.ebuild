@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a script to generate calibration launch and configurationf'"
+DESCRIPTION="This package contains a script to generate calibration launch and configurationf"
 HOMEPAGE="http://ros.org/wiki/calibration_setup_helper"
 SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_setup_helper/0.10.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

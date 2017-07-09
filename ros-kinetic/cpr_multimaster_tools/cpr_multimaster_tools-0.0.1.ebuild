@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Multi-master tools for configuration and message relaying'"
+DESCRIPTION="Multimaster tools for configuration and message relaying"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/cpr_multimaster_tools/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

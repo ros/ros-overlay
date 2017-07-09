@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A MoveIt! Kinematics plugin using TRAC-IK'"
+DESCRIPTION="A MoveIt! Kinematics plugin using TRACIK"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_kinematics_plugin/1.4.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS driver for HOKUYO 3D sensor'"
+DESCRIPTION="ROS driver for HOKUYO 3D sensor"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/at-wat/hokuyo3d-release/archive/release/kinetic/hokuyo3d/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

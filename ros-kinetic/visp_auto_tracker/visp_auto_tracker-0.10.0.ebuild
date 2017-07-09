@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Online automated pattern-based object tracker relying on visual servoing.
-
-	v'"
+DESCRIPTION="Online automated patternbased object tracker relying on visual servoing	v"
 HOMEPAGE="http://wiki.ros.org/visp_auto_tracker"
 SRC_URI="https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_auto_tracker/0.10.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

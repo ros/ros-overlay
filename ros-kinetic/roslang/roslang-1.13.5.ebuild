@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="http://ros.org/wiki/roslang"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/roslang/1.13.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

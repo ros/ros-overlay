@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A library that provides convenient methods for manipulating ROS images with Imag'"
+DESCRIPTION="A library that provides convenient methods for manipulating ROS images with Imag"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_ros/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

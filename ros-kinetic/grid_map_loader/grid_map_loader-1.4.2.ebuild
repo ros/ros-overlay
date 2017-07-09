@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Loading and publishing grid maps from bag files.'"
+DESCRIPTION="Loading and publishing grid maps from bag files"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_loader/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

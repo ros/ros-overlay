@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_shell is a Python GUI plugin providing an interactive shell.'"
+DESCRIPTION="rqt_shell is a Python GUI plugin providing an interactive shell"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_shell-release/archive/release/kinetic/rqt_shell/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

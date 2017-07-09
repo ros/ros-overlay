@@ -6,10 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'roseus_smach
-
-	 * Euslisp state machine class. it will be moved.
-	 * Messa'"
+DESCRIPTION="roseus_smach	  Euslisp state machine class it will be moved	  Messa"
 HOMEPAGE="http://ros.org/wiki/roseus_smach"
 SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

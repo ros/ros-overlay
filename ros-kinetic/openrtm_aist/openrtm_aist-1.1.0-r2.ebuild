@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/openrtm_aist-release/archive/release/kinetic/openrtm_aist/1.1.0-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

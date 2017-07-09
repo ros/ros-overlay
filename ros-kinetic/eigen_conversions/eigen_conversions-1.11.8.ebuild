@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Conversion functions between:
-	  - Eigen and KDL
-	  - Eigen and geometry_m'"
+DESCRIPTION="Conversion functions between:	   Eigen and KDL	   Eigen and geometry_m"
 HOMEPAGE="http://ros.org/wiki/eigen_conversions"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/eigen_conversions/1.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

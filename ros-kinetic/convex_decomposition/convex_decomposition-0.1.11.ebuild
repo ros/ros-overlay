@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Convex Decomposition Tool for Robot Model'"
+DESCRIPTION="Convex Decomposition Tool for Robot Model"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/convex_decomposition-release/archive/release/kinetic/convex_decomposition/0.1.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'meshes for the Aldebaran Robotics Pepper'"
+DESCRIPTION="meshes for the Aldebaran Robotics Pepper"
 HOMEPAGE="http://github.com/ros-naoqi/pepper_meshes/"
 SRC_URI="https://github.com/ros-naoqi/pepper_meshes-release/archive/release/kinetic/pepper_meshes/0.2.3-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

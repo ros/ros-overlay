@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Graphical interface, written in PySide, to manage the running and 
-	 configur'"
+DESCRIPTION="Graphical interface, written in PySide, to manage the running and	  configur"
 HOMEPAGE="http://ros.org/wiki/node_manager_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/node_manager_fkie/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

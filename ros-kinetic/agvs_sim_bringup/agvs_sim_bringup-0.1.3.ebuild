@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The agvs_sim_bringup package. It contains multiple launch files to perform diffe'"
+DESCRIPTION="The agvs_sim_bringup package It contains multiple launch files to perform diffe"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_sim_bringup/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

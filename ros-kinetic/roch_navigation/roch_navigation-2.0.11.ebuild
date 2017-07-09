@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Autonomous mapping and navigation demos for the SawYer Roch'"
+DESCRIPTION="Autonomous mapping and navigation demos for the SawYer Roch"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_navigation/2.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

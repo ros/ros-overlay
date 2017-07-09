@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'PlotJuggler: juggle with data'"
+DESCRIPTION="PlotJuggler: juggle with data"
 HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
 SRC_URI="https://github.com/facontidavide/plotjuggler-release/archive/release/kinetic/plotjuggler/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

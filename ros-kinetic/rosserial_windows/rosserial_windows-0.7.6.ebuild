@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Libraries and examples for ROSserial usage on Windows Platforms.'"
+DESCRIPTION="Libraries and examples for ROSserial usage on Windows Platforms"
 HOMEPAGE="http://ros.org/wiki/rosserial_windows"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_windows/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

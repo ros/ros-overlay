@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides added functionaliy on top of rospy, including a
-  single-t'"
+DESCRIPTION="This package provides added functionaliy on top of rospy, including a  singlet"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_rospy/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

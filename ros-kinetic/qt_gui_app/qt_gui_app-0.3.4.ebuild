@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'qt_gui_app provides the main to start an instance of the integrated graphical us'"
+DESCRIPTION="qt_gui_app provides the main to start an instance of the integrated graphical us"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_app/0.3.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

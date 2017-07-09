@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The rb1_base_purepursuit package'"
+DESCRIPTION="The rb1_base_purepursuit package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_purepursuit/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

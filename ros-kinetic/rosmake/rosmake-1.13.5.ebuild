@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosmake is a ros dependency aware build tool which can be used to
-	 build all'"
+DESCRIPTION="rosmake is a ros dependency aware build tool which can be used to	 build all"
 HOMEPAGE="http://ros.org/wiki/rosmake"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosmake/1.13.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

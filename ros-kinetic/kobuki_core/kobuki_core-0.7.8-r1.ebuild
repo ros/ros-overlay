@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Non-ROS software for Kobuki, Yujin Robot'"'"'s mobile research base.'"
+DESCRIPTION="NonROS software for Kobuki, Yujin Robots mobile research base"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_core/0.7.8-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

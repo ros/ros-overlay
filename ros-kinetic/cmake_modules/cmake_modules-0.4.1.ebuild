@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A common repository for CMake Modules which are not distributed with CMake but a'"
+DESCRIPTION="A common repository for CMake Modules which are not distributed with CMake but a"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/cmake_modules-release/archive/release/kinetic/cmake_modules/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Common libraries to control ROS based robots. This stack contains
-	an impleme'"
+DESCRIPTION="Common libraries to control ROS based robots This stack contains	an impleme"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

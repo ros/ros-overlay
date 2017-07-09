@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Meta-package for the universal grid map library.'"
+DESCRIPTION="Metapackage for the universal grid map library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

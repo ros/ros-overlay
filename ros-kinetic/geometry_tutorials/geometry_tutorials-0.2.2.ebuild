@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Metapackage of geometry tutorials ROS.'"
+DESCRIPTION="Metapackage of geometry tutorials ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/geometry_tutorials-release/archive/release/kinetic/geometry_tutorials/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

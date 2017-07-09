@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Package to parse NMEA strings and publish a very simple GPS message. Does not re'"
+DESCRIPTION="Package to parse NMEA strings and publish a very simple GPS message Does not re"
 HOMEPAGE="http://ros.org/wiki/nmea_navsat_driver"
 SRC_URI="https://github.com/ros-drivers-gbp/nmea_navsat_driver-release/archive/release/kinetic/nmea_navsat_driver/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

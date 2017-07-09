@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides two tutorials based on ROS communication.
-	It is connec'"
+DESCRIPTION="This package provides two tutorials based on ROS communication	It is connec"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench_tutorials/0.1.5-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'image_pipeline fills the gap between getting raw images from a camera driver and'"
+DESCRIPTION="image_pipeline fills the gap between getting raw images from a camera driver and"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_pipeline/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

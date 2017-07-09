@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS Libraries for filtering specific kinds of laser scans'"
+DESCRIPTION="ROS Libraries for filtering specific kinds of laser scans"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/wu-robotics/laser_filtering_release/archive/release/kinetic/laser_filtering/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

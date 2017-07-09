@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The robotnik_msgs package. Common messages and services used by some Robotnik'"'"'s '"
+DESCRIPTION="The robotnik_msgs package Common messages and services used by some Robotniks "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/robotnik_msgs-release/archive/release/kinetic/robotnik_msgs/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

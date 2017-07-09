@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Any tools relating to mathematical geometry. 
-	 Primarily featuring polynomia'"
+DESCRIPTION="Any tools relating to mathematical geometry	  Primarily featuring polynomia"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_geometry/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

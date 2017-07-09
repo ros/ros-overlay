@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple P-Controller for a holonomic robot base'"
+DESCRIPTION="Simple PController for a holonomic robot base"
 HOMEPAGE="https://www.github.com/code-iai/nav_pcontroller"
 SRC_URI="https://github.com/code-iai-release/nav_pcontroller-release/archive/release/kinetic/nav_pcontroller/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

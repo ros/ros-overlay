@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'RQT plugin for monitoring ROS processes.'"
+DESCRIPTION="RQT plugin for monitoring ROS processes"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_top-release/archive/release/kinetic/rqt_top/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

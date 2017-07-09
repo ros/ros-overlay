@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="''"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_control/1.0.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The wts_driver package'"
+DESCRIPTION="The wts_driver package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ksatyaki/wts_driver-release/archive/release/kinetic/wts_driver/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

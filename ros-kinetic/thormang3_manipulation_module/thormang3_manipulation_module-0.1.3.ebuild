@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package describes basic function to control THORMANG3'"'"'s upper-body.
-	Thi'"
+DESCRIPTION="This package describes basic function to control THORMANG3s upperbody	Thi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_manipulation_module/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

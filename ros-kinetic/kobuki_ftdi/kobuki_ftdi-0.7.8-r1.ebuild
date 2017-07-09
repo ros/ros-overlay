@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Utilities for flashing and enabling Kobuki'"'"'s USB connection.
-		This package c'"
+DESCRIPTION="Utilities for flashing and enabling Kobukis USB connection	This package c"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_ftdi/0.7.8-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

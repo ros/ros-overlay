@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This is a set of tools for recording from and playing back ROS
-	message witho'"
+DESCRIPTION="This is a set of tools for recording from and playing back ROS	message witho"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

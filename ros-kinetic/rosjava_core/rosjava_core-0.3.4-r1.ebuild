@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An implementation of ROS in pure-Java with Android support.'"
+DESCRIPTION="An implementation of ROS in pureJava with Android support"
 HOMEPAGE="http://ros.org/wiki/rosjava_core"
 SRC_URI="https://github.com/rosjava-release/rosjava_core-release/archive/release/kinetic/rosjava_core/0.3.4-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

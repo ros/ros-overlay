@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Deploys various manipulation algorithms, currently just 
-	feedforward filters'"
+DESCRIPTION="Deploys various manipulation algorithms, currently just	 feedforward filters"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/kinetic/ecl_manipulators/0.60.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

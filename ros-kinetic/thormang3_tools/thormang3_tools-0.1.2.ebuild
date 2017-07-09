@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS packages for the thormang3_tools (meta package)'"
+DESCRIPTION="ROS packages for the thormang3_tools meta package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_tools/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

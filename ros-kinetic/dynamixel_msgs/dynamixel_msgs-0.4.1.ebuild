@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Common messages used throughout dynamixel_motor stack.'"
+DESCRIPTION="Common messages used throughout dynamixel_motor stack"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_msgs/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

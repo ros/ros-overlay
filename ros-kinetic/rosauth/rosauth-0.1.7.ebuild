@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Server Side tools for Authorization and Authentication of ROS Clients'"
+DESCRIPTION="Server Side tools for Authorization and Authentication of ROS Clients"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gt-rail-release/rosauth-release/archive/release/kinetic/rosauth/0.1.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package describes robot manager to execute THORMANG3'"'"'s motion modules.'"
+DESCRIPTION="This package describes robot manager to execute THORMANG3s motion modules"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_manager/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

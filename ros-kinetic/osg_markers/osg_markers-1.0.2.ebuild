@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'osg_markers can be used to create Markers geometry in OSG.'"
+DESCRIPTION="osg_markers can be used to create Markers geometry in OSG"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/kinetic/osg_markers/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

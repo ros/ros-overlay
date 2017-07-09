@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'RoDI ROS package.
-	Allows to control a RoDI from the Robot Operating System ('"
+DESCRIPTION="RoDI ROS package	Allows to control a RoDI from the Robot Operating System "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/benjayah/rodi_robot-release/archive/release/kinetic/rodi_robot/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

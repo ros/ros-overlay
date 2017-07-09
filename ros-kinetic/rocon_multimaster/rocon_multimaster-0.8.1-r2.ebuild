@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This doesn'"'"'t do everything you need for multimaster, however it does
-	provide'"
+DESCRIPTION="This doesnt do everything you need for multimaster, however it does	provide"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_multimaster/0.8.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

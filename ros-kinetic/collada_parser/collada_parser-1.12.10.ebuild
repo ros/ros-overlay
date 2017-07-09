@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a C++ parser for the Collada robot
-	description format.'"
+DESCRIPTION="This package contains a C parser for the Collada robot	description format"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/collada_urdf-release/archive/release/kinetic/collada_parser/1.12.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

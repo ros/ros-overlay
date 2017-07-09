@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol. Inclu'"
+DESCRIPTION="A driver for IMUs compatible the microstrain 3DMGX2 and 3DMGX3 protocol Inclu"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/microstrain_3dmgx2_imu-release/archive/release/kinetic/microstrain_3dmgx2_imu/1.5.12-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

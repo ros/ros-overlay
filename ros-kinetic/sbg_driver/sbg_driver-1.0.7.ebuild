@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The SBG ROS Driver package'"
+DESCRIPTION="The SBG ROS Driver package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ENSTABretagneRobotics/sbg_ros_driver-release/archive/release/kinetic/sbg_driver/1.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This metapackage contains tools for integrating the Orocos Kinematics and
-	Dy'"
+DESCRIPTION="This metapackage contains tools for integrating the Orocos Kinematics and	Dy"
 HOMEPAGE="http://www.orocos.org/"
 SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/rtt_geometry/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

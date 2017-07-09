@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Some CMake utilities for DR.'"
+DESCRIPTION="Some CMake utilities for DR"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/delftrobotics/dr_base-release/archive/release/kinetic/dr_cmake/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

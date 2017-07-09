@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The bayesian_belief_networks package form https://github.com/eBay/bayesian-belie'"
+DESCRIPTION="The bayesian_belief_networks package form https://githubcom/eBay/bayesianbelie"
 HOMEPAGE="https://github.com/eBay/bayesian-belief-networks"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

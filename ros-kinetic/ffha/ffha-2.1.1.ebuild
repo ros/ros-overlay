@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)'"
+DESCRIPTION="ffha: PDDL Planner http://ipcinformatikunifreiburgde"
 HOMEPAGE="http://ros.org/wiki/downward"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/ffha/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

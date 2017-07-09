@@ -6,17 +6,14 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS tools and scripts related to launchfiles'"
-HOMEPAGE="http://ros.org/wiki/launch_tools"
-SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/launch_tools/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="SOEM is an open source EtherCAT master library written in c Its	 primary ta"
+HOMEPAGE="http://developer.berlios.de/projects/soem"
+SRC_URI="https://github.com/smits/soem-gbp/archive/release/kinetic/soem/1.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="GPL-1"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/roslib
-	ros-kinetic/rospy
-	media-gfx/xdot
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

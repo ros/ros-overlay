@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The thormang3_action_editor package
-	This package is a action editor for thor'"
+DESCRIPTION="The thormang3_action_editor package	This package is a action editor for thor"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_action_editor/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

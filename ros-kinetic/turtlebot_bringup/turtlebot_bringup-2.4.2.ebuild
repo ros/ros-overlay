@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base fun'"
+DESCRIPTION="turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base fun"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot-release/archive/release/kinetic/turtlebot_bringup/2.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

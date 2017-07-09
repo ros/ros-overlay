@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Node/nodelet combination to transform sensor_msgs::Imu data from one frame into '"
+DESCRIPTION="Node/nodelet combination to transform sensor_msgs::Imu data from one frame into "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/kinetic/imu_transformer/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

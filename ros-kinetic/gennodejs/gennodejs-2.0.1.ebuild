@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Javascript ROS message and service generators.'"
+DESCRIPTION="Javascript ROS message and service generators"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/kinetic/gennodejs/2.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

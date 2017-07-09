@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An easy wrapper for using parameters in ROS.'"
+DESCRIPTION="An easy wrapper for using parameters in ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/cbandera/rosparam_handler-release/archive/release/kinetic/rosparam_handler/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

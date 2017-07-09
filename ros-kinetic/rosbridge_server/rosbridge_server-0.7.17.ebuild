@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A WebSocket interface to rosbridge.'"
+DESCRIPTION="A WebSocket interface to rosbridge"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_server/0.7.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

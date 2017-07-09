@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages used for 2D-Navigation.'"
+DESCRIPTION="Messages used for 2DNavigation"
 HOMEPAGE="http://wiki.ros.org/nav2d_msgs"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_msgs/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

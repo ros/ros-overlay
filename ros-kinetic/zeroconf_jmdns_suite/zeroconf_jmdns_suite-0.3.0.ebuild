@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An implementation of zeroconf in pure java.'"
+DESCRIPTION="An implementation of zeroconf in pure java"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosjava-release/zeroconf_jmdns_suite-release/archive/release/kinetic/zeroconf_jmdns_suite/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

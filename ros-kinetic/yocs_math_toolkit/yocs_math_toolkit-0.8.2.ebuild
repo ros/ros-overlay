@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Math toolkit for Yujin open control system. This package is intended to contain '"
+DESCRIPTION="Math toolkit for Yujin open control system This package is intended to contain "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_math_toolkit/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

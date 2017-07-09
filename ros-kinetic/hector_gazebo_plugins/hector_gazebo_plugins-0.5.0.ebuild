@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_gazebo_plugins provides gazebo plugins from Team Hector.
-	 Currently i'"
+DESCRIPTION="hector_gazebo_plugins provides gazebo plugins from Team Hector	 Currently i"
 HOMEPAGE="http://ros.org/wiki/hector_gazebo_plugins"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo_plugins/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Search and approach behaviour, moving to a target in front of a pair of ar marke'"
+DESCRIPTION="Search and approach behaviour, moving to a target in front of a pair of ar marke"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_ar_pair_approach/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

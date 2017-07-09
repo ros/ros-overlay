@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Plugin-based layers for the navigation stack that 
-  implement various social na'"
+DESCRIPTION="Pluginbased layers for the navigation stack that   implement various social na"
 HOMEPAGE="http://ros.org/wiki/social_navigation_layers"
 SRC_URI="https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Multi-master bringup launch files for CPR platforms'"
+DESCRIPTION="Multimaster bringup launch files for CPR platforms"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/multimaster_launch/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

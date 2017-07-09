@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/openni2_camera-release/archive/release/kinetic/openni2_camera/0.2.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

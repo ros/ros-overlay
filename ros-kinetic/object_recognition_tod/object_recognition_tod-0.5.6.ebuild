@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Textured Object Recognition a standard bag of features approach'"
+DESCRIPTION="Textured Object Recognition a standard bag of features approach"
 HOMEPAGE="http://wg-perception.github.io/tod/"
 SRC_URI="https://github.com/ros-gbp/object_recognition_tod-release/archive/release/kinetic/object_recognition_tod/0.5.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

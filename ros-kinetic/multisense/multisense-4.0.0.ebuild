@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'multisense catkin driver'"
+DESCRIPTION="multisense catkin driver"
 HOMEPAGE="http://ros.org/wiki/multisense"
 SRC_URI="https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense/4.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

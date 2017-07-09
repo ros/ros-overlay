@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Libraries and examples for ROSserial usage on Mbed Platforms.'"
+DESCRIPTION="Libraries and examples for ROSserial usage on Mbed Platforms"
 HOMEPAGE="http://ros.org/wiki/rosserial_mbed"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_mbed/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

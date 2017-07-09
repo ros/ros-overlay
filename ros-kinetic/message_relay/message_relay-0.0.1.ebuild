@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Package to programmatically spawn message, service, and action relays. To add su'"
+DESCRIPTION="Package to programmatically spawn message, service, and action relays To add su"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/message_relay/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

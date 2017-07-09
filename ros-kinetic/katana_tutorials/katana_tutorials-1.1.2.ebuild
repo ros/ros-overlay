@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains test and demo programs for the katana_driver stack.'"
+DESCRIPTION="This package contains test and demo programs for the katana_driver stack"
 HOMEPAGE="http://ros.org/wiki/katana_tutorials"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_tutorials/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

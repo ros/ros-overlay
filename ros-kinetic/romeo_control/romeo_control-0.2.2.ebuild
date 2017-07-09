@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Control for Aldebaran'"'"'s ROMEO robot'"
+DESCRIPTION="Control for Aldebarans ROMEO robot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-aldebaran/romeo_virtual-release/archive/release/kinetic/romeo_control/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

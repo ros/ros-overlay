@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'roch Project'"
+DESCRIPTION="roch Project"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch/2.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

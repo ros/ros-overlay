@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A specialized harness which allows end-to-end integration testing of the
-	ros'"
+DESCRIPTION="A specialized harness which allows endtoend integration testing of the	ros"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_test/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

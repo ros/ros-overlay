@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="br#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_logger_level-release/archive/release/kinetic/rqt_logger_level/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

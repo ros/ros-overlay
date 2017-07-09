@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Package for TurtleBot3 fake node. With this package, simple tests can be done wi'"
+DESCRIPTION="Package for TurtleBot3 fake node With this package, simple tests can be done wi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_fake/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

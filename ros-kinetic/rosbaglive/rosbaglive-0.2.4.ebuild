@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Plays rosbags as though they were happening NOW.'"
+DESCRIPTION="Plays rosbags as though they were happening NOW"
 HOMEPAGE="http://ros.org/wiki/rosbaglive"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/rosbaglive/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

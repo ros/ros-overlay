@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A controller for driving a differential drive base to a pose goal or along a pat'"
+DESCRIPTION="A controller for driving a differential drive base to a pose goal or along a pat"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_diff_drive_pose_controller/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

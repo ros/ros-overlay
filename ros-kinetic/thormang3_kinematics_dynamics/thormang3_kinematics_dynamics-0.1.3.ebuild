@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides a kinematics and dynamics impletation for the thormang3.
- '"
+DESCRIPTION="This package provides a kinematics and dynamics impletation for the thormang3 "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_kinematics_dynamics/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

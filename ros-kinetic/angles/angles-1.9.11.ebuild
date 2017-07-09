@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides a set of simple math utilities to work
-		with angles'"
+DESCRIPTION="This package provides a set of simple math utilities to work		with angles"
 HOMEPAGE="http://ros.org/wiki/angles"
 SRC_URI="https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/kinetic/angles/1.9.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

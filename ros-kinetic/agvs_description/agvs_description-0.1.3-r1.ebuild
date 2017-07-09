@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The agvs_description package. Robot description. Urdf and mesh files.'"
+DESCRIPTION="The agvs_description package Robot description Urdf and mesh files"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/agvs_common-release/archive/release/kinetic/agvs_description/0.1.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

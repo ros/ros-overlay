@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This is a programming framework to facilitate application development involving '"
+DESCRIPTION="This is a programming framework to facilitate application development involving "
 HOMEPAGE="http://wiki.ros.org/micros_swarm_framework"
 SRC_URI="https://github.com/xuefengchang/micros_swarm_framework-release/archive/release/kinetic/micros_swarm_framework/0.0.15-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

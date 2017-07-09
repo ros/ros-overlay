@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python Multiprocess Management Framework, based on ZeroMQ communication'"
+DESCRIPTION="Python Multiprocess Management Framework, based on ZeroMQ communication"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/pyzmp-rosrelease/archive/release/kinetic/pyzmp/0.0.14-7.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

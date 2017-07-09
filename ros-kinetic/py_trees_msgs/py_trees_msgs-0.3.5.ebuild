@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages used by py_trees_ros and some extras for the mock demos/tests.'"
+DESCRIPTION="Messages used by py_trees_ros and some extras for the mock demos/tests"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/py_trees_msgs-release/archive/release/kinetic/py_trees_msgs/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

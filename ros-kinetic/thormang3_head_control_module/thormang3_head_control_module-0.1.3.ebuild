@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A module to control the head.
-	This module is included in the Thormang3 Manag'"
+DESCRIPTION="A module to control the head	This module is included in the Thormang3 Manag"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_head_control_module/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

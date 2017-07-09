@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The naoqi_bridge_msgs package provides custom messages for running Aldebaran'"'"'s r'"
+DESCRIPTION="The naoqi_bridge_msgs package provides custom messages for running Aldebarans r"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/naoqi_bridge_msgs-release/archive/release/kinetic/naoqi_bridge_msgs/0.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

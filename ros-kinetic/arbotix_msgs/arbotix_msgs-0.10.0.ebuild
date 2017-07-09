@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages and Services definitions for the ArbotiX.'"
+DESCRIPTION="Messages and Services definitions for the ArbotiX"
 HOMEPAGE="http://ros.org/wiki/arbotix_msgs"
 SRC_URI="https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/kinetic/arbotix_msgs/0.10.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

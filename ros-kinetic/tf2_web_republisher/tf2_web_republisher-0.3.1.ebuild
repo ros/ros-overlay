@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Republishing of Selected TFs'"
+DESCRIPTION="Republishing of Selected TFs"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/kinetic/tf2_web_republisher/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

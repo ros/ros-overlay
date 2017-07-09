@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Discover the running ROS Masters in local network. The 
-	 discovering is done'"
+DESCRIPTION="Discover the running ROS Masters in local network The	  discovering is done"
 HOMEPAGE="http://ros.org/wiki/master_discovery_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_discovery_fkie/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

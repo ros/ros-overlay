@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package attempts to show the features of ROS python API step-by-step,
-	i'"
+DESCRIPTION="This package attempts to show the features of ROS python API stepbystep,	i"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/rospy_tutorials/0.7.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides Gazebo plugins to simulate the Katana arm.'"
+DESCRIPTION="This package provides Gazebo plugins to simulate the Katana arm"
 HOMEPAGE="http://ros.org/wiki/katana_gazebo_plugins"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_gazebo_plugins/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

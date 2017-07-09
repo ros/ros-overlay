@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'roswtf is a tool for diagnosing issues with a running ROS system. Think of it as'"
+DESCRIPTION="roswtf is a tool for diagnosing issues with a running ROS system Think of it as"
 HOMEPAGE="http://ros.org/wiki/roswtf"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Ult/psd/cliff to pointcloud:
-	Publish Ult, cliff, and psd sensors events as p'"
+DESCRIPTION="Ult/psd/cliff to pointcloud:	Publish Ult, cliff, and psd sensors events as p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_sensorpc/2.0.13-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

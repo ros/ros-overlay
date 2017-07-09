@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="tta#text"
 HOMEPAGE="http://wiki.ros.org/map_server"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

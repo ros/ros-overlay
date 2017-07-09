@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Generalized client side source for rosserial.'"
+DESCRIPTION="Generalized client side source for rosserial"
 HOMEPAGE="http://ros.org/wiki/rosserial_client"
 SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_client/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

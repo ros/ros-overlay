@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Navigation Layer for Range sensors like sonar and IR'"
+DESCRIPTION="Navigation Layer for Range sensors like sonar and IR"
 HOMEPAGE="http://wiki.ros.org/range_sensor_layer"
 SRC_URI="https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/range_sensor_layer/0.3.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

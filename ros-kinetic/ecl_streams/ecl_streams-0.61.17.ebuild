@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'These are lightweight text streaming classes that connect to standardised
-	 e'"
+DESCRIPTION="These are lightweight text streaming classes that connect to standardised	 e"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_streams/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

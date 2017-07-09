@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS communications-related packages, including core client libraries (roscpp, ro'"
+DESCRIPTION="ROS communicationsrelated packages, including core client libraries roscpp, ro"
 HOMEPAGE="http://www.ros.org/wiki/ros_comm"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/ros_comm/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

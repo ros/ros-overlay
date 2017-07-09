@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Gazebo plugin to provide simulated data from Velodyne laser scanners.'"
+DESCRIPTION="Gazebo plugin to provide simulated data from Velodyne laser scanners"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/kinetic/velodyne_gazebo_plugins/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

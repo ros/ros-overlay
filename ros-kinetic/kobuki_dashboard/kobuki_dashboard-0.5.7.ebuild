@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The Kobuki dashboard is a RQT-based plug-in for visualising data from Kobuki and'"
+DESCRIPTION="The Kobuki dashboard is a RQTbased plugin for visualising data from Kobuki and"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_dashboard/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

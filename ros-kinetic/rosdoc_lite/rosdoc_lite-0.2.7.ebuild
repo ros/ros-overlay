@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This ROS package wraps documentation tools like doxygen, sphinx,
-	and epydoc,'"
+DESCRIPTION="This ROS package wraps documentation tools like doxygen, sphinx,	and epydoc,"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosdoc_lite-release/archive/release/kinetic/rosdoc_lite/0.2.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

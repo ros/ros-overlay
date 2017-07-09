@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package is wrapping version of ROBOTIS Dynamxel SDK for ROS. The ROBOTIS Dy'"
+DESCRIPTION="This package is wrapping version of ROBOTIS Dynamxel SDK for ROS The ROBOTIS Dy"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/kinetic/dynamixel_sdk/3.4.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

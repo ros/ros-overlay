@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS-Industrial support for ABB manipulators (metapackage).'"
+DESCRIPTION="ROSIndustrial support for ABB manipulators metapackage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

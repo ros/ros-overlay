@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Common-Lisp ROS message and service generators.'"
+DESCRIPTION="CommonLisp ROS message and service generators"
 HOMEPAGE="http://www.ros.org/wiki/roslisp"
 SRC_URI="https://github.com/ros-gbp/genlisp-release/archive/release/kinetic/genlisp/0.4.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

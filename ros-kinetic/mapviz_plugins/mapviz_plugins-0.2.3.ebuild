@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Common plugins for the Mapviz visualization tool'"
+DESCRIPTION="Common plugins for the Mapviz visualization tool"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
 SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz_plugins/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

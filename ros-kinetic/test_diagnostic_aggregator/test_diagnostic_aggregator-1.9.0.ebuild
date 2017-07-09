@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Basic diagnostic_aggregator tests are  in the'"
+DESCRIPTION="Basic diagnostic_aggregator tests are  in the"
 HOMEPAGE="http://ros.org/wiki/test_diagnostic_aggregator"
 SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/test_diagnostic_aggregator/1.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

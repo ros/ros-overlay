@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'3D model of the TurtleBot3 for simulation and visualization'"
+DESCRIPTION="3D model of the TurtleBot3 for simulation and visualization"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_description/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

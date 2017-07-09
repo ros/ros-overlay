@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides conversions from PCL data types and ROS message types'"
+DESCRIPTION="Provides conversions from PCL data types and ROS message types"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/pcl_conversions-release/archive/release/kinetic/pcl_conversions/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

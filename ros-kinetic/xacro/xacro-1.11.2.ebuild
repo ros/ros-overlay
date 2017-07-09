@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Xacro (XML Macros)
-
-	Xacro is an XML macro language. With xacro, you can cons'"
+DESCRIPTION="Xacro XML Macros	Xacro is an XML macro language With xacro, you can cons"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/xacro-release/archive/release/kinetic/xacro/1.11.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

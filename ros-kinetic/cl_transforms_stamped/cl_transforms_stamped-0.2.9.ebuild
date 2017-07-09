@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Implementation of TF datatypes'"
+DESCRIPTION="Implementation of TF datatypes"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_transforms_stamped/0.2.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

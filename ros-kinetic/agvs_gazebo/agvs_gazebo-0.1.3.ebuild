@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The agvs_gazebo package. Launch files and worlds to run Gazebo.'"
+DESCRIPTION="The agvs_gazebo package Launch files and worlds to run Gazebo"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_gazebo/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

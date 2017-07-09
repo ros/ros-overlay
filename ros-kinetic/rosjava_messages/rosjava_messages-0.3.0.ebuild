@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Message generation for rosjava.'"
+DESCRIPTION="Message generation for rosjava"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosjava-release/rosjava_messages-release/archive/release/kinetic/rosjava_messages/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

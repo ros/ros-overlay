@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Packages for interfacing ROS with OpenCV, a library of programming functions for'"
+DESCRIPTION="Packages for interfacing ROS with OpenCV, a library of programming functions for"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/vision_opencv/1.12.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

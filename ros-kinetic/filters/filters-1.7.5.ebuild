@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This library provides a standardized interface for processing data as a sequence'"
+DESCRIPTION="This library provides a standardized interface for processing data as a sequence"
 HOMEPAGE="http://ros.org/wiki/filters"
 SRC_URI="https://github.com/ros-gbp/filters-release/archive/release/kinetic/filters/1.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
