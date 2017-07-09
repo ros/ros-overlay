@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rtt_rospack provides an RTT plugin to use rospack to find packages in your ROS_P'"
+DESCRIPTION="rtt_rospack provides an RTT plugin to use rospack to find packages in your ROS_P"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rospack/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

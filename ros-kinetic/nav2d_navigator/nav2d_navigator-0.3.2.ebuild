@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides a node for higher level navigation of a mobile
-	robot i'"
+DESCRIPTION="This package provides a node for higher level navigation of a mobile	robot i"
 HOMEPAGE="http://wiki.ros.org/robot_operator"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_navigator/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

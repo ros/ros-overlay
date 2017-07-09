@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package is a sensor module for force torque sensors on feet.'"
+DESCRIPTION="This package is a sensor module for force torque sensors on feet"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_feet_ft_module/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

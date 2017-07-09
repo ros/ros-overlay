@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides message types commonly used with Autonomous Underwater Veh'"
+DESCRIPTION="This package provides message types commonly used with Autonomous Underwater Veh"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/oceansystemslab/auv_msgs-release/archive/release/kinetic/auv_msgs/0.0.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

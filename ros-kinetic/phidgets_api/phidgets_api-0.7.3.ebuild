@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A C++ Wrapper for the Phidgets C API'"
+DESCRIPTION="A C Wrapper for the Phidgets C API"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_api/0.7.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

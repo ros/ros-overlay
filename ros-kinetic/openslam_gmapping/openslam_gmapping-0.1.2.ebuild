@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS-ified version of gmapping SLAM. Forked from https://openslam.informatik.uni-'"
+DESCRIPTION="ROSified version of gmapping SLAM Forked from https://openslaminformatikuni"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/openslam_gmapping-release/archive/release/kinetic/openslam_gmapping/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

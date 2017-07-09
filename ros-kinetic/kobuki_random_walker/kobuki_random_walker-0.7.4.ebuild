@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Random walker app for Kobuki'"
+DESCRIPTION="Random walker app for Kobuki"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_random_walker/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

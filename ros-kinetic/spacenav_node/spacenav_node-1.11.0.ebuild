@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS interface to the 3Dconnexion SpaceNavigator 6DOF joystick.'"
+DESCRIPTION="ROS interface to the 3Dconnexion SpaceNavigator 6DOF joystick"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/spacenav_node/1.11.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

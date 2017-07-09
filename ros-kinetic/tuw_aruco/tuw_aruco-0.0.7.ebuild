@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This is a wrapper around the marker detection library ArUco.'"
+DESCRIPTION="This is a wrapper around the marker detection library ArUco"
 HOMEPAGE="http://wiki.ros.org/tuw_aruco"
 SRC_URI="https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_aruco/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

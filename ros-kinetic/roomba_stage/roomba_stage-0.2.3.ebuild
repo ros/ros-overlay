@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The roomba_stage package'"
+DESCRIPTION="The roomba_stage package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/navigation_tutorials-release/archive/release/kinetic/roomba_stage/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

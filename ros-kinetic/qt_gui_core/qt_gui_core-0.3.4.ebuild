@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Integration of the ROS package system and ROS-specific plugins for a Qt-based GU'"
+DESCRIPTION="Integration of the ROS package system and ROSspecific plugins for a Qtbased GU"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_core/0.3.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

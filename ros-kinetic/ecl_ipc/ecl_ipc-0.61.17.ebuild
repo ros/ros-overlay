@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Interprocess mechanisms vary greatly across platforms - sysv, posix, win32, ther'"
+DESCRIPTION="Interprocess mechanisms vary greatly across platforms  sysv, posix, win32, ther"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_ipc/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A hub acts as a shared key-value store for multiple ros 
-	systems (primarily '"
+DESCRIPTION="A hub acts as a shared keyvalue store for multiple ros	 systems primarily "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_hub/0.8.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

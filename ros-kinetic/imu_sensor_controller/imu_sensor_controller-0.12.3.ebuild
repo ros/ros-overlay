@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Controller to publish state of IMU sensors'"
+DESCRIPTION="Controller to publish state of IMU sensors"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/imu_sensor_controller/0.12.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

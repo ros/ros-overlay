@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Launch files and world files to start the models in gazebo'"
+DESCRIPTION="Launch files and world files to start the models in gazebo"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_gazebo/1.0.9-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

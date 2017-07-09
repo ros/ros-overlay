@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The iot_bridge provides a bi-directional bridge between ROS and the OpenHAB Home'"
+DESCRIPTION="The iot_bridge provides a bidirectional bridge between ROS and the OpenHAB Home"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/iot_bridge-release/archive/release/kinetic/iot_bridge/0.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

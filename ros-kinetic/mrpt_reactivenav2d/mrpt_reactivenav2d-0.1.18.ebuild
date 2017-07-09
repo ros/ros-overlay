@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)'"
+DESCRIPTION="Reactive navigation for 2D robots using MRPT navigation algorithms TPSpace"
 HOMEPAGE="http://wiki.ros.org/mrpt_reactivenav2d"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_reactivenav2d/0.1.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

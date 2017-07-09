@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The offset_tuner_server package'"
+DESCRIPTION="The offset_tuner_server package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_offset_tuner_server/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

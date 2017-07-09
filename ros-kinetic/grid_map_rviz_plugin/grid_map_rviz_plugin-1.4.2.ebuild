@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'RViz plugin for displaying grid map messages.'"
+DESCRIPTION="RViz plugin for displaying grid map messages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_rviz_plugin/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

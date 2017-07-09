@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to ot'"
+DESCRIPTION="octomap_server loads a 3D map as Octreebased OctoMap and distributes it to ot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Bound incoming velocity messages according to robot velocity and acceleration li'"
+DESCRIPTION="Bound incoming velocity messages according to robot velocity and acceleration li"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_velocity_smoother/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

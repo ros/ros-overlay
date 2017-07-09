@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosclean: cleanup filesystem resources (e.g. log files).'"
+DESCRIPTION="rosclean: cleanup filesystem resources eg log files"
 HOMEPAGE="http://ros.org/wiki/rosclean"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosclean/1.13.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

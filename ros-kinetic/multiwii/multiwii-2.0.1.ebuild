@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The multiwii package'"
+DESCRIPTION="The multiwii package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/christianrauch/ros-multiwii-release/archive/release/kinetic/multiwii/2.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

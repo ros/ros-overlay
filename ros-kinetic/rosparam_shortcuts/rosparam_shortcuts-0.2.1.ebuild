@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Quickly load variables from rosparam with good command line error checking.'"
+DESCRIPTION="Quickly load variables from rosparam with good command line error checking"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/rosparam_shortcuts-release/archive/release/kinetic/rosparam_shortcuts/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

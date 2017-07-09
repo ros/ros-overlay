@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The contact_states_observer package'"
+DESCRIPTION="The contact_states_observer package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/kinetic/contact_states_observer/0.1.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

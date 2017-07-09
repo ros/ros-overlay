@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Holds the action description and relevant messages for the move_base package'"
+DESCRIPTION="Holds the action description and relevant messages for the move_base package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/navigation_msgs-release/archive/release/kinetic/move_base_msgs/1.13.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

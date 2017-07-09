@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The rqt_gauges package'"
+DESCRIPTION="The rqt_gauges package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/UTNuclearRoboticsPublic/gauges-release/archive/release/kinetic/rqt_gauges/1.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

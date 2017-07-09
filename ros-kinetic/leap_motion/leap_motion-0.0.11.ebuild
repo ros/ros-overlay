@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS driver for the Leap Motion gesture sensor'"
+DESCRIPTION="ROS driver for the Leap Motion gesture sensor"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/leap_motion-release/archive/release/kinetic/leap_motion/0.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

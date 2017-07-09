@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Embeds the TCLAP library inside the ecl. This is a very convenient
-	 command '"
+DESCRIPTION="Embeds the TCLAP library inside the ecl This is a very convenient	 command "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_command_line/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

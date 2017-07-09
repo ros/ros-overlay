@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_console provides a GUI plugin for displaying and filtering ROS messages.'"
+DESCRIPTION="rqt_console provides a GUI plugin for displaying and filtering ROS messages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_console-release/archive/release/kinetic/rqt_console/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

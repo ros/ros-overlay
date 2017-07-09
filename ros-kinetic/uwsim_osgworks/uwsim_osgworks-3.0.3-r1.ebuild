@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The OSG Works library adapted to UWSim. See https://code.google.com/p/osgworks'"
+DESCRIPTION="The OSG Works library adapted to UWSim See https://codegooglecom/p/osgworks"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/uji-ros-pkg/uwsim_osgworks-release/archive/release/kinetic/uwsim_osgworks/3.0.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

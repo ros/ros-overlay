@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The jsk_tilt_laser package'"
+DESCRIPTION="The jsk_tilt_laser package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/jsk_tilt_laser/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

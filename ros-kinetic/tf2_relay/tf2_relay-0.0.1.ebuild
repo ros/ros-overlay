@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Specialization of message_relay for tf2'"
+DESCRIPTION="Specialization of message_relay for tf2"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/tf2_relay/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_py_trees provides a GUI plugin for visualizing py_trees behaviour trees base'"
+DESCRIPTION="rqt_py_trees provides a GUI plugin for visualizing py_trees behaviour trees base"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/rqt_py_trees-release/archive/release/kinetic/rqt_py_trees/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

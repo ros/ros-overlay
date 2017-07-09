@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides zeroconf services on avahi for ros systems.
-	 This is a c++ implemen'"
+DESCRIPTION="Provides zeroconf services on avahi for ros systems	 This is a c implemen"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/zeroconf_avahi_suite-release/archive/release/kinetic/zeroconf_avahi/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Launch files to start the openni2_camera drivers using rgbd_launch.'"
+DESCRIPTION="Launch files to start the openni2_camera drivers using rgbd_launch"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/openni2_launch/archive/release/kinetic/openni2_launch/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

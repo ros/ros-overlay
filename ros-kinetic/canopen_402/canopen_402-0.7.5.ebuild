@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This implements the CANopen device profile for drives and motion control. CiA(r)'"
+DESCRIPTION="This implements the CANopen device profile for drives and motion control CiAr"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_402/0.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="''"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/repository/archive.tar.gz?ref=release/kinetic/homer_robbie_architecture/1.0.2-3 -> ${PN}-release-${PV}.tar.gz"
 

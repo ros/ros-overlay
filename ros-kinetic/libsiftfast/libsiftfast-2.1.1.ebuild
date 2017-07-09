@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Library to compute SIFT features'"
+DESCRIPTION="Library to compute SIFT features"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libsiftfast/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

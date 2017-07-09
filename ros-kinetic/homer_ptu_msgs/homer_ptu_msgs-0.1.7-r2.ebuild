@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="''"
+DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_ptu_msgs/0.1.7-2 -> ${PN}-release-${PV}.tar.gz"
 

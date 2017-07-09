@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Point Cloud Encoder for Web-Based Streaming'"
+DESCRIPTION="Point Cloud Encoder for WebBased Streaming"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/kinetic/depthcloud_encoder/0.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

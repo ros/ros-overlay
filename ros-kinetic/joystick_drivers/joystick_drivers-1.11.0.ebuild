@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This metapackage depends on packages for interfacing common
-	joysticks and hu'"
+DESCRIPTION="This metapackage depends on packages for interfacing common	joysticks and hu"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joystick_drivers/1.11.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

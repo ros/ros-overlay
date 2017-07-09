@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'tf2 is the second generation of the transform library, which lets
-	the user k'"
+DESCRIPTION="tf2 is the second generation of the transform library, which lets	the user k"
 HOMEPAGE="http://www.ros.org/wiki/tf2"
 SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/tf2/0.5.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

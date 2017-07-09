@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages for transmitting audio via ROS'"
+DESCRIPTION="Messages for transmitting audio via ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_common_msgs/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

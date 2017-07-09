@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'multi_map_server provides the'"
+DESCRIPTION="multi_map_server provides the"
 HOMEPAGE="http://ros.org/wiki/map_server"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/multi_map_server/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

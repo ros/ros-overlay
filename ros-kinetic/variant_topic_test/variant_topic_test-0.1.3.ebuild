@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Variant topic tools testing suites.'"
+DESCRIPTION="Variant topic tools testing suites"
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
 SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_topic_test/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

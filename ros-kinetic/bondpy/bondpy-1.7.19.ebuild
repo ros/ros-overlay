@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python implementation of bond, a mechanism for checking when
-	another process'"
+DESCRIPTION="Python implementation of bond, a mechanism for checking when	another process"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bondpy/1.7.19-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

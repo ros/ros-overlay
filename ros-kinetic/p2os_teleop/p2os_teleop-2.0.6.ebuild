@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A teleoperation node for the p2os_driver package.'"
+DESCRIPTION="A teleoperation node for the p2os_driver package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_teleop/2.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

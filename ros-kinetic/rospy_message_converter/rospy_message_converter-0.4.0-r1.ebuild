@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Converts between Python dictionaries and JSON to rospy messages.'"
+DESCRIPTION="Converts between Python dictionaries and JSON to rospy messages"
 HOMEPAGE="http://ros.org/wiki/rospy_message_converter"
 SRC_URI="https://github.com/baalexander/rospy_message_converter-release/archive/release/kinetic/rospy_message_converter/0.4.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

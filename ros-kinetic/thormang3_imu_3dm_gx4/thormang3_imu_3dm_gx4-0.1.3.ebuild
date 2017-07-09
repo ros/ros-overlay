@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Driver for Microstrain 3DM-GX4-25 IMU
-	This package is modified by robotis.
- '"
+DESCRIPTION="Driver for Microstrain 3DMGX425 IMU	This package is modified by robotis "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_imu_3dm_gx4/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Robotnik standard sensors description. URDF and meshses.'"
+DESCRIPTION="Robotnik standard sensors description URDF and meshses"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/robotnik_sensors-release/archive/release/kinetic/robotnik_sensors/1.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

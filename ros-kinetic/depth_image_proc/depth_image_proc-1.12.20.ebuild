@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Contains nodelets for processing depth images such as those
-	 produced by Ope'"
+DESCRIPTION="Contains nodelets for processing depth images such as those	 produced by Ope"
 HOMEPAGE="http://ros.org/wiki/depth_image_proc"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/depth_image_proc/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

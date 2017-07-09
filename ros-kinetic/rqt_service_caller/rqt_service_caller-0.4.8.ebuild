@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_service_caller provides a GUI plugin for calling arbitrary services.'"
+DESCRIPTION="rqt_service_caller provides a GUI plugin for calling arbitrary services"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_service_caller-release/archive/release/kinetic/rqt_service_caller/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

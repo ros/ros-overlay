@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python library to assist in publishing markers easily'"
+DESCRIPTION="Python library to assist in publishing markers easily"
 HOMEPAGE="http://ros.org/wiki/easy_markers"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/easy_markers/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A Simple Node to Publish the Robot'"'"'s Position Relative to the Map using TFs'"
+DESCRIPTION="A Simple Node to Publish the Robots Position Relative to the Map using TFs"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gt-rail-release/robot_pose_publisher-release/archive/release/kinetic/robot_pose_publisher/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

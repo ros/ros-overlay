@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Ros extensions and behaviours for py_trees.'"
+DESCRIPTION="Ros extensions and behaviours for py_trees"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/py_trees_ros-release/archive/release/kinetic/py_trees_ros/0.5.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

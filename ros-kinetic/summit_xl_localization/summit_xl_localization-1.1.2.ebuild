@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The summit_xl_localization package'"
+DESCRIPTION="The summit_xl_localization package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_localization/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

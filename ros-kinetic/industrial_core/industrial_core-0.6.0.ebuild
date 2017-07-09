@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS-Industrial core stack contains packages and libraries for supporing industri'"
+DESCRIPTION="ROSIndustrial core stack contains packages and libraries for supporing industri"
 HOMEPAGE="http://ros.org/wiki/industrial_core"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_core/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

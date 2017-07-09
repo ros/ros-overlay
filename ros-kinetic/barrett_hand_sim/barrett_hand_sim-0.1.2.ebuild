@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The barrett_hand_sim package'"
+DESCRIPTION="The barrett_hand_sim package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/barrett_hand_sim-release/archive/release/kinetic/barrett_hand_sim/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Driver for IDS Imaging uEye cameras.'"
+DESCRIPTION="Driver for IDS Imaging uEye cameras"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/kmhallen/ueye-release/archive/release/kinetic/ueye/0.0.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

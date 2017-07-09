@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'URDF description of the robot kinematics and dynamics, 3D models of robot compon'"
+DESCRIPTION="URDF description of the robot kinematics and dynamics, 3D models of robot compon"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_common/1.12.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The openface_ros package'"
+DESCRIPTION="The openface_ros package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/openface_ros/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

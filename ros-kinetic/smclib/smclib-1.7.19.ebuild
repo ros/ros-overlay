@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The State Machine Compiler (SMC) from http://smc.sourceforge.net/
-	converts a'"
+DESCRIPTION="The State Machine Compiler SMC from http://smcsourceforgenet/	converts a"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/smclib/1.7.19-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

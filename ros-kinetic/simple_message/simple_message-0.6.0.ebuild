@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'simple_message defines a simple messaging connection and protocol for communicat'"
+DESCRIPTION="simple_message defines a simple messaging connection and protocol for communicat"
 HOMEPAGE="http://ros.org/wiki/simple_message"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

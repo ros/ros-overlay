@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_image_view provides a GUI plugin for displaying images using image_transport'"
+DESCRIPTION="rqt_image_view provides a GUI plugin for displaying images using image_transport"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_image_view-release/archive/release/kinetic/rqt_image_view/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

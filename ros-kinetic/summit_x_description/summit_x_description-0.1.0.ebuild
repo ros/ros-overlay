@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The summit_x_description package'"
+DESCRIPTION="The summit_x_description package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_x_common-release/archive/release/kinetic/summit_x_description/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'image_geometry contains C++ and Python libraries for interpreting images
-	geo'"
+DESCRIPTION="image_geometry contains C and Python libraries for interpreting images	geo"
 HOMEPAGE="http://www.ros.org/wiki/image_geometry"
 SRC_URI="https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/image_geometry/1.12.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

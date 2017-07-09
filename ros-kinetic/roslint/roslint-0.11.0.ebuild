@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'CMake lint commands for ROS packages.
-
-	The lint commands perform static chec'"
+DESCRIPTION="CMake lint commands for ROS packages	The lint commands perform static chec"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/roslint-release/archive/release/kinetic/roslint/0.11.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

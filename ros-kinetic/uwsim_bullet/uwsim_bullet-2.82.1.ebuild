@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The bullet library. See https://code.google.com/p/bullet'"
+DESCRIPTION="The bullet library See https://codegooglecom/p/bullet"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/uji-ros-pkg/uwsim_bullet-release/archive/release/kinetic/uwsim_bullet/2.82.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

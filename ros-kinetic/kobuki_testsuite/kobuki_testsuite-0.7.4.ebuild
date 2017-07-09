@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Kobuki test suite: this package provides tools to thoroughly test Kobuki'"'"'s hardw'"
+DESCRIPTION="Kobuki test suite: this package provides tools to thoroughly test Kobukis hardw"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_testsuite/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

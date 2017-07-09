@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS console output library.'"
+DESCRIPTION="ROS console output library"
 HOMEPAGE="http://www.ros.org/wiki/rosconsole"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosconsole/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

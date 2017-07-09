@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A node to control nonlinear dynamic systems'"
+DESCRIPTION="A node to control nonlinear dynamic systems"
 HOMEPAGE="http://wiki.ros.org/lyap_control"
 SRC_URI="https://github.com/AndyZe/lyap_control-release/archive/release/kinetic/lyap_control/0.0.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

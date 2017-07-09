@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="att#text"
 HOMEPAGE="http://wiki.ros.org/robot_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_state_publisher-release/archive/release/kinetic/robot_state_publisher/1.13.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

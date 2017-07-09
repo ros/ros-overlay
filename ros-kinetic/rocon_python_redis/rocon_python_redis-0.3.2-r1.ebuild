@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Locally patched version of the python redis client (https://github.com/andymccur'"
+DESCRIPTION="Locally patched version of the python redis client https://githubcom/andymccur"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_python_redis/0.3.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Stream cartesian commands'"
+DESCRIPTION="Stream cartesian commands"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/cartesian_msgs-release/archive/release/kinetic/cartesian_msgs/0.0.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

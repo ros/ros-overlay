@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A ROS camera driver that uses gstreamer to connect to
-	devices such as webcam'"
+DESCRIPTION="A ROS camera driver that uses gstreamer to connect to	devices such as webcam"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/gscam-release/archive/release/kinetic/gscam/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

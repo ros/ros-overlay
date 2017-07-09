@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The find_object_2d package'"
+DESCRIPTION="The find_object_2d package"
 HOMEPAGE="http://find-object.googlecode.com"
 SRC_URI="https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.1-5.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

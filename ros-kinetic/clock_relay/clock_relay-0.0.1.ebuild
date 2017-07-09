@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Specialization of message_relay for clock'"
+DESCRIPTION="Specialization of message_relay for clock"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/clock_relay/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

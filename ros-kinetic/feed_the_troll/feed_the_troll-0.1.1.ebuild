@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Mechanisms for loading a ros node at runtime.'"
+DESCRIPTION="Mechanisms for loading a ros node at runtime"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/feed_the_troll-release/archive/release/kinetic/feed_the_troll/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

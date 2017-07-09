@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Cross platform filesystem utilities (until c++11 makes its way in).'"
+DESCRIPTION="Cross platform filesystem utilities until c11 makes its way in"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_filesystem/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

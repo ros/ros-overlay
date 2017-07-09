@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides a signal/slot mechanism (in the same vein as qt sigslots, 
-	 boost::'"
+DESCRIPTION="Provides a signal/slot mechanism in the same vein as qt sigslots,	  boost::"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_sigslots/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

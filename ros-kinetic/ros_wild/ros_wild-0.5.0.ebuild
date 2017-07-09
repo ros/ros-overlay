@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The ros_wild package'"
+DESCRIPTION="The ros_wild package"
 HOMEPAGE="https://github.com/yuma-m/ros_wild"
 SRC_URI="https://github.com/yuma-m/ros_wild-release/archive/release/kinetic/ros_wild/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple simulation interface and template for setting up a hardware interface for'"
+DESCRIPTION="Simple simulation interface and template for setting up a hardware interface for"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/davetcoleman/ros_control_boilerplate-release/archive/release/kinetic/ros_control_boilerplate/0.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Various tools for IMU devices'"
+DESCRIPTION="Various tools for IMU devices"
 HOMEPAGE="http://ros.org/wiki/imu_tools"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_tools/1.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

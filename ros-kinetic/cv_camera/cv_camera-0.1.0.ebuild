@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'cv_camera uses OpenCV capture object to capture camera image.
-  This supports ca'"
+DESCRIPTION="cv_camera uses OpenCV capture object to capture camera image  This supports ca"
 HOMEPAGE="http://wiki.ros.org/cv_camera"
 SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/kinetic/cv_camera/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

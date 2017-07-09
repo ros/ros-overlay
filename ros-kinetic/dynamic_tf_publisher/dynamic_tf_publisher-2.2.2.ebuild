@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'dynamically set the tf trensformation'"
+DESCRIPTION="dynamically set the tf trensformation"
 HOMEPAGE="http://ros.org/wiki/dynamic_tf_publisher"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/dynamic_tf_publisher/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

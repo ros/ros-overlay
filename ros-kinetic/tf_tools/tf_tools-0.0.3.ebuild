@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS tools and scripts relates to tf'"
+DESCRIPTION="ROS tools and scripts relates to tf"
 HOMEPAGE="http://ros.org/wiki/tf_tools"
 SRC_URI="https://github.com/srv/srv_tools-release/archive/release/kinetic/tf_tools/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

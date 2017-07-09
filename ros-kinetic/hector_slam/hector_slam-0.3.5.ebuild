@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The hector_slam metapackage that installs hector_mapping and related packages.'"
+DESCRIPTION="The hector_slam metapackage that installs hector_mapping and related packages"
 HOMEPAGE="http://ros.org/wiki/hector_slam"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_slam/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

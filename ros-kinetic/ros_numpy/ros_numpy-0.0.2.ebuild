@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A collection of conversion function for extracting numpy arrays from messages'"
+DESCRIPTION="A collection of conversion function for extracting numpy arrays from messages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/eric-wieser/ros_numpy-release/archive/release/kinetic/ros_numpy/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

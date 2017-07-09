@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A wrapper for keeping rqt programs alive.'"
+DESCRIPTION="A wrapper for keeping rqt programs alive"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rqt_wrapper-release/archive/release/kinetic/rqt_wrapper/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

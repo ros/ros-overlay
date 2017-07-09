@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Aldebaran'"'"'s libqicore: a layer on top of libqi'"
+DESCRIPTION="Aldebarans libqicore: a layer on top of libqi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/libqicore-release/archive/release/kinetic/naoqi_libqicore/2.3.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

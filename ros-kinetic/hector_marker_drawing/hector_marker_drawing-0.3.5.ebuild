@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_marker_drawing provides convenience functions for easier publishing of vi'"
+DESCRIPTION="hector_marker_drawing provides convenience functions for easier publishing of vi"
 HOMEPAGE="http://ros.org/wiki/hector_marker_drawing"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_marker_drawing/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

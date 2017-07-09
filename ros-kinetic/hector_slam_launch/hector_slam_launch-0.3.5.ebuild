@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_slam_launch contains launch files for launching hector_slam with differen'"
+DESCRIPTION="hector_slam_launch contains launch files for launching hector_slam with differen"
 HOMEPAGE="http://ros.org/wiki/hector_slam_launch"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_slam_launch/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

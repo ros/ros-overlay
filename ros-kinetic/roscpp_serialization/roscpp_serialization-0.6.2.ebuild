@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="http://ros.org/wiki/roscpp_serialization"
 SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_serialization/0.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

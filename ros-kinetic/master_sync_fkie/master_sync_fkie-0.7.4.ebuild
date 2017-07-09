@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Synchronize the local ROS master to the remote masters 
-	 discovered by maste'"
+DESCRIPTION="Synchronize the local ROS master to the remote masters	  discovered by maste"
 HOMEPAGE="http://ros.org/wiki/master_sync_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_sync_fkie/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Translates joy msgs'"
+DESCRIPTION="Translates joy msgs"
 HOMEPAGE="http://ros.org/wiki/joy_listener"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/joy_listener/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'UMD camera metapackage'"
+DESCRIPTION="UMD camera metapackage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/kinetic/camera_umd/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

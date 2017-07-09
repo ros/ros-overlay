@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Variant messages are designed to accommodate the information content
-	of any '"
+DESCRIPTION="Variant messages are designed to accommodate the information content	of any "
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
 SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_msgs/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

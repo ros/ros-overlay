@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS messages for universally unique identifiers.'"
+DESCRIPTION="ROS messages for universally unique identifiers"
 HOMEPAGE="http://ros.org/wiki/uuid_msgs"
 SRC_URI="https://github.com/ros-geographic-info/unique_identifier-release/archive/release/kinetic/uuid_msgs/1.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

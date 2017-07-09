@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'julius: Open-Source Large Vocabulary CSR Engine (http://julius.sourceforge.jp/in'"
+DESCRIPTION="julius: OpenSource Large Vocabulary CSR Engine http://juliussourceforgejp/in"
 HOMEPAGE="http://ros.org/wiki/julius"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/julius/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

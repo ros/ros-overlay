@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_mapping/0.6.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

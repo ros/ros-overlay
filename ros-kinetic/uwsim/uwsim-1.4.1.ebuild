@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'UWSim is an UnderWater SIMulator for marine robotics research and development. U'"
+DESCRIPTION="UWSim is an UnderWater SIMulator for marine robotics research and development U"
 HOMEPAGE="http://www.irs.uji.es/uwsim/"
 SRC_URI="https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/kinetic/uwsim/1.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

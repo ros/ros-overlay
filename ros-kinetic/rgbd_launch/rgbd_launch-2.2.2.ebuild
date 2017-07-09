@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Launch files to open an RGBD device and load all nodelets to 
-	 convert raw d'"
+DESCRIPTION="Launch files to open an RGBD device and load all nodelets to	  convert raw d"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rgbd_launch-release/archive/release/kinetic/rgbd_launch/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

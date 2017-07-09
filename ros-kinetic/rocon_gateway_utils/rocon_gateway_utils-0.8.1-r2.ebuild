@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Utilities for gateway users (avoids large dependency requirements).'"
+DESCRIPTION="Utilities for gateway users avoids large dependency requirements"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_gateway_utils/0.8.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

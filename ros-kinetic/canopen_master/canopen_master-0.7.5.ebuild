@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'CiA(r) CANopen 301 master implementation with support for interprocess master sy'"
+DESCRIPTION="CiAr CANopen 301 master implementation with support for interprocess master sy"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_master/0.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

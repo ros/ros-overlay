@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package defines messages commonly used in mapping packages.'"
+DESCRIPTION="This package defines messages commonly used in mapping packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/navigation_msgs-release/archive/release/kinetic/map_msgs/1.13.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An automatically generated package with all the configuration and launch files f'"
+DESCRIPTION="An automatically generated package with all the configuration and launch files f"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-naoqi/nao_moveit_config-release/archive/release/kinetic/nao_moveit_config/0.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

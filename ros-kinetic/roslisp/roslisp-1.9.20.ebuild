@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Lisp client library for ROS, the Robot Operating System.'"
+DESCRIPTION="Lisp client library for ROS, the Robot Operating System"
 HOMEPAGE="http://ros.org/wiki/roslisp"
 SRC_URI="https://github.com/ros-gbp/roslisp-release/archive/release/kinetic/roslisp/1.9.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

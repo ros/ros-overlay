@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Driver file descriptions for P2OS/ARCOS robot'"
+DESCRIPTION="Driver file descriptions for P2OS/ARCOS robot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_driver/2.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

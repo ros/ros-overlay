@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Converts LaserScan to PointCloud messages.'"
+DESCRIPTION="Converts LaserScan to PointCloud messages"
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/scan_to_cloud_converter/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

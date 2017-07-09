@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'octomap_ros provides conversion functions between ROS and OctoMap'"'"'s native types'"
+DESCRIPTION="octomap_ros provides conversion functions between ROS and OctoMaps native types"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap_ros-release/archive/release/kinetic/octomap_ros/0.4.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

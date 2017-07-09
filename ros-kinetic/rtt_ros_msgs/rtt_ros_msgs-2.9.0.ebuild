@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides .msg and .srv files for use with the rtt_ros_integration p'"
+DESCRIPTION="This package provides msg and srv files for use with the rtt_ros_integration p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_ros_msgs/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This stack contains all descriptions, drivers and bringup facilities for Neuroni'"
+DESCRIPTION="This stack contains all descriptions, drivers and bringup facilities for Neuroni"
 HOMEPAGE="http://ros.org/wiki/katana_driver"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_driver/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_py_console is a Python GUI plugin providing an interactive Python console.'"
+DESCRIPTION="rqt_py_console is a Python GUI plugin providing an interactive Python console"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_py_console-release/archive/release/kinetic/rqt_py_console/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

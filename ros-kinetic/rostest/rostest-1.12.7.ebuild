@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Integration test suite based on roslaunch that is compatible with xUnit framewor'"
+DESCRIPTION="Integration test suite based on roslaunch that is compatible with xUnit framewor"
 HOMEPAGE="http://ros.org/wiki/rostest"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rostest/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

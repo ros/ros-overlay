@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="http://ros.org/wiki/image_publisher"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_publisher/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

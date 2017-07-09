@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'An Orocos typekit for Eigen types.'"
+DESCRIPTION="An Orocos typekit for Eigen types"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/eigen_typekit/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

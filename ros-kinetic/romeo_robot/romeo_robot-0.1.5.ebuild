@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The romeo_robot metapackage'"
+DESCRIPTION="The romeo_robot metapackage"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_robot/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

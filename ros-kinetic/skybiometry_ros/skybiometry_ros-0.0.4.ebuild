@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The skybiometry_ros package'"
+DESCRIPTION="The skybiometry_ros package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/skybiometry_ros/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

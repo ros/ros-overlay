@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="http://ros.org/wiki/polar_scan_matcher"
 SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/polar_scan_matcher/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

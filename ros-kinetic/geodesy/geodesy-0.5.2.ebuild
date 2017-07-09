@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python and C++ interfaces for manipulating geodetic coordinates.'"
+DESCRIPTION="Python and C interfaces for manipulating geodetic coordinates"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geodesy/0.5.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

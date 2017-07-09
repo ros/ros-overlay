@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Control the robot joints in all kinematic configurations, publishes odom topic a'"
+DESCRIPTION="Control the robot joints in all kinematic configurations, publishes odom topic a"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_x_sim-release/archive/release/kinetic/summit_x_robot_control/1.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

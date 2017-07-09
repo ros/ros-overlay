@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains the KDL RTT bindings'"
+DESCRIPTION="This package contains the KDL RTT bindings"
 HOMEPAGE="http://ros.org/wiki/kdl_typekit"
 SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/kdl_typekit/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides wrappers around the yaml-cpp library for various utility functions
-	'"
+DESCRIPTION="Provides wrappers around the yamlcpp library for various utility functions	"
 HOMEPAGE="https://github.com/swri-robotics/marti_common"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

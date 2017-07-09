@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The jsk_recognition_utils package'"
+DESCRIPTION="The jsk_recognition_utils package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/jsk_recognition_utils/1.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

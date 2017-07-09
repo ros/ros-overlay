@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Client api for discovery and connection to rocon hubs. It also has
-	a few con'"
+DESCRIPTION="Client api for discovery and connection to rocon hubs It also has	a few con"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_hub_client/0.8.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

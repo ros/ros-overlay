@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Extra packages for rosjava_core'"
+DESCRIPTION="Extra packages for rosjava_core"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosjava-release/rosjava_extras-release/archive/release/kinetic/rosjava_extras/0.3.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Twist multiplexer, which multiplex several velocity commands (topics) and
-	  '"
+DESCRIPTION="Twist multiplexer, which multiplex several velocity commands topics and	  "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/twist_mux-release/archive/release/kinetic/twist_mux/3.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

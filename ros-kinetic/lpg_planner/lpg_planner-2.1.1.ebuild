@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)'"
+DESCRIPTION="lpg_planner: LPGL Planner http://zeusingunibsit/lpg/"
 HOMEPAGE="http://ros.org/wiki/downward"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/lpg_planner/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

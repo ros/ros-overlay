@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a recent version of the Bayesian Filtering
-  Library (BFL)'"
+DESCRIPTION="This package contains a recent version of the Bayesian Filtering  Library BFL"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/bfl-release/archive/release/kinetic/bfl/0.7.0-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

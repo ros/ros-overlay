@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This unary stack contains the dynamic_reconfigure package which provides a means'"
+DESCRIPTION="This unary stack contains the dynamic_reconfigure package which provides a means"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.48-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

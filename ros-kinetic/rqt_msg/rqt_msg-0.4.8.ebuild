@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A Python GUI plugin for introspecting available ROS message types.
-  Note that t'"
+DESCRIPTION="A Python GUI plugin for introspecting available ROS message types  Note that t"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_msg-release/archive/release/kinetic/rqt_msg/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Lightweight ROS wrapper for Zbar barcode/qrcode reader library (http://zbar.sour'"
+DESCRIPTION="Lightweight ROS wrapper for Zbar barcode/qrcode reader library http://zbarsour"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/zbar_ros-release/archive/release/kinetic/zbar_ros/0.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

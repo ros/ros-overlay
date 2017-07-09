@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The robotis_controller_msgs package'"
+DESCRIPTION="The robotis_controller_msgs package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-msgs-release/archive/release/kinetic/robotis_controller_msgs/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

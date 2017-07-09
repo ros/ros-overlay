@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This rqt plugin ROS package provides easy view of .launch files.
-  User can also'"
+DESCRIPTION="This rqt plugin ROS package provides easy view of launch files  User can also"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_launch-release/archive/release/kinetic/rqt_launch/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

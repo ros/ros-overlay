@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Automatic docking for Kobuki:
-		Users owning a docking station for Kobuki can'"
+DESCRIPTION="Automatic docking for Kobuki:	Users owning a docking station for Kobuki can"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_auto_docking/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

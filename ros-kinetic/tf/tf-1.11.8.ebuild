@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'tf is a package that lets the user keep track of multiple coordinate
-frames over'"
+DESCRIPTION="tf is a package that lets the user keep track of multiple coordinateframes over"
 HOMEPAGE="http://www.ros.org/wiki/tf"
 SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf/1.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

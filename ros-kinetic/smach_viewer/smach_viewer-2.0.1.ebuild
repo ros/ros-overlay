@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="http://ros.org/wiki/smach_viewer"
 SRC_URI="https://github.com/jbohren/executive_smach_visualization-release/archive/release/kinetic/smach_viewer/2.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

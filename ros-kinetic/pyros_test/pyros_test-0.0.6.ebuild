@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Basic test nodes for Pyros dynamic ROS interface'"
+DESCRIPTION="Basic test nodes for Pyros dynamic ROS interface"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/pyros-test-release/archive/release/kinetic/pyros_test/0.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

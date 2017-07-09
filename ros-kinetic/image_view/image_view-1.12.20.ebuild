@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A simple viewer for ROS image topics. Includes a specialized viewer
-  for stereo'"
+DESCRIPTION="A simple viewer for ROS image topics Includes a specialized viewer  for stereo"
 HOMEPAGE="http://www.ros.org/wiki/image_view"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_view/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

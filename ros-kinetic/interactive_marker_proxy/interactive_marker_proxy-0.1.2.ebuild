@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A Proxy Server for Interactive Markers'"
+DESCRIPTION="A Proxy Server for Interactive Markers"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/interactive_marker_proxy-release/archive/release/kinetic/interactive_marker_proxy/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

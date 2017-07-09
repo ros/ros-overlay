@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains an URDF description of the Katana arm and all supporting m'"
+DESCRIPTION="This package contains an URDF description of the Katana arm and all supporting m"
 HOMEPAGE="http://ros.org/wiki/katana_description"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_description/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

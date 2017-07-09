@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Miscellaneous tools for pyROS'"
+DESCRIPTION="Miscellaneous tools for pyROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/pyros-utils-release/archive/release/kinetic/pyros_utils/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

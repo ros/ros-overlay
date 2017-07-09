@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A controller ensuring the safe operation of roch.
-
-	The SafetyController keep'"
+DESCRIPTION="A controller ensuring the safe operation of roch	The SafetyController keep"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_safety_controller/2.0.13-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

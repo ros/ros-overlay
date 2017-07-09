@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The mqtt_bridge package'"
+DESCRIPTION="The mqtt_bridge package"
 HOMEPAGE="http://www.ros.org/wiki/mqtt_bridge"
 SRC_URI="https://github.com/groove-x/mqtt_bridge-release/archive/release/kinetic/mqtt_bridge/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

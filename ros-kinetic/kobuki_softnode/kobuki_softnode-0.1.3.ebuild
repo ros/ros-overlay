@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS nodelet for fake Kobuki.'"
+DESCRIPTION="ROS nodelet for fake Kobuki"
 HOMEPAGE="http://ros.org/wiki/kobuki"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/kinetic/kobuki_softnode/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

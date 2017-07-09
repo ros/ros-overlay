@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The schunk_canopen_driver package'"
+DESCRIPTION="The schunk_canopen_driver package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/fzi-forschungszentrum-informatik/schunk_canopen_driver-release/archive/release/kinetic/schunk_canopen_driver/1.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

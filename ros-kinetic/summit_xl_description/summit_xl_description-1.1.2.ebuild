@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'URDF description of the Summit XL and Summit XL HL and omni versions'"
+DESCRIPTION="URDF description of the Summit XL and Summit XL HL and omni versions"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_description/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

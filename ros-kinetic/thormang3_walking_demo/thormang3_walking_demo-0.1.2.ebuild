@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The thormang3_walking_demo package
-	This package describes how to use thorman'"
+DESCRIPTION="The thormang3_walking_demo package	This package describes how to use thorman"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_walking_demo/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

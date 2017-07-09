@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides robot and sensor descripiton files for STDR Simulator.'"
+DESCRIPTION="Provides robot and sensor descripiton files for STDR Simulator"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/kinetic/stdr_resources/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

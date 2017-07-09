@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to
- '"
+DESCRIPTION="This avoids use of dynamic storage malloc/new and thread safety mutexes to "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_lite-release/archive/release/kinetic/ecl_sigslots_lite/0.61.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

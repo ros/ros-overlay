@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS packages for the ROBOTIS MANIPULATOR-H (meta package)'"
+DESCRIPTION="ROS packages for the ROBOTIS MANIPULATORH meta package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

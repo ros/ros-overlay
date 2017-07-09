@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Utilities for flashing and enabling roch'"'"'s USB connection.
-		This package con'"
+DESCRIPTION="Utilities for flashing and enabling rochs USB connection	This package con"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_ftdi/2.0.13-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

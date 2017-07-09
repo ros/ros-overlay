@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The package that manages device information of ROBOTIS robots.
-	This package '"
+DESCRIPTION="The package that manages device information of ROBOTIS robots	This package "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_device/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

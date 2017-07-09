@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'C++ ROS message and service generators.'"
+DESCRIPTION="C ROS message and service generators"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gencpp-release/archive/release/kinetic/gencpp/0.5.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

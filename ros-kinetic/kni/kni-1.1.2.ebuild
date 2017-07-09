@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="http://ros.org/wiki/kni"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/kni/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

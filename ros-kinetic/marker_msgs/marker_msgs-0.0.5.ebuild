@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The marker_msgs package contains messages usable to setup a marker/fiducial syst'"
+DESCRIPTION="The marker_msgs package contains messages usable to setup a marker/fiducial syst"
 HOMEPAGE="http://wiki.ros.org/marker_msgs"
 SRC_URI="https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

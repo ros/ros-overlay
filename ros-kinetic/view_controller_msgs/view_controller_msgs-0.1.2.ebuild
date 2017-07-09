@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages for (camera) view controllers'"
+DESCRIPTION="Messages for camera view controllers"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/view_controller_msgs-release/archive/release/kinetic/view_controller_msgs/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ntpd_driver sends TimeReference message time to ntpd server'"
+DESCRIPTION="ntpd_driver sends TimeReference message time to ntpd server"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/vooon/ntpd_driver-release/archive/release/kinetic/ntpd_driver/1.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Marvelmind local navigation system'"
+DESCRIPTION="Marvelmind local navigation system"
 HOMEPAGE="http://marvelmind.com"
 SRC_URI="https://github.com/MarvelmindRobotics/marvelmind_nav-release/archive/release/kinetic/marvelmind_nav/1.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

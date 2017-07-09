@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A simple actionlib CLI client'"
+DESCRIPTION="A simple actionlib CLI client"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/po1/axcli-release/archive/release/kinetic/axcli/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

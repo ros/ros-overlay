@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Implements synchronization and coordination functionalities of STDR Simulator.'"
+DESCRIPTION="Implements synchronization and coordination functionalities of STDR Simulator"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/kinetic/stdr_server/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

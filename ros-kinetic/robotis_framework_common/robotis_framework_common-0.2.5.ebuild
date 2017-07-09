@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The package contains commonly used Headers for the ROBOTIS Framework.'"
+DESCRIPTION="The package contains commonly used Headers for the ROBOTIS Framework"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_framework_common/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

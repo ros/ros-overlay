@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Filters a laser scan to remove points that are in the current static map'"
+DESCRIPTION="Filters a laser scan to remove points that are in the current static map"
 HOMEPAGE="http://wiki.ros.org/map_laser"
 SRC_URI="https://github.com/wu-robotics/laser_filtering_release/archive/release/kinetic/map_laser/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Example files used as tutorials for MRPT ROS packages'"
+DESCRIPTION="Example files used as tutorials for MRPT ROS packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_tutorials/0.1.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

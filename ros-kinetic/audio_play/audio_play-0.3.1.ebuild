@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Outputs audio to a speaker from a source node.'"
+DESCRIPTION="Outputs audio to a speaker from a source node"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_play/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

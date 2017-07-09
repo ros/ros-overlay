@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Meta-package of libraries for processing laser data, including converting laser '"
+DESCRIPTION="Metapackage of libraries for processing laser data, including converting laser "
 HOMEPAGE="http://www.ros.org/wiki/laser_pipeline"
 SRC_URI="https://github.com/ros-gbp/laser_pipeline-release/archive/release/kinetic/laser_pipeline/1.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

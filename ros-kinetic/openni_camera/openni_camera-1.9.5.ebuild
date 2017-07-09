@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A ROS driver for OpenNI depth (+ RGB) cameras. These include: 
-	   Microsoft '"
+DESCRIPTION="A ROS driver for OpenNI depth  RGB cameras These include:		Microsoft "
 HOMEPAGE="http://www.ros.org/wiki/openni_camera"
 SRC_URI="https://github.com/ros-gbp/openni_camera-release/archive/release/kinetic/openni_camera/1.9.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

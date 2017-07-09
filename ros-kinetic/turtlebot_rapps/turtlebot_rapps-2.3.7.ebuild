@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The core set of turtlebot '"'"'app manager'"'"' apps are defined in this package.'"
+DESCRIPTION="The core set of turtlebot app manager apps are defined in this package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_rapps/2.3.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

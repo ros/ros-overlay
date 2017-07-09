@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Visualisation tools for cost maps.'"
+DESCRIPTION="Visualisation tools for cost maps"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_visualisations/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Package for interfacing to the ROSflight autopilot firmware over MAVLink'"
+DESCRIPTION="Package for interfacing to the ROSflight autopilot firmware over MAVLink"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

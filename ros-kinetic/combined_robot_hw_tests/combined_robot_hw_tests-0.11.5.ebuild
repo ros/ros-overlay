@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The combined_robot_hw_tests package'"
+DESCRIPTION="The combined_robot_hw_tests package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/combined_robot_hw_tests/0.11.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

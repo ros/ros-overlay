@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_pose_view provides a GUI plugin for visualizing 3D poses.'"
+DESCRIPTION="rqt_pose_view provides a GUI plugin for visualizing 3D poses"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_pose_view-release/archive/release/kinetic/rqt_pose_view/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

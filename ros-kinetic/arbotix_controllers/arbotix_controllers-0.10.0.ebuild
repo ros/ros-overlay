@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Extends the arbotix_python package with a number of more sophisticated ROS wrapp'"
+DESCRIPTION="Extends the arbotix_python package with a number of more sophisticated ROS wrapp"
 HOMEPAGE="http://ros.org/wiki/arbotix_controllers"
 SRC_URI="https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/kinetic/arbotix_controllers/0.10.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

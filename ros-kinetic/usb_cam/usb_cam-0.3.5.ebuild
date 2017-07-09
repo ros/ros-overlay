@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A ROS Driver for V4L USB Cameras'"
+DESCRIPTION="A ROS Driver for V4L USB Cameras"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/usb_cam-release/archive/release/kinetic/usb_cam/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Sawyer Roch robot driver'"
+DESCRIPTION="Sawyer Roch robot driver"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_base/2.0.13-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_robot_dashboard provides an infrastructure for building robot dashboard plug'"
+DESCRIPTION="rqt_robot_dashboard provides an infrastructure for building robot dashboard plug"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/kinetic/rqt_robot_dashboard/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

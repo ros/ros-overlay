@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Processing grid maps as a sequence of ROS filters.'"
+DESCRIPTION="Processing grid maps as a sequence of ROS filters"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_filters/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

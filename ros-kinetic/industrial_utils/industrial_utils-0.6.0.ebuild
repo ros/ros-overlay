@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Industrial utils is a library package that captures common funcitonality for the'"
+DESCRIPTION="Industrial utils is a library package that captures common funcitonality for the"
 HOMEPAGE="http://ros.org/wiki/industrial_utils"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_utils/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

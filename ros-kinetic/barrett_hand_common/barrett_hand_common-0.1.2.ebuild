@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The barrett hand common metapackage contains all the common packages for the Bar'"
+DESCRIPTION="The barrett hand common metapackage contains all the common packages for the Bar"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/barrett_hand_common-release/archive/release/kinetic/barrett_hand_common/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

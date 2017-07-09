@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This library provides functionality to simplify working with the
-	navigation '"
+DESCRIPTION="This library provides functionality to simplify working with the	navigation "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_route_util/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

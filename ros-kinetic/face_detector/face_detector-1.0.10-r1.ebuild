@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Face detection in images.'"
+DESCRIPTION="Face detection in images"
 HOMEPAGE="http://ros.org/wiki/face_detector"
 SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.0.10-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

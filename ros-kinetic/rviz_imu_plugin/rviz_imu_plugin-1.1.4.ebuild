@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'RVIZ plugin for IMU visualization'"
+DESCRIPTION="RVIZ plugin for IMU visualization"
 HOMEPAGE="http://ros.org/wiki/rviz_imu_plugin"
 SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/rviz_imu_plugin/1.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

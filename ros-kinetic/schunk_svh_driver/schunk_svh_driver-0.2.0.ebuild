@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'SVH Driver wrapper to enable control of the Schunk five finger hand'"
+DESCRIPTION="SVH Driver wrapper to enable control of the Schunk five finger hand"
 HOMEPAGE="http://www.ros.org/wiki/schunk_svh_driver"
 SRC_URI="https://github.com/fzi-forschungszentrum-informatik/schunk_svh_driver-release/archive/release/kinetic/schunk_svh_driver/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Stereo and single image rectification and disparity processing.'"
+DESCRIPTION="Stereo and single image rectification and disparity processing"
 HOMEPAGE="http://www.ros.org/wiki/stereo_image_proc"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/stereo_image_proc/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

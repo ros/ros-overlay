@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_nav_msgs contains messages and services used in the hector_slam stack.'"
+DESCRIPTION="hector_nav_msgs contains messages and services used in the hector_slam stack"
 HOMEPAGE="http://ros.org/wiki/hector_nav_msgs"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_nav_msgs/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

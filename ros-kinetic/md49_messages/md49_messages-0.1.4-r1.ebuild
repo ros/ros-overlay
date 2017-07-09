@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The md49_messages package'"
+DESCRIPTION="The md49_messages package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/Scheik/md49_base_controller-release/archive/release/kinetic/md49_messages/0.1.4-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

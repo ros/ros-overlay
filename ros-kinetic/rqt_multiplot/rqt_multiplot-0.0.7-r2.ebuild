@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rqt_multiplot provides a GUI plugin for visualizing numeric values
-	in multip'"
+DESCRIPTION="rqt_multiplot provides a GUI plugin for visualizing numeric values	in multip"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/rqt_multiplot_plugin-release/archive/release/kinetic/rqt_multiplot/0.0.7-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

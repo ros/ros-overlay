@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A set of generic teleoperation tools for any robot.'"
+DESCRIPTION="A set of generic teleoperation tools for any robot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/teleop_tools/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

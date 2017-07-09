@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Timing utilities are very dependent on the system api provided for their use.
-	T'"
+DESCRIPTION="Timing utilities are very dependent on the system api provided for their useT"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_time/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

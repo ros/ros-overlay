@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS Driver for XSens MT/MTi/MTi-G devices.'"
+DESCRIPTION="ROS Driver for XSens MT/MTi/MTiG devices"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/ethzasl_xsens_driver-release/archive/release/kinetic/xsens_driver/2.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

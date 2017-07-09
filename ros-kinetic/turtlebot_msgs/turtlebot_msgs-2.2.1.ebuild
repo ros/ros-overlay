@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Turtlebot messages, services and actions'"
+DESCRIPTION="Turtlebot messages, services and actions"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_msgs-release/archive/release/kinetic/turtlebot_msgs/2.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

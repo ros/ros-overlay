@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Catkin macros to allow using pure python packages in usual catkin workspaces wit'"
+DESCRIPTION="Catkin macros to allow using pure python packages in usual catkin workspaces wit"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/catkin_pip-release/archive/release/kinetic/catkin_pip/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

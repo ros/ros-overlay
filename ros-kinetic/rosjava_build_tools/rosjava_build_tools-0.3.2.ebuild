@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple tools and catkin modules for rosjava development.'"
+DESCRIPTION="Simple tools and catkin modules for rosjava development"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/rosjava-release/rosjava_build_tools-release/archive/release/kinetic/rosjava_build_tools/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The dynamicEDT3D library implements an inrementally updatable Euclidean distance'"
+DESCRIPTION="The dynamicEDT3D library implements an inrementally updatable Euclidean distance"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/kinetic/dynamic_edt_3d/1.8.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

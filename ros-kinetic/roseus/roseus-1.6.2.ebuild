@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'EusLisp client for ROs Robot Operating System.'"
+DESCRIPTION="EusLisp client for ROs Robot Operating System"
 HOMEPAGE="http://pr.willowgarage.com/wiki/roseus"
 SRC_URI="https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus/1.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

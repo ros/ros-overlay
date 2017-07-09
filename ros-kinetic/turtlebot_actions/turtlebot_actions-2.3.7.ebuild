@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'turtlebot_actions provides several basic actionlib actions for the TurtleBot.'"
+DESCRIPTION="turtlebot_actions provides several basic actionlib actions for the TurtleBot"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_actions/2.3.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

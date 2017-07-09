@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros_extras/0.19.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

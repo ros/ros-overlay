@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Robot application platform for ros robots with a default implementation in pytho'"
+DESCRIPTION="Robot application platform for ros robots with a default implementation in pytho"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_app_platform-release/archive/release/kinetic/rocon_app_platform/0.9.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Messages used to feed the trolls.'"
+DESCRIPTION="Messages used to feed the trolls"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/stonier/feed_the_troll_msgs-release/archive/release/kinetic/feed_the_troll_msgs/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

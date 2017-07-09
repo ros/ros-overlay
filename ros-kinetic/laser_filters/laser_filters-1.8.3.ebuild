@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Assorted filters designed to operate on 2D planar laser scanners,
-	which use '"
+DESCRIPTION="Assorted filters designed to operate on 2D planar laser scanners,	which use "
 HOMEPAGE="http://ros.org/wiki/laser_filters"
 SRC_URI="https://github.com/ros-gbp/laser_filters-release/archive/release/kinetic/laser_filters/1.8.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

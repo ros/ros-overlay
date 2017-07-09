@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A ROS nodelet and node that wraps the driver API for UEye cameras
-	by IDS Ima'"
+DESCRIPTION="A ROS nodelet and node that wraps the driver API for UEye cameras	by IDS Ima"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/anqixu/ueye_cam-release/archive/release/kinetic/ueye_cam/1.0.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

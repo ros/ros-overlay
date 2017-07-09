@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/kinetic/jsk_pr2eus/0.3.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Rosbridge provides a JSON API to ROS functionality for non-ROS programs.
-	The'"
+DESCRIPTION="Rosbridge provides a JSON API to ROS functionality for nonROS programs	The"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_suite/0.7.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

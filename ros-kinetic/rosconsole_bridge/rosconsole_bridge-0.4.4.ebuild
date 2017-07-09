@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosconsole_bridge is a package used in conjunction with console_bridge and rosco'"
+DESCRIPTION="rosconsole_bridge is a package used in conjunction with console_bridge and rosco"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/kinetic/rosconsole_bridge/0.4.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

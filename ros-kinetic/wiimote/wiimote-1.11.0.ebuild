@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The wiimote package allows ROS nodes to communicate with a Nintendo Wiimote
-	'"
+DESCRIPTION="The wiimote package allows ROS nodes to communicate with a Nintendo Wiimote	"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/wiimote/1.11.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

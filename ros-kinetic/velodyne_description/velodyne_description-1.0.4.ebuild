@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'URDF and meshes describing Velodyne laser scanners.'"
+DESCRIPTION="URDF and meshes describing Velodyne laser scanners"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/kinetic/velodyne_description/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

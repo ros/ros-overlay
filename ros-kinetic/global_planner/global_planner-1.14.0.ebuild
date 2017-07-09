@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A path planner library and node.'"
+DESCRIPTION="A path planner library and node"
 HOMEPAGE="http://wiki.ros.org/global_planner"
 SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/global_planner/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

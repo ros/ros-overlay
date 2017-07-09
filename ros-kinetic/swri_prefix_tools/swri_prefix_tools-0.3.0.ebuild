@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Contains scripts that are useful as prefix commands for nodes
-	started by ros'"
+DESCRIPTION="Contains scripts that are useful as prefix commands for nodes	started by ros"
 HOMEPAGE="https://github.com/swri-robotics/marti_common"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_prefix_tools/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

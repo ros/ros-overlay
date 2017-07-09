@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A libfreenect-based ROS driver for the Microsoft Kinect.  This is
-	a port of '"
+DESCRIPTION="A libfreenectbased ROS driver for the Microsoft Kinect  This is	a port of "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/kinetic/freenect_camera/0.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

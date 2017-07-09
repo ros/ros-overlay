@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python client library to access semantic maps within the world canvas framework.'"
+DESCRIPTION="Python client library to access semantic maps within the world canvas framework"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/world_canvas_libs-release/archive/release/kinetic/world_canvas_client_py/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A collection of .mk include files for building ROS architectural elements.
-	M'"
+DESCRIPTION="A collection of mk include files for building ROS architectural elements	M"
 HOMEPAGE="http://www.ros.org/wiki/ROS"
 SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/kinetic/mk/1.13.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

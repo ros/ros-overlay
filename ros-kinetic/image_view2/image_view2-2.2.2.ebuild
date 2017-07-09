@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A simple viewer for ROS image topics with draw-on features'"
+DESCRIPTION="A simple viewer for ROS image topics with drawon features"
 HOMEPAGE="http://ros.org/wiki/image_view2"
 SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

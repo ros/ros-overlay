@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The summit_xl_pad package allows to control the summit_xl product range (summit_'"
+DESCRIPTION="The summit_xl_pad package allows to control the summit_xl product range summit_"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_pad/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

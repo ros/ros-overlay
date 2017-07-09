@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Message and service types: custom messages and services for TurtleBot3 packages'"
+DESCRIPTION="Message and service types: custom messages and services for TurtleBot3 packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_msgs-release/archive/release/kinetic/turtlebot3_msgs/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

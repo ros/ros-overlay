@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A driver for the KVH DSP-3000 single-axis Fiber Optic Gyroscope.'"
+DESCRIPTION="A driver for the KVH DSP3000 singleaxis Fiber Optic Gyroscope"
 HOMEPAGE="http://www.ros.org/wiki/kvh"
 SRC_URI="https://github.com/ros-drivers-gbp/kvh_drivers-release/archive/release/kinetic/kvh/1.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

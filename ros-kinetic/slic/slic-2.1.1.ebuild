@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'SLIC-Superpizel ROS Wrapper
-  This file contains the class elements of the class'"
+DESCRIPTION="SLICSuperpizel ROS Wrapper  This file contains the class elements of the class"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/slic/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

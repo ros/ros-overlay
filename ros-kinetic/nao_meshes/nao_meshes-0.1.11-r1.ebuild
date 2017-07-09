@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'meshes for the Aldebaran Robotics NAO'"
+DESCRIPTION="meshes for the Aldebaran Robotics NAO"
 HOMEPAGE="http://github.com/vrabaud/nao_meshes/"
 SRC_URI="https://github.com/ros-naoqi/nao_meshes-release/archive/release/kinetic/nao_meshes/0.1.11-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

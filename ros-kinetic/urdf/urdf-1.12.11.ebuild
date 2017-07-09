@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a C++ parser for the Unified Robot Description
-	Format '"
+DESCRIPTION="This package contains a C parser for the Unified Robot Description	Format "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/urdf/1.12.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

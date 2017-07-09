@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Python composable command line utility http://click.pocoo.org/'"
+DESCRIPTION="Python composable command line utility http://clickpocooorg/"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/asmodehn/click-rosrelease/archive/release/kinetic/click/6.2.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

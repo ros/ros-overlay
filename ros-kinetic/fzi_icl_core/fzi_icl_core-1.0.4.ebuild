@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The fzi_icl_core package'"
+DESCRIPTION="The fzi_icl_core package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_core-release/archive/release/kinetic/fzi_icl_core/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

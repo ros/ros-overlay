@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple Kalman Filter in Python'"
+DESCRIPTION="Simple Kalman Filter in Python"
 HOMEPAGE="http://ros.org/wiki/kalman_filter"
 SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/kalman_filter/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

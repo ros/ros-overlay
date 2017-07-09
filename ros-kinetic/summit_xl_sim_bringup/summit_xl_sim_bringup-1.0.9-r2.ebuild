@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Launch files for Summit XL simulation.'"
+DESCRIPTION="Launch files for Summit XL simulation"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_sim_bringup/1.0.9-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

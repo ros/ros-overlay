@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Underlying data libraries for roscpp messages.'"
+DESCRIPTION="Underlying data libraries for roscpp messages"
 HOMEPAGE="http://www.ros.org/wiki/roscpp_core"
 SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_core/0.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

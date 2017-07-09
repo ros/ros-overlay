@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="brula#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

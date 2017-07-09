@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Provides an rtt typekit for ROS actionlib_msgs messages.
-
-	It allows you to u'"
+DESCRIPTION="Provides an rtt typekit for ROS actionlib_msgs messages	It allows you to u"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_actionlib_msgs/2.9.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

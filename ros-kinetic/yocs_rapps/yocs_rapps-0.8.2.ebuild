@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Yujin open control system rapps for use with the app manager and rocon concert'"
+DESCRIPTION="Yujin open control system rapps for use with the app manager and rocon concert"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_rapps/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

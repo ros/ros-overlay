@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'3D visualization tool for ROS.'"
+DESCRIPTION="3D visualization tool for ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/kinetic/rviz/1.12.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

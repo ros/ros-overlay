@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Kobuki-specific ROS plugins for Gazebo'"
+DESCRIPTION="Kobukispecific ROS plugins for Gazebo"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_gazebo_plugins/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

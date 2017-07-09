@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Virtual package providing ViSP related packages.'"
+DESCRIPTION="Virtual package providing ViSP related packages"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/lagadic/vision_visp-release/archive/release/kinetic/vision_visp/0.10.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

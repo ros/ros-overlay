@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple qt cmake build tools and master-chooser style application template.'"
+DESCRIPTION="Simple qt cmake build tools and masterchooser style application template"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/qt_ros-release/archive/release/kinetic/qt_ros/0.2.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

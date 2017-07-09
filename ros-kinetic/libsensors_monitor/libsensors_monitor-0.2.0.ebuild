@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A ROS node for using libsensors to provide diagnostics information about the sen'"
+DESCRIPTION="A ROS node for using libsensors to provide diagnostics information about the sen"
 HOMEPAGE="http://ros.org/wiki/libsensors_monitor"
 SRC_URI="https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/libsensors_monitor/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

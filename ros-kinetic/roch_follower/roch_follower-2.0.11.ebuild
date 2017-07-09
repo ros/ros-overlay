@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Follower for the roch. Follows humans and robots around by following the centroi'"
+DESCRIPTION="Follower for the roch Follows humans and robots around by following the centroi"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_follower/2.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

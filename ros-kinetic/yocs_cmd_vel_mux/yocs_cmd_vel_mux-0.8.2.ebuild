@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages '"
+DESCRIPTION="A multiplexer for command velocity inputs Arbitrates incoming cmd_vel messages "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_cmd_vel_mux/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

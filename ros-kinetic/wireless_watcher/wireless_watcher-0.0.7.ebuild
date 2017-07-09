@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The wireless_watcher package'"
+DESCRIPTION="The wireless_watcher package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/clearpath-gbp/wireless-release/archive/release/kinetic/wireless_watcher/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

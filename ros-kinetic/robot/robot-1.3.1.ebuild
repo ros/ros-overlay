@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A metapackage which extends ros_base and includes ROS libaries for any robot har'"
+DESCRIPTION="A metapackage which extends ros_base and includes ROS libaries for any robot har"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/robot/1.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

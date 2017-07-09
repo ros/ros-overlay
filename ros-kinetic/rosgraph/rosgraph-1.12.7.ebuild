@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'rosgraph contains the rosgraph command-line tool, which prints
-	information a'"
+DESCRIPTION="rosgraph contains the rosgraph commandline tool, which prints	information a"
 HOMEPAGE="http://ros.org/wiki/rosgraph"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosgraph/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

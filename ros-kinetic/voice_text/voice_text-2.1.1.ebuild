@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'voice_text (www.voicetext.jp)'"
+DESCRIPTION="voice_text wwwvoicetextjp"
 HOMEPAGE="http://ros.org/wiki/voice_text"
 SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/voice_text/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

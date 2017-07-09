@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Orocos/RTT component framework'"
+DESCRIPTION="Orocos/RTT component framework"
 HOMEPAGE="http://www.orocos.org/rtt"
 SRC_URI="https://github.com/orocos-gbp/rtt-release/archive/release/kinetic/rtt/2.9.0-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

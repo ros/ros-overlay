@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Maintains a local obstacle map (point cloud,
-   voxels or occupancy grid) from r'"
+DESCRIPTION="Maintains a local obstacle map point cloud,   voxels or occupancy grid from r"
 HOMEPAGE="http://wiki.ros.org/mrpt_local_obstacles"
 SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_local_obstacles/0.1.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ROS node to detect fiducial markers and determine their pose'"
+DESCRIPTION="ROS node to detect fiducial markers and determine their pose"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/fiducial_detect/0.7.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

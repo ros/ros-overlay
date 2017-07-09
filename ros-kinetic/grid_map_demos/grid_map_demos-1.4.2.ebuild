@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Demo nodes to demonstrate the usage of the grid map library.'"
+DESCRIPTION="Demo nodes to demonstrate the usage of the grid map library"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_demos/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

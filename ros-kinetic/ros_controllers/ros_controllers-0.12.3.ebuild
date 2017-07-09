@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Library of ros controllers'"
+DESCRIPTION="Library of ros controllers"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/ros_controllers/0.12.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

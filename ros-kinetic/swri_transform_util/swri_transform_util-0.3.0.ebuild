@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The swri_transform_util package contains utility functions and classes for
-	 '"
+DESCRIPTION="The swri_transform_util package contains utility functions and classes for	 "
 HOMEPAGE="https://github.com/swri-robotics/marti_common"
 SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

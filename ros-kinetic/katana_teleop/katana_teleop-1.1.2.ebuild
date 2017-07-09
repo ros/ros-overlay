@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package provides tele-operation nodes to control the Neuronics Katana 450 a'"
+DESCRIPTION="This package provides teleoperation nodes to control the Neuronics Katana 450 a"
 HOMEPAGE="http://ros.org/wiki/katana_teleop"
 SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_teleop/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

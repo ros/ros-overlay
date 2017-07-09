@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Open source libraries that will enable the Kinect to be used with Windows, Linux'"
+DESCRIPTION="Open source libraries that will enable the Kinect to be used with Windows, Linux"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-drivers-gbp/libfreenect-ros-release/archive/release/kinetic/libfreenect/0.5.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

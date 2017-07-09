@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Description of the Kobuki model.
-	  Provides the model description of Kobuki '"
+DESCRIPTION="Description of the Kobuki model	  Provides the model description of Kobuki "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_description/0.7.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

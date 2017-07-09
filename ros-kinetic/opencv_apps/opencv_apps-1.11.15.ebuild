@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="pul"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-perception/opencv_apps-release/archive/release/kinetic/opencv_apps/1.11.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

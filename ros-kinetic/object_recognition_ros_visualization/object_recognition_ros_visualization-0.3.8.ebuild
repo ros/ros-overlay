@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'object_recognition_ros_visualization contains rviz plugins to visualize ork dete'"
+DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork dete"
 HOMEPAGE="wg-perception.github.io/object_recognition_ros"
 SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/kinetic/object_recognition_ros_visualization/0.3.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

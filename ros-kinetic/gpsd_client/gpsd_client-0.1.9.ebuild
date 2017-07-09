@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'connects to a GPSd server and broadcasts GPS fixes 
-   using the NavSatFix messa'"
+DESCRIPTION="connects to a GPSd server and broadcasts GPS fixes	using the NavSatFix messa"
 HOMEPAGE="http://ros.org/wiki/gpsd_client"
 SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gpsd_client/0.1.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

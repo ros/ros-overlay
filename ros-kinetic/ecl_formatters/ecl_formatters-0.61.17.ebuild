@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The formatters here simply format various input types to a specified
-   text for'"
+DESCRIPTION="The formatters here simply format various input types to a specified   text for"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_formatters/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

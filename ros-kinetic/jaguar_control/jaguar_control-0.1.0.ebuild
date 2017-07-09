@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'DrRobot'"'"'s Jaguar 4X4 controller configurations'"
+DESCRIPTION="DrRobots Jaguar 4X4 controller configurations"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gstavrinos/jaguar-release/archive/release/kinetic/jaguar_control/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

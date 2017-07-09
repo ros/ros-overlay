@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Low-level build system macros and infrastructure for ROS.'"
+DESCRIPTION="Lowlevel build system macros and infrastructure for ROS"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

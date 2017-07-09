@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Lightweight frontier-based exploration.'"
+DESCRIPTION="Lightweight frontierbased exploration"
 HOMEPAGE="http://wiki.ros.org/explore_lite"
 SRC_URI="https://github.com/hrnr/m-explore-release/archive/release/kinetic/explore_lite/2.0.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

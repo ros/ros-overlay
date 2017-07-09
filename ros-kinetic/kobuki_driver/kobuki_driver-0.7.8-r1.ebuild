@@ -6,8 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'C++ driver library for Kobuki:
-	Pure C++ driver library for Kobuki. This is f'"
+DESCRIPTION="C driver library for Kobuki:	Pure C driver library for Kobuki This is f"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_driver/0.7.8-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

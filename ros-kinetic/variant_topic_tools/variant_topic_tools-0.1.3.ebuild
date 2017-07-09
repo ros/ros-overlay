@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Topic tools for treating messages as variant types.'"
+DESCRIPTION="Topic tools for treating messages as variant types"
 HOMEPAGE="http://github.com/ethz-asl/ros-topic-variant"
 SRC_URI="https://github.com/ethz-asl/variant-release/archive/release/kinetic/variant_topic_tools/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

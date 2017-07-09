@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Yujin'"'"'s Open Control System messages, services and actions'"
+DESCRIPTION="Yujins Open Control System messages, services and actions"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yocs_msgs-release/archive/release/kinetic/yocs_msgs/0.6.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

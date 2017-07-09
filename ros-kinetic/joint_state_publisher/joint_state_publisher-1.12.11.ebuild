@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'This package contains a tool for setting and publishing joint state values for a'"
+DESCRIPTION="This package contains a tool for setting and publishing joint state values for a"
 HOMEPAGE="http://www.ros.org/wiki/joint_state_publisher"
 SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/joint_state_publisher/1.12.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'qt_gui_py_common provides common functionality for GUI plugins written in Python'"
+DESCRIPTION="qt_gui_py_common provides common functionality for GUI plugins written in Python"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_py_common/0.3.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

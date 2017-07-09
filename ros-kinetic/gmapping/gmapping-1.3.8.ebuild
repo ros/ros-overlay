@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package contains a ROS wrapper for OpenSlam's Gmapping."
+DESCRIPTION="This package contains a ROS wrapper for OpenSlams Gmapping   The gmapping pac"
 HOMEPAGE="http://ros.org/wiki/gmapping"
 SRC_URI="https://github.com/ros-gbp/slam_gmapping-release/archive/release/kinetic/gmapping/1.3.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

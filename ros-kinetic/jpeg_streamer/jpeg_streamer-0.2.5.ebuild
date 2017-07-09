@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'tools for streaming JPEG-formatted CompressedImage topics over HTTP'"
+DESCRIPTION="tools for streaming JPEGformatted CompressedImage topics over HTTP"
 HOMEPAGE="http://ros.org/wiki/jpeg_streamer"
 SRC_URI="https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/kinetic/jpeg_streamer/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

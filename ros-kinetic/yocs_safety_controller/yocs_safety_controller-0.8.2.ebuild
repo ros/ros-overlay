@@ -6,9 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A controller ensuring the safe operation of your robot.
-
-	The SafetyControlle'"
+DESCRIPTION="A controller ensuring the safe operation of your robot	The SafetyControlle"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_safety_controller/0.8.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

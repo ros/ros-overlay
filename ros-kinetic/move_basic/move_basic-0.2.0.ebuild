@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Simple navigation package'"
+DESCRIPTION="Simple navigation package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/UbiquityRobotics-release/move_basic-release/archive/release/kinetic/move_basic/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

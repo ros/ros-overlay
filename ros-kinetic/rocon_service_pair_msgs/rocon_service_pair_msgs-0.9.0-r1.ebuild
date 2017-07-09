@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Paired pubsubs generators for non-blocking services.'"
+DESCRIPTION="Paired pubsubs generators for nonblocking services"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/kinetic/rocon_service_pair_msgs/0.9.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

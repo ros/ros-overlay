@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The industrial robot simulator is a stand in for industrial robot driver node(s)'"
+DESCRIPTION="The industrial robot simulator is a stand in for industrial robot driver nodes"
 HOMEPAGE="http://ros.org/wiki/industrial_robot_simulator"
 SRC_URI="https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_robot_simulator/0.6.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

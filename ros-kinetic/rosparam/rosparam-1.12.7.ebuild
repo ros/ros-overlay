@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="a#text"
 HOMEPAGE="http://ros.org/wiki/rosparam"
 SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosparam/1.12.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

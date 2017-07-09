@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'ardrone_autonomy is a ROS driver for Parrot AR-Drone 1.0 and 2.0 quadrocopters. '"
+DESCRIPTION="ardrone_autonomy is a ROS driver for Parrot ARDrone 10 and 20 quadrocopters "
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/AutonomyLab/ardrone_autonomy-release/archive/release/kinetic/ardrone_autonomy/1.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

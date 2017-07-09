@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Single image rectification and color processing.'"
+DESCRIPTION="Single image rectification and color processing"
 HOMEPAGE="http://www.ros.org/wiki/image_proc"
 SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_proc/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

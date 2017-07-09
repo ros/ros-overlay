@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Move the robot base until a desired end-effector pose can be reached.'"
+DESCRIPTION="Move the robot base until a desired endeffector pose can be reached"
 HOMEPAGE="http://wiki.ros.org/move_base_to_manip"
 SRC_URI="https://github.com/UTNuclearRoboticsPublic/move_base_to_manip-release/archive/release/kinetic/move_base_to_manip/1.0.18-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

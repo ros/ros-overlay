@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'The nmea_msgs package contains messages related to data in the NMEA format.'"
+DESCRIPTION="The nmea_msgs package contains messages related to data in the NMEA format"
 HOMEPAGE="http://ros.org/wiki/nmea_msgs"
 SRC_URI="https://github.com/ros-drivers-gbp/nmea_msgs-release/archive/release/kinetic/nmea_msgs/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

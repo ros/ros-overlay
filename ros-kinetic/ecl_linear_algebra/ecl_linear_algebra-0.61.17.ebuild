@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Ecl frontend to a linear matrix package (currently eigen).'"
+DESCRIPTION="Ecl frontend to a linear matrix package currently eigen"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_linear_algebra/0.61.17-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

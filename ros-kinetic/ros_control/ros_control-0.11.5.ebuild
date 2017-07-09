@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'A set of packages that include controller interfaces, controller managers, trans'"
+DESCRIPTION="A set of packages that include controller interfaces, controller managers, trans"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/ros_control/0.11.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

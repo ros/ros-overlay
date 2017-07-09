@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Components of MoveIt connecting to MongoDB'"
+DESCRIPTION="Components of MoveIt connecting to MongoDB"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_warehouse/0.9.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

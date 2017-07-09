@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_plugins/1.3.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt'"
+DESCRIPTION="hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt"
 HOMEPAGE="http://ros.org/wiki/hector_gazebo_worlds"
 SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo_worlds/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

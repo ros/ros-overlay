@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Definition of the multi-layered grid map message type.'"
+DESCRIPTION="Definition of the multilayered grid map message type"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/grid_map_msgs/1.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 

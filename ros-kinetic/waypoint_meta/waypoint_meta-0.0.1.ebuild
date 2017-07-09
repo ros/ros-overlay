@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="'Waypoint Meta package'"
+DESCRIPTION="Waypoint Meta package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/jihoonl/waypoint-release/archive/release/kinetic/waypoint_meta/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
