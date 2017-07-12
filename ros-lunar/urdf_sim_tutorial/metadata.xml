@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Extract geometry value of a vehicle from urdf
+    The urdf_sim_tutorial package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>vincent.rousseau@irstea.fr</email>
-      <name>Vincent Rousseau</name>
+      <email>davidvlu@gmail.com</email>
+      <name>David V. Lu!!</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/urdf_geometry_parser/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/urdf_tutorial/issues</bugs-to>
   </upstream>
 </pkgmetadata>
