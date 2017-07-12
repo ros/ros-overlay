@@ -2,64 +2,39 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
 DESCRIPTION="SawYer roch controller configurations"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/indigo/roch_teleop/1.0.13-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/indigo/roch_teleop/1.0.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/controller_manager
-    ros-indigo/diff_drive_controller
-    ros-indigo/geometry_msgs
-    ros-indigo/interactive_marker_twist_server
-    ros-indigo/joint_state_controller
-    ros-indigo/joint_trajectory_controller
-    ros-indigo/joy
-    ros-indigo/robot_localization
-    ros-indigo/roscpp
-    ros-indigo/rostopic
-    ros-indigo/teleop_twist_joy
-    ros-indigo/twist_mux
-    ros-indigo/yocs_cmd_vel_mux
-    ros-indigo/yocs_velocity_smoother
+	ros-indigo/controller_manager
+	ros-indigo/diff_drive_controller
+	ros-indigo/geometry_msgs
+	ros-indigo/interactive_marker_twist_server
+	ros-indigo/joint_state_controller
+	ros-indigo/joint_trajectory_controller
+	ros-indigo/joy
+	ros-indigo/robot_localization
+	ros-indigo/roscpp
+	ros-indigo/rostopic
+	ros-indigo/teleop_twist_joy
+	ros-indigo/twist_mux
+	ros-indigo/yocs_cmd_vel_mux
+	ros-indigo/yocs_velocity_smoother
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
-    ros-indigo/roslaunch
+	ros-indigo/catkin
+	ros-indigo/roslaunch
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

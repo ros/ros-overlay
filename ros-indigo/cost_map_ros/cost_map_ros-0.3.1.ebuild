@@ -2,63 +2,38 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="Cost maps, following the style of ethz-asl's grid_map library."
+DESCRIPTION="Cost maps, following the style of ethzasls grid_map library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_ros/0.3.1-0.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_ros/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/cost_map_core
-    ros-indigo/cost_map_msgs
-    ros-indigo/costmap_2d
-    ros-indigo/ecl_build
-    ros-indigo/ecl_command_line
-    ros-indigo/ecl_console
-    ros-indigo/grid_map_core
-    ros-indigo/grid_map_ros
-    ros-indigo/grid_map_visualization
-    ros-indigo/nav_msgs
-    ros-indigo/roslib
-    dev-libs/boost
-    media-libs/opencv
-    dev-cpp/yaml-cpp
+	ros-indigo/cost_map_core
+	ros-indigo/cost_map_msgs
+	ros-indigo/costmap_2d
+	ros-indigo/ecl_build
+	ros-indigo/ecl_command_line
+	ros-indigo/ecl_console
+	ros-indigo/grid_map_core
+	ros-indigo/grid_map_ros
+	ros-indigo/grid_map_visualization
+	ros-indigo/nav_msgs
+	ros-indigo/roslib
+	dev-libs/boost
+	media-libs/opencv
+	dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
