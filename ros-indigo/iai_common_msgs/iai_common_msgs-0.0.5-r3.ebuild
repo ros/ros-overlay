@@ -2,66 +2,41 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
 DESCRIPTION="Message definitions created and used by the Institute for Artificial Intelligenc"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_common_msgs/0.0.5-3.tar.gz -> ${P}-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/iai_common_msgs/0.0.5-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/data_vis_msgs
-    ros-indigo/designator_integration_msgs
-    ros-indigo/dna_extraction_msgs
-    ros-indigo/grasp_stability_msgs
-    ros-indigo/iai_content_msgs
-    ros-indigo/iai_control_msgs
-    ros-indigo/iai_kinematics_msgs
-    ros-indigo/iai_robosherlock_actions
-    ros-indigo/iai_urdf_msgs
-    ros-indigo/iai_wsg_50_msgs
-    ros-indigo/json_prolog_msgs
-    ros-indigo/mln_robosherlock_msgs
-    ros-indigo/person_msgs
-    ros-indigo/planning_msgs
-    ros-indigo/saphari_msgs
-    ros-indigo/scanning_table_msgs
-    ros-indigo/sherlock_sim_msgs
+	ros-indigo/data_vis_msgs
+	ros-indigo/designator_integration_msgs
+	ros-indigo/dna_extraction_msgs
+	ros-indigo/grasp_stability_msgs
+	ros-indigo/iai_content_msgs
+	ros-indigo/iai_control_msgs
+	ros-indigo/iai_kinematics_msgs
+	ros-indigo/iai_robosherlock_actions
+	ros-indigo/iai_urdf_msgs
+	ros-indigo/iai_wsg_50_msgs
+	ros-indigo/json_prolog_msgs
+	ros-indigo/mln_robosherlock_msgs
+	ros-indigo/person_msgs
+	ros-indigo/planning_msgs
+	ros-indigo/saphari_msgs
+	ros-indigo/scanning_table_msgs
+	ros-indigo/sherlock_sim_msgs
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="opt/ros/indigo"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="/${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=/${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}

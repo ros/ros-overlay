@@ -2,52 +2,27 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5} )
 
-inherit cmake-utils eutils
+inherit ros-cmake
 
-DESCRIPTION="This provides an Eigen implementation for ecl's linear algebra."
+DESCRIPTION="This provides an Eigen implementation for ecls linear algebra"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_eigen/0.61.18-0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_eigen/0.61.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-PYTHON_DEPEND="3::3.5"
-
 RDEPEND="
-    ros-indigo/ecl_license
-    dev-cpp/eigen
+	ros-indigo/ecl_license
+	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-    ros-indigo/catkin
-    ros-indigo/cmake_modules
+	ros-indigo/catkin
+	ros-indigo/cmake_modules
 "
 
-SLOT="indigo"
-CMAKE_BUILD_TYPE=RelWithDebInfo
-ROS_PREFIX="/opt/ros/indigo"
+SLOT="0"
+ROS_DISTRO="indigo"
+ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-src_unpack() {
-    default
-    mv *${P}* ${P}
-}
-
-src_configure() {
-    append-cxxflags "-std=c++11"
-    export DEST_SETUP_DIR="${ROS_PREFIX}"
-    local mycmakeargs=(
-        -DCMAKE_INSTALL_PREFIX=${D%/}${ROS_PREFIX}
-        -DCMAKE_PREFIX_PATH=${ROS_PREFIX}
-        -DPYTHON_INSTALL_DIR=lib64/python3.5/site-packages
-        -DCATKIN_ENABLE_TESTING=OFF
-        -DPYTHON_EXECUTABLE=/usr/bin/ros-python-indigo
-        -DCATKIN_BUILD_BINARY_PACAKGE=1
-
-     )
-    cmake-utils_src_configure
-}
-
-src_install() {
-    cd ${WORKDIR}/${P}_build
-    make install || die
-}
