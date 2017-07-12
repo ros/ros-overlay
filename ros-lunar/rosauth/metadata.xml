@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Extract geometry value of a vehicle from urdf
+    Server Side tools for Authorization and Authentication of ROS Clients
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>vincent.rousseau@irstea.fr</email>
-      <name>Vincent Rousseau</name>
+      <email>rctoris@wpi.edu</email>
+      <name>Russell Toris</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/urdf_geometry_parser/issues</bugs-to>
+    <bugs-to>https://github.com/gt-rail/rosauth/issues</bugs-to>
   </upstream>
 </pkgmetadata>
