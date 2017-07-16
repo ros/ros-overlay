@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    posedetection_msgs provides messages and services to facilitate passing pose detection results and features.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Basic diagnostic_aggregator tests are  in the
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
