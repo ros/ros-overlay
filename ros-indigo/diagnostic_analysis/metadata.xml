@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The diagnostic_analysis package can convert a log of diagnostics data
+    into a series of CSV files. Robot logs are recorded with rosbag, and
+    can be processed offline using the scripts in this package.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

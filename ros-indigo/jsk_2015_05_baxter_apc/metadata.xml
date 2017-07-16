@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS package for Amazon Picking Challenge in May 2015
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
