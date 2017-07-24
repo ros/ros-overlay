@@ -14,8 +14,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
-		dev-python/distribute[${PYTHON_USEDEP}]
 		dev-python/rospkg[${PYTHON_USEDEP}]
-		>=dev-python/rosdistro-0.3.4[${PYTHON_USEDEP}]
+		dev-python/rosdistro[${PYTHON_USEDEP}]
 		>=dev-python/catkin_pkg-0.1.28[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
