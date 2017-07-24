@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    jsk_fetch_startup
+
+     data/boost_sound.wav is downloaded from https://www.youtube.com/watch?v=HM-xG0qXaeA
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

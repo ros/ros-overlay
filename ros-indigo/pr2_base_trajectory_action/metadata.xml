@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    pr2_base_trajectory_action is a node that exposes and action
+     interface to move robot base along a trajectory.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>t@t.com</email>
-      <name>saito</name>
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
     </maintainer>
     <bugs-to>https://github.com/tork-a/jsk_robot/issues</bugs-to>
   </upstream>

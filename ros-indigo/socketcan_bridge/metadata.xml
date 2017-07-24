@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provides nodes to convert messages from SocketCAN to a ROS Topic and vice versa.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
