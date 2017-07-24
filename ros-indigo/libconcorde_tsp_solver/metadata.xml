@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Wrapper for the concorde traveling salesman problem solver. The code was obtained from http://www.math.uwaterloo.ca/tsp/concorde/downloads/downloads.htm all rights of it go to the corresponding authors David Applegate, Robert Bixby, Vasek Chvatal and William Cook. 
+The library doesn't give a specific license, but is provided free for academic research use, for further licensing options contact William Cook.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>richard.bormann@ipa.fraunhofer.de</email>
+      <name>Richard Bormann</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_extern/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

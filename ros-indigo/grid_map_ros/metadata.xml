@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS interface for the grid map library to manage two-dimensional grid maps with multiple data layers.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

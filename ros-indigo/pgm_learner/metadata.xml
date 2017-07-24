@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Parameter/Structure Estimation and Inference for Bayesian Belief Network
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
