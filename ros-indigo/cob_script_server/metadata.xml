@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The cob_script_server package provides a simple interface to operate Care-O-bot. It can be used via the python API or the actionlib interface.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
