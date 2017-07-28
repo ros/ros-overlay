@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A metapackage to bring in the default packages second generation Transform Library in ros, tf2.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

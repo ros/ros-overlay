@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    If your robot loses connection to the base station it will stop motors or navigate home.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>danielsnider12@gmail.com</email>
+      <name>Daniel Snider</name>
+    </maintainer>
+    <bugs-to>https://github.com/danielsnider/lost_comms_recovery/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
