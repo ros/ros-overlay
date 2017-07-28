@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Conversion functions between:
+      - Eigen and KDL
+      - Eigen and geometry_msgs.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

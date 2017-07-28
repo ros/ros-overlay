@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    The metapackage to combine the nodes required to establish and manage a multimaster network. 
+    This requires no or minimal configuration. The changes are automatically detected and synchronized.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>

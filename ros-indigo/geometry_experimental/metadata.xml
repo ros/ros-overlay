@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The second generation Transform Library in ros.  This metapackage is deprecated, but is kept for backwards compatability.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
