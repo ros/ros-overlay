@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    An action interface to MoveIt!'s pick-and-place for Care-O-bot
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
