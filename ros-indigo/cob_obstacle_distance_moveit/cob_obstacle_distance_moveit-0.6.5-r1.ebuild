@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides nodes for calculating the minimal distance to robot links,"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_obstacle_distance_moveit/0.6.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_obstacle_distance_moveit/0.6.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

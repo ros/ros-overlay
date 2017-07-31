@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Default configuration of the different robots supported by the Care-O-bot stacks. Configuration is e.g. preconfigured joint positions.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

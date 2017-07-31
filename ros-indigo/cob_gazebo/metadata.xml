@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Launch files and tools for 3D simulation of Care-O-bot in gazebo simulator.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
