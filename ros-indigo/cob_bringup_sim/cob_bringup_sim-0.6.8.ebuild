@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides launch files for starting a simulated CareObot"
+DESCRIPTION="This package provides launch files for starting a simulated Care-O-bot."
 HOMEPAGE="http://ros.org/wiki/cob_bringup_sim"
-SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_bringup_sim/0.6.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_bringup_sim/0.6.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

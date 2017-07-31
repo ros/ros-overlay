@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The collision monitor uses the planning scene monitor to read the state of the r"
 HOMEPAGE="http://wiki.ros.org/cob_collision_monitor"
-SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_collision_monitor/0.6.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_collision_monitor/0.6.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 

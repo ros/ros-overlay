@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The cob_manipulation stack includes packages that provide manipulation capabilit"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_manipulation/0.6.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_manipulation/0.6.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -18,12 +18,10 @@ RDEPEND="
 	ros-indigo/cob_grasp_generation
 	ros-indigo/cob_kinematics
 	ros-indigo/cob_lookat_action
-	ros-indigo/cob_moveit_config
+	ros-indigo/cob_moveit_bringup
 	ros-indigo/cob_moveit_interface
 	ros-indigo/cob_obstacle_distance_moveit
 	ros-indigo/cob_pick_place_action
-	ros-indigo/cob_tactiletools
-	ros-indigo/cob_tray_monitor
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin

@@ -6,24 +6,24 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="IK solvers and utilities for CareObot"
+DESCRIPTION="Grasp generation for Care-O-bot based on OpenRAVE"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_kinematics/0.6.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_manipulation-release/archive/release/indigo/cob_grasp_generation/0.6.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-indigo/actionlib
+	ros-indigo/actionlib_msgs
 	ros-indigo/geometry_msgs
 	ros-indigo/message_runtime
-	ros-indigo/moveit_core
 	ros-indigo/moveit_msgs
-	ros-indigo/pluginlib
-	ros-indigo/roscpp
-	ros-indigo/std_msgs
-	ros-indigo/tf_conversions
-	ros-indigo/urdf
-	virtual/lapack
+	ros-indigo/roslib
+	ros-indigo/rospy
+	ros-indigo/tf
+	ros-indigo/trajectory_msgs
+	sci-libs/scipy
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
