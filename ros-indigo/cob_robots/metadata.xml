@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This stack holds packages for hardware configuration as well as launch files for starting up the basic layer for operating Care-O-bot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
