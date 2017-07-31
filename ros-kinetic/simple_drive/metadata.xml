@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Grasp generation for Care-O-bot based on OpenRAVE
+    A full, but simple robot drive system. Includes skid steering joystick teleoperation, control of a panning servo, a cmd_vel multiplexer, and Arduino firmware.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fxm@ipa.fhg.de</email>
-      <name>Felix Messmer</name>
+      <email>danielsnider12@gmail.com</email>
+      <name>Daniel Snider</name>
     </maintainer>
-    <bugs-to>https://github.com/ipa320/cob_manipulation/issues</bugs-to>
+    <bugs-to>https://github.com/danielsnider/simple_drive/issues</bugs-to>
   </upstream>
 </pkgmetadata>

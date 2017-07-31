@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides some worlds for gazebo simulation"
+DESCRIPTION="This package provides some worlds for gazebo simulation."
 HOMEPAGE="http://ros.org/wiki/cob_gazebo_worlds"
-SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_gazebo_worlds/0.6.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_gazebo_worlds/0.6.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -25,7 +25,6 @@ RDEPEND="
 	ros-indigo/robot_state_publisher
 	ros-indigo/roslaunch
 	ros-indigo/rospy
-	ros-indigo/rostest
 	ros-indigo/std_msgs
 	ros-indigo/tf
 	ros-indigo/velocity_controllers
