@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Grasp generation for Care-O-bot based on OpenRAVE
+    ProAut parameter package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fxm@ipa.fhg.de</email>
-      <name>Felix Messmer</name>
+      <email>wepet@hrz.tu-chemnitz.de</email>
+      <name>Peter Weissig</name>
     </maintainer>
-    <bugs-to>https://github.com/ipa320/cob_manipulation/issues</bugs-to>
+    <bugs-to>https://github.com/peterweissig/ros_parameter/issues</bugs-to>
   </upstream>
 </pkgmetadata>
