@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains scripts that are useful as prefix commands for nodes
+    started by roslaunch.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
