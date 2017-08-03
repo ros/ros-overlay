@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides added functionaliy on top of rospy, including a
+  single-threaded callback queue.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

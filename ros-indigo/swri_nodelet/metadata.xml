@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides a simple script to write simple launch files
+    that can easily switch between running nodelets together or as
+    standalone nodes.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
