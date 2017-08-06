@@ -12,8 +12,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>dhood@osrfoundation.org</email>
+      <name>D. Hood</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/qt_gui_core/issues</bugs-to>
   </upstream>

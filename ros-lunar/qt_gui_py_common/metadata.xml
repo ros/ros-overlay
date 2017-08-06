@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>scholz@sim.tu-darmstadt.de</email>
-      <name>Dorian Scholz</name>
+      <email>dhood@osrfoundation.org</email>
+      <name>D. Hood</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/qt_gui_core/issues</bugs-to>
   </upstream>
