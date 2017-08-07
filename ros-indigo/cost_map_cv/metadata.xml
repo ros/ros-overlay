@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Conversions between cost_maps and opencv images.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
