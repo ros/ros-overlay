@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="C ROS message and service generators"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/gencpp-release/archive/release/kinetic/gencpp/0.5.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gencpp-release/archive/release/kinetic/gencpp/0.5.5-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
