@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to fol"
 HOMEPAGE="http://wiki.ros.org/carrot_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/carrot_planner/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/carrot_planner/1.15.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

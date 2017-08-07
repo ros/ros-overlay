@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://wiki.ros.org/amcl"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/amcl/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/amcl/1.15.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -18,13 +18,12 @@ RDEPEND="
 	ros-lunar/nav_msgs
 	ros-lunar/rosbag
 	ros-lunar/roscpp
+	ros-lunar/std_srvs
 	ros-lunar/tf
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
 	ros-lunar/message_filters
-	ros-lunar/rostest
-	ros-lunar/std_srvs
 "
 
 SLOT="0"

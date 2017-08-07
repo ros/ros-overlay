@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="voxel_grid provides an implementation of an efficient 3D voxel grid. The occupan"
 HOMEPAGE="http://wiki.ros.org/voxel_grid"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/voxel_grid/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/voxel_grid/1.15.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
