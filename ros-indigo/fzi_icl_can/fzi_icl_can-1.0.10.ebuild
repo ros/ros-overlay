@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fzi_icl_can package"
 HOMEPAGE="http://wiki.ros.org/fzi_icl_can"
-SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_can-release/archive/release/indigo/fzi_icl_can/1.0.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_can-release/archive/release/indigo/fzi_icl_can/1.0.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
@@ -18,6 +18,7 @@ RDEPEND="
 	ros-indigo/fzi_icl_core
 	dev-libs/popt
 	sys-kernel/linux-headers
+	dev-libs/tinyxml
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake

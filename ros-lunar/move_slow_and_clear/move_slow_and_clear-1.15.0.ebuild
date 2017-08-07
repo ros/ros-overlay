@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides common interfaces for navigation specific robot actions. C"
-HOMEPAGE="http://wiki.ros.org/nav_core"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/nav_core/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="move_slow_and_clear"
+HOMEPAGE="http://wiki.ros.org/move_slow_and_clear"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/move_slow_and_clear/1.15.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,11 +16,13 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-lunar/costmap_2d
 	ros-lunar/geometry_msgs
-	ros-lunar/std_msgs
-	ros-lunar/tf
+	ros-lunar/nav_core
+	ros-lunar/pluginlib
+	ros-lunar/roscpp
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
+	ros-lunar/cmake_modules
 "
 
 SLOT="0"

@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A 2D navigation stack that takes in information from odometry, sensor\
 		st"
 HOMEPAGE="http://wiki.ros.org/navigation"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/navigation/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/lunar/navigation/1.15.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="( BSD LGPL-2 LGPL-2 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
