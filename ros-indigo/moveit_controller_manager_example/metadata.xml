@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    An example controller manager plugin for MoveIt. This is not functional code.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

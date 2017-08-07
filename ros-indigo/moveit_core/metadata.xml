@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Core libraries used by MoveIt!
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
