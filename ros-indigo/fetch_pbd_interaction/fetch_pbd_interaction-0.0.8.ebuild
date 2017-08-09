@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fetch_pbd_interaction package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/fetchrobotics/fetch_pbd-release/archive/release/indigo/fetch_pbd_interaction/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics/fetch_pbd-release/archive/release/indigo/fetch_pbd_interaction/0.0.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -20,9 +20,14 @@ RDEPEND="
 	ros-indigo/interactive_markers
 	ros-indigo/message_runtime
 	ros-indigo/moveit_commander
+	ros-indigo/moveit_msgs
+	ros-indigo/moveit_ros_planning
+	ros-indigo/pcl_ros
 	ros-indigo/rail_manipulation_msgs
 	ros-indigo/rail_segmentation
+	ros-indigo/ros_numpy
 	ros-indigo/rosbridge_server
+	ros-indigo/roscpp
 	ros-indigo/rospy
 	ros-indigo/rospy_message_converter
 	ros-indigo/std_msgs
@@ -35,7 +40,7 @@ DEPEND="${RDEPEND}
 	ros-indigo/actionlib
 	ros-indigo/catkin
 	ros-indigo/message_generation
-	ros-indigo/roscpp
+	ros-indigo/moveit_ros_planning_interface
 	dev-vcs/git
 "
 

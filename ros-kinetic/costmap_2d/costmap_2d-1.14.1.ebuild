@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides an implementation of a 2D costmap that takes in sensor   "
+DESCRIPTION="This package provides an implementation of a 2D costmap that takes in sensor\
+   "
 HOMEPAGE="http://wiki.ros.org/costmap_2d"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,7 +27,6 @@ RDEPEND="
 	ros-kinetic/pluginlib
 	ros-kinetic/rosconsole
 	ros-kinetic/roscpp
-	ros-kinetic/rostest
 	ros-kinetic/sensor_msgs
 	ros-kinetic/std_msgs
 	ros-kinetic/tf

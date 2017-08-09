@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
 HOMEPAGE="http://wiki.ros.org/clear_costmap_recovery"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
