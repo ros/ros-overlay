@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="tta#text"
 HOMEPAGE="http://wiki.ros.org/map_server"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,8 +16,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/nav_msgs
 	ros-kinetic/roscpp
-	ros-kinetic/rostest
-	ros-kinetic/tf
+	ros-kinetic/tf2
+	sci-physics/bullet
+	media-libs/libsdl
 	media-libs/sdl-image
 	dev-cpp/yaml-cpp
 "

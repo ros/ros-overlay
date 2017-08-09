@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fetch_social_gaze package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/fetchrobotics/fetch_pbd-release/archive/release/indigo/fetch_social_gaze/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics/fetch_pbd-release/archive/release/indigo/fetch_social_gaze/0.0.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

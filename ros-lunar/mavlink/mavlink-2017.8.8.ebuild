@@ -6,15 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVLink message marshaling library  This package provides Cheaders and C11 "
+DESCRIPTION="MAVLink message marshaling library.\
+  This package provides C-headers and C++11 "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.7.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/lunar/mavlink/2017.8.8-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/catkin
+	ros-lunar/catkin
 	dev-lang/python
 "
 DEPEND="${RDEPEND}
@@ -25,6 +26,6 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 

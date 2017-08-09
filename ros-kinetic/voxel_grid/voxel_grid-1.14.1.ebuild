@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="voxel_grid provides an implementation of an efficient 3D voxel grid The occupan"
+DESCRIPTION="voxel_grid provides an implementation of an efficient 3D voxel grid. The occupan"
 HOMEPAGE="http://wiki.ros.org/voxel_grid"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

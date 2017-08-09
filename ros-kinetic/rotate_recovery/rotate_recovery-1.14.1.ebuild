@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
 HOMEPAGE="http://wiki.ros.org/rotate_recovery"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
