@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    This package is composed of 'dynamixel_tool', 'dynamixel_driver' and 'dynamixel_multi_driver' class.
+    The 'dynamixel_tool' class loads the information of Dynamixel stored in '.device' files.
+    The 'dynamixel_driver' class which is based on dynamixel_sdk provides functions to control an Dynamixel.
+    The 'dynamixel_multi_driver' class which is inherited by 'dynamixel_driver' class provides functions to control Dynamixels.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
