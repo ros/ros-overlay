@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Message and service data structures for interacting with Gazebo from ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

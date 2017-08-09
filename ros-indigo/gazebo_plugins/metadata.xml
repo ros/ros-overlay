@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
