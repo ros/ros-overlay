@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://wiki.ros.org/amcl"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -18,12 +18,13 @@ RDEPEND="
 	ros-kinetic/nav_msgs
 	ros-kinetic/rosbag
 	ros-kinetic/roscpp
-	ros-kinetic/std_srvs
 	ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/message_filters
+	ros-kinetic/rostest
+	ros-kinetic/std_srvs
 "
 
 SLOT="0"

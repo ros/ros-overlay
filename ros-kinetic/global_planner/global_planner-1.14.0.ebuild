@@ -6,25 +6,27 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
-HOMEPAGE="http://wiki.ros.org/rotate_recovery"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="A path planner library and node."
+HOMEPAGE="http://wiki.ros.org/global_planner"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/global_planner/1.14.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/costmap_2d
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/geometry_msgs
 	ros-kinetic/nav_core
+	ros-kinetic/nav_msgs
+	ros-kinetic/navfn
 	ros-kinetic/pluginlib
 	ros-kinetic/roscpp
 	ros-kinetic/tf
-	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/base_local_planner
+	ros-kinetic/angles
 	ros-kinetic/catkin
-	ros-kinetic/cmake_modules
 "
 
 SLOT="0"

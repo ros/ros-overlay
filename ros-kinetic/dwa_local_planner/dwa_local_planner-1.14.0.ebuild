@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="a#text"
 HOMEPAGE="http://wiki.ros.org/dwa_local_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
