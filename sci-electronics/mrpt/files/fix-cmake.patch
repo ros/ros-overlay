@@ -1,0 +1,15 @@
+diff --git a/cmakemodules/script_python_bindings.cmake b/cmakemodules/script_python_bindings.cmake
+index b96aea0..a62f1f4 100644
+--- a/cmakemodules/script_python_bindings.cmake
++++ b/cmakemodules/script_python_bindings.cmake
+@@ -13,8 +13,8 @@ ENDIF(DISABLE_PYTHON_BINDINGS)
+ IF(UNIX AND NOT DISABLE_PYTHON_BINDINGS)
+     #SET( BUILD_PY_BINDINGS OFF CACHE BOOL "If you want to build the MRPT python bindings, enable this.")
+     # find packages quiet
+-    FIND_PACKAGE(Boost QUIET COMPONENTS python)
+-    FIND_PACKAGE(PythonLibs 2.7 QUIET)
++    # FIND_PACKAGE(Boost REQUIRED COMPONENTS python)
++    FIND_PACKAGE(PythonLibs)
+ 
+     # build python bindings if we have all requirements
+     IF(Boost_FOUND AND PYTHONLIBS_FOUND)

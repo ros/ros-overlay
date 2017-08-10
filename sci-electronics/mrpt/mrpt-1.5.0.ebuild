@@ -3,17 +3,17 @@
 
 EAPI=6
 
-inherit cmake-utils versionator vcs-snapshot flag-o-matic
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="Mobile Robot Programming Toolkit"
 HOMEPAGE="http://www.mrpt.org/"
-SRC_URI="https://github.com/MRPT/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/MRPT/${PN}/archive/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
 LICENSE="BSD-3-Clause"
 # Subslot = major version = soname of libs
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-IUSE="ftdi dc1394 "
+IUSE="ftdi dc1394"
 
 RDEPEND="
 	dev-cpp/eigen
@@ -29,16 +29,14 @@ RDEPEND="
 	virtual/libusb
 	sci-libs/pcl
 	virtual/udev
-	sci-libs/libpcap
+	net-libs/libpcap
 "
 DEPEND="${RDEPEND}"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
-src_configure() {
-	# doesnt build without it
-	append-cxxflags "-std=c++11"
-	# doesnt build with as-needed either
-	append-ldflags "-Wl,--no-as-needed"
-
-	cmake-utils_src_configure
+src_unpack() {
+	default
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+				 EPATCH_FORCE="yes" epatch
 }
