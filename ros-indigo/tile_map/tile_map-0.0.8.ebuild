@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tile map provides a slippy map style interface for visualizing	  OpenStreetM"
+DESCRIPTION="Tile map provides a slippy map style interface for visualizing \
+	 OpenS[...]"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/tile_map/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/tile_map/0.0.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

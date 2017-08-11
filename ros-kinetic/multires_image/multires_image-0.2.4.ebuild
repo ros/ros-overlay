@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="multires_image"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/0.2.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

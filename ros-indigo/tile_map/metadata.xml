@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Tile map provides a slippy map style interface for visualizing 
+     OpenStreetMap and GooleMap tiles.  A mapviz visualization plug-in is also
+     implemented
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

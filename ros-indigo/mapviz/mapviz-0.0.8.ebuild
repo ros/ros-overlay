@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="mapviz"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/mapviz/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/indigo/mapviz/0.0.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
