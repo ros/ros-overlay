@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    multires_image
+    Configuration package for Pyros
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>malban@swri.org</email>
-      <name>Marc Alban</name>
+      <email>asmodehn@gmail.com</email>
+      <name>AlexV</name>
     </maintainer>
-    <bugs-to>https://github.com/swri-robotics-gbp/mapviz/issues</bugs-to>
+    <bugs-to>https://github.com/pyros-dev/pyros-config-rosrelease/issues</bugs-to>
   </upstream>
 </pkgmetadata>

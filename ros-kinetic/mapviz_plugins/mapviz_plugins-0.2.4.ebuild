@@ -6,31 +6,40 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tile map provides a slippy map style interface for visualizing	  OpenStreetM"
+DESCRIPTION="Common plugins for the Mapviz visualization tool"
 HOMEPAGE="https://github.com/swri-robotics/mapviz"
-SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/tile_map/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz_plugins/0.2.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-kinetic/cv_bridge
+	ros-kinetic/image_transport
 	ros-kinetic/mapviz
+	ros-kinetic/marti_common_msgs
+	ros-kinetic/marti_nav_msgs
+	ros-kinetic/marti_visualization_msgs
+	ros-kinetic/nav_msgs
 	ros-kinetic/pluginlib
 	ros-kinetic/roscpp
+	ros-kinetic/sensor_msgs
+	ros-kinetic/std_msgs
+	ros-kinetic/stereo_msgs
+	ros-kinetic/swri_image_util
 	ros-kinetic/swri_math_util
+	ros-kinetic/swri_route_util
 	ros-kinetic/swri_transform_util
 	ros-kinetic/swri_yaml_util
 	ros-kinetic/tf
-	dev-libs/jsoncpp
+	ros-kinetic/visualization_msgs
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
-	dev-qt/qtnetwork:5
 	dev-qt/qtopengl:5
 	dev-qt/qtwidgets:5
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
-	dev-libs/jsoncpp
 	dev-qt/qtopengl:5
 "
 

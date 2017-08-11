@@ -6,19 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Catkin macros to allow using pure python packages in usual catkin workspaces wit"
+DESCRIPTION="Configuration package for Pyros"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pyros-dev/catkin_pip-release/archive/release/lunar/catkin_pip/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pyros-dev/pyros-config-rosrelease/archive/release/lunar/pyros_config/0.2.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-lang/python
-	dev-python/pip
+	dev-python/pytest
+	dev-python/six
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
+	ros-lunar/catkin_pip
 "
 
 SLOT="0"
