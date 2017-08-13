@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Catkin wrapper for the official ARSDK from Parrot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/AutonomyLab/parrot_arsdk-release/archive/release/indigo/parrot_arsdk/3.12.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/AutonomyLab/parrot_arsdk-release/archive/release/indigo/parrot_arsdk/3.12.6-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
