@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains a C++ parser for the Unified Robot Description
+    Format (URDF), which is an XML format for representing a robot model.
+    The code API of the parser has been through our review process and will remain
+    backwards compatible in future releases.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
