@@ -13,6 +13,6 @@
       <email>asmodehn@gmail.com</email>
       <name>AlexV</name>
     </maintainer>
-    <bugs-to>https://github.com/asmodehn/catkin_pip/issues</bugs-to>
+    <bugs-to>https://github.com/pyros-dev/catkin_pip/issues</bugs-to>
   </upstream>
 </pkgmetadata>
