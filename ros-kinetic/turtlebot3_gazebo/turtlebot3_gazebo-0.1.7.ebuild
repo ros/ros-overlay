@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo simulation package for the TurtleBot3"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_gazebo/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_gazebo/0.1.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

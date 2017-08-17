@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Gazebo simulation package for the TurtleBot3
+    Wrapper of the Allied Vision Technologies (AVT) VIMBA Ethernet and Firewire SDK.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>miquel.massot@uib.cat</email>
+      <name>Miquel Massot</name>
     </maintainer>
-    <bugs-to>https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues</bugs-to>
+    <bugs-to>https://github.com/srv/avt_vimba_camera/issues</bugs-to>
   </upstream>
 </pkgmetadata>
