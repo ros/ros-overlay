@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The magni_bringup package
+    Simple velocity controlled arm. Teleoperation software and firmware.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>rohan@aleopile.com</email>
-      <name>Rohan Agrawal</name>
+      <email>danielsnider12@gmail.com</email>
+      <name>Daniel Snider</name>
     </maintainer>
-    <bugs-to>https://github.com/UbiquityRobotics/magni_robot/issues</bugs-to>
+    <bugs-to>https://github.com/danielsnider/simple_arm/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -6,14 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The magni_robot package"
+DESCRIPTION="Simple velocity controlled arm. Teleoperation software and firmware."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/magni_robot-release/archive/release/kinetic/magni_robot/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/danielsnider/simple_arm-release/archive/release/kinetic/simple_arm/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-kinetic/rospy
+	ros-kinetic/sensor_msgs
+	dev-python/numpy
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

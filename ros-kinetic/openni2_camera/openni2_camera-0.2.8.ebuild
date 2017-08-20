@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/openni2_camera-release/archive/release/kinetic/openni2_camera/0.2.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/openni2_camera-release/archive/release/kinetic/openni2_camera/0.2.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
