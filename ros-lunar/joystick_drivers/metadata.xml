@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Tests for MAVROS package
+    This metapackage depends on packages for interfacing common
+    joysticks and human input devices with ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +11,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>vooon341@gmail.com</email>
-      <name>Vladimir Ermakov</name>
+      <email>jbo@jhu.edu</email>
+      <name>Jonathan Bohren</name>
     </maintainer>
-    <bugs-to>https://github.com/mavlink/mavros/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/joystick_drivers/issues</bugs-to>
   </upstream>
 </pkgmetadata>
