@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="MAVLink message marshaling library.\
   This package provides C-headers and C++11 "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.8.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2017.8.26-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
