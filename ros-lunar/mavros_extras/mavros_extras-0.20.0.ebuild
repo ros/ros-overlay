@@ -6,20 +6,26 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVLink communication library.
-	This library provide unified connection handl"
+DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/libmavconn/0.19.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_extras/0.20.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/mavlink
-	dev-libs/boost
-	dev-libs/console_bridge
+	ros-lunar/geometry_msgs
+	ros-lunar/mavros
+	ros-lunar/mavros_msgs
+	ros-lunar/roscpp
+	ros-lunar/sensor_msgs
+	ros-lunar/std_msgs
+	ros-lunar/tf
+	ros-lunar/urdf
+	ros-lunar/visualization_msgs
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
+	ros-lunar/cmake_modules
 "
 
 SLOT="0"

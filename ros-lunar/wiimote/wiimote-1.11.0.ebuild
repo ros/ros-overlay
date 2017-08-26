@@ -6,26 +6,31 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="NONE"
+DESCRIPTION="The wiimote package allows ROS nodes to communicate with a Nintendo Wiimote\
+	"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_extras/0.19.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/joystick_drivers-release/archive/release/lunar/wiimote/1.11.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="( GPL-3 LGPL-3 BSD )"
+LICENSE="GPL-1"
+
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-lunar/genmsg
 	ros-lunar/geometry_msgs
-	ros-lunar/mavros
-	ros-lunar/mavros_msgs
 	ros-lunar/roscpp
+	ros-lunar/roslib
+	ros-lunar/rospy
 	ros-lunar/sensor_msgs
 	ros-lunar/std_msgs
-	ros-lunar/tf
-	ros-lunar/urdf
-	ros-lunar/visualization_msgs
+	ros-lunar/std_srvs
+	app-misc/cwiid
+	app-misc/cwiid[python]
+	dev-python/numpy
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
-	ros-lunar/cmake_modules
+	ros-lunar/roslint
+	app-misc/cwiid
 "
 
 SLOT="0"
