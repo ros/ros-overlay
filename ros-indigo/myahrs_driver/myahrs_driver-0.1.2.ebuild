@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="myahrs_driver is a driver package for the WITHROBOTs myAHRS The myAHRS is a "
+DESCRIPTION="myahrs_driver is a driver package for the WITHROBOT\'s myAHRS+. The myAHRS+[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/robotpilot/myahrs_driver-release/archive/release/indigo/myahrs_driver/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/robotpilot/myahrs_driver-release/archive/release/indigo/myahrs_driver/0.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

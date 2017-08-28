@@ -6,17 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVLink communication library.\
-	This library provide unified connection handl"
+DESCRIPTION="myahrs_driver is a driver package for the WITHROBOT\'s myAHRS+. The myAHRS+[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.20.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/robotpilot/myahrs_driver-release/archive/release/kinetic/myahrs_driver/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="( GPL-3 LGPL-3 BSD )"
+LICENSE="BSD"
+
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/mavlink
-	dev-libs/boost
-	dev-libs/console_bridge
+	ros-kinetic/roscpp
+	ros-kinetic/sensor_msgs
+	ros-kinetic/std_msgs
+	ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
@@ -25,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
