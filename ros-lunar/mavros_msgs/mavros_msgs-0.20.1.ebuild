@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_msgs/0.20.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_msgs/0.20.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
