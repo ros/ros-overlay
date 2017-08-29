@@ -8,21 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="marti_sensor_msgs"
 HOMEPAGE="https://github.com/swri-robotics/marti_messages"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_sensor_msgs/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/lunar/marti_sensor_msgs/0.2.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/geometry_msgs
-	ros-kinetic/message_runtime
+	ros-lunar/geometry_msgs
+	ros-lunar/message_runtime
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
-	ros-kinetic/message_generation
+	ros-lunar/catkin
+	ros-lunar/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

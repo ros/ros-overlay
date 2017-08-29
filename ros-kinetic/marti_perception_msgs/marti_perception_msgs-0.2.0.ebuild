@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="marti_perception_msgs"
 HOMEPAGE="https://github.com/swri-robotics/marti_messages"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_perception_msgs/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_perception_msgs/0.2.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
