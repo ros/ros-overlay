@@ -6,16 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="marti_can_msgs"
+DESCRIPTION="marti_visualization_msgs"
 HOMEPAGE="https://github.com/swri-robotics/marti_messages"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/lunar/marti_can_msgs/0.0.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/lunar/marti_visualization_msgs/0.2.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-lunar/geometry_msgs
 	ros-lunar/message_runtime
-	ros-lunar/std_msgs
+	ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
@@ -25,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
