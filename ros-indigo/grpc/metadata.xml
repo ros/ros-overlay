@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Catkinized gRPC Package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>shengye@ucsd.edu</email>
+      <name>Shengye Wang</name>
+    </maintainer>
+    <bugs-to>https://github.com/CogRobRelease/catkin_grpc/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
