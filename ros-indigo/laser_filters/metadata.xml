@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Assorted filters designed to operate on 2D planar laser scanners,
+    which use the sensor_msgs/LaserScan type.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

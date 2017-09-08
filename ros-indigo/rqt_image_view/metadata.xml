@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    rqt_image_view provides a GUI plugin for displaying images using image_transport.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
