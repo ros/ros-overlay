@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The airbus_coop metapackage"
 HOMEPAGE="http://ros.org/wiki/airbus_coop"
-SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_coop/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_coop/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

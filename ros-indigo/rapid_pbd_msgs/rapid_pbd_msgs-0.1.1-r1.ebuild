@@ -6,18 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages for fetch_auto_dock package"
-HOMEPAGE="http://wiki.ros.org/fetch_auto_dock_msgs"
-SRC_URI="https://github.com/fetchrobotics-gbp/fetch_msgs-release/archive/release/indigo/fetch_auto_dock_msgs/0.6.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="Messages for rapid_pbd"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/jstnhuang-release/rapid_pbd_msgs-release/archive/release/indigo/rapid_pbd_msgs/0.1.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
+	ros-indigo/control_msgs
 	ros-indigo/geometry_msgs
 	ros-indigo/message_runtime
+	ros-indigo/moveit_msgs
+	ros-indigo/sensor_msgs
+	ros-indigo/trajectory_msgs
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -27,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

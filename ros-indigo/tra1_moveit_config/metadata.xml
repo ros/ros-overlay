@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for fetch_auto_dock package
+    An automatically generated package with all the configuration and launch files for using the tra1 with the MoveIt! Motion Planning Framework
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>ryosuke.tajima@opensource-robotics.tokyo.jp</email>
+      <name>Ryosuke Tajima</name>
     </maintainer>
-    <bugs-to>https://github.com/fetchrobotics-gbp/fetch_msgs/issues</bugs-to>
+    <bugs-to>https://github.com/tork-a/minas/issues</bugs-to>
   </upstream>
 </pkgmetadata>
