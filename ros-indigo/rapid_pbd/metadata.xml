@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for fetch_auto_dock package
+    Programming by demonstration for 1 or 2 arm robots
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>jstn@cs.washington.edu</email>
+      <name>Justin Huang</name>
     </maintainer>
-    <bugs-to>https://github.com/fetchrobotics-gbp/fetch_msgs/issues</bugs-to>
+    <bugs-to>https://github.com/jstnhuang/rapid_pbd/issues</bugs-to>
   </upstream>
 </pkgmetadata>

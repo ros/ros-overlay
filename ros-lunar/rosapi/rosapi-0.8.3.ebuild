@@ -6,23 +6,27 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Rosbridge provides a JSON API to ROS functionality for non-ROS programs.\
- [...]"
+DESCRIPTION="Provides service calls for getting ros meta-information, like list of\
+	[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/lunar/rosbridge_suite/0.8.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/lunar/rosapi/0.8.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/rosapi
+	ros-lunar/message_runtime
 	ros-lunar/rosbridge_library
-	ros-lunar/rosbridge_server
+	ros-lunar/rosgraph
+	ros-lunar/rosnode
+	ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
+	ros-lunar/message_generation
 "
 
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
