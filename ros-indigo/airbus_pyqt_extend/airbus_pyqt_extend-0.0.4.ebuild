@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The airbus_pyqt_extend package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_pyqt_extend/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_pyqt_extend/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,22 +6,28 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The airbus_plugin_log_manager package"
+DESCRIPTION="The airbus_ssm_core package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_plugin_log_manager/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/airbus_coop-release/archive/release/indigo/airbus_ssm_core/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/airbus_cobot_gui
+	ros-indigo/actionlib
+	ros-indigo/message_runtime
 	ros-indigo/rospy
-	ros-indigo/rqt_console
+	ros-indigo/smach
+	ros-indigo/smach_ros
+	ros-indigo/std_msgs
 "
 DEPEND="${RDEPEND}
+	ros-indigo/actionlib_msgs
 	ros-indigo/catkin
+	ros-indigo/message_generation
 "
 
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

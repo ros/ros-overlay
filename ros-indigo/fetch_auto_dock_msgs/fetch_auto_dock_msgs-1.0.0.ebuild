@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Messages for fetch_auto_dock package"
 HOMEPAGE="http://wiki.ros.org/fetch_auto_dock_msgs"
-SRC_URI="https://github.com/fetchrobotics-gbp/fetch_msgs-release/archive/release/indigo/fetch_auto_dock_msgs/0.6.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics-gbp/fetch_msgs-release/archive/release/indigo/fetch_auto_dock_msgs/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
