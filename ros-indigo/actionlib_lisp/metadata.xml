@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    actionlib_lisp is a native implementation of the famous actionlib
+   in Common Lisp. It provides a client and a simple server.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>moesenle@cs.tum.edu</email>
-      <name>Lorenz Moesenlechner</name>
+      <email>kazhoyan@cs.uni-bremen.de</email>
+      <name>Gayane Kazhoyan</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/roslisp_common/issues</bugs-to>
   </upstream>

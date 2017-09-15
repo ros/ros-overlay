@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Common libraries to control ROS based robots. This stack contains
+    an implementation of actionlib (client and server) in Common Lisp,
+    a transformation library and an implementation of tf in Common
+    Lisp.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +13,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>moesenle@cs.tum.edu</email>
-      <name>Lorenz Moesenlechner</name>
+      <email>kazhoyan@cs.uni-bremen.de</email>
+      <name>Gayane Kazhoyan</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/roslisp_common/issues</bugs-to>
   </upstream>
