@@ -8,21 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains a tool for setting and publishing joint state values [...]"
 HOMEPAGE="http://www.ros.org/wiki/joint_state_publisher"
-SRC_URI="https://github.com/ros-gbp/robot_model-release/archive/release/indigo/joint_state_publisher/1.11.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/joint_state_publisher-release/archive/release/lunar/joint_state_publisher/1.12.12-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/rospy
-	ros-indigo/sensor_msgs
-	dev-python/wxpython
+	ros-lunar/python_qt_binding
+	ros-lunar/rospy
+	ros-lunar/sensor_msgs
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-lunar/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
