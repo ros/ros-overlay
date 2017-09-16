@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Programming by demonstration for 1 or 2 arm robots"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/jstnhuang-release/rapid_pbd-release/archive/release/indigo/rapid_pbd/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jstnhuang-release/rapid_pbd-release/archive/release/indigo/rapid_pbd/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
