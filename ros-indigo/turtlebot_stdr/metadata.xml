@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Stdr version of turtlebot simulation. Convenient to test 2D-navigation related stuffs
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

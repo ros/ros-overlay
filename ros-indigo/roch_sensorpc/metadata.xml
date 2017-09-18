@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Ult/psd/cliff to pointcloud:
+    Publish Ult, cliff, and psd sensors events as points in a pointcloud, so navistack can use them
+    for poor-man navigation. Implemented intended to run together with roch_base.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
