@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The teraranger_array package for TeraRanger Array Products \(Multiflex, One[...]"
+DESCRIPTION="The teraranger_array package for TeraRanger Array Products \(Multiflex, One\)"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/1.0.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/1.0.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
