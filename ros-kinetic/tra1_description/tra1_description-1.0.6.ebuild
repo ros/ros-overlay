@@ -6,21 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="SawYer Roch URDF description"
+DESCRIPTION="This package contains the description \(mechanical, kinematic, visual,  etc[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_description/2.0.14-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/minas-release/archive/release/kinetic/tra1_description/1.0.6-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
-
+LICENSE="( GPL-2 CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-kinetic/joint_state_publisher
 	ros-kinetic/robot_state_publisher
-	ros-kinetic/urdf
+	ros-kinetic/rviz
+	ros-kinetic/tf
 	ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
-	ros-kinetic/roslaunch
 "
 
 SLOT="0"

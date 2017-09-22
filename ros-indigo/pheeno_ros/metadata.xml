@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The teraranger_array package for TeraRanger Array Products (Multiflex, One)
+    The pheeno_ros package contains necessary files for run and control an individual Pheeno unit with ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pierre-louis.kabaradjian@terabee.com</email>
-      <name>Pierre-Louis Kabaradjian</name>
+      <email>zkakish@gmail.com</email>
+      <name>zmk5</name>
     </maintainer>
-    <bugs-to>https://github.com/Terabee/teraranger_array/issues</bugs-to>
+    <bugs-to>https://github.com/ACSLaboratory/pheeno_ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>

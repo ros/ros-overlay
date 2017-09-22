@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The teraranger_array package for TeraRanger Array Products (Multiflex, One)
+    A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pierre-louis.kabaradjian@terabee.com</email>
-      <name>Pierre-Louis Kabaradjian</name>
+      <email>christoph.roesmann@tu-dortmund.de</email>
+      <name>Christoph Rösmann</name>
     </maintainer>
-    <bugs-to>https://github.com/Terabee/teraranger_array/issues</bugs-to>
+    <bugs-to>https://github.com/rst-tu-dortmund/costmap_converter/issues</bugs-to>
   </upstream>
 </pkgmetadata>

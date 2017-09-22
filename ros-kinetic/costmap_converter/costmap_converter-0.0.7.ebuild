@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d[...]"
 HOMEPAGE="http://wiki.ros.org/costmap_converter"
-SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/kinetic/costmap_converter/0.0.6-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/kinetic/costmap_converter/0.0.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
