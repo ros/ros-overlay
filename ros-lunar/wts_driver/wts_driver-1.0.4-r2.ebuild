@@ -6,17 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="a#text"
+DESCRIPTION="The wts_driver package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/mavros_msgs/0.21.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ksatyaki/wts_driver-release/archive/release/lunar/wts_driver/1.0.4-2.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="( GPL-3 LGPL-3 BSD )"
+LICENSE="GPL-3"
+
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/geographic_msgs
-	ros-lunar/geometry_msgs
 	ros-lunar/message_runtime
-	ros-lunar/sensor_msgs
+	ros-lunar/roscpp
 	ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
