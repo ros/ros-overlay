@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo simulation ROS package for Pheeno system!"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ACSLaboratory/pheeno_ros_sim-release/archive/release/indigo/pheeno_ros_sim/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ACSLaboratory/pheeno_ros_sim-release/archive/release/indigo/pheeno_ros_sim/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,6 +16,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
+	ros-indigo/gazebo_msgs
+	ros-indigo/gazebo_plugins
+	ros-indigo/gazebo_ros
+	ros-indigo/gazebo_ros_control
 	ros-indigo/geometry_msgs
 	ros-indigo/image_transport
 	ros-indigo/message_runtime
