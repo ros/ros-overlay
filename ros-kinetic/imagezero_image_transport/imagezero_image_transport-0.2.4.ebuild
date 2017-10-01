@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A plugin to image_transport for transparently sending images encoded with ImageZ"
+DESCRIPTION="A plugin to image_transport for transparently sending images encoded with I[...]"
 HOMEPAGE="http://www.ros.org/wiki/image_transport_plugins"
-SRC_URI="https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_image_transport/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_image_transport/0.2.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
