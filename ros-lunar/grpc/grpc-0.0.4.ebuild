@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Catkinized gRPC Package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/catkin_grpc-release/archive/release/lunar/grpc/0.0.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/CogRobRelease/catkin_grpc-release/archive/release/lunar/grpc/0.0.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
