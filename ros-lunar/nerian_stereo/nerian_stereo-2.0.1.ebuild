@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
 HOMEPAGE="http://wiki.ros.org/nerian_stereo"
-SRC_URI="https://github.com/nerian-vision/nerian_stereo-release/archive/release/lunar/nerian_stereo/2.0.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/nerian-vision/nerian_stereo-release/archive/release/lunar/nerian_stereo/2.0.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
