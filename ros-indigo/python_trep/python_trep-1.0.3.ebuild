@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Trep: Mechanical Simulation and Optimal Control Software"
 HOMEPAGE="http://nxr.northwestern.edu/trep"
-SRC_URI="https://github.com/MurpheyLab/trep-release/archive/release/indigo/python_trep/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/MurpheyLab/trep-release/archive/release/indigo/python_trep/1.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -24,7 +24,9 @@ RDEPEND="
 	dev-python/numpy
 	dev-python/pyopengl
 	dev-python/pyside
-	dev-python/pyside
+	dev-python/PyQt4
+	dev-python/pyside[opengl]
+	dev-python/PyQt4[opengl]
 	sci-libs/scipy
 "
 DEPEND="${RDEPEND}
@@ -34,4 +36,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
