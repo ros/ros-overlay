@@ -8,14 +8,15 @@ inherit ros-cmake
 
 DESCRIPTION="Messages related to the Point Grey camera driver."
 HOMEPAGE="http://ros.org/wiki/pointgrey_camera_driver"
-SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/lunar/wfov_camera_msgs/0.13.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/lunar/image_exposure_msgs/0.13.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-lunar/message_runtime
-	ros-lunar/sensor_msgs
+	ros-lunar/statistics_msgs
+	ros-lunar/std_msgs
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

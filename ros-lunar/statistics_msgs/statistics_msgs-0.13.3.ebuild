@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Messages related to the Point Grey camera driver."
 HOMEPAGE="http://ros.org/wiki/pointgrey_camera_driver"
-SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/lunar/statistics_msgs/0.13.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/lunar/statistics_msgs/0.13.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
