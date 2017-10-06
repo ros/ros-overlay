@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Lowlevel build system macros and infrastructure for ROS"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.6-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,4 +35,3 @@ src_prepare() {
 	EPATCH_FORCE="yes" epatch
 	ros-cmake_src_prepare
 }
-
