@@ -30,6 +30,9 @@ SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
+PATCHES=( "${FILESDIR}/0001-patch-fix-print-err-macros.patch"
+	  "${FILESDIR}/0002-fix-abs-to-std-abs.patch" )
+
 src_configure() {
 	filter-flags '-std=*'
 	ros-cmake_src_configure
