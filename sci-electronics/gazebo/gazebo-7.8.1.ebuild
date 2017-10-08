@@ -34,6 +34,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtcore:5
 	dev-qt/qtopengl:5
+	dev-qt/qtxmlpatterns:5
 	dev-libs/boost:=[threads]
 	sci-libs/gdal
 	virtual/libusb:1
