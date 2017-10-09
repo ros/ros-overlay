@@ -2,24 +2,9 @@ diff --git a/include/laser_filters/intensity_filter.h b/include/laser_filters/in
 index 3f175a0..f36f46d 100644
 --- a/include/laser_filters/intensity_filter.h
 +++ b/include/laser_filters/intensity_filter.h
-@@ -43,6 +43,7 @@
+@@ -43,4 +43,5 @@
  
  #include "filters/filter_base.h"
  #include "sensor_msgs/LaserScan.h"
 +#include <cmath>
  
- namespace laser_filters
- {
-@@ -99,9 +100,9 @@ public:
-       // Calculate histogram
-       if (disp_hist_enabled_){
-         // If intensity value is inf or NaN, skip voting histogram
--        if( isinf((double)filtered_scan.intensities[i]) ||
--            isnan((double)filtered_scan.intensities[i]) )
--          continue;
-+              if(std::isinf((double)filtered_scan.intensities[i]) ||
-+                 std::isnan((double)filtered_scan.intensities[i]) )
-+                      continue;
- 
-         // Choose bucket to vote on histogram,
-         // and check the index of bucket is in the histogram array
