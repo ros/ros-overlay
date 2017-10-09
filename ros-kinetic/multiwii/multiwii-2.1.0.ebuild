@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The multiwii package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/christianrauch/ros-multiwii-release/archive/release/kinetic/multiwii/2.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/christianrauch/ros-multiwii-release/archive/release/kinetic/multiwii/2.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,11 +26,9 @@ DEPEND="${RDEPEND}
 	ros-kinetic/message_generation
 	ros-kinetic/sensor_msgs
 	ros-kinetic/std_msgs
-	ros-kinetic/visualization_msgs
 	dev-cpp/eigen
 "
 
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

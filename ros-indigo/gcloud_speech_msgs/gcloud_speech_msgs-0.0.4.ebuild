@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS message definitions for gcloud_speech and relevant packages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/indigo/gcloud_speech_msgs/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/indigo/gcloud_speech_msgs/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

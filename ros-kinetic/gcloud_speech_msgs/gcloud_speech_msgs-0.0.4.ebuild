@@ -8,21 +8,21 @@ inherit ros-cmake
 
 DESCRIPTION="ROS message definitions for gcloud_speech and relevant packages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/lunar/gcloud_speech_msgs/0.0.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/kinetic/gcloud_speech_msgs/0.0.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/message_runtime
+	ros-kinetic/message_runtime
 "
 DEPEND="${RDEPEND}
-	ros-lunar/actionlib
-	ros-lunar/actionlib_msgs
-	ros-lunar/catkin
-	ros-lunar/message_generation
+	ros-kinetic/actionlib
+	ros-kinetic/actionlib_msgs
+	ros-kinetic/catkin
+	ros-kinetic/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

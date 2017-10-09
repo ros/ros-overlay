@@ -6,20 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Google Cloud Speech client."
+DESCRIPTION="This package contains visualization tools for Franka Emika."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/kinetic/gcloud_speech/0.0.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_visualization/0.1.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/actionlib
-	ros-kinetic/actionlib_msgs
-	ros-kinetic/gcloud_speech_msgs
-	ros-kinetic/grpc
-	dev-cpp/gflags
-	dev-cpp/glog
+	ros-kinetic/libfranka
+	ros-kinetic/roscpp
+	ros-kinetic/sensor_msgs
+	ros-kinetic/xacro
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

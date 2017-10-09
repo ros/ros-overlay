@@ -8,24 +8,24 @@ inherit ros-cmake
 
 DESCRIPTION="Utilities and examples for gcloud_speech package."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/lunar/gcloud_speech_utils/0.0.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/indigo/gcloud_speech_utils/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/actionlib
-	ros-lunar/actionlib_msgs
-	ros-lunar/gcloud_speech_msgs
+	ros-indigo/actionlib
+	ros-indigo/actionlib_msgs
+	ros-indigo/gcloud_speech_msgs
 	dev-cpp/gflags
 	dev-cpp/glog
 	=media-libs/portaudio-19*
 	dev-python/pyaudio
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
