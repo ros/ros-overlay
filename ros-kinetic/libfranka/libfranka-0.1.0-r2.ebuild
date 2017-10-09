@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="libfranka is a C++ library for Franka Emika research robots"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/frankaemika/libfranka-release/archive/release/kinetic/libfranka/0.1.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/libfranka-release/archive/release/kinetic/libfranka/0.1.0-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -19,8 +19,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
-	app-doc/doxygen
-	media-gfx/graphviz
 "
 
 SLOT="0"

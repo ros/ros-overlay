@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Utilities and examples for gcloud_speech package."
+DESCRIPTION="Google Cloud Speech client."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/indigo/gcloud_speech_utils/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/CogRobRelease/gcloud_speech-release/archive/release/indigo/gcloud_speech/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,10 +17,9 @@ RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
 	ros-indigo/gcloud_speech_msgs
+	ros-indigo/grpc
 	dev-cpp/gflags
 	dev-cpp/glog
-	=media-libs/portaudio-19*
-	dev-python/pyaudio
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin

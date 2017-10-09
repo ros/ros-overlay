@@ -6,26 +6,23 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Simple navigation package"
+DESCRIPTION="This package implements the franka gripper of type Franka Hand for the use [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/move_basic-release/archive/release/kinetic/move_basic/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_gripper/0.1.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/actionlib
 	ros-kinetic/actionlib_msgs
-	ros-kinetic/geometry_msgs
-	ros-kinetic/move_base_msgs
-	ros-kinetic/nav_core
+	ros-kinetic/control_msgs
+	ros-kinetic/libfranka
+	ros-kinetic/message_generation
+	ros-kinetic/message_runtime
 	ros-kinetic/roscpp
 	ros-kinetic/sensor_msgs
-	ros-kinetic/std_msgs
-	ros-kinetic/tf2
-	ros-kinetic/tf2_geometry_msgs
-	ros-kinetic/tf2_ros
-	ros-kinetic/visualization_msgs
+	ros-kinetic/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
@@ -34,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
