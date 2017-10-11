@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    libuvc_ros metapackage
+    driver for the KUKA youBot robot
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ken@tossell.net</email>
-      <name>Ken Tossell</name>
+      <email>nowak@locomotec.com</email>
+      <name>Walter Nowak</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-drivers-gbp/libuvc_ros/issues</bugs-to>
+    <bugs-to>https://github.com/youbot/youbot_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>

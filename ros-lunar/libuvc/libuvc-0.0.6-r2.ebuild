@@ -6,23 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVLink message marshaling library.\
-  This package provides C-headers and [...]"
+DESCRIPTION="USB Video Class driver library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/lunar/mavlink/2017.9.9-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ktossell/libuvc-release/archive/release/lunar/libuvc/0.0.6-2.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-lunar/catkin
-	dev-lang/python
+	virtual/jpeg
+	virtual/libusb:1
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
-	dev-python/future
-	dev-python/lxml
-	dev-python/setuptools
+	virtual/pkgconfig
 "
 
 SLOT="0"

@@ -8,14 +8,13 @@ inherit ros-cmake
 
 DESCRIPTION="ROS package for Amazon Picking Challenge in May 2015"
 HOMEPAGE="http://wiki.ros.org/jsk_2015_05_baxter_apc"
-SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_2015_05_baxter_apc/4.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_2015_05_baxter_apc/4.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/baxter_gazebo
-	ros-indigo/baxter_sim_hardware
 	ros-indigo/baxtereus
 	ros-indigo/dynamic_reconfigure
 	ros-indigo/geometry_msgs
@@ -34,7 +33,7 @@ RDEPEND="
 	ros-indigo/std_msgs
 	ros-indigo/turtlebot_description
 	dev-python/numpy
-	media-libs/opencv
+	media-libs/opencv[python]
 	dev-python/progressbar
 	sci-libs/scikits_image
 	sci-libs/scikits_learn
@@ -53,4 +52,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
