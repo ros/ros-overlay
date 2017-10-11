@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="franka_control provides a hardware node to control a Franka Emika research [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_control/0.1.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_control/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

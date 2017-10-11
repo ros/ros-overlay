@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="franka_ros is a metapackage for all Franka Emika ROS packages"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_ros/0.1.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_ros/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

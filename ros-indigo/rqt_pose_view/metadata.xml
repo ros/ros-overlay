@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    rqt_pose_view provides a GUI plugin for visualizing 3D poses.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

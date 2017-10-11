@@ -6,22 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="USB Video Class driver library"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ktossell/libuvc-release/archive/release/lunar/libuvc/0.0.5-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="libuvc_ros metapackage"
+HOMEPAGE="http://ros.org/wiki/libuvc_ros"
+SRC_URI="https://github.com/ros-drivers-gbp/libuvc_ros-release/archive/release/lunar/libuvc_ros/0.0.9-1.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/catkin
-	virtual/libusb:1
+	ros-lunar/libuvc_camera
 "
 DEPEND="${RDEPEND}
-	dev-util/cmake
+	ros-lunar/catkin
 "
 
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
