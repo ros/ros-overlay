@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://wiki.ros.org/jsk_apc"
-SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_apc/4.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_apc/4.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

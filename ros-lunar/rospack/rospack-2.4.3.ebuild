@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS Package Tool"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospack/2.4.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospack/2.4.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

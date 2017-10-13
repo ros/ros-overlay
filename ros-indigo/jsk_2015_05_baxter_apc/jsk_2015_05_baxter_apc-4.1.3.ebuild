@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS package for Amazon Picking Challenge in May 2015"
 HOMEPAGE="http://wiki.ros.org/jsk_2015_05_baxter_apc"
-SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_2015_05_baxter_apc/4.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_2015_05_baxter_apc/4.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

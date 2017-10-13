@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="PlotJuggler: juggle with data"
 HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
-SRC_URI="https://github.com/facontidavide/plotjuggler-release/archive/release/kinetic/plotjuggler/1.2.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/plotjuggler-release/archive/release/kinetic/plotjuggler/1.3.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
