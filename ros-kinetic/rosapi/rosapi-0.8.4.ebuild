@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Provides service calls for getting ros meta-information, like list of\
 	[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosapi/0.8.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosapi/0.8.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
