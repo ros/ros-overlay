@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The criutils package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/crigroup/criutils-release/archive/release/kinetic/criutils/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/crigroup/criutils-release/archive/release/kinetic/criutils/0.1.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD-3"
 
@@ -17,6 +17,7 @@ RDEPEND="
 	ros-kinetic/geometry_msgs
 	ros-kinetic/rosbash
 	ros-kinetic/rospy
+	ros-kinetic/rostopic
 	ros-kinetic/sensor_msgs
 	ros-kinetic/std_msgs
 	ros-kinetic/tf
