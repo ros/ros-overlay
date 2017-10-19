@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Metapackage allowing easy installation of Velodyne simulation components."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/indigo/velodyne_simulator/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/indigo/velodyne_simulator/0.0.4-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

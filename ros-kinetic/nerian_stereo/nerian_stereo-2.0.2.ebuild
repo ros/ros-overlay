@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Node for the SP1 Stereo Vision System by Nerian Vision Technologies"
-HOMEPAGE="http://wiki.ros.org/nerian_sp1"
-SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/kinetic/nerian_sp1/1.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
+HOMEPAGE="http://wiki.ros.org/nerian_stereo"
+SRC_URI="https://github.com/nerian-vision/nerian_stereo-release/archive/release/kinetic/nerian_stereo/2.0.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

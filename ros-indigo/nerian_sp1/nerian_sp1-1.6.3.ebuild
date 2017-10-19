@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Node for the SP1 Stereo Vision System by Nerian Vision Technologies"
 HOMEPAGE="http://wiki.ros.org/nerian_sp1"
-SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/indigo/nerian_sp1/1.6.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/nerian-vision/nerian_sp1-release/archive/release/indigo/nerian_sp1/1.6.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
