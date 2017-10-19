@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Node for the SP1 Stereo Vision System by Nerian Vision Technologies
+    fcl_catkin
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>konstantin.schauwecker@nerian.com</email>
-      <name>Konstantin Schauwecker</name>
+      <email>w.merkt+oss@gmail.com</email>
+      <name>Wolfgang Merkt</name>
     </maintainer>
-    <bugs-to>https://github.com/nerian-vision/nerian_sp1/issues</bugs-to>
+    <bugs-to>https://github.com/wxmerkt/fcl_catkin/issues</bugs-to>
   </upstream>
 </pkgmetadata>
