@@ -8,25 +8,25 @@ inherit ros-cmake
 
 DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
 HOMEPAGE="http://wiki.ros.org/nerian_stereo"
-SRC_URI="https://github.com/nerian-vision/nerian_stereo-release/archive/release/kinetic/nerian_stereo/2.0.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/nerian-vision/nerian_stereo-release/archive/release/lunar/nerian_stereo/2.0.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/cv_bridge
-	ros-kinetic/message_runtime
-	ros-kinetic/roscpp
-	ros-kinetic/sensor_msgs
-	ros-kinetic/std_msgs
+	ros-lunar/cv_bridge
+	ros-lunar/message_runtime
+	ros-lunar/roscpp
+	ros-lunar/sensor_msgs
+	ros-lunar/std_msgs
 	dev-libs/boost
 	media-libs/libsdl
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
-	ros-kinetic/message_generation
+	ros-lunar/catkin
+	ros-lunar/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
