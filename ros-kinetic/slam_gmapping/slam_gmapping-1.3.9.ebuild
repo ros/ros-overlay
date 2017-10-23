@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="slam_gmapping contains a wrapper around gmapping which provides SLAM capabilitie"
+DESCRIPTION="slam_gmapping contains a wrapper around gmapping which provides SLAM capabi[...]"
 HOMEPAGE="http://ros.org/wiki/slam_gmapping"
-SRC_URI="https://github.com/ros-gbp/slam_gmapping-release/archive/release/kinetic/slam_gmapping/1.3.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/slam_gmapping-release/archive/release/kinetic/slam_gmapping/1.3.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="CC-BY-SA-3.0"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
