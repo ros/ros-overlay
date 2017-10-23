@@ -18,7 +18,7 @@ RDEPEND="
 	virtual/ffmpeg
 	virtual/jpeg
 	media-libs/libpng
-	sci-libs/vtk
+	sci-libs/vtk[rendering]
 	media-libs/libwebp
 	dev-libs/protobuf
 	dev-lang/python
