@@ -5,7 +5,7 @@ inherit distutils-r1
 
 DESCRIPTION="Package release manager for ROS."
 HOMEPAGE="http://wiki.ros.org/wstool"
-SRC_URI="http://github.com/ros-infrastructure/bloom/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/ros-infrastructure/${PN}/archive/${PV}.tar.gz -> ${P}-overlay.tar.gz"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 LICENSE="BSD"
