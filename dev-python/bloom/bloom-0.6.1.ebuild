@@ -1,11 +1,11 @@
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python3_5 )
 
 inherit distutils-r1
 
 DESCRIPTION="Package release manager for ROS."
-HOMEPAGE="http://wiki.ros.org/wstool"
-SRC_URI="http://github.com/ros-infrastructure/${PN}/archive/${PV}.tar.gz -> ${P}-overlay.tar.gz"
+HOMEPAGE="https://wiki.ros.org/wstool"
+SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/${PV}.tar.gz -> ${P}-overlay.tar.gz"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 LICENSE="BSD"
