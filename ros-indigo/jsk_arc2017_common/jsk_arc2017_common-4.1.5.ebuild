@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Common package for Amazon Robotics Challenge 2017 at JSK Lab."
 HOMEPAGE="http://wiki.ros.org/jsk_arc2017_common"
-SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_arc2017_common/4.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_arc2017_common/4.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
