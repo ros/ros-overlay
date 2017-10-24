@@ -1,11 +1,11 @@
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit distutils-r1
 
 DESCRIPTION="Standalone Python library for the Catkin package system."
-HOMEPAGE="http://wiki.ros.org/catkin_pkg"
-SRC_URI="https://github.com/ros-infrastructure/catkin_pkg/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://wiki.ros.org/${PN}"
+SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/${PV}.tar.gz -> ${P}-overlay.tar.gz"
 
 LICENSE="BSD-3"
 SLOT="0"
