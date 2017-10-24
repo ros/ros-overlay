@@ -18,7 +18,7 @@ RDEPEND="
 	virtual/ffmpeg
 	virtual/jpeg
 	media-libs/libpng
-	sci-libs/vtk
+	sci-libs/vtk[qt4]
 	media-libs/libwebp
 	dev-libs/protobuf
 	dev-lang/python
@@ -37,12 +37,6 @@ ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
-	filter-flags '-march=*' '-mtune=*'
-	if [[ $(gcc-major-version) -gt 4 ]]; then
-		local mycmakeargs=(
-			-DWITH_CUDA=OFF
-		)
-		ewarn "Cuda does not support GCC > 4, so cuda has been disabled."
-	fi
+	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
 	ros-cmake_src_configure
 }
