@@ -19,7 +19,7 @@ RDEPEND="
 	media-libs/jasper
 	virtual/jpeg
 	media-libs/libpng:1.2
-	sci-libs/vtk[qt4,rendering]
+	sci-libs/vtk[qt5,rendering]
 	dev-libs/protobuf
 	dev-lang/python
 	dev-python/numpy
