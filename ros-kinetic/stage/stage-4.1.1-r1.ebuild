@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Mobile robot simulator http://rtvgithubcom/Stage"
+DESCRIPTION="Mobile robot simulator http://rtv.github.com/Stage"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/kinetic/stage/4.1.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/kinetic/stage/4.1.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/catkin
 	x11-libs/gtk+:2
-	=x11-libs/fltk-1*
+	x11-libs/fltk
 	virtual/jpeg
 	virtual/opengl
 "
@@ -30,11 +30,14 @@ SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
-PATCHES=( "${FILESDIR}/0001-patch-fix-print-err-macros.patch"
-	  "${FILESDIR}/0002-fix-abs-to-std-abs.patch" )
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
+}
 
 src_configure() {
 	filter-flags '-std=*'
 	ros-cmake_src_configure
 }
-
