@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Common stacks for Amazon Picking Challenge 2015"
 HOMEPAGE="http://wiki.ros.org/jsk_apc2015_common"
-SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_apc2015_common/4.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_apc-release/archive/release/indigo/jsk_apc2015_common/4.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
