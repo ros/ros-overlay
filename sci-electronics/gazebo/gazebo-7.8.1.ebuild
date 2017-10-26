@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 inherit cmake-utils versionator vcs-snapshot flag-o-matic
 
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
-
+PATCHES=( files/disable-testing.patch )
 src_configure() {
 	# doesnt build without it
 	append-cxxflags "-std=c++11"
@@ -68,7 +68,6 @@ src_configure() {
 		"-DUSE_UPSTREAM_CFLAGS=OFF"
 		"-DSSE2_FOUND=$(usex cpu_flags_x86_sse2 TRUE FALSE)"
 		"-DUSE_HOST_CFLAGS=FALSE"
-		"-DBUILD_TESTING=$(usex test TRUE FALSE)"
 		"-DENABLE_SCREEN_TESTS=FALSE"
 		"-DUSE_EXTERNAL_TINYXML2=TRUE"
 	)
