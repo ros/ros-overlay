@@ -31,7 +31,6 @@ RDEPEND="
 	virtual/ffmpeg
 	>=sci-physics/bullet-2.82
 	=sci-libs/sdformat-4*
-	dev-qt/qtwidgets:4
 	dev-qt/qtcore:4
 	dev-qt/qtopengl:4
 	dev-qt/qtxmlpatterns:4
