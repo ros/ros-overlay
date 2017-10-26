@@ -31,10 +31,10 @@ RDEPEND="
 	virtual/ffmpeg
 	>=sci-physics/bullet-2.82
 	=sci-libs/sdformat-4*
-	dev-qt/qtwidgets:5
-	dev-qt/qtcore:5
-	dev-qt/qtopengl:5
-	dev-qt/qtxmlpatterns:5
+	dev-qt/qtwidgets:4
+	dev-qt/qtcore:4
+	dev-qt/qtopengl:4
+	dev-qt/qtxmlpatterns:4
 	dev-libs/boost:=[threads]
 	sci-libs/gdal
 	virtual/libusb:1
@@ -49,7 +49,7 @@ RDEPEND="
 	x11-libs/qwt:6=[qt5]
 "
 DEPEND="${RDEPEND}
-	dev-qt/qttest:5
+	dev-qt/qttest:4
 	app-text/ronn
 	app-arch/gzip
 	virtual/pkgconfig
