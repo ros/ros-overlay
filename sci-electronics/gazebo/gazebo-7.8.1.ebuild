@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
-PATCHES=( files/disable-testing.patch )
+
 src_configure() {
 	# doesnt build without it
 	append-cxxflags "-std=c++11"
@@ -69,6 +69,7 @@ src_configure() {
 		"-DSSE2_FOUND=$(usex cpu_flags_x86_sse2 TRUE FALSE)"
 		"-DUSE_HOST_CFLAGS=FALSE"
 		"-DENABLE_SCREEN_TESTS=FALSE"
+		"-DENABLE_TESTS_COMPILATION=FALSE"
 		"-DUSE_EXTERNAL_TINYXML2=TRUE"
 	)
 	cmake-utils_src_configure
