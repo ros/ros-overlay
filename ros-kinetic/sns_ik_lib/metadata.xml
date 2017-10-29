@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Saturation in the Null Space (SNS) Inverse Kinematic Library.
+   SNS is a real-time Cartesian IK solver for uses the redundancy
+   in the supplied kinematic chain for collision avoidance,
+   joint motion optimization, or additional task objectives or
+   soft constraints.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>rsdk.support@rethinkrobotics.com</email>
+      <name>Rethink Robotics Inc.</name>
+    </maintainer>
+    <bugs-to>https://github.com/RethinkRobotics/sns_ik/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
