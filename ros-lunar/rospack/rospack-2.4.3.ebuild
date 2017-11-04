@@ -15,7 +15,6 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	dev-libs/boost
-	virtual/pkgconfig
 	dev-lang/python
 	dev-python/catkin_pkg
 	dev-python/rosdep
@@ -25,6 +24,7 @@ DEPEND="${RDEPEND}
 	ros-lunar/catkin
 	ros-lunar/cmake_modules
 	dev-cpp/gtest
+	virtual/pkgconfig
 "
 
 SLOT="0"

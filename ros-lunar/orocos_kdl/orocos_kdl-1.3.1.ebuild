@@ -17,10 +17,10 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-lunar/catkin
 	dev-cpp/eigen
-	virtual/pkgconfig
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
+	virtual/pkgconfig
 "
 
 SLOT="0"
