@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains the Documentation for the p2os driver/componenets
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

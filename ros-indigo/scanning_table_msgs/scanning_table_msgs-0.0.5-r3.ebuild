@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="catkinized common interface for turn table"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/scanning_table_msgs/0.0.5-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/scanning_table_msgs/0.0.5-3.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

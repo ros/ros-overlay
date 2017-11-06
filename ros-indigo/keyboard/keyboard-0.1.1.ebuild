@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="publishes keyboard key presses"
 HOMEPAGE="http://wiki.ros.org/keyboard"
-SRC_URI="https://github.com/lrse-ros-release/keyboard-release/archive/release/indigo/keyboard/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lrse-ros-release/keyboard-release/archive/release/indigo/keyboard/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

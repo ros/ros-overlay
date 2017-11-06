@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Plugin-based layers for the navigation stack that 
+  implement various social navigation contraints, like proxemic distance.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

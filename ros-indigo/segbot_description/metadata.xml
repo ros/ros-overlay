@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains URDF descriptions of all robot components and sensors for the
+    segbot, as well as all the different sensor configurations for a segbot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

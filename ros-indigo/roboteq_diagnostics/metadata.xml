@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Republish basic Roboteq motor controller data to the standard ROS
+    diagnostics topic.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

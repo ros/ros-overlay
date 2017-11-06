@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ml_classifiers"
 HOMEPAGE="http://ros.org/wiki/ml_classifiers"
-SRC_URI="https://github.com/jolting/ml_classifiers-release/archive/release/indigo/ml_classifiers/0.3.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jolting/ml_classifiers-release/archive/release/indigo/ml_classifiers/0.3.1-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

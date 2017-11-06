@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Forked dependencies of Rospilot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rospilot/rospilot_deps-release/archive/release/indigo/rospilot_deps/0.0.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rospilot/rospilot_deps-release/archive/release/indigo/rospilot_deps/0.0.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

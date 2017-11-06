@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The single joint position action is a node that provides an action
+  interface for commanding a trajectory to move a joint to a particular
+  position. The action reports success when the joint reaches the desired
+  position.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

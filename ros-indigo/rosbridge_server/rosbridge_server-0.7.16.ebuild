@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A WebSocket interface to rosbridge"
+DESCRIPTION="A WebSocket interface to rosbridge."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/indigo/rosbridge_server/0.7.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/indigo/rosbridge_server/0.7.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

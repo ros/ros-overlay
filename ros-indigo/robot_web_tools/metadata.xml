@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Robot Web Tools Metapackage and Top Level Launch Files
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

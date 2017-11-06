@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fulanghua_navigation package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/DaikiMaekawa/fulanghua_navigation-release/archive/release/indigo/fulanghua_navigation/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DaikiMaekawa/fulanghua_navigation-release/archive/release/indigo/fulanghua_navigation/0.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

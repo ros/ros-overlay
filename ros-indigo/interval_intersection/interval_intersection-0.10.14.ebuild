@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tools for calculating the intersection of interval messages coming	in on sev"
+DESCRIPTION="Tools for calculating the intersection of interval messages coming\
+	in [...]"
 HOMEPAGE="http://www.ros.org/wiki/interval_intersection"
-SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/interval_intersection/0.10.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/interval_intersection/0.10.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

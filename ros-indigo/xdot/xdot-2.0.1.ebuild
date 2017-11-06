@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="XDotpy, by Jose Fonseca, is an interactive viewer for graphs written in	Gra"
+DESCRIPTION="XDot.py, by Jose Fonseca, is an interactive viewer for graphs written in\
+ [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/jbohren/xdot-release/archive/release/indigo/xdot/2.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jbohren/xdot-release/archive/release/indigo/xdot/2.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -24,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The mastering_ros_demo_pkg package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/qboticslabs/demo_pkg-release/archive/release/indigo/mastering_ros_demo_pkg/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/qboticslabs/demo_pkg-release/archive/release/indigo/mastering_ros_demo_pkg/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
@@ -29,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Execute moveit_msgs/Grasp grasps on the Shadow Hand.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

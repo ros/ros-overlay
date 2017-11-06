@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Python driver for NovAtel SPAN devices.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

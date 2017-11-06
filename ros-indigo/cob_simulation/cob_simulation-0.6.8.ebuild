@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The cob_simulation stack includes packages to work with Care-O-bot within simula"
+DESCRIPTION="The cob_simulation stack includes packages to work with Care-O-bot within s[...]"
 HOMEPAGE="http://ros.org/wiki/cob_simulation"
-SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_simulation/0.6.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_simulation-release/archive/release/indigo/cob_simulation/0.6.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

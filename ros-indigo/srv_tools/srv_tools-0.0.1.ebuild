@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Stack with interesting ROS tools"
 HOMEPAGE="http://ros.org/wiki/srv_tools"
-SRC_URI="https://github.com/srv/srv_tools-release/archive/release/indigo/srv_tools/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/srv/srv_tools-release/archive/release/indigo/srv_tools/0.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

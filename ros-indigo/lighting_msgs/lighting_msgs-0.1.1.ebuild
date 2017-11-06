@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The lighting_msgs package"
 HOMEPAGE="http://wiki.ros.org/lighting_msgs"
-SRC_URI="https://github.com/sevenbitbyte/ros_openlighting-release/archive/release/indigo/lighting_msgs/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/sevenbitbyte/ros_openlighting-release/archive/release/indigo/lighting_msgs/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

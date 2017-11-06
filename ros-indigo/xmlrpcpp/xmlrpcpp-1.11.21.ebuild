@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="XmlRpc is a C implementation of the XMLRPC protocol This version is	he"
+DESCRIPTION="XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is\
+[...]"
 HOMEPAGE="http://xmlrpcpp.sourceforge.net"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/xmlrpcpp/1.11.21-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/xmlrpcpp/1.11.21-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -23,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The dji_sdk_dji2mav package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

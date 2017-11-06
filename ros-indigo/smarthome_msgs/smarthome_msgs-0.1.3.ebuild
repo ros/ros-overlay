@@ -6,11 +6,11 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package is common smarthome message for ROS"
+DESCRIPTION="This package is common smarthome message for ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosalfred-release/smarthome_msgs-release/archive/release/indigo/smarthome_msgs/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/smarthome_msgs-release/archive/release/indigo/smarthome_msgs/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="Apache-2"
+LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

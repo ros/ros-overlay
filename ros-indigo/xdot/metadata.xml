@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    XDot.py, by Jose Fonseca, is an interactive viewer for graphs written in
+    Graphviz's dot language.
+
+    This package adds front-end capabilities to XDot including WX Widget
+    support and experimental Qt support and a mechanism for receiving callbacks
+    when nodes are clicked.  This extension is provided as BSD.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

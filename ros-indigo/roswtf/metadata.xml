@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

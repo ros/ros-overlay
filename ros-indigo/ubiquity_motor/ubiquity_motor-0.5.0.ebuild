@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Provides a ROS interface to Ubiquity Robotics Magni motor controllers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/indigo/ubiquity_motor/0.5.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/indigo/ubiquity_motor/0.5.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

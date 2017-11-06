@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A ROS Node to Stream Image Topics Via a MJPEG Server"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/mjpeg_server-release/archive/release/indigo/mjpeg_server/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/mjpeg_server-release/archive/release/indigo/mjpeg_server/1.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

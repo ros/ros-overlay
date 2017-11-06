@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This stack contains the ROS driver and firmware for the WGE100 camera used on the PR2 robot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

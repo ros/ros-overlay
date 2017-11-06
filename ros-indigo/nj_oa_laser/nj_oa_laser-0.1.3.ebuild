@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The nj_oa_laser package is a navigating jockey for the Large  Maps framework "
+DESCRIPTION="The nj_oa_laser package is a navigating jockey for the Large\
+\	  Maps fram[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_laser-release/archive/release/indigo/nj_oa_laser/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_laser-release/archive/release/indigo/nj_oa_laser/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

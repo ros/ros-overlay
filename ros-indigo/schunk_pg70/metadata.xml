@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Xacro model and RS232 control node for basic communication with Schunk PG70 gripper
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

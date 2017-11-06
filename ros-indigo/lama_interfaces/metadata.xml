@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The lama_interfaces package provides the interfaces between ROS nodes
+	  (such as jockeys from lama_jockeys) and the map.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

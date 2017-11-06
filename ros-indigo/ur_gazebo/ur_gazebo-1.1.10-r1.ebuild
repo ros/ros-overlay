@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo wrapper for the Universal UR5/10 robot arms."
 HOMEPAGE="http://ros.org/wiki/ur_gazebo"
-SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_gazebo/1.1.10-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_gazebo/1.1.10-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

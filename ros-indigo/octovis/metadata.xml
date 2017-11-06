@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer. See
+  http://octomap.github.io for details.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

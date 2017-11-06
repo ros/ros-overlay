@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A collection of conversion function for extracting numpy arrays from messages"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/eric-wieser/ros_numpy-release/archive/release/indigo/ros_numpy/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/eric-wieser/ros_numpy-release/archive/release/indigo/ros_numpy/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

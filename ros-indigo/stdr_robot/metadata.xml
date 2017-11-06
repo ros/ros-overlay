@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provides robot, sensor implementation, using nodelets for stdr_server to load them.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

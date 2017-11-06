@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Common data structures, messages and service defintions used for
+    deterministic planning work in the BWI project at the University of Texas
+    at Austin
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="World canvas framework messages package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/corot/world_canvas_msgs-release/archive/release/indigo/world_canvas_msgs/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/corot/world_canvas_msgs-release/archive/release/indigo/world_canvas_msgs/0.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The phantomx_reactor_arm_description package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/phantomx_reactor_arm-release/archive/release/indigo/phantomx_reactor_arm_description/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/phantomx_reactor_arm-release/archive/release/indigo/phantomx_reactor_arm_description/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

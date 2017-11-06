@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS stack  containing all nodes, config, and launch files for Nav2 mobile roboti"
+DESCRIPTION="ROS stack  containing all nodes, config, and launch files for Nav2 mobile r[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/paulbovbel/nav2_platform-release/archive/release/indigo/nav2_platform/0.0.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/paulbovbel/nav2_platform-release/archive/release/indigo/nav2_platform/0.0.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

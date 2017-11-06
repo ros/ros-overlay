@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provides a node that reports how long a subset of joints has been
+     settled. That is, it calculates how long a set of joints has remained
+     within a specified threshold. This package is experimental and unstable.
+     Expect its APIs to change.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

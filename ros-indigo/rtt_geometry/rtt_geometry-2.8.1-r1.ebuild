@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="This metapackage contains tools for integrating the Orocos Kinematics and\
-	Dy"
+[...]"
 HOMEPAGE="http://www.orocos.org/"
-SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/indigo/rtt_geometry/2.8.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/indigo/rtt_geometry/2.8.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Examples showing how to use C++ and Python client libraries to access semantic
+    maps within the world canvas framework.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

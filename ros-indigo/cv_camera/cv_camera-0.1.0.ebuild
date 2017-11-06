@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="cv_camera uses OpenCV capture object to capture camera image  This supports ca"
+DESCRIPTION="cv_camera uses OpenCV capture object to capture camera image.\
+  This suppo[...]"
 HOMEPAGE="http://wiki.ros.org/cv_camera"
-SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/indigo/cv_camera/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OTL/cv_camera-release/archive/release/indigo/cv_camera/0.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

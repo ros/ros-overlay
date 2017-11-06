@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Persistent storage of ROS data using MongoDB"
 HOMEPAGE="http://ros.org/wiki/warehouse_ros"
-SRC_URI="https://github.com/ros-gbp/warehouse_ros-release/archive/release/indigo/warehouse_ros/0.8.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/warehouse_ros-release/archive/release/indigo/warehouse_ros/0.8.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

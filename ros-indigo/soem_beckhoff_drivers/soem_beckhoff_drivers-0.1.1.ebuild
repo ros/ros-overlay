@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="soem_beckhoff_drivers contains drivers for the ethercat beckhoff modules to work"
+DESCRIPTION="soem_beckhoff_drivers contains drivers for the ethercat beckhoff modules to[...]"
 HOMEPAGE="http://wiki.ros.org/soem_master"
-SRC_URI="https://github.com/orocos-gbp/rtt_soem-release/archive/release/indigo/soem_beckhoff_drivers/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt_soem-release/archive/release/indigo/soem_beckhoff_drivers/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

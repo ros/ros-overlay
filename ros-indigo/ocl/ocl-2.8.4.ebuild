@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Orocos component library	This package contains standard components for the O"
+DESCRIPTION="Orocos component library\
+	This package contains standard components for[...]"
 HOMEPAGE="http://www.orocos.org/ocl"
-SRC_URI="https://github.com/orocos-gbp/ocl-release/archive/release/indigo/ocl/2.8.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/ocl-release/archive/release/indigo/ocl/2.8.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -21,6 +22,8 @@ RDEPEND="
 	sys-libs/readline
 	dev-lang/lua
 	sci-libs/netcdf
+	sci-libs/netcdf-cxx
+	sci-libs/netcdf-fortran
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
@@ -29,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

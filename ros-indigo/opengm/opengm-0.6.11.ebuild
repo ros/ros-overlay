@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package wraps the external c++ library opengm in a ROS package, so other pa"
+DESCRIPTION="This package wraps the external c++ library opengm in a ROS package, so oth[...]"
 HOMEPAGE="http://hciweb2.iwr.uni-heidelberg.de/opengm/"
-SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/opengm/0.6.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/opengm/0.6.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

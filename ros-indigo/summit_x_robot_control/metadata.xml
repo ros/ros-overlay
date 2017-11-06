@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Control the robot joints in all kinematic configurations, publishes odom topic and, 
+	  if configured, also tf odom to base_link. Usually takes as input joystick commands 
+	  and generates as outputs references for the gazebo controllers defined in summit_xl_control.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

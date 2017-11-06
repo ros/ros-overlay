@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Common state definitions used in the XPP Motion Framework.
+    Common definitions (positions, velocities, angular angles,
+    angular rates) and robot definitions in Cartesian and joint state
+    used in the Xpp Motion Framework, as well as conversions to/from
+    xpp_msgs.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

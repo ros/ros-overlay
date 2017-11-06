@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Example programs for Baxter SDK usage.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="RotorS control package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/rotors_simulator-release/archive/release/indigo/rotors_control/2.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-asl/rotors_simulator-release/archive/release/indigo/rotors_control/2.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/dynamic_reconfigure
 	ros-indigo/geometry_msgs
@@ -29,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

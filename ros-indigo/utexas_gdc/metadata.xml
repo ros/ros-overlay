@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Simulation environment for the Gates Dell Complex of the
+    University of Texas At Austin
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

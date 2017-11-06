@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Object Search via the Interactive World Data"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/interactive_world-release/archive/release/indigo/informed_object_search/0.0.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/interactive_world-release/archive/release/indigo/informed_object_search/0.0.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

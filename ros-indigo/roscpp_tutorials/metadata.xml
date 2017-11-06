@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package attempts to show the features of ROS step-by-step,
+    including using messages, servers, parameters, etc.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

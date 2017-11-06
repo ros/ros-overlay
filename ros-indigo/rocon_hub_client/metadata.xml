@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Client api for discovery and connection to rocon hubs. It also has
+    a few convenience api for manipulating data on the hub.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

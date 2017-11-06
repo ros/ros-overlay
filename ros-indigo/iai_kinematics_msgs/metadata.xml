@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Ensemble of messages to communicate/request kinematics-related issues.
+    
+    NOTE/DISCLAIMER: A lot of these messages have been salvaged from now
+    deprecated packages arm_navigation_msgs and kinematics_msgs. We acknowledge
+    original authorship of these messages to all involved people (I, Georg, do
+    not know them by name).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

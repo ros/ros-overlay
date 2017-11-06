@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    turtlebot_arm_kinect_calibration allows calibration of a kinect to a TurtleBot arm,
+    including a kinect on-board and off-board the TurtleBot for more precise manipulation.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

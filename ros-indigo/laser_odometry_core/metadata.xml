@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Core library for the laser_odometry package.
+    It contains the base class from which laser scan matcher wrappers
+    should inherit from.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

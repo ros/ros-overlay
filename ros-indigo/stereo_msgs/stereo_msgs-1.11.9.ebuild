@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="stereo_msgs contains messages specific to stereo processing, such as disparity i"
+DESCRIPTION="stereo_msgs contains messages specific to stereo processing, such as dispar[...]"
 HOMEPAGE="http://ros.org/wiki/stereo_msgs"
-SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/indigo/stereo_msgs/1.11.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/common_msgs-release/archive/release/indigo/stereo_msgs/1.11.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

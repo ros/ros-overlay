@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Point Grey camera driver based on libflycapture2"
+DESCRIPTION="Point Grey camera driver based on libflycapture2."
 HOMEPAGE="http://ros.org/wiki/pointgrey_camera_driver"
-SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/indigo/pointgrey_camera_driver/0.12.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/indigo/pointgrey_camera_driver/0.12.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -37,4 +37,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

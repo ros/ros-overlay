@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Holds maps of Willow Garage that can be used for a number of different applicati"
+DESCRIPTION="Holds maps of Willow Garage that can be used for a number of different appl[...]"
 HOMEPAGE="http://pr.willowgarage.com/wiki/willow_maps"
-SRC_URI="https://github.com/ros-gbp/willow_maps-release/archive/release/indigo/willow_maps/1.0.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/willow_maps-release/archive/release/indigo/willow_maps/1.0.2-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

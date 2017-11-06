@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The md49_base_controller package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Scheik/md49_base_controller-release/archive/release/indigo/md49_base_controller/0.1.4-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/Scheik/md49_base_controller-release/archive/release/indigo/md49_base_controller/0.1.4-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

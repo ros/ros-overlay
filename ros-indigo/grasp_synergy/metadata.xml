@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Grasp Synergies (aka eigengrasps): compute, store, and command low-dimensional grasp representations.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

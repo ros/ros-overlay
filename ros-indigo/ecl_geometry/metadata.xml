@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Any tools relating to mathematical geometry. 
+     Primarily featuring polynomials and interpolations.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

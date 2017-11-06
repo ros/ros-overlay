@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="pr2_counterbalance_check"
 HOMEPAGE="http://ros.org/wiki/pr2_counterbalance_check"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_counterbalance_check/1.0.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_counterbalance_check/1.0.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

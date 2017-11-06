@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package allows user to create a map of Aruco markers in 2D or 3D space 
+    and estimate full 6 DOF pose of the camera.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="libpointmatcher is a modular ICP library, useful for robotics and computer visio"
+DESCRIPTION="libpointmatcher is a modular ICP library, useful for robotics and computer [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/libpointmatcher-release/archive/release/indigo/libpointmatcher/1.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-asl/libpointmatcher-release/archive/release/indigo/libpointmatcher/1.2.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

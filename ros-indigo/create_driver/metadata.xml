@@ -2,7 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Driver for iRobot Create and Roomba
+    
+    This is a generic driver for iRobot Create that currently holds
+    implementations for Turtlebot and Roomba. Port
+    of pyrobot.py by Damon Kohler.  It is currently labeled as
+    turtlebot_driver pending review by the entire create community
+    before using the name create_driver.
+  
+    For ROS bindings, please see turtlebot_node.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

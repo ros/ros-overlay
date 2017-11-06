@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Integration of Designator Communication via ROS as Lisp interface"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/designator_integration-release/archive/release/indigo/designator_integration_lisp/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/designator_integration-release/archive/release/indigo/designator_integration_lisp/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

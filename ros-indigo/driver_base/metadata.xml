@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.
+
+    This package is deprecated.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

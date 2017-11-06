@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    installer.py installs a full eclipse installation in this package. Additionally CDT and the BRIDE plugins will be installed. After rosmake you have the full model driven engineering tool chain accessible inside this package.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

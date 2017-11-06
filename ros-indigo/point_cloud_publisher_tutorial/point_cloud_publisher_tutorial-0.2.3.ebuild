@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The point_cloud_publisher_tutorial package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/navigation_tutorials-release/archive/release/indigo/point_cloud_publisher_tutorial/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_tutorials-release/archive/release/indigo/point_cloud_publisher_tutorial/0.2.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

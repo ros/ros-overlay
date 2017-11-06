@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A controller ensuring the safe operation of your robot.
+
+    The SafetyController listens to ranger readings in order to stop (and move back), if obstacles get to close.
+
+    This controller can be enabled/disabled.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

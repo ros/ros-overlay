@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains messages and services for MAV communication
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

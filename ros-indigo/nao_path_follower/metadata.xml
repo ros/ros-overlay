@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Enables a Nao humanoid to either walk to a target location (with localization feedback),
+  or follow a planned 2D path closely. Sends naoqi_msgs to the nao_walker node in nao_apps.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

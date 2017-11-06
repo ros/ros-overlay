@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Autonomous Exploration package for a Turtulebot equiped with RGBD SensorKinect,"
+DESCRIPTION="Autonomous Exploration package for a Turtulebot equiped with RGBD Sensor\(K[...]"
 HOMEPAGE="http://wiki.ros.org/turtlebot_exploration_3d"
-SRC_URI="https://github.com/RobustFieldAutonomyLab/turtlebot_exploration_3d-release/archive/release/indigo/turtlebot_exploration_3d/0.0.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobustFieldAutonomyLab/turtlebot_exploration_3d-release/archive/release/indigo/turtlebot_exploration_3d/0.0.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

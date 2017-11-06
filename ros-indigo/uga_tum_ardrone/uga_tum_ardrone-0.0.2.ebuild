@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The uga_tum_ardrone package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/thinclab/uga_tum_ardrone-release/archive/release/indigo/uga_tum_ardrone/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/thinclab/uga_tum_ardrone-release/archive/release/indigo/uga_tum_ardrone/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/ardrone_autonomy
 	ros-indigo/cv_bridge
@@ -39,4 +37,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

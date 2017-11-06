@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Test suite for the packages that are part of the WiFi Test Setup project:	"
+DESCRIPTION="Test suite for the packages that are part of the \"WiFi Test Setup\" projec[...]"
 HOMEPAGE="http://ros.org/wiki/network_control_tests"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_control_tests/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_control_tests/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

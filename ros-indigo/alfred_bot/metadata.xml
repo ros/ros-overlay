@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package is bot of Alfred Assitant for ROS. This package is part of Alfred Assistant stack.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

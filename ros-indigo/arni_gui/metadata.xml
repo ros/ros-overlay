@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Common functionality for the ARNI rqt_gui overview and detail plugins.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

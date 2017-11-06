@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack offers OpenRAVErelated bindings	Maintained by the JSK lab at Un"
+DESCRIPTION="This stack offers OpenRAVE-related bindings.\
+	Maintained by the JSK lab[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/openrave_planning/0.0.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/openrave_planning/0.0.5-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

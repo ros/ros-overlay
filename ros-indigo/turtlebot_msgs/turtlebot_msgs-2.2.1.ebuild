@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Turtlebot messages, services and actions"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_msgs-release/archive/release/indigo/turtlebot_msgs/2.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_msgs-release/archive/release/indigo/turtlebot_msgs/2.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

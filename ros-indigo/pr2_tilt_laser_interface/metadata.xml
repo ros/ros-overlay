@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provides a set of tools/actions for manipulating the pr2's tilting
+    laser. Simplifies previously complex tasks, such as fetching
+    a single sweep, given a set of desired parameters for both the laser
+    driver and tilting platform.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

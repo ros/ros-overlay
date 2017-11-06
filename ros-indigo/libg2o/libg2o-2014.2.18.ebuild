@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The libg2o library from http://openslamorg/g2ohtml"
+DESCRIPTION="The libg2o library from http://openslam.org/g2o.html"
 HOMEPAGE="https://github.com/RainerKuemmerle/g2o"
-SRC_URI="https://github.com/ros-gbp/libg2o-release/archive/release/indigo/libg2o/2014.2.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/libg2o-release/archive/release/indigo/libg2o/2014.2.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

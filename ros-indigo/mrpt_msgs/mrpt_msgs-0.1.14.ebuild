@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="mrpt_msgs"
 HOMEPAGE="http://wiki.ros.org/mrpt_msgs"
-SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/indigo/mrpt_msgs/0.1.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/indigo/mrpt_msgs/0.1.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

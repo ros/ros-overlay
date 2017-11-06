@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="sdsdddsdsds"
 HOMEPAGE="http://ros.org/wiki/multi_interface_roam"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/multi_interface_roam/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/multi_interface_roam/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( BSD LGPL-2 GPL-1 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

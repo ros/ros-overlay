@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Visualisation tools for cost maps."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_visualisations/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/stonier/cost_map-release/archive/release/indigo/cost_map_visualisations/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

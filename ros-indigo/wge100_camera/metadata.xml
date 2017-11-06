@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A ROS node and assorted tools to provide access to the WGE100
+    camera used in the forearms and the stereo cameras of the PR2
+    robot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

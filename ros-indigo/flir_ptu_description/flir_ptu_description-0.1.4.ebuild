@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="URDF description the FLIR PTUs, currently the D46"
+DESCRIPTION="URDF description the FLIR PTUs, currently the D46."
 HOMEPAGE="http://wiki.ros.org/flir_ptu_driver"
-SRC_URI="https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/indigo/flir_ptu_description/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/indigo/flir_ptu_description/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

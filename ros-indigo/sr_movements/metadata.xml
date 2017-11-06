@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains a node which can be used to take the hand through a series of movements (perfect for tuning
+    controllers for example).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

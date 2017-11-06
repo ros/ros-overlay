@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A simple software concert describing how multiple robots launched in
+    simulation can be used by the concert framework. This package follows the
+    same pattern as turtle_concert. It is multi typed gazebo robot version of turtle_concert. 
+    Adopted a lot from segbot_gazebo_concert by Piyush Khandelwal
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

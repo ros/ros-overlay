@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A simple script that aggregates all of the topics that a "pr2_dashboard" app might be interested in.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

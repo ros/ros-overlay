@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="tt#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/audio_common-release/archive/release/indigo/sound_play/0.2.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/audio_common-release/archive/release/indigo/sound_play/0.2.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -39,4 +39,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A technique to recognize and estimate poses of transparent objects"
 HOMEPAGE="http://wg-perception.github.io/transparent_objects"
-SRC_URI="https://github.com/ros-gbp/object_recognition_transparent_objects-release/archive/release/indigo/object_recognition_transparent_objects/0.4.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_transparent_objects-release/archive/release/indigo/object_recognition_transparent_objects/0.4.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

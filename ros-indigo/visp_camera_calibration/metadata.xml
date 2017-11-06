@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    visp_camera_calibration allows easy calibration of
+     cameras using a customizable pattern and ViSP library.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

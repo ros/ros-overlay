@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Software for Kobuki, Yujin Robot's mobile research base.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

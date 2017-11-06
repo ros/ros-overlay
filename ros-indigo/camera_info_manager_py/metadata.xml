@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Python interface for camera calibration information.
+
+    This ROS package provides a CameraInfo interface for Python camera
+    drivers similar to the C++ camera_info_manager package.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

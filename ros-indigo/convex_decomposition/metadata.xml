@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Convex Decomposition Tool for Robot Model
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

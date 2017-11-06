@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="jsk_topic_tools"
 HOMEPAGE="http://ros.org/wiki/jsk_topic_tools"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/jsk_topic_tools/2.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/jsk_topic_tools/2.2.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,7 +35,7 @@ RDEPEND="
 	ros-indigo/tf
 	ros-indigo/topic_tools
 	dev-python/numpy
-	media-libs/opencv
+	media-libs/opencv[python]
 	sci-libs/scipy
 "
 DEPEND="${RDEPEND}
@@ -47,4 +47,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

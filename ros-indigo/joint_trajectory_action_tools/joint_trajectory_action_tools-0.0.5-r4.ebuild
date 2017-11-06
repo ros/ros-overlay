@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="joint_trajectory_action_tools"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/joint_trajectory_action_tools/0.0.5-4.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/joint_trajectory_action_tools/0.0.5-4.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

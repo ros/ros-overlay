@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="A package for UAV detection"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/micros-uav/micros_cv_detection-release/archive/release/indigo/cv_detection/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/micros-uav/micros_cv_detection-release/archive/release/indigo/cv_detection/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/cv_bridge
 	ros-indigo/geometry_msgs
@@ -28,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

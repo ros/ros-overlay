@@ -10,8 +10,7 @@ DESCRIPTION="ROS wrapper for the youBot driver"
 HOMEPAGE="http://www.youbot-store.com"
 SRC_URI="https://github.com/youbot-release/youbot_driver_ros_interface-release/archive/release/indigo/youbot_driver_ros_interface/1.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( LGPL-2 CC-BY-SA-3.0 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/brics_actuator

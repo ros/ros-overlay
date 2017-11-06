@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Robot application platform for ros robots with a default implementation in python.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_uav_msgs is a message package that contains messages for UAV controller inputs and outputs and some sensor readings not covered by sensor_msgs.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

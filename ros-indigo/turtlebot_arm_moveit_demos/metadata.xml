@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The turtlebot_arm_moveit_demos package contains scripts to start playing with a turtlebot arm and MoveIt.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

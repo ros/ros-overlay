@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The pr2_calibration_controllers package contains the controllers
+     used to bring all the joints in the PR2 to a calibrated state.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A basic grasp generator for simple objects such as blocks or cylinders for use w"
+DESCRIPTION="A basic grasp generator for simple objects such as blocks or cylinders for [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/moveit_simple_grasps-release/archive/release/indigo/moveit_simple_grasps/1.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/davetcoleman/moveit_simple_grasps-release/archive/release/indigo/moveit_simple_grasps/1.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -39,4 +39,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

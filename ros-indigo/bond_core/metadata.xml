@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A bond allows two processes, A and B, to know when the other has
+    terminated, either cleanly or by crashing. The bond remains
+    connected until it is either broken explicitly or until a
+    heartbeat times out.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

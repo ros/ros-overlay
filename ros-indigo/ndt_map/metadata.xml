@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains the definitions of the 3D Normal Distributions Transform data structures, 
+     used for mapping, registration, etc.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

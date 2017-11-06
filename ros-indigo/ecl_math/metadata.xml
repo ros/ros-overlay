@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides simple support to cmath, filling in holes
+    or redefining in a c++ formulation where desirable.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

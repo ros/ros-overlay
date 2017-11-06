@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    object_recognition_ros_visualization contains rviz plugins to visualize ork detection results
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

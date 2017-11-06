@@ -6,12 +6,11 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable "
+DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigur[...]"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/indigo/gazebo_plugins/2.4.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( BSD CC-BY-SA-3.0 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/angles
 	ros-indigo/camera_info_manager
@@ -48,4 +47,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

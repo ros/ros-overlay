@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Geographic information metapackage.
+
+    Not needed for wet packages, use only to resolve dry stack
+    dependencies.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

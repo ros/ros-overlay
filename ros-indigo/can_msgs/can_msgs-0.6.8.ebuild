@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="CAN related message types."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/can_msgs/0.6.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/ros_canopen-release/archive/release/indigo/can_msgs/0.6.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

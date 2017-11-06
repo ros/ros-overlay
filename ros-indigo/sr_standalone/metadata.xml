@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    sr_standalone is a wrapper allowing shadow_robot to be used from outside of ROS (with ROS installed on the system)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

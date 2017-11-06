@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A collection of .mk include files for building ROS architectural elements.
+    Most package authors should use cmake .mk, which calls CMake for the build of the package.
+    The other files in this package are intended for use in exotic situations that mostly arise when importing 3rdparty code.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

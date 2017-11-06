@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Sets up the gazebo robot manager as a service to assist in spawning/killing robots as concert clients.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

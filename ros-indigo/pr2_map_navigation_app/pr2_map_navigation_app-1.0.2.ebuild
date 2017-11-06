@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Map nav for the PR2"
+DESCRIPTION="Map nav for the PR2."
 HOMEPAGE="http://ros.org/wiki/map_nav"
-SRC_URI="https://github.com/pr2-gbp/pr2_map_navigation_app-release/archive/release/indigo/pr2_map_navigation_app/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_map_navigation_app-release/archive/release/indigo/pr2_map_navigation_app/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

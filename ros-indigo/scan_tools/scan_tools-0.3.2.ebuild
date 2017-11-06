@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Laser scan processing tools"
+DESCRIPTION="Laser scan processing tools."
 HOMEPAGE="http://ros.org/wiki/scan_tools"
-SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/scan_tools/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/scan_tools/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( BSD LGPL-3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

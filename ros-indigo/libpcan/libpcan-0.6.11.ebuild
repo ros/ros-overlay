@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package wraps the libpcan to use it as a ros dependency"
 HOMEPAGE="http://p103112.typo3server.info/fileadmin/media/linux/index.htm"
-SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/libpcan/0.6.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_extern-release/archive/release/indigo/libpcan/0.6.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

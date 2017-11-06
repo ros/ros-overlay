@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Variant messages are designed to accommodate the information content
+    of any invariant message. They are truly generic and can freely be
+    converted to and from specific message objects.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

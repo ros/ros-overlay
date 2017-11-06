@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    soem_master contains a C++ wrapper around soem_core, a factory object to register and create drivers and a RTT component that will automatically create the drivers and their services for all the slave for which a driver is known.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

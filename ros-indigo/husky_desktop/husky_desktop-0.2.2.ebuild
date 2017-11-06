@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Metapackage for Clearpath Husky visualization software"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/husky_desktop-release/archive/release/indigo/husky_desktop/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky_desktop-release/archive/release/indigo/husky_desktop/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

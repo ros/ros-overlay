@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A wrapper around the EPOS Command Library to provide easy integration with ROS control
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

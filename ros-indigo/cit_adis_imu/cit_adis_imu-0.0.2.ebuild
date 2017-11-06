@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="cit_adis_imu for ADIS IMUs with the interface board made by Chiba Institute of T"
+DESCRIPTION="cit_adis_imu for ADIS IMUs with the interface board made by Chiba Institute[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/open-rdc/cit_adis_imu-release/archive/release/indigo/cit_adis_imu/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/open-rdc/cit_adis_imu-release/archive/release/indigo/cit_adis_imu/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

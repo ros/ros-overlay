@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains utilities like a level multiplexer, a level selector and other utility functions.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The ihmc_ros_common package provides common functionality for other IHMC ROS pac"
+DESCRIPTION="The ihmc_ros_common package provides common functionality for other IHMC RO[...]"
 HOMEPAGE="http://github.com/ihmcrobotics/ihmc_ros_core"
-SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_ros_common/0.9.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_ros_common/0.9.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

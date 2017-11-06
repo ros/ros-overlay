@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="jsk_ik_server"
 HOMEPAGE="http://ros.org/wiki/jsk_ik_server"
-SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_ik_server/0.1.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_ik_server/0.1.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

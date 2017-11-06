@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Node package of the laser_odometry project.
+    It contains the ROS node that instantiate the
+    laser scan matcher plugin.
+    It also defines and centralizes some of the common
+    steps to aggregate a consecutive laser scan displacement
+    estimates to a proper odometry.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Launch files and scripts needed to bring ROS interfaces for Nao up into a	  "
+DESCRIPTION="Launch files and scripts needed to bring ROS interfaces for Nao up into a\
+[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/nao_robot-release/archive/release/indigo/nao_bringup/0.5.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/nao_robot-release/archive/release/indigo/nao_bringup/0.5.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

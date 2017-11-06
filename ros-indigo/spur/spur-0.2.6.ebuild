@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Meta package for SPUR omnidirectional mobile manipulator robot made at Tamagawa"
+DESCRIPTION="Meta package for SPUR omni-directional mobile manipulator robot made at Tam[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur/0.2.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/spur-release/archive/release/indigo/spur/0.2.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The rbcar_common package. It contains RBCAR common packages
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

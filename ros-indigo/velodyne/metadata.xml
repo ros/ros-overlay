@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Basic ROS support for the Velodyne 3D LIDARs.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

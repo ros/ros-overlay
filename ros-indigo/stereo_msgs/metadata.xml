@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    stereo_msgs contains messages specific to stereo processing, such as disparity images.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

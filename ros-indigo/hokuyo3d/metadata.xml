@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS driver for HOKUYO 3D sensor
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

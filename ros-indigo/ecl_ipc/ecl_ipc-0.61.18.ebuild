@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Interprocess mechanisms vary greatly across platforms  sysv, posix, win32, ther"
+DESCRIPTION="Interprocess mechanisms vary greatly across platforms - sysv, posix, win32,[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_ipc/0.61.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_ipc/0.61.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS topic/service/action files are defined in this package for
+  Hironx RPC (Remote Procedure Call).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to fol"
+DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot t[...]"
 HOMEPAGE="http://wiki.ros.org/carrot_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/carrot_planner/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/carrot_planner/1.12.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

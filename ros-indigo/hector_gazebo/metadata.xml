@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_gazebo provides packages related to to simulation of robots using gazebo (gazebo plugins, world files etc.)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

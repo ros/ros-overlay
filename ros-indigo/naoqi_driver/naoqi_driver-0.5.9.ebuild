@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Driver module between Aldebarans NAOqiOS and ROS It publishes all sensor and a"
+DESCRIPTION="Driver module between Aldebaran\'s NAOqiOS and ROS. It publishes all sensor[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/naoqi_driver-release/archive/release/indigo/naoqi_driver/0.5.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/naoqi_driver-release/archive/release/indigo/naoqi_driver/0.5.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,4 +40,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

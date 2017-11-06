@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This is a set of tools for recording from and playing back ROS
+    message without relying on the ROS client library.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

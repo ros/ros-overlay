@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A package that provides a ROS wrapper for the apriltags C++ package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

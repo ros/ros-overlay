@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Software Emergency Stop for the CARL Robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/carl_estop-release/archive/release/indigo/carl_estop/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/carl_estop-release/archive/release/indigo/carl_estop/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

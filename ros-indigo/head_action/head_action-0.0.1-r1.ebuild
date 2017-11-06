@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The head action is a node that provides an action interface for  pointing the h"
+DESCRIPTION="The head action is a node that provides an action interface for\
+  pointing[...]"
 HOMEPAGE="http://ros.org/wiki/head_action"
-SRC_URI="https://github.com/pal-gbp/head_action-release/archive/release/indigo/head_action/0.0.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pal-gbp/head_action-release/archive/release/indigo/head_action/0.0.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Metapackage grouping the packages C++ and Common LISP library
+    packages for ROS designator integraiton.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

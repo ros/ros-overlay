@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS stack  containing all nodes, config, and launch files for Nav2 mobile robotics platform.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

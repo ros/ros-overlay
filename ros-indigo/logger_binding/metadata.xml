@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Includes libraries and headers to provide loose coupling to
+    logging. Provides loggers that use std streams, or ROS logging
+    (if compiled with catkin).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

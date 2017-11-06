@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Web server to host ROS package content"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RIVeR-Lab-release/ros_package_web_server-release/archive/release/indigo/ros_package_web_server/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RIVeR-Lab-release/ros_package_web_server-release/archive/release/indigo/ros_package_web_server/0.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

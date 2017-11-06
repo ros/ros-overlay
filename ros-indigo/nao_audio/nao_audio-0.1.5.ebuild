@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Package for the Nao robot, providing access to NAOqi audio proxies"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/nao_interaction-release/archive/release/indigo/nao_audio/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/nao_interaction-release/archive/release/indigo/nao_audio/0.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

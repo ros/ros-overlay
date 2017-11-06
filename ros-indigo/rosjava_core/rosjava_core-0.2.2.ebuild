@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="An implementation of ROS in pureJava with Android support"
+DESCRIPTION="An implementation of ROS in pure-Java with Android support."
 HOMEPAGE="http://ros.org/wiki/rosjava_core"
-SRC_URI="https://github.com/rosjava-release/rosjava_core-release/archive/release/indigo/rosjava_core/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rosjava-release/rosjava_core-release/archive/release/indigo/rosjava_core/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

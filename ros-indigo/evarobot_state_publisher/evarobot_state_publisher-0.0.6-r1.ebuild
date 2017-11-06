@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="evarobot_state_publisher provides tf information of Evarobot links"
+DESCRIPTION="evarobot_state_publisher provides tf information of Evarobot links."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/inomuh/evapc_ros-release/archive/release/indigo/evarobot_state_publisher/0.0.6-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/inomuh/evapc_ros-release/archive/release/indigo/evarobot_state_publisher/0.0.6-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

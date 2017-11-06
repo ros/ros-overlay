@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Camera pose calibration using the OpenCV asymmetric circles pattern.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

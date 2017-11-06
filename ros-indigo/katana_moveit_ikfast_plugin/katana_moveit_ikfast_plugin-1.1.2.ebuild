@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The katana_moveit_ikfast_plugin package"
 HOMEPAGE="http://wiki.ros.org/katana_moveit_ikfast_plugin"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/indigo/katana_moveit_ikfast_plugin/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/indigo/katana_moveit_ikfast_plugin/1.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( BSD Apache-1.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

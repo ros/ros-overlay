@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="eband_local_planner implements a plugin to the	base_local_planner It implem"
+DESCRIPTION="eband_local_planner implements a plugin to the\
+	base_local_planner. It [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/eband_local_planner-release/archive/release/indigo/eband_local_planner/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/eband_local_planner-release/archive/release/indigo/eband_local_planner/0.3.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +34,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

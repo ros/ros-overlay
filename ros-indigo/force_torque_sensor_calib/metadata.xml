@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Calibrates the offsets of F/T sensors and the mass and position of the COM of gripper attached to the F/T sensor. Uses readings from an accelerometer that has been calibrated to the robot frame.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

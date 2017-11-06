@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The controller manager (CM) package provides the infrastructure to run controllers in a hard realtime loop.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

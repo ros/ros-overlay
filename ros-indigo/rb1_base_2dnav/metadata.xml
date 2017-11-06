@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package configures the move_base stack and makes use of the gmapping and amcl algorithms to
+    move the rb1_base robot
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

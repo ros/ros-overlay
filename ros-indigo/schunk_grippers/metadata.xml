@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Schunk_grippers stack contains packages for PG70 and EZN64 grippers
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

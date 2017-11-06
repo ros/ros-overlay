@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A ROS node that watches a given network interface and publishes
+     whether it is both UP and RUNNING (indicating that a cable is
+     plugged into it and communication is happening, for instance) or
+     not.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

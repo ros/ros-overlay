@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo plugins for the iRobot Create"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_create_desktop-release/archive/release/indigo/create_gazebo_plugins/2.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_create_desktop-release/archive/release/indigo/create_gazebo_plugins/2.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

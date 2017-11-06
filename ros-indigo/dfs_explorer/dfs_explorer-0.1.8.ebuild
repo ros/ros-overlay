@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="An explorer with depthfirst search for finite worlds for the Large Maps Framewo"
+DESCRIPTION="An explorer with depth-first search for finite worlds for the Large Maps Fr[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_utilities-release/archive/release/indigo/dfs_explorer/0.1.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_utilities-release/archive/release/indigo/dfs_explorer/0.1.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

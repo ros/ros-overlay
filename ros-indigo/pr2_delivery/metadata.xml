@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains scripts for making a PR2 deliver a small
+  object from one place to another, and return to a home base.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

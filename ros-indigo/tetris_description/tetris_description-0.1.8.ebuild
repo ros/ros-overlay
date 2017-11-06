@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package holds 3D models of the hakuto robots in COLLADA and URDF formats"
+DESCRIPTION="This package holds 3D models of the hakuto robots in COLLADA and URDF formats."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/hakuto-release/archive/release/indigo/tetris_description/0.1.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/hakuto-release/archive/release/indigo/tetris_description/0.1.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    An Rviz plugin that implements the interaction_cursor_msgs API
+    to interact with interactive_markers.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

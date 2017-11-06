@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    MAVROS -- MAVLink extendable communication node for ROS
+    with proxy for Ground Control Station.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="RTABMaps rospkg RTABMap is a RGBD SLAM approach with realtime constraints"
+DESCRIPTION="RTAB-Map\'s ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time const[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/introlab/rtabmap_ros-release/archive/release/indigo/rtabmap_ros/0.11.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/introlab/rtabmap_ros-release/archive/release/indigo/rtabmap_ros/0.11.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -52,4 +52,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

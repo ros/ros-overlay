@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Core library for the laser_odometry package	It contains the base class from"
+DESCRIPTION="Core library for the laser_odometry package.\
+	It contains the base clas[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/artivis/laser_odometry-release/archive/release/indigo/laser_odometry_core/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/artivis/laser_odometry-release/archive/release/indigo/laser_odometry_core/0.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -28,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

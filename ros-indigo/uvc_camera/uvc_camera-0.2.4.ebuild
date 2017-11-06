@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A collection of nodelets that stream images from USB cameras UVC	 and pr"
+DESCRIPTION="A collection of node\(let\)s that stream images from USB cameras \(UVC\)\
+ [...]"
 HOMEPAGE="http://ros.org/wiki/uvc_camera"
-SRC_URI="https://github.com/ktossell/camera_umd-release/archive/release/indigo/uvc_camera/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ktossell/camera_umd-release/archive/release/indigo/uvc_camera/0.2.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -28,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

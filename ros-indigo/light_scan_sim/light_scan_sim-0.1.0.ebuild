@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The light_scan_sim package simulates a laser scan originating from a TF against "
+DESCRIPTION="The light_scan_sim package simulates a laser scan originating from a TF aga[...]"
 HOMEPAGE="https://github.com/josephduchesne/light_scan_sim"
-SRC_URI="https://github.com/josephduchesne/light_scan_sim-release/archive/release/indigo/light_scan_sim/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/josephduchesne/light_scan_sim-release/archive/release/indigo/light_scan_sim/0.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

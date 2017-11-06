@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A set of tools and interfaces extending the capabilities of c++ to 
+    provide a lightweight, consistent interface with a focus for control
+    programming.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

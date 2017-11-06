@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains copies of former pr2_msgs (ported to ROS indigo) 
+	as well as new messages for neobotix robots.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

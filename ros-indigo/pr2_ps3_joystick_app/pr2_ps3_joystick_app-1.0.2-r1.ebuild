@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Teleop PS3 joystick application for the pr2"
 HOMEPAGE="http://ros.org/wiki/teleop"
-SRC_URI="https://github.com/pr2-gbp/pr2_ps3_joystick_app-release/archive/release/indigo/pr2_ps3_joystick_app/1.0.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_ps3_joystick_app-release/archive/release/indigo/pr2_ps3_joystick_app/1.0.2-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

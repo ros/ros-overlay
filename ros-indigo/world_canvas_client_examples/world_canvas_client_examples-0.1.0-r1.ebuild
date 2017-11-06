@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Examples showing how to use C and Python client libraries to access semantic "
+DESCRIPTION="Examples showing how to use C++ and Python client libraries to access seman[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/corot/world_canvas_libs-release/archive/release/indigo/world_canvas_client_examples/0.1.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/corot/world_canvas_libs-release/archive/release/indigo/world_canvas_client_examples/0.1.0-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

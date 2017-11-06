@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Log4cpp maintained by Orocos developers	This version of log4cpp deviates fro"
+DESCRIPTION="Log4cpp maintained by Orocos developers\
+	This version of log4cpp deviat[...]"
 HOMEPAGE="http://log4cpp.sourceforge.net/"
-SRC_URI="https://github.com/orocos-gbp/log4cpp-release/archive/release/indigo/log4cpp/2.8.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/log4cpp-release/archive/release/indigo/log4cpp/2.8.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -23,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/rospeex/rospeex-release/get/release/indigo/rospeex_launch/3.0.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://bitbucket.org/rospeex/rospeex-release/get/release/indigo/rospeex_launch/3.0.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

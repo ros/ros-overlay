@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The thermapp_camera package provides a library and a node for the  Opgal® Ther"
+DESCRIPTION="The thermapp_camera package provides a library and a node for the\
+  \	Opga[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Hacks4ROS-release/h4r_thermapp_camera/archive/release/indigo/h4r_thermapp_camera/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/Hacks4ROS-release/h4r_thermapp_camera/archive/release/indigo/h4r_thermapp_camera/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -29,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

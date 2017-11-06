@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS packages for controlling Segway-based robots at the Learning Agents
+    Research Group (LARG), AI Laboratory, Department of Computer Science, 
+    University of Texas at Austin.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

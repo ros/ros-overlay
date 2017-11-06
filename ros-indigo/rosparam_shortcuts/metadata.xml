@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Quickly load variables from rosparam with good command line error checking.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

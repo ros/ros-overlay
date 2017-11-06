@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Messages and Services required for communication with the Baxter
+    Research Robot from Rethink Robotics.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

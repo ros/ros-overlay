@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Underlying data libraries for roscpp messages"
+DESCRIPTION="Underlying data libraries for roscpp messages."
 HOMEPAGE="http://www.ros.org/wiki/roscpp_core"
-SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/indigo/roscpp_core/0.5.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/roscpp_core-release/archive/release/indigo/roscpp_core/0.5.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

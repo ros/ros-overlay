@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Provide a node that extracts checkerboard corners from ROS images	This pack"
+DESCRIPTION="Provide a node that extracts checkerboard corners from ROS images.\
+	Thi[...]"
 HOMEPAGE="http://ros.org/wiki/image_cb_detector"
-SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/image_cb_detector/0.10.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/calibration-release/archive/release/indigo/image_cb_detector/0.10.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,4 +35,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="segway_rmp"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/segwayrmp/segway_rmp-release/archive/release/indigo/segway_rmp/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/segwayrmp/segway_rmp-release/archive/release/indigo/segway_rmp/0.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

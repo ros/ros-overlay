@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d cell"
+DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d[...]"
 HOMEPAGE="http://wiki.ros.org/costmap_converter"
-SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/indigo/costmap_converter/0.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/indigo/costmap_converter/0.0.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

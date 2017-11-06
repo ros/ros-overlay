@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fulanghua_ekf_2d package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/DaikiMaekawa/fulanghua_navigation-release/archive/release/indigo/fulanghua_ekf_2d/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DaikiMaekawa/fulanghua_navigation-release/archive/release/indigo/fulanghua_ekf_2d/0.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

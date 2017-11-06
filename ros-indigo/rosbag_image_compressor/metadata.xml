@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The rosbag_image_compressor package.
+  This package has a script to compress and decompress images inside a bag file.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

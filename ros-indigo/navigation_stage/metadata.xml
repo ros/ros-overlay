@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package holds example launch files for running the ROS navigation stack in stage.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

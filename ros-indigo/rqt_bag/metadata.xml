@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Package containing the hardware interface to connect to Nao, Romeo, or Pepper ro"
+DESCRIPTION="Package containing the hardware interface to connect to Nao, Romeo, or Pepp[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/naoqi_dcm_driver-release/archive/release/indigo/naoqi_dcm_driver/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/naoqi_dcm_driver-release/archive/release/indigo/naoqi_dcm_driver/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,4 +34,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

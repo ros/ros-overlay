@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The featurenav_base package provides base functionality
+    for learning and navigating jockeys based on feature detection for
+    the Large Maps Framework (LaMa).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

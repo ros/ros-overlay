@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    sr_description contains the description for Shadow Robot's Hand and Arm, as well as some additional models used in our robot (kinect, etc...).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

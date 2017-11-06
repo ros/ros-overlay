@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
+    It is extensible with Python- and C++-based plugins (implemented in separate packages) which can contribute arbitrary widgets.
+    It requires either PyQt or PySide bindings.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

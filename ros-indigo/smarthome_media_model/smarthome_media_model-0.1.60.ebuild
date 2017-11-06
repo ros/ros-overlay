@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package is Media model for RosJava"
+DESCRIPTION="This package is Media model for RosJava."
 HOMEPAGE="https://support.tactfactory.com/projects/medialfred/wiki/Wiki"
-SRC_URI="https://github.com/rosalfred-release/smarthome_media_model-release/archive/release/indigo/smarthome_media_model/0.1.60-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/smarthome_media_model-release/archive/release/indigo/smarthome_media_model/0.1.60-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

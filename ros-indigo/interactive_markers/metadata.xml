@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    3D interactive marker communication library for RViz and similar tools.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

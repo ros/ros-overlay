@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Utilities and tools developed for rocon, but usable beyond the boundaries
+    of rocon.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

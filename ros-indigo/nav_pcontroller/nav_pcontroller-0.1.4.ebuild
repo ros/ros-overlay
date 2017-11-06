@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Simple P-Controller for a holonomic robot base"
 HOMEPAGE="https://www.github.com/code-iai/nav_pcontroller"
-SRC_URI="https://github.com/code-iai-release/nav_pcontroller-release/archive/release/indigo/nav_pcontroller/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/nav_pcontroller-release/archive/release/indigo/nav_pcontroller/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

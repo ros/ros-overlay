@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS driver for HOKUYO 3D sensor"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/at-wat/hokuyo3d-release/archive/release/indigo/hokuyo3d/0.1.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/at-wat/hokuyo3d-release/archive/release/indigo/hokuyo3d/0.1.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

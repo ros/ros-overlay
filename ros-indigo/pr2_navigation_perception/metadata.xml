@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package holds navigation-specific sensor configuration options and launch files for the PR2.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Mapping package that provides utilties for handling ROS 
+    style maps. Also provides functions for generating topological graphs from 
+    pixel maps.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

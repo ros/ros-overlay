@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides launch files for operating Care-O-bot."
 HOMEPAGE="http://ros.org/wiki/cob_bringup"
-SRC_URI="https://github.com/ipa320/cob_robots-release/archive/release/indigo/cob_bringup/0.6.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_robots-release/archive/release/indigo/cob_bringup/0.6.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -101,4 +101,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

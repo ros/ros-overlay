@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The yumi_launch package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/yumi_launch/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/yumi_launch/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/yumi_description
 	ros-indigo/yumi_hw
@@ -26,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Package which provides a library and a ROS ndoe for interfacing with the Roboteq AX2550 motor controller.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

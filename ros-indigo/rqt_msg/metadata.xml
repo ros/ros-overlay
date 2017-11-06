@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A Python GUI plugin for introspecting available ROS message types.
+  Note that the msgs available through this plugin is the ones that are stored
+  on your machine, not on the ROS core your rqt instance connects to.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

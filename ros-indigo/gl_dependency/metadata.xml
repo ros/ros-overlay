@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This encapsulates the GL dependency for a specific ROS distribution and its Qt version
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

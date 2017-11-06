@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package defines services that are used to communicate with
+     the realtime control loop. It also defines messages
+     that represent the state of the realtime controllers, the joints
+     and the actuators.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

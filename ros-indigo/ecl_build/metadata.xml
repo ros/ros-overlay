@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Collection of cmake/make build tools primarily for ecl development itself, but also
+     contains a few cmake modules useful outside of the ecl.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

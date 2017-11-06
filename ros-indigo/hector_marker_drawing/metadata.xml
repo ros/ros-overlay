@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_marker_drawing provides convenience functions for easier publishing of visualization markers.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

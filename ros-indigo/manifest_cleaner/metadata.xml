@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Examines package and stack manifests. Currently only can output statistics, doesn't actually clean.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

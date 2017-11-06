@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Methods and objects for working with or on top of the qglveiwer framework"
+DESCRIPTION="Methods and objects for working with or on top of the qglveiwer framework."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/qglv_toolkit-release/archive/release/indigo/qglv_extras/0.1.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/qglv_toolkit-release/archive/release/indigo/qglv_extras/0.1.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,15 +18,14 @@ RDEPEND="
 	ros-indigo/qglv_opengl
 	ros-indigo/sophus
 	dev-cpp/eigen
-	x11-libs/libQGLViewer
+	x11-libs/libQGLViewer:0/qt4-2
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
 	ros-indigo/cmake_modules
-	x11-libs/libQGLViewer
+	x11-libs/libQGLViewer:0/qt4-2
 "
 
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

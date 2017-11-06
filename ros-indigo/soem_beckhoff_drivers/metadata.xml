@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    soem_beckhoff_drivers contains drivers for the ethercat beckhoff modules to work together with the soem_master package, every module creates the necessary services, dataports and properties for its own functionality.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

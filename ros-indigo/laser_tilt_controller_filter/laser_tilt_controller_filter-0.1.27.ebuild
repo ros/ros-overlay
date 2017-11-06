@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="laser_tilt_controller_filter"
 HOMEPAGE="http://ros.org/wiki/laser_tilt_controller_filter"
-SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/laser_tilt_controller_filter/0.1.27-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/laser_tilt_controller_filter/0.1.27-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="imu_pipeline"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/indigo/imu_pipeline/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/imu_pipeline-release/archive/release/indigo/imu_pipeline/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( BSD GPL-1 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

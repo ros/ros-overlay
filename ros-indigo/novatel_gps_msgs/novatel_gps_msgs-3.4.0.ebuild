@@ -10,9 +10,7 @@ DESCRIPTION="Messages for proprietary \(non-NMEA\) sentences from Novatel GPS re
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/indigo/novatel_gps_msgs/3.4.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/message_runtime
 	ros-indigo/std_msgs

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Driver for the Innok Heros robot plattform"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/innokrobotics/innok_heros_driver-release/archive/release/indigo/innok_heros_driver/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/innokrobotics/innok_heros_driver-release/archive/release/indigo/innok_heros_driver/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

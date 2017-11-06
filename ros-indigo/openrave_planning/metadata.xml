@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This stack offers OpenRAVE-related bindings.
+    Maintained by the JSK lab at University of Tokyo.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

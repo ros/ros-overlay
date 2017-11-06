@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="Package defining actions for manipulation"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/squirrel_manipulation_msgs/0.0.24-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/squirrel_manipulation_msgs/0.0.24-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
@@ -31,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

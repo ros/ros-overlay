@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Packages to run the KUKA youBot in the Gazebo simulation with ROS
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

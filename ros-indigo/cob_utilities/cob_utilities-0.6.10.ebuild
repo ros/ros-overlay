@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Deprecated\
-	\"cob_utilities\" subsumes a number of classes, which are used in t"
+	\"cob_utilities\" subsumes a number of classes, which are u[...]"
 HOMEPAGE="http://ros.org/wiki/cob_utilities"
-SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_utilities/0.6.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_utilities/0.6.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

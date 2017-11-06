@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_quadrotor_gazebo provides a quadrotor model for the gazebo simulator.
+     It can be commanded using geometry_msgs/Twist messages.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

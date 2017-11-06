@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="euscollada"
 HOMEPAGE="http://ros.org/wiki/euscollada"
-SRC_URI="https://github.com/tork-a/jsk_model_tools-release/archive/release/indigo/euscollada/0.3.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_model_tools-release/archive/release/indigo/euscollada/0.3.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -39,4 +39,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

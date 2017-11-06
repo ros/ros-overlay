@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This is a C library for interfacing with Segways RMP line of robotic platform"
+DESCRIPTION="This is a C++ library for interfacing with Segway\'s RMP line of robotic pl[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/segwayrmp/libsegwayrmp-release/archive/release/indigo/libsegwayrmp/0.2.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/segwayrmp/libsegwayrmp-release/archive/release/indigo/libsegwayrmp/0.2.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
