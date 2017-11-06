@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains a recent version of the Kinematics and Dynamics
+    Library (KDL), distributed by the Orocos Project.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
