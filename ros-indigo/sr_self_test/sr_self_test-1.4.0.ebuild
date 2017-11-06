@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="sr_self_test"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_self_test/1.4.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_self_test/1.4.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

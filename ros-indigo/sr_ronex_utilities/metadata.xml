@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Package containing a header library with useful inline functions for working with the RoNeX.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

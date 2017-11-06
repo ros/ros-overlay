@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides an implementation of a 2D costmap that takes in senso[...]"
+DESCRIPTION="This package provides an implementation of a 2D costmap that takes in sensor   "
 HOMEPAGE="http://wiki.ros.org/costmap_2d"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/costmap_2d/1.12.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/costmap_2d/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -42,3 +42,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Examines package and stack manifests. Currently only can output statistics,[...]"
+DESCRIPTION="Examines package and stack manifests Currently only can output statistics, does"
 HOMEPAGE="http://ros.org/wiki/manifest_cleaner"
-SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/manifest_cleaner/0.2.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/manifest_cleaner/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

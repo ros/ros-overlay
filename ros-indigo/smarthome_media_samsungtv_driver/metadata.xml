@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package is for interfacing Samsung Smart TV (by internal API by IP) to ROS. This package is part of Alfred Assistant stack.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

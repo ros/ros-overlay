@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="moveit_robots meta-package contains multiple robots moveit configuration pa[...]"
+DESCRIPTION="moveit_robots metapackage contains multiple robots moveit configuration package"
 HOMEPAGE="http://wiki.ros.org/moveit_robots"
-SRC_URI="https://github.com/ros-gbp/moveit_robots-release/archive/release/indigo/moveit_robots/1.0.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit_robots-release/archive/release/indigo/moveit_robots/1.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

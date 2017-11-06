@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Capture is a set of tools to capture objects in 3D and perform odometry"
 HOMEPAGE="http://wg-perception.github.io/capture"
-SRC_URI="https://github.com/ros-gbp/object_recognition_capture-release/archive/release/indigo/object_recognition_capture/0.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_capture-release/archive/release/indigo/object_recognition_capture/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

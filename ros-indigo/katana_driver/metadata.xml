@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This stack contains all descriptions, drivers and bringup facilities for Neuronics Katana 450 arm.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

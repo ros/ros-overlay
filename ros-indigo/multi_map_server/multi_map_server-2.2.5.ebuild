@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="multi_map_server provides the"
 HOMEPAGE="http://ros.org/wiki/map_server"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/multi_map_server/2.2.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/multi_map_server/2.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,3 +34,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

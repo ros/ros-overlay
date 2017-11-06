@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ros_tutorials contains packages that demonstrate various features of ROS,
-    as well as support packages which help demonstrate those features.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

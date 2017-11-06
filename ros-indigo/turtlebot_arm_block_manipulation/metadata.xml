@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    turtlebot_arm_block_manipulation contains a demo allowing the TurtleBot arm
-    to manipulate small blocks on a level surface using interactive markers.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

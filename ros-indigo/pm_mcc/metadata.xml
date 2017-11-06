@@ -2,13 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The pm_mcc package
-
-	  A polygon matcher based on the Multi-scale Convexity Concavity (MCC)
-	  representation. Based on article Adamek, T. and O'Connor, N.E.,
-	  A multiscale representation method for nonrigid shapes with a single
-	  closed contour, in IEEE Transactions on Circuits and Systems for Video
-	  Technology, 2004.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

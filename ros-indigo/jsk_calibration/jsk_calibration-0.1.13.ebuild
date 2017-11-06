@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The jsk_calibration package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_calibration/0.1.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_calibration/0.1.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

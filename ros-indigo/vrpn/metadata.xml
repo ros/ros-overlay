@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The VRPN is a library and set of servers that interfaces with virtual-reality systems, such as VICON, OptiTrack, and others.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -13,6 +13,6 @@
       <email>pbovbel@clearpathrobotics.com</email>
       <name>Paul Bovbel</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-drivers-gbp/vrpn/issues</bugs-to>
+    <bugs-to>https://github.com/clearpath-gbp/vrpn/issues</bugs-to>
   </upstream>
 </pkgmetadata>

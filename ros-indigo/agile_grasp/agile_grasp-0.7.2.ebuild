@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The agile_grasp ROS package. AGILE stands for Antipodal Grasp Identificatio[...]"
+DESCRIPTION="The agile_grasp ROS package AGILE stands for Antipodal Grasp Identification and"
 HOMEPAGE="http://wiki.ros.org/agile_grasp"
-SRC_URI="https://github.com/atenpas/agile_grasp-release/archive/release/indigo/agile_grasp/0.7.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/atenpas/agile_grasp-release/archive/release/indigo/agile_grasp/0.7.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -36,3 +36,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

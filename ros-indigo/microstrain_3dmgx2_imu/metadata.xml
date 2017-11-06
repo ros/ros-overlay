@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol. Includes 
-    a heavily modified standalone driver pulled from the player distribution, 
-    and a ROS node.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

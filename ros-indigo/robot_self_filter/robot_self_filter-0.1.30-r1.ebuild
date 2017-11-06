@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Filters the robot\'s body out of point clouds."
+DESCRIPTION="Filters the robots body out of point clouds"
 HOMEPAGE="http://ros.org/wiki/robot_self_filter"
-SRC_URI="https://github.com/pr2-gbp/robot_self_filter-gbp/archive/release/indigo/robot_self_filter/0.1.30-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/robot_self_filter-gbp/archive/release/indigo/robot_self_filter/0.1.30-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

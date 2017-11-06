@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Legacy version of yaml cpp without boost, namespaced to avoid system conflicts."
+DESCRIPTION="Legacy version of yaml cpp without boost, namespaced to avoid system conflicts"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/yaml_cpp_0_3-release/archive/release/indigo/yaml_cpp_0_3/0.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/yaml_cpp_0_3-release/archive/release/indigo/yaml_cpp_0_3/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -22,3 +22,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

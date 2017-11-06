@@ -8,9 +8,11 @@ inherit ros-cmake
 
 DESCRIPTION="The linux_networking package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/linux_networking/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/linux_networking/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/access_point_control
 	ros-indigo/asmach
@@ -32,3 +34,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

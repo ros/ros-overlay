@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="meshes for the Aldebaran Robotics NAO"
 HOMEPAGE="http://github.com/vrabaud/nao_meshes/"
-SRC_URI="https://github.com/ros-naoqi/nao_meshes-release/archive/release/indigo/nao_meshes/0.1.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/nao_meshes-release/archive/release/indigo/nao_meshes/0.1.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-NC-ND-4.0"
+LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

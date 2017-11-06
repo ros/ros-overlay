@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A ROS node that allows control of network emulation parameters such as band[...]"
+DESCRIPTION="A ROS node that allows control of network emulation parameters such as bandwidth"
 HOMEPAGE="http://ros.org/wiki/network_traffic_control"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_traffic_control/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_traffic_control/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The nj_costmap package implements a navigation jockey for the\
-\	  Large Ma[...]"
+DESCRIPTION="The nj_costmap package implements a navigation jockey for the  Large Maps fram"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_costmap-release/archive/release/indigo/nj_costmap/0.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_costmap-release/archive/release/indigo/nj_costmap/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

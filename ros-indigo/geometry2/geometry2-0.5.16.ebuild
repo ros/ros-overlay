@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A metapackage to bring in the default packages second generation Transform [...]"
+DESCRIPTION="A metapackage to bring in the default packages second generation Transform Libra"
 HOMEPAGE="http://www.ros.org/wiki/geometry2"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/geometry2/0.5.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/geometry2/0.5.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

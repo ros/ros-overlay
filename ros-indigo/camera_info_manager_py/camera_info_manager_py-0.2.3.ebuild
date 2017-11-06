@@ -6,11 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Python interface for camera calibration information.\
-\
-	This ROS packag[...]"
+DESCRIPTION="Python interface for camera calibration information	This ROS package provi"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/camera_info_manager_py-release/archive/release/indigo/camera_info_manager_py/0.2.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/camera_info_manager_py-release/archive/release/indigo/camera_info_manager_py/0.2.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

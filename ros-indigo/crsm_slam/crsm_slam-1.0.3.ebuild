@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS package for the CRSM SLAM \(Critical Rays Scan Match Simultaneous Local[...]"
+DESCRIPTION="ROS package for the CRSM SLAM Critical Rays Scan Match Simultaneous Localizatio"
 HOMEPAGE="http://ros.org/wiki/crsm_slam"
-SRC_URI="https://github.com/etsardou/crsm-slam-ros-pkg-release/archive/release/indigo/crsm_slam/1.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/etsardou/crsm-slam-ros-pkg-release/archive/release/indigo/crsm_slam/1.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

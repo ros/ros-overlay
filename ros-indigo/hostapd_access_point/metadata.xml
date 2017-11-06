@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A ROS node that controls a hostapd-based access
-    point. It is mainly intended for use with a wireless 
-    network adapter running in master mode. It implements 
-    the dynamic_reconfigure interface defined
-    in the [[access_point_control]] package.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

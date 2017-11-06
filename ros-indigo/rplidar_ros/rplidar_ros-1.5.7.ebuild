@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The rplidar ros package, support rplidar A2/A1"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/kintzhao/rplidar_ros-release/archive/release/indigo/rplidar_ros/1.5.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/kintzhao/rplidar_ros-release/archive/release/indigo/rplidar_ros/1.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

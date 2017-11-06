@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The lama_test package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_test-release/archive/release/indigo/lama_test/0.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_test-release/archive/release/indigo/lama_test/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,3 +34,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

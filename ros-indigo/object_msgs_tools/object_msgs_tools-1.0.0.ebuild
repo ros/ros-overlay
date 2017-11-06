@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The object_msgs_tools package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/object_msgs_tools/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/object_msgs_tools/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

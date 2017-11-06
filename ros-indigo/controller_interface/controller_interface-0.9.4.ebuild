@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Interface base class for controllers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/indigo/controller_interface/0.9.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/indigo/controller_interface/0.9.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

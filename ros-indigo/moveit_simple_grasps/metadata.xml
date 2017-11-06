@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A basic grasp generator for simple objects such as blocks or cylinders for use with the MoveIt! pick and place pipeline. 
-    Does not consider friction cones or other dynamics.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
-    To work, these tools require plugin providers to register their plugins in the package.xml of their package.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

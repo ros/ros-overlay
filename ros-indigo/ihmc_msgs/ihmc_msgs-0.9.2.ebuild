@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The ihmc_msgs package defines the IHMC ROS API"
 HOMEPAGE="http://github.com/ihmcrobotics/ihmc_ros_core"
-SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_msgs/0.9.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ihmcrobotics/ihmc_ros_core-release/archive/release/indigo/ihmc_msgs/0.9.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

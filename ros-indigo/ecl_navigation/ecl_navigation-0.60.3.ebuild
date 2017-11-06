@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack aims to bring the common tools and algorithms needed to\
-	dev[...]"
+DESCRIPTION="This stack aims to bring the common tools and algorithms needed to	develop n"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_navigation-release/archive/release/indigo/ecl_navigation/0.60.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_navigation-release/archive/release/indigo/ecl_navigation/0.60.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

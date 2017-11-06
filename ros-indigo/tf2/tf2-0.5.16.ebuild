@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="tf2 is the second generation of the transform library, which lets\
-	the [...]"
+	the user k"
 HOMEPAGE="http://www.ros.org/wiki/tf2"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2/0.5.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2/0.5.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

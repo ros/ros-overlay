@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Scripts and tools for running the application manager on the PR2."
+DESCRIPTION="Scripts and tools for running the application manager on the PR2"
 HOMEPAGE="http://ros.org/wiki/application_manager"
-SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_app_manager/0.5.21-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_app_manager/0.5.21-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

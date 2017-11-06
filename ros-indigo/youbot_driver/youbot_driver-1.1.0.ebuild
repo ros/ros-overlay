@@ -8,9 +8,10 @@ inherit ros-cmake
 
 DESCRIPTION="driver for the KUKA youBot robot"
 HOMEPAGE="http://github.com/youbot/youbot_driver"
-SRC_URI="https://github.com/youbot-release/youbot_driver-release/archive/release/indigo/youbot_driver/1.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/youbot-release/youbot_driver-release/archive/release/indigo/youbot_driver/1.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( LGPL-2 CC-BY-SA-3.0 )"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/rosconsole
 	ros-indigo/roscpp
@@ -22,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

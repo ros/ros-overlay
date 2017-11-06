@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The patched version of phue(r7) wrapper
-    - Create the exception.py and move the exception class
-    - Add the "reachable" flag.
-      Possible to get the each bulb validation.
-    - Connection method change.
-      No more use the user name. The user name is pre-define to "newdeveloper". It has the all permission of hue restapi.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

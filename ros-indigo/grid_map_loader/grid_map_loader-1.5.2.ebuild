@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Loading and publishing grid maps from bag files."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_loader/1.5.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/indigo/grid_map_loader/1.5.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

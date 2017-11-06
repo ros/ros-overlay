@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The anj_featurenav package provides a learning jockey and a
-    navigating jockey for the Large Maps framework (LaMa). It learns a
-    path by saving image features and is able to follow the same path.
-    It is based on algorithms provided by OpenCV (free ones).
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This stack contains drivers for the ethercat system and the peripherals
-    that connect to it: motor control boards, fingertip sensors, texture
-    projector, hand accelerometer.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

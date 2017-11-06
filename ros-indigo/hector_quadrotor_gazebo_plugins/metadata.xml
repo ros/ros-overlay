@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    hector_quadrotor_gazebo_plugins provides gazebo plugins for using quadrotors in gazebo.
-     The hector_gazebo_ros_baro sensor plugin simulates an altimeter based on barometric pressure.
-     hector_quadrotor_simple_controller is a simple controller allowing to command the quadrotor's velocity
-     using a geometry_msgs/Twist message for teleoperation just by means of applying forces and torques to the model.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Displays a simple GUI to the user. The GUI is capable of displaying a simple
-    message or image to the user, and ask a question. The message and question
-    plugins are also written in this package.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

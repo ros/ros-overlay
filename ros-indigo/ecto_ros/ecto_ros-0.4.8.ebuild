@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A set of generic cells to interact with ROS"
 HOMEPAGE="http://plasmodic.github.io/ecto_ros"
-SRC_URI="https://github.com/ros-gbp/ecto_ros-release/archive/release/indigo/ecto_ros/0.4.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ecto_ros-release/archive/release/indigo/ecto_ros/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

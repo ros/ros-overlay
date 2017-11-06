@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The nj_oa_costmap package is a navigating jockey for the Large
-	  Maps framework. Its role is to drive the robot forward while avoiding
-	  obstacles. It uses a local map which position is relative to the robot
-	  but which orientation is constant.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

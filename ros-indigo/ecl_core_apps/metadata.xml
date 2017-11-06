@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This includes a suite of programs demo'ing various aspects of the
-     ecl_core. It also includes various benchmarking and utility programs for
-     use primarily with embedded systems.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

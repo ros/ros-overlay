@@ -10,7 +10,8 @@ DESCRIPTION="This package contains the description \(mechanical, kinematic, visu
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/minas-release/archive/release/indigo/tra1_description/1.0.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( GPL-2 CC-BY-SA-3.0 )"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/joint_state_publisher
 	ros-indigo/robot_state_publisher

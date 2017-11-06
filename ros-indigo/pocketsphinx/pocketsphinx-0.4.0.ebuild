@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package is a simple wrapper around the pocketsphinx speech recognizer,[...]"
+DESCRIPTION="This package is a simple wrapper around the pocketsphinx speech recognizer, \
+   "
 HOMEPAGE="http://ros.org/wiki/pocketsphinx"
-SRC_URI="https://github.com/ros-gbp/pocketsphinx-release/archive/release/indigo/pocketsphinx/0.4.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/pocketsphinx-release/archive/release/indigo/pocketsphinx/0.4.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

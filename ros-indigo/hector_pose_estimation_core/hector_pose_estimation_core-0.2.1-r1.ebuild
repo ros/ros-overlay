@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="hector_pose_estimation_core is the core package of the hector_localization [...]"
+DESCRIPTION="hector_pose_estimation_core is the core package of the hector_localization stack"
 HOMEPAGE="http://ros.org/wiki/hector_pose_estimation_core"
-SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/indigo/hector_pose_estimation_core/0.2.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/indigo/hector_pose_estimation_core/0.2.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

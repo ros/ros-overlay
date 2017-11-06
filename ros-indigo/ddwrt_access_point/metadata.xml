@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A ROS node that controls a Linksys WRT610Nv2 access point with
-    a dd-wrt firmware. Other access points models/dd-wrt versions
-    may be compatible as long as the web interface is identical.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

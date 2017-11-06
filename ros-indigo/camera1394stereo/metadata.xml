@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This is a modified version of the ROS driver for devices supporting the IEEE 
-    1394 Digital Camera (IIDC) protocol in package camera1394. 
-    It adds support for reading from stereo pairs.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

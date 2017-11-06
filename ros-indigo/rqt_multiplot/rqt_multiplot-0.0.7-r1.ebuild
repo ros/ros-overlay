@@ -6,12 +6,11 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="rqt_multiplot provides a GUI plugin for visualizing numeric values\
-	in [...]"
+DESCRIPTION="rqt_multiplot provides a GUI plugin for visualizing numeric values	in multip"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/rqt_multiplot_plugin-release/archive/release/indigo/rqt_multiplot/0.0.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-asl/rqt_multiplot_plugin-release/archive/release/indigo/rqt_multiplot/0.0.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -29,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

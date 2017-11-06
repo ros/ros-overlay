@@ -6,11 +6,13 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Message definitions for controlling DNA extraction related actions in the A[...]"
+DESCRIPTION="Message definitions for controlling DNA extraction related actions in the ACAT p"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/dna_extraction_msgs/0.0.5-3.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/iai_common_msgs-release/archive/release/indigo/dna_extraction_msgs/0.0.5-3.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/geometry_msgs
 	ros-indigo/message_runtime
@@ -23,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

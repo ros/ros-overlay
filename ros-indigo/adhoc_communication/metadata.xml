@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The adhoc_communication package allows to exchange data over an ad-hoc network setup by robots running the corresponding node. The package allows you to exchange data over serveral roscores by wrapping transmitting the data to the destination and publishing the data on a predefined topic at the destination host. Routing is accomplished using the hostname of the robots.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

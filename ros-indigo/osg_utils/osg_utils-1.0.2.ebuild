@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="osg_utils is a library that contains some classes that may be useful in ROS[...]"
+DESCRIPTION="osg_utils is a library that contains some classes that may be useful in ROSOSG "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/indigo/osg_utils/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/indigo/osg_utils/1.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

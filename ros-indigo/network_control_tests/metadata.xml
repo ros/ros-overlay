@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Test suite for the packages that are part of the "WiFi Test Setup" project:
-    network_monitor_udp, network_traffic_control, hostapd_access_point, linksys_access_point,
-    ddwrt_access_point.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

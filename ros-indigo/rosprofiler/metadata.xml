@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The rosprofiler package provides the rosprofiler and rosgrapher tools.
-      These tools run as nodes publishing their collected information on ros topics.
-      They have been designed to work with the Topic Statistics feature found
-      in ROS Indigo to provide a complete picture of a ROS System.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

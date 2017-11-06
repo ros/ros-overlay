@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="installer.py installs a full eclipse installation in this package. Addition[...]"
+DESCRIPTION="installerpy installs a full eclipse installation in this package Additionally "
 HOMEPAGE="http://ros.org/wiki/bride"
-SRC_URI="https://github.com/ipa320/bride-release/archive/release/indigo/bride/0.3.3-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/bride-release/archive/release/indigo/bride/0.3.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

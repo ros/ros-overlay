@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Localizing jockey from LaserScan and absolute heading.
-    Implements a localizing jockey from a LaserScan and absolute heading.
-    The associated descriptors are sensor_msgs/LaserScan[] and
-    lama_msgs/Crossing.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The actionlib stack provides a standardized interface for
-    interfacing with preemptable tasks. Examples of this include moving
-    the base to a target location, performing a laser scan and returning
-    the resulting point cloud, detecting the handle of a door, etc.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

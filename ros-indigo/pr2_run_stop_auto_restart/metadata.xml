@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides a node that monitors the state of the run stops of the pr2_robot. When the state of the
-   run stop changes from off to on, this node will automatically enable the power to the motors, and reset
-   the motors. This allows you to use the run stop as a 'pause' button. By using the run stop as a tool to
-   power up the robot, the run stop is also in reach of the user once the robot starts moving.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

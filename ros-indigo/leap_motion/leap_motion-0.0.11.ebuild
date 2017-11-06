@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS driver for the Leap Motion gesture sensor"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/leap_motion-release/archive/release/indigo/leap_motion/0.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/leap_motion-release/archive/release/indigo/leap_motion/0.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,3 +34,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

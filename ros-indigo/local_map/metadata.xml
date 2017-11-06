@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The local_map package
-	  The local_map package takes as input a LaserScan message and outputs
-	  a local map as OccupancyGrid. The local map orientation is the same
-	  as the one of the global frame.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

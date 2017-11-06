@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The aubo_panel plugin package"
 HOMEPAGE="http://wiki.ros.org/aubo_control"
-SRC_URI="https://github.com/auboliuxin/aubo_robot-release/archive/release/indigo/aubo_panel/0.3.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/auboliuxin/aubo_robot-release/archive/release/indigo/aubo_panel/0.3.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

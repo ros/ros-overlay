@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Contains a set of tutorials that run 2D-Navigation within Stage-Simulator."
+DESCRIPTION="Contains a set of tutorials that run 2DNavigation within StageSimulator"
 HOMEPAGE="http://wiki.ros.org/nav2d_tutorials"
-SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_tutorials/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_tutorials/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

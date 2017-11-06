@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS driver for LED lights installed on Innok Heros"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/innokrobotics/innok_heros_lights-release/archive/release/indigo/innok_heros_lights/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/innokrobotics/innok_heros_lights-release/archive/release/indigo/innok_heros_lights/1.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

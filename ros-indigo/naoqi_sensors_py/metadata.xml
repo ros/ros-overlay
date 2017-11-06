@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS driver for miscellaneous sensors on NAO.
-    Python bindings for camera, sonar and octomap
-    C++: bindings for camera only (requires NAOqi to build)
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

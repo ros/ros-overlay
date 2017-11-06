@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package is comm message for ROS."
+DESCRIPTION="This package is comm message for ROS"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosalfred-release/smarthome_comm_msgs-release/archive/release/indigo/smarthome_comm_msgs/0.1.19-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/smarthome_comm_msgs-release/archive/release/indigo/smarthome_comm_msgs/0.1.19-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

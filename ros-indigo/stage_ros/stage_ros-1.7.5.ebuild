@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides ROS specific hooks for stage"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/stage_ros-release/archive/release/indigo/stage_ros/1.7.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/stage_ros-release/archive/release/indigo/stage_ros/1.7.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

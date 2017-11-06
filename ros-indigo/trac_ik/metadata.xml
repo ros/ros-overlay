@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The ROS packages in this repository were created to provide an improved
-    alternative Inverse Kinematics solver to the popular inverse Jacobian
-    methods in KDL.  TRAC-IK handles joint-limited chains better than KDL
-    without increasing solve time.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

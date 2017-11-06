@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Baxter Kinematics for the FK, IK and the gravity compensation calculations"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_kinematics/1.2.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RethinkRobotics-release/baxter_simulator-release/archive/release/indigo/baxter_sim_kinematics/1.2.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

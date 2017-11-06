@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for grasp planning with graspit. Some of the messages
-    are later to be merged with ros-interactive-manipulation/graspit_simulator/graspit_ros_planning_msgs
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

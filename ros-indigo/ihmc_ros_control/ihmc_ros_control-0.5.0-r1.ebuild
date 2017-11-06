@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides facilities for using IHMC Java software as\
-	a ros[...]"
+DESCRIPTION="This package provides facilities for using IHMC Java software as	a ros_contr"
 HOMEPAGE="https://github.org/ihmcrobotics/ihmc_ros_control"
-SRC_URI="https://github.com/ihmcrobotics/ihmc-ros-control-release/archive/release/indigo/ihmc_ros_control/0.5.0-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ihmcrobotics/ihmc-ros-control-release/archive/release/indigo/ihmc_ros_control/0.5.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -27,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

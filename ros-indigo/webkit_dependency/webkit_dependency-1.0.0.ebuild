@@ -6,16 +6,15 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This encapsulates the WebKit dependency for a specific ROS distribution and[...]"
+DESCRIPTION="This encapsulates the WebKit dependency for a specific ROS distribution and its "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/webkit_dependency-release/archive/release/indigo/webkit_dependency/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/webkit_dependency-release/archive/release/indigo/webkit_dependency/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-python/pyside[webkit]
-	dev-python/PyQt4[webkit]
+	dev-python/pyside
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -24,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

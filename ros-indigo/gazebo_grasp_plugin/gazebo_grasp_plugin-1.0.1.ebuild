@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Gazebo Model plugin\(s\) which handle/help grasping in Gazebo."
+DESCRIPTION="Gazebo Model plugins which handle/help grasping in Gazebo"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/gazebo-pkgs-release/archive/release/indigo/gazebo_grasp_plugin/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/gazebo-pkgs-release/archive/release/indigo/gazebo_grasp_plugin/1.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

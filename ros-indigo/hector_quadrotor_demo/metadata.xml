@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    hector_quadrotor_demo contains various launch files and needed dependencies for demonstration of the hector_quadrotor stack (indoor/outdoor flight in gazebo etc.)
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

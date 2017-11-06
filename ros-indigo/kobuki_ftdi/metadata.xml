@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Utilities for flashing and enabling Kobuki's USB connection.
-	    This package contains tools for flashing the Kobuki's FTDI chip (usually done at the factory).
-	    The special firmware for the FTDI chip (USB to serial converter) enables it to appear as 
-	    /dev/kobuki on the user's PC.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

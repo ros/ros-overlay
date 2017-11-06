@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Tools related to the Mobile Robot Programming Toolkit (MRPT). 
-Refer to http://wiki.ros.org/mrpt_navigation for further documentation.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Most implementations (windows, posix, ...) have slightly different api for 
-     low level input-output functions. These are gathered here and re-represented 
-     with a cross platform set of functions.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

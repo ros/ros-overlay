@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="SMACH, which stands for \'state machine\', is a task-level\
-	architectur[...]"
+DESCRIPTION="SMACH, which stands for state machine, is a tasklevel	architecture for ra"
 HOMEPAGE="http://ros.org/wiki/smach"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/asmach/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/asmach/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,3 +22,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

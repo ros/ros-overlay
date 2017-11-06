@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Enables a Nao humanoid to either walk to a target location \(with localizat[...]"
+DESCRIPTION="Enables a Nao humanoid to either walk to a target location with localization fe"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/nao_extras-release/archive/release/indigo/nao_path_follower/0.3.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/nao_extras-release/archive/release/indigo/nao_path_follower/0.3.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

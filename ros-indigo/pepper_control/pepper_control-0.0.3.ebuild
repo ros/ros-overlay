@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Control for Pepper robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/pepper_virtual-release/archive/release/indigo/pepper_control/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/pepper_virtual-release/archive/release/indigo/pepper_control/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

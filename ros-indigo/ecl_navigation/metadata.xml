@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This stack aims to bring the common tools and algorithms needed to
-    develop navigation algorithms, in particular slam. It does not focus on
-    the end-point solution, rather the tools needed to create a variety of
-    end-point solutions.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The cob_control_mode_adapter package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_control_mode_adapter/0.6.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_control_mode_adapter/0.6.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

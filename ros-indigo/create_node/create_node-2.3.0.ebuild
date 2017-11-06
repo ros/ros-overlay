@@ -6,11 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="iRobot Create ROS driver node\
-	\
-	ROS bindings for the Create/Roomba[...]"
+DESCRIPTION="iRobot Create ROS driver node		ROS bindings for the Create/Roomba driver"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/turtlebot-release/turtlebot_create-release/archive/release/indigo/create_node/2.3.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/turtlebot-release/turtlebot_create-release/archive/release/indigo/create_node/2.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

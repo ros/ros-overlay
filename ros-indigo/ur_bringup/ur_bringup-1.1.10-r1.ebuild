@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The ur_bringup package"
 HOMEPAGE="http://ros.org/wiki/ur_bringup"
-SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_bringup/1.1.10-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_bringup/1.1.10-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

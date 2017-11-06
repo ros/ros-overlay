@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="Various tools for IMU devices"
 HOMEPAGE="http://ros.org/wiki/imu_tools"
-SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/imu_tools/1.0.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/imu_tools/1.0.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="( BSD GPL-1) "
+LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/imu_complementary_filter
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Launch files for freenect_camera to produce rectified, registered
-    or disparity images.  Also produce point clouds and registered
-    point clouds.  Based on the openni_launch package.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

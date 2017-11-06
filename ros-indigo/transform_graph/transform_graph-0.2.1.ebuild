@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Library for computing transformations in arbitrary graph structures."
 HOMEPAGE="http://wiki.ros.org/transform_graph"
-SRC_URI="https://github.com/jstnhuang-release/transform_graph-release/archive/release/indigo/transform_graph/0.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jstnhuang-release/transform_graph-release/archive/release/indigo/transform_graph/0.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

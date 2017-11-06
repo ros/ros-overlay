@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is
-    heavily modified from the package available on SourceForge in order to
-    support roscpp's threading model. As such, we are maintaining our
-    own fork.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

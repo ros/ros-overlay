@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="basic 3d reconstruction of an object from aligned Kinect data"
 HOMEPAGE="http://wg-perception.github.io/reconstruction/"
-SRC_URI="https://github.com/ros-gbp/object_recognition_reconstruction-release/archive/release/indigo/object_recognition_reconstruction/0.3.6-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_reconstruction-release/archive/release/indigo/object_recognition_reconstruction/0.3.6-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

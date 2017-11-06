@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The fzi_icl_comm package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_comm-release/archive/release/indigo/fzi_icl_comm/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fzi-forschungszentrum-informatik/fzi_icl_comm-release/archive/release/indigo/fzi_icl_comm/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

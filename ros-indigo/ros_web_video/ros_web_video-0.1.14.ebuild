@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Streaming of ROS Image Topics via HTTP"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/ros_web_video-release/archive/release/indigo/ros_web_video/0.1.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/ros_web_video-release/archive/release/indigo/ros_web_video/0.1.14-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

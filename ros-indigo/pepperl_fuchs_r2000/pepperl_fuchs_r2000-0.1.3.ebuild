@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The Pepperl+Fuchs R2000 laser range finder driver package"
+DESCRIPTION="The PepperlFuchs R2000 laser range finder driver package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/dillenberger/pepperl_fuchs-release/archive/release/indigo/pepperl_fuchs_r2000/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/dillenberger/pepperl_fuchs-release/archive/release/indigo/pepperl_fuchs_r2000/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

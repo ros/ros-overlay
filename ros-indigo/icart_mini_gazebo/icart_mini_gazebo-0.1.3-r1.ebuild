@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The icart_mini_gazebo package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/open-rdc/icart_mini-release/archive/release/indigo/icart_mini_gazebo/0.1.3-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/open-rdc/icart_mini-release/archive/release/indigo/icart_mini_gazebo/0.1.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -7,11 +7,13 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="SLIC-Superpizel ROS Wrapper\
-  This file contains the class elements of the[...]"
+  This file contains the class elements of the class"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/slic/2.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/indigo/slic/2.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	media-libs/opencv
 "
@@ -26,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

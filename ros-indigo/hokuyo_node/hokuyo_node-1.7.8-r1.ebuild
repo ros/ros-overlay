@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A ROS node to provide access to SCIP 2.0-compliant Hokuyo laser range finde[...]"
+DESCRIPTION="A ROS node to provide access to SCIP 20compliant Hokuyo laser range finders i"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/hokuyo_node-release/archive/release/indigo/hokuyo_node/1.7.8-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/hokuyo_node-release/archive/release/indigo/hokuyo_node/1.7.8-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

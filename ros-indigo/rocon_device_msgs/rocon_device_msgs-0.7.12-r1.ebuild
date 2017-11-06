@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Messages used by rocon devices"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/indigo/rocon_device_msgs/0.7.12-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/indigo/rocon_device_msgs/0.7.12-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

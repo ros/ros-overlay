@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Code that generates random views of an object"
 HOMEPAGE="http://ecto.willowgarage.com/recognition"
-SRC_URI="https://github.com/ros-gbp/object_recognition_renderer-release/archive/release/indigo/object_recognition_renderer/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_renderer-release/archive/release/indigo/object_recognition_renderer/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	media-libs/freeimage
 	media-libs/freeglut
 	media-libs/devil
-	media-libs/mesa[osmesa]
+	media-libs/mesa
 	x11-libs/libXi
 	x11-libs/libXmu
 	media-libs/libsdl
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

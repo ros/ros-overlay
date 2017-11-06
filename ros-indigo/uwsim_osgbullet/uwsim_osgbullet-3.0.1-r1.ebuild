@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The OSG Bullet library adapted to UWSim. See https://code.google.com/p/osgb[...]"
+DESCRIPTION="The OSG Bullet library adapted to UWSim See https://codegooglecom/p/osgbullet"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/indigo/uwsim_osgbullet/3.0.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/indigo/uwsim_osgbullet/3.0.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

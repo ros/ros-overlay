@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS messages for publishing graphs of different data types"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/davetcoleman/graph_msgs-release/archive/release/indigo/graph_msgs/0.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/davetcoleman/graph_msgs-release/archive/release/indigo/graph_msgs/0.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

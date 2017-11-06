@@ -10,7 +10,7 @@ DESCRIPTION="The criutils package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/crigroup/criutils-release/archive/release/indigo/criutils/0.1.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Launch a PID control node."
+DESCRIPTION="Launch a PID control node"
 HOMEPAGE="http://wiki.ros.org/pid"
-SRC_URI="https://github.com/AndyZe/pid-release/archive/release/indigo/pid/0.0.20-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/AndyZe/pid-release/archive/release/indigo/pid/0.0.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

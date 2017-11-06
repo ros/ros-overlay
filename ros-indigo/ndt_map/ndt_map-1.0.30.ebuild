@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Contains the definitions of the 3D Normal Distributions Transform data stru[...]"
+DESCRIPTION="Contains the definitions of the 3D Normal Distributions Transform data structure"
 HOMEPAGE="http://ros.org/wiki/ndt_map"
-SRC_URI="https://github.com/tstoyanov/perception_oru-release/archive/release/indigo/ndt_map/1.0.30-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tstoyanov/perception_oru-release/archive/release/indigo/ndt_map/1.0.30-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

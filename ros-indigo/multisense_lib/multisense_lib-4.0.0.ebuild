@@ -8,14 +8,14 @@ inherit ros-cmake
 
 DESCRIPTION="multisense_lib"
 HOMEPAGE="https://bitbucket.org/crl/multisense_ros"
-SRC_URI="https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/indigo/multisense_lib/4.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/indigo/multisense_lib/4.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/cv_bridge
-	media-libs/libpng:1.2
+	media-libs/libpng
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

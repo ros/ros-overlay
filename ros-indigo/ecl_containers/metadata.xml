@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The containers included here are intended to extend the stl containers.
-    In all cases, these implementations are designed to implement
-    c++ conveniences and safety where speed is not sacrificed. 
-
-    Also includes techniques for memory debugging of common problems such
-    as buffer overruns.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="TRAC-IK is a faster, significantly more reliable drop-in replacement for\
- [...]"
+DESCRIPTION="TRACIK is a faster, significantly more reliable dropin replacement for	KDL"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/indigo/trac_ik_lib/1.4.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/indigo/trac_ik_lib/1.4.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -10,7 +10,9 @@ DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/openhrp3-release/archive/release/indigo/openhrp3/3.1.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/openrtm_aist
 	sci-libs/atlas
@@ -33,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

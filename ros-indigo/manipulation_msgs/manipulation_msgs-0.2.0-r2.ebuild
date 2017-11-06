@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The manipulation_msgs package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/manipulation_msgs-release/archive/release/indigo/manipulation_msgs/0.2.0-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/manipulation_msgs-release/archive/release/indigo/manipulation_msgs/0.2.0-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

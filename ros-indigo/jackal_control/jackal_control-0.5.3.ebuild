@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Controllers for Jackal"
 HOMEPAGE="http://wiki.ros.org/jackal_control"
-SRC_URI="https://github.com/clearpath-gbp/jackal-release/archive/release/indigo/jackal_control/0.5.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/jackal-release/archive/release/indigo/jackal_control/0.5.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

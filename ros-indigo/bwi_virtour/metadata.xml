@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Web interface providing a virtual tour of the Gates/Dell Complex
-    of the University of Texas at Austin using the Building-Wide
-    Intelligence infrastructure.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

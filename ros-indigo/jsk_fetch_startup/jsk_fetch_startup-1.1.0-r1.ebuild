@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="jsk_fetch_startup\
 \
-	 data/boost_sound.wav is downloaded from https://w[...]"
+	 data/boost_sound.wav is downloaded from https://www.yout"
 HOMEPAGE="http://ros.org/wiki/jsk_fetch_startup"
-SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/jsk_fetch_startup/1.1.0-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_robot-release/archive/release/indigo/jsk_fetch_startup/1.1.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -38,3 +38,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

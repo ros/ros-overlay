@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://wiki.ros.org/laser_scan_matcher"
-SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/laser_scan_matcher/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/scan_tools-release/archive/release/indigo/laser_scan_matcher/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="( BSD LGPL-3 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

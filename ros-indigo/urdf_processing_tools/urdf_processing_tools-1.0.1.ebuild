@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="A collection of tools to traverse, view and manipulate a URDF"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/urdf-tools-pkgs-release/archive/release/indigo/urdf_processing_tools/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/urdf-tools-pkgs-release/archive/release/indigo/urdf_processing_tools/1.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

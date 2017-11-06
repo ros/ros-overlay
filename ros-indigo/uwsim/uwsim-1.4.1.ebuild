@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="UWSim is an UnderWater SIMulator for marine robotics research and developme[...]"
+DESCRIPTION="UWSim is an UnderWater SIMulator for marine robotics research and development U"
 HOMEPAGE="http://www.irs.uji.es/uwsim/"
-SRC_URI="https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/indigo/uwsim/1.4.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/indigo/uwsim/1.4.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -38,7 +38,7 @@ RDEPEND="
 	ros-indigo/xacro
 	dev-libs/boost
 	dev-games/openscenegraph
-	dev-cpp/libxmlpp:2.6
+	dev-cpp/libxmlpp
 	virtual/opengl
 "
 DEPEND="${RDEPEND}
@@ -48,3 +48,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

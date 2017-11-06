@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Provides a few basic messages about object geometry, pose and
-    other details. Strongly inspired by moveit_msgs/CollisionObject.msg,
-    so these message types are largely compatible.
-    This message package was creates to enable a MoveIt-compatible, but
-    not MoveIt!-dependable interface for other ROS packages dealing with
-    object information.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

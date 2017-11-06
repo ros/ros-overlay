@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVLink message marshaling library.\
-  This package provides C-headers and [...]"
+DESCRIPTION="MAVLink message marshaling library  This package provides Cheaders and pymavl"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/indigo/mavlink/2016.5.20-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavlink-gbp-release/archive/release/indigo/mavlink/2016.5.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
@@ -26,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

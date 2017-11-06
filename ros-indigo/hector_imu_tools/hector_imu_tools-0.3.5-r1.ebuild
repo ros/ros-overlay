@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="hector_imu_tools provides some tools for processing IMU messages"
 HOMEPAGE="http://ros.org/wiki/hector_imu_attitude_to_tf"
-SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/indigo/hector_imu_tools/0.3.5-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/indigo/hector_imu_tools/0.3.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

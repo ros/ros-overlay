@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="MoveIt! Configuration and ROS Interface for CARL"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/carl_moveit-release/archive/release/indigo/carl_moveit/0.0.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/carl_moveit-release/archive/release/indigo/carl_moveit/0.0.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -45,3 +45,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

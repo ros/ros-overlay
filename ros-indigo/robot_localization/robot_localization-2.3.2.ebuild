@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Provides nonlinear state estimation through sensor fusion of an abritrary n[...]"
+DESCRIPTION="Provides nonlinear state estimation through sensor fusion of an abritrary number"
 HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/release/indigo/robot_localization/2.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/cra-ros-pkg/robot_localization-release/archive/release/indigo/robot_localization/2.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,3 +40,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

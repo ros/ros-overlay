@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="C++ library about sensor model, geometrical modeling and perception."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/indigo/jsk_recognition_utils/1.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_recognition-release/archive/release/indigo/jsk_recognition_utils/1.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,3 +40,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

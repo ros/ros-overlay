@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Contains a node which can be used to take the hand through a series of move[...]"
+DESCRIPTION="Contains a node which can be used to take the hand through a series of movements"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_movements/1.4.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-ros-interface-release/archive/release/indigo/sr_movements/1.4.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

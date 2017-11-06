@@ -8,9 +8,11 @@ inherit ros-cmake
 
 DESCRIPTION="The advanced_robotics package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/vislab-tecnico-lisboa/ekf_localization-release/archive/release/indigo/ekf_localization/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/vislab-tecnico-lisboa/ekf_localization-release/archive/release/indigo/ekf_localization/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/bfl
 	ros-indigo/laser_geometry
@@ -31,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

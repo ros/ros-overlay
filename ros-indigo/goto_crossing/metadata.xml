@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The goto_crossing package provides a goToGoal behavior
-	  to a crossing center if the crossing has at least three
-	  frontiers and some kind of move forward behavior if it
-	  has two or less frontiers.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

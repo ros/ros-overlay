@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Plugin for nose or py.test that automatically reruns flaky tests."
+DESCRIPTION="Plugin for nose or pytest that automatically reruns flaky tests"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/flaky-rosrelease/archive/release/indigo/flaky/3.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/asmodehn/flaky-rosrelease/archive/release/indigo/flaky/3.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-1.0"
 
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

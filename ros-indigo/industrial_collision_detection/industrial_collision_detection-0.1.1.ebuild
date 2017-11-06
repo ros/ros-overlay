@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The industrial_collision_detection package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/industrial_collision_detection/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/industrial_collision_detection/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

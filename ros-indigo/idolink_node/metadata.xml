@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides a driver to interface with the Idolink UWB RTLS. 
-  It allows reading the distance to the different anchors installed in the environment 
-  and publishing the information using the range_msgs::P2PRange message.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

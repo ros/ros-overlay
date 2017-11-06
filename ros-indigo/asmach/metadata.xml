@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    SMACH, which stands for 'state machine', is a task-level
-    architecture for rapidly creating complex robot behavior. At its
-    core, SMACH is a ROS-independent Python library to build
-    hierarchical state machines.  SMACH is a new library that takes
-    advantage of very old concepts in order to quickly create robust
-    robot behavior with maintainable and modular code.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,12 +6,13 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages and services used as part of the PAL walking\
-			   contr[...]"
+DESCRIPTION="Messages and services used as part of the PAL walking			   controller "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pal-gbp/pal_msgs-release/archive/release/indigo/pal_walking_msgs/0.11.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pal-gbp/pal_msgs-release/archive/release/indigo/pal_walking_msgs/0.11.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/geometry_msgs
 	ros-indigo/humanoid_nav_msgs
@@ -25,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

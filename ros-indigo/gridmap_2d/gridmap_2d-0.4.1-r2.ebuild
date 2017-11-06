@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="gridmap_2d - a simple 2D gridmap structure, based on OpenCV\'s cv::Mat"
+DESCRIPTION="gridmap_2d  a simple 2D gridmap structure, based on OpenCVs cv::Mat"
 HOMEPAGE="http://ros.org/wiki/gridmap_2d"
-SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/gridmap_2d/0.4.1-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/gridmap_2d/0.4.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

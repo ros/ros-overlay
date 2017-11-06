@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="package to control the Innok Heros with several devices \(e. g. joystick an[...]"
+DESCRIPTION="package to control the Innok Heros with several devices e g joystick and keyb"
 HOMEPAGE="http://wiki.ros.org/Robots/Innok-Heros"
-SRC_URI="https://github.com/innokrobotics/innok_heros_control-release/archive/release/indigo/innok_heros_control/1.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/innokrobotics/innok_heros_control-release/archive/release/indigo/innok_heros_control/1.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

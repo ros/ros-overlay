@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a kinematics implementation for the PR2 robot. It can[...]"
+DESCRIPTION="This package provides a kinematics implementation for the PR2 robot It can be u"
 HOMEPAGE="http://ros.org/wiki/pr2_arm_kinematics"
-SRC_URI="https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/indigo/pr2_arm_kinematics/1.0.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/indigo/pr2_arm_kinematics/1.0.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

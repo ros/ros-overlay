@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Controllers used in PR2 hardware testing. For testing counterbalance of PR2[...]"
+DESCRIPTION="Controllers used in PR2 hardware testing For testing counterbalance of PR2, and"
 HOMEPAGE="http://www.ros.org/wiki/joint_qualification_controllers"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/joint_qualification_controllers/1.0.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/joint_qualification_controllers/1.0.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Constraint-based IK solver.  Good for high-DOF robots or underconstrained t[...]"
+DESCRIPTION="Constraintbased IK solver  Good for highDOF robots or underconstrained tasks"
 HOMEPAGE="http://ros.org/wiki/constrained_ik"
-SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/constrained_ik/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/industrial_moveit-release/archive/release/indigo/constrained_ik/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -35,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Provides an easy to use and general interface between a SQL
-    database and object-oriented C++ code, making it easy to
-    encapsulate the conceptual "objects" contained in the database as
-    C++ classes.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

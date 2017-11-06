@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Python library to assist in publishing markers easily"
 HOMEPAGE="http://ros.org/wiki/easy_markers"
-SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/easy_markers/0.2.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/easy_markers/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

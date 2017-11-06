@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Template based exceptions - these are simple and practical
-     and avoid the proliferation of exception types. Although not
-     syntatactically ideal, it is convenient and eminently practical.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

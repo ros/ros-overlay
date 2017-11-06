@@ -8,9 +8,11 @@ inherit ros-cmake
 
 DESCRIPTION="The new driver for the UR3/UR5/UR10 robot arms from universal robots"
 HOMEPAGE="http://wiki.ros.org/ur_modern_driver"
-SRC_URI="https://github.com/clearpath-gbp/ur_modern_driver-release/archive/release/indigo/ur_modern_driver/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/ur_modern_driver-release/archive/release/indigo/ur_modern_driver/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/control_msgs
@@ -33,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

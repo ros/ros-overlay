@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Driver for the UR5/10 arm based on the Polyscope control scheme."
 HOMEPAGE="http://ros.org/wiki/ur_driver"
-SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_driver/1.1.10-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/universal_robot-release/archive/release/indigo/ur_driver/1.1.10-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,3 +30,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

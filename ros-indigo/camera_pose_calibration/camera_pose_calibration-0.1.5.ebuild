@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Camera pose calibration using the OpenCV asymmetric circles pattern."
+DESCRIPTION="Camera pose calibration using the OpenCV asymmetric circles pattern"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/delftrobotics/camera_pose_calibration-release/archive/release/indigo/camera_pose_calibration/0.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/delftrobotics/camera_pose_calibration-release/archive/release/indigo/camera_pose_calibration/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -35,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

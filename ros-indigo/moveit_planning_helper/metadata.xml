@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A test package to plan and execute a joint trajectory.
-    This package is only in here for testing during development.
-    At some stage, this will move to a new package with all
-    motion-plan related functionalities, e.g. joint_trajectory_planning and
-    joint_trajectory_execution.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

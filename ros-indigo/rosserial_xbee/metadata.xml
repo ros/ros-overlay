@@ -2,13 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    rosserial_xbee provides tools to do point to multipoint communication
-     between rosserial nodes connected to an xbee.  All of the nodes
-     communicate back to a master xbee connected to a computer running
-     ROS.  This software currently only works with Series 1 Xbees.
-     
-     This pkg includes python code from the python-xbee project:
-     http://code.google.com/p/python-xbee/
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

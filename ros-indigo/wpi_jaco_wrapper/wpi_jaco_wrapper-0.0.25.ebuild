@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS Wrapper for the JACO Arm Developed at WPI"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/wpi_jaco-release/archive/release/indigo/wpi_jaco_wrapper/0.0.25-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/wpi_jaco-release/archive/release/indigo/wpi_jaco_wrapper/0.0.25-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,3 +35,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

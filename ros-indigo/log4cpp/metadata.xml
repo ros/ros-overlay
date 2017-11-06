@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Log4cpp maintained by Orocos developers
-    This version of log4cpp deviates from the official release
-    by adding custom category factories. Orocos requires this for
-    setting up real-time logging.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

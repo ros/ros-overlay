@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The sdf_tracker package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tstoyanov/perception_oru-release/archive/release/indigo/sdf_tracker/1.0.30-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tstoyanov/perception_oru-release/archive/release/indigo/sdf_tracker/1.0.30-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,7 +17,7 @@ RDEPEND="
 	ros-indigo/cv_bridge
 	ros-indigo/roscpp
 	ros-indigo/std_msgs
-	sci-libs/vtk[boost,python,qt5]
+	sci-libs/vtk
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

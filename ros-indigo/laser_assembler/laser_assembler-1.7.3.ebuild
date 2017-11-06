@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Provides nodes to assemble point clouds from either LaserScan or PointCloud[...]"
+DESCRIPTION="Provides nodes to assemble point clouds from either LaserScan or PointCloud mess"
 HOMEPAGE="http://ros.org/wiki/laser_assembler"
-SRC_URI="https://github.com/ros-gbp/laser_assembler-release/archive/release/indigo/laser_assembler/1.7.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/laser_assembler-release/archive/release/indigo/laser_assembler/1.7.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

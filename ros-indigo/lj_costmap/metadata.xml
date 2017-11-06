@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The lj_costmap package implements a localizing jockey for the
-	  Large Maps framework (LaMa) based on a local costmap (costmap position is
-	  relative to the sensor but orientation is absolute).
-
-	  Implement a localizing jockey from a LaserScan. The associated
-	  descriptors are LaserScan[] and Crossing.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

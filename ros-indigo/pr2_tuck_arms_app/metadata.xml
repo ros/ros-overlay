@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Tucks the arms of the PR2 robot into a safe position for moving the base of the robot.
-     This also moves the arms out of the view of the tilting laser scanner, as much as possible.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

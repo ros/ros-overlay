@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a trajectory controller which controlls velocities fo[...]"
+DESCRIPTION="This package provides a trajectory controller which controlls velocities for a c"
 HOMEPAGE="http://ros.org/wiki/cob_trajectory_controller"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_trajectory_controller/0.6.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_trajectory_controller/0.6.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

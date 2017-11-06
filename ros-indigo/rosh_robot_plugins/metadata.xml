@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROSH related packages. This is a temporary stack that is expected to go away after the Diamondback release. For C Turtle and Diamondback it provides a convenient way to install rosh until it is properly stabilized.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

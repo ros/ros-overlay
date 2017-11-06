@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Simple scripts which help utilise, monitor, interact with computer\
-	 ha[...]"
+DESCRIPTION="Simple scripts which help utilise, monitor, interact with computer	 hardware"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/indigo/linux_peripheral_interfaces/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/indigo/linux_peripheral_interfaces/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

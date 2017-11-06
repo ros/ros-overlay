@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The sr_mechanism_controllers package contains different types of
-     controllers for the etherCAT hand:(fake) calibration controllers,
-     position controllers, velocity controllers, force controllers, ...
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

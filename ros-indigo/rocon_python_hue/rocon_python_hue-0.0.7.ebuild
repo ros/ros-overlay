@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The patched version of phue\(r7\) wrapper\
-	- Create the exception.py an[...]"
+DESCRIPTION="The patched version of phuer7 wrapper	 Create the exceptionpy and move t"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_devices-release/archive/release/indigo/rocon_python_hue/0.0.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_devices-release/archive/release/indigo/rocon_python_hue/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,3 +22,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

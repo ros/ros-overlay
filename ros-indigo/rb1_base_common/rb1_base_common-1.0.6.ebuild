@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The rb1_base_common package. It contains rb1 base common packages used for [...]"
+DESCRIPTION="The rb1_base_common package It contains rb1 base common packages used for robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/rb1_base_common-release/archive/release/indigo/rb1_base_common/1.0.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/rb1_base_common-release/archive/release/indigo/rb1_base_common/1.0.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

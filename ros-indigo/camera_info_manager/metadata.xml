@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides a C++ interface for camera calibration
-     information.  It provides CameraInfo, and handles SetCameraInfo
-     service requests, saving and restoring the camera calibration
-     data.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

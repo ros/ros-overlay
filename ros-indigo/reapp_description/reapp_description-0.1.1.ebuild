@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Common xacros for ReApp"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/reapp-project/reapp_ros-release/archive/release/indigo/reapp_description/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/reapp-project/reapp_ros-release/archive/release/indigo/reapp_description/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

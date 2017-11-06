@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    rosgraph contains the rosgraph command-line tool, which prints
-    information about the ROS Computation Graph. It also provides an
-    internal library that can be used by graphical tools.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

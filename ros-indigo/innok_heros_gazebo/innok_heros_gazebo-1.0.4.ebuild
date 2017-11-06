@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Innok Heros launch files for Gazebo6"
 HOMEPAGE="http://wiki.ros.org/Robots/Innok-Heros"
-SRC_URI="https://github.com/innokrobotics/innok_heros_gazebo-release/archive/release/indigo/innok_heros_gazebo/1.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/innokrobotics/innok_heros_gazebo-release/archive/release/indigo/innok_heros_gazebo/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

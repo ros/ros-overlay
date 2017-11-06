@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Shared serial port with locking functionality"
 HOMEPAGE="http://ros.org/wiki/shared_serial"
-SRC_URI="https://github.com/wcaarls/shared_serial-release/archive/release/indigo/shared_serial/0.2.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wcaarls/shared_serial-release/archive/release/indigo/shared_serial/0.2.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

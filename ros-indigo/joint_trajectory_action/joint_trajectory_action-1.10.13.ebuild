@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The joint_trajectory_action is a node that exposes an action interface\
-   [...]"
+DESCRIPTION="The joint_trajectory_action is a node that exposes an action interface	 to a"
 HOMEPAGE="http://ros.org/wiki/joint_trajectory_action"
-SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/joint_trajectory_action/1.10.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/joint_trajectory_action/1.10.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

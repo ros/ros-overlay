@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="rqt_pr2_dashboard is a GUI for debugging and controlling low-level state of[...]"
+DESCRIPTION="rqt_pr2_dashboard is a GUI for debugging and controlling lowlevel state of the "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/indigo/rqt_pr2_dashboard/0.2.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/indigo/rqt_pr2_dashboard/0.2.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

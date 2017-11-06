@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Stream Manipulator 3D let's you subscribe to a stream of point
-      clouds, such as those coming from sensors, and manipulate it 
-      online, republishing the modified streams. Input stream can be
-      modified by applying various filters, in the order you choose.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

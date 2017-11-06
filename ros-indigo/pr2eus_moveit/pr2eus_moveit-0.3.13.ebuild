@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="pr2eus_moveit"
 HOMEPAGE="http://ros.org/wiki/pr2eus_moveit"
-SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/indigo/pr2eus_moveit/0.3.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_pr2eus-release/archive/release/indigo/pr2eus_moveit/0.3.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

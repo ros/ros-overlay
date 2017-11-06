@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Offers a *system* plugin which can be
-      used to load other *world* plugins after the world has been
-      loaded, so it doesn't have to be specified in the Gazebo "world" file.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

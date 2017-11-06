@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains the KDL RTT bindings"
 HOMEPAGE="http://ros.org/wiki/kdl_typekit"
-SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/indigo/kdl_typekit/2.8.1-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt_geometry-release/archive/release/indigo/kdl_typekit/2.8.1-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

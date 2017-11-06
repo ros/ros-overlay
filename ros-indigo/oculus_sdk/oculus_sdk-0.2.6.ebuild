@@ -8,9 +8,11 @@ inherit ros-cmake
 
 DESCRIPTION="The Oculus Rift SDK"
 HOMEPAGE="https://developer.oculusvr.com"
-SRC_URI="https://github.com/thedash/oculus_sdk-release/archive/release/indigo/oculus_sdk/0.2.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/thedash/oculus_sdk-release/archive/release/indigo/oculus_sdk/0.2.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	virtual/libudev
 "
@@ -25,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a node for higher level navigation of a mobile\
-	r[...]"
+DESCRIPTION="This package provides a node for higher level navigation of a mobile	robot i"
 HOMEPAGE="http://wiki.ros.org/robot_operator"
-SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_navigator/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_navigator/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -34,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

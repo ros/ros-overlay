@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    HyQ-robot specific functions for visualization in the  XPP Motion Framework.
+    
+    These include inverse kinematics as well as urdf files for a one-legged,
+    two-legged and four legged robot with HyQ legs.
+    
+    Extracted from https://github.com/iit-DLSLab/hyq-description.
+    See also https://dls.iit.it.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>

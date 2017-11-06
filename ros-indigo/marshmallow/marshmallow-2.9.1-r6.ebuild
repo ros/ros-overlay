@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A lightweight library for converting complex objects to and from simple Pyt[...]"
+DESCRIPTION="A lightweight library for converting complex objects to and from simple Python d"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/marshmallow-rosrelease/archive/release/indigo/marshmallow/2.9.1-6.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/asmodehn/marshmallow-rosrelease/archive/release/indigo/marshmallow/2.9.1-6.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

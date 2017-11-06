@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="pul"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-perception/opencv_apps-release/archive/release/indigo/opencv_apps/1.12.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-perception/opencv_apps-release/archive/release/indigo/opencv_apps/1.12.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

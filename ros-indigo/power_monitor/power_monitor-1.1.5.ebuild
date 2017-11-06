@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The power_monitor collects messages from the ocean_battery_server and\
-	[...]"
+DESCRIPTION="The power_monitor collects messages from the ocean_battery_server and	 the p"
 HOMEPAGE="http://www.ros.org/wiki/power_monitor"
-SRC_URI="https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/indigo/power_monitor/1.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/indigo/power_monitor/1.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +26,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

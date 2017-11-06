@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    simple_message defines a simple messaging connection and protocol for communicating 
-	with an industrial robot controller.  Additional handler and manager classes are 
-	included for handling connection limited systems.  This package is part of the ROS-Industrial 
-	program.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

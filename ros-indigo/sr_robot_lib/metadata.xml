@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    sr_robot_lib contains the robot library used in the sr_edc_ethercat_drivers. The
-     library is used to store the incoming etherCAT messages in an easy to access format,
-     and prepare the messages to be send through etherCAT.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="rosh is a Python-based scripting and runtime environment for ROS.  Through [...]"
+DESCRIPTION="rosh is a Pythonbased scripting and runtime environment for ROS  Through rosh "
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OSUrobotics/rosh_core-release/archive/release/indigo/rosh/1.0.9-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/rosh_core-release/archive/release/indigo/rosh/1.0.9-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This wraps the move_base node from the standard ROS navigation
-    stack. The purpose of the interruptable navigator is to allow
-    seamless multi-robot interactions by temporarily interrupting
-    robots and diverting them when two robots are about to collide.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

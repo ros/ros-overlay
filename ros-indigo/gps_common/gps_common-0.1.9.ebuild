@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="GPS messages and common routines for use in GPS drivers"
 HOMEPAGE="http://ros.org/wiki/gps_common"
-SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/indigo/gps_common/0.1.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/indigo/gps_common/0.1.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

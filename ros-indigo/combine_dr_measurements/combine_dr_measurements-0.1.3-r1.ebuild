@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The combine_dr_measurements package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/open-rdc/icart_mini-release/archive/release/indigo/combine_dr_measurements/0.1.3-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/open-rdc/icart_mini-release/archive/release/indigo/combine_dr_measurements/0.1.3-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

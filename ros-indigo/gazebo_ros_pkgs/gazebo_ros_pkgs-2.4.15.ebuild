@@ -10,7 +10,7 @@ DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/indigo/gazebo_ros_pkgs/2.4.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( BSD LGPL-2 Apache-2.0) "
+LICENSE="( BSD LGPL-2 Apache-2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/gazebo_msgs
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

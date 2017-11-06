@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A node to control nonlinear dynamic systems"
 HOMEPAGE="http://wiki.ros.org/lyap_control"
-SRC_URI="https://github.com/AndyZe/lyap_control-release/archive/release/indigo/lyap_control/0.0.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/AndyZe/lyap_control-release/archive/release/indigo/lyap_control/0.0.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

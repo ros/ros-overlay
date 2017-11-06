@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="move_slow_and_clear"
 HOMEPAGE="http://wiki.ros.org/move_slow_and_clear"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/move_slow_and_clear/1.12.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/move_slow_and_clear/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

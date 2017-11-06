@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The moveit_goal_builder package"
 HOMEPAGE="http://wiki.ros.org/moveit_goal_builder"
-SRC_URI="https://github.com/jstnhuang-release/moveit_goal_builder-release/archive/release/indigo/moveit_goal_builder/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jstnhuang-release/moveit_goal_builder-release/archive/release/indigo/moveit_goal_builder/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,3 +31,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

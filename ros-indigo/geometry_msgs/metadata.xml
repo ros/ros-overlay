@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    geometry_msgs provides messages for common geometric primitives
-    such as points, vectors, and poses. These primitives are designed
-    to provide a common data type and facilitate interoperability
-    throughout the system.
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

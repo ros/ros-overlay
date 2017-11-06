@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack contains all software necessary to build systems using both Oroc[...]"
+DESCRIPTION="This stack contains all software necessary to build systems using both Orocos an"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/indigo/rtt_ros_integration/2.8.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/indigo/rtt_ros_integration/2.8.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="( GPL-1 BSD LGPL-2 GPL-1 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -32,3 +32,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

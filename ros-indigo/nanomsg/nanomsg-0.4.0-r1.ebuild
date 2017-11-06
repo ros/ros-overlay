@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The nanomsg package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/nanomsg-release/archive/release/indigo/nanomsg/0.4.0-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/nanomsg-release/archive/release/indigo/nanomsg/0.4.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -22,3 +22,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

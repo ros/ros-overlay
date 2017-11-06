@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Bumper/cliff to pointcloud nodelet:\
-	Publish bumpers and cliff sensors [...]"
+DESCRIPTION="Bumper/cliff to pointcloud nodelet:	Publish bumpers and cliff sensors events"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/indigo/kobuki_bumper2pc/0.6.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/kobuki-release/archive/release/indigo/kobuki_bumper2pc/0.6.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

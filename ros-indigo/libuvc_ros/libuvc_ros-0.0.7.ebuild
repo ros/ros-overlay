@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="libuvc_ros metapackage"
 HOMEPAGE="http://ros.org/wiki/libuvc_ros"
-SRC_URI="https://github.com/ktossell/libuvc_ros-release/archive/release/indigo/libuvc_ros/0.0.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ktossell/libuvc_ros-release/archive/release/indigo/libuvc_ros/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

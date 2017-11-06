@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Top-level ROS launch scripts for the Building-Wide Intelligence\
-	\(BWI\[...]"
+DESCRIPTION="Toplevel ROS launch scripts for the BuildingWide Intelligence	BWI projec"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/utexas-bwi-gbp/bwi-release/archive/release/indigo/bwi_launch/0.3.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/utexas-bwi-gbp/bwi-release/archive/release/indigo/bwi_launch/0.3.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,3 +34,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

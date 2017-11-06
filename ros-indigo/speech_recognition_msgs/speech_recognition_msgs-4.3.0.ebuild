@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="speech_recognition_msgs"
 HOMEPAGE="http://ros.org/wiki/speech_recognition_msgs"
-SRC_URI="https://github.com/tork-a/jsk_common_msgs-release/archive/release/indigo/speech_recognition_msgs/4.3.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common_msgs-release/archive/release/indigo/speech_recognition_msgs/4.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork[...]"
+DESCRIPTION="object_recognition_ros_visualization contains rviz plugins to visualize ork dete"
 HOMEPAGE="wg-perception.github.io/object_recognition_ros"
-SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/indigo/object_recognition_ros_visualization/0.3.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/indigo/object_recognition_ros_visualization/0.3.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

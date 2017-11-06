@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The adhoc_communication package allows to exchange data over an ad-hoc netw[...]"
+DESCRIPTION="The adhoc_communication package allows to exchange data over an adhoc network s"
 HOMEPAGE="http://wiki.ros.org/adhoc_communication"
-SRC_URI="https://github.com/aau-ros/aau_multi_robot-release/archive/release/indigo/adhoc_communication/0.1.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aau-ros/aau_multi_robot-release/archive/release/indigo/adhoc_communication/0.1.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

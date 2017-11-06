@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides .launch files and other tools for
-  calibrating the head-mount cameras to the NEXTAGE Open robot.
-  As of version 0.7.15/March 2017, only Kinect/Xtion is capable (i.e. Ueye
-  cameras, the ones the robot comes with on this head by default, are not yet
-  handled).
+    NONE
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

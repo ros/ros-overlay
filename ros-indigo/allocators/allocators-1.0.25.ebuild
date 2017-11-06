@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Contains aligned allocation functions, as well as an STL-compatible Aligned[...]"
+DESCRIPTION="Contains aligned allocation functions, as well as an STLcompatible AlignedAlloc"
 HOMEPAGE="http://ros.org/wiki/allocators"
-SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/indigo/allocators/1.0.25-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/indigo/allocators/1.0.25-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,3 +22,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

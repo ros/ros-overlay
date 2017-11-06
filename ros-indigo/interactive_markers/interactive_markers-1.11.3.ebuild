@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="3D interactive marker communication library for RViz and similar tools."
+DESCRIPTION="3D interactive marker communication library for RViz and similar tools"
 HOMEPAGE="http://ros.org/wiki/interactive_markers"
-SRC_URI="https://github.com/ros-gbp/interactive_markers-release/archive/release/indigo/interactive_markers/1.11.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/interactive_markers-release/archive/release/indigo/interactive_markers/1.11.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages used in PR2 hardware testing."
+DESCRIPTION="Messages used in PR2 hardware testing"
 HOMEPAGE="http://ros.org/wiki/pr2_self_test_msgs"
-SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test_msgs/1.0.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/pr2_self_test-release/archive/release/indigo/pr2_self_test_msgs/1.0.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,3 +24,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

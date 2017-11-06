@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Filters a laser scan to remove points that are in the current static map"
 HOMEPAGE="http://wiki.ros.org/map_laser"
-SRC_URI="https://github.com/wu-robotics/laser_filtering_release/archive/release/indigo/map_laser/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wu-robotics/laser_filtering_release/archive/release/indigo/map_laser/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

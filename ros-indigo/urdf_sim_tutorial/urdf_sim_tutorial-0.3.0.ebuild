@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The urdf_sim_tutorial package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/indigo/urdf_sim_tutorial/0.3.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/urdf_tutorial-release/archive/release/indigo/urdf_sim_tutorial/0.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

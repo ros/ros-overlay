@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Defines the messages that are used to communicate with the\
-	p2os_driver[...]"
+DESCRIPTION="Defines the messages that are used to communicate with the	p2os_driver packa"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/allenh1/p2os-release/archive/release/indigo/p2os_msgs/2.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/allenh1/p2os-release/archive/release/indigo/p2os_msgs/2.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,3 +25,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

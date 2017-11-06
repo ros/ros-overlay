@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="IKFast package for NEXTAGE Open"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/rtmros_nextage-release/archive/release/indigo/nextage_ik_plugin/0.7.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/rtmros_nextage-release/archive/release/indigo/nextage_ik_plugin/0.7.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,3 +27,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

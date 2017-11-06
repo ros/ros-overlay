@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Controller for a ackermann mobile base."
+DESCRIPTION="Controller for a ackermann mobile base"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/Romea/romea_controllers-release/archive/release/indigo/ackermann_controller/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/Romea/romea_controllers-release/archive/release/indigo/ackermann_controller/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -28,3 +28,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

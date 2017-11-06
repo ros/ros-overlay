@@ -6,11 +6,13 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Message defintions for the viewcontroller\(pan/tilt\) on the Squirrel robot"
+DESCRIPTION="Message defintions for the viewcontrollerpan/tilt on the Squirrel robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/squirrel_view_controller_msgs/0.0.24-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/squirrel-project/squirrel_common-release/archive/release/indigo/squirrel_view_controller_msgs/0.0.24-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="CC-BY-SA-3.0"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/actionlib
 	ros-indigo/actionlib_msgs
@@ -27,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

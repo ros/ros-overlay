@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Convex Decomposition Tool for Robot Model"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/convex_decomposition-release/archive/release/indigo/convex_decomposition/0.1.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/convex_decomposition-release/archive/release/indigo/convex_decomposition/0.1.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

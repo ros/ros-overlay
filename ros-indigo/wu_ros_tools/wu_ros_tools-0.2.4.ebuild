@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A collection of tools for making a variety of generic ROS-related tasks easier."
+DESCRIPTION="A collection of tools for making a variety of generic ROSrelated tasks easier"
 HOMEPAGE="http://ros.org/wiki/wu_ros_tools"
-SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/wu_ros_tools/0.2.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wu-robotics/wu_ros_tools/archive/release/indigo/wu_ros_tools/0.2.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+

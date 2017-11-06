@@ -10,7 +10,8 @@ DESCRIPTION="Meta package for minas for PANASONIC MINAS EtherCAT Motor Driver Co
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/tork-a/minas-release/archive/release/indigo/minas/1.0.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( GPL-2 BSD CC-BY-SA-3.0 )"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/ethercat_manager
 	ros-indigo/minas_control
