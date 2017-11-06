@@ -3,74 +3,35 @@ ros-overlay
 
 This overlay contains ebuilds for the Robot Operating System (ROS).
 
-Install This Overlay
---------------------
+For instructions, please look to the [ROS wiki](http://wiki.ros.org/ROS/Installation).
 
-Layman makes the install rather simple, thankfully.
+Contributing
+=============
 
-```
- # layman -f -o https://raw.githubusercontent.com/ros/ros-overlay/master/overlay.xml -a ros-overlay
-```
+There's a lot of ways to help out.
 
-ROS Installation
-----------------
+My Build Failed:
+-----------------
+In managing some 6000 ebuilds, one runs into a few hickups. Please don't hesitate
+to file an issue!
 
+Superflore:
+------------
+[Superflore](https://github.com/ros-infrastructure/superflore) is the tool used to
+generate almost every ebuild in this repository. Since, frequently, the issue is that
+an ebuild simply needs to be regenerated, I'll document how to use Superflore to do so.
 
-1. Emerge rosdep. This is a basic prerequisite.
-
+1. Ensure you have _docker_ installed. This is needed to generate manifests.
+2. Clone the overlay somewhere on your system, and verify it is on the master branch.
+3. Set up your `~/.netrc` file with your GitHub login.
+4. Clone & install superflore.
 ```
- $ sudo emerge rosdep
- $ sudo rosdep init
+$ git clone https://github.com/ros-infrastructure/superflore
+$ cd superflore
+$ sudo python3 ./setup.py install
 ```
-&nbsp;
-2. Now we refresh rosdep (this should not be done as the root user, hence the '$' proceeding the command).
-
+5. Run superflore to regenerate your package(s).
 ```
- $ rosdep update
+$ superflore-gen-ebuilds --only [pkg1] [pkg2] ... [pkgn] --ros-distro [distro] --output-repository-path [location of your repo]
 ```
-&nbsp;
-3. Now add these three lines to the end of your `/etc/portage/package.use` file.
-
-```
-# required by ROS
-sys-libs/zlib minizip
-dev-libs/boost python
-```
-&nbsp;
-4. As a precaution, it is advised that you perform a full update to keep the rest of your system from breaking.
-
-```
- # emerge --sync
- # emerge -uDNvaj @world
- # revdep-rebuild
-```
-&nbsp;
-5. Now, we install the tools needed for the install.
-
-` $ sudo emerge rosinstall_generator wstool rosinstall catkin_pkg`
-
-&nbsp;
-6. Now we begin building the system.
-
-```
- $ mkdir ~/catkin_ws && cd ~/catkin_ws
- $ rosinstall_generator desktop_full --rosdistro jade --deps --wet-only > jade-desktop_full-wet.rosinstall
- $ wstool init -j8 src jade-desktop_full-wet.rosinstall
-```
-
-Should wstool fail, run the following command to resume the install (sometimes the amount of jobs causes problems).
-
-```
- $ wstool update -j 4 -t src
-```
-&nbsp;
-7. Next install the required dependences using rosdep.
-
-```
- $ rosdep install --from-paths src --ignore-src --rosdistro jade -y
-```
-&nbsp;
-8. Build the packages! If you are running on a 32-bit system, change "lib64" to "lib" in the specified PYTHONPATH.
-```
- $ sudo PYTHONPATH="/opt/ros/jade/lib64/python2.7/site-packages/" ./src/catkin/bin/catkin_make_isolated --install --install-space /opt/ros/jade -DSETUPTOOLS_DEB_LAYOUT=OFF
-```
+6. The above command will file a PR under your name to this overlay.
