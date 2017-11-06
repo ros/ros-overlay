@@ -22,7 +22,7 @@ generate almost every ebuild in this repository. Since, frequently, the issue is
 an ebuild simply needs to be regenerated, I'll document how to use Superflore to do so.
 
 1. Ensure you have _docker_ installed. This is needed to generate manifests.
-2. Clone the overlay somewhere on your system, and verify it is on the master branch.
+2. [optional] Clone the overlay somewhere on your system, and verify it is on the master branch.
 3. Set up your `~/.netrc` file with your GitHub login.
 4. Clone & install superflore.
 ```
@@ -32,6 +32,8 @@ $ sudo python3 ./setup.py install
 ```
 5. Run superflore to regenerate your package(s).
 ```
-$ superflore-gen-ebuilds --only [pkg1] [pkg2] ... [pkgn] --ros-distro [distro] --output-repository-path [location of your repo]
+$ superflore-gen-ebuilds --ros-distro [distro] --only [pkg1] [pkg2] ... [pkgn]
 ```
+
+If you cloned the overlay and want to use the stashed version, add `--output-repository-path [location of your repo]` to the end of the command above.
 6. The above command will file a PR under your name to this overlay.
