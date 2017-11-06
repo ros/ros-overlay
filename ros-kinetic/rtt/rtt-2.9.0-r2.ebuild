@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Orocos/RTT component framework"
 HOMEPAGE="http://www.orocos.org/rtt"
-SRC_URI="https://github.com/orocos-gbp/rtt-release/archive/release/kinetic/rtt/2.9.0-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt-release/archive/release/kinetic/rtt/2.9.0-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -17,14 +17,13 @@ RDEPEND="
 	ros-kinetic/catkin
 	dev-libs/boost
 	net-misc/omniORB
-	virtual/pkgconfig
 	dev-perl/XML-XPath
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
+	virtual/pkgconfig
 "
 
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
