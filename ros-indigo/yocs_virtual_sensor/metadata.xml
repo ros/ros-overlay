@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Virtual sensor that uses semantic map information to "see" obstacles undetectable by robot sensors.
+      
+      Current implementation cannot read obstacles from YAML files. Until this feature gets implemented, we
+      use auxiliary scripts to read and publish files' content. Data directory contains some example files.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

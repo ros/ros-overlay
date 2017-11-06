@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The robotnik_msgs package Common messages and services used by some Robotniks "
+DESCRIPTION="The robotnik_msgs package. Common messages and services used by some Robotn[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/robotnik_msgs-release/archive/release/indigo/robotnik_msgs/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/robotnik_msgs-release/archive/release/indigo/robotnik_msgs/0.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

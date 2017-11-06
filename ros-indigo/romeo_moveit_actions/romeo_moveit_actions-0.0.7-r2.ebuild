@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Interaction with objects using MoveIt"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-aldebaran/romeo_moveit_actions-release/archive/release/indigo/romeo_moveit_actions/0.0.7-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-aldebaran/romeo_moveit_actions-release/archive/release/indigo/romeo_moveit_actions/0.0.7-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,4 +40,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

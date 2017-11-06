@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Provides service calls for getting ros metainformation, like list of	topics"
+DESCRIPTION="Provides service calls for getting ros meta-information, like list of\
+	[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/indigo/rosapi/0.7.16-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/indigo/rosapi/0.7.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pepper_description package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/pepper_robot-release/archive/release/indigo/pepper_description/0.1.10-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/pepper_robot-release/archive/release/indigo/pepper_description/0.1.10-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

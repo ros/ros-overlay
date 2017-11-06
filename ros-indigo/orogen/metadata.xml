@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    orogen offers a specification interface for components developped in the
+    Orocos Realtime Toolkit. Moreover, it generates the specified modules,
+    thus offering an easy and fast development process.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

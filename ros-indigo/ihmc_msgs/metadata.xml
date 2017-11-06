@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The ihmc_msgs package defines the IHMC ROS API
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

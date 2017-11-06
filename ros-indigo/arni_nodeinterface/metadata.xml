@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The ARNI host manager, which collects host/node statistics and enables the ARNI countermeasure node to run remote commands.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

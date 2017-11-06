@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Orocos component library
+    This package contains standard components for the Orocos Toolchain
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

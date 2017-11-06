@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Theora_image_transport provides a plugin to image_transport for
+    transparently sending an image stream encoded with the Theora codec.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

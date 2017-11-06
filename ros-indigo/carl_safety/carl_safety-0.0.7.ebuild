@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Remote User Safety Nodes for CARL"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/carl_safety-release/archive/release/indigo/carl_safety/0.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/carl_safety-release/archive/release/indigo/carl_safety/0.0.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,4 +34,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

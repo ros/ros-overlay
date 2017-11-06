@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="turtle_tf demonstrates how to write a tf broadcaster and listener with the turtl"
+DESCRIPTION="turtle_tf demonstrates how to write a tf broadcaster and listener with the [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/geometry_tutorials-release/archive/release/indigo/turtle_tf/0.2.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry_tutorials-release/archive/release/indigo/turtle_tf/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

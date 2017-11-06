@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="All PR2-specific packages for MoveIt"
 HOMEPAGE="http://moveit.ros.org"
-SRC_URI="https://github.com/ros-gbp/moveit_pr2-release/archive/release/indigo/moveit_pr2/0.6.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/moveit_pr2-release/archive/release/indigo/moveit_pr2/0.6.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

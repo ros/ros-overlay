@@ -6,13 +6,12 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a script that launches Emacs with Slime the	Superior "
+DESCRIPTION="This package provides a script that launches Emacs with Slime \(the\
+	Su[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/indigo/roslisp_repl/0.4.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/indigo/roslisp_repl/0.4.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/rosemacs
 	ros-indigo/roslisp
@@ -27,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

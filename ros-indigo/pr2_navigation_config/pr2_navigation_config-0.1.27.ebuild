@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package holds common configuration files for running the"
 HOMEPAGE="http://pr.willowgarage.com/wiki"
-SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/pr2_navigation_config/0.1.27-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_navigation-release/archive/release/indigo/pr2_navigation_config/0.1.27-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

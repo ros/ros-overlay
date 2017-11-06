@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Configuration package for Pyros"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/pyros-config-rosrelease/archive/release/indigo/pyros_config/0.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/asmodehn/pyros-config-rosrelease/archive/release/indigo/pyros_config/0.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

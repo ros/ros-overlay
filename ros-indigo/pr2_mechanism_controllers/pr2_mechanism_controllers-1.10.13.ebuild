@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The pr2_mechanism_controllers package contains realtime	controllers that are"
+DESCRIPTION="The pr2_mechanism_controllers package contains realtime\
+	controllers th[...]"
 HOMEPAGE="http://ros.org/pr2_mechanism_controllers"
-SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/pr2_mechanism_controllers/1.10.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_controllers-release/archive/release/indigo/pr2_mechanism_controllers/1.10.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -45,4 +46,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

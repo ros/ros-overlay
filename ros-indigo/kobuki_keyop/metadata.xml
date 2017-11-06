@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Keyboard teleoperation for Kobuki: relays commands from a keyboard to Kobuki.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

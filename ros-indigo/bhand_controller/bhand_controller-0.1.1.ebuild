@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The bhand_controller package is intended to control the Barrett Hand"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotnikAutomation/barrett_hand-release/archive/release/indigo/bhand_controller/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RobotnikAutomation/barrett_hand-release/archive/release/indigo/bhand_controller/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

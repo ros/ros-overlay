@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS driver for devices supporting the IEEE 1394 Digital Camera
+    (IIDC) protocol. Supports the ROS image_pipeline, using libdc1394
+    for device access.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

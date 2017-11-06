@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="This package contains a specialization of the gazebo_ros_control plugin.\
-	The"
+ [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/indigo/cob_gazebo_ros_control/0.6.6-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/indigo/cob_gazebo_ros_control/0.6.6-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

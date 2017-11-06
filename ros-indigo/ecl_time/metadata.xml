@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Timing utilities are very dependent on the system api provided for their use.
+	This package provides a means for handling different timing models. Current support
+	
+	- posix rt : complete.
+	- macosx : posix timers only, missing absolute timers.
+	- win : none.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

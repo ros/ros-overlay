@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Move the pr2 arm using inverse kinematics"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_arm_move_ik/0.0.5-4.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/indigo/pr2_arm_move_ik/0.0.5-4.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

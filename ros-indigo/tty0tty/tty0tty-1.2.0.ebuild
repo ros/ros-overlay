@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Linux null modem emulator"
 HOMEPAGE="https://github.com/freemed/tty0tty"
-SRC_URI="https://github.com/rohbotics/tty0tty-release/archive/release/indigo/tty0tty/1.2.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rohbotics/tty0tty-release/archive/release/indigo/tty0tty/1.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

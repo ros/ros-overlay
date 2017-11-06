@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    CMake lint commands for ROS packages.
+
+    The lint commands perform static checking of Python or C++ source
+    code for errors and standards compliance.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

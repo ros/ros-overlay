@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Holds maps of Willow Garage that can be used for a number of different applications.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

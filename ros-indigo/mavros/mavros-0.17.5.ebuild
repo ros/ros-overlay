@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="MAVROS  MAVLink extendable communication node for ROS	with proxy for Groun"
+DESCRIPTION="MAVROS -- MAVLink extendable communication node for ROS\
+	with proxy for[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/indigo/mavros/0.17.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/indigo/mavros/0.17.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-3 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -42,4 +43,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

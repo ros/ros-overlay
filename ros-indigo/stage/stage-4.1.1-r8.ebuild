@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Mobile robot simulator http://rtvgithubcom/Stage"
+DESCRIPTION="Mobile robot simulator http://rtv.github.com/Stage"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/indigo/stage/4.1.1-8.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/stage-release/archive/release/indigo/stage/4.1.1-8.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/catkin
 	x11-libs/gtk+:2
-	=x11-libs/fltk-1*
+	x11-libs/fltk
 	virtual/jpeg
 	virtual/opengl
 "
@@ -34,4 +34,3 @@ src_configure() {
 	filter-flags '-std=*'
 	ros-cmake_src_configure
 }
-

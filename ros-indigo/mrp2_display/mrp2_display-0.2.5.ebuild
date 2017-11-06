@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Package for managing touch LCD panel on MRP2"
 HOMEPAGE="http://wiki.ros.org/mrp2_display"
-SRC_URI="https://github.com/milvusrobotics/mrp2_robot-release/archive/release/indigo/mrp2_display/0.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/milvusrobotics/mrp2_robot-release/archive/release/indigo/mrp2_display/0.2.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

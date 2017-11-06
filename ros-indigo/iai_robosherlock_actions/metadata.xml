@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Action interfaces to trigger perception via the Robosherlock
+    perception system.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

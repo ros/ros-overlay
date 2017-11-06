@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The Pepperl+Fuchs R2000 laser range finder driver package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

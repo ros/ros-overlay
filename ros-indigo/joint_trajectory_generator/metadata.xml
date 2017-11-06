@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    joint_trajectory_generator action takes in a trajectory specified
+    by a number of joint positions, and it generates a new smooth trajectory
+    through these joint positions.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

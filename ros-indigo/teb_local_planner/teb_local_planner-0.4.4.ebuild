@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The teb_local_planner package implements a pluginto the base_local_planner of "
+DESCRIPTION="The teb_local_planner package implements a plugin\
+\	to the base_local_plan[...]"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner"
-SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/indigo/teb_local_planner/0.4.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/indigo/teb_local_planner/0.4.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,4 +41,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

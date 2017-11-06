@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This ROS package provides a simple, experimental, resource
+    scheduler for the Robotics in Concert project.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

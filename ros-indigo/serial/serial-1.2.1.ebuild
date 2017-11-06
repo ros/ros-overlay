@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Serial is a crossplatform, simple to use library for using serial ports on comp"
+DESCRIPTION="Serial is a cross-platform, simple to use library for using serial ports on[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wjwwood/serial-release/archive/release/indigo/serial/1.2.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wjwwood/serial-release/archive/release/indigo/serial/1.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

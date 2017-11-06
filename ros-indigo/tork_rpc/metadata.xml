@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package suite provides abstract RPC (Remote Procedure Call)
+  structure for higher level of robot operations for the ROS-based robots.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

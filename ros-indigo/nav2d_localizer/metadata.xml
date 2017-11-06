@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Wrapper around Particle Filter implementation.
+    The SelfLocalizer can be used as library or as a ros-node.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

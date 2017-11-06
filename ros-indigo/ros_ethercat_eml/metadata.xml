@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This is an implementation of the EtherCAT master protocol for use wiht ros_ethercar package
+      based on the work done at Flanders' Mechatronics Technology Centre and Willow Garage.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

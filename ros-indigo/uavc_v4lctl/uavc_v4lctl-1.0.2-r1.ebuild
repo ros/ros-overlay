@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The uavc_v4lctl package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/meuchel/uavc_v4lctl-release/archive/release/indigo/uavc_v4lctl/1.0.2-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/meuchel/uavc_v4lctl-release/archive/release/indigo/uavc_v4lctl/1.0.2-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
+LICENSE="GPL-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

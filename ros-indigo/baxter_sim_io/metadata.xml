@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The Navigator buttons for the Baxter Research Robot are simulated, and their states are captured and published on the corresponding rostopics
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

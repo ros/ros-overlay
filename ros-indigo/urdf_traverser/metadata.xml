@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Urdf traverser (C++) which provides functions to traverse
+      the URDF and convenience functions to access the URDF model.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The aubo_new_driver package for AUBO-I5 connect the TCP/IP Server
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

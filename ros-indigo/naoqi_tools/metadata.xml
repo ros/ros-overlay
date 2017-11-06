@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Set of tools provided by Aldebaran to convert Aldebaran files (URDF, blender...)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

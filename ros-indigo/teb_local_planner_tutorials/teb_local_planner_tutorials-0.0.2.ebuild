@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The teb_local_planner_tutorials package"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner_tutorials"
-SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/indigo/teb_local_planner_tutorials/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/indigo/teb_local_planner_tutorials/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

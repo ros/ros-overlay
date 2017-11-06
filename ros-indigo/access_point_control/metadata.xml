@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Defines an API for access point control based on 
+    dynamic_reconfigure. Other packages must
+    implement the API for various access-point models: 
+    for example: hostapd_access_point for hostapd-based control or
+    linksys_access_point for Linksys router web interface.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Message definitions for transporting multiple grasping-related datasets at the same time.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

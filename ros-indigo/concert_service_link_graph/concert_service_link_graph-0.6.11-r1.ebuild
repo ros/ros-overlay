@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Service type support for link graphs"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_service_link_graph/0.6.11-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/rocon_concert-release/archive/release/indigo/concert_service_link_graph/0.6.11-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

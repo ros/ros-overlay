@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The micros_mars_task_alloc package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

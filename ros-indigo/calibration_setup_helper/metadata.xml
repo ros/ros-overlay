@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains a script to generate calibration launch and configurationfiles for your robot.
+    which is based on Michael Ferguson's calibration code
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

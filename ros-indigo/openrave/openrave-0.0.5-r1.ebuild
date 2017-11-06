@@ -8,10 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="In order to use, please add the following line in your bashrc:"
 HOMEPAGE="http://openrave.org"
-SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/openrave/0.0.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/openrave/0.0.5-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( CC-BY-SA-3.0 CC-BY-SA-3.0 )"
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="( KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/collada_robots
 	ros-indigo/std_msgs
@@ -46,4 +45,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The cob_collision_velocity_filter package is a package for collision avoidance u"
+DESCRIPTION="The cob_collision_velocity_filter package is a package for collision avoida[...]"
 HOMEPAGE="http://ros.org/wiki/cob_collision_velocity_filter"
-SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_collision_velocity_filter/0.6.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_control-release/archive/release/indigo/cob_collision_velocity_filter/0.6.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

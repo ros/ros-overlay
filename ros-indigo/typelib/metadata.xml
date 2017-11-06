@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This library offers an introspection mechanism for C/C++ value-types. I.e.
+      it offers a way to represent types, and to manipulate in-memory values
+      that are instances of those types.
+
+      A Ruby binding is included, which gives a fast and transparent
+      modification of C/C++ in-memory types from Ruby.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

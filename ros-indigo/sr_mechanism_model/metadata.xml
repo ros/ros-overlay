@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    sr_mechanism_model contains the transmissions used in the robot model. We needed specific
+    transmission as we're using our own actuator. We also needed to take care of the joint 0s
+    which combine the distal and middle phalanges.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

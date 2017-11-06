@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    rosmake is a ros dependency aware build tool which can be used to
+     build all dependencies in the correct order.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Messages for transporting data to visualize, accompanied by their visualization details.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

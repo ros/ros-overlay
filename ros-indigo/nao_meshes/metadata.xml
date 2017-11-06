@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    meshes for the Aldebaran Robotics NAO
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

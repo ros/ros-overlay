@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The folaga_msgs package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/revdevlev/folaga_msgs-release/archive/release/indigo/folaga_msgs/0.0.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/revdevlev/folaga_msgs-release/archive/release/indigo/folaga_msgs/0.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/message_runtime
 	ros-indigo/roscpp
@@ -26,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

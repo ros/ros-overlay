@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The nj_escape_crossing package is a navigating jockey used to move a robot from away from a crossing
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

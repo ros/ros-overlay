@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack contains the different gui plugins used with the shadow robot stacks"
+DESCRIPTION="This stack contains the different gui plugins used with the shadow robot st[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/shadow-robot/sr-visualization-release/archive/release/indigo/sr_visualization/1.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/shadow-robot/sr-visualization-release/archive/release/indigo/sr_visualization/1.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( GPL-1 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

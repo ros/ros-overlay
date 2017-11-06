@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A set of message filters which take in messages and may output those messages at"
+DESCRIPTION="A set of message filters which take in messages and may output those messag[...]"
 HOMEPAGE="http://ros.org/wiki/message_filters"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/message_filters/1.11.21-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/indigo/message_filters/1.11.21-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

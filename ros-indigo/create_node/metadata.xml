@@ -2,7 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    iRobot Create ROS driver node
+    
+    ROS bindings for the Create/Roomba driver.
+    
+    This is based on otl_roomba driver by OTL, ported to use
+    create_driver's implementation instead. 
+    This also contains a 'bonus' feature from the turtlebot 
+    driver by Xuwen Cao and Morgan Quigley.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

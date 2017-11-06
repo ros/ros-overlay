@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Communication types (msgs/srvs/actions) for robotics in concert (aka multimaster).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

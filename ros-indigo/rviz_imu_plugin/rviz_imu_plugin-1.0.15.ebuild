@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="RVIZ plugin for IMU visualization"
 HOMEPAGE="http://ros.org/wiki/rviz_imu_plugin"
-SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/rviz_imu_plugin/1.0.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/imu_tools-release/archive/release/indigo/rviz_imu_plugin/1.0.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

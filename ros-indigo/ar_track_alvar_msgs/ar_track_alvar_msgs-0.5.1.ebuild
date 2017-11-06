@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking library"
+DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag tracking lib[...]"
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
-SRC_URI="https://github.com/ros-gbp/ar_track_alvar_msgs-release/archive/release/indigo/ar_track_alvar_msgs/0.5.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ar_track_alvar_msgs-release/archive/release/indigo/ar_track_alvar_msgs/0.5.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

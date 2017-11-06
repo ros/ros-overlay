@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://ros.org/wiki/footstep_planner"
-SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/footstep_planner/0.4.1-2.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/AravindaDP/humanoid_navigation-release/archive/release/indigo/footstep_planner/0.4.1-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -32,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

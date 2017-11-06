@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This library provides a standardized interface for processing data as a sequence 
+    of filters.  This package contains a base class upon which to build specific implementations
+    as well as an interface which dynamically loads filters based on runtime parameters.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

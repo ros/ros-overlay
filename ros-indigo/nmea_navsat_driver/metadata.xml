@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Package to parse NMEA strings and publish a very simple GPS message. Does not require the GPSD deamon.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

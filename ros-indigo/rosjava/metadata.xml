@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This is a meta package for the official rosjava repositories.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages for grasp planning with graspit Some of the messages	are later to "
+DESCRIPTION="Messages for grasp planning with graspit. Some of the messages\
+	are lat[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/grasp_planning_graspit_msgs/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/graspit-pkgs-release/archive/release/indigo/grasp_planning_graspit_msgs/1.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -27,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

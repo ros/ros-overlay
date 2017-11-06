@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Controllers for Warthog"
 HOMEPAGE="http://www.clearpathrobotics.com/"
-SRC_URI="https://github.com/clearpath-gbp/warthog-release/archive/release/indigo/warthog_control/0.0.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/warthog-release/archive/release/indigo/warthog_control/0.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

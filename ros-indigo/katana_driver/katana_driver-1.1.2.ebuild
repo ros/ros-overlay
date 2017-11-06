@@ -6,11 +6,11 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack contains all descriptions, drivers and bringup facilities for Neuroni"
+DESCRIPTION="This stack contains all descriptions, drivers and bringup facilities for Ne[...]"
 HOMEPAGE="http://ros.org/wiki/katana_driver"
-SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/indigo/katana_driver/1.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/katana_driver-release/archive/release/indigo/katana_driver/1.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( BSD CC-BY-SA-3.0 )"
+LICENSE="( BSD GPL-1) "
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/katana
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

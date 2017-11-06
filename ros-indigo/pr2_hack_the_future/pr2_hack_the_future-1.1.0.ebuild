@@ -8,11 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="The pr2_hack_the_future package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/pr2_hack_the_future-release/archive/release/indigo/pr2_hack_the_future/1.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_hack_the_future-release/archive/release/indigo/pr2_hack_the_future/1.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/hack_the_web_program_executor
 	ros-indigo/pr2_joint_teleop
@@ -29,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

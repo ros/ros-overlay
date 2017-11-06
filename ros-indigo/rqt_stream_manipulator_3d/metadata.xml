@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The rqt_stream_manipulator_3d provides a GUI to the stream_manipulator_3d
+      package, in order to dynamically reconfigure it.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

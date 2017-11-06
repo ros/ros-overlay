@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Localizing jockey from LaserScan and absolute heading	Implements a localizi"
+DESCRIPTION="Localizing jockey from LaserScan and absolute heading.\
+	Implements a lo[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_laser-release/archive/release/indigo/lj_laser_heading/0.1.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_laser-release/archive/release/indigo/lj_laser_heading/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

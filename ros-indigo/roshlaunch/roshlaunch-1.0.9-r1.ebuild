@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="roshlaunch is a temporary package for redesigning roslaunch to have better progr"
+DESCRIPTION="roshlaunch is a temporary package for redesigning roslaunch to have better [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OSUrobotics/rosh_core-release/archive/release/indigo/roshlaunch/1.0.9-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/rosh_core-release/archive/release/indigo/roshlaunch/1.0.9-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

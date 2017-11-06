@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pr2_mannequin_mode package"
 HOMEPAGE="http://wiki.ros.org/pr2_mannequin_mode"
-SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_mannequin_mode/0.5.21-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/indigo/pr2_mannequin_mode/0.5.21-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

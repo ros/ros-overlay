@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="arm_navigation_msgs"
 HOMEPAGE="http://ros.org/wiki/arm_navigation_msgs"
-SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/arm_navigation_msgs/0.0.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/openrave_planning-release/archive/release/indigo/arm_navigation_msgs/0.0.5-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

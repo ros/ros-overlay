@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains the transmissions that can be used with the RoNeX driver. Using those transmissions makes it possible for the user to remap from the RoNeX to a joint based robot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

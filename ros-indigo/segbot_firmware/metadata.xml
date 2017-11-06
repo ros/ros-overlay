@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Arduino firmware for BWI segbot sensor array.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

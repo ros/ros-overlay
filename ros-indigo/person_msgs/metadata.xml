@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Message definitions for detected persons from within RoboSherlock
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

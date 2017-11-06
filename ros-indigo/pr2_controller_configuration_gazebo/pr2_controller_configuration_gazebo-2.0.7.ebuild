@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A copy of the pr2_controller_configuration package, for use in	 the PR2 simu"
+DESCRIPTION="A copy of the pr2_controller_configuration package, for use in \
+	the PR[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_controller_configuration_gazebo"
-SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/indigo/pr2_controller_configuration_gazebo/2.0.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/indigo/pr2_controller_configuration_gazebo/2.0.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

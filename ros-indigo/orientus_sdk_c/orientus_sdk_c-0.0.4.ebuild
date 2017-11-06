@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The Orientus C SDK"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RIVeR-Lab-release/orientus_driver-release/archive/release/indigo/orientus_sdk_c/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RIVeR-Lab-release/orientus_driver-release/archive/release/indigo/orientus_sdk_c/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

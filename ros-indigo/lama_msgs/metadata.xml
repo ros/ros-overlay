@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    lama_msgs provides messages for the lama framework such as
+	  Frontier, Crossing.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

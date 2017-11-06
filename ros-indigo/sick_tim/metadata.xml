@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A ROS driver for the SICK TiM series of laser scanners.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

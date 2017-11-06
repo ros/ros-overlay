@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A package containing several destruction scenarios for Gazebo,
+    with the goal of proving a uniform basis on which to test and
+    develop, for instance, search and rescue robots.
+
+    Developed and provided by Roboptics - http://www.roboptics.pt
+    For more information please contact us at info@roboptics.pt
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

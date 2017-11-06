@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    SOEM is an open source EtherCAT master library written in c. Its
+     primary target is Linux but can be adapted to other OS and
+     embedded systems. (http://developer.berlios.de/projects/soem/)
+
+     This package contains the original soem c code provided by the Technische Universiteit Eindhoven.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

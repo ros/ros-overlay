@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Various actions which help in moving the arms of the PR2
+    or getting data from its tilting laser.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

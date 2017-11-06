@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This ROS package wraps documentation tools like doxygen, sphinx,
+    and epydoc, making it convenient to generate ROS package
+    documentation.
+
+    It also generates online documentation for the ROS wiki.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

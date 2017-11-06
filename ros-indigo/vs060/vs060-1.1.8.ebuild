@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/start-jsk/denso-release/archive/release/indigo/vs060/1.1.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/start-jsk/denso-release/archive/release/indigo/vs060/1.1.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

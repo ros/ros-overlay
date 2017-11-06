@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The nj_costmap package implements a navigation jockey for the
+	  Large Maps framework (LaMa) based on a local costmap (costmap position is
+	  relative to the sensor but orientation is absolute).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

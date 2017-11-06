@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="rqt_bag provides a GUI plugin for displaying and replaying ROS bag files"
+DESCRIPTION="rqt_bag provides a GUI plugin for displaying and replaying ROS bag files."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_bag-release/archive/release/indigo/rqt_bag_plugins/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_bag-release/archive/release/indigo/rqt_bag_plugins/0.4.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,4 +34,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

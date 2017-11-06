@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package contains a single node that monitors the drift of the IMUgyroscope"
+DESCRIPTION="This package contains a single node that monitors the drift of the IMU\
+gyr[...]"
 HOMEPAGE="http://ros.org/wiki/imu_monitor"
-SRC_URI="https://github.com/pr2-gbp/pr2_robot-release/archive/release/indigo/imu_monitor/1.6.23-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_robot-release/archive/release/indigo/imu_monitor/1.6.23-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

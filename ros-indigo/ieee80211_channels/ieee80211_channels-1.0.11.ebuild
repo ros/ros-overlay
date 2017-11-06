@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides mapping from frequencies to	IEEE80211 channels and vi"
+DESCRIPTION="This package provides mapping from frequencies to\
+	IEEE802.11 channels [...]"
 HOMEPAGE="http://ros.org/wiki/ieee80211_channels"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/ieee80211_channels/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/ieee80211_channels/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

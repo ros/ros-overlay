@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages for automatic topic configuration using rosserial"
+DESCRIPTION="Messages for automatic topic configuration using rosserial."
 HOMEPAGE="http://ros.org/wiki/rosserial_msgs"
-SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/indigo/rosserial_msgs/0.6.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rosserial-release/archive/release/indigo/rosserial_msgs/0.6.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

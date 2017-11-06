@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Package that adds the depth camera to Romeo
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

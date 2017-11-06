@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provides a few convenience math functions
+      using the Eigen libraries.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

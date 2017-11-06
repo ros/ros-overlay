@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A set of interactive markers for various methods of remote teleoperation manipulation of 6-DOF robot end-effectors
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="naoqi_dashboard is a GUI for monitoring the state of an ALdebaran robot	It "
+DESCRIPTION="naoqi_dashboard is a GUI for monitoring the state of an ALdebaran robot.\
+ [...]"
 HOMEPAGE="http://ros.org/wiki/naoqi_dashboard"
-SRC_URI="https://github.com/ros-naoqi/naoqi_dashboard-release/archive/release/indigo/naoqi_dashboard/0.1.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/naoqi_dashboard-release/archive/release/indigo/naoqi_dashboard/0.1.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

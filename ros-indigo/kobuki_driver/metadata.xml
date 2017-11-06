@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    C++ driver library for Kobuki:
+    Pure C++ driver library for Kobuki. This is for those who do not wish to use ROS on their systems.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

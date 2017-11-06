@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Collada Models Used and Developed by the RAIL Lab at WPI"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/rail_collada_models-release/archive/release/indigo/rail_collada_models/0.0.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/rail_collada_models-release/archive/release/indigo/rail_collada_models/0.0.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

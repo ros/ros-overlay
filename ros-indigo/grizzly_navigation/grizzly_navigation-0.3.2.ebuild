@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The grizzly_navigation package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/clearpath-gbp/grizzly-release/archive/release/indigo/grizzly_navigation/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/grizzly-release/archive/release/indigo/grizzly_navigation/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

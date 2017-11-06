@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Storage manager for OccupancyGrid maps  Supports naming the most	recent map"
+DESCRIPTION="Storage manager for OccupancyGrid maps.  Supports naming the most\
+	rece[...]"
 HOMEPAGE="http://ros.org/wiki/map_store"
-SRC_URI="https://github.com/ros-gbp/map_store-release/archive/release/indigo/map_store/0.3.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/map_store-release/archive/release/indigo/map_store/0.3.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

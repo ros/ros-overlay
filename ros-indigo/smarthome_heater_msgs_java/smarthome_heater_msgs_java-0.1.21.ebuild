@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Java generation for smarthome_heater_msgs package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/rosalfred-release/smarthome_heater_msgs_java-release/archive/release/indigo/smarthome_heater_msgs_java/0.1.21-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rosalfred-release/smarthome_heater_msgs_java-release/archive/release/indigo/smarthome_heater_msgs_java/0.1.21-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

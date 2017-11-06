@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Any tools relating to mathematical geometry	  Primarily featuring polynomia"
+DESCRIPTION="Any tools relating to mathematical geometry. \
+	 Primarily featuring pol[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_geometry/0.61.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_geometry/0.61.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

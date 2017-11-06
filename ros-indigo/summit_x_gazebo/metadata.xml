@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Launch files and world files to start the models in gazebo
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

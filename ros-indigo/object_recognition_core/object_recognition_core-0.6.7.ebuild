@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="object_recognition_core contains tools to launch several recognition pipelines, "
+DESCRIPTION="object_recognition_core contains tools to launch several recognition pipeli[...]"
 HOMEPAGE="http://wg-perception.github.io/object_recognition_core/"
-SRC_URI="https://github.com/ros-gbp/object_recognition_core-release/archive/release/indigo/object_recognition_core/0.6.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/object_recognition_core-release/archive/release/indigo/object_recognition_core/0.6.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

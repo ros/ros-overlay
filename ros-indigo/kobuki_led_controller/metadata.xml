@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Convenient modules to control kobuki leds
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

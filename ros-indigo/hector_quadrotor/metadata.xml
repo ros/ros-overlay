@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_quadrotor contains packages related to modeling, control and simulation of quadrotor UAV systems
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

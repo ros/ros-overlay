@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="MoveIt config files for all cob and raw"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ipa320/cob_robots-release/archive/release/indigo/cob_moveit_config/0.6.7-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_robots-release/archive/release/indigo/cob_moveit_config/0.6.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

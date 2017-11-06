@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="publish end effectors force, which is estmated from joint torque value"
+DESCRIPTION="publish end effector\'s force, which is estmated from joint torque value"
 HOMEPAGE="http://ros.org/wiki/virtual_force_publisher"
-SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/virtual_force_publisher/2.2.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_common-release/archive/release/indigo/virtual_force_publisher/2.2.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

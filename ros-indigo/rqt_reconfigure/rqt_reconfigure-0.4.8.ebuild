@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="br#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/indigo/rqt_reconfigure/0.4.8-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/indigo/rqt_reconfigure/0.4.8-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

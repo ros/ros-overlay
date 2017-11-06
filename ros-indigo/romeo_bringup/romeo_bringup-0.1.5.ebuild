@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The romeo_bringup package	 contains launch and configuration files required "
+DESCRIPTION="The romeo_bringup package \
+	contains launch and configuration files req[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/indigo/romeo_bringup/0.1.5-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-aldebaran/romeo_robot-release/archive/release/indigo/romeo_bringup/0.1.5-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -25,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

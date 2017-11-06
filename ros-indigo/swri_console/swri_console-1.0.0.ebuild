@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A rosout GUI viewer developed at Southwest Research Insititute as an	 altern"
+DESCRIPTION="A rosout GUI viewer developed at Southwest Research Insititute as an\
+	 [...]"
 HOMEPAGE="http://ros.org/wiki/swri_console"
-SRC_URI="https://github.com/swri-robotics-gbp/swri_console-release/archive/release/indigo/swri_console/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/swri_console-release/archive/release/indigo/swri_console/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +30,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

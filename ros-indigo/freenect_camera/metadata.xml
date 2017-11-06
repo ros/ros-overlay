@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A libfreenect-based ROS driver for the Microsoft Kinect.  This is
+    a port of the OpenNI driver that uses libfreenect instead, because
+    on some systems with some devices it works better.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

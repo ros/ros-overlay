@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Cmake macros to invoke npm update"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/jihoonl/cmake_nodejs_hook-release/archive/release/indigo/cmake_nodejs_hook/0.0.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jihoonl/cmake_nodejs_hook-release/archive/release/indigo/cmake_nodejs_hook/0.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

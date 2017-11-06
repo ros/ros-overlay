@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    These tools inspect and describe your system with macros, types 
+     and functions.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

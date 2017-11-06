@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS-Industrial support for ABB manipulators (metapackage).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

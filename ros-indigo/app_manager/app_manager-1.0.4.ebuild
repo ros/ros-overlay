@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="app_manager"
 HOMEPAGE="http://ros.org/wiki/app_manager"
-SRC_URI="https://github.com/ros-gbp/app_manager-release/archive/release/indigo/app_manager/1.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/app_manager-release/archive/release/indigo/app_manager/1.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

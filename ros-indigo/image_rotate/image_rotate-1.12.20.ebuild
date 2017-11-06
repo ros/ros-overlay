@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p"
 HOMEPAGE="http://ros.org/wiki/image_rotate"
-SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_rotate/1.12.20-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_rotate/1.12.20-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -32,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A message API for implementing a 6-DOF interaction cursor.
+    A minimal implementation has one node that handles the user device I/O and
+    another node (e.g. a plugin in Rviz) that uses the messages to interact with
+    a marker.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

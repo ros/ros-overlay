@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Rviz 3-D visualizer for planning algorithms implemented with the Open Motion Planning Library (OMPL)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

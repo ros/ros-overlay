@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package defines messages used by PAL devices and drivers.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

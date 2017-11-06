@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Cross platform filesystem utilities (until c++11 makes its way in).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

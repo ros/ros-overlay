@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains the components of the soem_ebox package"
 HOMEPAGE="http://wiki.ros.org/soem_master"
-SRC_URI="https://github.com/orocos-gbp/rtt_soem-release/archive/release/indigo/soem_ebox/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/orocos-gbp/rtt_soem-release/archive/release/indigo/soem_ebox/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Monitors the computers processor and hard drives of the PR2 and publishes data "
+DESCRIPTION="Monitors the computer\'s processor and hard drives of the PR2 and publishes[...]"
 HOMEPAGE="http://www.ros.org/wiki/pr2_computer_monitor"
-SRC_URI="https://github.com/pr2-gbp/pr2_robot-release/archive/release/indigo/pr2_computer_monitor/1.6.23-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_robot-release/archive/release/indigo/pr2_computer_monitor/1.6.23-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

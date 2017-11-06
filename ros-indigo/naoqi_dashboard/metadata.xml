@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    naoqi_dashboard is a GUI for monitoring the state of an ALdebaran robot.
+    It is a port of pr2_dashboard and shows status information like
+    battery status, joint temperatures, and joint stiffness, as well
+    as integrating ROS tools like rqt_console and rqt_robot_monitor.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

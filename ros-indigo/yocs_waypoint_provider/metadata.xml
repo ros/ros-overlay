@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Parse a multiple poses from yaml and provide as topic and service. This package is highly inspired by yocs_waypoints_navi
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

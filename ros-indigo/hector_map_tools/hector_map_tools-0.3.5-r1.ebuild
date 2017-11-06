@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="hector_map_tools contains some functions related to accessing information from O"
+DESCRIPTION="hector_map_tools contains some functions related to accessing information f[...]"
 HOMEPAGE="http://ros.org/wiki/hector_map_tools"
-SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/indigo/hector_map_tools/0.3.5-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/indigo/hector_map_tools/0.3.5-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

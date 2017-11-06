@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This stack contains the drivers and the controllers for Shadow Robot's EtherCAT Hand.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

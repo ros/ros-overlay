@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Gazebo Model plugin(s) which handle/help grasping in Gazebo.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

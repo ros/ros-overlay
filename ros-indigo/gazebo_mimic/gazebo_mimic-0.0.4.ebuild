@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The gazebo_mimic package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/gazebo_mimic/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OrebroUniversity/yumi_release/archive/release/indigo/gazebo_mimic/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

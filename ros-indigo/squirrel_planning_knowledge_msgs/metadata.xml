@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Knowledge messages for adding and updating the model in the SQUIRREL knowledge base.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

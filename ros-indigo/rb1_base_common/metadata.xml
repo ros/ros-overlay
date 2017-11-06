@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The rb1_base_common package. It contains rb1 base common packages used for robot control and for simulation
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

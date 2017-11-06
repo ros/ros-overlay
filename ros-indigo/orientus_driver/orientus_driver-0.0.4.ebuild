@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Driver for Orientus IMU"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RIVeR-Lab-release/orientus_driver-release/archive/release/indigo/orientus_driver/0.0.4-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RIVeR-Lab-release/orientus_driver-release/archive/release/indigo/orientus_driver/0.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

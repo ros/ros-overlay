@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The anj_featurenav package provides a learning jockey and a	navigating jocke"
+DESCRIPTION="The anj_featurenav package provides a learning jockey and a\
+	navigating[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/lama-imr/lama_featurenav-release/archive/release/indigo/anj_featurenav/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/lama-imr/lama_featurenav-release/archive/release/indigo/anj_featurenav/0.1.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,4 +36,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

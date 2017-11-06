@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Schunk_grippers stack contains packages for PG70 and EZN64 grippers"
 HOMEPAGE="http://ros.org/wiki/schunk_grippers"
-SRC_URI="https://github.com/SmartRoboticSystems/schunk_grippers-release/archive/release/indigo/schunk_grippers/1.3.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/SmartRoboticSystems/schunk_grippers-release/archive/release/indigo/schunk_grippers/1.3.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

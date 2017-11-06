@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="brul#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/indigo/rqt_robot_plugins/0.5.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/indigo/rqt_robot_plugins/0.5.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

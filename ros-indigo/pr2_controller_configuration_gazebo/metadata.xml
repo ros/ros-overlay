@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A copy of the pr2_controller_configuration package, for use in 
+    the PR2 simulator.  We maintain two copies to allow for controller
+    gains to be set differently between hardware and simulation.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

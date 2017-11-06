@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    High-level navigation application for the segbot allowing the segbot to
+    approach and gothrough doors. The application can also be used to determine
+    the segbot's logical location, as well as sense when a door in front of the
+    robot is open or not.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

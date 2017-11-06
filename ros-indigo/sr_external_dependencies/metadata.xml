@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    sr_external_dependencies package is a "dummy" package used to synchronize the includes for the protocol communication between the host and the PIC for Shadow's EtherCAT hardware. It contains a script that automatically downloads the latest h file from our pic32 svn.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

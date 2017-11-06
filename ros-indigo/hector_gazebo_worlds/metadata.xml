@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

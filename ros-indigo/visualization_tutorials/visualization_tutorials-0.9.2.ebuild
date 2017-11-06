@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Metapackage referencing tutorials related to rviz and visualization"
+DESCRIPTION="Metapackage referencing tutorials related to rviz and visualization."
 HOMEPAGE="http://ros.org/wiki/visualization_tutorials"
-SRC_URI="https://github.com/ros-gbp/visualization_tutorials-release/archive/release/indigo/visualization_tutorials/0.9.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/visualization_tutorials-release/archive/release/indigo/visualization_tutorials/0.9.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Dock driving library for Kobuki. Users owning a docking station for Kobuki 
+	    can use this tool to develop autonomous docking drive algorithms.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

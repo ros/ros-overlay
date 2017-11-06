@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="File system general utilities"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yotabits/python-pathtools-release/archive/release/indigo/python-pathtools/0.1.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yotabits/python-pathtools-release/archive/release/indigo/python-pathtools/0.1.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

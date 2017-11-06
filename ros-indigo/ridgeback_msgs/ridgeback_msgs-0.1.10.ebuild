@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages exclusive to Ridgeback, especially for representing lowlevel motor com"
+DESCRIPTION="Messages exclusive to Ridgeback, especially for representing low-level moto[...]"
 HOMEPAGE="http://wiki.ros.org/ridgeback_msgs"
-SRC_URI="https://github.com/clearpath-gbp/ridgeback-release/archive/release/indigo/ridgeback_msgs/0.1.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/ridgeback-release/archive/release/indigo/ridgeback_msgs/0.1.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

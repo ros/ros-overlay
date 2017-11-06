@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Actions to navigate a path"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/path_navigation_msgs/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/path_navigation_msgs/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

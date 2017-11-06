@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Messages, actions and services for creating waypoints for the planner
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

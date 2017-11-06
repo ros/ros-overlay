@@ -2,7 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides abstract RPC (Remote Procedure Call) structure for
+  higher level of robot operations for the ROS-based robots.
+  
+  Some ROS-based robots come with higher level of convenient operation
+  interface (e.g. often written in Python) where robot operators can call
+  complicated tasks by a single command. "RPC" here enables interacting with
+  those commands via ROS Topic/Service/Action from remote nodes.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides a recovery behavior for the navigation stack that attempts"
+DESCRIPTION="This package provides a recovery behavior for the navigation stack that att[...]"
 HOMEPAGE="http://wiki.ros.org/clear_costmap_recovery"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/clear_costmap_recovery/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/clear_costmap_recovery/1.12.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

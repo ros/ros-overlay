@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The libg2o library from http://openslam.org/g2o.html
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A ROS node that watches a given network interface and publishes	 whether it "
+DESCRIPTION="A ROS node that watches a given network interface and publishes\
+	 wheth[...]"
 HOMEPAGE="http://ros.org/wiki/detect_running_network_interface"
-SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_detector/1.0.11-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TheDash/linux_networking-release/archive/release/indigo/network_detector/1.0.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +25,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

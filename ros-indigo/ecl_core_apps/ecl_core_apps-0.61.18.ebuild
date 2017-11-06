@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This includes a suite of programs demoing various aspects of the	 ecl_core"
+DESCRIPTION="This includes a suite of programs demo\'ing various aspects of the\
+	 ec[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_core_apps/0.61.18-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/ecl_core-release/archive/release/indigo/ecl_core_apps/0.61.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -40,4 +41,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="jsk_teleop_joy"
 HOMEPAGE="http://ros.org/wiki/jsk_teleop_joy"
-SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_teleop_joy/0.1.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_control-release/archive/release/indigo/jsk_teleop_joy/0.1.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,4 +35,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

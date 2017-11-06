@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A libfreenect-based ROS driver for the Microsoft Kinect
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

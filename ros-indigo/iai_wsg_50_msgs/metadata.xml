@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Fork of the driver packages for the Weiss Robotics WSG 50 gripper.
+    Maintained by the Institute for Artificial Intelligence, University Bremen.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

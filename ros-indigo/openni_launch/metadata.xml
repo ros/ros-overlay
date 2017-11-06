@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Launch files to open an OpenNI device and load all nodelets to 
+     convert raw depth/RGB/IR streams to depth images, disparity images, 
+     and (registered) point clouds.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

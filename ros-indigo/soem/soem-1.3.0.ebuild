@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="SOEM is an open source EtherCAT master library written in c Its	 primary ta"
+DESCRIPTION="SOEM is an open source EtherCAT master library written in c. Its\
+	 prim[...]"
 HOMEPAGE="http://developer.berlios.de/projects/soem"
-SRC_URI="https://github.com/smits/soem-gbp/archive/release/indigo/soem/1.3.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/smits/soem-gbp/archive/release/indigo/soem/1.3.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
@@ -22,4 +23,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

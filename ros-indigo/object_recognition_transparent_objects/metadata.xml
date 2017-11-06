@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A technique to recognize and estimate poses of transparent objects
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

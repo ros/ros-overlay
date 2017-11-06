@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The power_monitor collects messages from the ocean_battery_server and
+     the pr2_power_board, and publishes a summary of their data in a
+     friendlier message format.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

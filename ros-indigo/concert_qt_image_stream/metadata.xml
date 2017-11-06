@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    An rqt plugin for image_stream'ing concert robots
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

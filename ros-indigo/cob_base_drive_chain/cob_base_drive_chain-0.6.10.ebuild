@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package contains classes that are able to control the platform of the Care-"
+DESCRIPTION="This package contains classes that are able to control the platform of the [...]"
 HOMEPAGE="http://ros.org/wiki/cob_base_drive_chain"
-SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_base_drive_chain/0.6.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_driver-release/archive/release/indigo/cob_base_drive_chain/0.6.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

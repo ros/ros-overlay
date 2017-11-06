@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Command robot to navigate around"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/yujinrobot-release/concert_services-release/archive/release/indigo/concert_service_waypoint_navigation/0.1.12-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/concert_services-release/archive/release/indigo/concert_service_waypoint_navigation/0.1.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

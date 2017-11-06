@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    RMS Data Log Client Library
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

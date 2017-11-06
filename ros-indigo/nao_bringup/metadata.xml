@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Launch files and scripts needed to bring ROS interfaces for Nao up into a
+      running state.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    LED package that provides drivers for communicating with Polulu WS2812B-Based LED Strips
+    utilizing an Arduino microcontroller. Also action and service calls for standard applications.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

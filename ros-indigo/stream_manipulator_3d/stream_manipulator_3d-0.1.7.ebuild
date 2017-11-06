@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Stream Manipulator 3D lets you subscribe to a stream of point	  clouds, suc"
+DESCRIPTION="Stream Manipulator 3D let\'s you subscribe to a stream of point\
+	  clou[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/3DVision-Stack/stream-manipulator-3D-release/archive/release/indigo/stream_manipulator_3d/0.1.7-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/3DVision-Stack/stream-manipulator-3D-release/archive/release/indigo/stream_manipulator_3d/0.1.7-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -34,4 +35,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

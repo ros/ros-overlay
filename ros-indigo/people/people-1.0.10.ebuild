@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The people stack holds algorithms for perceiving people from a number of sensors"
+DESCRIPTION="The people stack holds algorithms for perceiving people from a number of se[...]"
 HOMEPAGE="http://ros.org/wiki/people"
-SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/indigo/people/1.0.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/indigo/people/1.0.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

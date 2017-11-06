@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Python interfaces for managing a pool of ROCON scheduler resources.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

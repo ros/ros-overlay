@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Wraps the ViSP moving edge tracker provided by the ViSP visual
+    servoing library into a ROS package.
+
+    This computer vision algorithm computes the pose (i.e. position
+    and orientation) of an object in an image. It is fast enough to
+    allow object online tracking using a camera.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

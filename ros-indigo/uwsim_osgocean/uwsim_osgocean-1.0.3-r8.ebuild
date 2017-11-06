@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The OSG Ocean library adapted to UWSim See https://codegooglecom/p/osgocean"
+DESCRIPTION="The OSG Ocean library adapted to UWSim. See https://code.google.com/p/osgocean"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/uji-ros-pkg/uwsim_osgocean-release/archive/release/indigo/uwsim_osgocean/1.0.3-8.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uji-ros-pkg/uwsim_osgocean-release/archive/release/indigo/uwsim_osgocean/1.0.3-8.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/catkin
 	dev-libs/boost
-	sci-libs/fftw
+	sci-libs/fftw:3.0
 	dev-games/openscenegraph
 	virtual/opengl
 "
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A Python and C++ implementation of the LZ4 streaming format.  Large data
+    streams are split into blocks which are compressed using the very fast LZ4
+    compression algorithm.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

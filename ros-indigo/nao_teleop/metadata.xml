@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Teleoperation (gamepad or joystick) for the Nao humanoid
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

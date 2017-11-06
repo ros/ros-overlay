@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Python Multiprocess Management Framework, based on ZeroMQ communication"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/asmodehn/pyzmp-rosrelease/archive/release/indigo/pyzmp/0.0.15-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/asmodehn/pyzmp-rosrelease/archive/release/indigo/pyzmp/0.0.15-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

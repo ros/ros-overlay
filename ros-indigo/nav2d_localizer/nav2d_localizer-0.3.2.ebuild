@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Wrapper around Particle Filter implementation	The SelfLocalizer can be used"
+DESCRIPTION="Wrapper around Particle Filter implementation.\
+	The SelfLocalizer can b[...]"
 HOMEPAGE="http://wiki.ros.org/self_localizer"
-SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_localizer/0.3.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/indigo/nav2d_localizer/0.3.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -27,4 +28,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

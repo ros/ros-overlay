@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides RPC (Remote Procedure Call) server
+  feature for higher level of robot operations for the Hironx-variant robots
+  (i.e. Hironx, NEXTAGE Open).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

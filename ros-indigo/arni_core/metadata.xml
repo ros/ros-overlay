@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package contains common ARNI functionality.
+    Furthermore, generic launch files and integration tests.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

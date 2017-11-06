@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A Simple Node to Publish the Robot's Position Relative to the Map using TFs
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

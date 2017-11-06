@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Provide a node that extracts checkerboard corners from ROS images.
+    This package is still experimental and unstable.
+    Expect its APIs to change.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This is a ROS interface to the Shadow Robot's robotic hand. It
+     contains both an interface to the real hand (communicating via
+     a CAN interface) and a simulated version of the hand. It also
+     contains an interface to Shadow Robot's muscle arm.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

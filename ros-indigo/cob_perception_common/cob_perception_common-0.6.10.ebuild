@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This stack provides utilities commonly needed for a variety of computer vision t"
+DESCRIPTION="This stack provides utilities commonly needed for a variety of computer vis[...]"
 HOMEPAGE="http://wiki.ros.org/cob_perception_common"
-SRC_URI="https://github.com/ipa320/cob_perception_common-release/archive/release/indigo/cob_perception_common/0.6.10-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/cob_perception_common-release/archive/release/indigo/cob_perception_common/0.6.10-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
@@ -29,4 +29,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

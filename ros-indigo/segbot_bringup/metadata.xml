@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Contains launch files and runtime scripts necessary for running
+    segbots in simulation and in the real world.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

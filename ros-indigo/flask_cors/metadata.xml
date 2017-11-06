@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Cross Origin Resource Sharing ( CORS ) support for Flask
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

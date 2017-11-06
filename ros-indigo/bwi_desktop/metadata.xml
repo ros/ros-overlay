@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS desktop metapackage for the Building-Wide Intelligence (BWI)
+    project of the University of Texas at Austin.  It depends on all
+    released BWI packages.  These packages include GUI components.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

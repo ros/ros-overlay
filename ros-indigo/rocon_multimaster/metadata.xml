@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This doesn't do everything you need for multimaster, however it does
+    provide the building blocks common to most or all multimaster systems.
+    In particular, it provides the gateway model, which is an upgrade on
+    old foreign_relay and master_sync concepts.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

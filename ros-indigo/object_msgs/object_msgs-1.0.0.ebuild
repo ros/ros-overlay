@@ -6,13 +6,12 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Provides a few basic messages about object geometry, pose and	other details"
+DESCRIPTION="Provides a few basic messages about object geometry, pose and\
+	other de[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/object_msgs/1.0.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/general-message-pkgs-release/archive/release/indigo/object_msgs/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-SA-3.0"
-
-KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/geometry_msgs
 	ros-indigo/message_runtime
@@ -28,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

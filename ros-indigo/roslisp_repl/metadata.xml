@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides a script that launches Emacs with Slime (the
+    Superior Lisp Interaction Mode) ready for Lisp development and
+    roslisp.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

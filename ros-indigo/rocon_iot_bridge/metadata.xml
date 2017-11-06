@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package helps to communicate iot platforms like ninjablock and smartthings
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

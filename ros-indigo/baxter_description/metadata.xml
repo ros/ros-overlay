@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Description of Baxter Research Robot from Rethink Robotics.
+    This package contains the URDF and meshes describing Baxter.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

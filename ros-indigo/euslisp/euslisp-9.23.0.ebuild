@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="EusLisp is an integrated programming system for the\
-  research on intelligent ro"
+  research on intellig[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/euslisp-release/archive/release/indigo/euslisp/9.23.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/euslisp-release/archive/release/indigo/euslisp/9.23.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,7 +22,13 @@ RDEPEND="
 	x11-libs/libXext
 	virtual/opengl
 	media-fonts/font-adobe-100dpi
+	media-fonts/font-bh-100dpi
+	media-fonts/font-bh-lucidatypewriter-100dpi
+	media-fonts/font-bitstream-100dpi
 	media-fonts/font-adobe-75dpi
+	media-fonts/font-bh-75dpi
+	media-fonts/font-bh-lucidatypewriter-75dpi
+	media-fonts/font-bitstream-75dpi
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -33,4 +39,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

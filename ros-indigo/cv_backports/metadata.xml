@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Backporting features from the 2.4.x.y series of opencv releases to indigo.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

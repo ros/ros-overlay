@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A ROS node to provide access to SCIP 2.0-compliant Hokuyo laser range finders (including 04LX).
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
