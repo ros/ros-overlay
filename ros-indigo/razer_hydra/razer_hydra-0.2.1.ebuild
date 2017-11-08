@@ -10,7 +10,9 @@ DESCRIPTION="Unofficial driver and ROS node for Razer Hydra"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/razer_hydra-release/archive/release/indigo/razer_hydra/0.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+LICENSE="public_domain"
+
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/geometry_msgs
 	ros-indigo/message_runtime
