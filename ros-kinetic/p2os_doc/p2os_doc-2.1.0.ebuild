@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Contains the Documentation for the p2os driver/componenets"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_doc/2.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_doc/2.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

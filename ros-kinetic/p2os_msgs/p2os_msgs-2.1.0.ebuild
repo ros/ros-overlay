@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Defines the messages that are used to communicate with the\
-	p2os_driver packa"
+	p2os_driver[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_msgs/2.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/allenh1/p2os-release/archive/release/kinetic/p2os_msgs/2.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -26,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
