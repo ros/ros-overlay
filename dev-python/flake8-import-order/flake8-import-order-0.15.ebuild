@@ -20,6 +20,7 @@ RDEPEND="
 	>=dev-python/pyflakes-1.5.0[${PYTHON_USEDEP}]
 	<dev-python/pyflakes-1.7.0[${PYTHON_USEDEP}]
 	>=dev-python/pycodestyle-2.0.0[${PYTHON_USEDEP}]
+	dev-python/asttokens[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
