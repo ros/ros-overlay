@@ -20,3 +20,5 @@ RDEPEND="
 	dev-python/pbr[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
+
+PATCHES="${FILESDIR}/fix-setup-cfg.py"

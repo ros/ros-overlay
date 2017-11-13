@@ -1,0 +1,25 @@
+diff --git a/setup.cfg b/setup.cfg
+index 7376f7e..74740e9 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -16,15 +16,15 @@ classifier =
+ 
+ [files]
+ packages =
+-    git_pull_request
++    git-pull-request
++
++[entry_pointts]
++console-scripts=
++    git-pull-request=git-pull-request:main
+ 
+ [extras]
+ test =
+     fixtures
+ 
+-[entry_points]
+-console_scripts =
+-    git-pull-request = git_pull_request:main
+-
+ [wheel]
+ universal = 1
