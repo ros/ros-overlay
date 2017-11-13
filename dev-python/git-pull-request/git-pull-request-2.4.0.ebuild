@@ -21,4 +21,4 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-PATCHES="${FILESDIR}/fix-setup-cfg.py"
+PATCHES="${FILESDIR}/fix-setup-cfg.patch"
