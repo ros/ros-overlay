@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    camera_calibration_parsers contains routines for reading and writing camera calibration parameters.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

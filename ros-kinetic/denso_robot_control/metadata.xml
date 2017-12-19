@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    DENSO robot control package
+    The denso robot control package includes a node for controlling DENSO robot controllers with MoveIt!.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

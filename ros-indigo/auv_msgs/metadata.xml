@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides message types commonly used with Autonomous Underwater Vehicles
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>m.valdenegro@hw.ac.uk</email>
-      <name>Matias Valdenegro</name>
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
     </maintainer>
     <bugs-to>https://github.com/oceansystemslab/auv_msgs/issues</bugs-to>
   </upstream>

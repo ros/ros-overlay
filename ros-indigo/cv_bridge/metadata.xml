@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This contains CvBridge, which converts between ROS
+    Image messages and OpenCV images.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
