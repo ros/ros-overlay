@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    The nmea_msgs package contains messages related to data in the NMEA format.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>eric@ericperko.com</email>
-      <name>Eric Perko</name>
+      <email>evenator@gmail.com</email>
+      <name>Ed Venator</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/nmea_msgs/issues</bugs-to>
   </upstream>

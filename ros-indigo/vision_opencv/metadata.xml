@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

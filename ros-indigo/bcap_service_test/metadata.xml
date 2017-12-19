@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    b-CAP service test package
+    The bcap service test package includes a node for testing bcap service node.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

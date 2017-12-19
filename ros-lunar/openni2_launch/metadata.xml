@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>developers@unboundedrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>isaac.saito@plusonerobotics.com</email>
+      <name>Isaac I. Y. Saito</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/openni2_launch/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/openni2_camera/issues</bugs-to>
   </upstream>
 </pkgmetadata>

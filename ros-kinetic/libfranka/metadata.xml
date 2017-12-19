@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>info@franka.de</email>
+      <email>support@franka.de</email>
       <name>Franka Emika GmbH</name>
     </maintainer>
     <bugs-to>https://github.com/frankaemika/libfranka/issues</bugs-to>
