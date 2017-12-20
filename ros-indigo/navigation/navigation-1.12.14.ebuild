@@ -6,11 +6,12 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A 2D navigation stack that takes in information from odometry, sensor		st"
+DESCRIPTION="A 2D navigation stack that takes in information from odometry, sensor\
+	[...]"
 HOMEPAGE="http://wiki.ros.org/navigation"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/navigation/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="( BSD LGPL-2 LGPL-2 )"
+LICENSE="( BSD LGPL-2 LGPL-2) "
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/amcl
@@ -38,4 +39,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

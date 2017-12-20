@@ -6,20 +6,22 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="A ROS node that simply forwards odometry information"
-HOMEPAGE="http://wiki.ros.org/fake_localization"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/fake_localization/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="A path planner library and node."
+HOMEPAGE="http://wiki.ros.org/global_planner"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-indigo/costmap_2d
+	ros-indigo/dynamic_reconfigure
 	ros-indigo/geometry_msgs
-	ros-indigo/message_filters
+	ros-indigo/nav_core
 	ros-indigo/nav_msgs
-	ros-indigo/rosconsole
+	ros-indigo/navfn
+	ros-indigo/pluginlib
 	ros-indigo/roscpp
-	ros-indigo/rospy
 	ros-indigo/tf
 "
 DEPEND="${RDEPEND}
@@ -30,4 +32,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

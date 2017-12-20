@@ -6,20 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on "
-HOMEPAGE="http://wiki.ros.org/robot_pose_ekf"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/robot_pose_ekf/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="This package provides common interfaces for navigation specific robot actio[...]"
+HOMEPAGE="http://wiki.ros.org/nav_core"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/bfl
+	ros-indigo/costmap_2d
 	ros-indigo/geometry_msgs
-	ros-indigo/nav_msgs
-	ros-indigo/roscpp
-	ros-indigo/rostest
-	ros-indigo/sensor_msgs
 	ros-indigo/std_msgs
 	ros-indigo/tf
 "
@@ -30,4 +26,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
