@@ -6,15 +6,14 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This planner attempts to find a legal place to put a carrot for the robot to fol"
-HOMEPAGE="http://wiki.ros.org/carrot_planner"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/carrot_planner/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="This package provides a recovery behavior for the navigation stack that att[...]"
+HOMEPAGE="http://wiki.ros.org/rotate_recovery"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/base_local_planner
 	ros-indigo/costmap_2d
 	ros-indigo/nav_core
 	ros-indigo/pluginlib
@@ -23,10 +22,11 @@ RDEPEND="
 	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
+	ros-indigo/base_local_planner
 	ros-indigo/catkin
+	ros-indigo/cmake_modules
 "
 
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

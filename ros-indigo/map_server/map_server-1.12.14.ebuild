@@ -6,18 +6,19 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides common interfaces for navigation specific robot actions C"
-HOMEPAGE="http://wiki.ros.org/nav_core"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/nav_core/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="tta#text"
+HOMEPAGE="http://wiki.ros.org/map_server"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/costmap_2d
-	ros-indigo/geometry_msgs
-	ros-indigo/std_msgs
+	ros-indigo/nav_msgs
+	ros-indigo/roscpp
 	ros-indigo/tf
+	media-libs/sdl-image
+	dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -26,4 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

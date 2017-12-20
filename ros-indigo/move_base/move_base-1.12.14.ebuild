@@ -6,32 +6,31 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides an implementation of a 2D costmap that takes in sensor   "
-HOMEPAGE="http://wiki.ros.org/costmap_2d"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/costmap_2d/1.12.13-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="a#text"
+HOMEPAGE="http://wiki.ros.org/move_base"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/indigo/${PN}/1.12.14-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-indigo/actionlib
+	ros-indigo/base_local_planner
+	ros-indigo/clear_costmap_recovery
+	ros-indigo/costmap_2d
 	ros-indigo/dynamic_reconfigure
 	ros-indigo/geometry_msgs
-	ros-indigo/laser_geometry
-	ros-indigo/map_msgs
-	ros-indigo/message_filters
 	ros-indigo/message_runtime
+	ros-indigo/move_base_msgs
+	ros-indigo/nav_core
 	ros-indigo/nav_msgs
-	ros-indigo/pcl_conversions
-	ros-indigo/pcl_ros
+	ros-indigo/navfn
 	ros-indigo/pluginlib
-	ros-indigo/rosconsole
 	ros-indigo/roscpp
-	ros-indigo/rostest
-	ros-indigo/sensor_msgs
-	ros-indigo/std_msgs
+	ros-indigo/rospy
+	ros-indigo/rotate_recovery
+	ros-indigo/std_srvs
 	ros-indigo/tf
-	ros-indigo/visualization_msgs
-	ros-indigo/voxel_grid
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
@@ -42,4 +41,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
