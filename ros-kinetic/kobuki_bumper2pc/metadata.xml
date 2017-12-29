@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    Bumper/cliff to pointcloud nodelet:
+    Publish bumpers and cliff sensors events as points in a pointcloud, so navistack can use them
+    for poor-man navigation. Implemented as a nodelet intended to run together with kobuki_node.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
