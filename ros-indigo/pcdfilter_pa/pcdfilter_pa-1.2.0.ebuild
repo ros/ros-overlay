@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ProAut pointcloud filter package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/peterweissig/ros_pcdfilter-release/archive/release/indigo/pcdfilter_pa/1.1.0-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/peterweissig/ros_pcdfilter-release/archive/release/indigo/${PN}/1.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -35,4 +35,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

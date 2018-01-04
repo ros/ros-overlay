@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Common definitions \(positions, velocities, angular angles,\
 	angular ra[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/lunar/${PN}/1.0.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/indigo/${PN}/1.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,9 +18,9 @@ RDEPEND="
 	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
