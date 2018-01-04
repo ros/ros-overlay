@@ -7,7 +7,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pbovbel@clearpathrobotics.com</email>
+      <email>paul@bovbel.com</email>
       <name>Paul Bovbel</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/vrpn_client_ros/issues</bugs-to>

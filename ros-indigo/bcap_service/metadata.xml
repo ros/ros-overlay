@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    b-CAP service package
+    The bcap service package includes a node for communicating ORiN from ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

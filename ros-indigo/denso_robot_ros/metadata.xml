@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    DENSO robot meta package
+    The denso robot ros stack constains libraries, configuration files, and ROS nodes for controlling a DENSO robot from ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

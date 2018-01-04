@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package gives transparency between RTM and ROS.
+
+     rtmros-data-bridge.py is a RT-Component for dataport/topic.
+     This automatically convert ROS/topic into RTM/dataport.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

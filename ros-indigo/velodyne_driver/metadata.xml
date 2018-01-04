@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    ROS device driver for Velodyne 3D LIDARs.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>jack.oquin@gmail.com</email>
-      <name>Jack O'Quin</name>
+      <email>jwhitley@autonomoustuff.com</email>
+      <name>Josh Whitley</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/velodyne/issues</bugs-to>
   </upstream>
