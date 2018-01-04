@@ -1,0 +1,39 @@
+From d998900bc2e8b34014031b205752c495e80d472d Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Sat, 30 Dec 2017 16:24:09 -0600
+Subject: [PATCH] Use CONSOLE_BRIDGE prefix for logError.
+
+---
+ src/bz2_stream.cpp | 2 +-
+ src/lz4_stream.cpp | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/bz2_stream.cpp b/src/bz2_stream.cpp
+index 78e1753..53bc9d5 100644
+--- a/src/bz2_stream.cpp
++++ b/src/bz2_stream.cpp
+@@ -127,7 +127,7 @@ void BZ2Stream::read(void* ptr, size_t size) {
+     case BZ_OK: return;
+     case BZ_STREAM_END:
+         if (getUnused() || getUnusedLength() > 0)
+-            logError("unused data already available");
++            CONSOLE_BRIDGE_logError("unused data already available");
+         else {
+             char* unused;
+             int nUnused;
+diff --git a/src/lz4_stream.cpp b/src/lz4_stream.cpp
+index 297bcf7..d13f241 100644
+--- a/src/lz4_stream.cpp
++++ b/src/lz4_stream.cpp
+@@ -176,7 +176,7 @@ void LZ4Stream::read(void* ptr, size_t size) {
+     case ROSLZ4_OK: break;
+     case ROSLZ4_STREAM_END:
+         if (getUnused() || getUnusedLength() > 0)
+-            logError("unused data already available");
++            CONSOLE_BRIDGE_logError("unused data already available");
+         else {
+             setUnused(lz4s_.input_next);
+             setUnusedLength(lz4s_.input_left);
+-- 
+2.15.1
+
