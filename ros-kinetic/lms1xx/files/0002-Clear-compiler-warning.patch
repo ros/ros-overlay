@@ -1,0 +1,164 @@
+From 5e9fc5d9a723135704b85773df8cad4b7e9f4cd7 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Thu, 4 Jan 2018 23:13:56 -0600
+Subject: [PATCH 2/3] Clear compiler warning.
+
+---
+ src/LMS1xx.cpp | 66 ++++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 55 insertions(+), 11 deletions(-)
+
+diff --git a/src/LMS1xx.cpp b/src/LMS1xx.cpp
+index 6260104..956bef4 100644
+--- a/src/LMS1xx.cpp
++++ b/src/LMS1xx.cpp
+@@ -88,7 +88,11 @@ void LMS1xx::startMeas()
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sMN LMCstartmeas", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+   if (buf[0] != 0x02)
+@@ -102,7 +106,11 @@ void LMS1xx::stopMeas()
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sMN LMCstopmeas", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+   if (buf[0] != 0x02)
+@@ -116,7 +124,11 @@ status_t LMS1xx::queryStatus()
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sRN STlms", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++      perror("write");
++      exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+   if (buf[0] != 0x02)
+@@ -140,12 +152,17 @@ void LMS1xx::login()
+   struct timeval timeout;
+ 
+ 
++  size_t buflen = 0;
+   do   //loop until data is available to read
+   {
+     timeout.tv_sec = 1;
+     timeout.tv_usec = 0;
+ 
+-    write(socket_fd_, buf, strlen(buf));
++    buflen = strlen(buf);
++    if (buflen != write(socket_fd_, buf, buflen)) {
++      perror("write");
++      exit(1);
++    }
+ 
+     FD_ZERO(&readset);
+     FD_SET(socket_fd_, &readset);
+@@ -167,7 +184,11 @@ scanCfg LMS1xx::getScanCfg() const
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sRN LMPscancfg", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  ssize_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+   if (buf[0] != 0x02)
+@@ -187,7 +208,11 @@ void LMS1xx::setScanCfg(const scanCfg &cfg)
+           cfg.scaningFrequency, cfg.angleResolution, cfg.startAngle,
+           cfg.stopAngle, 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+ 
+@@ -202,7 +227,10 @@ void LMS1xx::setScanDataCfg(const scanDataCfg &cfg)
+           cfg.resolution, cfg.encoder, cfg.position ? 1 : 0,
+           cfg.deviceName ? 1 : 0, cfg.timestamp ? 1 : 0, cfg.outputInterval, 0x03);
+   CONSOLE_BRIDGE_logDebug("TX: %s", buf);
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+   buf[len - 1] = 0;
+@@ -214,7 +242,11 @@ scanOutputRange LMS1xx::getScanOutputRange() const
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sRN LMPoutputRange", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+ 
+@@ -228,7 +260,11 @@ void LMS1xx::scanContinous(int start)
+   char buf[100];
+   sprintf(buf, "%c%s %d%c", 0x02, "sEN LMDscandata", start, 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+ 
+@@ -472,7 +508,11 @@ void LMS1xx::saveConfig()
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sMN mEEwriteall", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+ 
+@@ -487,7 +527,11 @@ void LMS1xx::startDevice()
+   char buf[100];
+   sprintf(buf, "%c%s%c", 0x02, "sMN Run", 0x03);
+ 
+-  write(socket_fd_, buf, strlen(buf));
++  size_t buflen = strlen(buf);
++  if (buflen != write(socket_fd_, buf, buflen)) {
++    perror("write");
++    exit(1);
++  }
+ 
+   int len = read(socket_fd_, buf, 100);
+ 
+-- 
+2.15.1
+
