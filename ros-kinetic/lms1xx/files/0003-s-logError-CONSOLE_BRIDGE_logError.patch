@@ -1,0 +1,25 @@
+From 9276cf8f8ae915dcfaddb04a11a36f8ff13e9dcc Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Thu, 4 Jan 2018 23:15:24 -0600
+Subject: [PATCH 3/3] s/logError/CONSOLE_BRIDGE_logError
+
+---
+ src/LMS1xx.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/LMS1xx.cpp b/src/LMS1xx.cpp
+index 956bef4..d037867 100644
+--- a/src/LMS1xx.cpp
++++ b/src/LMS1xx.cpp
+@@ -269,7 +269,7 @@ void LMS1xx::scanContinous(int start)
+   int len = read(socket_fd_, buf, 100);
+ 
+   if (buf[0] != 0x02)
+-    logError("invalid packet recieved");
++    CONSOLE_BRIDGE_logError("invalid packet recieved");
+ 
+   buf[len] = 0;
+   CONSOLE_BRIDGE_logDebug("RX: %s", buf);
+-- 
+2.15.1
+
