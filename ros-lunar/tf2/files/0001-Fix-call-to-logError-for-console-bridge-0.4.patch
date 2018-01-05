@@ -4,13 +4,13 @@ Date: Thu, 4 Jan 2018 18:11:00 -0600
 Subject: [PATCH] Fix call to logError for console-bridge 0.4
 
 ---
- tf2/src/buffer_core.cpp | 16 ++++++++--------
+ src/buffer_core.cpp | 16 ++++++++--------
  1 file changed, 8 insertions(+), 8 deletions(-)
 
-diff --git a/tf2/src/buffer_core.cpp b/tf2/src/buffer_core.cpp
+diff --git a/src/buffer_core.cpp b/src/buffer_core.cpp
 index 6483ada..fd76736 100644
---- a/tf2/src/buffer_core.cpp
-+++ b/tf2/src/buffer_core.cpp
+--- a/src/buffer_core.cpp
++++ b/src/buffer_core.cpp
 @@ -218,26 +218,26 @@ bool BufferCore::setTransform(const geometry_msgs::TransformStamped& transform_i
    bool error_exists = false;
    if (stripped.child_frame_id == stripped.header.frame_id)
