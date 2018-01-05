@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
