@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="tf2 is the second generation of the transform library, which lets\
 	the [...]"
 HOMEPAGE="http://www.ros.org/wiki/tf2"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/${PN}/0.5.16-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/${PN}/0.5.17-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
