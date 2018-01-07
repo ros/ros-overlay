@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="OpenCV 30"
+DESCRIPTION="OpenCV 3.0"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/opencv3-release/archive/release/indigo/opencv3/3.1.0-1.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/indigo/${PN}/3.1.0-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,12 +18,12 @@ RDEPEND="
 	virtual/ffmpeg
 	media-libs/jasper
 	virtual/jpeg
-	media-libs/libpng
+	media-libs/libpng:1.2
 	dev-qt/qtgui:4
-	sci-libs/vtk
+	sci-libs/vtk[boost,python,qt5]
 	dev-lang/python
 	dev-python/numpy
-	python
+	d
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
@@ -39,6 +39,11 @@ ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_configure() {
 	filter-flags '-march=*' '-mcpu=*' '-mtune=*'
+	if [[ $(gcc-major-version) -gt 4 ]]; then
+		local mycmakeargs=(
+			-DWITH_CUDA=OFF
+		)
+		ewarn "Cuda does not support GCC > 4, so cuda has been disabled."
+	fi
 	ros-cmake_src_configure
 }
-
