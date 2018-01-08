@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mathias.luedtke@ipa.fraunhofer.de</email>
-      <name>Mathias Lüdtke</name>
+      <email>fmw@ipa.fhg.de</email>
+      <name>Florian Weisshardt</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_hand/issues</bugs-to>
   </upstream>
