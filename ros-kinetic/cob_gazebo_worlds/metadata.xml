@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>nhg@ipa.fhg.de</email>
-      <name>Nadia Hammoudeh Garcia</name>
+      <email>jba@ipa.fhg.de</email>
+      <name>Jannik Abbenseth</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_simulation/issues</bugs-to>
   </upstream>

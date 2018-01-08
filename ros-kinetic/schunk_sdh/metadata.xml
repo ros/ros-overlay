@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mdl@ipa.fhg.de</email>
-      <name>Mathias Luedtke</name>
+      <email>fmw@ipa.fhg.de</email>
+      <name>Florian Weisshardt</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/schunk_modular_robotics/issues</bugs-to>
   </upstream>

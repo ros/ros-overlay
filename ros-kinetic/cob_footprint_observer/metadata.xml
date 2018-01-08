@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mig@ipa.fhg.de</email>
-      <name>Matthias Gruhler</name>
+      <email>flg@ipa.fhg.de</email>
+      <name>Felipe Garcia Lopez</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_control/issues</bugs-to>
   </upstream>
