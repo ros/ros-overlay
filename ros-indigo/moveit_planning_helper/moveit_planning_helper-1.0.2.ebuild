@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A test package to plan and execute a joint trajectory.\
 	This package is[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/${PN}/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/${PN}/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
