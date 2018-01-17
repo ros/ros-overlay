@@ -25,6 +25,6 @@ RUN echo "[ros-overlay]" > /etc/portage/repos.conf/ros-overlay.conf &&\
     echo "ros-*/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
     perl-cleaner --reallyall
 RUN emerge -C openssl && \
-    emerge openssl && \
-    emerge dev-libs/boost && \
-    emerge dev-util/cmake
+    emerge openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
+           dev-qt/qtchooser app-arch/cpio dev-libs/icu dev-util/ninja \
+           dev-python/nose dev-python/numpy dev-python/docutils
