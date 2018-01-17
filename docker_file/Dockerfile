@@ -27,4 +27,5 @@ RUN echo "[ros-overlay]" > /etc/portage/repos.conf/ros-overlay.conf &&\
 RUN emerge -C openssl && \
     emerge openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
            dev-qt/qtchooser app-arch/cpio dev-libs/icu dev-util/ninja \
-           dev-python/nose dev-python/numpy dev-python/docutils
+           dev-python/nose dev-python/numpy dev-python/docutils \
+           dev-python/ply dev-pyton/netifaces dev-pthon/ipaddresses
