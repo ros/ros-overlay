@@ -1,0 +1,5 @@
+services: docker
+script:
+  - docker run -ti --rm allenh1/ros_gentoo_base 'bash "emaint sync -r ros-overlay && emerge ros-indigo/ros_base'
+  - docker run -ti --rm allenh1/ros_gentoo_base 'bash "emaint sync -r ros-overlay && emerge ros-kinetic/ros_base'
+  - docker run -ti --rm allenh1/ros_gentoo_base 'bash "emaint sync -r ros-overlay && emerge ros-lunar/ros_base'
