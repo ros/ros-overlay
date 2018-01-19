@@ -3,15 +3,14 @@ FROM gentoo/stage3-amd64
 ENV FEATURES sign
 ENV PORTAGE_GPG_DIR ~/.gnupg/
 
-RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync \
-    && eselect profile set 12 && emerge app-crypt/gnupg repoman \
+RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
+    eselect profile set 12 && emerge app-crypt/gnupg repoman \
     dev-vcs/git --autounmask-write && \
     mkdir -p /usr/local/portage && \
-    printf '\nPORTDIR_OVERLAY="/usr/local/portage"\n' >> \
-    /etc/portage/make.conf && \
-    mkdir /etc/portage/repos.conf &&
+    printf '\nPORTDIR_OVERLAY="/usr/local/portage"\n' >> /etc/portage/make.conf && \
+    mkdir /etc/portage/repos.conf && \
     echo "[ros-overlay]" > /etc/portage/repos.conf/ros-overlay.conf &&\
-    echo "location = /usr/local/portage" >> /etc/portage/repos.conf/ros-overlay.conf && \
+    echo "location = /usr/local/portage" >> /etc/portage/repos.conf/ros-overlay.conf &&\
     echo "sync-type = git" >> /etc/portage/repos.conf/ros-overlay.conf && \
     echo "sync-uri = https://github.com/ros/ros-overlay" >> /etc/portage/repos.conf/ros-overlay.conf && \
     echo "auto-sync = yes" >> /etc/portage/repos.conf/ros-overlay.conf && \
