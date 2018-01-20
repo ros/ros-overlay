@@ -11,4 +11,5 @@ install:
   - sudo pip3 install --upgrade -r requirements.txt
   - sudo python3 ./setup.py install
 script:
+  - cd ../
   - superflore-check-ebuilds -f test-pr/latest.yml
