@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Defines the messages that are used to communicate with the\
 	p2os_driver[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/p2os_msgs/2.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/${PN}/2.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

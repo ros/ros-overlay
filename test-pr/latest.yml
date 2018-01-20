@@ -1,7 +1,7 @@
-indigo:
-  - catkin
-  - p2os_msgs
-kinetic:
-  - catkin
+l:
+u:
+n:
+a:
+r:
 lunar:
-  - catkin
+  - p2os_msgs
