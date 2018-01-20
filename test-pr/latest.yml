@@ -1,2 +1,7 @@
+kinetic:
+  - razor_imu_9dof
 lunar:
-  - p2os_msgs
+indigo:
+  - razor_imu_9dof
+  - robot_calibration
+  - robot_calibration_msgs
