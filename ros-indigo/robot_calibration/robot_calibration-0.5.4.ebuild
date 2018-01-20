@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,9 +8,9 @@ inherit ros-cmake
 
 DESCRIPTION="Calibrate a Robot"
 HOMEPAGE="http://ros.org/wiki/robot_calibration"
-SRC_URI="https://github.com/fetchrobotics-gbp/robot_calibration-release/archive/release/indigo/robot_calibration/0.5.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fetchrobotics-gbp/${PN}-release/archive/release/indigo/${PN}/0.5.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
-LICENSE="Apache-2"
+LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -29,6 +29,8 @@ RDEPEND="
 	ros-indigo/sensor_msgs
 	ros-indigo/std_msgs
 	ros-indigo/tf
+	ros-indigo/tf2_geometry_msgs
+	ros-indigo/tf2_ros
 	sci-libs/ceres-solver
 	dev-libs/protobuf
 	sci-libs/suitesparse
@@ -41,4 +43,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
