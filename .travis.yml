@@ -3,6 +3,7 @@ install:
   - sudo apt-get install python3 python3-pip
   - git clone https://github.com/ros-infrastructure/superflore
   - cd superflore
-  - sudo python3 ./setup.py install
+  - pip3 install -r requirements.txt
+  - python3 ./setup.py install
 script:
   - superflore-check-ebuilds -f test_pr/latest.yml
