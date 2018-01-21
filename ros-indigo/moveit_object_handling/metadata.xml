@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Package which helps generate the MoveIt! moveit_msgs/CollisionObject
+    messages for existing objects in the scene, described by object_msgs/Object.
+    Also provides helper classes for MoveIt! in relation to objects.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

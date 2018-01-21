@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Sample graspit files for jaco. Only
+    is a ROS package so it can be found with rosfind to 
+    make the tutorial easier.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

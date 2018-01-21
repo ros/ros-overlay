@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A urdf viewer which converts the URDF to inventor first
+      and then displays it in SoQtExaminerViewer
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

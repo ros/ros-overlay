@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="p#text"
 HOMEPAGE="http://www.ros.org/wiki/tf"
-SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf/1.11.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry-release/archive/release/kinetic/${PN}/1.11.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
