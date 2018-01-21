@@ -1,14 +1,14 @@
-From 918bd38cee660c3e83083544e29f96eca6aded32 Mon Sep 17 00:00:00 2001
+From 57be56d10131c55e440a6f439cbb39ab2a2cfb02 Mon Sep 17 00:00:00 2001
 From: "Hunter L. Allen" <hunter@openrobotics.org>
-Date: Thu, 4 Jan 2018 18:44:52 -0600
-Subject: [PATCH] Update call to logError and logWarn.
+Date: Sun, 21 Jan 2018 23:25:57 +0000
+Subject: [PATCH] Console bridge log function deprecation.
 
 ---
  src/buffer_core.cpp | 22 +++++++++++-----------
  1 file changed, 11 insertions(+), 11 deletions(-)
 
 diff --git a/src/buffer_core.cpp b/src/buffer_core.cpp
-index 02f4e3e..1f8ba2e 100644
+index 6483ada..75b827d 100644
 --- a/src/buffer_core.cpp
 +++ b/src/buffer_core.cpp
 @@ -123,7 +123,7 @@ bool BufferCore::warnFrameId(const char* function_name_arg, const std::string& f
@@ -78,7 +78,7 @@ index 02f4e3e..1f8ba2e 100644
        return false;
      }
    }
-@@ -622,7 +622,7 @@ geometry_msgs::TransformStamped BufferCore::lookupTransform(const std::string& t
+@@ -633,7 +633,7 @@ geometry_msgs::TransformStamped BufferCore::lookupTransform(const std::string& t
      case tf2_msgs::TF2Error::LOOKUP_ERROR:
        throw LookupException(error_string);
      default:
@@ -87,7 +87,7 @@ index 02f4e3e..1f8ba2e 100644
        assert(0);
      }
    }
-@@ -1593,7 +1593,7 @@ void BufferCore::_chainAsVector(const std::string & target_frame, ros::Time targ
+@@ -1604,7 +1604,7 @@ void BufferCore::_chainAsVector(const std::string & target_frame, ros::Time targ
      case tf2_msgs::TF2Error::LOOKUP_ERROR:
        throw LookupException(error_string);
      default:
@@ -96,15 +96,14 @@ index 02f4e3e..1f8ba2e 100644
        assert(0);
      }
    }
-@@ -1613,7 +1613,7 @@ void BufferCore::_chainAsVector(const std::string & target_frame, ros::Time targ
-       case tf2_msgs::TF2Error::LOOKUP_ERROR:
-         throw LookupException(error_string);
-       default:
--        logError("Unknown error code: %d", retval);
-+        CONSOLE_BRIDGE_logError("Unknown error code: %d", retval);
-         assert(0);
-       }
+@@ -1623,7 +1623,7 @@ void BufferCore::_chainAsVector(const std::string & target_frame, ros::Time targ
+     case tf2_msgs::TF2Error::LOOKUP_ERROR:
+       throw LookupException(error_string);
+     default:
+-      logError("Unknown error code: %d", retval);
++      CONSOLE_BRIDGE_logError("Unknown error code: %d", retval);
+       assert(0);
      }
+   }
 -- 
-2.15.1
-
+2.16.0
