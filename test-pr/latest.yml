@@ -1,6 +1,2 @@
-kinetic:
-  - razor_imu_9dof
 indigo:
-  - razor_imu_9dof
-  - robot_calibration
-  - robot_calibration_msgs
+  - angles
