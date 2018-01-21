@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mdl@ipa.fhg.de</email>
-      <name>Matthias Luedtke</name>
+      <email>jba@ipa.fraunhofer.de</email>
+      <name>Jannik Abbenseth</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_substitute/issues</bugs-to>
   </upstream>
