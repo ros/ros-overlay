@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic re
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/${PN}/2.5.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="( BSD Apache-2.0) "
+LICENSE="( BSD Apache-2.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/angles

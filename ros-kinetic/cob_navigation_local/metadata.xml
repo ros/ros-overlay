@@ -7,8 +7,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mig@ipa.fraunhofer.de</email>
-      <name>Matthias Gruhler</name>
+      <email>fez@ipa.fraunhofer.de</email>
+      <name>Felix Zeltner</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_navigation/issues</bugs-to>
   </upstream>

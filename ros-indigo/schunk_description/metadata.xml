@@ -13,8 +13,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>nhg@ipa.fhg.de</email>
-      <name>Nadia Hammoudeh Garcia</name>
+      <email>bfb@ipa.fhg.de</email>
+      <name>Bruno Brito</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/schunk_modular_robotics/issues</bugs-to>
   </upstream>

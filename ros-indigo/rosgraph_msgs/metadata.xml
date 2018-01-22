@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Messages relating to the ROS Computation Graph. These are generally considered to be low-level messages that end users do not interact with.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

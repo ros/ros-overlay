@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    publish end effector's force, which is estmated from joint torque value
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
