@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    This package provides a set of typedef's that allow
+  using Eigen datatypes in STL containers
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

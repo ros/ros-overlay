@@ -1,25 +1,4 @@
-kinetic:
-  - adi_driver
-  - aruco_detect
-  - fiducial_msgs
-  - fiducial_slam
-  - fiducials
-  - move_basic
-  - trac_ik
-  - trac_ik_examples
-  - trac_ik_kinematics_plugin
-  - trac_ik_lib
-  - trac_ik_python
-lunar:
-  - trac_ik
-  - trac_ik_examples
-  - trac_ik_kinematics_plugin
-  - trac_ik_lib
-  - trac_ik_python
 indigo:
-  - adi_driver
-  - trac_ik
-  - trac_ik_examples
-  - trac_ik_kinematics_plugin
-  - trac_ik_lib
-  - trac_ik_python
+  - angles
+  - eigen_stl_containers
+  - urdfdom_py
