@@ -1,4 +1,2 @@
 indigo:
-  - angles
-  - eigen_stl_containers
-  - urdfdom_py
+  - map_msgs
