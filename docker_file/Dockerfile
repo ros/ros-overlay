@@ -55,4 +55,9 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-perl/XML-NamespaceSupport dev-perl/HTTP-Negotiate \
     dev-perl/HTTP-Cookies dev-perl/HTTP-Daemon dev-python/pycurl \
     dev-python/sip dev-python/backports dev-python/subprocess32 \
-    dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash
+    dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash \
+    app-portage/gentoolkit x11-libs/libX11 media-libs/assimp \
+    dev-qt/qtxml x11-proto/kbproto x11-misc/util-macros \
+    x11-proto/inputproto x11-misc/util-macros dev-libs/tinyxml2 \
+    dev-lang/swig sys-libs/binutils-libs \
+    && eclean distfiles
