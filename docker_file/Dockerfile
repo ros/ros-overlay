@@ -25,7 +25,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     perl-cleaner --reallyall && \
     emerge -C openssl && \
     printf 'USE="${USE} fontconfig"\n' >> /etc/portage/make.conf && \
-    emerge openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
+    emerge --jobs openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
     dev-qt/qtchooser app-arch/cpio dev-libs/icu dev-util/ninja \
     dev-python/nose dev-python/numpy dev-python/docutils \
     dev-python/ply dev-python/netifaces dev-python/ipaddress \
