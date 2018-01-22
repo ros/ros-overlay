@@ -1,6 +1,6 @@
 ros-overlay
 ===========
-
+1;4804;0c
 This overlay contains ebuilds for the Robot Operating System (ROS).
 
 For instructions, please look to the [ROS wiki](http://wiki.ros.org/ROS/Installation).
@@ -14,6 +14,10 @@ My Build Failed:
 -----------------
 In managing some 6000 ebuilds, one runs into a few hickups. Please don't hesitate
 to file an issue!
+
+### List of Failures
+As changes progress, things break. You can find a list of failures
+[here](https://gist.github.com/allenh1/8583d09f6ef4273b6e364e3578edad3d) in the form of a GitHub gist.
 
 Superflore:
 ------------
@@ -37,3 +41,14 @@ $ superflore-gen-ebuilds --ros-distro [distro] --only [pkg1] [pkg2] ... [pkgn]
 
 If you cloned the overlay and want to use the stashed version, add `--output-repository-path [location of your repo]` to the end of the command above.
 6. The above command will file a PR under your name to this overlay.
+
+
+### Checking Packages with Superflore
+You can also check if packages are building using `superflore`.
+
+```
+$ superflore-check-ebuilds --ros-distro [distro_1] [distro_2] ... [distro_n] --pkgs [pkg1] [pkg2] ... [pkgn]
+```
+
+This will spawn a fresh docker container for each package you listed, and attempt to build the
+package on a clean docker image.
