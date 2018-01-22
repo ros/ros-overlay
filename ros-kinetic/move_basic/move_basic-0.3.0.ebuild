@@ -6,21 +6,22 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS node to build a 3D map of fiducials and estimate robot pose from fiduci[...]"
+DESCRIPTION="Simple navigation package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/${PN}/0.8.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.3.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/cv_bridge
-	ros-kinetic/dynamic_reconfigure
-	ros-kinetic/fiducial_msgs
-	ros-kinetic/image_transport
-	ros-kinetic/opencv3
+	ros-kinetic/actionlib
+	ros-kinetic/actionlib_msgs
+	ros-kinetic/geometry_msgs
+	ros-kinetic/move_base_msgs
+	ros-kinetic/nav_core
 	ros-kinetic/roscpp
 	ros-kinetic/sensor_msgs
+	ros-kinetic/std_msgs
 	ros-kinetic/tf2
 	ros-kinetic/tf2_geometry_msgs
 	ros-kinetic/tf2_ros

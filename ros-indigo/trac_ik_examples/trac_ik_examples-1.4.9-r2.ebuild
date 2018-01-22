@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains the source code for testing and comparing trac_ik"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/indigo/${PN}/1.4.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/indigo/${PN}/1.4.9-2.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
