@@ -16,7 +16,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     echo "auto-sync = yes" >> /etc/portage/repos.conf/ros-overlay.conf && \
     echo "masters = gentoo" >> /etc/portage/repos.conf/ros-overlay.conf && \
     echo 'ACCEPT_KEYWORDS=~amd64' >> /etc/portage/make.conf && \
-    printf 'USE="X -bindist"\n' >> /etc/portage/make.conf && \
+    printf 'USE="X compat -bindist"\n' >> /etc/portage/make.conf && \
     eselect profile set default/linux/amd64/17.0/desktop && \
     emaint sync -r ros-overlay && \
     emerge --oneshot portage && \
@@ -51,4 +51,8 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     net-nds/openldap x11-proto/xf86vidmodeproto media-libs/openjpeg \
     x11-proto/xcb-proto x11-libs/xtrans x11-libs/libICE x11-libs/libSM \
     dev-libs/poco dev-libs/log4cxx dev-libs/apr-util app-arch/lz4 \
-    dev-python/pillow dev-python/paramiko dev-python/pynacl
+    dev-python/pillow dev-python/paramiko dev-python/pynacl dev-perl/Socket6 \
+    dev-perl/XML-NamespaceSupport dev-perl/HTTP-Negotiate \
+    dev-perl/HTTP-Cookies dev-perl/HTTP-Daemon dev-python/pycurl \
+    dev-python/sip dev-python/backports dev-python/subprocess32 \
+    dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash
