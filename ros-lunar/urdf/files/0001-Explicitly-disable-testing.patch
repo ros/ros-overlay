@@ -1,0 +1,36 @@
+From 0e84aa4f794adb1cee02014b9ffc180966a334f6 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@osrfoundation.org>
+Date: Mon, 22 Jan 2018 20:34:20 +0000
+Subject: [PATCH] Explicitly disable testing.
+
+---
+ CMakeLists.txt | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5c9c7cd..d43b8a3 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -49,13 +49,13 @@ if(APPLE)
+   set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
+ endif(APPLE)
+ 
+-if(CATKIN_ENABLE_TESTING)
+-  find_package(catkin REQUIRED COMPONENTS rostest)
+-  add_rostest_gtest(test_urdf_parser test/test_robot_model_parser.launch test/test_robot_model_parser.cpp)
+-  target_link_libraries(test_urdf_parser ${PROJECT_NAME})
+-
+-  catkin_add_gtest(urdfdom_compatibility_test test/urdfdom_compatibility.cpp)
+-endif()
++# if(CATKIN_ENABLE_TESTING)
++#   find_package(catkin REQUIRED COMPONENTS rostest)
++#   add_rostest_gtest(test_urdf_parser test/test_robot_model_parser.launch test/test_robot_model_parser.cpp)
++#   target_link_libraries(test_urdf_parser ${PROJECT_NAME})
++#
++#   catkin_add_gtest(urdfdom_compatibility_test test/urdfdom_compatibility.cpp)
++# endif()
+ 
+ # no idea how CATKIN does this
+ # rosbuild_add_rostest(${PROJECT_SOURCE_DIR}/test/test_robot_model_parser.launch)
+-- 
+2.16.0
