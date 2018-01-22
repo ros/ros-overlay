@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="TRAC-IK is a faster, significantly more reliable drop-in replacement for\
  [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/lunar/${PN}/1.4.9-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/lunar/${PN}/1.4.10-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

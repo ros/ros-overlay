@@ -6,21 +6,19 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The trac_ik_python package contains a python wrapper using SWIG\
-  for trac[...]"
+DESCRIPTION="This package contains the source code for testing and comparing trac_ik"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/lunar/${PN}/1.4.9-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/traclabs/trac_ik-release/archive/release/lunar/${PN}/1.4.10-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/kdl_parser_py
-	ros-lunar/rospy
-	ros-lunar/tf
-	ros-lunar/tf_conversions
+	ros-lunar/orocos_kdl
+	ros-lunar/pr2_description
 	ros-lunar/trac_ik_lib
-	dev-lang/swig
+	ros-lunar/xacro
+	dev-libs/boost
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

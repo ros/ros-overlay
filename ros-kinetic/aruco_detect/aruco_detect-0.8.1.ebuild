@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Fiducial detection based on the aruco library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/${PN}/0.8.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/${PN}/0.8.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
