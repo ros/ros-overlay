@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -13,6 +13,7 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/${PN}/0
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/eigen_conversions
 	ros-lunar/eigen_stl_containers
@@ -30,6 +31,11 @@ RDEPEND="
 	ros-lunar/trajectory_msgs
 	ros-lunar/urdf
 	ros-lunar/visualization_msgs
+	test? ( ros-lunar/angles )
+	test? ( ros-lunar/moveit_resources )
+	test? ( ros-lunar/orocos_kdl )
+	test? ( ros-lunar/rosunit )
+	test? ( ros-lunar/tf_conversions )
 	media-libs/assimp
 	dev-libs/boost
 	dev-cpp/eigen
