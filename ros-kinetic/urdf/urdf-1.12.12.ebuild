@@ -19,7 +19,7 @@ RDEPEND="
 	ros-kinetic/pluginlib
 	ros-kinetic/rosconsole_bridge
 	ros-kinetic/roscpp
-	test? ros-kinetic/rostest
+	test? ( ros-kinetic/rostest )
 	dev-libs/urdfdom
 	dev-libs/urdfdom_headers
 	dev-libs/tinyxml
