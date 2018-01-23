@@ -13,8 +13,10 @@ SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/urdfdom_py
+	test? ( ros-lunar/rostest )
 	dev-libs/boost
 	dev-libs/console_bridge
 	dev-libs/urdfdom_headers
