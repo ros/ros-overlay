@@ -1,4 +1,2 @@
 indigo:
-  - kdl_conversions
-  - object_recognition_msgs
-  - ompl
+  - household_objects_database_msgs
