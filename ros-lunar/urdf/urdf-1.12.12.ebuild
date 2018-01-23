@@ -18,10 +18,12 @@ RDEPEND="
 	ros-lunar/pluginlib
 	ros-lunar/rosconsole_bridge
 	ros-lunar/roscpp
+	test? ros-lunar/rostest
 	dev-libs/urdfdom
 	dev-libs/urdfdom_headers
 	dev-libs/tinyxml
 "
+IUSE="test"
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
 	ros-lunar/cmake_modules
@@ -31,10 +33,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
-src_prepare() {
-	cd ${P}
-	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" epatch
-	ros-cmake_src_prepare
-}
