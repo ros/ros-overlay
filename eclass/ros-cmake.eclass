@@ -205,7 +205,7 @@ ros-cmake_src_configure() {
 		export BUILD_BINARY="1"
 	fi
 	local mycmakeargs=(
-		"$(usex test CATKIN_ENABLE_TESTING)"
+		-DCATKIN_ENABLE_TESTING="$(usex test 1 0)"
 		-DCATKIN_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
 		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}
 		-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}
