@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

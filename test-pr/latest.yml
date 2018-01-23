@@ -1,3 +1,4 @@
 indigo:
-  - eigen_conversions
-  - octomap_msgs
+  - kdl_conversions
+  - object_recognition_msgs
+  - ompl
