@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -13,6 +13,7 @@ SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/${PN}/
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-indigo/eigen_conversions
 	ros-indigo/eigen_stl_containers
@@ -30,6 +31,11 @@ RDEPEND="
 	ros-indigo/std_msgs
 	ros-indigo/trajectory_msgs
 	ros-indigo/visualization_msgs
+	test? ros-indigo/angles
+	test? ros-indigo/moveit_resources
+	test? ros-indigo/orocos_kdl
+	test? ros-indigo/rosunit
+	test? ros-indigo/tf_conversions
 	media-libs/assimp
 	dev-libs/boost
 	dev-cpp/eigen
