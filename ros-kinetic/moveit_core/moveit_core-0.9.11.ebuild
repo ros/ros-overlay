@@ -31,11 +31,11 @@ RDEPEND="
 	ros-kinetic/trajectory_msgs
 	ros-kinetic/urdf
 	ros-kinetic/visualization_msgs
-	test? ros-kinetic/angles
-	test? ros-kinetic/moveit_resources
-	test? ros-kinetic/orocos_kdl
-	test? ros-kinetic/rosunit
-	test? ros-kinetic/tf_conversions
+	test? ( ros-kinetic/angles )
+	test? ( ros-kinetic/moveit_resources )
+	test? ( ros-kinetic/orocos_kdl )
+	test? ( ros-kinetic/rosunit )
+	test? ( ros-kinetic/tf_conversions )
 	media-libs/assimp
 	dev-libs/boost
 	dev-cpp/eigen

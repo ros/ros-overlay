@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
 	ros-kinetic/urdfdom_py
-	test? ros-kinetic/rostest
+	test? ( ros-kinetic/rostest )
 	dev-libs/boost
 	dev-libs/console_bridge
 	dev-libs/urdfdom_headers
