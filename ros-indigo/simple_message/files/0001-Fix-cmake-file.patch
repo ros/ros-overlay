@@ -1,0 +1,29 @@
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Wed, 24 Jan 2018 01:55:51 +0000
+Subject: [PATCH] Fix cmake file
+
+---
+ CMakeLists.txt | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 06830d5..9dd8b80 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -101,9 +101,11 @@ add_library(simple_message ${SRC_FILES})
+ target_link_libraries(simple_message ${catkin_LIBRARIES})
+ add_dependencies(simple_message ${industrial_msgs_EXPORTED_TARGETS})
+ 
+-catkin_add_gtest(utest ${UTEST_SRC_FILES})
+-set_target_properties(utest PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=11000")
+-target_link_libraries(utest simple_message)
++if(CATKIN_ENABLE_TESTING)
++  catkin_add_gtest(utest ${UTEST_SRC_FILES})
++  set_target_properties(utest PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=11000")
++  target_link_libraries(utest simple_message)
++endif()
+ 
+ # ALTERNATIVE LIBRARY (DIFFERENT ENDIAN)
+ add_library(simple_message_bswap ${SRC_FILES})
+-- 
+2.16.0
