@@ -1,2 +1,10 @@
+indigo:
+  - gmapping
+  - slam_gmapping
 kinetic:
-  - tf2
+  - gmapping
+  - msp
+  - slam_gmapping
+lunar:
+  - gmapping
+  - slam_gmapping
