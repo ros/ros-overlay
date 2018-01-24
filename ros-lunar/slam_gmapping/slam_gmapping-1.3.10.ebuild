@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,19 +8,19 @@ inherit ros-cmake
 
 DESCRIPTION="slam_gmapping contains a wrapper around gmapping which provides SLAM capabi[...]"
 HOMEPAGE="http://ros.org/wiki/slam_gmapping"
-SRC_URI="https://github.com/ros-gbp/slam_gmapping-release/archive/release/kinetic/slam_gmapping/1.3.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.3.10-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/gmapping
-	ros-kinetic/openslam_gmapping
+	ros-lunar/gmapping
+	ros-lunar/openslam_gmapping
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-lunar/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

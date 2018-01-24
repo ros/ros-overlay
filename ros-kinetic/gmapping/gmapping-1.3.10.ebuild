@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,23 +9,23 @@ inherit ros-cmake
 DESCRIPTION="This package contains a ROS wrapper for OpenSlam\'s Gmapping. \
   The gmapp[...]"
 HOMEPAGE="http://ros.org/wiki/gmapping"
-SRC_URI="https://github.com/ros-gbp/slam_gmapping-release/archive/release/indigo/gmapping/1.3.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/slam_${PN}-release/archive/release/kinetic/${PN}/1.3.10-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="CC-BY-SA-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/nav_msgs
-	ros-indigo/nodelet
-	ros-indigo/openslam_gmapping
-	ros-indigo/roscpp
-	ros-indigo/tf
+	ros-kinetic/nav_msgs
+	ros-kinetic/nodelet
+	ros-kinetic/openslam_gmapping
+	ros-kinetic/roscpp
+	ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
-	ros-indigo/rostest
+	ros-kinetic/catkin
+	ros-kinetic/rostest
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

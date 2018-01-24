@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Implementation of the MultiWii Serial Protocol \(MSP\)"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/christianrauch/${PN}-release/archive/release/kinetic/${PN}/2.2.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/christianrauch/${PN}-release/archive/release/kinetic/${PN}/2.2.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 
@@ -17,6 +17,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-cpp/asio
+	dev-util/cmake
 "
 
 SLOT="0"
