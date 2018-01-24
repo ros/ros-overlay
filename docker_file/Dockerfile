@@ -22,12 +22,14 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     emerge --oneshot portage && \
     echo "ros-*/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-*/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "sys-libs/zlib minizip" >> /usr/portage/package.use/iputils && \
+    echo "sci-libs/vtk rendering" >> /usr/portage/package.use/iputils && \
     perl-cleaner --reallyall && \
     emerge -C openssl && \
     printf 'USE="${USE} fontconfig ruby_targets_ruby25"\n' >> \
     /etc/portage/make.conf && \
     emerge --jobs openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
-    dev-qt/qtchooser app-arch/cpio dev-libs/icu dev-util/ninja \
+    dev-qt/qtchooser dev-libs/icu dev-util/ninja \
     dev-python/nose dev-python/numpy dev-python/docutils \
     dev-python/ply dev-python/netifaces dev-python/ipaddress \
     dev-python/pycparser dev-util/meson dev-python/python-dateutil \
@@ -61,5 +63,6 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-qt/qtxml x11-proto/kbproto x11-misc/util-macros \
     x11-proto/inputproto x11-misc/util-macros dev-libs/tinyxml2 \
     dev-lang/swig sys-libs/binutils-libs \
-    && rm -rf /usr/portage/distfiles/{*.tar*,*.zip*} \
+    && rm -f /usr/portage/distfiles/*.tar* \
+    && rm -f /usr/portage/distfiles/*.zip* \
     && rm -rf /var/tmp/portage/* \
