@@ -13,12 +13,15 @@ SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/indigo/${PN}/0
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	dev-cpp/gtest
 	dev-lang/python
 	dev-python/catkin_pkg
 	dev-python/empy
 	dev-python/nose
+	test? ( dev-python/mock )
+	test? ( dev-python/nose )
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
@@ -28,3 +31,10 @@ SLOT="0"
 BUILD_BINARY="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
+}
