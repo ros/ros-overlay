@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,11 +9,12 @@ inherit ros-cmake
 DESCRIPTION="The actionlib stack provides a standardized interface for\
 	interfacing [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.11.11-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.11.12-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/actionlib_msgs
 	ros-lunar/message_runtime
@@ -23,6 +24,7 @@ RDEPEND="
 	ros-lunar/rostest
 	ros-lunar/rostopic
 	ros-lunar/std_msgs
+	test? ( ros-lunar/rosnode )
 	dev-libs/boost
 	dev-python/wxpython
 "
