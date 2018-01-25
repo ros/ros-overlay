@@ -1,10 +1,8 @@
 indigo:
-  - gmapping
-  - slam_gmapping
+  - sick_scan
 kinetic:
-  - gmapping
-  - msp
-  - slam_gmapping
+  - actionlib
+  - sick_scan
 lunar:
-  - gmapping
-  - slam_gmapping
+  - actionlib
+  - sick_scan
