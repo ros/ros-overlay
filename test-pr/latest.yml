@@ -1,8 +1,2 @@
 indigo:
-  - sick_scan
-kinetic:
-  - actionlib
-  - sick_scan
-lunar:
-  - actionlib
-  - sick_scan
+  - smach
