@@ -65,5 +65,4 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     x11-proto/inputproto x11-misc/util-macros dev-libs/tinyxml2 \
     dev-lang/swig sys-libs/binutils-libs \
     && rm -f /usr/portage/distfiles/*.tar* \
-    && rm -f /usr/portage/distfiles/*.zip* \
-    && rm -rf /var/tmp/portage/* \
+    && rm -f /usr/portage/distfiles/*.zip*
