@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    this package contains a set of messages that are used by the introspection
+    interfaces for smach.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
