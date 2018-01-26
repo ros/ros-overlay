@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/message_generation
 	dev-qt/qtcore:5
-	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
 "
 
 SLOT="0"
