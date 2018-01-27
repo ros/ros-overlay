@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rviz-release/archive/release/indigo/rviz/1.11.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/indigo/${PN}/1.11.18-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -55,4 +55,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

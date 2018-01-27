@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Tutorials showing how to call into rviz internals from python scripts.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
