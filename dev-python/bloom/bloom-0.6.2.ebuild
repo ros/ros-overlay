@@ -20,5 +20,4 @@ DEPEND="
 	dev-python/sphinx
 "
 
-PATCHES="${FILESDIR}/test-fixes.patch"
 DISTUTILS_IN_SOURCE_BUILD="yes"
