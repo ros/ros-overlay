@@ -8,18 +8,18 @@ inherit ros-cmake
 
 DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-adrl/ifopt-release/archive/release/indigo/${PN}/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-adrl/ifopt-release/archive/release/kinetic/${PN}/1.0.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/ifopt_core
+	ros-kinetic/ifopt_core
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
