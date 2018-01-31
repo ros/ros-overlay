@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,12 +8,13 @@ inherit ros-cmake
 
 DESCRIPTION="Driver for the Phidgets Spatial 3/3/3 devices"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_imu/0.7.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/${PN}/0.7.5-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-kinetic/diagnostic_aggregator
 	ros-kinetic/diagnostic_msgs
 	ros-kinetic/diagnostic_updater
 	ros-kinetic/imu_filter_madgwick
@@ -28,6 +29,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
+	ros-kinetic/roslaunch
 "
 
 SLOT="0"

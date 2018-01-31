@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A ROS driver for the SICK TiM and the SICK MRS 1000 laser scanners.
+    The tuw_geometry_msgs package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>martin.guenther@dfki.de</email>
-      <name>Martin Günther</name>
+      <email>george.todoran@tuwien.ac.at</email>
+      <name>George Todoran</name>
     </maintainer>
-    <bugs-to>https://github.com/uos-gbp/sick_tim/issues</bugs-to>
+    <bugs-to>https://github.com/tuw-robotics/tuw_msgs/issues</bugs-to>
   </upstream>
 </pkgmetadata>
