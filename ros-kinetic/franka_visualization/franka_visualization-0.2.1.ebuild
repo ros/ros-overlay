@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,12 +8,13 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains visualization tools for Franka Emika."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_visualization/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.2.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-kinetic/franka_description
 	ros-kinetic/libfranka
 	ros-kinetic/roscpp
 	ros-kinetic/sensor_msgs

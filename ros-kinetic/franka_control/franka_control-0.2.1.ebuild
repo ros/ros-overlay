@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="franka_control provides a hardware node to control a Franka Emika research [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_control/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.2.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -22,10 +22,12 @@ RDEPEND="
 	ros-kinetic/franka_hw
 	ros-kinetic/franka_msgs
 	ros-kinetic/geometry_msgs
+	ros-kinetic/joint_state_publisher
 	ros-kinetic/libfranka
 	ros-kinetic/message_runtime
 	ros-kinetic/pluginlib
 	ros-kinetic/realtime_tools
+	ros-kinetic/robot_state_publisher
 	ros-kinetic/roscpp
 	ros-kinetic/sensor_msgs
 	ros-kinetic/tf
