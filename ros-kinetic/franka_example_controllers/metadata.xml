@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The franka_example_controllers package
+    franka_example_controllers provides example code for controlling Franka Emika research robots with ros_control
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>info@franka.de</email>
+      <email>support@franka.de</email>
       <name>Franka Emika GmbH</name>
     </maintainer>
     <bugs-to>https://github.com/frankaemika/franka_ros/issues</bugs-to>
