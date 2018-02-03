@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS device driver for Ifm O3M151 TOF camera.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vincent.rousseau@irstea.fr</email>
+      <name>Vincent Rousseau</name>
+    </maintainer>
+    <bugs-to>https://github.com/labex-imobs3-gbp/o3m151_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
