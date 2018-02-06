@@ -8,18 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="a#text"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-adrl/ifopt-release/archive/release/kinetic/${PN}/1.0.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-adrl/${PN}-release/archive/release/lunar/${PN}/1.0.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/ifopt_core
+	ros-lunar/ifopt_core
+	ros-lunar/ifopt_ipopt
+	ros-lunar/ifopt_snopt
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-lunar/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
