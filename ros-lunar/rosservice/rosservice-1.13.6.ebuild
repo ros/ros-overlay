@@ -6,16 +6,19 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is\
-[...]"
-HOMEPAGE="http://xmlrpcpp.sourceforge.net"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.5-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+DESCRIPTION="a#text"
+HOMEPAGE="http://ros.org/wiki/rosservice"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.6-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/cpp_common
+	ros-lunar/genpy
+	ros-lunar/rosgraph
+	ros-lunar/roslib
+	ros-lunar/rosmsg
+	ros-lunar/rospy
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,17 +8,19 @@ inherit ros-cmake
 
 DESCRIPTION="tta#text"
 HOMEPAGE="http://ros.org/wiki/rosmsg"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.5-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.6-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/catkin
 	ros-lunar/genmsg
 	ros-lunar/genpy
 	ros-lunar/rosbag
 	ros-lunar/roslib
+	test? ( ros-lunar/std_msgs )
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}

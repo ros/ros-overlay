@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Package which helps generate the MoveIt! moveit_msgs/CollisionObject\
 	m[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/${PN}/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/JenniferBuehler/moveit-pkgs-release/archive/release/indigo/${PN}/1.0.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -17,8 +17,6 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-indigo/convenience_ros_functions
 	ros-indigo/eigen_conversions
-	ros-indigo/gazebo_state_plugins
-	ros-indigo/gazebo_test_tools
 	ros-indigo/geometry_msgs
 	ros-indigo/moveit_msgs
 	ros-indigo/object_msgs
