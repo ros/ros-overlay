@@ -9,21 +9,21 @@ inherit ros-cmake
 DESCRIPTION="The ROS packages in this repository were created to provide an improved\
   [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/traclabs/${PN}-release/archive/release/lunar/${PN}/1.4.10-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/traclabs/${PN}-release/archive/release/kinetic/${PN}/1.4.11-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/trac_ik_examples
-	ros-lunar/trac_ik_kinematics_plugin
-	ros-lunar/trac_ik_lib
-	ros-lunar/trac_ik_python
+	ros-kinetic/trac_ik_examples
+	ros-kinetic/trac_ik_kinematics_plugin
+	ros-kinetic/trac_ik_lib
+	ros-kinetic/trac_ik_python
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
