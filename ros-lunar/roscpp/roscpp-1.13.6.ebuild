@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,28 +6,29 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tools for directing, throttling, selecting, and otherwise messing with\
-   [...]"
-HOMEPAGE="http://ros.org/wiki/topic_tools"
-SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.5-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+DESCRIPTION="a#text"
+HOMEPAGE="http://ros.org/wiki/roscpp"
+SRC_URI="https://github.com/ros-gbp/ros_comm-release/archive/release/lunar/${PN}/1.13.6-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-lunar/cpp_common
 	ros-lunar/message_runtime
 	ros-lunar/rosconsole
-	ros-lunar/roscpp
+	ros-lunar/roscpp_serialization
+	ros-lunar/roscpp_traits
+	ros-lunar/rosgraph_msgs
 	ros-lunar/rostime
 	ros-lunar/std_msgs
 	ros-lunar/xmlrpcpp
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
-	ros-lunar/cpp_common
 	ros-lunar/message_generation
-	ros-lunar/rostest
-	ros-lunar/rosunit
+	ros-lunar/roslang
+	virtual/pkgconfig
 "
 
 SLOT="0"

@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,17 +8,19 @@ inherit ros-cmake
 
 DESCRIPTION="ROS Package Tool"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/rospack-release/archive/release/lunar/rospack/2.4.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/2.5.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	dev-libs/boost
 	dev-lang/python
 	dev-python/catkin_pkg
 	dev-python/rosdep
 	dev-libs/tinyxml2
+	test? ( dev-python/coverage )
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
