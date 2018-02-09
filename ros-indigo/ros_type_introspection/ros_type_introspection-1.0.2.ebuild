@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,11 +8,12 @@ inherit ros-cmake
 
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize[...]"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/indigo/${PN}/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/indigo/${PN}/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-indigo/abseil_cpp
 	ros-indigo/geometry_msgs
@@ -23,6 +24,8 @@ RDEPEND="
 	ros-indigo/rostime
 	ros-indigo/sensor_msgs
 	ros-indigo/topic_tools
+	test? ( ros-indigo/tf2 )
+	test? ( dev-cpp/gtest )
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
