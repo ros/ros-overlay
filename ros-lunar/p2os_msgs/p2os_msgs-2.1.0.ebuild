@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Defines the messages that are used to communicate with the\
 	p2os_driver[...]"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/p2os-purdue"
 SRC_URI="https://github.com/allenh1/p2os-release/archive/release/lunar/${PN}/2.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
