@@ -23,7 +23,9 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     echo "ros-*/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-*/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
     echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils && \
-    echo "sci-libs/vtk rendering" >> /etc/portage/package.use/iputils && \
+    echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils && \
+    echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
+    echo "dev-qt/qtwebkit printingsupport" >> /etc/portage/package.use/iputils && \
     echo "dev-libs/boost python" >> /etc/portage/package.use/iputils && \
     perl-cleaner --reallyall && \
     emerge -C openssl && \
