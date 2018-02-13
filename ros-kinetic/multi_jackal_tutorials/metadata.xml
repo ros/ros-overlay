@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Jackal simulation for Gazebo
+    Tutorials for multi-Jackal simulations.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
