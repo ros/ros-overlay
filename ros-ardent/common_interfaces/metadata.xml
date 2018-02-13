@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    common_interfaces contains messages and services that are widely used by other ROS packages.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mikael@osrfoundation.org</email>
+      <name>Mikael Arguedas</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/common_interfaces/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
