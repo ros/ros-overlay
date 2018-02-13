@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=5
 
 inherit cmake-utils versionator vcs-snapshot flag-o-matic
 
@@ -56,6 +56,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
+PATCHES=( "${FILESDIR}/${PN}-tinyxml2.patch" )
 
 src_configure() {
 	# doesnt build without it
