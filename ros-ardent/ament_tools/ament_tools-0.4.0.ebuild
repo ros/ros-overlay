@@ -34,4 +34,4 @@ src_unpack() {
 	mv *${P}* ${P}
 }
 
-PATCHES=( "${FILESDIR}"/*.patch )
+PATCHES=( "${FILESDIR}"/0001-Exclude-all-tests.patch )
