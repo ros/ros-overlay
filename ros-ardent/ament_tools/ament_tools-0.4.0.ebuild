@@ -27,15 +27,11 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="ardent"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+DISTUTILS_IN_SOURCE_BUILD="yes"
 
 src_unpack() {
 	default
 	mv *${P}* ${P}
 }
 
-src_prepare() {
-	cd ${P}
-	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" epatch
-	ros-cmake_src_prepare
-}
+PATCHES=( "${FILESDIR}"/*.patch )
