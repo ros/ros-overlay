@@ -34,4 +34,4 @@ src_unpack() {
 	mv *${P}* ${P}
 }
 
-PATCHES=( "${FILESDIR}"/*.patch )
+PATCHES=( "${FILESDIR}"//tmp/tmp7zam9cr7/ros-ardent/ament_tools/files/0001-Exclude-all-tests.patch )
