@@ -24,3 +24,8 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="ardent"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_unpack() {
+	default
+	mv *${P}* ${P}
+}
