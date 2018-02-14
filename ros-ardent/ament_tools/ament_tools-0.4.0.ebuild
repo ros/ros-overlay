@@ -32,3 +32,10 @@ src_unpack() {
 	default
 	mv *${P}* ${P}
 }
+
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
+}
