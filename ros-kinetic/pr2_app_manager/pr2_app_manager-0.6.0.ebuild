@@ -6,17 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Localization using fiducial markers"
-HOMEPAGE="http://wiki.ros.org/fiducials"
-SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.8.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Scripts and tools for running the application manager on the PR2."
+HOMEPAGE="http://ros.org/wiki/application_manager"
+SRC_URI="https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/${PN}/0.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/aruco_detect
-	ros-kinetic/fiducial_msgs
-	ros-kinetic/fiducial_slam
+	ros-kinetic/app_manager
+	ros-kinetic/willow_maps
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
