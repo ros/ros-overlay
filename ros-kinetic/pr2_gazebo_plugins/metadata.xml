@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The naoqi_bridge_msgs package provides custom messages for running Aldebaran's robot such as NAO and Pepper. See the packages nao_robot and pepper_robot for details.
+    Gazebo Plugins for various PR2-specific sensors and actuators on the robot.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>karsten.knese@gmail.com</email>
-      <name>Karsten Knese</name>
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-naoqi/naoqi_bridge_msgs/issues</bugs-to>
+    <bugs-to>https://github.com/pr2-gbp/pr2_simulator/issues</bugs-to>
   </upstream>
 </pkgmetadata>

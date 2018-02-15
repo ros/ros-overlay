@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The naoqi_bridge_msgs package provides custom messages for running Aldebaran's robot such as NAO and Pepper. See the packages nao_robot and pepper_robot for details.
+    Tucks the arms of the PR2 robot into a safe position for moving the base of the robot.
+     This also moves the arms out of the view of the tilting laser scanner, as much as possible.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +11,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>karsten.knese@gmail.com</email>
-      <name>Karsten Knese</name>
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-naoqi/naoqi_bridge_msgs/issues</bugs-to>
+    <bugs-to>https://github.com/pr2-gbp/pr2_apps/issues</bugs-to>
   </upstream>
 </pkgmetadata>
