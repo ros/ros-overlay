@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	ros-ardent/rosidl_cmake
 	ros-ardent/rosidl_generator_c
 	ros-ardent/rosidl_typesupport_opensplice_cpp
-	s
+	sci-libs/opensplice
 "
 
 SLOT="0"
