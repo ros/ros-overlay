@@ -21,6 +21,24 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	ros-ardent/ament_cmake
 	s
+	c
+	i
+	-
+	l
+	i
+	b
+	s
+	/
+	o
+	p
+	e
+	n
+	s
+	p
+	l
+	i
+	c
+	e
 "
 
 SLOT="0"

@@ -23,6 +23,24 @@ RDEPEND="
 	test? ( ros-ardent/ament_lint_auto )
 	test? ( ros-ardent/ament_lint_common )
 	s
+	c
+	i
+	-
+	l
+	i
+	b
+	s
+	/
+	o
+	p
+	e
+	n
+	s
+	p
+	l
+	i
+	c
+	e
 "
 DEPEND="${RDEPEND}
 	ros-ardent/ament_cmake
