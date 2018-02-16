@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-cmake
 
 DESCRIPTION="Package containing a C-based lifecycle implementation"
 HOMEPAGE="https://wiki.ros.org"

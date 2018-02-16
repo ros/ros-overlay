@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-cmake
 
 DESCRIPTION="map_server provides the <tt>map_server</tt> ROS <a href=\"http://www.ros.or[...]"
 HOMEPAGE="http://wiki.ros.org/map_server"

@@ -4,7 +4,7 @@
 EAPI=6
 PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit distutils-r1
+inherit ament-python
 
 DESCRIPTION="The ability to check code for style and syntax conventions with flake8."
 HOMEPAGE="https://wiki.ros.org"
@@ -22,8 +22,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="ardent"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
-src_unpack() {
-	default
-	mv *${P}* ${P}
-}
