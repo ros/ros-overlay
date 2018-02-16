@@ -27,6 +27,24 @@ DEPEND="${RDEPEND}
 	ros-ardent/rosidl_generator_c
 	ros-ardent/rosidl_typesupport_opensplice_cpp
 	s
+	c
+	i
+	-
+	l
+	i
+	b
+	s
+	/
+	o
+	p
+	e
+	n
+	s
+	p
+	l
+	i
+	c
+	e
 "
 
 SLOT="0"
