@@ -4,7 +4,7 @@
 EAPI=6
 PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit distutils-r1
+inherit ament-python
 
 DESCRIPTION="Framework for ROS 2 command line tools."
 HOMEPAGE="https://wiki.ros.org"
@@ -27,9 +27,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="ardent"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-DISTUTILS_IN_SOURCE_BUILD="yes"
-
-src_unpack() {
-	default
-	mv *${P}* ${P}
-}

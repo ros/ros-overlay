@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-cmake
 
 DESCRIPTION="\`image_geometry\` contains C++ and Python libraries for interpreting image[...]"
 HOMEPAGE="http://www.ros.org/wiki/image_geometry"

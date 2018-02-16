@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-python
 
 DESCRIPTION="Python nodes which were previously in the ros2/examples repository but are [...]"
 HOMEPAGE="https://wiki.ros.org"
