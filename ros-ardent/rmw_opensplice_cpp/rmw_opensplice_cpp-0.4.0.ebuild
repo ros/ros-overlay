@@ -22,7 +22,7 @@ RDEPEND="
 	ros-ardent/rosidl_typesupport_opensplice_cpp
 	test? ( ros-ardent/ament_lint_auto )
 	test? ( ros-ardent/ament_lint_common )
-	s
+	sci-libs/opensplice
 "
 DEPEND="${RDEPEND}
 	ros-ardent/ament_cmake

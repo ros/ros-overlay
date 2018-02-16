@@ -20,7 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-ardent/ament_cmake
-	s
+	sci-libs/opensplice
 "
 
 SLOT="0"
