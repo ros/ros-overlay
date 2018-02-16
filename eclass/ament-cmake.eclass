@@ -35,26 +35,26 @@ esac
 # @DESCRIPTION:
 # Tells the eclass the package has python code and forwards it to python-r1.eclass.
 PYTHON_ECLASS=""
-CATKIN_PYTHON_USEDEP=""
+AMENT_PYTHON_USEDEP=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
 	PYTHON_ECLASS="python-r1"
 fi
 inherit ${SCM} ${PYTHON_ECLASS} cmake-utils flag-o-matic
 
-CATKIN_DO_PYTHON_MULTIBUILD=""
+AMENT_DO_PYTHON_MULTIBUILD=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
-	CATKIN_PYTHON_USEDEP="[${PYTHON_USEDEP}]"
-	CATKIN_DO_PYTHON_MULTIBUILD="yes"
+	AMENT_PYTHON_USEDEP="[${PYTHON_USEDEP}]"
+	AMENT_DO_PYTHON_MULTIBUILD="yes"
 	REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 fi
 
 IUSE="test"
 RDEPEND="
-dev-python/empy${CATKIN_PYTHON_USEDEP}
+dev-python/empy${AMENT_PYTHON_USEDEP}
 "
 DEPEND="${RDEPEND}"
 
-if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 	RDEPEND="${RDEPEND} ${PYTHON_DEPS}"
 	DEPEND="${DEPEND} ${PYTHON_DEPS}"
 fi
@@ -77,12 +77,12 @@ ament-cmake_src_unpack() {
 # by installing a recursive CMakeLists.txt to handle bundles.
 ament-cmake_src_prepare() {
 	# If no multibuild, just use cmake IN_SOURCE support
-	[ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -z "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && export CMAKE_IN_SOURCE_BUILD=yes
+	[ -n "${AMENT_IN_SOURCE_BUILD}" ] && [ -z "${AMENT_DO_PYTHON_MULTIBUILD}" ] && export CMAKE_IN_SOURCE_BUILD=yes
 
 	cmake-utils_src_prepare
 
 	# If python multibuild, copy the sources
-	[ -n "${CATKIN_IN_SOURCE_BUILD}" ] && [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] && python_copy_sources
+	[ -n "${AMENT_IN_SOURCE_BUILD}" ] && [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] && python_copy_sources
 }
 
 # @FUNCTION: ros-catkin_src_configure_internal
@@ -95,7 +95,7 @@ ament-cmake_src_configure_internal() {
 	if [[ -z $CPP11 ]]; then
 		append-cxxflags '-std=c++11'
 	fi
-	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		local sitedir="$(python_get_sitedir)"
 		local sitedir="${sitedir/\/usr\//}"
 		local sitedir="${sitedir/lib64/lib}"
@@ -106,7 +106,7 @@ ament-cmake_src_configure_internal() {
 			"${mycmakeargs[@]}"
 		)
 		python_export PYTHON_SCRIPTDIR
-		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
+		if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 			export CMAKE_USE_DIR="${BUILD_DIR}"
 		fi
 	fi
@@ -130,30 +130,21 @@ ament-cmake_src_configure() {
 		append-cxxflags '-std=c++11'
 	fi
 
-	export CATKIN_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
+	export AMENT_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
 	export ROS_ROOT="${EPREFIX%/}/${ROS_PREFIX}"
-	if [ -n "${CATKIN_HAS_MESSAGES}" ] ; then
-		ROS_LANG_DISABLE=""
-		use ros_messages_cxx    || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gencpp"
-		use ros_messages_eus    || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:geneus"
-		use ros_messages_lisp   || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:genlisp"
-		use ros_messages_python || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:genpy"
-		use ros_messages_nodejs || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gennodejs"
-		export ROS_LANG_DISABLE
-	fi
 	export DEST_SETUP_DIR="/${ROS_PREFIX}"
 	if [ -z $BUILD_BINARY ]; then
 		export BUILD_BINARY="1"
 	fi
 	local mycmakeargs=(
-		-DCATKIN_ENABLE_TESTING="$(usex test 1 0)"
-		-DCATKIN_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
+		-DAMENT_ENABLE_TESTING="$(usex test 1 0)"
+		-DAMENT_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
 		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}
 		-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}
 		${mycmakeargs[@]}
 	)
 	cmake-utils_src_configure
-	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ament-cmake_src_configure_internal "${@}"
 	else
 		ament-cmake_src_configure_internal "${@}"
@@ -170,8 +161,8 @@ ament-cmake_src_compile() {
 
 	rm -f ${WORKDIR}/${P}/README* # prevents conflicts
 
-	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
-		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
+	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
+		if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 			export CMAKE_USE_DIR="${BUILD_DIR}"
 		fi
 		python_foreach_impl cmake-utils_src_compile "${@}"
@@ -202,7 +193,7 @@ ament-cmake_src_test_internal() {
 # @DESCRIPTION:
 # Run the tests of a catkin-based package.
 ros-catkin_src_test() {
-	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ros-catkin_src_test_internal "${@}"
 	else
 		ros-catkin_src_test_internal "${@}"
@@ -215,7 +206,7 @@ ros-catkin_src_test() {
 ament-cmake_src_install_with_python() {
 	python_scriptinto /${ROS_PREFIX}/bin
 	python_export PYTHON_SCRIPTDIR
-	if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
+	if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"
 	fi
 	cmake-utils_src_install "${@}"
@@ -232,7 +223,7 @@ ament-cmake_src_install_with_python() {
 # @DESCRIPTION:
 # Installs a catkin-based package.
 ament-cmake_src_install() {
-	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ament-cmake_src_install_with_python "${@}"
 	else
 		cmake-utils_src_install "${@}"
