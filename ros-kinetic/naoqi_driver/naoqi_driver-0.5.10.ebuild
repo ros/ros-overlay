@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Driver module between Aldebarans NAOqiOS and ROS It publishes all sensor and a"
+DESCRIPTION="Driver module between Aldebaran\'s NAOqiOS and ROS. It publishes all sensor[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-naoqi/naoqi_driver-release/archive/release/kinetic/naoqi_driver/0.5.9-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-naoqi/${PN}-release/archive/release/kinetic/${PN}/0.5.10-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -23,6 +23,7 @@ RDEPEND="
 	ros-kinetic/orocos_kdl
 	ros-kinetic/robot_state_publisher
 	ros-kinetic/rosbag_storage
+	ros-kinetic/rosconsole
 	ros-kinetic/tf2_ros
 	dev-libs/boost
 "
@@ -40,4 +41,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
