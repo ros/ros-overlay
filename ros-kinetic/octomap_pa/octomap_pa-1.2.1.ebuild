@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ProAut octomap package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/TUC-ProAut/ros_octomap-release/archive/release/kinetic/${PN}/1.2.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/TUC-ProAut/ros_octomap-release/archive/release/kinetic/${PN}/1.2.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

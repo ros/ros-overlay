@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Spawns the Jackal model."
 HOMEPAGE="http://ros.org/wiki/multi_jackal_description"
-SRC_URI="https://github.com/NicksSimulationsROS/multi_jackal-release/archive/release/kinetic/${PN}/0.0.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/NicksSimulationsROS/multi_jackal-release/archive/release/kinetic/${PN}/0.0.5-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
