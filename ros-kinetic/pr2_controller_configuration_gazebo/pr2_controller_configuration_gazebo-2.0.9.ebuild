@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A copy of the pr2_controller_configuration package, for use in \
 	the PR[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_controller_configuration_gazebo"
-SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,6 +19,7 @@ RDEPEND="
 	ros-kinetic/pr2_gripper_action
 	ros-kinetic/pr2_head_action
 	ros-kinetic/single_joint_position_action
+	sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

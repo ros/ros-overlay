@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo Plugins for various PR2-specific sensors and actuators on the robot."
 HOMEPAGE="http://ros.org/wiki/pr2_gazebo_plugins"
-SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

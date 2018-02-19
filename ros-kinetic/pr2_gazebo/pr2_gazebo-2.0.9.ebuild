@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Launch scripts for simulating the PR2 in <a href=\"http://ros.org/wiki/gaze[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_gazebo"
-SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/${PN}/2.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
