@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,8 +8,8 @@ inherit ros-cmake
 
 DESCRIPTION="Dynamixel-Workbench is dynamixel solution for ROS.\
 	This metapackage al[...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/${PN}/0.1.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+HOMEPAGE="http://wiki.ros.org/dynamixel_workbench"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/${PN}/0.2.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
