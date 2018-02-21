@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages.
+    The rc_visard_driver package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>heiko.hirschmueller@roboception.de</email>
+      <name>Heiko Hirschmueller</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/rqt_robot_steering/issues</bugs-to>
+    <bugs-to>https://github.com/roboception/rc_visard/issues</bugs-to>
   </upstream>
 </pkgmetadata>
