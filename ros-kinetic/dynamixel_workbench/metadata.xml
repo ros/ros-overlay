@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <longdescription>
-    Dynamixel-Workbench is dynamixel solution for ROS.
-    This metapackage allows you to easily change the ID, baudrate and operating mode of the Dynamixel.
-    Furthermore, it supports various controllers based on operating mode and Dynamixel SDK.
-    These controllers are commanded by operators.
-  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
   </maintainer>
-  <upstream>
-    <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
-    </maintainer>
-    <bugs-to>https://github.com/ROBOTIS-GIT/dynamixel-workbench/issues</bugs-to>
-  </upstream>
 </pkgmetadata>
