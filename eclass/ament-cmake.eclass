@@ -1,10 +1,12 @@
+# Copyright 1999-2017 Gentoo Foundation
 # Copyright 2018 Open Source Robotics Foundation, Inc.
-# Distributed under the terms of the BSD License
+# Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: ament-cmake.eclass
 # @MAINTAINER:
 # hunter@openrobotics.org
 # @AUTHOR:
+# Alexis Ballier <aballier@gentoo.org>
 # Hunter L. Allen <hunter@openrobotics.org>
 # @BLURB: Template eclass for ament based ROS2 packages.
 # @DESCRIPTION:
