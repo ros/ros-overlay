@@ -91,6 +91,7 @@ ament-cmake_src_prepare() {
 # @DESCRIPTION:
 # Internal decoration of cmake-utils_src_configure to handle multiple python installs.
 ament-cmake_src_configure_internal() {
+	export PYTHONPATH="/${ROS_PREFIX}/lib64/${EPYTHON}/site-packages"
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
 		source /${ROS_PREFIX}/setup.bash
 	fi
