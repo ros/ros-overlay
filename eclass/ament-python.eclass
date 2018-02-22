@@ -18,7 +18,7 @@ ament-python_src_unpack() {
 }
 
 ament-python_python_install() {
-	distutils-r1_python_install --prefix="$/${ROS_PREFIX}"
+	distutils-r1_python_install --prefix="/${ROS_PREFIX}"
 }
 
 EXPORT_FUNCTIONS src_unpack python_install
