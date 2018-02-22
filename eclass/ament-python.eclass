@@ -1,6 +1,8 @@
 # Copyright 2018 Open Source Robotics Foundation, Inc.
 # Distributed under the terms of the BSD License
 
+inherits distutils_r1
+
 # @ECLASS: ament-cmake.eclass
 # @MAINTAINER:
 # hunter@openrobotics.org
@@ -15,15 +17,8 @@ ament-python_src_unpack() {
         mv *${P}* ${P}
 }
 
-ament-python_src_compile() {
-        python3 ./setup.py build
+ament-python_python_install() {
+        distutils_r1_python_install --prefix="${D}/${ROS_PREFIX}"
 }
 
-ament-python_src_install() {
-        mkdir -p ${D}/${ROS_PREFIX}/lib/python3.5/site-packages
-        export PYTHONPATH=${D}/${ROS_PREFIX}/lib/python3.5/site-packages
-        export PYTHON_SITEDIR=lib/python3.5/site-packages
-        python3 ./setup.py install --prefix=${D}/${ROS_PREFIX}
-}
-
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS src_unpack python_install
