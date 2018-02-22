@@ -1,7 +1,7 @@
 # Copyright 2018 Open Source Robotics Foundation, Inc.
 # Distributed under the terms of the BSD License
 
-inherits distutils_r1
+inherit distutils-r1
 
 # @ECLASS: ament-cmake.eclass
 # @MAINTAINER:
@@ -14,11 +14,11 @@ inherits distutils_r1
 
 ament-python_src_unpack() {
 	default
-        mv *${P}* ${P}
+	mv *${P}* ${P}
 }
 
 ament-python_python_install() {
-        distutils_r1_python_install --prefix="${D}/${ROS_PREFIX}"
+	distutils-r1_python_install --prefix="${D}/${ROS_PREFIX}"
 }
 
 EXPORT_FUNCTIONS src_unpack python_install
