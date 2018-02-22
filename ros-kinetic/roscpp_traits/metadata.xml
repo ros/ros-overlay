@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    roscpp_traits contains the message traits code as described in
+    <a href="http://www.ros.org/wiki/roscpp/Overview/MessagesTraits">MessagesTraits</a>.
+
+    This package is a component of <a href="http://www.ros.org/wiki/roscpp">roscpp</a>.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
