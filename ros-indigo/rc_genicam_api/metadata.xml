@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The robotnik_msgs package. Common messages and services used by some Robotnik's packages.
+    GenICam Convenience Layer.
+      See LICENSE.md for licensing terms of the different parts.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +11,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>rnavarro@robotnik.es</email>
-      <name>Román Navarro</name>
+      <email>felix.ruess@roboception.de</email>
+      <name>Felix Ruess</name>
     </maintainer>
-    <bugs-to>https://github.com/RobotnikAutomation/robotnik_msgs/issues</bugs-to>
+    <bugs-to>https://github.com/roboception/rc_genicam_api/issues</bugs-to>
   </upstream>
 </pkgmetadata>
