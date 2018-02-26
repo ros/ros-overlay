@@ -4,7 +4,7 @@
 EAPI=6
 PYTHON_COMPAT=( python3_{4,5,6} pypy )
 
-inherit git-r3 python-r1
+inherit git-r3 distutils-r1
 
 EGIT_REPO_URI="https://github.com/ros-infrastructure/${PN}.git"
 SRC_URI=""
