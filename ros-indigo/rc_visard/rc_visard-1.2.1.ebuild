@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Roboception rc_visard support meta package"
 HOMEPAGE="http://roboception.com/rc_visard"
-SRC_URI="https://github.com/roboception/${PN}-release/archive/release/indigo/${PN}/1.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/roboception/${PN}-release/archive/release/indigo/${PN}/1.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
