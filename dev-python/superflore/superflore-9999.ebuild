@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -22,12 +22,13 @@ RDEPEND="dev-python/xmltodict
 	dev-python/setuptools
 	dev-python/rosinstall_generator
 	dev-python/rosdistro
-        dev-python/catkin_pkg
+	dev-python/catkin_pkg
 	dev-python/rosdep
 	dev-python/git-python
-        dev-python/PyGithub
-        dev-python/pyyaml
+	dev-python/PyGithub
+	dev-python/pyyaml
 	dev-python/docker-py
+	dev-python/requests
 	dev-vcs/git
 	dev-lang/python
 	app-emulation/docker"
