@@ -7,10 +7,10 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Tests for MAVROS package"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.23.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+HOMEPAGE="https://github.com/mavlink/mavros.git"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.23.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="( BSD GPL-3 LGPL-3 )"
+LICENSE="( BSD GPL-3 LGPL-2 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-lunar/control_toolbox

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Roboception rc_visard support meta package
+    Visualization package for rc_visard
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>felix.ruess@roboception.de</email>
-      <name>Felix Ruess</name>
+      <email>monika.florek-jasinska@roboception.de</email>
+      <name>Monika Florek-Jasinska</name>
     </maintainer>
     <bugs-to>https://github.com/roboception/rc_visard/issues</bugs-to>
   </upstream>

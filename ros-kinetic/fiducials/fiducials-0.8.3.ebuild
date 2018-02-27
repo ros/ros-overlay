@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Localization using fiducial markers"
 HOMEPAGE="http://wiki.ros.org/fiducials"
-SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.8.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.8.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
