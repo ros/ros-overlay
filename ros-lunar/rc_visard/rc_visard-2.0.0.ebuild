@@ -8,18 +8,19 @@ inherit ros-cmake
 
 DESCRIPTION="Roboception rc_visard support meta package"
 HOMEPAGE="http://roboception.com/rc_visard"
-SRC_URI="https://github.com/roboception/${PN}-release/archive/release/indigo/${PN}/1.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/roboception/${PN}-release/archive/release/lunar/${PN}/2.0.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/rc_visard_driver
+	ros-lunar/rc_visard_description
+	ros-lunar/rc_visard_driver
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-lunar/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

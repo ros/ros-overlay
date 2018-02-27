@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The rc_visard_driver provides data from a Roboception rc_visard 3D sensor o[...]"
 HOMEPAGE="http://roboception.com/rc_visard"
-SRC_URI="https://github.com/roboception/rc_visard-release/archive/release/indigo/${PN}/1.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/roboception/rc_visard-release/archive/release/indigo/${PN}/2.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,18 +17,23 @@ RDEPEND="
 	ros-indigo/dynamic_reconfigure
 	ros-indigo/geometry_msgs
 	ros-indigo/image_transport
+	ros-indigo/message_runtime
+	ros-indigo/nav_msgs
 	ros-indigo/nodelet
+	ros-indigo/rc_dynamics_api
 	ros-indigo/rc_genicam_api
 	ros-indigo/roscpp
 	ros-indigo/sensor_msgs
 	ros-indigo/std_srvs
 	ros-indigo/stereo_msgs
 	ros-indigo/tf
+	ros-indigo/visualization_msgs
 	net-misc/curl
 	dev-libs/protobuf
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
+	ros-indigo/message_generation
 	dev-libs/protobuf
 "
 
