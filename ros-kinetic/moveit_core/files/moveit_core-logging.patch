@@ -1,0 +1,3118 @@
+diff -u -r background_processing/src/background_processing.cpp background_processing/src/background_processing.cpp
+--- background_processing/src/background_processing.cpp	2017-12-25 17:56:00.000000000 +0000
++++ background_processing/src/background_processing.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -73,13 +73,13 @@
+       action_lock_.unlock();
+       try
+       {
+-        logDebug("moveit.background: Begin executing '%s'", action_name.c_str());
++        CONSOLE_BRIDGE_logDebug("moveit.background: Begin executing '%s'", action_name.c_str());
+         fn();
+-        logDebug("moveit.background: Done executing '%s'", action_name.c_str());
++        CONSOLE_BRIDGE_logDebug("moveit.background: Done executing '%s'", action_name.c_str());
+       }
+       catch (std::exception& ex)
+       {
+-        logError("Exception caught while processing action '%s': %s", action_name.c_str(), ex.what());
++        CONSOLE_BRIDGE_logError("Exception caught while processing action '%s': %s", action_name.c_str(), ex.what());
+       }
+       processing_ = false;
+       if (queue_change_event_)
+diff -u -r collision_detection/src/allvalid/collision_robot_allvalid.cpp collision_detection/src/allvalid/collision_robot_allvalid.cpp
+--- collision_detection/src/allvalid/collision_robot_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/allvalid/collision_robot_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -51,7 +51,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkSelfCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -60,7 +60,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkSelfCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -69,7 +69,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkSelfCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -79,7 +79,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkOtherCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -89,7 +89,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkOtherCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -100,7 +100,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkOtherCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -112,7 +112,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionRobotAllValid::checkOtherCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -125,7 +125,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ double collision_detection::CollisionRobotAllValid::distanceSelf(const robot_state::RobotState& state) const
+diff -u -r collision_detection/src/allvalid/collision_world_allvalid.cpp collision_detection/src/allvalid/collision_world_allvalid.cpp
+--- collision_detection/src/allvalid/collision_world_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/allvalid/collision_world_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -55,7 +55,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionWorldAllValid::checkRobotCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -65,7 +65,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionWorldAllValid::checkRobotCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -75,7 +75,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionWorldAllValid::checkRobotCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -86,7 +86,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionWorldAllValid::checkWorldCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -94,7 +94,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ void collision_detection::CollisionWorldAllValid::checkWorldCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -103,7 +103,7 @@
+ {
+   res.collision = false;
+   if (req.verbose)
+-    logInform("Using AllValid collision detection. No collision checking is performed.");
++    CONSOLE_BRIDGE_logInform("Using AllValid collision detection. No collision checking is performed.");
+ }
+ 
+ double collision_detection::CollisionWorldAllValid::distanceRobot(const CollisionRobot& robot,
+diff -u -r collision_detection/src/collision_matrix.cpp collision_detection/src/collision_matrix.cpp
+--- collision_detection/src/collision_matrix.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/collision_matrix.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -53,12 +53,12 @@
+ {
+   if (msg.entry_names.size() != msg.entry_values.size() ||
+       msg.default_entry_names.size() != msg.default_entry_values.size())
+-    logError("The number of links does not match the number of entries in AllowedCollisionMatrix message");
++    CONSOLE_BRIDGE_logError("The number of links does not match the number of entries in AllowedCollisionMatrix message");
+   else
+   {
+     for (std::size_t i = 0; i < msg.entry_names.size(); ++i)
+       if (msg.entry_values[i].enabled.size() != msg.entry_names.size())
+-        logError("Number of entries is incorrect for link '%s' in AllowedCollisionMatrix message",
++        CONSOLE_BRIDGE_logError("Number of entries is incorrect for link '%s' in AllowedCollisionMatrix message",
+                  msg.entry_names[i].c_str());
+       else
+         for (std::size_t j = i + 1; j < msg.entry_values[i].enabled.size(); ++j)
+diff -u -r collision_detection/src/collision_octomap_filter.cpp collision_detection/src/collision_octomap_filter.cpp
+--- collision_detection/src/collision_octomap_filter.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/collision_octomap_filter.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -64,12 +64,12 @@
+ {
+   if (!object)
+   {
+-    logError("No valid Object passed in, cannot refine Normals!");
++    CONSOLE_BRIDGE_logError("No valid Object passed in, cannot refine Normals!");
+     return 0;
+   }
+   if (res.contact_count < 1)
+   {
+-    logWarn("There do not appear to be any contacts, so there is nothing to refine!");
++    CONSOLE_BRIDGE_logWarn("There do not appear to be any contacts, so there is nothing to refine!");
+     return 0;
+   }
+ 
+@@ -126,14 +126,14 @@
+             {
+               count++;
+               node_centers.push_back(pt);
+-              // logInform("Adding point %d with prob %.3f at [%.3f, %.3f, %.3f]", count, prob, pt.x(), pt.y(), pt.z());
++              // CONSOLE_BRIDGE_logInform("Adding point %d with prob %.3f at [%.3f, %.3f, %.3f]", count, prob, pt.x(), pt.y(), pt.z());
+             }
+           }
+-          // logInform("Contact point at [%.3f, %.3f, %.3f], cell size %.3f, occupied cells %d",
++          // CONSOLE_BRIDGE_logInform("Contact point at [%.3f, %.3f, %.3f], cell size %.3f, occupied cells %d",
+           //          contact_point.x(), contact_point.y(), contact_point.z(), cell_size, count);
+ 
+           // octree->getOccupiedLeafsBBX(node_centers, bbx_min, bbx_max);
+-          // logError("bad stuff in collision_octomap_filter.cpp; need to port octomap call for groovy");
++          // CONSOLE_BRIDGE_logError("bad stuff in collision_octomap_filter.cpp; need to port octomap call for groovy");
+ 
+           octomath::Vector3 n;
+           double depth;
+@@ -145,7 +145,7 @@
+             if (divergence > allowed_angle_divergence)
+             {
+               modified++;
+-              //              logInform("Normals differ by %.3f, changing: [%.3f, %.3f, %.3f] -> [%.3f, %.3f, %.3f]",
++              //              CONSOLE_BRIDGE_logInform("Normals differ by %.3f, changing: [%.3f, %.3f, %.3f] -> [%.3f, %.3f, %.3f]",
+               //                        divergence,
+               //                        contact_normal.x(), contact_normal.y(), contact_normal.z(),
+               //                        n.x(), n.y(), n.z());
+@@ -267,7 +267,7 @@
+     }
+     else
+     {
+-      logError("This should not be called!");
++      CONSOLE_BRIDGE_logError("This should not be called!");
+     }
+ 
+     double f_val = 0;
+@@ -293,7 +293,7 @@
+     }
+     else
+     {
+-      logError("This should not be called!");
++      CONSOLE_BRIDGE_logError("This should not be called!");
+       double r_scaled = r / R;
+       // TODO still need to address the scaling...
+       f_val = pow((1 - r_scaled), 4) * (4 * r_scaled + 1);
+diff -u -r collision_detection/src/collision_robot.cpp collision_detection/src/collision_robot.cpp
+--- collision_detection/src/collision_robot.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/collision_robot.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -41,12 +41,12 @@
+ {
+   if (scale < std::numeric_limits<double>::epsilon())
+   {
+-    logError("Scale must be positive");
++    CONSOLE_BRIDGE_logError("Scale must be positive");
+     return false;
+   }
+   if (scale > std::numeric_limits<double>::max())
+   {
+-    logError("Scale must be finite");
++    CONSOLE_BRIDGE_logError("Scale must be finite");
+     return false;
+   }
+   return true;
+@@ -56,12 +56,12 @@
+ {
+   if (padding < 0.0)
+   {
+-    logError("Padding cannot be negative");
++    CONSOLE_BRIDGE_logError("Padding cannot be negative");
+     return false;
+   }
+   if (padding > std::numeric_limits<double>::max())
+   {
+-    logError("Padding must be finite");
++    CONSOLE_BRIDGE_logError("Padding must be finite");
+     return false;
+   }
+   return true;
+diff -u -r collision_detection/src/world.cpp collision_detection/src/world.cpp
+--- collision_detection/src/world.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection/src/world.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -64,7 +64,7 @@
+ {
+   if (shapes.size() != poses.size())
+   {
+-    logError("Number of shapes and number of poses do not match. Not adding this object to collision world.");
++    CONSOLE_BRIDGE_logError("Number of shapes and number of poses do not match. Not adding this object to collision world.");
+     return;
+   }
+ 
+diff -u -r collision_detection_fcl/src/collision_common.cpp collision_detection_fcl/src/collision_common.cpp
+--- collision_detection_fcl/src/collision_common.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection_fcl/src/collision_common.cpp	2018-02-28 12:06:37.667217586 +0000
+@@ -88,7 +88,7 @@
+       {
+         always_allow_collision = true;
+         if (cdata->req_->verbose)
+-          logDebug(
++          CONSOLE_BRIDGE_logDebug(
+               "Collision between '%s' (type '%s') and '%s' (type '%s') is always allowed. No contacts are computed.",
+               cd1->getID().c_str(), cd1->getTypeString().c_str(), cd2->getID().c_str(), cd2->getTypeString().c_str());
+       }
+@@ -96,7 +96,7 @@
+       {
+         cdata->acm_->getAllowedCollision(cd1->getID(), cd2->getID(), dcf);
+         if (cdata->req_->verbose)
+-          logDebug("Collision between '%s' and '%s' is conditionally allowed", cd1->getID().c_str(),
++          CONSOLE_BRIDGE_logDebug("Collision between '%s' and '%s' is conditionally allowed", cd1->getID().c_str(),
+                    cd2->getID().c_str());
+       }
+     }
+@@ -110,7 +110,7 @@
+     {
+       always_allow_collision = true;
+       if (cdata->req_->verbose)
+-        logDebug("Robot link '%s' is allowed to touch attached object '%s'. No contacts are computed.",
++        CONSOLE_BRIDGE_logDebug("Robot link '%s' is allowed to touch attached object '%s'. No contacts are computed.",
+                  cd1->getID().c_str(), cd2->getID().c_str());
+     }
+   }
+@@ -121,7 +121,7 @@
+     {
+       always_allow_collision = true;
+       if (cdata->req_->verbose)
+-        logDebug("Robot link '%s' is allowed to touch attached object '%s'. No contacts are computed.",
++        CONSOLE_BRIDGE_logDebug("Robot link '%s' is allowed to touch attached object '%s'. No contacts are computed.",
+                  cd2->getID().c_str(), cd1->getID().c_str());
+     }
+   }
+@@ -137,7 +137,7 @@
+     return false;
+ 
+   if (cdata->req_->verbose)
+-    logDebug("Actually checking collisions between %s and %s", cd1->getID().c_str(), cd2->getID().c_str());
++    CONSOLE_BRIDGE_logDebug("Actually checking collisions between %s and %s", cd1->getID().c_str(), cd2->getID().c_str());
+ 
+   // see if we need to compute a contact
+   std::size_t want_contact_count = 0;
+@@ -173,7 +173,7 @@
+     if (num_contacts > 0)
+     {
+       if (cdata->req_->verbose)
+-        logInform("Found %d contacts between '%s' and '%s'. These contacts will be evaluated to check if they are "
++        CONSOLE_BRIDGE_logInform("Found %d contacts between '%s' and '%s'. These contacts will be evaluated to check if they are "
+                   "accepted or not",
+                   num_contacts, cd1->getID().c_str(), cd2->getID().c_str());
+       Contact c;
+@@ -193,11 +193,11 @@
+             cdata->res_->contacts[pc].push_back(c);
+             cdata->res_->contact_count++;
+             if (cdata->req_->verbose)
+-              logInform("Found unacceptable contact between '%s' and '%s'. Contact was stored.", cd1->getID().c_str(),
++              CONSOLE_BRIDGE_logInform("Found unacceptable contact between '%s' and '%s'. Contact was stored.", cd1->getID().c_str(),
+                         cd2->getID().c_str());
+           }
+           else if (cdata->req_->verbose)
+-            logInform("Found unacceptable contact between '%s' (type '%s') and '%s' (type '%s'). Contact was stored.",
++            CONSOLE_BRIDGE_logInform("Found unacceptable contact between '%s' (type '%s') and '%s' (type '%s'). Contact was stored.",
+                       cd1->getID().c_str(), cd1->getTypeString().c_str(), cd2->getID().c_str(),
+                       cd2->getTypeString().c_str());
+           cdata->res_->collision = true;
+@@ -249,7 +249,7 @@
+         }
+ 
+         if (cdata->req_->verbose)
+-          logInform("Found %d contacts between '%s' (type '%s') and '%s' (type '%s'), which constitute a collision. %d "
++          CONSOLE_BRIDGE_logInform("Found %d contacts between '%s' (type '%s') and '%s' (type '%s'), which constitute a collision. %d "
+                     "contacts will be stored",
+                     num_contacts_initial, cd1->getID().c_str(), cd1->getTypeString().c_str(), cd2->getID().c_str(),
+                     cd2->getTypeString().c_str(), num_contacts);
+@@ -294,7 +294,7 @@
+       {
+         cdata->res_->collision = true;
+         if (cdata->req_->verbose)
+-          logInform("Found a contact between '%s' (type '%s') and '%s' (type '%s'), which constitutes a collision. "
++          CONSOLE_BRIDGE_logInform("Found a contact between '%s' (type '%s') and '%s' (type '%s'), which constitutes a collision. "
+                     "Contact information is not stored.",
+                     cd1->getID().c_str(), cd1->getTypeString().c_str(), cd2->getID().c_str(),
+                     cd2->getTypeString().c_str());
+@@ -323,7 +323,7 @@
+       if (!cdata->req_->cost)
+         cdata->done_ = true;
+       if (cdata->req_->verbose)
+-        logInform("Collision checking is considered complete (collision was found and %u contacts are stored)",
++        CONSOLE_BRIDGE_logInform("Collision checking is considered complete (collision was found and %u contacts are stored)",
+                   (unsigned int)cdata->res_->contact_count);
+     }
+ 
+@@ -331,7 +331,7 @@
+   {
+     cdata->done_ = cdata->req_->is_done(*cdata->res_);
+     if (cdata->done_ && cdata->req_->verbose)
+-      logInform("Collision checking is considered complete due to external callback. %s was found. %u contacts are "
++      CONSOLE_BRIDGE_logInform("Collision checking is considered complete due to external callback. %s was found. %u contacts are "
+                 "stored.",
+                 cdata->res_->collision ? "Collision" : "No collision", (unsigned int)cdata->res_->contact_count);
+   }
+@@ -365,7 +365,7 @@
+           map_.erase(it);
+         it = nit;
+       }
+-      //      logDebug("Cleaning up cache for FCL objects that correspond to static shapes. Cache size reduced from %u
++      //      CONSOLE_BRIDGE_logDebug("Cleaning up cache for FCL objects that correspond to static shapes. Cache size reduced from %u
+       //      to %u", from, (unsigned int)map_.size());
+     }
+   }
+@@ -423,7 +423,7 @@
+       {
+         always_allow_collision = true;
+         if (cdata->req_->verbose)
+-          logDebug("Collision between '%s' and '%s' is always allowed. No distances are computed.",
++          CONSOLE_BRIDGE_logDebug("Collision between '%s' and '%s' is always allowed. No distances are computed.",
+                    cd1->getID().c_str(), cd2->getID().c_str());
+       }
+     }
+@@ -437,7 +437,7 @@
+     {
+       always_allow_collision = true;
+       if (cdata->req_->verbose)
+-        logDebug("Robot link '%s' is allowed to touch attached object '%s'. No distances are computed.",
++        CONSOLE_BRIDGE_logDebug("Robot link '%s' is allowed to touch attached object '%s'. No distances are computed.",
+                  cd1->getID().c_str(), cd2->getID().c_str());
+     }
+   }
+@@ -450,7 +450,7 @@
+       {
+         always_allow_collision = true;
+         if (cdata->req_->verbose)
+-          logDebug("Robot link '%s' is allowed to touch attached object '%s'. No distances are computed.",
++          CONSOLE_BRIDGE_logDebug("Robot link '%s' is allowed to touch attached object '%s'. No distances are computed.",
+                    cd2->getID().c_str(), cd1->getID().c_str());
+       }
+     }
+@@ -468,7 +468,7 @@
+   const double d = fcl::distance(o1, o2, fcl::DistanceRequest(), dist_result);
+ 
+   if (cdata->req_->verbose)
+-    logDebug("Distance between %s and %s: %f", cd1->getID().c_str(), cd2->getID().c_str(), d);
++    CONSOLE_BRIDGE_logDebug("Distance between %s and %s: %f", cd1->getID().c_str(), cd2->getID().c_str(), d);
+ 
+   if (d < 0)  // a penetration was found, no further distance calculations are necessary
+   {
+@@ -480,7 +480,7 @@
+     if (cdata->res_->distance > d)
+     {
+       if (cdata->req_->verbose)
+-        logWarn("Distance between %s and %s: %f decreased", cd1->getID().c_str(), cd2->getID().c_str(), d);
++        CONSOLE_BRIDGE_logWarn("Distance between %s and %s: %f decreased", cd1->getID().c_str(), cd2->getID().c_str(), d);
+       cdata->res_->distance = d;
+     }
+   }
+@@ -532,14 +532,14 @@
+     {
+       if (cache_it->second->collision_geometry_data_->ptr.raw == (void*)data)
+       {
+-        //        logDebug("Collision data structures for object %s retrieved from cache.",
++        //        CONSOLE_BRIDGE_logDebug("Collision data structures for object %s retrieved from cache.",
+         //        cache_it->second->collision_geometry_data_->getID().c_str());
+         return cache_it->second;
+       }
+       else if (cache_it->second.unique())
+       {
+         const_cast<FCLGeometry*>(cache_it->second.get())->updateCollisionGeometryData(data, shape_index, false);
+-        //          logDebug("Collision data structures for object %s retrieved from cache after updating the source
++        //          CONSOLE_BRIDGE_logDebug("Collision data structures for object %s retrieved from cache after updating the source
+         //          object.", cache_it->second->collision_geometry_data_->getID().c_str());
+         return cache_it->second;
+       }
+@@ -569,7 +569,7 @@
+         // update the CollisionGeometryData; nobody has a pointer to this, so we can safely modify it
+         const_cast<FCLGeometry*>(obj_cache.get())->updateCollisionGeometryData(data, shape_index, true);
+ 
+-        //        logDebug("Collision data structures for attached body %s retrieved from the cache for world objects.",
++        //        CONSOLE_BRIDGE_logDebug("Collision data structures for attached body %s retrieved from the cache for world objects.",
+         //        obj_cache->collision_geometry_data_->getID().c_str());
+ 
+         // add to the new cache
+@@ -605,7 +605,7 @@
+         // update the CollisionGeometryData; nobody has a pointer to this, so we can safely modify it
+         const_cast<FCLGeometry*>(obj_cache.get())->updateCollisionGeometryData(data, shape_index, true);
+ 
+-        //          logDebug("Collision data structures for world object %s retrieved from the cache for attached
++        //          CONSOLE_BRIDGE_logDebug("Collision data structures for world object %s retrieved from the cache for attached
+         //          bodies.",
+         //                   obj_cache->collision_geometry_data_->getID().c_str());
+ 
+@@ -693,7 +693,7 @@
+       }
+       break;
+       default:
+-        logError("This shape type (%d) is not supported using FCL yet", (int)shape->type);
++        CONSOLE_BRIDGE_logError("This shape type (%d) is not supported using FCL yet", (int)shape->type);
+         cg_g = NULL;
+     }
+   }
+diff -u -r collision_detection_fcl/src/collision_robot_fcl.cpp collision_detection_fcl/src/collision_robot_fcl.cpp
+--- collision_detection_fcl/src/collision_robot_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection_fcl/src/collision_robot_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -62,7 +62,7 @@
+         fcl_objs_[index] = FCLCollisionObjectConstPtr(new fcl::CollisionObject(g->collision_geometry_));
+       }
+       else
+-        logError("Unable to construct collision geometry for link '%s'", links[i]->getName().c_str());
++        CONSOLE_BRIDGE_logError("Unable to construct collision geometry for link '%s'", links[i]->getName().c_str());
+     }
+ }
+ 
+@@ -151,7 +151,7 @@
+                                                                 const robot_state::RobotState& state1,
+                                                                 const robot_state::RobotState& state2) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionRobotFCL::checkSelfCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -159,7 +159,7 @@
+                                                                 const robot_state::RobotState& state2,
+                                                                 const AllowedCollisionMatrix& acm) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionRobotFCL::checkSelfCollisionHelper(const CollisionRequest& req, CollisionResult& res,
+@@ -199,7 +199,7 @@
+                                                                  const robot_state::RobotState& other_state1,
+                                                                  const robot_state::RobotState& other_state2) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionRobotFCL::checkOtherCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -210,7 +210,7 @@
+                                                                  const robot_state::RobotState& other_state2,
+                                                                  const AllowedCollisionMatrix& acm) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionRobotFCL::checkOtherCollisionHelper(const CollisionRequest& req,
+@@ -256,7 +256,7 @@
+       }
+     }
+     else
+-      logError("Updating padding or scaling for unknown link: '%s'", links[i].c_str());
++      CONSOLE_BRIDGE_logError("Updating padding or scaling for unknown link: '%s'", links[i].c_str());
+   }
+ }
+ 
+diff -u -r collision_detection_fcl/src/collision_world_fcl.cpp collision_detection_fcl/src/collision_world_fcl.cpp
+--- collision_detection_fcl/src/collision_world_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection_fcl/src/collision_world_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -103,7 +103,7 @@
+                                                                  const robot_state::RobotState& state1,
+                                                                  const robot_state::RobotState& state2) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionWorldFCL::checkRobotCollision(const CollisionRequest& req, CollisionResult& res,
+@@ -112,7 +112,7 @@
+                                                                  const robot_state::RobotState& state2,
+                                                                  const AllowedCollisionMatrix& acm) const
+ {
+-  logError("FCL continuous collision checking not yet implemented");
++  CONSOLE_BRIDGE_logError("FCL continuous collision checking not yet implemented");
+ }
+ 
+ void collision_detection::CollisionWorldFCL::checkRobotCollisionHelper(const CollisionRequest& req,
+diff -u -r collision_detection_fcl/test/test_fcl_collision_detection.cpp collision_detection_fcl/test/test_fcl_collision_detection.cpp
+--- collision_detection_fcl/test/test_fcl_collision_detection.cpp	2017-12-25 17:56:00.000000000 +0000
++++ collision_detection_fcl/test/test_fcl_collision_detection.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -499,7 +499,7 @@
+   EXPECT_GE(1.0, t);
+   // this is not really a failure; it is just that slow;
+   // looking into doing collision checking with a voxel grid.
+-  logInform("Adding boxes took %g", t);
++  CONSOLE_BRIDGE_logInform("Adding boxes took %g", t);
+ }
+ 
+ TEST_F(FclCollisionDetectionTester, MoveMesh)
+diff -u -r constraint_samplers/src/constraint_sampler.cpp constraint_samplers/src/constraint_sampler.cpp
+--- constraint_samplers/src/constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/src/constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -43,7 +43,7 @@
+   jmg_ = scene->getRobotModel()->getJointModelGroup(group_name);
+   if (!jmg_)
+   {
+-    logError("A JointModelGroup should have been specified for the constraint sampler");
++    CONSOLE_BRIDGE_logError("A JointModelGroup should have been specified for the constraint sampler");
+   }
+ }
+ 
+diff -u -r constraint_samplers/src/constraint_sampler_manager.cpp constraint_samplers/src/constraint_sampler_manager.cpp
+--- constraint_samplers/src/constraint_sampler_manager.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/src/constraint_sampler_manager.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -60,14 +60,14 @@
+     return constraint_samplers::ConstraintSamplerPtr();
+   std::stringstream ss;
+   ss << constr;
+-  logDebug("Attempting to construct constrained state sampler for group '%s', using constraints:\n%s.\n",
++  CONSOLE_BRIDGE_logDebug("Attempting to construct constrained state sampler for group '%s', using constraints:\n%s.\n",
+            jmg->getName().c_str(), ss.str().c_str());
+ 
+   ConstraintSamplerPtr joint_sampler;  // location to put chosen joint sampler if needed
+   // if there are joint constraints, we could possibly get a sampler from those
+   if (!constr.joint_constraints.empty())
+   {
+-    logDebug("There are joint constraints specified. Attempting to construct a JointConstraintSampler for group '%s'",
++    CONSOLE_BRIDGE_logDebug("There are joint constraints specified. Attempting to construct a JointConstraintSampler for group '%s'",
+              jmg->getName().c_str());
+ 
+     std::map<std::string, bool> joint_coverage;
+@@ -104,7 +104,7 @@
+       JointConstraintSamplerPtr sampler(new JointConstraintSampler(scene, jmg->getName()));
+       if (sampler->configure(jc))
+       {
+-        logDebug("Allocated a sampler satisfying joint constraints for group '%s'", jmg->getName().c_str());
++        CONSOLE_BRIDGE_logDebug("Allocated a sampler satisfying joint constraints for group '%s'", jmg->getName().c_str());
+         return sampler;
+       }
+     }
+@@ -116,7 +116,7 @@
+       JointConstraintSamplerPtr sampler(new JointConstraintSampler(scene, jmg->getName()));
+       if (sampler->configure(jc))
+       {
+-        logDebug("Temporary sampler satisfying joint constraints for group '%s' allocated. Looking for different types "
++        CONSOLE_BRIDGE_logDebug("Temporary sampler satisfying joint constraints for group '%s' allocated. Looking for different types "
+                  "of constraints before returning though.",
+                  jmg->getName().c_str());
+         joint_sampler = sampler;
+@@ -136,7 +136,7 @@
+   // should be used
+   if (ik_alloc)
+   {
+-    logDebug("There is an IK allocator for '%s'. Checking for corresponding position and/or orientation constraints",
++    CONSOLE_BRIDGE_logDebug("There is an IK allocator for '%s'. Checking for corresponding position and/or orientation constraints",
+              jmg->getName().c_str());
+ 
+     // keep track of which links we constrained
+@@ -170,7 +170,7 @@
+               {
+                 // assign the link to a new constraint sampler
+                 usedL[constr.position_constraints[p].link_name] = iks;
+-                logDebug("Allocated an IK-based sampler for group '%s' satisfying position and orientation constraints "
++                CONSOLE_BRIDGE_logDebug("Allocated an IK-based sampler for group '%s' satisfying position and orientation constraints "
+                          "on link '%s'",
+                          jmg->getName().c_str(), constr.position_constraints[p].link_name.c_str());
+               }
+@@ -202,7 +202,7 @@
+           if (use)
+           {
+             usedL[constr.position_constraints[p].link_name] = iks;
+-            logDebug("Allocated an IK-based sampler for group '%s' satisfying position constraints on link '%s'",
++            CONSOLE_BRIDGE_logDebug("Allocated an IK-based sampler for group '%s' satisfying position constraints on link '%s'",
+                      jmg->getName().c_str(), constr.position_constraints[p].link_name.c_str());
+           }
+         }
+@@ -230,7 +230,7 @@
+           if (use)
+           {
+             usedL[constr.orientation_constraints[o].link_name] = iks;
+-            logDebug("Allocated an IK-based sampler for group '%s' satisfying orientation constraints on link '%s'",
++            CONSOLE_BRIDGE_logDebug("Allocated an IK-based sampler for group '%s' satisfying orientation constraints on link '%s'",
+                      jmg->getName().c_str(), constr.orientation_constraints[o].link_name.c_str());
+           }
+         }
+@@ -249,7 +249,7 @@
+     }
+     else if (usedL.size() > 1)
+     {
+-      logDebug("Too many IK-based samplers for group '%s'. Keeping the one with minimal sampling volume",
++      CONSOLE_BRIDGE_logDebug("Too many IK-based samplers for group '%s'. Keeping the one with minimal sampling volume",
+                jmg->getName().c_str());
+       // find the sampler with the smallest sampling volume; delete the rest
+       IKConstraintSamplerPtr iks = usedL.begin()->second;
+@@ -279,7 +279,7 @@
+   // we now check to see if we can use samplers from subgroups
+   if (!ik_subgroup_alloc.empty())
+   {
+-    logDebug("There are IK allocators for subgroups of group '%s'. Checking for corresponding position and/or "
++    CONSOLE_BRIDGE_logDebug("There are IK allocators for subgroups of group '%s'. Checking for corresponding position and/or "
+              "orientation constraints",
+              jmg->getName().c_str());
+ 
+@@ -310,12 +310,12 @@
+       // if some matching constraints were found, construct the allocator
+       if (!sub_constr.orientation_constraints.empty() || !sub_constr.position_constraints.empty())
+       {
+-        logDebug("Attempting to construct a sampler for the '%s' subgroup of '%s'", it->first->getName().c_str(),
++        CONSOLE_BRIDGE_logDebug("Attempting to construct a sampler for the '%s' subgroup of '%s'", it->first->getName().c_str(),
+                  jmg->getName().c_str());
+         ConstraintSamplerPtr cs = selectDefaultSampler(scene, it->first->getName(), sub_constr);
+         if (cs)
+         {
+-          logDebug("Constructed a sampler for the joints corresponding to group '%s', but part of group '%s'",
++          CONSOLE_BRIDGE_logDebug("Constructed a sampler for the joints corresponding to group '%s', but part of group '%s'",
+                    it->first->getName().c_str(), jmg->getName().c_str());
+           some_sampler_valid = true;
+           samplers.push_back(cs);
+@@ -324,7 +324,7 @@
+     }
+     if (some_sampler_valid)
+     {
+-      logDebug("Constructing sampler for group '%s' as a union of %u samplers", jmg->getName().c_str(),
++      CONSOLE_BRIDGE_logDebug("Constructing sampler for group '%s' as a union of %u samplers", jmg->getName().c_str(),
+                (unsigned int)samplers.size());
+       return ConstraintSamplerPtr(new UnionConstraintSampler(scene, jmg->getName(), samplers));
+     }
+@@ -333,11 +333,11 @@
+   // if we've gotten here, just return joint sampler
+   if (joint_sampler)
+   {
+-    logDebug("Allocated a sampler satisfying joint constraints for group '%s'", jmg->getName().c_str());
++    CONSOLE_BRIDGE_logDebug("Allocated a sampler satisfying joint constraints for group '%s'", jmg->getName().c_str());
+     return joint_sampler;
+   }
+ 
+-  logDebug("No constraints sampler allocated for group '%s'", jmg->getName().c_str());
++  CONSOLE_BRIDGE_logDebug("No constraints sampler allocated for group '%s'", jmg->getName().c_str());
+ 
+   return ConstraintSamplerPtr();
+ }
+diff -u -r constraint_samplers/src/constraint_sampler_tools.cpp constraint_samplers/src/constraint_sampler_tools.cpp
+--- constraint_samplers/src/constraint_sampler_tools.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/src/constraint_sampler_tools.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -59,7 +59,7 @@
+ {
+   if (!sampler)
+   {
+-    logError("No sampler specified for counting samples per second");
++    CONSOLE_BRIDGE_logError("No sampler specified for counting samples per second");
+     return 0.0;
+   }
+   robot_state::RobotState ks(reference_state);
+@@ -86,7 +86,7 @@
+ {
+   if (!sampler)
+   {
+-    logError("No sampler specified for visualizing distribution of samples");
++    CONSOLE_BRIDGE_logError("No sampler specified for visualizing distribution of samples");
+     return;
+   }
+   const robot_state::LinkModel* lm = reference_state.getLinkModel(link_name);
+diff -u -r constraint_samplers/src/default_constraint_samplers.cpp constraint_samplers/src/default_constraint_samplers.cpp
+--- constraint_samplers/src/default_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/src/default_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -61,7 +61,7 @@
+ 
+   if (!jmg_)
+   {
+-    logError("NULL group specified for constraint sampler");
++    CONSOLE_BRIDGE_logError("NULL group specified for constraint sampler");
+     return false;
+   }
+ 
+@@ -91,14 +91,14 @@
+         std::max(joint_bounds.min_position_, jc[i].getDesiredJointPosition() - jc[i].getJointToleranceBelow()),
+         std::min(joint_bounds.max_position_, jc[i].getDesiredJointPosition() + jc[i].getJointToleranceAbove()));
+ 
+-    logDebug("Bounds for %s JointConstraint are %g %g", jc[i].getJointVariableName().c_str(), ji.min_bound_,
++    CONSOLE_BRIDGE_logDebug("Bounds for %s JointConstraint are %g %g", jc[i].getJointVariableName().c_str(), ji.min_bound_,
+              ji.max_bound_);
+ 
+     if (ji.min_bound_ > ji.max_bound_ + std::numeric_limits<double>::epsilon())
+     {
+       std::stringstream cs;
+       jc[i].print(cs);
+-      logError("The constraints for joint '%s' are such that there are no possible values for the joint: min_bound: "
++      CONSOLE_BRIDGE_logError("The constraints for joint '%s' are such that there are no possible values for the joint: min_bound: "
+                "%g, max_bound: %g. Failing.\n",
+                jm->getName().c_str(), ji.min_bound_, ji.max_bound_);
+       clear();
+@@ -109,7 +109,7 @@
+ 
+   if (!some_valid_constraint)
+   {
+-    logWarn("No valid joint constraints");
++    CONSOLE_BRIDGE_logWarn("No valid joint constraints");
+     return false;
+   }
+ 
+@@ -151,7 +151,7 @@
+ {
+   if (!is_valid_)
+   {
+-    logWarn("JointConstraintSampler not configured, won't sample");
++    CONSOLE_BRIDGE_logWarn("JointConstraintSampler not configured, won't sample");
+     return false;
+   }
+ 
+@@ -246,7 +246,7 @@
+       (sp.position_constraint_ && sp.orientation_constraint_ && !sp.position_constraint_->enabled() &&
+        !sp.orientation_constraint_->enabled()))
+   {
+-    logWarn("No enabled constraints in sampling pose");
++    CONSOLE_BRIDGE_logWarn("No enabled constraints in sampling pose");
+     return false;
+   }
+ 
+@@ -256,7 +256,7 @@
+     if (sampling_pose_.position_constraint_->getLinkModel()->getName() !=
+         sampling_pose_.orientation_constraint_->getLinkModel()->getName())
+     {
+-      logError("Position and orientation constraints need to be specified for the same link in order to use IK-based "
++      CONSOLE_BRIDGE_logError("Position and orientation constraints need to be specified for the same link in order to use IK-based "
+                "sampling");
+       return false;
+     }
+@@ -268,7 +268,7 @@
+   kb_ = jmg_->getSolverInstance();
+   if (!kb_)
+   {
+-    logWarn("No solver instance in setup");
++    CONSOLE_BRIDGE_logWarn("No solver instance in setup");
+     is_valid_ = false;
+     return false;
+   }
+@@ -340,7 +340,7 @@
+ {
+   if (!kb_)
+   {
+-    logError("No IK solver");
++    CONSOLE_BRIDGE_logError("No IK solver");
+     return false;
+   }
+ 
+@@ -352,7 +352,7 @@
+   if (transform_ik_)
+     if (!jmg_->getParentModel().hasLinkModel(ik_frame_))
+     {
+-      logError("The IK solver expects requests in frame '%s' but this frame is not known to the sampler. Ignoring "
++      CONSOLE_BRIDGE_logError("The IK solver expects requests in frame '%s' but this frame is not known to the sampler. Ignoring "
+                "transformation (IK may fail)",
+                ik_frame_.c_str());
+       transform_ik_ = false;
+@@ -398,7 +398,7 @@
+ 
+   if (wrong_link)
+   {
+-    logError("IK cannot be performed for link '%s'. The solver can report IK solutions for link '%s'.",
++    CONSOLE_BRIDGE_logError("IK cannot be performed for link '%s'. The solver can report IK solutions for link '%s'.",
+              sampling_pose_.position_constraint_ ?
+                  sampling_pose_.position_constraint_->getLinkModel()->getName().c_str() :
+                  sampling_pose_.orientation_constraint_->getLinkModel()->getName().c_str(),
+@@ -414,7 +414,7 @@
+   if (ks.dirtyLinkTransforms())
+   {
+     // samplePose below requires accurate transforms
+-    logError("IKConstraintSampler received dirty robot state, but valid transforms are required. Failing.");
++    CONSOLE_BRIDGE_logError("IKConstraintSampler received dirty robot state, but valid transforms are required. Failing.");
+     return false;
+   }
+ 
+@@ -433,13 +433,13 @@
+         }
+       if (!found)
+       {
+-        logError("Unable to sample a point inside the constraint region");
++        CONSOLE_BRIDGE_logError("Unable to sample a point inside the constraint region");
+         return false;
+       }
+     }
+     else
+     {
+-      logError("Unable to sample a point inside the constraint region. Constraint region is empty when it should not "
++      CONSOLE_BRIDGE_logError("Unable to sample a point inside the constraint region. Constraint region is empty when it should not "
+                "be.");
+       return false;
+     }
+@@ -534,7 +534,7 @@
+ {
+   if (!is_valid_)
+   {
+-    logWarn("IKConstraintSampler not configured, won't sample");
++    CONSOLE_BRIDGE_logWarn("IKConstraintSampler not configured, won't sample");
+     return false;
+   }
+ 
+@@ -551,7 +551,7 @@
+     if (!samplePose(point, quat, reference_state, max_attempts))
+     {
+       if (verbose_)
+-        logInform("IK constraint sampler was unable to produce a pose to run IK for");
++        CONSOLE_BRIDGE_logInform("IK constraint sampler was unable to produce a pose to run IK for");
+       return false;
+     }
+ 
+@@ -642,9 +642,9 @@
+     if (error.val != moveit_msgs::MoveItErrorCodes::NO_IK_SOLUTION &&
+         error.val != moveit_msgs::MoveItErrorCodes::INVALID_ROBOT_STATE &&
+         error.val != moveit_msgs::MoveItErrorCodes::TIMED_OUT)
+-      logError("IK solver failed with error %d", error.val);
++      CONSOLE_BRIDGE_logError("IK solver failed with error %d", error.val);
+     else if (verbose_)
+-      logInform("IK failed");
++      CONSOLE_BRIDGE_logInform("IK failed");
+   }
+   return false;
+ }
+diff -u -r constraint_samplers/src/union_constraint_sampler.cpp constraint_samplers/src/union_constraint_sampler.cpp
+--- constraint_samplers/src/union_constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/src/union_constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -80,7 +80,7 @@
+         }
+     if (b_depends_on_a && a_depends_on_b)
+     {
+-      logWarn("Circular frame dependency! Sampling will likely produce invalid results (sampling for groups '%s' and "
++      CONSOLE_BRIDGE_logWarn("Circular frame dependency! Sampling will likely produce invalid results (sampling for groups '%s' and "
+               "'%s')",
+               a->getJointModelGroup()->getName().c_str(), b->getJointModelGroup()->getName().c_str());
+       return true;
+@@ -118,7 +118,7 @@
+     for (std::size_t j = 0; j < fd.size(); ++j)
+       frame_depends_.push_back(fd[j]);
+ 
+-    logDebug("Union sampler for group '%s' includes sampler for group '%s'", jmg_->getName().c_str(),
++    CONSOLE_BRIDGE_logDebug("Union sampler for group '%s' includes sampler for group '%s'", jmg_->getName().c_str(),
+              samplers_[i]->getJointModelGroup()->getName().c_str());
+   }
+ }
+diff -u -r constraint_samplers/test/pr2_arm_ik.cpp constraint_samplers/test/pr2_arm_ik.cpp
+--- constraint_samplers/test/pr2_arm_ik.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/test/pr2_arm_ik.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -67,9 +67,9 @@
+     if (!joint)
+     {
+       if (link->parent_joint)
+-        logError("Could not find joint: %s", link->parent_joint->name.c_str());
++        CONSOLE_BRIDGE_logError("Could not find joint: %s", link->parent_joint->name.c_str());
+       else
+-        logError("Link %s has no parent joint", link->name.c_str());
++        CONSOLE_BRIDGE_logError("Link %s has no parent joint", link->name.c_str());
+       return false;
+     }
+     if (joint->type != urdf::Joint::UNKNOWN && joint->type != urdf::Joint::FIXED)
+@@ -77,7 +77,7 @@
+       link_offset.push_back(link->parent_joint->parent_to_joint_origin_transform);
+       angle_multipliers_.push_back(joint->axis.x * fabs(joint->axis.x) + joint->axis.y * fabs(joint->axis.y) +
+                                    joint->axis.z * fabs(joint->axis.z));
+-      logDebug("Joint axis: %d, %f, %f, %f", 6 - num_joints, joint->axis.x, joint->axis.y, joint->axis.z);
++      CONSOLE_BRIDGE_logDebug("Joint axis: %d, %f, %f, %f", 6 - num_joints, joint->axis.x, joint->axis.y, joint->axis.z);
+       if (joint->type != urdf::Joint::CONTINUOUS)
+       {
+         if (joint->safety)
+@@ -96,7 +96,7 @@
+           {
+             min_angles_.push_back(0.0);
+             max_angles_.push_back(0.0);
+-            logWarn("No joint limits or joint '%s'", joint->name.c_str());
++            CONSOLE_BRIDGE_logWarn("No joint limits or joint '%s'", joint->name.c_str());
+           }
+         }
+         continuous_joint_.push_back(false);
+@@ -128,7 +128,7 @@
+ 
+   if (num_joints != 7)
+   {
+-    logError("PR2ArmIK:: Chain from %s to %s does not have 7 joints", root_name.c_str(), tip_name.c_str());
++    CONSOLE_BRIDGE_logError("PR2ArmIK:: Chain from %s to %s does not have 7 joints", root_name.c_str(), tip_name.c_str());
+     return false;
+   }
+ 
+diff -u -r constraint_samplers/test/test_constraint_samplers.cpp constraint_samplers/test/test_constraint_samplers.cpp
+--- constraint_samplers/test/test_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
++++ constraint_samplers/test/test_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -1128,7 +1128,7 @@
+     if (s->sample(ks, ks_const, 1))
+       succ++;
+   }
+-  logInform("Success rate for IK Constraint Sampler with position & orientation constraints for both arms: %lf",
++  CONSOLE_BRIDGE_logInform("Success rate for IK Constraint Sampler with position & orientation constraints for both arms: %lf",
+             (double)succ / (double)NT);
+ }
+ 
+diff -u -r distance_field/include/moveit/distance_field/propagation_distance_field.h distance_field/include/moveit/distance_field/propagation_distance_field.h
+--- distance_field/include/moveit/distance_field/propagation_distance_field.h	2017-12-25 17:56:00.000000000 +0000
++++ distance_field/include/moveit/distance_field/propagation_distance_field.h	2018-02-28 12:06:37.668217586 +0000
+@@ -521,14 +521,14 @@
+   void initNeighborhoods();
+ 
+   /**
+-   * \brief Debug function that prints all voxels in a set to logDebug
++   * \brief Debug function that prints all voxels in a set to CONSOLE_BRIDGE_logDebug
+    *
+    * @param set Voxel set to print
+    */
+   void print(const VoxelSet& set);
+ 
+   /**
+-   * \brief Debug function that prints all points in a vector to logDebug
++   * \brief Debug function that prints all points in a vector to CONSOLE_BRIDGE_logDebug
+    *
+    * @param points Points to print
+    */
+diff -u -r distance_field/src/distance_field.cpp distance_field/src/distance_field.cpp
+--- distance_field/src/distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ distance_field/src/distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -203,7 +203,7 @@
+     const shapes::OcTree* oc = dynamic_cast<const shapes::OcTree*>(shape);
+     if (!oc)
+     {
+-      logError("Problem dynamic casting shape that claims to be OcTree");
++      CONSOLE_BRIDGE_logError("Problem dynamic casting shape that claims to be OcTree");
+       return false;
+     }
+     getOcTreePoints(oc->octree.get(), points);
+@@ -291,7 +291,7 @@
+ {
+   if (shape->type == shapes::OCTREE)
+   {
+-    logWarn("Move shape not supported for Octree");
++    CONSOLE_BRIDGE_logWarn("Move shape not supported for Octree");
+     return;
+   }
+   bodies::Body* body = bodies::createBodyFromShape(shape);
+diff -u -r distance_field/src/propagation_distance_field.cpp distance_field/src/propagation_distance_field.cpp
+--- distance_field/src/propagation_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ distance_field/src/propagation_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -101,26 +101,26 @@
+ 
+ void PropagationDistanceField::print(const VoxelSet& set)
+ {
+-  logDebug("[");
++  CONSOLE_BRIDGE_logDebug("[");
+   VoxelSet::const_iterator it;
+   for (it = set.begin(); it != set.end(); ++it)
+   {
+     Eigen::Vector3i loc1 = *it;
+-    logDebug("%d, %d, %d ", loc1.x(), loc1.y(), loc1.z());
++    CONSOLE_BRIDGE_logDebug("%d, %d, %d ", loc1.x(), loc1.y(), loc1.z());
+   }
+-  logDebug("] size=%u\n", (unsigned int)set.size());
++  CONSOLE_BRIDGE_logDebug("] size=%u\n", (unsigned int)set.size());
+ }
+ 
+ void PropagationDistanceField::print(const EigenSTL::vector_Vector3d& points)
+ {
+-  logDebug("[");
++  CONSOLE_BRIDGE_logDebug("[");
+   EigenSTL::vector_Vector3d::const_iterator it;
+   for (it = points.begin(); it != points.end(); ++it)
+   {
+     Eigen::Vector3d loc1 = *it;
+-    logDebug("%g, %g, %g ", loc1.x(), loc1.y(), loc1.z());
++    CONSOLE_BRIDGE_logDebug("%g, %g, %g ", loc1.x(), loc1.y(), loc1.z());
+   }
+-  logDebug("] size=%u\n", (unsigned int)points.size());
++  CONSOLE_BRIDGE_logDebug("] size=%u\n", (unsigned int)points.size());
+ }
+ 
+ void PropagationDistanceField::updatePointsInField(const EigenSTL::vector_Vector3d& old_points,
+@@ -166,19 +166,19 @@
+     {
+       new_not_in_current.push_back(new_not_old[i]);
+     }
+-    // logInform("Adding obstacle voxel %d %d %d", (*it).x(), (*it).y(), (*it).z());
++    // CONSOLE_BRIDGE_logInform("Adding obstacle voxel %d %d %d", (*it).x(), (*it).y(), (*it).z());
+   }
+ 
+   removeObstacleVoxels(old_not_new);
+   addNewObstacleVoxels(new_not_in_current);
+ 
+-  // logDebug( "new=" );
++  // CONSOLE_BRIDGE_logDebug( "new=" );
+   // print(points_added);
+-  // logDebug( "removed=" );
++  // CONSOLE_BRIDGE_logDebug( "removed=" );
+   // print(points_removed);
+-  // logDebug( "obstacle_voxel_locations_=" );
++  // CONSOLE_BRIDGE_logDebug( "obstacle_voxel_locations_=" );
+   // print(object_voxel_locations_);
+-  // logDebug("");
++  // CONSOLE_BRIDGE_logDebug("");
+ }
+ 
+ void PropagationDistanceField::addPointsToField(const EigenSTL::vector_Vector3d& points)
+@@ -415,7 +415,7 @@
+       // This will never happen.  update_direction_ is always set before voxel is added to bucket queue.
+       if (vptr->update_direction_ < 0 || vptr->update_direction_ > 26)
+       {
+-        logError("PROGRAMMING ERROR: Invalid update direction detected: %d", vptr->update_direction_);
++        CONSOLE_BRIDGE_logError("PROGRAMMING ERROR: Invalid update direction detected: %d", vptr->update_direction_);
+         continue;
+       }
+ 
+@@ -473,7 +473,7 @@
+       // negative_bucket_queue_.
+       if (vptr->negative_update_direction_ < 0 || vptr->negative_update_direction_ > 26)
+       {
+-        logError("PROGRAMMING ERROR: Invalid update direction detected: %d", vptr->update_direction_);
++        CONSOLE_BRIDGE_logError("PROGRAMMING ERROR: Invalid update direction detected: %d", vptr->update_direction_);
+         continue;
+       }
+ 
+diff -u -r distance_field/test/test_distance_field.cpp distance_field/test/test_distance_field.cpp
+--- distance_field/test/test_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ distance_field/test/test_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -91,7 +91,7 @@
+       {
+         if (pdf.getCell(x, y, z).distance_square_ == 0)
+         {
+-          // logInform("Obstacle cell %d %d %d", x, y, z);
++          // CONSOLE_BRIDGE_logInform("Obstacle cell %d %d %d", x, y, z);
+         }
+       }
+     }
+@@ -353,7 +353,7 @@
+   EigenSTL::vector_Vector3d points;
+   points.push_back(point1);
+   points.push_back(point2);
+-  logInform("Adding %u points", points.size());
++  CONSOLE_BRIDGE_logInform("Adding %u points", points.size());
+   df.addPointsToField(points);
+   // print(df, numX, numY, numZ);
+ 
+@@ -469,7 +469,7 @@
+   }
+ 
+   df.reset();
+-  logInform("Adding %u points", points.size());
++  CONSOLE_BRIDGE_logInform("Adding %u points", points.size());
+   df.addPointsToField(points);
+   // print(df, numX, numY, numZ);
+   // printNeg(df, numX, numY, numZ);
+@@ -767,7 +767,7 @@
+ 
+         if (!valid)
+         {
+-          logWarn("Something wrong");
++          CONSOLE_BRIDGE_logWarn("Something wrong");
+           continue;
+         }
+         bad_vec.push_back(loc);
+diff -u -r dynamics_solver/src/dynamics_solver.cpp dynamics_solver/src/dynamics_solver.cpp
+--- dynamics_solver/src/dynamics_solver.cpp	2017-12-25 17:56:00.000000000 +0000
++++ dynamics_solver/src/dynamics_solver.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -74,7 +74,7 @@
+ 
+   if (!joint_model_group_->isChain())
+   {
+-    logError("moveit.dynamics_solver: Group '%s' is not a chain. Will not initialize dynamics solver",
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Group '%s' is not a chain. Will not initialize dynamics solver",
+              group_name.c_str());
+     joint_model_group_ = NULL;
+     return;
+@@ -82,7 +82,7 @@
+ 
+   if (joint_model_group_->getMimicJointModels().size() > 0)
+   {
+-    logError("moveit.dynamics_solver: Group '%s' has a mimic joint. Will not initialize dynamics solver",
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Group '%s' has a mimic joint. Will not initialize dynamics solver",
+              group_name.c_str());
+     joint_model_group_ = NULL;
+     return;
+@@ -91,7 +91,7 @@
+   const robot_model::JointModel* joint = joint_model_group_->getJointRoots()[0];
+   if (!joint->getParentLinkModel())
+   {
+-    logError("moveit.dynamics_solver: Group '%s' does not have a parent link", group_name.c_str());
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Group '%s' does not have a parent link", group_name.c_str());
+     joint_model_group_ = NULL;
+     return;
+   }
+@@ -99,7 +99,7 @@
+   base_name_ = joint->getParentLinkModel()->getName();
+ 
+   tip_name_ = joint_model_group_->getLinkModelNames().back();
+-  logDebug("moveit.dynamics_solver: Base name: '%s', Tip name: '%s'", base_name_.c_str(), tip_name_.c_str());
++  CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Base name: '%s', Tip name: '%s'", base_name_.c_str(), tip_name_.c_str());
+ 
+   const urdf::ModelInterfaceSharedPtr urdf_model = robot_model_->getURDF();
+   const srdf::ModelConstSharedPtr srdf_model = robot_model_->getSRDF();
+@@ -107,13 +107,13 @@
+ 
+   if (!kdl_parser::treeFromUrdfModel(*urdf_model, tree))
+   {
+-    logError("moveit.dynamics_solver: Could not initialize tree object");
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Could not initialize tree object");
+     joint_model_group_ = NULL;
+     return;
+   }
+   if (!tree.getChain(base_name_, tip_name_, kdl_chain_))
+   {
+-    logError("moveit.dynamics_solver: Could not initialize chain object");
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Could not initialize chain object");
+     joint_model_group_ = NULL;
+     return;
+   }
+@@ -136,7 +136,7 @@
+   KDL::Vector gravity(gravity_vector.x, gravity_vector.y,
+                       gravity_vector.z);  // \todo Not sure if KDL expects the negative of this (Sachin)
+   gravity_ = gravity.Norm();
+-  logDebug("moveit.dynamics_solver: Gravity norm set to %f", gravity_);
++  CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Gravity norm set to %f", gravity_);
+ 
+   chain_id_solver_.reset(new KDL::ChainIdSolver_RNE(kdl_chain_, gravity));
+ }
+@@ -147,32 +147,32 @@
+ {
+   if (!joint_model_group_)
+   {
+-    logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
++    CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
+     return false;
+   }
+   if (joint_angles.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
+     return false;
+   }
+   if (joint_velocities.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint velocities vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint velocities vector should be size %d", num_joints_);
+     return false;
+   }
+   if (joint_accelerations.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint accelerations vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint accelerations vector should be size %d", num_joints_);
+     return false;
+   }
+   if (wrenches.size() != num_segments_)
+   {
+-    logError("moveit.dynamics_solver: Wrenches vector should be size %d", num_segments_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Wrenches vector should be size %d", num_segments_);
+     return false;
+   }
+   if (torques.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Torques vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Torques vector should be size %d", num_joints_);
+     return false;
+   }
+ 
+@@ -200,7 +200,7 @@
+ 
+   if (chain_id_solver_->CartToJnt(kdl_angles, kdl_velocities, kdl_accelerations, kdl_wrenches, kdl_torques) < 0)
+   {
+-    logError("moveit.dynamics_solver: Something went wrong computing torques");
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Something went wrong computing torques");
+     return false;
+   }
+ 
+@@ -215,12 +215,12 @@
+ {
+   if (!joint_model_group_)
+   {
+-    logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
++    CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
+     return false;
+   }
+   if (joint_angles.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
+     return false;
+   }
+   std::vector<double> joint_velocities(num_joints_, 0.0), joint_accelerations(num_joints_, 0.0);
+@@ -248,7 +248,7 @@
+   wrenches.back().force = transformVector(transform, wrenches.back().force);
+   wrenches.back().torque = transformVector(transform, wrenches.back().torque);
+ 
+-  logDebug("moveit.dynamics_solver: New wrench (local frame): %f %f %f", wrenches.back().force.x,
++  CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: New wrench (local frame): %f %f %f", wrenches.back().force.x,
+            wrenches.back().force.y, wrenches.back().force.z);
+ 
+   if (!getTorques(joint_angles, joint_velocities, joint_accelerations, wrenches, torques))
+@@ -260,9 +260,9 @@
+     double payload_joint = std::max<double>((max_torques_[i] - zero_torques[i]) / (torques[i] - zero_torques[i]),
+                                             (-max_torques_[i] - zero_torques[i]) /
+                                                 (torques[i] - zero_torques[i]));  // because we set the payload to 1.0
+-    logDebug("moveit.dynamics_solver: Joint: %d, Actual Torque: %f, Max Allowed: %f, Gravity: %f", i, torques[i],
++    CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Joint: %d, Actual Torque: %f, Max Allowed: %f, Gravity: %f", i, torques[i],
+              max_torques_[i], zero_torques[i]);
+-    logDebug("moveit.dynamics_solver: Joint: %d, Payload Allowed (N): %f", i, payload_joint);
++    CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Joint: %d, Payload Allowed (N): %f", i, payload_joint);
+     if (payload_joint < min_payload)
+     {
+       min_payload = payload_joint;
+@@ -270,7 +270,7 @@
+     }
+   }
+   payload = min_payload / gravity_;
+-  logDebug("moveit.dynamics_solver: Max payload (kg): %f", payload);
++  CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Max payload (kg): %f", payload);
+   return true;
+ }
+ 
+@@ -279,17 +279,17 @@
+ {
+   if (!joint_model_group_)
+   {
+-    logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
++    CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: Did not construct DynamicsSolver object properly. Check error logs.");
+     return false;
+   }
+   if (joint_angles.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint angles vector should be size %d", num_joints_);
+     return false;
+   }
+   if (joint_torques.size() != num_joints_)
+   {
+-    logError("moveit.dynamics_solver: Joint torques vector should be size %d", num_joints_);
++    CONSOLE_BRIDGE_logError("moveit.dynamics_solver: Joint torques vector should be size %d", num_joints_);
+     return false;
+   }
+   std::vector<double> joint_velocities(num_joints_, 0.0), joint_accelerations(num_joints_, 0.0);
+@@ -303,7 +303,7 @@
+   wrenches.back().force = transformVector(transform, wrenches.back().force);
+   wrenches.back().torque = transformVector(transform, wrenches.back().torque);
+ 
+-  logDebug("moveit.dynamics_solver: New wrench (local frame): %f %f %f", wrenches.back().force.x,
++  CONSOLE_BRIDGE_logDebug("moveit.dynamics_solver: New wrench (local frame): %f %f %f", wrenches.back().force.x,
+            wrenches.back().force.y, wrenches.back().force.z);
+ 
+   if (!getTorques(joint_angles, joint_velocities, joint_accelerations, wrenches, joint_torques))
+diff -u -r exceptions/src/exceptions.cpp exceptions/src/exceptions.cpp
+--- exceptions/src/exceptions.cpp	2017-12-25 17:56:00.000000000 +0000
++++ exceptions/src/exceptions.cpp	2018-02-28 12:06:37.668217586 +0000
+@@ -39,10 +39,10 @@
+ 
+ moveit::ConstructException::ConstructException(const std::string& what_arg) : std::runtime_error(what_arg)
+ {
+-  logError("Error during construction of object: %s\nException thrown.", what_arg.c_str());
++  CONSOLE_BRIDGE_logError("Error during construction of object: %s\nException thrown.", what_arg.c_str());
+ }
+ 
+ moveit::Exception::Exception(const std::string& what_arg) : std::runtime_error(what_arg)
+ {
+-  logError("%s\nException thrown.", what_arg.c_str());
++  CONSOLE_BRIDGE_logError("%s\nException thrown.", what_arg.c_str());
+ }
+diff -u -r kinematic_constraints/src/kinematic_constraint.cpp kinematic_constraints/src/kinematic_constraint.cpp
+--- kinematic_constraints/src/kinematic_constraint.cpp	2017-12-25 17:56:00.000000000 +0000
++++ kinematic_constraints/src/kinematic_constraint.cpp	2018-02-28 12:06:37.669217586 +0000
+@@ -76,7 +76,7 @@
+   // testing tolerances first
+   if (jc.tolerance_above < 0.0 || jc.tolerance_below < 0.0)
+   {
+-    logWarn("JointConstraint tolerance values must be positive.");
++    CONSOLE_BRIDGE_logWarn("JointConstraint tolerance values must be positive.");
+     joint_model_ = NULL;
+     return false;
+   }
+@@ -105,12 +105,12 @@
+       // check if the joint has 1 DOF (the only kind we can handle)
+       if (joint_model_->getVariableCount() == 0)
+       {
+-        logError("Joint '%s' has no parameters to constrain", jc.joint_name.c_str());
++        CONSOLE_BRIDGE_logError("Joint '%s' has no parameters to constrain", jc.joint_name.c_str());
+         joint_model_ = NULL;
+       }
+       else if (joint_model_->getVariableCount() > 1)
+       {
+-        logError("Joint '%s' has more than one parameter to constrain. This type of constraint is not supported.",
++        CONSOLE_BRIDGE_logError("Joint '%s' has more than one parameter to constrain. This type of constraint is not supported.",
+                  jc.joint_name.c_str());
+         joint_model_ = NULL;
+       }
+@@ -127,7 +127,7 @@
+         }
+       if (found < 0)
+       {
+-        logError("Local variable name '%s' is not known to joint '%s'", local_variable_name_.c_str(),
++        CONSOLE_BRIDGE_logError("Local variable name '%s' is not known to joint '%s'", local_variable_name_.c_str(),
+                  joint_model_->getName().c_str());
+         joint_model_ = NULL;
+       }
+@@ -168,21 +168,21 @@
+       {
+         joint_position_ = bounds.min_position_;
+         joint_tolerance_above_ = std::numeric_limits<double>::epsilon();
+-        logWarn("Joint %s is constrained to be below the minimum bounds. Assuming minimum bounds instead.",
++        CONSOLE_BRIDGE_logWarn("Joint %s is constrained to be below the minimum bounds. Assuming minimum bounds instead.",
+                 jc.joint_name.c_str());
+       }
+       else if (bounds.max_position_ < joint_position_ - joint_tolerance_below_)
+       {
+         joint_position_ = bounds.max_position_;
+         joint_tolerance_below_ = std::numeric_limits<double>::epsilon();
+-        logWarn("Joint %s is constrained to be above the maximum bounds. Assuming maximum bounds instead.",
++        CONSOLE_BRIDGE_logWarn("Joint %s is constrained to be above the maximum bounds. Assuming maximum bounds instead.",
+                 jc.joint_name.c_str());
+       }
+     }
+ 
+     if (jc.weight <= std::numeric_limits<double>::epsilon())
+     {
+-      logWarn("The weight on constraint for joint '%s' is very near zero.  Setting to 1.0.", jc.joint_name.c_str());
++      CONSOLE_BRIDGE_logWarn("The weight on constraint for joint '%s' is very near zero.  Setting to 1.0.", jc.joint_name.c_str());
+       constraint_weight_ = 1.0;
+     }
+     else
+@@ -229,7 +229,7 @@
+   bool result = dif <= (joint_tolerance_above_ + 2.0 * std::numeric_limits<double>::epsilon()) &&
+                 dif >= (-joint_tolerance_below_ - 2.0 * std::numeric_limits<double>::epsilon());
+   if (verbose)
+-    logInform("Constraint %s:: Joint name: '%s', actual value: %f, desired value: %f, tolerance_above: %f, "
++    CONSOLE_BRIDGE_logInform("Constraint %s:: Joint name: '%s', actual value: %f, desired value: %f, tolerance_above: %f, "
+               "tolerance_below: %f",
+               result ? "satisfied" : "violated", joint_variable_name_.c_str(), current_joint_position, joint_position_,
+               joint_tolerance_above_, joint_tolerance_below_);
+@@ -277,14 +277,14 @@
+   link_model_ = robot_model_->getLinkModel(pc.link_name);
+   if (link_model_ == NULL)
+   {
+-    logWarn("Position constraint link model %s not found in kinematic model.  Constraint invalid.",
++    CONSOLE_BRIDGE_logWarn("Position constraint link model %s not found in kinematic model.  Constraint invalid.",
+             pc.link_name.c_str());
+     return false;
+   }
+ 
+   if (pc.header.frame_id.empty())
+   {
+-    logWarn("No frame specified for position constraint on link '%s'!", pc.link_name.c_str());
++    CONSOLE_BRIDGE_logWarn("No frame specified for position constraint on link '%s'!", pc.link_name.c_str());
+     return false;
+   }
+ 
+@@ -310,7 +310,7 @@
+     {
+       if (pc.constraint_region.primitive_poses.size() <= i)
+       {
+-        logWarn("Constraint region message does not contain enough primitive poses");
++        CONSOLE_BRIDGE_logWarn("Constraint region message does not contain enough primitive poses");
+         continue;
+       }
+       constraint_region_.push_back(bodies::BodyPtr(bodies::createBodyFromShape(shape.get())));
+@@ -326,7 +326,7 @@
+       }
+     }
+     else
+-      logWarn("Could not construct primitive shape %d", i);
++      CONSOLE_BRIDGE_logWarn("Could not construct primitive shape %d", i);
+   }
+ 
+   // load meshes
+@@ -337,7 +337,7 @@
+     {
+       if (pc.constraint_region.mesh_poses.size() <= i)
+       {
+-        logWarn("Constraint region message does not contain enough primitive poses");
++        CONSOLE_BRIDGE_logWarn("Constraint region message does not contain enough primitive poses");
+         continue;
+       }
+       constraint_region_.push_back(bodies::BodyPtr(bodies::createBodyFromShape(shape.get())));
+@@ -354,13 +354,13 @@
+     }
+     else
+     {
+-      logWarn("Could not construct mesh shape %d", i);
++      CONSOLE_BRIDGE_logWarn("Could not construct mesh shape %d", i);
+     }
+   }
+ 
+   if (pc.weight <= std::numeric_limits<double>::epsilon())
+   {
+-    logWarn("The weight on position constraint for link '%s' is near zero.  Setting to 1.0.", pc.link_name.c_str());
++    CONSOLE_BRIDGE_logWarn("The weight on position constraint for link '%s' is near zero.  Setting to 1.0.", pc.link_name.c_str());
+     constraint_weight_ = 1.0;
+   }
+   else
+@@ -419,10 +419,10 @@
+   double dz = desired.z() - pt.z();
+   if (verbose)
+   {
+-    logInform("Position constraint %s on link '%s'. Desired: %f, %f, %f, current: %f, %f, %f",
++    CONSOLE_BRIDGE_logInform("Position constraint %s on link '%s'. Desired: %f, %f, %f, current: %f, %f, %f",
+               result ? "satisfied" : "violated", name.c_str(), desired.x(), desired.y(), desired.z(), pt.x(), pt.y(),
+               pt.z());
+-    logInform("Differences %g %g %g", dx, dy, dz);
++    CONSOLE_BRIDGE_logInform("Differences %g %g %g", dx, dy, dz);
+   }
+   return ConstraintEvaluationResult(result, weight * sqrt(dx * dx + dy * dy + dz * dz));
+ }
+@@ -498,20 +498,20 @@
+   link_model_ = robot_model_->getLinkModel(oc.link_name);
+   if (!link_model_)
+   {
+-    logWarn("Could not find link model for link name %s", oc.link_name.c_str());
++    CONSOLE_BRIDGE_logWarn("Could not find link model for link name %s", oc.link_name.c_str());
+     return false;
+   }
+   Eigen::Quaterniond q;
+   tf::quaternionMsgToEigen(oc.orientation, q);
+   if (fabs(q.norm() - 1.0) > 1e-3)
+   {
+-    logWarn("Orientation constraint for link '%s' is probably incorrect: %f, %f, %f, %f. Assuming identity instead.",
++    CONSOLE_BRIDGE_logWarn("Orientation constraint for link '%s' is probably incorrect: %f, %f, %f, %f. Assuming identity instead.",
+             oc.link_name.c_str(), oc.orientation.x, oc.orientation.y, oc.orientation.z, oc.orientation.w);
+     q = Eigen::Quaterniond(1.0, 0.0, 0.0, 0.0);
+   }
+ 
+   if (oc.header.frame_id.empty())
+-    logWarn("No frame specified for position constraint on link '%s'!", oc.link_name.c_str());
++    CONSOLE_BRIDGE_logWarn("No frame specified for position constraint on link '%s'!", oc.link_name.c_str());
+ 
+   if (tf.isFixedFrame(oc.header.frame_id))
+   {
+@@ -529,25 +529,25 @@
+   }
+   std::stringstream matrix_str;
+   matrix_str << desired_rotation_matrix_;
+-  logDebug("The desired rotation matrix for link '%s' in frame %s is:\n%s", oc.link_name.c_str(),
++  CONSOLE_BRIDGE_logDebug("The desired rotation matrix for link '%s' in frame %s is:\n%s", oc.link_name.c_str(),
+            desired_rotation_frame_id_.c_str(), matrix_str.str().c_str());
+ 
+   if (oc.weight <= std::numeric_limits<double>::epsilon())
+   {
+-    logWarn("The weight on position constraint for link '%s' is near zero.  Setting to 1.0.", oc.link_name.c_str());
++    CONSOLE_BRIDGE_logWarn("The weight on position constraint for link '%s' is near zero.  Setting to 1.0.", oc.link_name.c_str());
+     constraint_weight_ = 1.0;
+   }
+   else
+     constraint_weight_ = oc.weight;
+   absolute_x_axis_tolerance_ = fabs(oc.absolute_x_axis_tolerance);
+   if (absolute_x_axis_tolerance_ < std::numeric_limits<double>::epsilon())
+-    logWarn("Near-zero value for absolute_x_axis_tolerance");
++    CONSOLE_BRIDGE_logWarn("Near-zero value for absolute_x_axis_tolerance");
+   absolute_y_axis_tolerance_ = fabs(oc.absolute_y_axis_tolerance);
+   if (absolute_y_axis_tolerance_ < std::numeric_limits<double>::epsilon())
+-    logWarn("Near-zero value for absolute_y_axis_tolerance");
++    CONSOLE_BRIDGE_logWarn("Near-zero value for absolute_y_axis_tolerance");
+   absolute_z_axis_tolerance_ = fabs(oc.absolute_z_axis_tolerance);
+   if (absolute_z_axis_tolerance_ < std::numeric_limits<double>::epsilon())
+-    logWarn("Near-zero value for absolute_z_axis_tolerance");
++    CONSOLE_BRIDGE_logWarn("Near-zero value for absolute_z_axis_tolerance");
+ 
+   return link_model_ != NULL;
+ }
+@@ -618,7 +618,7 @@
+   {
+     Eigen::Quaterniond q_act(state.getGlobalLinkTransform(link_model_).rotation());
+     Eigen::Quaterniond q_des(desired_rotation_matrix_);
+-    logInform("Orientation constraint %s for link '%s'. Quaternion desired: %f %f %f %f, quaternion actual: %f %f %f "
++    CONSOLE_BRIDGE_logInform("Orientation constraint %s for link '%s'. Quaternion desired: %f %f %f %f, quaternion actual: %f %f %f "
+               "%f, error: x=%f, y=%f, z=%f, tolerance: x=%f, y=%f, z=%f",
+               result ? "satisfied" : "violated", link_model_->getName().c_str(), q_des.x(), q_des.y(), q_des.z(),
+               q_des.w(), q_act.x(), q_act.y(), q_act.z(), q_act.w(), xyz(0), xyz(1), xyz(2), absolute_x_axis_tolerance_,
+@@ -669,11 +669,11 @@
+   target_radius_ = fabs(vc.target_radius);
+ 
+   if (vc.target_radius <= std::numeric_limits<double>::epsilon())
+-    logWarn("The radius of the target disc that must be visible should be strictly positive");
++    CONSOLE_BRIDGE_logWarn("The radius of the target disc that must be visible should be strictly positive");
+ 
+   if (vc.cone_sides < 3)
+   {
+-    logWarn("The number of sides for the visibility region must be 3 or more. Assuming 3 sides instead of the "
++    CONSOLE_BRIDGE_logWarn("The number of sides for the visibility region must be 3 or more. Assuming 3 sides instead of the "
+             "specified %d",
+             vc.cone_sides);
+     cone_sides_ = 3;
+@@ -725,7 +725,7 @@
+ 
+   if (vc.weight <= std::numeric_limits<double>::epsilon())
+   {
+-    logWarn("The weight of visibility constraint is near zero.  Setting to 1.0.");
++    CONSOLE_BRIDGE_logWarn("The weight of visibility constraint is near zero.  Setting to 1.0.");
+     constraint_weight_ = 1.0;
+   }
+   else
+@@ -940,13 +940,13 @@
+       if (dp < 0.0)
+       {
+         if (verbose)
+-          logInform("Visibility constraint is violated because the sensor is looking at the wrong side");
++          CONSOLE_BRIDGE_logInform("Visibility constraint is violated because the sensor is looking at the wrong side");
+         return ConstraintEvaluationResult(false, 0.0);
+       }
+       if (max_view_angle_ < ang)
+       {
+         if (verbose)
+-          logInform("Visibility constraint is violated because the view angle is %lf (above the maximum allowed of "
++          CONSOLE_BRIDGE_logInform("Visibility constraint is violated because the view angle is %lf (above the maximum allowed of "
+                     "%lf)",
+                     ang, max_view_angle_);
+         return ConstraintEvaluationResult(false, 0.0);
+@@ -959,7 +959,7 @@
+       if (dp < 0.0)
+       {
+         if (verbose)
+-          logInform("Visibility constraint is violated because the sensor is looking at the wrong side");
++          CONSOLE_BRIDGE_logInform("Visibility constraint is violated because the sensor is looking at the wrong side");
+         return ConstraintEvaluationResult(false, 0.0);
+       }
+ 
+@@ -967,7 +967,7 @@
+       if (max_range_angle_ < ang)
+       {
+         if (verbose)
+-          logInform("Visibility constraint is violated because the range angle is %lf (above the maximum allowed of "
++          CONSOLE_BRIDGE_logInform("Visibility constraint is violated because the range angle is %lf (above the maximum allowed of "
+                     "%lf)",
+                     ang, max_range_angle_);
+         return ConstraintEvaluationResult(false, 0.0);
+@@ -997,7 +997,7 @@
+   {
+     std::stringstream ss;
+     m->print(ss);
+-    logInform("Visibility constraint %ssatisfied. Visibility cone approximation:\n %s", res.collision ? "not " : "",
++    CONSOLE_BRIDGE_logInform("Visibility constraint %ssatisfied. Visibility cone approximation:\n %s", res.collision ? "not " : "",
+               ss.str().c_str());
+   }
+ 
+@@ -1014,7 +1014,7 @@
+       (robot_state::Transforms::sameFrame(contact.body_name_1, sensor_frame_id_) ||
+        robot_state::Transforms::sameFrame(contact.body_name_1, target_frame_id_)))
+   {
+-    logDebug("Accepted collision with either sensor or target");
++    CONSOLE_BRIDGE_logDebug("Accepted collision with either sensor or target");
+     return true;
+   }
+   if (contact.body_type_2 == collision_detection::BodyTypes::ROBOT_LINK &&
+@@ -1022,7 +1022,7 @@
+       (robot_state::Transforms::sameFrame(contact.body_name_2, sensor_frame_id_) ||
+        robot_state::Transforms::sameFrame(contact.body_name_2, target_frame_id_)))
+   {
+-    logDebug("Accepted collision with either sensor or target");
++    CONSOLE_BRIDGE_logDebug("Accepted collision with either sensor or target");
+     return true;
+   }
+   return false;
+diff -u -r kinematic_constraints/src/utils.cpp kinematic_constraints/src/utils.cpp
+--- kinematic_constraints/src/utils.cpp	2017-12-25 17:56:00.000000000 +0000
++++ kinematic_constraints/src/utils.cpp	2018-02-28 12:06:37.669217586 +0000
+@@ -59,7 +59,7 @@
+         double low = std::max(a.position - a.tolerance_below, b.position - b.tolerance_below);
+         double high = std::min(a.position + a.tolerance_above, b.position + b.tolerance_above);
+         if (low > high)
+-          logError("Attempted to merge incompatible constraints for joint '%s'. Discarding constraint.",
++          CONSOLE_BRIDGE_logError("Attempted to merge incompatible constraints for joint '%s'. Discarding constraint.",
+                    a.joint_name.c_str());
+         else
+         {
+diff -u -r kinematics_base/include/moveit/kinematics_base/kinematics_base.h kinematics_base/include/moveit/kinematics_base/kinematics_base.h
+--- kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2017-12-25 17:56:00.000000000 +0000
++++ kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2018-02-28 12:06:37.669217586 +0000
+@@ -315,7 +315,7 @@
+     }
+ 
+     // Otherwise throw error because this function should have been implemented
+-    logError("moveit.kinematics_base: This kinematic solver does not support searchPositionIK with multiple poses");
++    CONSOLE_BRIDGE_logError("moveit.kinematics_base: This kinematic solver does not support searchPositionIK with multiple poses");
+     return false;
+   }
+ 
+@@ -392,7 +392,7 @@
+       return initialize(robot_description, group_name, base_frame, tip_frames[0], search_discretization);
+     }
+ 
+-    logError("moveit.kinematics_base: This kinematic solver does not support initialization with more than one tip "
++    CONSOLE_BRIDGE_logError("moveit.kinematics_base: This kinematic solver does not support initialization with more than one tip "
+              "frames");
+     return false;
+   }
+@@ -426,7 +426,7 @@
+   virtual const std::string& getTipFrame() const
+   {
+     if (tip_frames_.size() > 1)
+-      logError("moveit.kinematics_base: This kinematic solver has more than one tip frame, do not call getTipFrame()");
++      CONSOLE_BRIDGE_logError("moveit.kinematics_base: This kinematic solver has more than one tip frame, do not call getTipFrame()");
+ 
+     return tip_frame_;  // for backwards-compatibility. should actually use tip_frames_[0]
+   }
+diff -u -r kinematics_base/src/kinematics_base.cpp kinematics_base/src/kinematics_base.cpp
+--- kinematics_base/src/kinematics_base.cpp	2017-12-25 17:56:00.000000000 +0000
++++ kinematics_base/src/kinematics_base.cpp	2018-02-28 12:06:37.669217586 +0000
+@@ -143,14 +143,14 @@
+ 
+   if (ik_poses.size() != 1)
+   {
+-    logError("moveit.kinematics_base: This kinematic solver does not support getPositionIK for multiple poses");
++    CONSOLE_BRIDGE_logError("moveit.kinematics_base: This kinematic solver does not support getPositionIK for multiple poses");
+     result.kinematic_error = kinematics::KinematicErrors::MULTIPLE_TIPS_NOT_SUPPORTED;
+     return false;
+   }
+ 
+   if (ik_poses.size() == 0)
+   {
+-    logError("moveit.kinematics_base: Input ik_poses array is empty");
++    CONSOLE_BRIDGE_logError("moveit.kinematics_base: Input ik_poses array is empty");
+     result.kinematic_error = kinematics::KinematicErrors::EMPTY_TIP_POSES;
+     return false;
+   }
+diff -u -r kinematics_metrics/src/kinematics_metrics.cpp kinematics_metrics/src/kinematics_metrics.cpp
+--- kinematics_metrics/src/kinematics_metrics.cpp	2017-12-25 17:56:00.000000000 +0000
++++ kinematics_metrics/src/kinematics_metrics.cpp	2018-02-28 12:06:37.669217586 +0000
+@@ -122,7 +122,7 @@
+       manipulability_index = 1.0;
+       for (unsigned int i = 0; i < singular_values.rows(); ++i)
+       {
+-        logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
++        CONSOLE_BRIDGE_logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
+         manipulability_index *= singular_values(i, 0);
+       }
+       // Get manipulability index
+@@ -145,7 +145,7 @@
+       manipulability_index = 1.0;
+       for (unsigned int i = 0; i < singular_values.rows(); ++i)
+       {
+-        logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
++        CONSOLE_BRIDGE_logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
+         manipulability_index *= singular_values(i, 0);
+       }
+       // Get manipulability index
+@@ -218,7 +218,7 @@
+     Eigen::JacobiSVD<Eigen::MatrixXd> svdsolver(jacobian.topLeftCorner(3, jacobian.cols()));
+     Eigen::MatrixXd singular_values = svdsolver.singularValues();
+     for (int i = 0; i < singular_values.rows(); ++i)
+-      logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
++      CONSOLE_BRIDGE_logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
+     manipulability = penalty * singular_values.minCoeff() / singular_values.maxCoeff();
+   }
+   else
+@@ -227,7 +227,7 @@
+     Eigen::JacobiSVD<Eigen::MatrixXd> svdsolver(jacobian);
+     Eigen::MatrixXd singular_values = svdsolver.singularValues();
+     for (int i = 0; i < singular_values.rows(); ++i)
+-      logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
++      CONSOLE_BRIDGE_logDebug("moveit.kin_metrics: Singular value: %d %f", i, singular_values(i, 0));
+     manipulability = penalty * singular_values.minCoeff() / singular_values.maxCoeff();
+   }
+   return true;
+diff -u -r planning_interface/src/planning_interface.cpp planning_interface/src/planning_interface.cpp
+--- planning_interface/src/planning_interface.cpp	2017-12-25 17:56:00.000000000 +0000
++++ planning_interface/src/planning_interface.cpp	2018-02-28 12:06:37.669217586 +0000
+@@ -79,12 +79,12 @@
+   request_ = request;
+   if (request_.allowed_planning_time <= 0.0)
+   {
+-    logInform("The timeout for planning must be positive (%lf specified). Assuming one second instead.",
++    CONSOLE_BRIDGE_logInform("The timeout for planning must be positive (%lf specified). Assuming one second instead.",
+               request_.allowed_planning_time);
+     request_.allowed_planning_time = 1.0;
+   }
+   if (request_.num_planning_attempts < 0)
+-    logError("The number of desired planning attempts should be positive. Assuming one attempt.");
++    CONSOLE_BRIDGE_logError("The number of desired planning attempts should be positive. Assuming one attempt.");
+   request_.num_planning_attempts = std::max(1, request_.num_planning_attempts);
+ }
+ 
+diff -u -r planning_request_adapter/src/planning_request_adapter.cpp planning_request_adapter/src/planning_request_adapter.cpp
+--- planning_request_adapter/src/planning_request_adapter.cpp	2017-12-25 17:56:00.000000000 +0000
++++ planning_request_adapter/src/planning_request_adapter.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -92,7 +92,7 @@
+   }
+   catch (std::exception& ex)
+   {
+-    logError("Exception caught executing *final* adapter '%s': %s", adapter->getDescription().c_str(), ex.what());
++    CONSOLE_BRIDGE_logError("Exception caught executing *final* adapter '%s': %s", adapter->getDescription().c_str(), ex.what());
+     added_path_index.clear();
+     return callPlannerInterfaceSolve(planner.get(), planning_scene, req, res);
+   }
+@@ -109,7 +109,7 @@
+   }
+   catch (std::exception& ex)
+   {
+-    logError("Exception caught executing *next* adapter '%s': %s", adapter->getDescription().c_str(), ex.what());
++    CONSOLE_BRIDGE_logError("Exception caught executing *next* adapter '%s': %s", adapter->getDescription().c_str(), ex.what());
+     added_path_index.clear();
+     return planner(planning_scene, req, res);
+   }
+diff -u -r planning_scene/src/planning_scene.cpp planning_scene/src/planning_scene.cpp
+--- planning_scene/src/planning_scene.cpp	2017-12-25 17:56:00.000000000 +0000
++++ planning_scene/src/planning_scene.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -355,7 +355,7 @@
+   }
+   else
+   {
+-    logError("Cannot setActiveCollisionDetector to '%s' -- it has been added to PlanningScene.  Keeping existing "
++    CONSOLE_BRIDGE_logError("Cannot setActiveCollisionDetector to '%s' -- it has been added to PlanningScene.  Keeping existing "
+              "active collision detector '%s'",
+              collision_detector_name.c_str(), active_collision_->alloc_->getName().c_str());
+     return false;
+@@ -376,7 +376,7 @@
+   CollisionDetectorConstIterator it = collision_.find(collision_detector_name);
+   if (it == collision_.end())
+   {
+-    logError("Could not get CollisionWorld named '%s'.  Returning active CollisionWorld '%s' instead",
++    CONSOLE_BRIDGE_logError("Could not get CollisionWorld named '%s'.  Returning active CollisionWorld '%s' instead",
+              collision_detector_name.c_str(), active_collision_->alloc_->getName().c_str());
+     return active_collision_->cworld_const_;
+   }
+@@ -390,7 +390,7 @@
+   CollisionDetectorConstIterator it = collision_.find(collision_detector_name);
+   if (it == collision_.end())
+   {
+-    logError("Could not get CollisionRobot named '%s'.  Returning active CollisionRobot '%s' instead",
++    CONSOLE_BRIDGE_logError("Could not get CollisionRobot named '%s'.  Returning active CollisionRobot '%s' instead",
+              collision_detector_name.c_str(), active_collision_->alloc_->getName().c_str());
+     return active_collision_->getCollisionRobot();
+   }
+@@ -404,7 +404,7 @@
+   CollisionDetectorConstIterator it = collision_.find(collision_detector_name);
+   if (it == collision_.end())
+   {
+-    logError("Could not get CollisionRobotUnpadded named '%s'.  Returning active CollisionRobotUnpadded '%s' instead",
++    CONSOLE_BRIDGE_logError("Could not get CollisionRobotUnpadded named '%s'.  Returning active CollisionRobotUnpadded '%s' instead",
+              collision_detector_name.c_str(), active_collision_->alloc_->getName().c_str());
+     return active_collision_->getCollisionRobotUnpadded();
+   }
+@@ -899,7 +899,7 @@
+       tf::poseEigenToMsg(map->shape_poses_[0], octomap.origin);
+       return true;
+     }
+-    logError("Unexpected number of shapes in octomap collision object. Not including '%s' object", OCTOMAP_NS.c_str());
++    CONSOLE_BRIDGE_logError("Unexpected number of shapes in octomap collision object. Not including '%s' object", OCTOMAP_NS.c_str());
+   }
+   return false;
+ }
+@@ -1118,7 +1118,7 @@
+   {
+     if (!state.is_diff && state.attached_collision_objects[i].object.operation != moveit_msgs::CollisionObject::ADD)
+     {
+-      logError("The specified RobotState is not marked as is_diff. The request to modify the object '%s' is not "
++      CONSOLE_BRIDGE_logError("The specified RobotState is not marked as is_diff. The request to modify the object '%s' is not "
+                "supported. Object is ignored.",
+                state.attached_collision_objects[i].object.id.c_str());
+       continue;
+@@ -1206,12 +1206,12 @@
+ {
+   bool result = true;
+ 
+-  logDebug("moveit.planning_scene: Adding planning scene diff");
++  CONSOLE_BRIDGE_logDebug("moveit.planning_scene: Adding planning scene diff");
+   if (!scene_msg.name.empty())
+     name_ = scene_msg.name;
+ 
+   if (!scene_msg.robot_model_name.empty() && scene_msg.robot_model_name != getRobotModel()->getName())
+-    logWarn("Setting the scene for model '%s' but model '%s' is loaded.", scene_msg.robot_model_name.c_str(),
++    CONSOLE_BRIDGE_logWarn("Setting the scene for model '%s' but model '%s' is loaded.", scene_msg.robot_model_name.c_str(),
+             getRobotModel()->getName().c_str());
+ 
+   // there is at least one transform in the list of fixed transform: from model frame to itself;
+@@ -1263,11 +1263,11 @@
+ 
+ bool planning_scene::PlanningScene::setPlanningSceneMsg(const moveit_msgs::PlanningScene& scene_msg)
+ {
+-  logDebug("moveit.planning_scene: Setting new planning scene: '%s'", scene_msg.name.c_str());
++  CONSOLE_BRIDGE_logDebug("moveit.planning_scene: Setting new planning scene: '%s'", scene_msg.name.c_str());
+   name_ = scene_msg.name;
+ 
+   if (!scene_msg.robot_model_name.empty() && scene_msg.robot_model_name != getRobotModel()->getName())
+-    logWarn("Setting the scene for model '%s' but model '%s' is loaded.", scene_msg.robot_model_name.c_str(),
++    CONSOLE_BRIDGE_logWarn("Setting the scene for model '%s' but model '%s' is loaded.", scene_msg.robot_model_name.c_str(),
+             getRobotModel()->getName().c_str());
+ 
+   if (parent_)
+@@ -1321,7 +1321,7 @@
+ 
+   if (map.id != "OcTree")
+   {
+-    logError("Received octomap is of type '%s' but type 'OcTree' is expected.", map.id.c_str());
++    CONSOLE_BRIDGE_logError("Received octomap is of type '%s' but type 'OcTree' is expected.", map.id.c_str());
+     return;
+   }
+ 
+@@ -1359,7 +1359,7 @@
+ 
+   if (map.octomap.id != "OcTree")
+   {
+-    logError("Received octomap is of type '%s' but type 'OcTree' is expected.", map.octomap.id.c_str());
++    CONSOLE_BRIDGE_logError("Received octomap is of type '%s' but type 'OcTree' is expected.", map.octomap.id.c_str());
+     return;
+   }
+ 
+@@ -1410,13 +1410,13 @@
+ {
+   if (object.object.operation == moveit_msgs::CollisionObject::ADD && !getRobotModel()->hasLinkModel(object.link_name))
+   {
+-    logError("Unable to attach a body to link '%s' (link not found)", object.link_name.c_str());
++    CONSOLE_BRIDGE_logError("Unable to attach a body to link '%s' (link not found)", object.link_name.c_str());
+     return false;
+   }
+ 
+   if (object.object.id == OCTOMAP_NS)
+   {
+-    logError("The ID '%s' cannot be used for collision objects (name reserved)", OCTOMAP_NS.c_str());
++    CONSOLE_BRIDGE_logError("The ID '%s' cannot be used for collision objects (name reserved)", OCTOMAP_NS.c_str());
+     return false;
+   }
+ 
+@@ -1432,19 +1432,19 @@
+   {
+     if (object.object.primitives.size() != object.object.primitive_poses.size())
+     {
+-      logError("Number of primitive shapes does not match number of poses in attached collision object message");
++      CONSOLE_BRIDGE_logError("Number of primitive shapes does not match number of poses in attached collision object message");
+       return false;
+     }
+ 
+     if (object.object.meshes.size() != object.object.mesh_poses.size())
+     {
+-      logError("Number of meshes does not match number of poses in attached collision object message");
++      CONSOLE_BRIDGE_logError("Number of meshes does not match number of poses in attached collision object message");
+       return false;
+     }
+ 
+     if (object.object.planes.size() != object.object.plane_poses.size())
+     {
+-      logError("Number of planes does not match number of poses in attached collision object message");
++      CONSOLE_BRIDGE_logError("Number of planes does not match number of poses in attached collision object message");
+       return false;
+     }
+ 
+@@ -1461,7 +1461,7 @@
+         collision_detection::CollisionWorld::ObjectConstPtr obj = world_->getObject(object.object.id);
+         if (obj)
+         {
+-          logInform("Attaching world object '%s' to link '%s'", object.object.id.c_str(), object.link_name.c_str());
++          CONSOLE_BRIDGE_logInform("Attaching world object '%s' to link '%s'", object.object.id.c_str(), object.link_name.c_str());
+ 
+           // extract the shapes from the world
+           shapes = obj->shapes_;
+@@ -1476,7 +1476,7 @@
+         }
+         else
+         {
+-          logError("Attempting to attach object '%s' to link '%s' but no geometry specified and such an object does "
++          CONSOLE_BRIDGE_logError("Attempting to attach object '%s' to link '%s' but no geometry specified and such an object does "
+                    "not exist in the collision world",
+                    object.object.id.c_str(), object.link_name.c_str());
+           return false;
+@@ -1488,10 +1488,10 @@
+         if (world_->removeObject(object.object.id))
+         {
+           if (object.object.operation == moveit_msgs::CollisionObject::ADD)
+-            logInform("Removing world object with the same name as newly attached object: '%s'",
++            CONSOLE_BRIDGE_logInform("Removing world object with the same name as newly attached object: '%s'",
+                       object.object.id.c_str());
+           else
+-            logWarn("You tried to append geometry to an attached object that is actually a world object ('%s'). World "
++            CONSOLE_BRIDGE_logWarn("You tried to append geometry to an attached object that is actually a world object ('%s'). World "
+                     "geometry is ignored.",
+                     object.object.id.c_str());
+         }
+@@ -1542,7 +1542,7 @@
+ 
+       if (shapes.empty())
+       {
+-        logError("There is no geometry to attach to link '%s' as part of attached body '%s'", object.link_name.c_str(),
++        CONSOLE_BRIDGE_logError("There is no geometry to attach to link '%s' as part of attached body '%s'", object.link_name.c_str(),
+                  object.object.id.c_str());
+         return false;
+       }
+@@ -1554,11 +1554,11 @@
+       {
+         // there should not exist an attached object with this name
+         if (kstate_->clearAttachedBody(object.object.id))
+-          logInform("The robot state already had an object named '%s' attached to link '%s'. The object was replaced.",
++          CONSOLE_BRIDGE_logInform("The robot state already had an object named '%s' attached to link '%s'. The object was replaced.",
+                     object.object.id.c_str(), object.link_name.c_str());
+         kstate_->attachBody(object.object.id, shapes, poses, object.touch_links, object.link_name,
+                             object.detach_posture);
+-        logInform("Attached object '%s' to link '%s'", object.object.id.c_str(), object.link_name.c_str());
++        CONSOLE_BRIDGE_logInform("Attached object '%s' to link '%s'", object.object.id.c_str(), object.link_name.c_str());
+       }
+       else
+       {
+@@ -1573,14 +1573,14 @@
+           kstate_->attachBody(object.object.id, shapes, poses, ab_touch_links, object.link_name, detach_posture);
+         else
+           kstate_->attachBody(object.object.id, shapes, poses, object.touch_links, object.link_name, detach_posture);
+-        logInform("Added shapes to object '%s' attached to link '%s'", object.object.id.c_str(),
++        CONSOLE_BRIDGE_logInform("Added shapes to object '%s' attached to link '%s'", object.object.id.c_str(),
+                   object.link_name.c_str());
+       }
+ 
+       return true;
+     }
+     else
+-      logError("Robot state is not compatible with robot model. This could be fatal.");
++      CONSOLE_BRIDGE_logError("Robot state is not compatible with robot model. This could be fatal.");
+   }
+   else if (object.object.operation == moveit_msgs::CollisionObject::REMOVE)
+   {
+@@ -1624,13 +1624,13 @@
+       kstate_->clearAttachedBody(name);
+ 
+       if (world_->hasObject(name))
+-        logWarn("The collision world already has an object with the same name as the body about to be detached. NOT "
++        CONSOLE_BRIDGE_logWarn("The collision world already has an object with the same name as the body about to be detached. NOT "
+                 "adding the detached body '%s' to the collision world.",
+                 object.object.id.c_str());
+       else
+       {
+         world_->addToObject(name, shapes, poses);
+-        logInform("Detached object '%s' from link '%s' and added it back in the collision world", name.c_str(),
++        CONSOLE_BRIDGE_logInform("Detached object '%s' from link '%s' and added it back in the collision world", name.c_str(),
+                   object.link_name.c_str());
+       }
+     }
+@@ -1639,11 +1639,11 @@
+   }
+   else if (object.object.operation == moveit_msgs::CollisionObject::MOVE)
+   {
+-    logError("Move for attached objects not yet implemented");
++    CONSOLE_BRIDGE_logError("Move for attached objects not yet implemented");
+   }
+   else
+   {
+-    logError("Unknown collision object operation: %d", object.object.operation);
++    CONSOLE_BRIDGE_logError("Unknown collision object operation: %d", object.object.operation);
+   }
+ 
+   return false;
+@@ -1653,7 +1653,7 @@
+ {
+   if (object.id == OCTOMAP_NS)
+   {
+-    logError("The ID '%s' cannot be used for collision objects (name reserved)", OCTOMAP_NS.c_str());
++    CONSOLE_BRIDGE_logError("The ID '%s' cannot be used for collision objects (name reserved)", OCTOMAP_NS.c_str());
+     return false;
+   }
+ 
+@@ -1661,25 +1661,25 @@
+   {
+     if (object.primitives.empty() && object.meshes.empty() && object.planes.empty())
+     {
+-      logError("There are no shapes specified in the collision object message");
++      CONSOLE_BRIDGE_logError("There are no shapes specified in the collision object message");
+       return false;
+     }
+ 
+     if (object.primitives.size() != object.primitive_poses.size())
+     {
+-      logError("Number of primitive shapes does not match number of poses in collision object message");
++      CONSOLE_BRIDGE_logError("Number of primitive shapes does not match number of poses in collision object message");
+       return false;
+     }
+ 
+     if (object.meshes.size() != object.mesh_poses.size())
+     {
+-      logError("Number of meshes does not match number of poses in collision object message");
++      CONSOLE_BRIDGE_logError("Number of meshes does not match number of poses in collision object message");
+       return false;
+     }
+ 
+     if (object.planes.size() != object.plane_poses.size())
+     {
+-      logError("Number of planes does not match number of poses in collision object message");
++      CONSOLE_BRIDGE_logError("Number of planes does not match number of poses in collision object message");
+       return false;
+     }
+ 
+@@ -1742,7 +1742,7 @@
+     if (world_->hasObject(object.id))
+     {
+       if (!object.primitives.empty() || !object.meshes.empty() || !object.planes.empty())
+-        logWarn("Move operation for object '%s' ignores the geometry specified in the message.", object.id.c_str());
++        CONSOLE_BRIDGE_logWarn("Move operation for object '%s' ignores the geometry specified in the message.", object.id.c_str());
+ 
+       const Eigen::Affine3d& t = getTransforms().getTransform(object.header.frame_id);
+       EigenSTL::vector_Affine3d new_poses;
+@@ -1775,17 +1775,17 @@
+       }
+       else
+       {
+-        logError("Number of supplied poses (%u) for object '%s' does not match number of shapes (%u). Not moving.",
++        CONSOLE_BRIDGE_logError("Number of supplied poses (%u) for object '%s' does not match number of shapes (%u). Not moving.",
+                  (unsigned int)new_poses.size(), object.id.c_str(), (unsigned int)obj->shapes_.size());
+         return false;
+       }
+       return true;
+     }
+     else
+-      logError("World object '%s' does not exist. Cannot move.", object.id.c_str());
++      CONSOLE_BRIDGE_logError("World object '%s' does not exist. Cannot move.", object.id.c_str());
+   }
+   else
+-    logError("Unknown collision object operation: %d", object.operation);
++    CONSOLE_BRIDGE_logError("Unknown collision object operation: %d", object.operation);
+   return false;
+ }
+ 
+@@ -1814,7 +1814,7 @@
+     collision_detection::World::ObjectConstPtr obj = getWorld()->getObject(id);
+     if (obj->shape_poses_.size() > 1)
+     {
+-      logWarn("More than one shapes in object '%s'. Using first one to decide transform", id.c_str());
++      CONSOLE_BRIDGE_logWarn("More than one shapes in object '%s'. Using first one to decide transform", id.c_str());
+       return obj->shape_poses_[0];
+     }
+     else if (obj->shape_poses_.size() == 1)
+@@ -2157,7 +2157,7 @@
+       if (!found)
+       {
+         if (verbose)
+-          logInform("Goal not satisfied");
++          CONSOLE_BRIDGE_logInform("Goal not satisfied");
+         if (invalid_index)
+           invalid_index->push_back(i);
+         result = false;
+diff -u -r profiler/src/profiler.cpp profiler/src/profiler.cpp
+--- profiler/src/profiler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ profiler/src/profiler.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -172,7 +172,7 @@
+   std::stringstream ss;
+   ss << std::endl;
+   status(ss, true);
+-  logInform(ss.str().c_str());
++  CONSOLE_BRIDGE_logInform(ss.str().c_str());
+ }
+ 
+ /// @cond IGNORE
+Only in //moveit_core-0.9.11: README.md
+diff -u -r robot_model/src/floating_joint_model.cpp robot_model/src/floating_joint_model.cpp
+--- robot_model/src/floating_joint_model.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_model/src/floating_joint_model.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -172,7 +172,7 @@
+     double norm = sqrt(normSqr);
+     if (norm < std::numeric_limits<double>::epsilon() * 100.0)
+     {
+-      logWarn("Quaternion is zero in RobotState representation. Setting to identity");
++      CONSOLE_BRIDGE_logWarn("Quaternion is zero in RobotState representation. Setting to identity");
+       values[3] = 0.0;
+       values[4] = 0.0;
+       values[5] = 0.0;
+diff -u -r robot_model/src/joint_model_group.cpp robot_model/src/joint_model_group.cpp
+--- robot_model/src/joint_model_group.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_model/src/joint_model_group.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -297,7 +297,7 @@
+   LinkModelMapConst::const_iterator it = link_model_map_.find(name);
+   if (it == link_model_map_.end())
+   {
+-    logError("Link '%s' not found in group '%s'", name.c_str(), name_.c_str());
++    CONSOLE_BRIDGE_logError("Link '%s' not found in group '%s'", name.c_str(), name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -308,7 +308,7 @@
+   JointModelMapConst::const_iterator it = joint_model_map_.find(name);
+   if (it == joint_model_map_.end())
+   {
+-    logError("Joint '%s' not found in group '%s'", name.c_str(), name_.c_str());
++    CONSOLE_BRIDGE_logError("Joint '%s' not found in group '%s'", name.c_str(), name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -352,7 +352,7 @@
+     if (iter != distance_map.end())
+       distance = iter->second;
+     else
+-      logWarn("Did not pass in distance for '%s'", active_joint_model_vector_[i]->getName().c_str());
++      CONSOLE_BRIDGE_logWarn("Did not pass in distance for '%s'", active_joint_model_vector_[i]->getName().c_str());
+     active_joint_model_vector_[i]->getVariableRandomPositionsNearBy(
+         rng, values + active_joint_model_start_index_[i], *active_joint_bounds[i],
+         near + active_joint_model_start_index_[i], distance);
+@@ -515,7 +515,7 @@
+     const JointModelGroup* eef = parent_model_->getEndEffector(getAttachedEndEffectorNames()[i]);
+     if (!eef)
+     {
+-      logError("Unable to find joint model group for eef");
++      CONSOLE_BRIDGE_logError("Unable to find joint model group for eef");
+       return false;
+     }
+     const std::string& eef_parent = eef->getEndEffectorParentGroup().second;
+@@ -523,7 +523,7 @@
+     const LinkModel* eef_link = parent_model_->getLinkModel(eef_parent);
+     if (!eef_link)
+     {
+-      logError("Unable to find end effector link for eef");
++      CONSOLE_BRIDGE_logError("Unable to find end effector link for eef");
+       return false;
+     }
+ 
+@@ -539,9 +539,9 @@
+   if (tips.size() == 1)
+     return tips.front();
+   else if (tips.size() > 1)
+-    logError("More than one end effector tip found for joint model group, so cannot return only one");
++    CONSOLE_BRIDGE_logError("More than one end effector tip found for joint model group, so cannot return only one");
+   else
+-    logError("No end effector tips found in joint model group");
++    CONSOLE_BRIDGE_logError("No end effector tips found in joint model group");
+   return NULL;
+ }
+ 
+@@ -550,7 +550,7 @@
+   VariableIndexMap::const_iterator it = joint_variables_index_map_.find(variable);
+   if (it == joint_variables_index_map_.end())
+   {
+-    logError("Variable '%s' is not part of group '%s'", variable.c_str(), name_.c_str());
++    CONSOLE_BRIDGE_logError("Variable '%s' is not part of group '%s'", variable.c_str(), name_.c_str());
+     return -1;
+   }
+   return it->second;
+@@ -584,7 +584,7 @@
+       // skip reported fixed joints
+       if (hasJointModel(ik_jnames[i]) && getJointModel(ik_jnames[i])->getType() == JointModel::FIXED)
+         continue;
+-      logError("IK solver computes joint values for joint '%s' but group '%s' does not contain such a joint.",
++      CONSOLE_BRIDGE_logError("IK solver computes joint values for joint '%s' but group '%s' does not contain such a joint.",
+                ik_jnames[i].c_str(), getName().c_str());
+       return false;
+     }
+@@ -640,7 +640,7 @@
+ 
+   if (tip_frames.empty())
+   {
+-    logDebug("Group %s has no tip frame(s)", name_.c_str());
++    CONSOLE_BRIDGE_logDebug("Group %s has no tip frame(s)", name_.c_str());
+     return false;
+   }
+ 
+@@ -650,7 +650,7 @@
+     // remove frame reference, if specified
+     const std::string& tip_local = tip[0] == '/' ? tip.substr(1) : tip;
+     const std::string& tip_frame_local = tip_frames[i][0] == '/' ? tip_frames[i].substr(1) : tip_frames[i];
+-    logDebug("joint_model_group.canSetStateFromIK: comparing input tip: %s to this groups tip: %s ", tip_local.c_str(),
++    CONSOLE_BRIDGE_logDebug("joint_model_group.canSetStateFromIK: comparing input tip: %s to this groups tip: %s ", tip_local.c_str(),
+              tip_frame_local.c_str());
+ 
+     // Check if the IK solver's tip is the same as the frame of inquiry
+diff -u -r robot_model/src/robot_model.cpp robot_model/src/robot_model.cpp
+--- robot_model/src/robot_model.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_model/src/robot_model.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -87,32 +87,32 @@
+   link_geometry_count_ = 0;
+   variable_count_ = 0;
+   model_name_ = urdf_model.getName();
+-  logInform("Loading robot model '%s'...", model_name_.c_str());
++  CONSOLE_BRIDGE_logInform("Loading robot model '%s'...", model_name_.c_str());
+ 
+   if (urdf_model.getRoot())
+   {
+     const urdf::Link* root_link_ptr = urdf_model.getRoot().get();
+     model_frame_ = '/' + root_link_ptr->name;
+ 
+-    logDebug("... building kinematic chain");
++    CONSOLE_BRIDGE_logDebug("... building kinematic chain");
+     root_joint_ = buildRecursive(NULL, root_link_ptr, srdf_model);
+     if (root_joint_)
+       root_link_ = root_joint_->getChildLinkModel();
+-    logDebug("... building mimic joints");
++    CONSOLE_BRIDGE_logDebug("... building mimic joints");
+     buildMimic(urdf_model);
+ 
+-    logDebug("... computing joint indexing");
++    CONSOLE_BRIDGE_logDebug("... computing joint indexing");
+     buildJointInfo();
+ 
+     if (link_models_with_collision_geometry_vector_.empty())
+-      logWarn("No geometry is associated to any robot links");
++      CONSOLE_BRIDGE_logWarn("No geometry is associated to any robot links");
+ 
+     // build groups
+ 
+-    logDebug("... constructing joint groups");
++    CONSOLE_BRIDGE_logDebug("... constructing joint groups");
+     buildGroups(srdf_model);
+ 
+-    logDebug("... constructing joint group states");
++    CONSOLE_BRIDGE_logDebug("... constructing joint group states");
+     buildGroupStates(srdf_model);
+ 
+     // For debugging entire model
+@@ -120,7 +120,7 @@
+       printModelInfo(std::cout);
+   }
+   else
+-    logWarn("No root link found");
++    CONSOLE_BRIDGE_logWarn("No root link found");
+ }
+ 
+ namespace moveit
+@@ -340,20 +340,20 @@
+             for (std::size_t j = 0; j < vn.size(); ++j)
+               state[vn[j]] = jt->second[j];
+           else
+-            logError("The model for joint '%s' requires %d variable values, but only %d variable values were supplied "
++            CONSOLE_BRIDGE_logError("The model for joint '%s' requires %d variable values, but only %d variable values were supplied "
+                      "in default state '%s' for group '%s'",
+                      jt->first.c_str(), (int)vn.size(), (int)jt->second.size(), ds[i].name_.c_str(),
+                      jmg->getName().c_str());
+         }
+         else
+-          logError("Group state '%s' specifies value for joint '%s', but that joint is not part of group '%s'",
++          CONSOLE_BRIDGE_logError("Group state '%s' specifies value for joint '%s', but that joint is not part of group '%s'",
+                    ds[i].name_.c_str(), jt->first.c_str(), jmg->getName().c_str());
+       }
+       if (!state.empty())
+         jmg->addDefaultState(ds[i].name_, state);
+     }
+     else
+-      logError("Group state '%s' specified for group '%s', but that group does not exist", ds[i].name_.c_str(),
++      CONSOLE_BRIDGE_logError("Group state '%s' specified for group '%s', but that group does not exist", ds[i].name_.c_str(),
+                ds[i].group_.c_str());
+   }
+ }
+@@ -373,11 +373,11 @@
+           if (joint_model_vector_[i]->getVariableCount() == jit->second->getVariableCount())
+             joint_model_vector_[i]->setMimic(jit->second, jm->mimic->multiplier, jm->mimic->offset);
+           else
+-            logError("Join '%s' cannot mimic joint '%s' because they have different number of DOF",
++            CONSOLE_BRIDGE_logError("Join '%s' cannot mimic joint '%s' because they have different number of DOF",
+                      joint_model_vector_[i]->getName().c_str(), jm->mimic->joint_name.c_str());
+         }
+         else
+-          logError("Joint '%s' cannot mimic unknown joint '%s'", joint_model_vector_[i]->getName().c_str(),
++          CONSOLE_BRIDGE_logError("Joint '%s' cannot mimic unknown joint '%s'", joint_model_vector_[i]->getName().c_str(),
+                    jm->mimic->joint_name.c_str());
+       }
+   }
+@@ -401,7 +401,7 @@
+         }
+         if (joint_model_vector_[i] == joint_model_vector_[i]->getMimic())
+         {
+-          logError("Cycle found in joint that mimic each other. Ignoring all mimic joints.");
++          CONSOLE_BRIDGE_logError("Cycle found in joint that mimic each other. Ignoring all mimic joints.");
+           for (std::size_t i = 0; i < joint_model_vector_.size(); ++i)
+             joint_model_vector_[i]->setMimic(NULL, 0.0, 0.0);
+           change = false;
+@@ -431,7 +431,7 @@
+     it = joint_model_group_map_.find(name);
+     if (it != joint_model_group_map_.end() && it->second->isEndEffector())
+       return it->second;
+-    logError("End-effector '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++    CONSOLE_BRIDGE_logError("End-effector '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -445,7 +445,7 @@
+     it = joint_model_group_map_.find(name);
+     if (it != joint_model_group_map_.end() && it->second->isEndEffector())
+       return it->second;
+-    logError("End-effector '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++    CONSOLE_BRIDGE_logError("End-effector '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -461,7 +461,7 @@
+   JointModelGroupMap::const_iterator it = joint_model_group_map_.find(name);
+   if (it == joint_model_group_map_.end())
+   {
+-    logError("Group '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++    CONSOLE_BRIDGE_logError("Group '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -472,7 +472,7 @@
+   JointModelGroupMap::const_iterator it = joint_model_group_map_.find(name);
+   if (it == joint_model_group_map_.end())
+   {
+-    logError("Group '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++    CONSOLE_BRIDGE_logError("Group '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+     return NULL;
+   }
+   return it->second;
+@@ -507,14 +507,14 @@
+           added = true;
+           processed[i] = true;
+           if (!addJointModelGroup(group_configs[i]))
+-            logWarn("Failed to add group '%s'", group_configs[i].name_.c_str());
++            CONSOLE_BRIDGE_logWarn("Failed to add group '%s'", group_configs[i].name_.c_str());
+         }
+       }
+   }
+ 
+   for (std::size_t i = 0; i < processed.size(); ++i)
+     if (!processed[i])
+-      logWarn("Could not process group '%s' due to unmet subgroup dependencies", group_configs[i].name_.c_str());
++      CONSOLE_BRIDGE_logWarn("Could not process group '%s' due to unmet subgroup dependencies", group_configs[i].name_.c_str());
+ 
+   for (JointModelGroupMap::const_iterator it = joint_model_group_map_.begin(); it != joint_model_group_map_.end(); ++it)
+     joint_model_groups_.push_back(it->second);
+@@ -599,16 +599,16 @@
+               if (jt->second != it->second)
+                 eef_parent_group = jt->second;
+               else
+-                logError("Group '%s' for end-effector '%s' cannot be its own parent", eefs[k].parent_group_.c_str(),
++                CONSOLE_BRIDGE_logError("Group '%s' for end-effector '%s' cannot be its own parent", eefs[k].parent_group_.c_str(),
+                          eefs[k].name_.c_str());
+             }
+             else
+-              logError("Group '%s' was specified as parent group for end-effector '%s' but it does not include the "
++              CONSOLE_BRIDGE_logError("Group '%s' was specified as parent group for end-effector '%s' but it does not include the "
+                        "parent link '%s'",
+                        eefs[k].parent_group_.c_str(), eefs[k].name_.c_str(), eefs[k].parent_link_.c_str());
+           }
+           else
+-            logError("Group name '%s' not found (specified as parent group for end-effector '%s')",
++            CONSOLE_BRIDGE_logError("Group name '%s' not found (specified as parent group for end-effector '%s')",
+                      eefs[k].parent_group_.c_str(), eefs[k].name_.c_str());
+         }
+ 
+@@ -632,7 +632,7 @@
+         }
+         else
+         {
+-          logWarn("Could not identify parent group for end-effector '%s'", eefs[k].name_.c_str());
++          CONSOLE_BRIDGE_logWarn("Could not identify parent group for end-effector '%s'", eefs[k].name_.c_str());
+           it->second->setEndEffectorParent("", eefs[k].parent_link_);
+         }
+         break;
+@@ -645,7 +645,7 @@
+ {
+   if (joint_model_group_map_.find(gc.name_) != joint_model_group_map_.end())
+   {
+-    logWarn("A group named '%s' already exists. Not adding.", gc.name_.c_str());
++    CONSOLE_BRIDGE_logWarn("A group named '%s' already exists. Not adding.", gc.name_.c_str());
+     return false;
+   }
+ 
+@@ -742,7 +742,7 @@
+ 
+   if (jset.empty())
+   {
+-    logWarn("Group '%s' must have at least one valid joint", gc.name_.c_str());
++    CONSOLE_BRIDGE_logWarn("Group '%s' must have at least one valid joint", gc.name_.c_str());
+     return false;
+   }
+ 
+@@ -889,7 +889,7 @@
+         result = new FixedJointModel(urdf_joint->name);
+         break;
+       default:
+-        logError("Unknown joint type: %d", (int)urdf_joint->type);
++        CONSOLE_BRIDGE_logError("Unknown joint type: %d", (int)urdf_joint->type);
+         break;
+     }
+   }
+@@ -900,12 +900,12 @@
+     {
+       if (vjoints[i].child_link_ != child_link->name)
+       {
+-        logWarn("Skipping virtual joint '%s' because its child frame '%s' does not match the URDF frame '%s'",
++        CONSOLE_BRIDGE_logWarn("Skipping virtual joint '%s' because its child frame '%s' does not match the URDF frame '%s'",
+                 vjoints[i].name_.c_str(), vjoints[i].child_link_.c_str(), child_link->name.c_str());
+       }
+       else if (vjoints[i].parent_frame_.empty())
+       {
+-        logWarn("Skipping virtual joint '%s' because its parent frame is empty", vjoints[i].name_.c_str());
++        CONSOLE_BRIDGE_logWarn("Skipping virtual joint '%s' because its parent frame is empty", vjoints[i].name_.c_str());
+       }
+       else
+       {
+@@ -930,7 +930,7 @@
+     }
+     if (!result)
+     {
+-      logInform("No root/virtual joint specified in SRDF. Assuming fixed joint");
++      CONSOLE_BRIDGE_logInform("No root/virtual joint specified in SRDF. Assuming fixed joint");
+       result = new FixedJointModel("ASSUMED_FIXED_ROOT_JOINT");
+     }
+   }
+@@ -1062,7 +1062,7 @@
+     }
+     break;
+     default:
+-      logError("Unknown geometry type: %d", (int)geom->type);
++      CONSOLE_BRIDGE_logError("Unknown geometry type: %d", (int)geom->type);
+       break;
+   }
+ 
+@@ -1084,7 +1084,7 @@
+   JointModelMap::const_iterator it = joint_model_map_.find(name);
+   if (it != joint_model_map_.end())
+     return it->second;
+-  logError("Joint '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++  CONSOLE_BRIDGE_logError("Joint '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+   return NULL;
+ }
+ 
+@@ -1092,7 +1092,7 @@
+ {
+   if (index < 0 || index >= static_cast<int>(joint_model_vector_.size()))
+   {
+-    logError("Joint index '%i' out of bounds of joints in model '%s'", index, model_name_.c_str());
++    CONSOLE_BRIDGE_logError("Joint index '%i' out of bounds of joints in model '%s'", index, model_name_.c_str());
+     return NULL;
+   }
+   assert(joint_model_vector_[index]->getJointIndex() == index);
+@@ -1104,7 +1104,7 @@
+   JointModelMap::const_iterator it = joint_model_map_.find(name);
+   if (it != joint_model_map_.end())
+     return it->second;
+-  logError("Joint '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++  CONSOLE_BRIDGE_logError("Joint '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+   return NULL;
+ }
+ 
+@@ -1113,7 +1113,7 @@
+   LinkModelMap::const_iterator it = link_model_map_.find(name);
+   if (it != link_model_map_.end())
+     return it->second;
+-  logError("Link '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++  CONSOLE_BRIDGE_logError("Link '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+   return NULL;
+ }
+ 
+@@ -1121,7 +1121,7 @@
+ {
+   if (index < 0 || index >= static_cast<int>(link_model_vector_.size()))
+   {
+-    logError("Link index '%i' out of bounds of links in model '%s'", index, model_name_.c_str());
++    CONSOLE_BRIDGE_logError("Link index '%i' out of bounds of links in model '%s'", index, model_name_.c_str());
+     return NULL;
+   }
+   assert(link_model_vector_[index]->getLinkIndex() == index);
+@@ -1133,7 +1133,7 @@
+   LinkModelMap::const_iterator it = link_model_map_.find(name);
+   if (it != link_model_map_.end())
+     return it->second;
+-  logError("Link '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
++  CONSOLE_BRIDGE_logError("Link '%s' not found in model '%s'", name.c_str(), model_name_.c_str());
+   return NULL;
+ }
+ 
+@@ -1317,7 +1317,7 @@
+           ss << subs[i]->getName() << " ";
+           result.second[subs[i]] = allocators.find(subs[i]->getName())->second;
+         }
+-        logDebug("Added sub-group IK allocators for group '%s': [ %s]", jmg->getName().c_str(), ss.str().c_str());
++        CONSOLE_BRIDGE_logDebug("Added sub-group IK allocators for group '%s': [ %s]", jmg->getName().c_str(), ss.str().c_str());
+       }
+       jmg->setSolverAllocators(result);
+     }
+diff -u -r robot_state/include/moveit/robot_state/robot_state.h robot_state/include/moveit/robot_state/robot_state.h
+--- robot_state/include/moveit/robot_state/robot_state.h	2017-12-25 17:56:00.000000000 +0000
++++ robot_state/include/moveit/robot_state/robot_state.h	2018-02-28 12:06:37.670217586 +0000
+@@ -524,7 +524,7 @@
+   {
+     if (has_acceleration_)
+     {
+-      logError("Unable to set joint efforts because array is being used for accelerations");
++      CONSOLE_BRIDGE_logError("Unable to set joint efforts because array is being used for accelerations");
+       return;
+     }
+     has_effort_ = true;
+diff -u -r robot_state/src/conversions.cpp robot_state/src/conversions.cpp
+--- robot_state/src/conversions.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_state/src/conversions.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -54,7 +54,7 @@
+ {
+   if (joint_state.name.size() != joint_state.position.size())
+   {
+-    logError("Different number of names and positions in JointState message: %u, %u",
++    CONSOLE_BRIDGE_logError("Different number of names and positions in JointState message: %u, %u",
+              (unsigned int)joint_state.name.size(), (unsigned int)joint_state.position.size());
+     return false;
+   }
+@@ -70,7 +70,7 @@
+   std::size_t nj = mjs.joint_names.size();
+   if (nj != mjs.transforms.size())
+   {
+-    logError("Different number of names, values or frames in MultiDOFJointState message.");
++    CONSOLE_BRIDGE_logError("Different number of names, values or frames in MultiDOFJointState message.");
+     return false;
+   }
+ 
+@@ -92,14 +92,14 @@
+       }
+       catch (std::exception& ex)
+       {
+-        logError("Caught %s", ex.what());
++        CONSOLE_BRIDGE_logError("Caught %s", ex.what());
+         error = true;
+       }
+     else
+       error = true;
+ 
+     if (error)
+-      logWarn("The transform for multi-dof joints was specified in frame '%s' but it was not possible to transform "
++      CONSOLE_BRIDGE_logWarn("The transform for multi-dof joints was specified in frame '%s' but it was not possible to transform "
+               "that to frame '%s'",
+               mjs.header.frame_id.c_str(), state.getRobotModel()->getModelFrame().c_str());
+   }
+@@ -109,7 +109,7 @@
+     const std::string& joint_name = mjs.joint_names[i];
+     if (!state.getRobotModel()->hasJointModel(joint_name))
+     {
+-      logWarn("No joint matching multi-dof joint '%s'", joint_name.c_str());
++      CONSOLE_BRIDGE_logWarn("No joint matching multi-dof joint '%s'", joint_name.c_str());
+       error = true;
+       continue;
+     }
+@@ -225,19 +225,19 @@
+     {
+       if (aco.object.primitives.size() != aco.object.primitive_poses.size())
+       {
+-        logError("Number of primitive shapes does not match number of poses in collision object message");
++        CONSOLE_BRIDGE_logError("Number of primitive shapes does not match number of poses in collision object message");
+         return;
+       }
+ 
+       if (aco.object.meshes.size() != aco.object.mesh_poses.size())
+       {
+-        logError("Number of meshes does not match number of poses in collision object message");
++        CONSOLE_BRIDGE_logError("Number of meshes does not match number of poses in collision object message");
+         return;
+       }
+ 
+       if (aco.object.planes.size() != aco.object.plane_poses.size())
+       {
+-        logError("Number of planes does not match number of poses in collision object message");
++        CONSOLE_BRIDGE_logError("Number of planes does not match number of poses in collision object message");
+         return;
+       }
+ 
+@@ -293,7 +293,7 @@
+           else
+           {
+             t0.setIdentity();
+-            logError("Cannot properly transform from frame '%s'. The pose of the attached body may be incorrect",
++            CONSOLE_BRIDGE_logError("Cannot properly transform from frame '%s'. The pose of the attached body may be incorrect",
+                      aco.object.header.frame_id.c_str());
+           }
+           Eigen::Affine3d t = state.getGlobalLinkTransform(lm).inverse() * t0;
+@@ -302,28 +302,28 @@
+         }
+ 
+         if (shapes.empty())
+-          logError("There is no geometry to attach to link '%s' as part of attached body '%s'", aco.link_name.c_str(),
++          CONSOLE_BRIDGE_logError("There is no geometry to attach to link '%s' as part of attached body '%s'", aco.link_name.c_str(),
+                    aco.object.id.c_str());
+         else
+         {
+           if (state.clearAttachedBody(aco.object.id))
+-            logDebug("The robot state already had an object named '%s' attached to link '%s'. The object was replaced.",
++            CONSOLE_BRIDGE_logDebug("The robot state already had an object named '%s' attached to link '%s'. The object was replaced.",
+                      aco.object.id.c_str(), aco.link_name.c_str());
+           state.attachBody(aco.object.id, shapes, poses, aco.touch_links, aco.link_name, aco.detach_posture);
+-          logDebug("Attached object '%s' to link '%s'", aco.object.id.c_str(), aco.link_name.c_str());
++          CONSOLE_BRIDGE_logDebug("Attached object '%s' to link '%s'", aco.object.id.c_str(), aco.link_name.c_str());
+         }
+       }
+     }
+     else
+-      logError("The attached body for link '%s' has no geometry", aco.link_name.c_str());
++      CONSOLE_BRIDGE_logError("The attached body for link '%s' has no geometry", aco.link_name.c_str());
+   }
+   else if (aco.object.operation == moveit_msgs::CollisionObject::REMOVE)
+   {
+     if (!state.clearAttachedBody(aco.object.id))
+-      logError("The attached body '%s' can not be removed because it does not exist", aco.link_name.c_str());
++      CONSOLE_BRIDGE_logError("The attached body '%s' can not be removed because it does not exist", aco.link_name.c_str());
+   }
+   else
+-    logError("Unknown collision object operation: %d", aco.object.operation);
++    CONSOLE_BRIDGE_logError("Unknown collision object operation: %d", aco.object.operation);
+ }
+ 
+ static bool _robotStateMsgToRobotStateHelper(const Transforms* tf, const moveit_msgs::RobotState& robot_state,
+@@ -334,7 +334,7 @@
+ 
+   if (!rs.is_diff && rs.joint_state.name.empty() && rs.multi_dof_joint_state.joint_names.empty())
+   {
+-    logError("Found empty JointState message");
++    CONSOLE_BRIDGE_logError("Found empty JointState message");
+     return false;
+   }
+ 
+@@ -433,12 +433,12 @@
+ {
+   if (trajectory.points.empty() || point_id > trajectory.points.size() - 1)
+   {
+-    logError("Invalid point_id");
++    CONSOLE_BRIDGE_logError("Invalid point_id");
+     return false;
+   }
+   if (trajectory.joint_names.empty())
+   {
+-    logError("No joint names specified");
++    CONSOLE_BRIDGE_logError("No joint names specified");
+     return false;
+   }
+ 
+@@ -529,7 +529,7 @@
+   {
+     // Get a variable
+     if (!std::getline(lineStream, cell, separator[0]))
+-      logError("Missing variable %i", i);
++      CONSOLE_BRIDGE_logError("Missing variable %i", i);
+ 
+     state.getVariablePositions()[i] = boost::lexical_cast<double>(cell.c_str());
+   }
+diff -u -r robot_state/src/robot_state.cpp robot_state/src/robot_state.cpp
+--- robot_state/src/robot_state.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_state/src/robot_state.cpp	2018-02-28 12:06:37.670217586 +0000
+@@ -153,7 +153,7 @@
+ {
+   if (dirtyJointTransform(joint))
+   {
+-    logWarn("Returning dirty joint transforms for joint '%s'", joint->getName().c_str());
++    CONSOLE_BRIDGE_logWarn("Returning dirty joint transforms for joint '%s'", joint->getName().c_str());
+     return false;
+   }
+   return true;
+@@ -163,7 +163,7 @@
+ {
+   if (dirtyLinkTransforms())
+   {
+-    logWarn("Returning dirty link transforms");
++    CONSOLE_BRIDGE_logWarn("Returning dirty link transforms");
+     return false;
+   }
+   return true;
+@@ -173,7 +173,7 @@
+ {
+   if (dirtyCollisionBodyTransforms())
+   {
+-    logWarn("Returning dirty collision body transforms");
++    CONSOLE_BRIDGE_logWarn("Returning dirty collision body transforms");
+     return false;
+   }
+   return true;
+@@ -851,7 +851,7 @@
+   std::map<std::string, AttachedBody*>::const_iterator it = attached_body_map_.find(id);
+   if (it == attached_body_map_.end())
+   {
+-    logError("Attached body '%s' not found", id.c_str());
++    CONSOLE_BRIDGE_logError("Attached body '%s' not found", id.c_str());
+     return NULL;
+   }
+   else
+@@ -994,7 +994,7 @@
+   std::map<std::string, AttachedBody*>::const_iterator jt = attached_body_map_.find(id);
+   if (jt == attached_body_map_.end())
+   {
+-    logError("Transform from frame '%s' to frame '%s' is not known ('%s' should be a link name or an attached body "
++    CONSOLE_BRIDGE_logError("Transform from frame '%s' to frame '%s' is not known ('%s' should be a link name or an attached body "
+              "id).",
+              id.c_str(), robot_model_->getModelFrame().c_str(), id.c_str());
+     return identity_transform;
+@@ -1002,11 +1002,11 @@
+   const EigenSTL::vector_Affine3d& tf = jt->second->getGlobalCollisionBodyTransforms();
+   if (tf.empty())
+   {
+-    logError("Attached body '%s' has no geometry associated to it. No transform to return.", id.c_str());
++    CONSOLE_BRIDGE_logError("Attached body '%s' has no geometry associated to it. No transform to return.", id.c_str());
+     return identity_transform;
+   }
+   if (tf.size() > 1)
+-    logDebug("There are multiple geometries associated to attached body '%s'. Returning the transform for the first "
++    CONSOLE_BRIDGE_logDebug("There are multiple geometries associated to attached body '%s'. Returning the transform for the first "
+              "one.",
+              id.c_str());
+   return tf[0];
+@@ -1045,7 +1045,7 @@
+   ros::Time tm = ros::Time::now();
+   for (std::size_t i = 0; i < link_names.size(); ++i)
+   {
+-    logDebug("Trying to get marker for link '%s'", link_names[i].c_str());
++    CONSOLE_BRIDGE_logDebug("Trying to get marker for link '%s'", link_names[i].c_str());
+     const LinkModel* lm = robot_model_->getLinkModel(link_names[i]);
+     if (!lm)
+       continue;
+@@ -1125,13 +1125,13 @@
+ 
+   if (!group->isChain())
+   {
+-    logError("The group '%s' is not a chain. Cannot compute Jacobian.", group->getName().c_str());
++    CONSOLE_BRIDGE_logError("The group '%s' is not a chain. Cannot compute Jacobian.", group->getName().c_str());
+     return false;
+   }
+ 
+   if (!group->isLinkUpdated(link->getName()))
+   {
+-    logError("Link name '%s' does not exist in the chain '%s' or is not a child for this chain",
++    CONSOLE_BRIDGE_logError("Link name '%s' does not exist in the chain '%s' or is not a child for this chain",
+              link->getName().c_str(), group->getName().c_str());
+     return false;
+   }
+@@ -1148,7 +1148,7 @@
+   Eigen::Vector3d point_transform = link_transform * reference_point_position;
+ 
+   /*
+-  logDebug("Point from reference origin expressed in world coordinates: %f %f %f",
++  CONSOLE_BRIDGE_logDebug("Point from reference origin expressed in world coordinates: %f %f %f",
+            point_transform.x(),
+            point_transform.y(),
+            point_transform.z());
+@@ -1160,11 +1160,11 @@
+   while (link)
+   {
+     /*
+-    logDebug("Link: %s, %f %f %f",link_state->getName().c_str(),
++    CONSOLE_BRIDGE_logDebug("Link: %s, %f %f %f",link_state->getName().c_str(),
+              link_state->getGlobalLinkTransform().translation().x(),
+              link_state->getGlobalLinkTransform().translation().y(),
+              link_state->getGlobalLinkTransform().translation().z());
+-    logDebug("Joint: %s",link_state->getParentJointState()->getName().c_str());
++    CONSOLE_BRIDGE_logDebug("Joint: %s",link_state->getParentJointState()->getName().c_str());
+     */
+     const JointModel* pjm = link->getParentJointModel();
+     if (pjm->getVariableCount() > 0)
+@@ -1197,7 +1197,7 @@
+         jacobian.block<3, 1>(3, joint_index + 2) = jacobian.block<3, 1>(3, joint_index + 2) + joint_axis;
+       }
+       else
+-        logError("Unknown type of joint in Jacobian computation");
++        CONSOLE_BRIDGE_logError("Unknown type of joint in Jacobian computation");
+     }
+     if (pjm == root_joint_model)
+       break;
+@@ -1305,7 +1305,7 @@
+   const kinematics::KinematicsBaseConstPtr& solver = jmg->getSolverInstance();
+   if (!solver)
+   {
+-    logError("No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
++    CONSOLE_BRIDGE_logError("No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
+     return false;
+   }
+   return setFromIK(jmg, pose, solver->getTipFrame(), attempts, timeout, constraint, options);
+@@ -1329,7 +1329,7 @@
+   const kinematics::KinematicsBaseConstPtr& solver = jmg->getSolverInstance();
+   if (!solver)
+   {
+-    logError("No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
++    CONSOLE_BRIDGE_logError("No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
+     return false;
+   }
+   static std::vector<double> consistency_limits;
+@@ -1426,7 +1426,7 @@
+   // Error check
+   if (poses_in.size() != tips_in.size())
+   {
+-    logError("moveit.robot_state: Number of poses must be the same as number of tips");
++    CONSOLE_BRIDGE_logError("moveit.robot_state: Number of poses must be the same as number of tips");
+     return false;
+   }
+ 
+@@ -1445,7 +1445,7 @@
+     std::string error_msg;
+     if (!solver->supportsGroup(jmg, &error_msg))
+     {
+-      logError("moveit.robot_state: Kinematics solver %s does not support joint group %s.  Error: %s",
++      CONSOLE_BRIDGE_logError("moveit.robot_state: Kinematics solver %s does not support joint group %s.  Error: %s",
+                typeid(*solver).name(), jmg->getName().c_str(), error_msg.c_str());
+       valid_solver = false;
+     }
+@@ -1461,7 +1461,7 @@
+     }
+     else
+     {
+-      logError("moveit.robot_state: No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
++      CONSOLE_BRIDGE_logError("moveit.robot_state: No kinematics solver instantiated for group '%s'", jmg->getName().c_str());
+       return false;
+     }
+   }
+@@ -1470,7 +1470,7 @@
+   std::vector<double> consistency_limits;
+   if (consistency_limit_sets.size() > 1)
+   {
+-    logError("moveit.robot_state: Invalid number (%d) of sets of consistency limits for a setFromIK request that is "
++    CONSOLE_BRIDGE_logError("moveit.robot_state: Invalid number (%d) of sets of consistency limits for a setFromIK request that is "
+              "being solved by a single IK solver",
+              consistency_limit_sets.size());
+     return false;
+@@ -1527,7 +1527,7 @@
+           const EigenSTL::vector_Affine3d& ab_trans = ab->getFixedTransforms();
+           if (ab_trans.size() != 1)
+           {
+-            logError("moveit.robot_state: Cannot use an attached body with multiple geometries as a reference frame.");
++            CONSOLE_BRIDGE_logError("moveit.robot_state: Cannot use an attached body with multiple geometries as a reference frame.");
+             return false;
+           }
+           pose_frame = ab->getAttachedLinkName();
+@@ -1562,12 +1562,12 @@
+     // Make sure one of the tip frames worked
+     if (!found_valid_frame)
+     {
+-      logError("moveit.robot_state: Cannot compute IK for query %u pose reference frame '%s'", i, pose_frame.c_str());
++      CONSOLE_BRIDGE_logError("moveit.robot_state: Cannot compute IK for query %u pose reference frame '%s'", i, pose_frame.c_str());
+       // Debug available tip frames
+       std::stringstream ss;
+       for (solver_tip_id = 0; solver_tip_id < solver_tip_frames.size(); ++solver_tip_id)
+         ss << solver_tip_frames[solver_tip_id] << ", ";
+-      logError("Available tip frames: [%s]", ss.str().c_str());
++      CONSOLE_BRIDGE_logError("Available tip frames: [%s]", ss.str().c_str());
+       return false;
+     }
+ 
+@@ -1646,7 +1646,7 @@
+     }
+     else
+     {
+-      logDebug("moveit.robot_state: Rerunning IK solver with random joint positions");
++      CONSOLE_BRIDGE_logDebug("moveit.robot_state: Rerunning IK solver with random joint positions");
+ 
+       // sample a random seed
+       random_numbers::RandomNumberGenerator& rng = getRandomNumberGenerator();
+@@ -1698,19 +1698,19 @@
+   // Error check
+   if (poses_in.size() != sub_groups.size())
+   {
+-    logError("Number of poses (%u) must be the same as number of sub-groups (%u)", poses_in.size(), sub_groups.size());
++    CONSOLE_BRIDGE_logError("Number of poses (%u) must be the same as number of sub-groups (%u)", poses_in.size(), sub_groups.size());
+     return false;
+   }
+ 
+   if (tips_in.size() != sub_groups.size())
+   {
+-    logError("Number of tip names (%u) must be same as number of sub-groups (%u)", tips_in.size(), sub_groups.size());
++    CONSOLE_BRIDGE_logError("Number of tip names (%u) must be same as number of sub-groups (%u)", tips_in.size(), sub_groups.size());
+     return false;
+   }
+ 
+   if (!consistency_limits.empty() && consistency_limits.size() != sub_groups.size())
+   {
+-    logError("Number of consistency limit vectors must be the same as number of sub-groups");
++    CONSOLE_BRIDGE_logError("Number of consistency limit vectors must be the same as number of sub-groups");
+     return false;
+   }
+ 
+@@ -1718,7 +1718,7 @@
+   {
+     if (consistency_limits[i].size() != sub_groups[i]->getVariableCount())
+     {
+-      logError("Number of joints in consistency_limits is %u but it should be should be %u", (unsigned int)i,
++      CONSOLE_BRIDGE_logError("Number of joints in consistency_limits is %u but it should be should be %u", (unsigned int)i,
+                sub_groups[i]->getVariableCount());
+       return false;
+     }
+@@ -1731,7 +1731,7 @@
+     kinematics::KinematicsBaseConstPtr solver = sub_groups[i]->getSolverInstance();
+     if (!solver)
+     {
+-      logError("Could not find solver for group '%s'", sub_groups[i]->getName().c_str());
++      CONSOLE_BRIDGE_logError("Could not find solver for group '%s'", sub_groups[i]->getName().c_str());
+       return false;
+     }
+     solvers.push_back(solver);
+@@ -1767,7 +1767,7 @@
+         const EigenSTL::vector_Affine3d& ab_trans = ab->getFixedTransforms();
+         if (ab_trans.size() != 1)
+         {
+-          logError("Cannot use an attached body with multiple geometries as a reference frame.");
++          CONSOLE_BRIDGE_logError("Cannot use an attached body with multiple geometries as a reference frame.");
+           return false;
+         }
+         pose_frame = ab->getAttachedLinkName();
+@@ -1791,7 +1791,7 @@
+ 
+     if (pose_frame != solver_tip_frame)
+     {
+-      logError("Cannot compute IK for query pose reference frame '%s', desired: '%s'", pose_frame.c_str(),
++      CONSOLE_BRIDGE_logError("Cannot compute IK for query pose reference frame '%s', desired: '%s'", pose_frame.c_str(),
+                solver_tip_frame.c_str());
+       return false;
+     }
+@@ -1865,7 +1865,7 @@
+         found_solution = false;
+         break;
+       }
+-      logDebug("IK attempt: %d of %d", st, attempts);
++      CONSOLE_BRIDGE_logDebug("IK attempt: %d of %d", st, attempts);
+     }
+     if (found_solution)
+     {
+@@ -1873,7 +1873,7 @@
+       copyJointGroupPositions(jmg, full_solution);
+       if (constraint ? constraint(this, jmg, &full_solution[0]) : true)
+       {
+-        logDebug("Found IK solution");
++        CONSOLE_BRIDGE_logDebug("Found IK solution");
+         return true;
+       }
+     }
+@@ -1976,7 +1976,7 @@
+   for (std::size_t i = 0; i < dist_vector.size(); ++i)
+     if (dist_vector[i] > thres)
+     {
+-      logDebug("Truncating Cartesian path due to detected jump in joint-space distance");
++      CONSOLE_BRIDGE_logDebug("Truncating Cartesian path due to detected jump in joint-space distance");
+       percentage = (double)i / (double)dist_vector.size();
+       traj.resize(i);
+       break;
+diff -u -r robot_trajectory/src/robot_trajectory.cpp robot_trajectory/src/robot_trajectory.cpp
+--- robot_trajectory/src/robot_trajectory.cpp	2017-12-25 17:56:00.000000000 +0000
++++ robot_trajectory/src/robot_trajectory.cpp	2018-02-28 12:06:37.671217586 +0000
+@@ -458,7 +458,7 @@
+   int before = 0, after = 0;
+   double blend = 1.0;
+   findWayPointIndicesForDurationAfterStart(request_duration, before, after, blend);
+-  // logDebug("Interpolating %.3f of the way between index %d and %d.", blend, before, after);
++  // CONSOLE_BRIDGE_logDebug("Interpolating %.3f of the way between index %d and %d.", blend, before, after);
+   waypoints_[before]->interpolate(*waypoints_[after], blend, *output_state);
+   return true;
+ }
+diff -u -r trajectory_processing/src/iterative_time_parameterization.cpp trajectory_processing/src/iterative_time_parameterization.cpp
+--- trajectory_processing/src/iterative_time_parameterization.cpp	2017-12-25 17:56:00.000000000 +0000
++++ trajectory_processing/src/iterative_time_parameterization.cpp	2018-02-28 12:06:37.671217586 +0000
+@@ -59,20 +59,20 @@
+ {
+ void printPoint(const trajectory_msgs::JointTrajectoryPoint& point, std::size_t i)
+ {
+-  logDebug(" time   [%i]= %f", i, point.time_from_start.toSec());
++  CONSOLE_BRIDGE_logDebug(" time   [%i]= %f", i, point.time_from_start.toSec());
+   if (point.positions.size() >= 7)
+   {
+-    logDebug(" pos_   [%i]= %f %f %f %f %f %f %f", i, point.positions[0], point.positions[1], point.positions[2],
++    CONSOLE_BRIDGE_logDebug(" pos_   [%i]= %f %f %f %f %f %f %f", i, point.positions[0], point.positions[1], point.positions[2],
+              point.positions[3], point.positions[4], point.positions[5], point.positions[6]);
+   }
+   if (point.velocities.size() >= 7)
+   {
+-    logDebug("  vel_  [%i]= %f %f %f %f %f %f %f", i, point.velocities[0], point.velocities[1], point.velocities[2],
++    CONSOLE_BRIDGE_logDebug("  vel_  [%i]= %f %f %f %f %f %f %f", i, point.velocities[0], point.velocities[1], point.velocities[2],
+              point.velocities[3], point.velocities[4], point.velocities[5], point.velocities[6]);
+   }
+   if (point.accelerations.size() >= 7)
+   {
+-    logDebug("   acc_ [%i]= %f %f %f %f %f %f %f", i, point.accelerations[0], point.accelerations[1],
++    CONSOLE_BRIDGE_logDebug("   acc_ [%i]= %f %f %f %f %f %f %f", i, point.accelerations[0], point.accelerations[1],
+              point.accelerations[2], point.accelerations[3], point.accelerations[4], point.accelerations[5],
+              point.accelerations[6]);
+   }
+@@ -80,13 +80,13 @@
+ 
+ void printStats(const trajectory_msgs::JointTrajectory& trajectory, const std::vector<moveit_msgs::JointLimits>& limits)
+ {
+-  logDebug("jointNames= %s %s %s %s %s %s %s", limits[0].joint_name.c_str(), limits[1].joint_name.c_str(),
++  CONSOLE_BRIDGE_logDebug("jointNames= %s %s %s %s %s %s %s", limits[0].joint_name.c_str(), limits[1].joint_name.c_str(),
+            limits[2].joint_name.c_str(), limits[3].joint_name.c_str(), limits[4].joint_name.c_str(),
+            limits[5].joint_name.c_str(), limits[6].joint_name.c_str());
+-  logDebug("maxVelocities= %f %f %f %f %f %f %f", limits[0].max_velocity, limits[1].max_velocity,
++  CONSOLE_BRIDGE_logDebug("maxVelocities= %f %f %f %f %f %f %f", limits[0].max_velocity, limits[1].max_velocity,
+            limits[2].max_velocity, limits[3].max_velocity, limits[4].max_velocity, limits[5].max_velocity,
+            limits[6].max_velocity);
+-  logDebug("maxAccelerations= %f %f %f %f %f %f %f", limits[0].max_acceleration, limits[1].max_acceleration,
++  CONSOLE_BRIDGE_logDebug("maxAccelerations= %f %f %f %f %f %f %f", limits[0].max_acceleration, limits[1].max_acceleration,
+            limits[2].max_acceleration, limits[3].max_acceleration, limits[4].max_acceleration,
+            limits[5].max_acceleration, limits[6].max_acceleration);
+   // for every point in time:
+@@ -111,9 +111,9 @@
+   if (max_velocity_scaling_factor > 0.0 && max_velocity_scaling_factor <= 1.0)
+     velocity_scaling_factor = max_velocity_scaling_factor;
+   else if (max_velocity_scaling_factor == 0.0)
+-    logDebug("A max_velocity_scaling_factor of 0.0 was specified, defaulting to %f instead.", velocity_scaling_factor);
++    CONSOLE_BRIDGE_logDebug("A max_velocity_scaling_factor of 0.0 was specified, defaulting to %f instead.", velocity_scaling_factor);
+   else
+-    logWarn("Invalid max_velocity_scaling_factor %f specified, defaulting to %f instead.", max_velocity_scaling_factor,
++    CONSOLE_BRIDGE_logWarn("Invalid max_velocity_scaling_factor %f specified, defaulting to %f instead.", max_velocity_scaling_factor,
+             velocity_scaling_factor);
+ 
+   for (int i = 0; i < num_points - 1; ++i)
+@@ -324,10 +324,10 @@
+   if (max_acceleration_scaling_factor > 0.0 && max_acceleration_scaling_factor <= 1.0)
+     acceleration_scaling_factor = max_acceleration_scaling_factor;
+   else if (max_acceleration_scaling_factor == 0.0)
+-    logDebug("A max_acceleration_scaling_factor of 0.0 was specified, defaulting to %f instead.",
++    CONSOLE_BRIDGE_logDebug("A max_acceleration_scaling_factor of 0.0 was specified, defaulting to %f instead.",
+              acceleration_scaling_factor);
+   else
+-    logWarn("Invalid max_acceleration_scaling_factor %f specified, defaulting to %f instead.",
++    CONSOLE_BRIDGE_logWarn("Invalid max_acceleration_scaling_factor %f specified, defaulting to %f instead.",
+             max_acceleration_scaling_factor, acceleration_scaling_factor);
+ 
+   do
+@@ -445,7 +445,7 @@
+         backwards = !backwards;
+       }
+     }
+-    // logDebug("applyAcceleration: num_updates=%i", num_updates);
++    // CONSOLE_BRIDGE_logDebug("applyAcceleration: num_updates=%i", num_updates);
+   } while (num_updates > 0 && iteration < static_cast<int>(max_iterations_));
+ }
+ 
+@@ -459,7 +459,7 @@
+   const robot_model::JointModelGroup* group = trajectory.getGroup();
+   if (!group)
+   {
+-    logError("It looks like the planner did not set the group the plan was computed for");
++    CONSOLE_BRIDGE_logError("It looks like the planner did not set the group the plan was computed for");
+     return false;
+   }
+ 
+diff -u -r transforms/src/transforms.cpp transforms/src/transforms.cpp
+--- transforms/src/transforms.cpp	2017-12-25 17:56:00.000000000 +0000
++++ transforms/src/transforms.cpp	2018-02-28 12:06:37.671217586 +0000
+@@ -43,12 +43,12 @@
+ {
+   boost::trim(target_frame_);
+   if (target_frame_.empty())
+-    logError("The target frame for MoveIt Transforms cannot be empty.");
++    CONSOLE_BRIDGE_logError("The target frame for MoveIt Transforms cannot be empty.");
+   else
+   {
+     if (target_frame_[0] != '/')
+     {
+-      logWarn("Frame '%s' specified as target frame for MoveIt Transforms. Assuming '/%s' instead.",
++      CONSOLE_BRIDGE_logWarn("Frame '%s' specified as target frame for MoveIt Transforms. Assuming '/%s' instead.",
+               target_frame_.c_str(), target_frame_.c_str());
+       target_frame_ = '/' + target_frame_;
+     }
+@@ -104,7 +104,7 @@
+       return it->second;
+   }
+ 
+-  logError("Unable to transform from frame '%s' to frame '%s'. Returning identity.", from_frame.c_str(),
++  CONSOLE_BRIDGE_logError("Unable to transform from frame '%s' to frame '%s'. Returning identity.", from_frame.c_str(),
+            target_frame_.c_str());
+ 
+   // return identity
+@@ -124,12 +124,12 @@
+ void moveit::core::Transforms::setTransform(const Eigen::Affine3d& t, const std::string& from_frame)
+ {
+   if (from_frame.empty())
+-    logError("Cannot record transform with empty name");
++    CONSOLE_BRIDGE_logError("Cannot record transform with empty name");
+   else
+   {
+     if (from_frame[0] != '/')
+     {
+-      logWarn("Transform specified for frame '%s'. Assuming '/%s' instead", from_frame.c_str(), from_frame.c_str());
++      CONSOLE_BRIDGE_logWarn("Transform specified for frame '%s'. Assuming '/%s' instead", from_frame.c_str(), from_frame.c_str());
+       transforms_['/' + from_frame] = t;
+     }
+     else
+@@ -147,7 +147,7 @@
+   }
+   else
+   {
+-    logError("Given transform is to frame '%s', but frame '%s' was expected.", transform.child_frame_id.c_str(),
++    CONSOLE_BRIDGE_logError("Given transform is to frame '%s', but frame '%s' was expected.", transform.child_frame_id.c_str(),
+              target_frame_.c_str());
+   }
+ }

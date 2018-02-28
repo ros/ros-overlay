@@ -1,7 +1,7 @@
 # Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=6
+EAPI=5
 PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
@@ -52,5 +52,8 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
+
+PATCHES=( "${FILESDIR}/${PN}-logging.patch" )
+
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
