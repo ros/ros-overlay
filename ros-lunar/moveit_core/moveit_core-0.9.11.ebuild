@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Core libraries used by MoveIt!"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://moveit.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/lunar/${PN}/0.9.11-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
@@ -54,3 +54,10 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
+}
