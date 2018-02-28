@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    Python ROS drivers for accessing an Axis camera's MJPG
+    stream. Also provides control for PTZ cameras.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mpurvis@clearpathrobotics.com</email>
-      <name>Mike Purvis</name>
+      <email>sam.pfeiffer@pal-robotics.com</email>
+      <name>Sammy Pfeiffer</name>
     </maintainer>
     <bugs-to>https://github.com/clearpath-gbp/axis_camera/issues</bugs-to>
   </upstream>

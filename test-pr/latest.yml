@@ -1,6 +1,6 @@
 indigo:
-  - ros_comm
+  - catkin
 kinetic:
-  - ros_comm
+  - catkin
 lunar:
-  - ros_comm
+  - catkin

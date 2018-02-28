@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-cmake
 
 DESCRIPTION="The package provides the environment variables \`ROS_VERSION\` and \`ROS_DI[...]"
 HOMEPAGE="https://github.com/ros/ros_environment"

@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-python
 
 DESCRIPTION="The command line tools for the ament buildsystem."
 HOMEPAGE="https://wiki.ros.org"
@@ -27,3 +27,9 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="ardent"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+}

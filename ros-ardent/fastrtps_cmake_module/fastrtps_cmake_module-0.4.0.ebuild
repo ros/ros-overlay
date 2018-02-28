@@ -2,9 +2,9 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ros-cmake
+inherit ament-cmake
 
 DESCRIPTION="Provide CMake module to find eProsima FastRTPS."
 HOMEPAGE="https://wiki.ros.org"

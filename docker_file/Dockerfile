@@ -20,8 +20,12 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     eselect profile set default/linux/amd64/17.0/desktop && \
     emaint sync -r ros-overlay && \
     emerge --oneshot portage && \
-    echo "ros-*/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-*/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-indigo/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-indigo/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-kinetic/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-kinetic/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-lunar/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-lunar/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
     echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils && \
     echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils && \
     echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
@@ -65,8 +69,9 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     app-portage/gentoolkit x11-libs/libX11 media-libs/assimp \
     dev-qt/qtxml x11-proto/kbproto x11-misc/util-macros \
     x11-proto/inputproto x11-misc/util-macros dev-libs/tinyxml2 \
+    virtual/perl-IO-Socket-IP virtual/perl-Time-HiRes dev-perl/XML-XPath \
+    dev-perl/Text-Iconv dev-cpp/gtest dev-db/sqlite \
     dev-lang/swig sys-libs/binutils-libs \
     && rm -f /usr/portage/distfiles/*.tar* \
     && rm -f /usr/portage/distfiles/*.zip* \
     && rm -rf /var/tmp/portage/*; exit 0
-
