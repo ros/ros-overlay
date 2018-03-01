@@ -1,6 +1,6 @@
-diff -u -r background_processing/src/background_processing.cpp background_processing/src/background_processing.cpp
---- background_processing/src/background_processing.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ background_processing/src/background_processing.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/background_processing/src/background_processing.cpp b/background_processing/src/background_processing.cpp
+--- a/background_processing/src/background_processing.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/background_processing/src/background_processing.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -73,13 +73,13 @@
        action_lock_.unlock();
        try
@@ -18,9 +18,9 @@ diff -u -r background_processing/src/background_processing.cpp background_proces
        }
        processing_ = false;
        if (queue_change_event_)
-diff -u -r collision_detection/src/allvalid/collision_robot_allvalid.cpp collision_detection/src/allvalid/collision_robot_allvalid.cpp
---- collision_detection/src/allvalid/collision_robot_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/allvalid/collision_robot_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/allvalid/collision_robot_allvalid.cpp b/collision_detection/src/allvalid/collision_robot_allvalid.cpp
+--- a/collision_detection/src/allvalid/collision_robot_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/allvalid/collision_robot_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -51,7 +51,7 @@
  {
    res.collision = false;
@@ -93,9 +93,9 @@ diff -u -r collision_detection/src/allvalid/collision_robot_allvalid.cpp collisi
  }
  
  double collision_detection::CollisionRobotAllValid::distanceSelf(const robot_state::RobotState& state) const
-diff -u -r collision_detection/src/allvalid/collision_world_allvalid.cpp collision_detection/src/allvalid/collision_world_allvalid.cpp
---- collision_detection/src/allvalid/collision_world_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/allvalid/collision_world_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/allvalid/collision_world_allvalid.cpp b/collision_detection/src/allvalid/collision_world_allvalid.cpp
+--- a/collision_detection/src/allvalid/collision_world_allvalid.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/allvalid/collision_world_allvalid.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -55,7 +55,7 @@
  {
    res.collision = false;
@@ -150,9 +150,9 @@ diff -u -r collision_detection/src/allvalid/collision_world_allvalid.cpp collisi
  }
  
  double collision_detection::CollisionWorldAllValid::distanceRobot(const CollisionRobot& robot,
-diff -u -r collision_detection/src/collision_matrix.cpp collision_detection/src/collision_matrix.cpp
---- collision_detection/src/collision_matrix.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/collision_matrix.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/collision_matrix.cpp b/collision_detection/src/collision_matrix.cpp
+--- a/collision_detection/src/collision_matrix.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/collision_matrix.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -53,12 +53,12 @@
  {
    if (msg.entry_names.size() != msg.entry_values.size() ||
@@ -168,9 +168,9 @@ diff -u -r collision_detection/src/collision_matrix.cpp collision_detection/src/
                   msg.entry_names[i].c_str());
        else
          for (std::size_t j = i + 1; j < msg.entry_values[i].enabled.size(); ++j)
-diff -u -r collision_detection/src/collision_octomap_filter.cpp collision_detection/src/collision_octomap_filter.cpp
---- collision_detection/src/collision_octomap_filter.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/collision_octomap_filter.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/collision_octomap_filter.cpp b/collision_detection/src/collision_octomap_filter.cpp
+--- a/collision_detection/src/collision_octomap_filter.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/collision_octomap_filter.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -64,12 +64,12 @@
  {
    if (!object)
@@ -231,9 +231,9 @@ diff -u -r collision_detection/src/collision_octomap_filter.cpp collision_detect
        double r_scaled = r / R;
        // TODO still need to address the scaling...
        f_val = pow((1 - r_scaled), 4) * (4 * r_scaled + 1);
-diff -u -r collision_detection/src/collision_robot.cpp collision_detection/src/collision_robot.cpp
---- collision_detection/src/collision_robot.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/collision_robot.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/collision_robot.cpp b/collision_detection/src/collision_robot.cpp
+--- a/collision_detection/src/collision_robot.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/collision_robot.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -41,12 +41,12 @@
  {
    if (scale < std::numeric_limits<double>::epsilon())
@@ -264,9 +264,9 @@ diff -u -r collision_detection/src/collision_robot.cpp collision_detection/src/c
      return false;
    }
    return true;
-diff -u -r collision_detection/src/world.cpp collision_detection/src/world.cpp
---- collision_detection/src/world.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection/src/world.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection/src/world.cpp b/collision_detection/src/world.cpp
+--- a/collision_detection/src/world.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection/src/world.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -64,7 +64,7 @@
  {
    if (shapes.size() != poses.size())
@@ -276,9 +276,9 @@ diff -u -r collision_detection/src/world.cpp collision_detection/src/world.cpp
      return;
    }
  
-diff -u -r collision_detection_fcl/src/collision_common.cpp collision_detection_fcl/src/collision_common.cpp
---- collision_detection_fcl/src/collision_common.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection_fcl/src/collision_common.cpp	2018-02-28 12:06:37.667217586 +0000
+diff -u -r a/collision_detection_fcl/src/collision_common.cpp b/collision_detection_fcl/src/collision_common.cpp
+--- a/collision_detection_fcl/src/collision_common.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection_fcl/src/collision_common.cpp	2018-02-28 12:06:37.667217586 +0000
 @@ -88,7 +88,7 @@
        {
          always_allow_collision = true;
@@ -481,9 +481,9 @@ diff -u -r collision_detection_fcl/src/collision_common.cpp collision_detection_
          cg_g = NULL;
      }
    }
-diff -u -r collision_detection_fcl/src/collision_robot_fcl.cpp collision_detection_fcl/src/collision_robot_fcl.cpp
---- collision_detection_fcl/src/collision_robot_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection_fcl/src/collision_robot_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/collision_detection_fcl/src/collision_robot_fcl.cpp b/collision_detection_fcl/src/collision_robot_fcl.cpp
+--- a/collision_detection_fcl/src/collision_robot_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection_fcl/src/collision_robot_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -62,7 +62,7 @@
          fcl_objs_[index] = FCLCollisionObjectConstPtr(new fcl::CollisionObject(g->collision_geometry_));
        }
@@ -538,9 +538,9 @@ diff -u -r collision_detection_fcl/src/collision_robot_fcl.cpp collision_detecti
    }
  }
  
-diff -u -r collision_detection_fcl/src/collision_world_fcl.cpp collision_detection_fcl/src/collision_world_fcl.cpp
---- collision_detection_fcl/src/collision_world_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection_fcl/src/collision_world_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/collision_detection_fcl/src/collision_world_fcl.cpp b/collision_detection_fcl/src/collision_world_fcl.cpp
+--- a/collision_detection_fcl/src/collision_world_fcl.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection_fcl/src/collision_world_fcl.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -103,7 +103,7 @@
                                                                   const robot_state::RobotState& state1,
                                                                   const robot_state::RobotState& state2) const
@@ -559,9 +559,9 @@ diff -u -r collision_detection_fcl/src/collision_world_fcl.cpp collision_detecti
  }
  
  void collision_detection::CollisionWorldFCL::checkRobotCollisionHelper(const CollisionRequest& req,
-diff -u -r collision_detection_fcl/test/test_fcl_collision_detection.cpp collision_detection_fcl/test/test_fcl_collision_detection.cpp
---- collision_detection_fcl/test/test_fcl_collision_detection.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ collision_detection_fcl/test/test_fcl_collision_detection.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/collision_detection_fcl/test/test_fcl_collision_detection.cpp b/collision_detection_fcl/test/test_fcl_collision_detection.cpp
+--- a/collision_detection_fcl/test/test_fcl_collision_detection.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/collision_detection_fcl/test/test_fcl_collision_detection.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -499,7 +499,7 @@
    EXPECT_GE(1.0, t);
    // this is not really a failure; it is just that slow;
@@ -571,9 +571,9 @@ diff -u -r collision_detection_fcl/test/test_fcl_collision_detection.cpp collisi
  }
  
  TEST_F(FclCollisionDetectionTester, MoveMesh)
-diff -u -r constraint_samplers/src/constraint_sampler.cpp constraint_samplers/src/constraint_sampler.cpp
---- constraint_samplers/src/constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/src/constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/src/constraint_sampler.cpp b/constraint_samplers/src/constraint_sampler.cpp
+--- a/constraint_samplers/src/constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/src/constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -43,7 +43,7 @@
    jmg_ = scene->getRobotModel()->getJointModelGroup(group_name);
    if (!jmg_)
@@ -583,9 +583,9 @@ diff -u -r constraint_samplers/src/constraint_sampler.cpp constraint_samplers/sr
    }
  }
  
-diff -u -r constraint_samplers/src/constraint_sampler_manager.cpp constraint_samplers/src/constraint_sampler_manager.cpp
---- constraint_samplers/src/constraint_sampler_manager.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/src/constraint_sampler_manager.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/src/constraint_sampler_manager.cpp b/constraint_samplers/src/constraint_sampler_manager.cpp
+--- a/constraint_samplers/src/constraint_sampler_manager.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/src/constraint_sampler_manager.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -60,14 +60,14 @@
      return constraint_samplers::ConstraintSamplerPtr();
    std::stringstream ss;
@@ -713,9 +713,9 @@ diff -u -r constraint_samplers/src/constraint_sampler_manager.cpp constraint_sam
  
    return ConstraintSamplerPtr();
  }
-diff -u -r constraint_samplers/src/constraint_sampler_tools.cpp constraint_samplers/src/constraint_sampler_tools.cpp
---- constraint_samplers/src/constraint_sampler_tools.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/src/constraint_sampler_tools.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/src/constraint_sampler_tools.cpp b/constraint_samplers/src/constraint_sampler_tools.cpp
+--- a/constraint_samplers/src/constraint_sampler_tools.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/src/constraint_sampler_tools.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -59,7 +59,7 @@
  {
    if (!sampler)
@@ -734,9 +734,9 @@ diff -u -r constraint_samplers/src/constraint_sampler_tools.cpp constraint_sampl
      return;
    }
    const robot_state::LinkModel* lm = reference_state.getLinkModel(link_name);
-diff -u -r constraint_samplers/src/default_constraint_samplers.cpp constraint_samplers/src/default_constraint_samplers.cpp
---- constraint_samplers/src/default_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/src/default_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/src/default_constraint_samplers.cpp b/constraint_samplers/src/default_constraint_samplers.cpp
+--- a/constraint_samplers/src/default_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/src/default_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -61,7 +61,7 @@
  
    if (!jmg_)
@@ -890,9 +890,9 @@ diff -u -r constraint_samplers/src/default_constraint_samplers.cpp constraint_sa
    }
    return false;
  }
-diff -u -r constraint_samplers/src/union_constraint_sampler.cpp constraint_samplers/src/union_constraint_sampler.cpp
---- constraint_samplers/src/union_constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/src/union_constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/src/union_constraint_sampler.cpp b/constraint_samplers/src/union_constraint_sampler.cpp
+--- a/constraint_samplers/src/union_constraint_sampler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/src/union_constraint_sampler.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -80,7 +80,7 @@
          }
      if (b_depends_on_a && a_depends_on_b)
@@ -911,9 +911,9 @@ diff -u -r constraint_samplers/src/union_constraint_sampler.cpp constraint_sampl
               samplers_[i]->getJointModelGroup()->getName().c_str());
    }
  }
-diff -u -r constraint_samplers/test/pr2_arm_ik.cpp constraint_samplers/test/pr2_arm_ik.cpp
---- constraint_samplers/test/pr2_arm_ik.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/test/pr2_arm_ik.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/test/pr2_arm_ik.cpp b/constraint_samplers/test/pr2_arm_ik.cpp
+--- a/constraint_samplers/test/pr2_arm_ik.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/test/pr2_arm_ik.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -67,9 +67,9 @@
      if (!joint)
      {
@@ -953,9 +953,9 @@ diff -u -r constraint_samplers/test/pr2_arm_ik.cpp constraint_samplers/test/pr2_
      return false;
    }
  
-diff -u -r constraint_samplers/test/test_constraint_samplers.cpp constraint_samplers/test/test_constraint_samplers.cpp
---- constraint_samplers/test/test_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ constraint_samplers/test/test_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/constraint_samplers/test/test_constraint_samplers.cpp b/constraint_samplers/test/test_constraint_samplers.cpp
+--- a/constraint_samplers/test/test_constraint_samplers.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/constraint_samplers/test/test_constraint_samplers.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -1128,7 +1128,7 @@
      if (s->sample(ks, ks_const, 1))
        succ++;
@@ -965,9 +965,9 @@ diff -u -r constraint_samplers/test/test_constraint_samplers.cpp constraint_samp
              (double)succ / (double)NT);
  }
  
-diff -u -r distance_field/include/moveit/distance_field/propagation_distance_field.h distance_field/include/moveit/distance_field/propagation_distance_field.h
---- distance_field/include/moveit/distance_field/propagation_distance_field.h	2017-12-25 17:56:00.000000000 +0000
-+++ distance_field/include/moveit/distance_field/propagation_distance_field.h	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/distance_field/include/moveit/distance_field/propagation_distance_field.h b/distance_field/include/moveit/distance_field/propagation_distance_field.h
+--- a/distance_field/include/moveit/distance_field/propagation_distance_field.h	2017-12-25 17:56:00.000000000 +0000
++++ b/distance_field/include/moveit/distance_field/propagation_distance_field.h	2018-02-28 12:06:37.668217586 +0000
 @@ -521,14 +521,14 @@
    void initNeighborhoods();
  
@@ -985,9 +985,9 @@ diff -u -r distance_field/include/moveit/distance_field/propagation_distance_fie
     *
     * @param points Points to print
     */
-diff -u -r distance_field/src/distance_field.cpp distance_field/src/distance_field.cpp
---- distance_field/src/distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ distance_field/src/distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/distance_field/src/distance_field.cpp b/distance_field/src/distance_field.cpp
+--- a/distance_field/src/distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/distance_field/src/distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -203,7 +203,7 @@
      const shapes::OcTree* oc = dynamic_cast<const shapes::OcTree*>(shape);
      if (!oc)
@@ -1006,9 +1006,9 @@ diff -u -r distance_field/src/distance_field.cpp distance_field/src/distance_fie
      return;
    }
    bodies::Body* body = bodies::createBodyFromShape(shape);
-diff -u -r distance_field/src/propagation_distance_field.cpp distance_field/src/propagation_distance_field.cpp
---- distance_field/src/propagation_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ distance_field/src/propagation_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/distance_field/src/propagation_distance_field.cpp b/distance_field/src/propagation_distance_field.cpp
+--- a/distance_field/src/propagation_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/distance_field/src/propagation_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -101,26 +101,26 @@
  
  void PropagationDistanceField::print(const VoxelSet& set)
@@ -1085,9 +1085,9 @@ diff -u -r distance_field/src/propagation_distance_field.cpp distance_field/src/
          continue;
        }
  
-diff -u -r distance_field/test/test_distance_field.cpp distance_field/test/test_distance_field.cpp
---- distance_field/test/test_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ distance_field/test/test_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/distance_field/test/test_distance_field.cpp b/distance_field/test/test_distance_field.cpp
+--- a/distance_field/test/test_distance_field.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/distance_field/test/test_distance_field.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -91,7 +91,7 @@
        {
          if (pdf.getCell(x, y, z).distance_square_ == 0)
@@ -1124,9 +1124,9 @@ diff -u -r distance_field/test/test_distance_field.cpp distance_field/test/test_
            continue;
          }
          bad_vec.push_back(loc);
-diff -u -r dynamics_solver/src/dynamics_solver.cpp dynamics_solver/src/dynamics_solver.cpp
---- dynamics_solver/src/dynamics_solver.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ dynamics_solver/src/dynamics_solver.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/dynamics_solver/src/dynamics_solver.cpp b/dynamics_solver/src/dynamics_solver.cpp
+--- a/dynamics_solver/src/dynamics_solver.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/dynamics_solver/src/dynamics_solver.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -74,7 +74,7 @@
  
    if (!joint_model_group_->isChain())
@@ -1311,9 +1311,9 @@ diff -u -r dynamics_solver/src/dynamics_solver.cpp dynamics_solver/src/dynamics_
             wrenches.back().force.y, wrenches.back().force.z);
  
    if (!getTorques(joint_angles, joint_velocities, joint_accelerations, wrenches, joint_torques))
-diff -u -r exceptions/src/exceptions.cpp exceptions/src/exceptions.cpp
---- exceptions/src/exceptions.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ exceptions/src/exceptions.cpp	2018-02-28 12:06:37.668217586 +0000
+diff -u -r a/exceptions/src/exceptions.cpp b/exceptions/src/exceptions.cpp
+--- a/exceptions/src/exceptions.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/exceptions/src/exceptions.cpp	2018-02-28 12:06:37.668217586 +0000
 @@ -39,10 +39,10 @@
  
  moveit::ConstructException::ConstructException(const std::string& what_arg) : std::runtime_error(what_arg)
@@ -1327,9 +1327,9 @@ diff -u -r exceptions/src/exceptions.cpp exceptions/src/exceptions.cpp
 -  logError("%s\nException thrown.", what_arg.c_str());
 +  CONSOLE_BRIDGE_logError("%s\nException thrown.", what_arg.c_str());
  }
-diff -u -r kinematic_constraints/src/kinematic_constraint.cpp kinematic_constraints/src/kinematic_constraint.cpp
---- kinematic_constraints/src/kinematic_constraint.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ kinematic_constraints/src/kinematic_constraint.cpp	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/kinematic_constraints/src/kinematic_constraint.cpp b/kinematic_constraints/src/kinematic_constraint.cpp
+--- a/kinematic_constraints/src/kinematic_constraint.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/kinematic_constraints/src/kinematic_constraint.cpp	2018-02-28 12:06:37.669217586 +0000
 @@ -76,7 +76,7 @@
    // testing tolerances first
    if (jc.tolerance_above < 0.0 || jc.tolerance_below < 0.0)
@@ -1618,9 +1618,9 @@ diff -u -r kinematic_constraints/src/kinematic_constraint.cpp kinematic_constrai
      return true;
    }
    return false;
-diff -u -r kinematic_constraints/src/utils.cpp kinematic_constraints/src/utils.cpp
---- kinematic_constraints/src/utils.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ kinematic_constraints/src/utils.cpp	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/kinematic_constraints/src/utils.cpp b/kinematic_constraints/src/utils.cpp
+--- a/kinematic_constraints/src/utils.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/kinematic_constraints/src/utils.cpp	2018-02-28 12:06:37.669217586 +0000
 @@ -59,7 +59,7 @@
          double low = std::max(a.position - a.tolerance_below, b.position - b.tolerance_below);
          double high = std::min(a.position + a.tolerance_above, b.position + b.tolerance_above);
@@ -1630,9 +1630,9 @@ diff -u -r kinematic_constraints/src/utils.cpp kinematic_constraints/src/utils.c
                     a.joint_name.c_str());
          else
          {
-diff -u -r kinematics_base/include/moveit/kinematics_base/kinematics_base.h kinematics_base/include/moveit/kinematics_base/kinematics_base.h
---- kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2017-12-25 17:56:00.000000000 +0000
-+++ kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/kinematics_base/include/moveit/kinematics_base/kinematics_base.h b/kinematics_base/include/moveit/kinematics_base/kinematics_base.h
+--- a/kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2017-12-25 17:56:00.000000000 +0000
++++ b/kinematics_base/include/moveit/kinematics_base/kinematics_base.h	2018-02-28 12:06:37.669217586 +0000
 @@ -315,7 +315,7 @@
      }
  
@@ -1660,9 +1660,9 @@ diff -u -r kinematics_base/include/moveit/kinematics_base/kinematics_base.h kine
  
      return tip_frame_;  // for backwards-compatibility. should actually use tip_frames_[0]
    }
-diff -u -r kinematics_base/src/kinematics_base.cpp kinematics_base/src/kinematics_base.cpp
---- kinematics_base/src/kinematics_base.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ kinematics_base/src/kinematics_base.cpp	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/kinematics_base/src/kinematics_base.cpp b/kinematics_base/src/kinematics_base.cpp
+--- a/kinematics_base/src/kinematics_base.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/kinematics_base/src/kinematics_base.cpp	2018-02-28 12:06:37.669217586 +0000
 @@ -143,14 +143,14 @@
  
    if (ik_poses.size() != 1)
@@ -1680,9 +1680,9 @@ diff -u -r kinematics_base/src/kinematics_base.cpp kinematics_base/src/kinematic
      result.kinematic_error = kinematics::KinematicErrors::EMPTY_TIP_POSES;
      return false;
    }
-diff -u -r kinematics_metrics/src/kinematics_metrics.cpp kinematics_metrics/src/kinematics_metrics.cpp
---- kinematics_metrics/src/kinematics_metrics.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ kinematics_metrics/src/kinematics_metrics.cpp	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/kinematics_metrics/src/kinematics_metrics.cpp b/kinematics_metrics/src/kinematics_metrics.cpp
+--- a/kinematics_metrics/src/kinematics_metrics.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/kinematics_metrics/src/kinematics_metrics.cpp	2018-02-28 12:06:37.669217586 +0000
 @@ -122,7 +122,7 @@
        manipulability_index = 1.0;
        for (unsigned int i = 0; i < singular_values.rows(); ++i)
@@ -1719,9 +1719,9 @@ diff -u -r kinematics_metrics/src/kinematics_metrics.cpp kinematics_metrics/src/
      manipulability = penalty * singular_values.minCoeff() / singular_values.maxCoeff();
    }
    return true;
-diff -u -r planning_interface/src/planning_interface.cpp planning_interface/src/planning_interface.cpp
---- planning_interface/src/planning_interface.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ planning_interface/src/planning_interface.cpp	2018-02-28 12:06:37.669217586 +0000
+diff -u -r a/planning_interface/src/planning_interface.cpp b/planning_interface/src/planning_interface.cpp
+--- a/planning_interface/src/planning_interface.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/planning_interface/src/planning_interface.cpp	2018-02-28 12:06:37.669217586 +0000
 @@ -79,12 +79,12 @@
    request_ = request;
    if (request_.allowed_planning_time <= 0.0)
@@ -1737,9 +1737,9 @@ diff -u -r planning_interface/src/planning_interface.cpp planning_interface/src/
    request_.num_planning_attempts = std::max(1, request_.num_planning_attempts);
  }
  
-diff -u -r planning_request_adapter/src/planning_request_adapter.cpp planning_request_adapter/src/planning_request_adapter.cpp
---- planning_request_adapter/src/planning_request_adapter.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ planning_request_adapter/src/planning_request_adapter.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/planning_request_adapter/src/planning_request_adapter.cpp b/planning_request_adapter/src/planning_request_adapter.cpp
+--- a/planning_request_adapter/src/planning_request_adapter.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/planning_request_adapter/src/planning_request_adapter.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -92,7 +92,7 @@
    }
    catch (std::exception& ex)
@@ -1758,9 +1758,9 @@ diff -u -r planning_request_adapter/src/planning_request_adapter.cpp planning_re
      added_path_index.clear();
      return planner(planning_scene, req, res);
    }
-diff -u -r planning_scene/src/planning_scene.cpp planning_scene/src/planning_scene.cpp
---- planning_scene/src/planning_scene.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ planning_scene/src/planning_scene.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/planning_scene/src/planning_scene.cpp b/planning_scene/src/planning_scene.cpp
+--- a/planning_scene/src/planning_scene.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/planning_scene/src/planning_scene.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -355,7 +355,7 @@
    }
    else
@@ -2089,9 +2089,9 @@ diff -u -r planning_scene/src/planning_scene.cpp planning_scene/src/planning_sce
          if (invalid_index)
            invalid_index->push_back(i);
          result = false;
-diff -u -r profiler/src/profiler.cpp profiler/src/profiler.cpp
---- profiler/src/profiler.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ profiler/src/profiler.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/profiler/src/profiler.cpp b/profiler/src/profiler.cpp
+--- a/profiler/src/profiler.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/profiler/src/profiler.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -172,7 +172,7 @@
    std::stringstream ss;
    ss << std::endl;
@@ -2102,9 +2102,9 @@ diff -u -r profiler/src/profiler.cpp profiler/src/profiler.cpp
  
  /// @cond IGNORE
 Only in //moveit_core-0.9.11: README.md
-diff -u -r robot_model/src/floating_joint_model.cpp robot_model/src/floating_joint_model.cpp
---- robot_model/src/floating_joint_model.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_model/src/floating_joint_model.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_model/src/floating_joint_model.cpp b/robot_model/src/floating_joint_model.cpp
+--- a/robot_model/src/floating_joint_model.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_model/src/floating_joint_model.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -172,7 +172,7 @@
      double norm = sqrt(normSqr);
      if (norm < std::numeric_limits<double>::epsilon() * 100.0)
@@ -2114,9 +2114,9 @@ diff -u -r robot_model/src/floating_joint_model.cpp robot_model/src/floating_joi
        values[3] = 0.0;
        values[4] = 0.0;
        values[5] = 0.0;
-diff -u -r robot_model/src/joint_model_group.cpp robot_model/src/joint_model_group.cpp
---- robot_model/src/joint_model_group.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_model/src/joint_model_group.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_model/src/joint_model_group.cpp b/robot_model/src/joint_model_group.cpp
+--- a/robot_model/src/joint_model_group.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_model/src/joint_model_group.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -297,7 +297,7 @@
    LinkModelMapConst::const_iterator it = link_model_map_.find(name);
    if (it == link_model_map_.end())
@@ -2210,9 +2210,9 @@ diff -u -r robot_model/src/joint_model_group.cpp robot_model/src/joint_model_gro
               tip_frame_local.c_str());
  
      // Check if the IK solver's tip is the same as the frame of inquiry
-diff -u -r robot_model/src/robot_model.cpp robot_model/src/robot_model.cpp
---- robot_model/src/robot_model.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_model/src/robot_model.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_model/src/robot_model.cpp b/robot_model/src/robot_model.cpp
+--- a/robot_model/src/robot_model.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_model/src/robot_model.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -87,32 +87,32 @@
    link_geometry_count_ = 0;
    variable_count_ = 0;
@@ -2514,9 +2514,9 @@ diff -u -r robot_model/src/robot_model.cpp robot_model/src/robot_model.cpp
        }
        jmg->setSolverAllocators(result);
      }
-diff -u -r robot_state/include/moveit/robot_state/robot_state.h robot_state/include/moveit/robot_state/robot_state.h
---- robot_state/include/moveit/robot_state/robot_state.h	2017-12-25 17:56:00.000000000 +0000
-+++ robot_state/include/moveit/robot_state/robot_state.h	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_state/include/moveit/robot_state/robot_state.h b/robot_state/include/moveit/robot_state/robot_state.h
+--- a/robot_state/include/moveit/robot_state/robot_state.h	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_state/include/moveit/robot_state/robot_state.h	2018-02-28 12:06:37.670217586 +0000
 @@ -524,7 +524,7 @@
    {
      if (has_acceleration_)
@@ -2526,9 +2526,9 @@ diff -u -r robot_state/include/moveit/robot_state/robot_state.h robot_state/incl
        return;
      }
      has_effort_ = true;
-diff -u -r robot_state/src/conversions.cpp robot_state/src/conversions.cpp
---- robot_state/src/conversions.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_state/src/conversions.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_state/src/conversions.cpp b/robot_state/src/conversions.cpp
+--- a/robot_state/src/conversions.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_state/src/conversions.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -54,7 +54,7 @@
  {
    if (joint_state.name.size() != joint_state.position.size())
@@ -2673,9 +2673,9 @@ diff -u -r robot_state/src/conversions.cpp robot_state/src/conversions.cpp
  
      state.getVariablePositions()[i] = boost::lexical_cast<double>(cell.c_str());
    }
-diff -u -r robot_state/src/robot_state.cpp robot_state/src/robot_state.cpp
---- robot_state/src/robot_state.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_state/src/robot_state.cpp	2018-02-28 12:06:37.670217586 +0000
+diff -u -r a/robot_state/src/robot_state.cpp b/robot_state/src/robot_state.cpp
+--- a/robot_state/src/robot_state.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_state/src/robot_state.cpp	2018-02-28 12:06:37.670217586 +0000
 @@ -153,7 +153,7 @@
  {
    if (dirtyJointTransform(joint))
@@ -2965,9 +2965,9 @@ diff -u -r robot_state/src/robot_state.cpp robot_state/src/robot_state.cpp
        percentage = (double)i / (double)dist_vector.size();
        traj.resize(i);
        break;
-diff -u -r robot_trajectory/src/robot_trajectory.cpp robot_trajectory/src/robot_trajectory.cpp
---- robot_trajectory/src/robot_trajectory.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ robot_trajectory/src/robot_trajectory.cpp	2018-02-28 12:06:37.671217586 +0000
+diff -u -r a/robot_trajectory/src/robot_trajectory.cpp b/robot_trajectory/src/robot_trajectory.cpp
+--- a/robot_trajectory/src/robot_trajectory.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/robot_trajectory/src/robot_trajectory.cpp	2018-02-28 12:06:37.671217586 +0000
 @@ -458,7 +458,7 @@
    int before = 0, after = 0;
    double blend = 1.0;
@@ -2977,9 +2977,9 @@ diff -u -r robot_trajectory/src/robot_trajectory.cpp robot_trajectory/src/robot_
    waypoints_[before]->interpolate(*waypoints_[after], blend, *output_state);
    return true;
  }
-diff -u -r trajectory_processing/src/iterative_time_parameterization.cpp trajectory_processing/src/iterative_time_parameterization.cpp
---- trajectory_processing/src/iterative_time_parameterization.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ trajectory_processing/src/iterative_time_parameterization.cpp	2018-02-28 12:06:37.671217586 +0000
+diff -u -r a/trajectory_processing/src/iterative_time_parameterization.cpp b/trajectory_processing/src/iterative_time_parameterization.cpp
+--- a/trajectory_processing/src/iterative_time_parameterization.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/trajectory_processing/src/iterative_time_parameterization.cpp	2018-02-28 12:06:37.671217586 +0000
 @@ -59,20 +59,20 @@
  {
  void printPoint(const trajectory_msgs::JointTrajectoryPoint& point, std::size_t i)
@@ -3065,9 +3065,9 @@ diff -u -r trajectory_processing/src/iterative_time_parameterization.cpp traject
      return false;
    }
  
-diff -u -r transforms/src/transforms.cpp transforms/src/transforms.cpp
---- transforms/src/transforms.cpp	2017-12-25 17:56:00.000000000 +0000
-+++ transforms/src/transforms.cpp	2018-02-28 12:06:37.671217586 +0000
+diff -u -r a/transforms/src/transforms.cpp b/transforms/src/transforms.cpp
+--- a/transforms/src/transforms.cpp	2017-12-25 17:56:00.000000000 +0000
++++ b/transforms/src/transforms.cpp	2018-02-28 12:06:37.671217586 +0000
 @@ -43,12 +43,12 @@
  {
    boost::trim(target_frame_);
