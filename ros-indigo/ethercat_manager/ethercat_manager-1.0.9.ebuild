@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,15 +8,18 @@ inherit ros-cmake
 
 DESCRIPTION="ROS-Industrial support stack for facilitating communication with\
 EtherCAT [...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/minas-release/archive/release/indigo/${PN}/1.0.7-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+HOMEPAGE="http://ros.org/wiki/ethercat_manager"
+SRC_URI="https://github.com/tork-a/minas-release/archive/release/indigo/${PN}/1.0.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-indigo/roscpp
 	ros-indigo/soem
+	test? ( ros-indigo/roslaunch )
+	test? ( ros-indigo/rostest )
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin
