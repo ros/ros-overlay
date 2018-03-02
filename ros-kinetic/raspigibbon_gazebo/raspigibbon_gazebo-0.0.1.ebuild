@@ -6,16 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="The raspigibbon_bringup package"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/raspberrypigibbon/raspigibbon_ros-release/archive/release/kinetic/${PN}/0.1.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="The raspigibbon_gazebo package"
+HOMEPAGE="http://github.com/rt-net/RaspberryPiGibbon/wiki"
+SRC_URI="https://github.com/raspberrypigibbon/raspigibbon_sim-release/archive/release/kinetic/${PN}/0.0.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/rospy
-	ros-kinetic/std_msgs
+	ros-kinetic/raspigibbon_control
+	ros-kinetic/raspigibbon_description
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
