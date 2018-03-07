@@ -6,25 +6,24 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tests for MAVROS package"
-HOMEPAGE="https://github.com/mavlink/mavros.git"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.23.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+DESCRIPTION="Extra nodes and plugins for <a href=\"http://wiki.ros.org/mavros\">MAVROS</a>."
+HOMEPAGE="http://wiki.ros.org/mavros_extras"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.23.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="( BSD GPL-3 LGPL-2 )"
+LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/control_toolbox
-	ros-lunar/eigen_conversions
 	ros-lunar/geometry_msgs
 	ros-lunar/mavros
-	ros-lunar/mavros_extras
+	ros-lunar/mavros_msgs
 	ros-lunar/roscpp
+	ros-lunar/sensor_msgs
 	ros-lunar/std_msgs
-	ros-lunar/tf2_ros
-	dev-cpp/eigen
+	ros-lunar/tf
+	ros-lunar/urdf
+	ros-lunar/visualization_msgs
 "
 DEPEND="${RDEPEND}
-	ros-lunar/angles
 	ros-lunar/catkin
 	ros-lunar/cmake_modules
 "
