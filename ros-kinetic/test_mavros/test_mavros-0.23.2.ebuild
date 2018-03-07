@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Tests for MAVROS package"
 HOMEPAGE="https://github.com/mavlink/mavros.git"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.23.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.23.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="( BSD GPL-3 LGPL-2 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
