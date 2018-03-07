@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Simple object recognition library for 2D images, with the additional functi[...]"
 HOMEPAGE="http://wiki.ros.org/custom_landmark_2d"
-SRC_URI="https://github.com/MatthewLiuRelease/${PN}-release/archive/release/indigo/${PN}/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/MatthewLiuRelease/${PN}-release/archive/release/indigo/${PN}/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
