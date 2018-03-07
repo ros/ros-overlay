@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Simple library for segmentation of tabletop and shelf surfaces"
 HOMEPAGE="http://wiki.ros.org/surface_perception"
-SRC_URI="https://github.com/jstnhuang-release/${PN}-release/archive/release/indigo/${PN}/1.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jstnhuang-release/${PN}-release/archive/release/indigo/${PN}/1.0.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,6 +19,8 @@ RDEPEND="
 	ros-indigo/roscpp
 	ros-indigo/rospy
 	ros-indigo/sensor_msgs
+	ros-indigo/tf
+	ros-indigo/tf_conversions
 	ros-indigo/visualization_msgs
 "
 DEPEND="${RDEPEND}
