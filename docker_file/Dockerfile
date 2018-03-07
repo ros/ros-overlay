@@ -29,7 +29,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils && \
     echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils && \
     echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
-    echo "dev-qt/qtwebkit printingsupport" >> /etc/portage/package.use/iputils && \
+    echo "dev-qt/qtwebkit printsupport" >> /etc/portage/package.use/iputils && \
     echo "dev-libs/boost python" >> /etc/portage/package.use/iputils && \
     perl-cleaner --reallyall && \
     emerge -C openssl && \
