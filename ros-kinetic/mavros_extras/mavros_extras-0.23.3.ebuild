@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Extra nodes and plugins for <a href=\"http://wiki.ros.org/mavros\">MAVROS</a>."
 HOMEPAGE="http://wiki.ros.org/mavros_extras"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.23.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.23.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
