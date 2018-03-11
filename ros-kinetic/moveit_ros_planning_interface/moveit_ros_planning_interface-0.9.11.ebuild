@@ -33,6 +33,8 @@ DEPEND="${RDEPEND}
 	dev-python/catkin_pkg
 "
 
+PATCHES=( "${FILESDIR}/${PN}-logging.patch" )
+
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
