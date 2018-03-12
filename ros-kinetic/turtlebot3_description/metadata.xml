@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    3D model of the TurtleBot3 for simulation and visualization
+    3D models of the TurtleBot3 for simulation and visualization
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
