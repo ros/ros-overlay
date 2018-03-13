@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS interface for the ROSflight autpilot stack
+    The ifm_o3mxxx package
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>daniel.p.koch@gmail.com</email>
-      <name>Daniel Koch</name>
+      <email>antti.kolu@tut.fi</email>
+      <name>Antti Kolu</name>
     </maintainer>
-    <bugs-to>https://github.com/rosflight/rosflight/issues</bugs-to>
+    <bugs-to>https://github.com/takiaine/ifm_o3mxxx/issues</bugs-to>
   </upstream>
 </pkgmetadata>
