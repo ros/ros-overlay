@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    DART (Dynamic Animation and Robotics Toolkit) is a collaborative,
+    cross-platform, open source library created by the Georgia Tech Graphics
+    Lab and Humanoid Robotics Lab, with ongoing support by the University
+    of Washington Personal Robotics Lab and Open Robotics. DART provides data
+    structures and algorithms for kinematic and dynamic applications in robotics
+    and computer animation.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>grey@openrobotics.org</email>
+      <name>Michael X. Grey</name>
+    </maintainer>
+    <bugs-to>https://github.com/dartsim/ros-dartsim/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
