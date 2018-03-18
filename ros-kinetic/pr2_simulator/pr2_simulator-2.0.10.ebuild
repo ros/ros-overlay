@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pr2_simulator package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/kinetic/${PN}/2.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/kinetic/${PN}/2.0.10-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
