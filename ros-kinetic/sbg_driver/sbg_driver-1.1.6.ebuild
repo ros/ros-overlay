@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The SBG ROS Driver package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ENSTABretagneRobotics/sbg_ros_driver-release/archive/release/kinetic/${PN}/1.1.5-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ENSTABretagneRobotics/sbg_ros_driver-release/archive/release/kinetic/${PN}/1.1.6-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
