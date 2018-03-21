@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package defines messages for defining robot trajectories. These messages are
+    also the building blocks of most of the
+    <a href="http://wiki.ros.org/control_msgs">control_msgs</a> actions.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>tfoote@osrfoundation.org</email>
+      <name>Tully Foote</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/common_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
