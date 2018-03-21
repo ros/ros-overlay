@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS msgs packages for the ROBOTIS OP3 (meta package)
+    ROS messages packages for the ROBOTIS OP3 (meta package)
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
