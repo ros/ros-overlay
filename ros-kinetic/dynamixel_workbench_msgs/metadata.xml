@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    dynamixel_workbench_msgs package
-    This package includes ROS messages and services for dynamixel-workbench packages
+    This package includes ROS messages and services for dynamixel_workbench packages
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
