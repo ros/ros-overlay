@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Message and service types: custom messages and services for robotis_framework packages
+    This package includes ROS messages and services for robotis_framework packages
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -11,7 +11,7 @@
   <upstream>
     <maintainer status="active">
       <email>pyo@robotis.com</email>
-      <name>pyo</name>
+      <name>Pyo</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/ROBOTIS-Framework-msgs/issues</bugs-to>
   </upstream>
