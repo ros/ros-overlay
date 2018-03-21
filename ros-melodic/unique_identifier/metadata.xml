@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS messages and interfaces for universally unique identifiers.
+
+    Not needed for wet packages, use only to resolve dry stack
+    dependencies.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jack.oquin@gmail.com</email>
+      <name>Jack O'Quin</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-geographic-info/unique_identifier/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

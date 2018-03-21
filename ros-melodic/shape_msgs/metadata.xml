@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains messages for defining shapes, such as simple solid
+    object primitives (cube, sphere, etc), planes, and meshes.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>isucan@willowgarage.com</email>
+      <name>Ioan Sucan</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/common_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
