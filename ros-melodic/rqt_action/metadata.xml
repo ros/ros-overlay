@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    rqt_action provides a feature to introspect all available ROS
+  action (from actionlib) types. By utilizing rqt_msg, the output format is
+  unified with it and rqt_srv. Note that the actions shown on this plugin
+  is the ones that are stored on your machine, not on the ROS core your rqt
+  instance connects to.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mikael@osrfoundation.org</email>
+      <name>Mikael Arguedas</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/rqt_action/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
