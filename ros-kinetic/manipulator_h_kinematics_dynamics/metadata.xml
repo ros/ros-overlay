@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    The manipulator_h_kinematics_dynamics package
+    This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
+    Additionally, there are some function to calculate kinematics and dynamics.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
