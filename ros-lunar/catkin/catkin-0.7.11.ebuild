@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Low-level build system macros and infrastructure for ROS."
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://www.ros.org/wiki/catkin"
 SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.7.11-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
@@ -15,7 +15,7 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	dev-cpp/gmock
+	dev-cpp/gtest
 	dev-cpp/gtest
 	dev-lang/python
 	dev-python/catkin_pkg
