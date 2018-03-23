@@ -15,7 +15,7 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	dev-cpp/gmock
+	dev-cpp/gtest
 	dev-cpp/gtest
 	dev-lang/python
 	dev-python/catkin_pkg

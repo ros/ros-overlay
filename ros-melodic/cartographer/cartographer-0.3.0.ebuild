@@ -26,7 +26,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
 	sys-devel/gcc
-	dev-cpp/gmock
+	dev-cpp/gtest
 	dev-python/sphinx
 "
 
