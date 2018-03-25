@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The metapackage to combine the nodes required to establish and manage a mul[...]"
 HOMEPAGE="http://ros.org/wiki/multimaster_fkie"
-SRC_URI="https://github.com/fkie-release/${PN}-release/archive/release/kinetic/${PN}/0.7.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/fkie-release/${PN}-release/archive/release/kinetic/${PN}/0.7.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
