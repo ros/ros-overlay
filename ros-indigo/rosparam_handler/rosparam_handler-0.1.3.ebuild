@@ -8,21 +8,21 @@ inherit ros-cmake
 
 DESCRIPTION="An easy wrapper for using parameters in ROS."
 HOMEPAGE="https://github.com/cbandera/rosparam_handler.git"
-SRC_URI="https://github.com/cbandera/${PN}-release/archive/release/kinetic/${PN}/0.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/cbandera/${PN}-release/archive/release/indigo/${PN}/0.1.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-kinetic/catkin
-	test? ( ros-kinetic/dynamic_reconfigure )
-	test? ( ros-kinetic/roscpp )
+	ros-indigo/catkin
+	test? ( ros-indigo/dynamic_reconfigure )
+	test? ( ros-indigo/roscpp )
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/rostest
+	ros-indigo/rostest
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

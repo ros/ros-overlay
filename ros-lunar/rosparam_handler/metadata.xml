@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS driver node for HOKUYO 3D LIDARs
+    An easy wrapper for using parameters in ROS.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>atsushi.w@ieee.org</email>
-      <name>Atsushi Watanabe</name>
+      <email>jeremie.deray@pal-robotics.com</email>
+      <name>Jeremie Deray</name>
     </maintainer>
-    <bugs-to>https://github.com/at-wat/hokuyo3d/issues</bugs-to>
+    <bugs-to>https://github.com/cbandera/rosparam_handler/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS driver for HOKUYO 3D sensor"
+DESCRIPTION="ROS driver node for HOKUYO 3D LIDARs"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/at-wat/hokuyo3d-release/archive/release/kinetic/hokuyo3d/0.1.1-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+SRC_URI="https://github.com/at-wat/${PN}-release/archive/release/kinetic/${PN}/0.2.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,9 +19,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
+	ros-kinetic/roslint
+	ros-kinetic/rostest
 "
 
 SLOT="0"
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-
