@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="The manipulator_h_kinematics_dynamics package\
 	This packages provides l[...]"
 HOMEPAGE="http://wiki.ros.org/manipulator_h_kinematics_dynamics"
-SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/${PN}/0.3.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/${PN}/0.3.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
