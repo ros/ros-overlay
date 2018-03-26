@@ -1,6 +1,5 @@
 ros-overlay
 ===========
-1;4804;0c
 This overlay contains ebuilds for the Robot Operating System (ROS).
 
 For instructions, please look to the [ROS wiki](http://wiki.ros.org/ROS/Installation).

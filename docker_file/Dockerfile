@@ -31,6 +31,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
     echo "dev-qt/qtwebkit printsupport" >> /etc/portage/package.use/iputils && \
     echo "dev-libs/boost python" >> /etc/portage/package.use/iputils && \
+    echo "net-dns/avahi python" >> /etc/portage/package.use/iputils && \
     perl-cleaner --reallyall && \
     emerge -C openssl && \
     printf 'USE="${USE} fontconfig ruby_targets_ruby25"\n' >> \
