@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    polled_camera contains a service and C++ helper classes for implementing a polled
+     camera driver node and requesting images from it. The package is currently for
+     internal use as the API is still under development.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jack.oquin@gmail.com</email>
+      <name>Jack O'Quin</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/image_common/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
