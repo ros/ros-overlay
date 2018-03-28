@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    Driver for Microstrain 3DM-GX4-25 IMU
+    This package is modified by robotis.
+    The original version is Kumar Robotics's imu_3dm_gx4 package.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
@@ -10,6 +15,6 @@
       <email>pyo@robotis.com</email>
       <name>Pyo</name>
     </maintainer>
-    <bugs-to>https://github.com/ROBOTIS-GIT/ROBOTIS-THORMANG-MPC/issues</bugs-to>
+    <bugs-to>https://github.com/ROBOTIS-GIT/ROBOTIS-THORMANG-MPC-SENSORs/issues</bugs-to>
   </upstream>
 </pkgmetadata>

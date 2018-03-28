@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Autonomous mapping and navigation demos for the SawYer Roch
+    Autonomous mapping and navigation demos for the Soy Roch
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>wzhang@softrobtech.com</email>
+      <email>carlzhang@soyrobotics.com</email>
       <name>Carl</name>
     </maintainer>
     <bugs-to>https://github.com/SawYerRobotics/roch/issues</bugs-to>
