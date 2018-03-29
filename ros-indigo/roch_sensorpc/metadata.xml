@@ -12,7 +12,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>wzhang@softrobtech.com</email>
+      <email>carlzhang@soyrobotics.com</email>
       <name>Carl</name>
     </maintainer>
     <bugs-to>https://github.com/SawYerRobotics/roch_robot/issues</bugs-to>
