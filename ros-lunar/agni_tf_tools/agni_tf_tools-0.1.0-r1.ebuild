@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="transform tools"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ubi-agni-gbp/${PN}-release/archive/release/lunar/${PN}/0.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+DESCRIPTION="This package provides a gui program as well as a rviz plugin to publish sta[...]"
+HOMEPAGE="http://wiki.ros.org/agni_tf_tools"
+SRC_URI="https://github.com/ubi-agni-gbp/${PN}-release/archive/release/lunar/${PN}/0.1.0-1.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
