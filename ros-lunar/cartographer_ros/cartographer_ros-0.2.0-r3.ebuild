@@ -8,28 +8,44 @@ inherit ros-cmake
 
 DESCRIPTION="Cartographer is a system that provides real-time simultaneous localization\[...]"
 HOMEPAGE="https://github.com/googlecartographer/cartographer_ros"
-SRC_URI="https://github.com/ros-gbp/cartographer_ros-release/archive/release/lunar/${PN}/0.2.0-1.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.2.0-3.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/cartographer
-	ros-lunar/cartographer_ros
 	ros-lunar/cartographer_ros_msgs
 	ros-lunar/eigen_conversions
+	ros-lunar/geometry_msgs
 	ros-lunar/message_runtime
+	ros-lunar/nav_msgs
+	ros-lunar/pcl_conversions
+	ros-lunar/robot_state_publisher
+	ros-lunar/rosbag
 	ros-lunar/roscpp
+	ros-lunar/roslaunch
 	ros-lunar/roslib
-	ros-lunar/rviz
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtcore:5
+	ros-lunar/sensor_msgs
+	ros-lunar/std_msgs
+	ros-lunar/tf2
+	ros-lunar/tf2_eigen
+	ros-lunar/tf2_ros
+	ros-lunar/urdf
+	ros-lunar/visualization_msgs
+	test? ( ros-lunar/rosunit )
+	dev-cpp/gflags
+	dev-cpp/glog
+	sci-libs/pcl
+	dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin
 	sys-devel/gcc
+	dev-cpp/gtest
+	dev-libs/protobuf
+	dev-python/sphinx
 "
 
 SLOT="0"

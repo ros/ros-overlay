@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS messages for the cartographer_ros package."
 HOMEPAGE="https://github.com/googlecartographer/cartographer_ros"
-SRC_URI="https://github.com/ros-gbp/cartographer_ros-release/archive/release/lunar/${PN}/0.2.0-1.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/cartographer_ros-release/archive/release/lunar/${PN}/0.2.0-3.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
