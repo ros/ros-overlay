@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Cartographer is a system that provides real-time simultaneous localization\[...]"
 HOMEPAGE="https://github.com/googlecartographer/cartographer"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.2.0-2.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.2.0-4.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
