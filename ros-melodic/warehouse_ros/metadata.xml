@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS messages for the cartographer_ros package.
+    Persistent storage of ROS messages
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>cartographer-owners@googlegroups.com</email>
-      <name>The Cartographer Owners</name>
+      <email>isucan@google.com</email>
+      <name>Ioan Sucan</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/cartographer_ros/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/warehouse_ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>
