@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="octovis is visualization tool for the OctoMap library based on Qt and libQG[...]"
 HOMEPAGE="http://octomap.github.io"
-SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/melodic/${PN}/1.9.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/melodic/${PN}/1.9.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 

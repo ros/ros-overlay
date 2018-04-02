@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,14 +6,15 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred
-  bridge"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/lunar/pcl_ros/1.5.3-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="PCL \(Point Cloud Library\) ROS interface stack. PCL-ROS is the preferred\
+[...]"
+HOMEPAGE="http://ros.org/wiki/perception_pcl"
+SRC_URI="https://github.com/ros-gbp/perception_pcl-release/archive/release/lunar/${PN}/1.5.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-lunar/dynamic_reconfigure
 	ros-lunar/message_filters
@@ -28,11 +29,9 @@ RDEPEND="
 	ros-lunar/std_msgs
 	ros-lunar/tf
 	ros-lunar/tf2_eigen
+	test? ( ros-lunar/rostest )
 	dev-cpp/eigen
 	sci-libs/pcl
-	sci-libs/vtk
-	sci-libs/proj
-	dev-qt/qtcore:5
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

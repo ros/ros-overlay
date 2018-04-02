@@ -12,8 +12,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mikael@osrfoundation.org</email>
-      <name>Mikael Arguedas</name>
+      <email>cartographer-owners@googlegroups.com</email>
+      <name>The Cartographer Owners</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/cartographer_ros/issues</bugs-to>
   </upstream>
