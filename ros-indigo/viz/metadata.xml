@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    A metapackage to aggregate several packages.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>mikael@osrfoundation.org</email>
+      <name>Mikael Arguedas</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/metapackages/issues</bugs-to>
   </upstream>
