@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    Uses opencv to find checkboards and compute their 6D poses with respect to the image. Requires the image to be calibrated.<br/>
+    Parameters:<br/>
+    <ul>
+     <li>display - show the checkerboard detection</li>
+     <li>rect%d_size_x - size of checker in x direction</li>
+     <li>rect%d_size_y - size of checker in y direction</li>
+     <li>grid%d_size_x - number of checkers in x direction</li>
+     <li>grid%d_size_y - number of checkers in y direction</li>
+    </ul><br/>    
+    There can be more than one grid%d declared, the numbers should grow consecutively starting at 0.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
