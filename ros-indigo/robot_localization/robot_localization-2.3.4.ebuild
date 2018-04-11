@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,11 +8,12 @@ inherit ros-cmake
 
 DESCRIPTION="Provides nonlinear state estimation through sensor fusion of an abritrary n[...]"
 HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/indigo/${PN}/2.3.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/indigo/${PN}/2.3.4-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-indigo/cmake_modules
 	ros-indigo/diagnostic_msgs
@@ -28,6 +29,9 @@ RDEPEND="
 	ros-indigo/tf2
 	ros-indigo/tf2_geometry_msgs
 	ros-indigo/tf2_ros
+	test? ( ros-indigo/rosbag )
+	test? ( ros-indigo/rostest )
+	test? ( ros-indigo/rosunit )
 	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}

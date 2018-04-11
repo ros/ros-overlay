@@ -8,11 +8,12 @@ inherit ros-cmake
 
 DESCRIPTION="Provides nonlinear state estimation through sensor fusion of an abritrary n[...]"
 HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/kinetic/${PN}/2.4.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/kinetic/${PN}/2.4.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-kinetic/cmake_modules
 	ros-kinetic/diagnostic_msgs
@@ -31,6 +32,9 @@ RDEPEND="
 	ros-kinetic/tf2_geometry_msgs
 	ros-kinetic/tf2_ros
 	ros-kinetic/xmlrpcpp
+	test? ( ros-kinetic/rosbag )
+	test? ( ros-kinetic/rostest )
+	test? ( ros-kinetic/rosunit )
 	dev-cpp/eigen
 	dev-cpp/yaml-cpp
 "
