@@ -1,0 +1,11 @@
+--- a/move_group_interface/src/move_group_interface.cpp	2018-03-01 09:31:37.283981719 +0000
++++ b/move_group_interface/src/move_group_interface.cpp	2018-03-01 09:32:10.644981592 +0000
+@@ -476,7 +476,7 @@
+         }
+         else
+         {
+-          logError("Unable to transform from frame '%s' to frame '%s'", frame.c_str(),
++          CONSOLE_BRIDGE_logError("Unable to transform from frame '%s' to frame '%s'", frame.c_str(),
+                    getRobotModel()->getModelFrame().c_str());
+           return false;
+         }

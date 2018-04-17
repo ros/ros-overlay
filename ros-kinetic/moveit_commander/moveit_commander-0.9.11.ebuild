@@ -22,7 +22,7 @@ RDEPEND="
 	ros-kinetic/shape_msgs
 	ros-kinetic/tf
 	dev-lang/python
-	dev-libs/assimp
+	media-libs/assimp
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package depends on a recent version of the Kinematics and Dynamics
+    Library (KDL), distributed by the Orocos Project. It is a meta-package that
+    depends on kdl which contains the c++ version and pykdl which contains the
+    generated python bindings.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>orocos-dev@lists.mech.kuleuven.be</email>
+      <name>Orocos Developers</name>
+    </maintainer>
+    <bugs-to>https://github.com/orocos/orocos-kdl/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

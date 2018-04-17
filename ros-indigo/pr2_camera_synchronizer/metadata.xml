@@ -2,7 +2,19 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    <p>
+    The PR2 is equipped with a texture projector that can be used to
+    project a texture onto featureless surfaces, allowing their
+    three-dimensional structure to be determined using stereoscopy. The
+    projector operates in a pulsed mode, producing brief (2ms) pulses of
+    light. Cameras that want to see the texture must expose during the
+    projector pulse; other cameras should be expose while the projector is
+    off.
+    </p>
+
+    <p>
+      This package contains the pr2_projector_synchronizer node. Based on its dynamically reconfigurable parameters, this node controls the projector pulsing, and sets up triggering of the WGE100 cameras.
+    </p>
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,8 +22,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ahendrix@willowgarage.com</email>
-      <name>Devon Ash</name>
+      <email>dave@cse.unr.edu</email>
+      <name>Dave Feil-Seifer</name>
     </maintainer>
     <bugs-to>https://github.com/pr2-gbp/pr2_robot/issues</bugs-to>
   </upstream>

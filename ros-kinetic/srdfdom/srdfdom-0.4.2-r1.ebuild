@@ -29,5 +29,8 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
+
+PATCHES=( "${FILESDIR}/${PN}-logging.patch" )
+
 ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

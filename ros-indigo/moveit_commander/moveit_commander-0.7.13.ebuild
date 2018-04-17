@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="Python interfaces to MoveIt"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://moveit.ros.org"
 SRC_URI="https://github.com/ros-gbp/moveit-release/archive/release/indigo/${PN}/0.7.13-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
@@ -22,7 +22,7 @@ RDEPEND="
 	ros-indigo/shape_msgs
 	ros-indigo/tf
 	dev-lang/python
-	dev-libs/assimp
+	media-libs/assimp
 "
 DEPEND="${RDEPEND}
 	ros-indigo/catkin

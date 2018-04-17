@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>tiryoh@gmail.com</email>
-      <name>Daisuke Sato</name>
+      <email>shop@rt-net.jp</email>
+      <name>RT Coporation</name>
     </maintainer>
     <bugs-to>https://github.com/raspberrypigibbon/raspigibbon_ros/issues</bugs-to>
   </upstream>
