@@ -21,11 +21,11 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     emaint sync -r ros-overlay && \
     emerge --oneshot portage && \
     echo "ros-indigo/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-indigo/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-indigo/* PYTHON_SINGLE_TAGET: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-kinetic/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-kinetic/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-kinetic/* PYTHON_SINGLE_TAGET: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-lunar/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-lunar/* PYTHON_SINGLE_TAGET: *- python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-lunar/* PYTHON_SINGLE_TAGET: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils && \
     echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils && \
     echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
