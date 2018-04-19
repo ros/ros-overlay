@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This rqt plugin ROS package provides easy view of .launch files.
+  User can also start and end node by node that are defined in those files.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>130s@lateeye.net</email>
+      <name>Isaac Saito</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/rqt_launch/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

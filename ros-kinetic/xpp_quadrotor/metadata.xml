@@ -6,8 +6,8 @@
     simple rviz publisher of quadrotor tfs.
      
     Adapted from Daniel Mellinger, Nathan Michael, Vijay Kumar, 
-    "Trajectory Generation and Control for Precise Aggressive Maneuvers
-    with Quadrotors".
+    &quot;Trajectory Generation and Control for Precise Aggressive Maneuvers
+    with Quadrotors&quot;.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
