@@ -182,7 +182,7 @@ ros-cmake_src_configure_internal() {
 # @DESCRIPTION:
 # Configures a catkin-based package.
 ros-cmake_src_configure() {
-	if [ -f /${ROS_PREFIX}/setup.bash ]; then
+	if [ -f ${EPREFIX%/}${ROS_PREFIX}/setup.bash ]; then
 		source ${EPREFIX%/}${ROS_PREFIX}/setup.bash
 	fi
 	if [[ -z $CPP11 ]]; then
@@ -200,7 +200,7 @@ ros-cmake_src_configure() {
 		use ros_messages_nodejs || ROS_LANG_DISABLE="${ROS_LANG_DISABLE}:gennodejs"
 		export ROS_LANG_DISABLE
 	fi
-	export DEST_SETUP_DIR="/${ROS_PREFIX}"
+	export DEST_SETUP_DIR="${EPREFIX%/}${ROS_PREFIX}"
 	if [ -z $BUILD_BINARY ]; then
 		export BUILD_BINARY="1"
 	fi
@@ -223,8 +223,8 @@ ros-cmake_src_configure() {
 # @DESCRIPTION:
 # Builds a catkin-based package.
 ros-cmake_src_compile() {
-	if [ -f /${ROS_PREFIX}/setup.bash ]; then
-		source /${ROS_PREFIX}/setup.bash
+	if [ -f ${EPREFIX%/}${ROS_PREFIX}/setup.bash ]; then
+		source ${EPREFIX%/}${ROS_PREFIX}/setup.bash
 	fi
 
 	rm -f ${WORKDIR}/${P}/README* # prevents conflicts
@@ -272,7 +272,7 @@ ros-catkin_src_test() {
 # @DESCRIPTION:
 # Decorator around cmake-utils_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
 ros-cmake_src_install_with_python() {
-	python_scriptinto /${ROS_PREFIX}/bin
+	python_scriptinto ${EPREFIX%/}${ROS_PREFIX}/bin
 	python_export PYTHON_SCRIPTDIR
 	if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"
