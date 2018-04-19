@@ -155,9 +155,17 @@ ros-cmake_src_configure_internal() {
 		append-cxxflags '-std=c++11'
 	fi
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
+		# Figure out if the system uses lib64 or lib folder
+		local sitedir="$(python_get_sitedir)";
+		if [[ $sitedir = *"lib64"* ]]; then
+		    local lib_str="lib64"
+		else
+			local lib_str="lib"
+		fi
+
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			"-DPYTHON_INSTALL_DIR=${EPREFIX%/}/${ROS_PREFIX%/}/lib/${EPYTHON%/}/site-packages"
+			"-DPYTHON_INSTALL_DIR=${lib_str}/${EPYTHON%/}/site-packages"
 			"${mycmakeargs[@]}"
 		)
 		python_export PYTHON_SCRIPTDIR
