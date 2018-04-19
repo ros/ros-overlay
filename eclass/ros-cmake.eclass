@@ -148,8 +148,8 @@ ros-cmake_src_prepare() {
 # @DESCRIPTION:
 # Internal decoration of cmake-utils_src_configure to handle multiple python installs.
 ros-cmake_src_configure_internal() {
-	if [ -f ${EPREFIX%/}${ROS_PREFIX}/setup.bash ]; then
-		source ${EPREFIX%/}${ROS_PREFIX}/setup.bash
+	if [ -f /${ROS_PREFIX}/setup.bash ]; then
+		source /${ROS_PREFIX}/setup.bash
 	fi
 	if [[ -z $CPP11 ]]; then
 		append-cxxflags '-std=c++11'
@@ -161,7 +161,7 @@ ros-cmake_src_configure_internal() {
 		local sitedir="${sitedir/lib/lib64}"
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			"-DPYTHON_INSTALL_DIR=${EPREFIX%/}${sitedir}"
+			"-DPYTHON_INSTALL_DIR=${sitedir}"
 			"${mycmakeargs[@]}"
 		)
 		python_export PYTHON_SCRIPTDIR
