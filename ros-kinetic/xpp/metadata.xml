@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    Xpp is collection of packages for the visualization of motion plans for 
+    floating-base robots. Apart from drawing support areas, contact forces and
+    motion trajectories in RVIZ, it also displays these plans for specific robots. 
+    Current robots include a one-legged, a two-legged hopper, 
+    <a href="http://dls.iit.it/">HyQ</a> and a quadrotor.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
