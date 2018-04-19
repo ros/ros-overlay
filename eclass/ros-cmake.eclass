@@ -183,7 +183,7 @@ ros-cmake_src_configure_internal() {
 # Configures a catkin-based package.
 ros-cmake_src_configure() {
 	if [ -f /${ROS_PREFIX}/setup.bash ]; then
-		source /${ROS_PREFIX}/setup.bash
+		source ${EPREFIX%/}${ROS_PREFIX}/setup.bash
 	fi
 	if [[ -z $CPP11 ]]; then
 		append-cxxflags '-std=c++11'
