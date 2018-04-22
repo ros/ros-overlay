@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    gridmap_2d - a simple 2D gridmap structure, based on OpenCV's cv::Mat
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>aravindadp@gmail.com</email>
+      <name>Pramuditha Aravinda</name>
+    </maintainer>
+    <bugs-to>https://github.com/ROBOTIS-GIT/humanoid_navigation/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
