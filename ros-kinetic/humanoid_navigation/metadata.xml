@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>This stack contains packages for humanoid (biped) navigation,
+    developed at the <a href="http://hrl.informatik.uni-freiburg.de/">Humanoid Robots Lab</a>
+    at the Albert-Ludwigs-Universitat in Freiburg, Germany.</p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>aravindadp@gmail.com</email>
+      <name>Pramuditha Aravinda</name>
+    </maintainer>
+    <bugs-to>https://github.com/ROBOTIS-GIT/humanoid_navigation/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

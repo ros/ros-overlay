@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>6D localization for humanoid robots based on depth data (laser, point clouds).
+    Two observation models are currently available based on OctoMap as 3D map:
+    Ray casting and an end point model (lookup in the distance map).</p>
+    <p>Details can be found in the publication <br/>
+    <em>&quot;Humanoid Navigation with Dynamic Footstep Plans&quot;</em>
+    by A. Hornung, K.M. Wurm, and M. Bennewitz; published in 
+    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2010</p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>aravindadp@gmail.com</email>
+      <name>Pramuditha Aravinda</name>
+    </maintainer>
+    <bugs-to>https://github.com/ROBOTIS-GIT/humanoid_navigation/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
