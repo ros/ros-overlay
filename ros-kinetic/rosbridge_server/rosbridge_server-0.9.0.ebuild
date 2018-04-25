@@ -20,7 +20,7 @@ RDEPEND="
 	ros-kinetic/rospy
 	dev-python/backports-ssl-match-hostname
 	www-servers/tornado
-	dev-python/twisted-core
+	dev-python/twisted
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
