@@ -1,0 +1,27 @@
+From 120afe011f1b790840f399a500b90916a8e4c564 Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <sammypfeiffer@gmail.com>
+Date: Tue, 24 Apr 2018 19:13:40 +1000
+Subject: [PATCH] Switch from twisted-core to twisted to make happy Gentoo
+ dependences tornado depends on twisted, twisted has a blocking dependency on
+ twisted-core, so if you try to install twisted-core you enter a conflict)
+
+---
+ rosbridge_server/package.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rosbridge_server/package.xml b/rosbridge_server/package.xml
+index 9f7a193..5edbe93 100644
+--- a/rosbridge_server/package.xml
++++ b/rosbridge_server/package.xml
+@@ -17,7 +17,7 @@
+   <buildtool_depend>catkin</buildtool_depend>
+   <run_depend>python-backports.ssl-match-hostname</run_depend>
+   <run_depend>python-tornado</run_depend>
+-  <run_depend>python-twisted-core</run_depend>
++  <run_depend>python-twisted</run_depend>
+   <run_depend>rosbridge_library</run_depend>
+   <run_depend>rosapi</run_depend>
+   <run_depend>rospy</run_depend>
+-- 
+1.9.1
+
