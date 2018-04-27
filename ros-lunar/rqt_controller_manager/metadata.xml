@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>kphawkins@gatech.edu</email>
-      <name>Kelsey Hawkins</name>
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/ros_control/issues</bugs-to>
   </upstream>
