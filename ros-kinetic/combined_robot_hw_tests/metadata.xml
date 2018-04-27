@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>toni@shadowrobot.com</email>
-      <name>Toni Oliver</name>
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/ros_control/issues</bugs-to>
   </upstream>
