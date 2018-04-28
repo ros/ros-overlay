@@ -34,7 +34,7 @@ RDEPEND="
 	test? ( ros-kinetic/tf2_msgs )
 	test? ( ros-kinetic/trajectory_msgs )
 	test? ( ros-kinetic/visualization_msgs )
-	dev-python/bson
+	dev-python/pymongo
 	dev-python/pillow
 "
 DEPEND="${RDEPEND}
