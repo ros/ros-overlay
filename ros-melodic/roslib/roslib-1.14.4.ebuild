@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Base dependencies and support libraries for ROS.\
 	roslib contains many [...]"
 HOMEPAGE="http://ros.org/wiki/roslib"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

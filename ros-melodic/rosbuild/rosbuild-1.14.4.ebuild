@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="rosbuild contains scripts for managing the CMake-based build system for ROS."
 HOMEPAGE="http://ros.org/wiki/rosbuild"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

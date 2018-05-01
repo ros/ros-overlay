@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="PlotJuggler: juggle with data"
 HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/indigo/${PN}/1.5.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/indigo/${PN}/1.6.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

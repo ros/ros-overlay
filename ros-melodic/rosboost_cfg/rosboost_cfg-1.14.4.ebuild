@@ -6,17 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Assorted shell commands for using ros with bash."
-HOMEPAGE="http://www.ros.org/wiki/rosbash"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="Contains scripts used by the rosboost-cfg tool for determining cflags/lflag[...]"
+HOMEPAGE="http://ros.org/wiki/rosboost_cfg"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/catkin
 "
 DEPEND="${RDEPEND}
+	ros-melodic/catkin
 "
 
 SLOT="0"
