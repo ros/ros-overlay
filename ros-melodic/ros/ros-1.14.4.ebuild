@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS packaging system"
 HOMEPAGE="http://www.ros.org/wiki/ROS"
-SRC_URI="https://github.com/${PN}-gbp/${PN}-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/${PN}-gbp/${PN}-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

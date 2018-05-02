@@ -6,15 +6,14 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Unit-testing package for ROS. This is a lower-level library for rostest and[...]"
-HOMEPAGE="http://ros.org/wiki/rosunit"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="rosclean: cleanup filesystem resources \(e.g. log files\)."
+HOMEPAGE="http://ros.org/wiki/rosclean"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/roslib
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}

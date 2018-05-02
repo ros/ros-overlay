@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="RTAB-Map\'s ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/introlab/rtabmap_ros-release/archive/release/lunar/rtabmap_ros/0.13.2-0.tar.gz -> ${PN}-release-${PV}.tar.gz"
+DESCRIPTION="RTAB-Map\'s ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time const[...]"
+HOMEPAGE="https://github.com/introlab/rtabmap_ros/issues"
+SRC_URI="https://github.com/introlab/${PN}-release/archive/release/lunar/${PN}/0.17.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -54,4 +54,3 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
-

@@ -6,19 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="rosmake is a ros dependency aware build tool which can be used to\
-	 bui[...]"
-HOMEPAGE="http://ros.org/wiki/rosmake"
-SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="roscreate contains a tool that assists in the creation of ROS filesystem re[...]"
+HOMEPAGE="http://ros.org/wiki/roscreate"
+SRC_URI="https://github.com/ros-gbp/ros-release/archive/release/melodic/${PN}/1.14.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/catkin
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}
+	ros-melodic/catkin
 "
 
 SLOT="0"
