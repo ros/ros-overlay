@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Bundle a virtualenv with a catkin package.
+    Bundle python requirements in a catkin package via virtualenv.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
