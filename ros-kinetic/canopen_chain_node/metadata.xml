@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS node base implementation for CANopen chains with support for management services and diagnostics
+    Base implementation for CANopen chains node with support for management services and diagnostics
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

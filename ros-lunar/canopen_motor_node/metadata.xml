@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package extends the canopen_chain_node with specialized handling for canopen_402 devices. It facilitates interface abstraction with ros_control.
+    canopen_chain_node specialization for handling of canopen_402 motor devices. It facilitates interface abstraction with ros_control.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
