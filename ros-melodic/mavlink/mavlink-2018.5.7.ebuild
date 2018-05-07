@@ -9,13 +9,13 @@ inherit ros-cmake
 DESCRIPTION="MAVLink message marshaling library.\
   This package provides C-headers and [...]"
 HOMEPAGE="http://qgroundcontrol.org/mavlink/"
-SRC_URI="https://github.com/${PN}/${PN}-gbp-release/archive/release/kinetic/${PN}/2018.4.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}-gbp-release/archive/release/melodic/${PN}/2018.5.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/catkin
+	ros-melodic/catkin
 	dev-lang/python
 "
 DEPEND="${RDEPEND}
@@ -26,5 +26,5 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
