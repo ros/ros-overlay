@@ -12,5 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
-		dev-python/python-dateutil[${PYTHON_USEDEP}]"
+        dev-python/python-dateutil[${PYTHON_USEDEP}]
+        dev-python/argparse[${PYTHON_USEDEP}]
+        dev-python/pyparsing[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
