@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="gazebo_ros_control"
 HOMEPAGE="http://ros.org/wiki/gazebo_ros_control"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

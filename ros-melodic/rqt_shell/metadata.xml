@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A simple script that aggregates all of the topics that a &quot;pr2_dashboard&quot; app might be interested in.
+    rqt_shell is a Python GUI plugin providing an interactive shell.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ros-orphaned-packages@googlegroups.com</email>
-      <name>ROS Orphaned Package Maintainers</name>
+      <email>scholz@sim.tu-darmstadt.de</email>
+      <name>Dorian Scholz</name>
     </maintainer>
-    <bugs-to>https://github.com/pr2-gbp/pr2_common/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/rqt_shell/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -6,17 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Interface for using ROS with the <a href=\"http://gazebosim.org/\">Gazebo</[...]"
+DESCRIPTION="Provides a cmake config for the default version of Gazebo for the ROS distr[...]"
 HOMEPAGE="http://gazebosim.org/tutorials?cat=connect_ros"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/2.8.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="( BSD LGPL-2 Apache-2.0 )"
+LICENSE="Apache-2.0"
+
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/gazebo_dev
-	ros-melodic/gazebo_msgs
-	ros-melodic/gazebo_plugins
-	ros-melodic/gazebo_ros
+	sci-electronics/gazebo
+	sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
