@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigur[...]"
 HOMEPAGE="http://gazebosim.org/tutorials?cat=connect_ros"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD-2"
 

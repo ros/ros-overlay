@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Provides ROS plugins that offer message and service publishers for interfac[...]"
 HOMEPAGE="http://gazebosim.org/tutorials?cat=connect_ros"
-SRC_URI="https://github.com/ros-gbp/${PN}_pkgs-release/archive/release/melodic/${PN}/2.8.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}_pkgs-release/archive/release/melodic/${PN}/2.8.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
