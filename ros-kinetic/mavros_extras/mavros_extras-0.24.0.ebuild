@@ -6,25 +6,24 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Tests for MAVROS package"
-HOMEPAGE="https://github.com/mavlink/mavros.git"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.25.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Extra nodes and plugins for <a href=\"http://wiki.ros.org/mavros\">MAVROS</a>."
+HOMEPAGE="http://wiki.ros.org/mavros_extras"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.24.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="( BSD GPL-3 LGPL-2 )"
+LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/control_toolbox
-	ros-kinetic/eigen_conversions
 	ros-kinetic/geometry_msgs
 	ros-kinetic/mavros
-	ros-kinetic/mavros_extras
+	ros-kinetic/mavros_msgs
 	ros-kinetic/roscpp
+	ros-kinetic/sensor_msgs
 	ros-kinetic/std_msgs
-	ros-kinetic/tf2_ros
-	dev-cpp/eigen
+	ros-kinetic/tf
+	ros-kinetic/urdf
+	ros-kinetic/visualization_msgs
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/angles
 	ros-kinetic/catkin
 	ros-kinetic/cmake_modules
 "

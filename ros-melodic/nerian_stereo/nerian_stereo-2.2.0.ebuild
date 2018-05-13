@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,25 +8,25 @@ inherit ros-cmake
 
 DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
 HOMEPAGE="http://wiki.ros.org/nerian_stereo"
-SRC_URI="https://github.com/nerian-vision/${PN}-release/archive/release/lunar/${PN}/2.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/nerian-vision/${PN}-release/archive/release/melodic/${PN}/2.2.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/cv_bridge
-	ros-lunar/message_runtime
-	ros-lunar/roscpp
-	ros-lunar/sensor_msgs
-	ros-lunar/std_msgs
+	ros-melodic/cv_bridge
+	ros-melodic/message_runtime
+	ros-melodic/roscpp
+	ros-melodic/sensor_msgs
+	ros-melodic/std_msgs
 	dev-libs/boost
 	media-libs/libsdl
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
-	ros-lunar/message_generation
+	ros-melodic/catkin
+	ros-melodic/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

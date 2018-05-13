@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package provides the c++ extensions for a variety of threaded 
+     programming tools. These are usually different on different 
+     platforms, so the architecture for a cross-platform framework
+     is also implemented.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/ecl_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
