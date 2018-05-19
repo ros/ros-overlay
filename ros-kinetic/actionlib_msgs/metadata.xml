@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    actionlib_msgs defines the common messages to interact with an
+     action server and an action client.  For full documentation of
+     the actionlib API see
+     the <a href="http://wiki.ros.org/actionlib">actionlib</a>
+     package.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>

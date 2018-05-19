@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The package provides implementation of several 2D laser-based simultaneous
+    localization and mapping (SLAM) algorithms (tinySLAM, vinySLAM, GMapping)
+    created with the SLAM constructor framework. The framework provides common
+    SLAM components that may help to develop custom SLAM algorithms and can be
+    accessed by provided links.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros@osll.ru</email>
+      <name>OSLL</name>
+    </maintainer>
+    <bugs-to>https://github.com/OSLL/slam_constructor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
