@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The package provides implementation of several 2D laser-based simultaneous\[...]"
 HOMEPAGE="https://github.com/OSLL/slam-constructor"
-SRC_URI="https://github.com/OSLL/${PN}-release/archive/release/kinetic/${PN}/0.9.1-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSLL/${PN}-release/archive/release/kinetic/${PN}/0.9.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
