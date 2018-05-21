@@ -13,6 +13,6 @@
       <email>dthomas@osrfoundation.org</email>
       <name>Dirk Thomas</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/ros_comm/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/rosconsole/issues</bugs-to>
   </upstream>
 </pkgmetadata>
