@@ -19,8 +19,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>bence.magyar.robotics@gmail.com</email>
-      <name>Bence Magyar</name>
+      <email>sglaser@willowgarage.com</email>
+      <name>Stuart Glaser</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/realtime_tools/issues</bugs-to>
   </upstream>
