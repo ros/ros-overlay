@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This is a ROS package for the metraTec Indoor Positioning System.
+    You can use the regular IPS for zone location of your robot
+    or the IPS+ products for 3D-position-estimation using UWB ranging.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>arndt@metratec.com</email>
+      <name>Christian Arndt</name>
+    </maintainer>
+    <bugs-to>https://github.com/metratec/indoor_positioning/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
