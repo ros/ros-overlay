@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>The ftm_msgs package provides a recommended interface to be used when developing FTM application in ROS.</p>
+	<p> The recommended interface consists of three main blocks:
+	<br/>
+	1. FTMSensor - a node that performs periodic FTM measurements for a given list of FTM Responders.
+	<br/>
+	2. LCIActionServer - An action server node that implements the following:
+	<br/>
+		- Performs an on-demand LCI requests for a given list of FTM responders
+		<br/>
+		- Exposes Action to perform LCI request for a list of responders
+		<br/>
+		- Can be configured to publish LCI measurements results to a topic. If so, publishes results to ftm/lci topic
+	<br/>
+	3. LCIRegistry -  An optional node implementing the following:
+	<br/>
+		- Stores FTM Responders data
+		<br/>
+		- Subscribes to ftm/lci topic in order to update its data structure
+		<br/>
+		- Exposes CRUD services
+		<br/>
+	</p>
+	<p>ftm_msgs package provides the definitions of the Messages, Services and Actions needed in order to implement the architecture described above.</p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
+    </maintainer>
+    <bugs-to>https://github.com/guykhazma/ftm_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
