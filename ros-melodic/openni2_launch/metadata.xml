@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Launch files to start the openni2_camera drivers using rgbd_launch.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>isaac.saito@plusonerobotics.com</email>
+      <name>Isaac I. Y. Saito</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/openni2_camera/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
