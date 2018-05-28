@@ -9,35 +9,35 @@ inherit ros-cmake
 DESCRIPTION="Node launcher and monitor for ROS. rosmon is a replacement\
 \	\	for the ros[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/xqms/${PN}-release/archive/release/kinetic/${PN}/1.0.6-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/xqms/${PN}-release/archive/release/melodic/${PN}/1.0.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-kinetic/cmake_modules
-	ros-kinetic/message_generation
-	ros-kinetic/rosbash
-	ros-kinetic/roscpp
-	ros-kinetic/roslib
-	ros-kinetic/rospack
-	ros-kinetic/rqt_gui
-	ros-kinetic/rqt_gui_cpp
-	ros-kinetic/std_msgs
-	test? ( ros-kinetic/catch_ros )
-	test? ( ros-kinetic/rostest )
+	ros-melodic/cmake_modules
+	ros-melodic/message_generation
+	ros-melodic/rosbash
+	ros-melodic/roscpp
+	ros-melodic/roslib
+	ros-melodic/rospack
+	ros-melodic/rqt_gui
+	ros-melodic/rqt_gui_cpp
+	ros-melodic/std_msgs
+	test? ( ros-melodic/catch_ros )
+	test? ( ros-melodic/rostest )
 	dev-libs/boost
 	sys-libs/ncurses
 	dev-cpp/yaml-cpp
 	test? ( dev-python/rospkg )
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-melodic/catkin
 	dev-lang/python
 	dev-qt/qtcore:5
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

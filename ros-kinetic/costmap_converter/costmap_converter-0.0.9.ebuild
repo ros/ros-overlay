@@ -8,26 +8,26 @@ inherit ros-cmake
 
 DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d[...]"
 HOMEPAGE="http://wiki.ros.org/costmap_converter"
-SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/lunar/${PN}/0.0.8-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/kinetic/${PN}/0.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/costmap_2d
-	ros-lunar/cv_bridge
-	ros-lunar/dynamic_reconfigure
-	ros-lunar/geometry_msgs
-	ros-lunar/message_runtime
-	ros-lunar/pluginlib
-	ros-lunar/roscpp
-	ros-lunar/std_msgs
+	ros-kinetic/costmap_2d
+	ros-kinetic/cv_bridge
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/geometry_msgs
+	ros-kinetic/message_runtime
+	ros-kinetic/pluginlib
+	ros-kinetic/roscpp
+	ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
-	ros-lunar/message_generation
+	ros-kinetic/catkin
+	ros-kinetic/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

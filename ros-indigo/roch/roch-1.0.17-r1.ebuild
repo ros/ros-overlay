@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="roch Project"
 HOMEPAGE="http://ros.org/wiki/roch"
-SRC_URI="https://github.com/SawYerRobotics-release/${PN}-release/archive/release/indigo/${PN}/1.0.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/${PN}-release/archive/release/indigo/${PN}/1.0.17-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
