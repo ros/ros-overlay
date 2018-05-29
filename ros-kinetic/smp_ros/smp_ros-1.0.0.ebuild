@@ -6,17 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="fcl_catkin"
+DESCRIPTION="The smp_ros package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/kinetic/${PN}/0.5.91-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ksatyaki/${PN}-release/archive/release/kinetic/${PN}/1.0.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="GPL-3"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/octomap
-	dev-cpp/eigen
-	sci-libs/libccd
+	ros-kinetic/costmap_2d
+	ros-kinetic/geometry_msgs
+	ros-kinetic/nav_core
+	ros-kinetic/nav_msgs
+	ros-kinetic/roscpp
+	ros-kinetic/std_msgs
+	ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="controller_manager_tests"
 HOMEPAGE="http://ros.org/wiki/controller_manager_tests"
-SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/melodic/${PN}/0.14.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/melodic/${PN}/0.15.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

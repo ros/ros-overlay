@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Autonomous mapping and navigation demos for the Soy Roch"
 HOMEPAGE="http://ros.org/wiki/roch_navigation"
-SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/indigo/${PN}/1.0.16-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/SawYerRobotics-release/roch-release/archive/release/indigo/${PN}/1.0.17-1.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

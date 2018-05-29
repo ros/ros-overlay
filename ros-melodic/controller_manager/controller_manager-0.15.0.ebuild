@@ -6,25 +6,23 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Transmission Interface."
+DESCRIPTION="The controller manager."
 HOMEPAGE="https://github.com/ros-controls/ros_control/wiki"
-SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/melodic/${PN}/0.14.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/ros_control-release/archive/release/melodic/${PN}/0.15.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
+	ros-melodic/controller_interface
+	ros-melodic/controller_manager_msgs
+	ros-melodic/hardware_interface
 	ros-melodic/pluginlib
-	ros-melodic/roscpp
-	test? ( ros-melodic/resource_retriever )
-	test? ( ros-melodic/rosunit )
-	dev-libs/tinyxml
+	test? ( ros-melodic/rostest )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	ros-melodic/cmake_modules
-	ros-melodic/hardware_interface
 "
 
 SLOT="0"

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="OMPL is a free sampling-based motion planning library."
 HOMEPAGE="http://ompl.kavrakilab.org"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.3.3-4.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.3.5-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

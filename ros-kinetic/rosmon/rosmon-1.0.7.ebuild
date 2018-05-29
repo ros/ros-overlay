@@ -9,35 +9,35 @@ inherit ros-cmake
 DESCRIPTION="Node launcher and monitor for ROS. rosmon is a replacement\
 \	\	for the ros[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/xqms/${PN}-release/archive/release/lunar/${PN}/1.0.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/xqms/${PN}-release/archive/release/kinetic/${PN}/1.0.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-lunar/cmake_modules
-	ros-lunar/message_generation
-	ros-lunar/rosbash
-	ros-lunar/roscpp
-	ros-lunar/roslib
-	ros-lunar/rospack
-	ros-lunar/rqt_gui
-	ros-lunar/rqt_gui_cpp
-	ros-lunar/std_msgs
-	test? ( ros-lunar/catch_ros )
-	test? ( ros-lunar/rostest )
+	ros-kinetic/cmake_modules
+	ros-kinetic/message_generation
+	ros-kinetic/rosbash
+	ros-kinetic/roscpp
+	ros-kinetic/roslib
+	ros-kinetic/rospack
+	ros-kinetic/rqt_gui
+	ros-kinetic/rqt_gui_cpp
+	ros-kinetic/std_msgs
+	test? ( ros-kinetic/catch_ros )
+	test? ( ros-kinetic/rostest )
 	dev-libs/boost
 	sys-libs/ncurses
 	dev-cpp/yaml-cpp
 	test? ( dev-python/rospkg )
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-kinetic/catkin
 	dev-lang/python
 	dev-qt/qtcore:5
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

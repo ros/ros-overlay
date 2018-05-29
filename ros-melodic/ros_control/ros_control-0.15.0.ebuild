@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A set of packages that include controller interfaces, controller managers, [...]"
 HOMEPAGE="http://ros.org/wiki/ros_control"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.14.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.15.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
