@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The robot description package for OpenManipulator and TurtleBot3
+    ROS-enabled OpenManipulator is a full open robot platform consisting of OpenSoftware​, OpenHardware and OpenCR(Embedded board)​.
+    The OpenManipulator is allowed users to control it more easily by linking with the MoveIt! package. Moreover it has full hardware compatibility with TurtleBot3​. 
+    Even if you do not have a real robot, you can control the robot in the Gazebo simulator​.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -13,6 +15,6 @@
       <email>pyo@robotis.com</email>
       <name>Pyo</name>
     </maintainer>
-    <bugs-to>https://github.com/ROBOTIS-GIT/open_manipulator/issues</bugs-to>
+    <bugs-to>https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3/issues</bugs-to>
   </upstream>
 </pkgmetadata>

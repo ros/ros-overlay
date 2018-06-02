@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The position contrloller package for OpenManipulator
+    This packages based on MoveIt! framework to manipulate OpenManipulator
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

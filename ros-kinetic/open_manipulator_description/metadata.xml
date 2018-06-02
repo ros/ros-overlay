@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    3D models of the OpenManipulator description for simulation and visualization
+    OpenManipulator 3D model description for visualization and simulation
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
