@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    An automatically generated package with all the configuration and launch files for using the open_manipulator_chain with the MoveIt! Motion Planning Framework.
+    An automatically generated packages including all the configurations and launch files for OpenManipulator by using MoveIt! Motion Planning Framework.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

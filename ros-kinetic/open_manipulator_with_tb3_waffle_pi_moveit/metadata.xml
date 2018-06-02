@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    An automatically generated packages including all the configurations and launch files for OpenManipulator with TurtleBot3 Waffle Pi by using MoveIt! Motion Planning Framework.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>pyo@robotis.com</email>
+      <name>Pyo</name>
+    </maintainer>
+    <bugs-to>https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

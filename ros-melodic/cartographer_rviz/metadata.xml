@@ -13,7 +13,7 @@
   <upstream>
     <maintainer status="active">
       <email>cartographer-owners@googlegroups.com</email>
-      <name>The Cartographer Owners</name>
+      <name>The Cartographer Authors</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/cartographer_ros/issues</bugs-to>
   </upstream>
