@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Generates markers for a robot"
 HOMEPAGE="http://wiki.ros.org/robot_markers"
-SRC_URI="https://github.com/jstnhuang-release/${PN}-release/archive/release/indigo/${PN}/0.2.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/jstnhuang-release/${PN}-release/archive/release/indigo/${PN}/0.2.1-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
