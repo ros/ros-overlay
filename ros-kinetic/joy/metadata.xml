@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    ROS driver for a generic Linux joystick.
+    The joy package contains joy_node, a node that interfaces a
+    generic Linux joystick to ROS. This node publishes a &quot;Joy&quot;
+    message, which contains the current state of each one of the
+    joystick's buttons and axes.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
