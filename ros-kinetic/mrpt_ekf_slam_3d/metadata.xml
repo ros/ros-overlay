@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    mrpt_ekf_slam_3d
+    This package is a wrapper for the implementation of EKF-based SLAM with range-bearing sensors, odometry, a full 6D robot pose, and 3D landmarks.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

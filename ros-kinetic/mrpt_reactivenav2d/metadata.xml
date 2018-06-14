@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
