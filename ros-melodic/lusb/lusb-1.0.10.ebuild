@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Library for interfacing to USB devices"
 HOMEPAGE="http://dataspeedinc.com"
-SRC_URI="https://github.com/DataspeedInc-release/${PN}-release/archive/release/indigo/${PN}/1.0.9-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/${PN}-release/archive/release/melodic/${PN}/1.0.10-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,10 +18,10 @@ RDEPEND="
 	virtual/libusb:1
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-melodic/catkin
 	virtual/libusb:1
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

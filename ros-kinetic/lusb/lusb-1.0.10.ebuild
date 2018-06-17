@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Library for interfacing to USB devices"
 HOMEPAGE="http://dataspeedinc.com"
-SRC_URI="https://github.com/DataspeedInc-release/${PN}-release/archive/release/kinetic/${PN}/1.0.9-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/${PN}-release/archive/release/kinetic/${PN}/1.0.10-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

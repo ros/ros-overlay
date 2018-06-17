@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The teb_local_planner_tutorials package
+    A viewer for the SLAM component of roboception based on ROS and PCL
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>christoph.roesmann@tu-dortmund.de</email>
-      <name>Christoph Rösmann</name>
+      <email>felix.endres@roboception.de</email>
+      <name>Felix Endres</name>
     </maintainer>
-    <bugs-to>https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues</bugs-to>
+    <bugs-to>https://github.com/roboception-gbp/rc_cloud_accumulator/issues</bugs-to>
   </upstream>
 </pkgmetadata>
