@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>esteve@osrfoundation.org</email>
-      <name>Esteve Fernandez</name>
+      <email>william@osrfoundation.org</email>
+      <name>William Woodall</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rclpy/issues</bugs-to>
   </upstream>
