@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ricardogonzalez@eprosima.com</email>
-      <name>Ricardo González</name>
+      <email>dthomas@osrfoundation.org</email>
+      <name>Dirk Thomas</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rmw_fastrtps/issues</bugs-to>
   </upstream>
