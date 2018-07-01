@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A package for connecting ROS to Modelica tools via TCP sockets
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sh.swami235@gmail.com</email>
+      <name>Shashank Swaminathan</name>
+    </maintainer>
+    <bugs-to>https://github.com/ModROS/modelica_bridge/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
