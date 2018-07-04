@@ -21,6 +21,6 @@
       <email>felix.ruess@roboception.de</email>
       <name>Felix Ruess</name>
     </maintainer>
-    <bugs-to>https://github.com/roboception/rc_dynamics_api/issues</bugs-to>
+    <bugs-to>https://github.com/roboception-gbp/rc_dynamics_api/issues</bugs-to>
   </upstream>
 </pkgmetadata>
