@@ -57,7 +57,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-python/asn1crypto dev-python/idna =app-text/docbook-xml-dtd-4.2-r2 \
     =app-text/docbook-xml-dtd-4.3-r1 =app-text/docbook-xml-dtd-4.4-r2 \
     virtual/perl-Carp virtual/perl-Encode dev-perl/LWP-MediaTypes \
-    dev-perl/IO-HTML dev-perl/Encode-Locale x11-proto/xproto \
+    dev-perl/IO-HTML dev-perl/Encode-Locale \
     dev-qt/qtcore dev-cpp/gtest dev-libs/libpthread-stubs \
     net-nds/openldap x11-proto/xf86vidmodeproto media-libs/openjpeg \
     x11-proto/xcb-proto x11-libs/xtrans x11-libs/libICE x11-libs/libSM \
