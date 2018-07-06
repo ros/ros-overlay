@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Catkin wrapper for the official ARSDK from Parrot
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mmonajje@sfu.ca</email>
+      <name>Mani Monajjemi</name>
+    </maintainer>
+    <bugs-to>https://github.com/AutonomyLab/parrot_arsdk/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
