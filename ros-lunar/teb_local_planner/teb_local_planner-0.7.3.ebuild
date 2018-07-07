@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="The teb_local_planner package implements a plugin\
 	to the base_local_pl[...]"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner"
-SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/lunar/${PN}/0.7.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/lunar/${PN}/0.7.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
