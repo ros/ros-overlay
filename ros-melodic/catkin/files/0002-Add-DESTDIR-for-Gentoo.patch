@@ -1,0 +1,29 @@
+From 9fa0ad2708b522232c0aef90aa2ebaa2fa9441f2 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Sat, 7 Jul 2018 16:00:49 -0400
+Subject: [PATCH 2/4] Add DESTDIR for Gentoo.
+
+---
+ cmake/catkin_generate_environment.cmake | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/cmake/catkin_generate_environment.cmake b/cmake/catkin_generate_environment.cmake
+index 5e8871d..7933d98 100644
+--- a/cmake/catkin_generate_environment.cmake
++++ b/cmake/catkin_generate_environment.cmake
+@@ -72,7 +72,11 @@ function(catkin_generate_environment)
+     @ONLY)
+ 
+   # installspace
+-  set(SETUP_DIR ${CMAKE_INSTALL_PREFIX})
++  if(DEFINED ENV{DEST_SETUP_DIR})
++    set(SETUP_DIR "$ENV{DEST_SETUP_DIR}")
++  else()
++    set(SETUP_DIR "$ENV{CMAKE_INSTALL_PREFIX}")
++  endif()
+ 
+   if(CATKIN_INSTALL_INTO_PREFIX_ROOT)
+     # install empty workspace marker if it doesn't already exist
+-- 
+2.18.0
+

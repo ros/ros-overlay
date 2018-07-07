@@ -1,0 +1,27 @@
+From 875924435f293ae2ccb00d52e8ce024038c61838 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Sat, 7 Jul 2018 16:02:20 -0400
+Subject: [PATCH 4/4] ADd CATKIN_PREFIX_PATH if not found.
+
+---
+ cmake/all.cmake | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/cmake/all.cmake b/cmake/all.cmake
+index b3c4f9a..866c299 100644
+--- a/cmake/all.cmake
++++ b/cmake/all.cmake
+@@ -52,6 +52,10 @@ set(CMAKE_PREFIX_PATH_AS_IS ${CMAKE_PREFIX_PATH})
+ 
+ # list of unique catkin workspaces based on CMAKE_PREFIX_PATH
+ set(CATKIN_WORKSPACES "")
++if (NOT DEFINED CATKIN_PREFIX_PATH)
++  set(CATKIN_PREFIX_PATH ${CMAKE_PREFIX_PATH})
++endif()
++
+ foreach(path ${CMAKE_PREFIX_PATH})
+   if(EXISTS "${path}/.catkin")
+     list(FIND CATKIN_WORKSPACES ${path} _index)
+-- 
+2.18.0
+
