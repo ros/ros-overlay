@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Message and service data structures for interacting with Gazebo from ROS."
 HOMEPAGE="http://gazebosim.org/tutorials?cat=connect_ros"
-SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/${PN}/2.8.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

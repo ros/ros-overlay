@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="MAVLink message marshaling library.\
   This package provides C-headers and [...]"
 HOMEPAGE="http://qgroundcontrol.org/mavlink/"
-SRC_URI="https://github.com/${PN}/${PN}-gbp-release/archive/release/melodic/${PN}/2018.6.6-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}-gbp-release/archive/release/melodic/${PN}/2018.7.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
