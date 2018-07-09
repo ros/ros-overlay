@@ -6,19 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS messages used in the XPP framework."
+DESCRIPTION="Visualization of motion-plans for legged robots. It draws support areas, \
+[...]"
 HOMEPAGE="http://github.com/leggedrobotics/xpp"
-SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/${PN}/1.0.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/leggedrobotics/${PN}-release/archive/release/kinetic/${PN}/1.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/geometry_msgs
-	ros-kinetic/message_generation
-	ros-kinetic/message_runtime
-	ros-kinetic/sensor_msgs
-	ros-kinetic/std_msgs
+	ros-kinetic/xpp_examples
+	ros-kinetic/xpp_hyq
+	ros-kinetic/xpp_msgs
+	ros-kinetic/xpp_quadrotor
+	ros-kinetic/xpp_states
+	ros-kinetic/xpp_vis
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

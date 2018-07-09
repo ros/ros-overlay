@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Common definitions \(positions, velocities, angular angles,\
 	angular ra[...]"
 HOMEPAGE="http://github.com/leggedrobotics/xpp"
-SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/${PN}/1.0.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/${PN}/1.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A light-weight, Eigen-based\
 	C++ library for trajectory optimization fo[...]"
 HOMEPAGE="http://github.com/ethz-adrl/towr"
-SRC_URI="https://github.com/ethz-adrl/${PN}-release/archive/release/kinetic/${PN}/1.2.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-adrl/${PN}-release/archive/release/kinetic/${PN}/1.3.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

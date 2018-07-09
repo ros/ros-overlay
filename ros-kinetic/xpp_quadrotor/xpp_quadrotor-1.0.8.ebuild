@@ -6,20 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-cmake
 
-DESCRIPTION="Xpp is collection of packages for the visualization of motion plans for \
- [...]"
+DESCRIPTION="The URDF file for a quadrotor to be used with the xpp packages and a \
+	[...]"
 HOMEPAGE="http://github.com/leggedrobotics/xpp"
-SRC_URI="https://github.com/leggedrobotics/${PN}-release/archive/release/kinetic/${PN}/1.0.7-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/${PN}/1.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/xpp_examples
-	ros-kinetic/xpp_hyq
-	ros-kinetic/xpp_msgs
-	ros-kinetic/xpp_quadrotor
-	ros-kinetic/xpp_states
+	ros-kinetic/roscpp
 	ros-kinetic/xpp_vis
 "
 DEPEND="${RDEPEND}

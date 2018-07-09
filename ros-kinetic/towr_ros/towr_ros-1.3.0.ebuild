@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A ROS dependent wrapper for\
 	<a href=\"https://github.com/ethz-adrl/tow[...]"
 HOMEPAGE="http://github.com/ethz-adrl/towr"
-SRC_URI="https://github.com/ethz-adrl/towr-release/archive/release/kinetic/${PN}/1.2.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ethz-adrl/towr-release/archive/release/kinetic/${PN}/1.3.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -21,11 +21,10 @@ RDEPEND="
 	ros-kinetic/roscpp
 	ros-kinetic/std_msgs
 	ros-kinetic/towr
+	ros-kinetic/visualization_msgs
 	ros-kinetic/xpp_hyq
 	ros-kinetic/xpp_msgs
-	ros-kinetic/xpp_quadrotor
 	ros-kinetic/xpp_states
-	ros-kinetic/xpp_vis
 	sys-libs/ncurses
 	x11-terms/xterm
 "
