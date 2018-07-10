@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for calibrating a robot
+    ROS driver for IBEO LUX
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mike@vanadiumlabs.com</email>
-      <name>Michael Ferguson</name>
+      <email>software@autonomoustuff.com</email>
+      <name>AutonomouStuff Software Development Team</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/robot_calibration/issues</bugs-to>
+    <bugs-to>https://github.com/astuff/ibeo_lux/issues</bugs-to>
   </upstream>
 </pkgmetadata>
