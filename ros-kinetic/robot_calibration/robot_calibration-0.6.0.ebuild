@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="Calibrate a Robot"
 HOMEPAGE="http://ros.org/wiki/robot_calibration"
-SRC_URI="https://github.com/fetchrobotics-gbp/${PN}-release/archive/release/kinetic/${PN}/0.5.5-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/kinetic/${PN}/0.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -23,6 +23,7 @@ RDEPEND="
 	ros-kinetic/moveit_msgs
 	ros-kinetic/nav_msgs
 	ros-kinetic/orocos_kdl
+	ros-kinetic/pluginlib
 	ros-kinetic/robot_calibration_msgs
 	ros-kinetic/rosbag
 	ros-kinetic/roscpp
@@ -31,6 +32,7 @@ RDEPEND="
 	ros-kinetic/tf
 	ros-kinetic/tf2_geometry_msgs
 	ros-kinetic/tf2_ros
+	ros-kinetic/visualization_msgs
 	sci-libs/ceres-solver
 	dev-libs/protobuf
 	sci-libs/suitesparse
