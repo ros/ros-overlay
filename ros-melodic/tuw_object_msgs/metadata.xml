@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The tuw_object_msgs package
+    The tuw_object_msgs package. This pkg provides a set of messages used to detect, map and track objects of different types.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

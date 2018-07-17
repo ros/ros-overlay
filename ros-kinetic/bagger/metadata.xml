@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>maintainer@squarerobots.com</email>
-      <name>Maintainer</name>
+      <email>bgibbons@squarerobots.com</email>
+      <name>Brenden Gibbons</name>
     </maintainer>
     <bugs-to>https://github.com/squarerobot/bagger/issues</bugs-to>
   </upstream>
