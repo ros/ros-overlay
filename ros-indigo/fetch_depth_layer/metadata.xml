@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>rtoris@fetchrobotics.com</email>
+      <name>Russell Toris</name>
     </maintainer>
     <bugs-to>https://github.com/fetchrobotics-gbp/fetch_ros/issues</bugs-to>
   </upstream>

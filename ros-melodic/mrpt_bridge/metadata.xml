@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    C++ libraries to convert between ROS and MRPT classes and messages
+    C++ library to convert between ROS messages and MRPT classes
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
