@@ -8,7 +8,7 @@
     that can be used to represent a legged locomotion problem. 
     The resulting Nonlinear Programming Problem (NLP) can then be solved with
     off-the-shelf solvers, e.g. Ipopt using the generic optimizer interface 
-    <a href="https://github.com/ethz-adrl/ifopt">ifopt</a>.
+    <a href="http://wiki.ros.org/ifopt">ifopt</a>.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -16,7 +16,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>winklera@ethz.ch</email>
+      <email>alexander.w.winkler@gmail.com</email>
       <name>Alexander W. Winkler</name>
     </maintainer>
     <bugs-to>https://github.com/ethz-adrl/towr/issues</bugs-to>
