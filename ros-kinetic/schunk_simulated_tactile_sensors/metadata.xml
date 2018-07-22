@@ -5,7 +5,7 @@
     This package provides simulated tactile sensors for the Schunk Dextrous
      Hand (SDH) which is mounted on the Care-O-bot arm. The node subscribes to
      the Gazebo bumper topics of the SDH. It transforms the Gazebo feedback to
-     the "tactile_data" topic to provide the same tactile sensor interface as
+     the &quot;tactile_data&quot; topic to provide the same tactile sensor interface as
      the schunk_sdh package.
 
      The following parameters can be set:
@@ -43,7 +43,7 @@
      * tactile_data
 
      The simulated bumper must obtain the collision data in the link that the
-     sensor is attached to. This is achieved by setting the "frameName" property
+     sensor is attached to. This is achieved by setting the &quot;frameName&quot; property
      in the gazebo_ros_bumper controller.
   </longdescription>
   <maintainer type="person">

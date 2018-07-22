@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fxm@ipa.fhg.de</email>
-      <name>Felx Messmer</name>
+      <email>felixmessmer@gmail.com</email>
+      <name>Felix Messmer</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_simulation/issues</bugs-to>
   </upstream>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>nick@roverrobotics.com</email>
-      <name>nick fragale</name>
+      <email>jack@digilabs.io</email>
+      <name>Jack Kilian</name>
     </maintainer>
     <bugs-to>https://github.com/RoverRobotics/rr_openrover_basic/issues</bugs-to>
   </upstream>
