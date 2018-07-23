@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>bnm@ipa.fhg.de</email>
+      <email>benjamin.maidel@mojin-robotics.de</email>
       <name>Benjamin Maidel</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_driver/issues</bugs-to>

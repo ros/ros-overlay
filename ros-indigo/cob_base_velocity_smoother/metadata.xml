@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The 'cob_base_velocity_smoother' reads velocity messages and publishes messages of the same type for "smoothed" velocity to avoid shaking behavior.
+    The 'cob_base_velocity_smoother' reads velocity messages and publishes messages of the same type for &quot;smoothed&quot; velocity to avoid shaking behavior.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
