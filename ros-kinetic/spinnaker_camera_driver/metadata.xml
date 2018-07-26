@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Spinnaker camera driver based on Spinnaker.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mhosmar@clearpathrobotics.com</email>
+      <name>Mike Hosmar</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/flir_camera_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

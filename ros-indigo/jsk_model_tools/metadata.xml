@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    <p>Metapackage that contains model_tools package for jsk-ros-pkg</p>
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
