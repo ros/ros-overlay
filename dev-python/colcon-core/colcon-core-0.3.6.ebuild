@@ -13,14 +13,17 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
+IUSE="test"
+
 DEPEND="dev-python/coloredlogs[${PYTHON_USEDEP}]
         dev-python/empy[${PYTHON_USEDEP}]
-        dev-python/pytest[${PYTHON_USEDEP}]
-        dev-python/pytest-cov[${PYTHON_USEDEP}]
-        dev-python/pytest-repeat[${PYTHON_USEDEP}]
-        dev-python/pytest-rerunfailures[${PYTHON_USEDEP}]
-        dev-python/pytest-runner[${PYTHON_USEDEP}]
-        >=dev-python/setuptools[${PYTHON_USEDEP}]-30.3.0
+        >=dev-python/setuptools-30.3.0[${PYTHON_USEDEP}]
+	test? (
+	        dev-python/pytest[${PYTHON_USEDEP}]
+        	dev-python/pytest-cov[${PYTHON_USEDEP}]
+		dev-python/pytest-repeat[${PYTHON_USEDEP}]
+		dev-python/pytest-rerunfailures[${PYTHON_USEDEP}]
+		dev-python/pytest-runner[${PYTHON_USEDEP}] )
         test? ( dev-python/flake8 )
         test? ( dev-pyton/flake8-import-order )
         test? ( dev-python/mock )
