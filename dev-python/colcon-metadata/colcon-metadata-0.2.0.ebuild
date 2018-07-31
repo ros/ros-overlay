@@ -13,6 +13,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
+IUSE="test"
 DEPEND="dev-python/colcon-core[${PYTHON_USEDEP}]
         dev-python/pyyaml[${PYTHON_USEDEP}]
         test? ( dev-python/flake8 )
