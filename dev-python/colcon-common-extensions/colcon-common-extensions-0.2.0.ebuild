@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="test"
 DEPEND="dev-python/colcon-argcomplete[${PYTHON_USEDEP}]
 	dev-python/colcon-bash[${PYTHON_USEDEP}]
-	dev-python/colcon-cmake[${PYTHON_USEDEP]}
+	dev-python/colcon-cmake[${PYTHON_USEDEP}]
 	dev-python/colcon-core[${PYTHON_USEDEP}]
 	dev-python/colcon-defaults[${PYTHON_USEDEP}]
 	dev-python/colcon-devtools[${PYTHON_USEDEP}]
