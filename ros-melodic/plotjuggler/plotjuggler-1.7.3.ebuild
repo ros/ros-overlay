@@ -8,27 +8,27 @@ inherit ros-cmake
 
 DESCRIPTION="PlotJuggler: juggle with data"
 HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/lunar/${PN}/1.7.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/melodic/${PN}/1.7.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/ros_type_introspection
-	ros-lunar/rosbag
-	ros-lunar/rosbag_storage
-	ros-lunar/roscpp
-	ros-lunar/roscpp_serialization
-	ros-lunar/rostime
-	ros-lunar/topic_tools
+	ros-melodic/ros_type_introspection
+	ros-melodic/rosbag
+	ros-melodic/rosbag_storage
+	ros-melodic/roscpp
+	ros-melodic/roscpp_serialization
+	ros-melodic/rostime
+	ros-melodic/topic_tools
 	sys-devel/binutils
 	dev-qt/qtsvg:5
 	dev-qt/qtcore:5
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
