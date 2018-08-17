@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="This package provides simulated tactile sensors for the Schunk Dextrous\
   [...]"
 HOMEPAGE="http://ros.org/wiki/schunk_simulated_tactile_sensors"
-SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/${PN}/0.6.11-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/${PN}/0.6.12-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

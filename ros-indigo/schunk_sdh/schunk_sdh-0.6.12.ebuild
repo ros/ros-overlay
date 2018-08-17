@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides an interface for operating the schunk dexterous hand [...]"
 HOMEPAGE="http://ros.org/wiki/schunk_sdh"
-SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/indigo/${PN}/0.6.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/indigo/${PN}/0.6.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

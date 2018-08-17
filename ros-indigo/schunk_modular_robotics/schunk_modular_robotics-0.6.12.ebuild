@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This stack includes packages that provide access to the Schunk hardware thr[...]"
 HOMEPAGE="http://ros.org/wiki/schunk_modular_robotics"
-SRC_URI="https://github.com/ipa320/${PN}-release/archive/release/indigo/${PN}/0.6.11-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/${PN}-release/archive/release/indigo/${PN}/0.6.12-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

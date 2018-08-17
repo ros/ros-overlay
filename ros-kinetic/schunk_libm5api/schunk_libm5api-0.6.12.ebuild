@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package wraps the libm5api to use it as a ros dependency. Original sou[...]"
 HOMEPAGE="http://ros.org/wiki/schunk_libm5api"
-SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/${PN}/0.6.11-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/${PN}/0.6.12-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
