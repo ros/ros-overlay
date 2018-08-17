@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="ROS Package for controlling the AStuff PACMod with a Joystick"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/astuff/${PN}-release/archive/release/indigo/${PN}/2.0.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/astuff/${PN}-release/archive/release/indigo/${PN}/2.1.0-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
