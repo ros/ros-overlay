@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    rosnode is a command-line tool for displaying debug information
+    about ROS <a href="http://www.ros.org/wiki/Nodes">Nodes</a>,
+    including publications, subscriptions and connections. It also
+    contains an experimental library for retrieving node
+    information. This library is intended for internal use only.
+  </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
     <name>Hunter L. Allen</name>
