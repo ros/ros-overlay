@@ -4,7 +4,7 @@ ENV FEATURES sign
 ENV PORTAGE_GPG_DIR ~/.gnupg/
 
 RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
-    eselect profile set 12 && emerge app-crypt/gnupg repoman \
+    eselect profile set 12 && emerge app-crypt/gnupg \
     dev-vcs/git --autounmask-write && \
     mkdir -p /usr/local/portage && \
     printf '\nPORTDIR_OVERLAY="/usr/local/portage"\n' >> /etc/portage/make.conf && \
@@ -59,8 +59,8 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     virtual/perl-Carp virtual/perl-Encode dev-perl/LWP-MediaTypes \
     dev-perl/IO-HTML dev-perl/Encode-Locale \
     dev-qt/qtcore dev-cpp/gtest dev-libs/libpthread-stubs \
-    net-nds/openldap x11-proto/xf86vidmodeproto media-libs/openjpeg \
-    x11-proto/xcb-proto x11-libs/xtrans x11-libs/libICE x11-libs/libSM \
+    net-nds/openldap media-libs/openjpeg \
+    x11-base/xcb-proto x11-libs/xtrans x11-libs/libICE x11-libs/libSM \
     dev-libs/poco dev-libs/log4cxx dev-libs/apr-util app-arch/lz4 \
     dev-python/pillow dev-python/paramiko dev-python/pynacl dev-perl/Socket6 \
     dev-perl/XML-NamespaceSupport dev-perl/HTTP-Negotiate \
@@ -68,8 +68,8 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-python/sip dev-python/backports dev-python/subprocess32 \
     dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash \
     app-portage/gentoolkit x11-libs/libX11 media-libs/assimp \
-    dev-qt/qtxml x11-proto/kbproto x11-misc/util-macros \
-    x11-proto/inputproto x11-misc/util-macros dev-libs/tinyxml2 \
+    dev-qt/qtxml x11-misc/util-macros app-portage/repoman \
+    x11-misc/util-macros dev-libs/tinyxml2 \
     virtual/perl-IO-Socket-IP virtual/perl-Time-HiRes dev-perl/XML-XPath \
     dev-perl/Text-Iconv dev-cpp/gtest dev-db/sqlite \
     dev-lang/swig sys-libs/binutils-libs \
