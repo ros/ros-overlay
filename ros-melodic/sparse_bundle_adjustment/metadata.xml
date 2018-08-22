@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fergs@unboundedrobotics.com</email>
+      <email>mfergs7@gmail.com</email>
       <name>Michael Ferguson</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/sparse_bundle_adjustment/issues</bugs-to>
