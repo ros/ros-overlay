@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Catkinized ROS packaging of the OpenKarto library
+    Ros extensions and behaviours for py_trees.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mfergs7@gmail.com</email>
-      <name>Michael Ferguson</name>
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/open_karto/issues</bugs-to>
+    <bugs-to>https://github.com/stonier/py_trees_ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>

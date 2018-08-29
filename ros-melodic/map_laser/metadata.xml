@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Catkinized ROS packaging of the OpenKarto library
+    Filters a laser scan to remove points that are in the current static map
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mfergs7@gmail.com</email>
-      <name>Michael Ferguson</name>
+      <email>davidvlu@gmail.com</email>
+      <name>David V. Lu!!</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/open_karto/issues</bugs-to>
+    <bugs-to>https://github.com/wu-robotics/laser_filtering_release/issues</bugs-to>
   </upstream>
 </pkgmetadata>

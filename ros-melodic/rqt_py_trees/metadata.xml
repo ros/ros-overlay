@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Catkinized ROS packaging of the OpenKarto library
+    rqt_py_trees provides a GUI plugin for visualizing py_trees behaviour trees based on rqt_tf_tree.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mfergs7@gmail.com</email>
-      <name>Michael Ferguson</name>
+      <email>m.staniaszek@gmail.com</email>
+      <name>Michal Staniaszek</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/open_karto/issues</bugs-to>
+    <bugs-to>https://github.com/stonier/rqt_py_trees/issues</bugs-to>
   </upstream>
 </pkgmetadata>

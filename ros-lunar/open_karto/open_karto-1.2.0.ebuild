@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Catkinized ROS packaging of the OpenKarto library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.1.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/1.2.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
