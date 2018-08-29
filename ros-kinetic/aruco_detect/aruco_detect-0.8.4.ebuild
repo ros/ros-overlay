@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="ROS node to build a 3D map of fiducials and estimate robot pose from fiduci[...]"
+DESCRIPTION="Fiducial detection based on the aruco library"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/${PN}/0.8.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/kinetic/${PN}/0.8.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -8,24 +8,25 @@ inherit ros-cmake
 
 DESCRIPTION="The ira_laser_tools package. These nodes are meant to provide some utils fo[...]"
 HOMEPAGE="http://www.ros.org/wiki/ira_laser_tools"
-SRC_URI="https://github.com/iralabdisco/${PN}-release/archive/release/kinetic/${PN}/1.0.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/iralabdisco/${PN}-release/archive/release/lunar/${PN}/1.0.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/laser_geometry
-	ros-kinetic/pcl_ros
-	ros-kinetic/roscpp
-	ros-kinetic/sensor_msgs
-	ros-kinetic/std_msgs
-	ros-kinetic/tf
+	ros-lunar/laser_geometry
+	ros-lunar/pcl_ros
+	ros-lunar/roscpp
+	ros-lunar/sensor_msgs
+	ros-lunar/std_msgs
+	ros-lunar/tf
 	sci-libs/pcl
+	sci-libs/vtk[qt5,rendering]
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-lunar/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

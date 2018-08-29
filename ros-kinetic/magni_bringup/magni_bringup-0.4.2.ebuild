@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="The magni_bringup package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/magni_robot-release/archive/release/kinetic/${PN}/0.3.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/magni_robot-release/archive/release/kinetic/${PN}/0.4.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -20,6 +20,7 @@ RDEPEND="
 	ros-kinetic/magni_description
 	ros-kinetic/robot_state_publisher
 	ros-kinetic/ubiquity_motor
+	net-misc/chrony
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
