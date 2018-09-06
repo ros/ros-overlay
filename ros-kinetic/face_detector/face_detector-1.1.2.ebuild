@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Face detection in images."
 HOMEPAGE="http://ros.org/wiki/face_detector"
-SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,7 +24,6 @@ RDEPEND="
 	ros-kinetic/image_transport
 	ros-kinetic/message_filters
 	ros-kinetic/message_runtime
-	ros-kinetic/openni_launch
 	ros-kinetic/people_msgs
 	ros-kinetic/rosbag
 	ros-kinetic/roscpp

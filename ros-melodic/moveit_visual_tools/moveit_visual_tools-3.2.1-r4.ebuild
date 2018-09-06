@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="Helper functions for displaying and debugging MoveIt! data in Rviz via publ[...]"
 HOMEPAGE="https://github.com/davetcoleman/moveit_visual_tools"
-SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/3.2.1-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/3.2.1-4.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

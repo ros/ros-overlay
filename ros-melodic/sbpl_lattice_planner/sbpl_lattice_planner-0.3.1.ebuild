@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The sbpl_lattice_planner is a global planner plugin for move_base and wraps[...]"
 HOMEPAGE="http://wiki.ros.org/sbpl_lattice_planner"
-SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

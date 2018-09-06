@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The people stack holds algorithms for perceiving people from a number of se[...]"
 HOMEPAGE="http://ros.org/wiki/people"
-SRC_URI="https://github.com/OSUrobotics/${PN}-release/archive/release/kinetic/${PN}/1.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/${PN}-release/archive/release/kinetic/${PN}/1.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

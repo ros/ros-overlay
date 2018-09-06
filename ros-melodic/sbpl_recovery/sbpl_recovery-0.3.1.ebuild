@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A recovery behavior that uses the sbpl lattice planner and the pose\
 	fo[...]"
 HOMEPAGE="http://wiki.ros.org/sbpl_recovery"
-SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
