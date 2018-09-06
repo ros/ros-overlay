@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="A collection of navigation plugins and tools: Various recovery behaviors,\
 [...]"
 HOMEPAGE="http://wiki.ros.org/navigation_experimental"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

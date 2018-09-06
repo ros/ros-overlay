@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="The assisted_teleop node subscribes to a desired trajectory topic\
 	\(ge[...]"
 HOMEPAGE="http://wiki.ros.org/assisted_teleop"
-SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/${PN}/0.3.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

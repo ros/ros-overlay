@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Track the output of the leg_detector to indicate the velocity of person."
 HOMEPAGE="http://ros.org/wiki/people_velocity_tracker"
-SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

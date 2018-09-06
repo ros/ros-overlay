@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Leg Detector using a machine learning approach to find leg-like patterns of[...]"
 HOMEPAGE="http://ros.org/wiki/leg_detector"
-SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OSUrobotics/people-release/archive/release/kinetic/${PN}/1.1.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
