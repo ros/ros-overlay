@@ -2,27 +2,27 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="Gazebo plugin to provide simulated data from Velodyne laser scanners."
 HOMEPAGE="http://wiki.ros.org/velodyne_gazebo_plugins"
-SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/${PN}/1.0.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/kinetic/${PN}/1.0.8-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/gazebo_ros
-	ros-melodic/roscpp
-	ros-melodic/sensor_msgs
-	ros-melodic/tf
+	ros-kinetic/gazebo_ros
+	ros-kinetic/roscpp
+	ros-kinetic/sensor_msgs
+	ros-kinetic/tf
 "
 DEPEND="${RDEPEND}
-	ros-melodic/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="melodic"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Plugin-based layers for the navigation stack that
-  implement various social navigation contraints, like proxemic distance.
+    This metapackage depends on the SMACH visualization tools.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -11,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>davidvlu@gmail.com</email>
-      <name>David V. Lu!!</name>
+      <email>jbo@jhu.edu</email>
+      <name>Jonathan Bohren</name>
     </maintainer>
-    <bugs-to>https://github.com/wu-robotics/navigation_layers_release/issues</bugs-to>
+    <bugs-to>https://github.com/jbohren/executive_smach_visualization/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -2,13 +2,13 @@
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="Gazebo plugin to provide simulated data from Velodyne laser scanners."
 HOMEPAGE="http://wiki.ros.org/velodyne_gazebo_plugins"
-SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/lunar/${PN}/1.0.7-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/lunar/${PN}/1.0.8-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

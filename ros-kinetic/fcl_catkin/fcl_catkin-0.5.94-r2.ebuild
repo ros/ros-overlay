@@ -6,21 +6,22 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Extra navigation layers."
+DESCRIPTION="fcl_catkin"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wu-robotics/${PN}_release/archive/release/melodic/${PN}/0.4.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/kinetic/${PN}/0.5.94-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/range_sensor_layer
-	ros-melodic/social_navigation_layers
+	ros-kinetic/octomap
+	dev-cpp/eigen
+	sci-libs/libccd
 "
 DEPEND="${RDEPEND}
-	ros-melodic/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="melodic"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
