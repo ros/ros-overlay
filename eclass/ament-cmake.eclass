@@ -91,21 +91,24 @@ ament-cmake_src_prepare() {
 # @DESCRIPTION:
 # Internal decoration of cmake-utils_src_configure to handle multiple python installs.
 ament-cmake_src_configure_internal() {
-	export PYTHONPATH="/${ROS_PREFIX}/lib64/${EPYTHON}/site-packages"
-	if [ -f /${ROS_PREFIX}/setup.bash ]; then
-		source /${ROS_PREFIX}/setup.bash
+	export PYTHONPATH="${EPREFIX%/}/${ROS_PREFIX%/}/lib64/${EPYTHON}/site-packages"
+	if [ -f ${EPREFIX%/}/${ROS_PREFIX%/}/setup.bash ]; then
+		source ${EPREFIX%/}/${ROS_PREFIX%/}/setup.bash
 	fi
 	if [[ -z $CPP11 ]]; then
 		append-cxxflags '-std=c++11'
 	fi
 	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
-		local sitedir="$(python_get_sitedir)"
-		local sitedir="${sitedir/\/usr\//}"
-		local sitedir="${sitedir/lib64/lib}"
-		local sitedir="${sitedir/lib/lib64}"
+		# Figure out if the system uses lib64 or lib folder
+		local sitedir="$(python_get_sitedir)";
+		if [[ $sitedir = *"lib64"* ]]; then
+		    local lib_str="lib64"
+		else
+			local lib_str="lib"
+		fi
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			"-DPYTHON_INSTALL_DIR=${sitedir}"
+			"-DPYTHON_INSTALL_DIR=${lib_str}/${EPYTHON}/site-packages"
 			"${mycmakeargs[@]}"
 		)
 		python_export PYTHON_SCRIPTDIR
@@ -135,15 +138,15 @@ ament-cmake_src_configure() {
 
 	export AMENT_PREFIX_PATH="${EPREFIX%/}/${ROS_PREFIX}"
 	export ROS_ROOT="${EPREFIX%/}/${ROS_PREFIX}"
-	export DEST_SETUP_DIR="/${ROS_PREFIX}"
+	export DEST_SETUP_DIR="${EPREFIX%/}/${ROS_PREFIX}"
 	if [ -z $BUILD_BINARY ]; then
 		export BUILD_BINARY="1"
 	fi
 	local mycmakeargs=(
 		-DAMENT_ENABLE_TESTING="$(usex test 1 0)"
 		-DAMENT_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
-		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EROOT%/}}/${ROS_PREFIX}
-		-DCMAKE_INSTALL_PREFIX=${EROOT%/}/${ROS_PREFIX}
+		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EPREFIX%/}}/${ROS_PREFIX}
+		-DCMAKE_INSTALL_PREFIX=${EPREFIX%/}/${ROS_PREFIX}
 		${mycmakeargs[@]}
 	)
 	cmake-utils_src_configure
@@ -158,8 +161,8 @@ ament-cmake_src_configure() {
 # @DESCRIPTION:
 # Builds a catkin-based package.
 ament-cmake_src_compile() {
-	if [ -f /${ROS_PREFIX}/setup.bash ]; then
-		source /${ROS_PREFIX}/setup.bash
+	if [ -f ${EPREFIX%/}/${ROS_PREFIX}/setup.bash ]; then
+		source ${EPREFIX%/}/${ROS_PREFIX}/setup.bash
 	fi
 
 	rm -f ${WORKDIR}/${P}/README* # prevents conflicts
@@ -207,7 +210,7 @@ ros-catkin_src_test() {
 # @DESCRIPTION:
 # Decorator around cmake-utils_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
 ament-cmake_src_install_with_python() {
-	python_scriptinto /${ROS_PREFIX}/bin
+	python_scriptinto ${EPREFIX%/}/${ROS_PREFIX}/bin
 	python_export PYTHON_SCRIPTDIR
 	if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"

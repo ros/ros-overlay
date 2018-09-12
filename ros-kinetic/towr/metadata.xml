@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A light-weight, Eigen-based
+    C++ library for trajectory optimization for legged robots. 
+    This library provides implementations for variables, costs and constraints
+    that can be used to represent a legged locomotion problem. 
+    The resulting Nonlinear Programming Problem (NLP) can then be solved with
+    off-the-shelf solvers, e.g. Ipopt using the generic optimizer interface 
+    <a href="http://wiki.ros.org/ifopt">ifopt</a>.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>alexander.w.winkler@gmail.com</email>
+      <name>Alexander W. Winkler</name>
+    </maintainer>
+    <bugs-to>https://github.com/ethz-adrl/towr/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

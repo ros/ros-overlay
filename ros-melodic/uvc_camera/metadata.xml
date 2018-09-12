@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A collection of node(let)s that stream images from USB cameras (UVC)
+     and provide CameraInfo messages to consumers. Includes a
+     two-camera node that provides rough synchronization
+     for stereo vision.
+
+     Currently uses the base driver from Morgan Quigley's uvc_cam package.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ken@tossell.net</email>
+      <name>Ken Tossell</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/camera_umd/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

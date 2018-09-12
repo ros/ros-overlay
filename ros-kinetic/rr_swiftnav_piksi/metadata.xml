@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Rover Robotics: ROS package for connecting to SwiftNav Piksi
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nick@roverrobotics.com</email>
+      <name>nick fragale</name>
+    </maintainer>
+    <bugs-to>https://github.com/RoverRobotics/rr_swiftnav_piksi/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

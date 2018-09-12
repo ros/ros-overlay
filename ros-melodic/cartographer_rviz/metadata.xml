@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Cartographer is a system that provides real-time simultaneous localization
+    and mapping (SLAM) in 2D and 3D across multiple platforms and sensor
+    configurations. This package provides Cartographer's RViz integration.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>cartographer-owners@googlegroups.com</email>
+      <name>The Cartographer Authors</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/cartographer_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

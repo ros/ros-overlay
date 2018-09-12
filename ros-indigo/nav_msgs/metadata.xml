@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    NONE
+    nav_msgs defines the common messages used to interact with the
+    <a href="http://ros.org/wiki/navigation">navigation</a> stack.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

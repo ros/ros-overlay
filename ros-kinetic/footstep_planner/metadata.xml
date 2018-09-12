@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>A footstep planner for humanoid / biped robots. The planner builds on SBPL and has anytime as well as dynamic replanning capabilities. The supported planners are: ARA*, AD*, R*.</p>
+    <p>Details can be found in the following publications:</p>
+    <p><em>&quot;Humanoid Navigation with Dynamic Footstep Plans&quot;</em>
+    by J. Garimort, A. Hornung, and M. Bennewitz; published in 
+    Proc. of the IEEE International Conference on Robotics &amp; Automation (ICRA), 2011</p>
+    <p><em>Anytime Search-Based Footstep Planning with Suboptimality Bounds</em>
+    by A. Hornung, A. Dornbush, M. Likhachev, and M. Bennewitz; published in
+    Proc. of the IEEE-RAS International Conference on Humanoid
+    Robots (HUMANOIDS), 2012</p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>aravindadp@gmail.com</email>
+      <name>Pramuditha Aravinda</name>
+    </maintainer>
+    <bugs-to>https://github.com/ROBOTIS-GIT/humanoid_navigation/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

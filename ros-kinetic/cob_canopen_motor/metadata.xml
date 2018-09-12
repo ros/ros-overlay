@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The package cob_canopen_motor implements a controller-drive component which is connected to a can-bus and works with a canopen-interface. "CanDriveItf" provides a - more or less - generic interface to the controller-drive components. "CanDrvie..." then implements a specific setup, e.g. an ELMO Harmonica Controller in case of the "CanDriveHarmonica".
+    The package cob_canopen_motor implements a controller-drive component which is connected to a can-bus and works with a canopen-interface. &quot;CanDriveItf&quot; provides a - more or less - generic interface to the controller-drive components. &quot;CanDrvie...&quot; then implements a specific setup, e.g. an ELMO Harmonica Controller in case of the &quot;CanDriveHarmonica&quot;.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

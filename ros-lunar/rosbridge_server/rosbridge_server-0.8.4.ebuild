@@ -1,4 +1,4 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{2_7,3_5} )
 inherit ros-cmake
 
 DESCRIPTION="A WebSocket interface to rosbridge."
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/lunar/rosbridge_server/0.8.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+HOMEPAGE="http://ros.org/wiki/rosbridge_server"
+SRC_URI="https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/lunar/${PN}/0.8.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,7 +18,7 @@ RDEPEND="
 	ros-lunar/rosauth
 	ros-lunar/rosbridge_library
 	ros-lunar/rospy
-	dev-python/twisted-core
+	dev-python/twisted
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

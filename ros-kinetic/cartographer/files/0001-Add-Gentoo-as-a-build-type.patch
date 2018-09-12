@@ -1,0 +1,24 @@
+From 602d05746ca57b270abfb61012816ddde92e5cf7 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter@openrobotics.org>
+Date: Thu, 22 Mar 2018 21:12:52 +0000
+Subject: [PATCH] Add Gentoo as a build type.
+
+---
+ cmake/functions.cmake | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/cmake/functions.cmake b/cmake/functions.cmake
+index 5fbd10b..626b02d 100644
+--- a/cmake/functions.cmake
++++ b/cmake/functions.cmake
+@@ -91,6 +91,8 @@ macro(google_initialize_cartographer_project)
+ 
+   if(CMAKE_BUILD_TYPE STREQUAL "Release")
+     google_add_flag(GOOG_CXX_FLAGS "-O3 -DNDEBUG")
++  elseif(CMAKE_BUILD_TYPE STREQUAL "Gentoo")
++    google_add_flag(GOOG_CXX_FLAGS "-O3 -DNDEBUG")
+   elseif(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+     google_add_flag(GOOG_CXX_FLAGS "-O3 -g -DNDEBUG")
+   elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+-- 
+2.16.2

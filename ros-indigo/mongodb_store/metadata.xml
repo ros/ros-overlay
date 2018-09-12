@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>cburbridge@gmail.com</email>
-      <name>Chris Burbridge</name>
+      <email>nickh@robots.ox.ac.uk</email>
+      <name>Nick Hawes</name>
     </maintainer>
     <bugs-to>https://github.com/strands-projects/mongodb_store/issues</bugs-to>
   </upstream>

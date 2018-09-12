@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The Dynamixel ctroller package for OpenManipulator
+    The Dynamixel controller package based on Dynamixel-Workbench for OpenManipulator.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

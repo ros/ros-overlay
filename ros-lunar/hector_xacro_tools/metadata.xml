@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    hector_xacro_tools
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>johannes@intermodalics.eu</email>
+      <name>Johannes Meyer</name>
+    </maintainer>
+    <bugs-to>https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

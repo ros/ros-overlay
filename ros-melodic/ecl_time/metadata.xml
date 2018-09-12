@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Timing utilities are very dependent on the system api provided for their use.
+	This package provides a means for handling different timing models. Current support
+	
+	- posix rt : complete.
+	- macosx : posix timers only, missing absolute timers.
+	- win : none.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/ecl_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
