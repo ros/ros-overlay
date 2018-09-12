@@ -9,20 +9,20 @@ inherit ros-cmake
 DESCRIPTION="This package specifies the interface to a realtime controller. A\
    contro[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_controller_interface"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.17-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/${PN}/1.8.18-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/controller_interface
-	ros-lunar/pr2_mechanism_model
-	ros-lunar/roscpp
+	ros-melodic/controller_interface
+	ros-melodic/pr2_mechanism_model
+	ros-melodic/roscpp
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
