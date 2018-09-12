@@ -9,28 +9,28 @@ inherit ros-cmake
 DESCRIPTION="This package pulls in the Karto mapping library, and provides a ROS\
 	 w[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.8.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/lunar/${PN}/0.8.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/message_filters
-	ros-melodic/nav_msgs
-	ros-melodic/open_karto
-	ros-melodic/rosconsole
-	ros-melodic/roscpp
-	ros-melodic/sensor_msgs
-	ros-melodic/sparse_bundle_adjustment
-	ros-melodic/tf
-	ros-melodic/visualization_msgs
+	ros-lunar/message_filters
+	ros-lunar/nav_msgs
+	ros-lunar/open_karto
+	ros-lunar/rosconsole
+	ros-lunar/roscpp
+	ros-lunar/sensor_msgs
+	ros-lunar/sparse_bundle_adjustment
+	ros-lunar/tf
+	ros-lunar/visualization_msgs
 	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
-	ros-melodic/catkin
-	ros-melodic/cmake_modules
+	ros-lunar/catkin
+	ros-lunar/cmake_modules
 "
 
 SLOT="0"
-ROS_DISTRO="melodic"
+ROS_DISTRO="lunar"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

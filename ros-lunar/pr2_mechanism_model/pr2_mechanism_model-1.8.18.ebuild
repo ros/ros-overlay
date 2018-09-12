@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="<p>\
 		This package contains the robot model that is used by the real[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_mechanism_model"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.17-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.18-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

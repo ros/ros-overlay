@@ -9,19 +9,19 @@ inherit ros-cmake
 DESCRIPTION="This package contains the C++ interfaces to the PR2 hardware\
   components [...]"
 HOMEPAGE="http://ros.org/wiki/pr2_hardware_interface"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.17-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/${PN}/1.8.18-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/geometry_msgs
-	ros-lunar/roscpp
+	ros-melodic/geometry_msgs
+	ros-melodic/roscpp
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
