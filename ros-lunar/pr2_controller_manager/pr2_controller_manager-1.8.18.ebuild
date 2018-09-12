@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The controller manager \(CM\) package provides the infrastructure to run co[...]"
 HOMEPAGE="http://ros.org/pr2_controller_manager"
-SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.17-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/lunar/${PN}/1.8.18-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
