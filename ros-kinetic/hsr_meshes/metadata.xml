@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    3D mesh files for the Toyota HSR
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>koji_terada@mail.toyota.co.jp</email>
+      <name>Koji Terada</name>
+    </maintainer>
+    <bugs-to>https://github.com/ToyotaResearchInstitute/hsr_meshes/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
