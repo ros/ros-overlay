@@ -45,7 +45,7 @@ RDEPEND="
 	net-libs/ignition-msgs:=
 	>=sci-libs/ignition-math-2.3:3=
 	net-libs/ignition-transport:3=
-	x11-libs/qwt:6=[qt5]
+	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
 	dev-qt/qttest:4
