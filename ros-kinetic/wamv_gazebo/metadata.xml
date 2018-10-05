@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provides templates and examples for integrating the WAM-V model into gazebo with dynamics, sensors, etc.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>caguero@osrfoundation.org</email>
+      <name>Carlos Aguero</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/vmrc/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
