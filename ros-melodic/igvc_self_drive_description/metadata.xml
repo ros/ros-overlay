@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Meshes and URDF descriptions for Gem vehicle
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mtradovn@oakland.edu</email>
+      <name>Micho Radovnikovich</name>
+    </maintainer>
+    <bugs-to>https://github.com/robustify/igvc_self_drive_sim/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
