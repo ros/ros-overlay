@@ -8,20 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="Metapackage for igvc_self_drive_sim"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/robustify/${PN}-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/robustify/${PN}-release/archive/release/melodic/${PN}/0.1.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/igvc_self_drive_description
-	ros-kinetic/igvc_self_drive_gazebo
-	ros-kinetic/igvc_self_drive_gazebo_plugins
+	ros-melodic/igvc_self_drive_description
+	ros-melodic/igvc_self_drive_gazebo
+	ros-melodic/igvc_self_drive_gazebo_plugins
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

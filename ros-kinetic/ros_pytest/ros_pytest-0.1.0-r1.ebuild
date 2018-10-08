@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The ros_pytest package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/machinekoder/${PN}-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/machinekoder/${PN}-release/archive/release/kinetic/${PN}/0.1.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 

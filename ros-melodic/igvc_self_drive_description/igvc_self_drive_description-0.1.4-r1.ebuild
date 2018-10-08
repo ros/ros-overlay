@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Meshes and URDF descriptions for Gem vehicle"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/robustify/igvc_self_drive_sim-release/archive/release/melodic/${PN}/0.1.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/robustify/igvc_self_drive_sim-release/archive/release/melodic/${PN}/0.1.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD-2"
 

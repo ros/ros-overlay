@@ -6,17 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Meshes and URDF descriptions for Gem vehicle"
+DESCRIPTION="Metapackage for igvc_self_drive_sim"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/robustify/igvc_self_drive_sim-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/robustify/${PN}-release/archive/release/kinetic/${PN}/0.1.4-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/hector_gazebo_plugins
-	ros-kinetic/urdf
-	ros-kinetic/xacro
+	ros-kinetic/igvc_self_drive_description
+	ros-kinetic/igvc_self_drive_gazebo
+	ros-kinetic/igvc_self_drive_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
