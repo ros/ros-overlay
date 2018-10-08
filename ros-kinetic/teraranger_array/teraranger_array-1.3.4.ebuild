@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The teraranger_array package for TeraRanger Array Products \(Multiflex, One\)"
 HOMEPAGE="http://wiki.ros.org/teraranger_array"
-SRC_URI="https://github.com/Terabee/${PN}-release/archive/release/kinetic/${PN}/1.3.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/Terabee/${PN}-release/archive/release/kinetic/${PN}/1.3.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 

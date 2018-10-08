@@ -6,17 +6,14 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Metapackage for igvc_self_drive_sim"
+DESCRIPTION="The nanomsg package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/robustify/${PN}-release/archive/release/melodic/${PN}/0.1.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/yujinrobot-release/${PN}-release/archive/release/melodic/${PN}/0.4.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/igvc_self_drive_description
-	ros-melodic/igvc_self_drive_gazebo
-	ros-melodic/igvc_self_drive_gazebo_plugins
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

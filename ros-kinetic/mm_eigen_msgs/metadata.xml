@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The teraranger package
+    Message definitions and serialisations for Eigen messages.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>krzysztof.zurad@terabee.com</email>
-      <name>Krzysztof Żurad</name>
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
     </maintainer>
-    <bugs-to>https://github.com/Terabee/teraranger/issues</bugs-to>
+    <bugs-to>https://github.com/yujinrobot/message_multiplexing/issues</bugs-to>
   </upstream>
 </pkgmetadata>
