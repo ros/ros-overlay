@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>elliot.johnson@swri.org</email>
-      <name>Elliot Johnson</name>
+      <email>malban@swri.org</email>
+      <name>Marc Alban</name>
     </maintainer>
     <bugs-to>https://github.com/swri-robotics-gbp/marti_common/issues</bugs-to>
   </upstream>
