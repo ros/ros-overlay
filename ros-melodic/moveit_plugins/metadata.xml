@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Metapackage for moveit plugins.
+    Metapackage for MoveIt! plugins.
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>

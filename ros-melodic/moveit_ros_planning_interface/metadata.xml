@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Components of MoveIt that offer simpler interfaces to planning and execution
+    Components of MoveIt! that offer simpler interfaces to planning and execution
   </longdescription>
   <maintainer type="person">
     <email>hunter@openrobotics.org</email>
