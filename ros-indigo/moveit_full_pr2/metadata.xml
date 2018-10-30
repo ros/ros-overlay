@@ -13,6 +13,6 @@
       <email>isucan@willowgarage.com</email>
       <name>Ioan Sucan</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/moveit/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/moveit_pr2/issues</bugs-to>
   </upstream>
 </pkgmetadata>
