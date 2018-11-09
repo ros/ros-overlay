@@ -21,7 +21,7 @@ RDEPEND="
 	ros-melodic/nodelet
 	ros-melodic/roscpp
 	ros-melodic/sensor_msgs
-	dev-libs/OpenNi
+	dev-libs/OpenNI
 	virtual/libusb:1
 	dev-libs/log4cxx
 "

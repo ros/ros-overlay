@@ -33,7 +33,7 @@ RDEPEND="
 	ros-melodic/tf2_geometry_msgs
 	ros-melodic/tf2_ros
 	ros-melodic/visualization_msgs
-	sci-libs/ceres-solver
+	sci-libs/ceres-solver[sparse,lapack]
 	dev-libs/protobuf
 	sci-libs/suitesparse
 "
