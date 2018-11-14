@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The adi_driver package"
 HOMEPAGE="http://wiki.ros.org/adi_driver"
-SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/kinetic/${PN}/1.0.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/kinetic/${PN}/1.0.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,6 +19,7 @@ RDEPEND="
 	ros-kinetic/roscpp
 	ros-kinetic/rqt_plot
 	ros-kinetic/rviz
+	ros-kinetic/rviz_imu_plugin
 	ros-kinetic/sensor_msgs
 	ros-kinetic/std_srvs
 	ros-kinetic/xacro

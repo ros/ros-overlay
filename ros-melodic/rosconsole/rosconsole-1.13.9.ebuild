@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS console output library."
 HOMEPAGE="http://www.ros.org/wiki/rosconsole"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.9-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

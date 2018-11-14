@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="PlotJuggler: juggle with data"
 HOMEPAGE="https://github.com/facontidavide/PlotJuggler"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/lunar/${PN}/1.8.4-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/lunar/${PN}/1.9.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

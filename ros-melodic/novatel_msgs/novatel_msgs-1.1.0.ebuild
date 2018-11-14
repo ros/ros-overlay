@@ -6,21 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
-HOMEPAGE="http://wiki.ros.org/nerian_stereo"
-SRC_URI="https://github.com/nerian-vision/${PN}-release/archive/release/melodic/${PN}/3.0.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="ROS messages which represent raw Novatel SPAN data."
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/ros-drivers-gbp/novatel_span_driver-release/archive/release/melodic/${PN}/1.1.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/cv_bridge
+	ros-melodic/geometry_msgs
 	ros-melodic/message_runtime
-	ros-melodic/roscpp
-	ros-melodic/sensor_msgs
+	ros-melodic/nav_msgs
 	ros-melodic/std_msgs
-	dev-libs/boost
-	media-libs/libsdl
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
