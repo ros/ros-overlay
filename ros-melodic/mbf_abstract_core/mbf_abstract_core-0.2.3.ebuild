@@ -8,19 +8,19 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides common interfaces for navigation specific robot actio[...]"
 HOMEPAGE="http://wiki.ros.org/mbf_abstract_core"
-SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/indigo/${PN}/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/${PN}/0.2.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/geometry_msgs
-	ros-indigo/std_msgs
+	ros-melodic/geometry_msgs
+	ros-melodic/std_msgs
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

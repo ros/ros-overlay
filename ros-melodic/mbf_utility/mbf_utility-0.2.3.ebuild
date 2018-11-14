@@ -6,16 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package provides common interfaces for navigation specific robot actio[...]"
-HOMEPAGE="http://wiki.ros.org/mbf_abstract_core"
-SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/${PN}/0.2.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="The mbf_utility package"
+HOMEPAGE="http://wiki.ros.org/move_base_flex/mbf_utility"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/${PN}/0.2.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/geometry_msgs
-	ros-melodic/std_msgs
+	ros-melodic/roscpp
+	ros-melodic/tf
+	ros-melodic/tf2
+	ros-melodic/tf2_geometry_msgs
+	ros-melodic/tf2_ros
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

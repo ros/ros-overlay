@@ -6,37 +6,33 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="franka_control provides a hardware node to control a Franka Emika research [...]"
-HOMEPAGE="http://wiki.ros.org/franka_control"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="franka_example_controllers provides example code for controlling Franka Emi[...]"
+HOMEPAGE="http://wiki.ros.org/franka_example_controllers"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.6.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/actionlib
-	ros-kinetic/actionlib_msgs
 	ros-kinetic/controller_interface
-	ros-kinetic/controller_manager
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/franka_control
 	ros-kinetic/franka_description
-	ros-kinetic/franka_gripper
 	ros-kinetic/franka_hw
-	ros-kinetic/franka_msgs
 	ros-kinetic/geometry_msgs
-	ros-kinetic/joint_state_publisher
+	ros-kinetic/hardware_interface
 	ros-kinetic/libfranka
 	ros-kinetic/message_runtime
+	ros-kinetic/panda_moveit_config
 	ros-kinetic/pluginlib
 	ros-kinetic/realtime_tools
-	ros-kinetic/robot_state_publisher
 	ros-kinetic/roscpp
-	ros-kinetic/sensor_msgs
-	ros-kinetic/tf
-	ros-kinetic/tf2_msgs
+	ros-kinetic/rospy
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/message_generation
+	dev-cpp/eigen
 "
 
 SLOT="0"

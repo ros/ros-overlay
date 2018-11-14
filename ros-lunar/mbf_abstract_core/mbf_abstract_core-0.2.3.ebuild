@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides common interfaces for navigation specific robot actio[...]"
 HOMEPAGE="http://wiki.ros.org/mbf_abstract_core"
-SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/${PN}/0.2.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/${PN}/0.2.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

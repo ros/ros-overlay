@@ -8,24 +8,24 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides common interfaces for navigation specific robot actio[...]"
 HOMEPAGE="http://wiki.ros.org/move_base_flex/mbf_costmap_core"
-SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/${PN}/0.2.2-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/indigo/${PN}/0.2.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/costmap_2d
-	ros-lunar/geometry_msgs
-	ros-lunar/mbf_abstract_core
-	ros-lunar/mbf_utility
-	ros-lunar/nav_core
-	ros-lunar/std_msgs
-	ros-lunar/tf
+	ros-indigo/costmap_2d
+	ros-indigo/geometry_msgs
+	ros-indigo/mbf_abstract_core
+	ros-indigo/mbf_utility
+	ros-indigo/nav_core
+	ros-indigo/std_msgs
+	ros-indigo/tf
 "
 DEPEND="${RDEPEND}
-	ros-lunar/catkin
+	ros-indigo/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="lunar"
+ROS_DISTRO="indigo"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
