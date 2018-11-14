@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="MAVLink communication library.\
 	This library provide unified connection[...]"
 HOMEPAGE="http://wiki.ros.org/mavros"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.26.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.27.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"

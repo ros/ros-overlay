@@ -6,18 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="mavros_msgs defines messages for <a href=\"http://wiki.ros.org/mavros\">MAV[...]"
-HOMEPAGE="http://wiki.ros.org/mavros_msgs"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/lunar/${PN}/0.26.3-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+DESCRIPTION="Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Te[...]"
+HOMEPAGE="http://wiki.ros.org/nerian_stereo"
+SRC_URI="https://github.com/nerian-vision/${PN}-release/archive/release/lunar/${PN}/3.1.0-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
-LICENSE="( GPL-3 LGPL-2 BSD )"
+LICENSE="MIT"
+
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-lunar/geographic_msgs
-	ros-lunar/geometry_msgs
+	ros-lunar/cv_bridge
 	ros-lunar/message_runtime
+	ros-lunar/roscpp
 	ros-lunar/sensor_msgs
 	ros-lunar/std_msgs
+	dev-libs/boost
+	media-libs/libsdl
 "
 DEPEND="${RDEPEND}
 	ros-lunar/catkin

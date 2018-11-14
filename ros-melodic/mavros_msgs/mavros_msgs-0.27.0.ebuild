@@ -8,22 +8,22 @@ inherit ros-cmake
 
 DESCRIPTION="mavros_msgs defines messages for <a href=\"http://wiki.ros.org/mavros\">MAV[...]"
 HOMEPAGE="http://wiki.ros.org/mavros_msgs"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/kinetic/${PN}/0.26.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/melodic/${PN}/0.27.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/geographic_msgs
-	ros-kinetic/geometry_msgs
-	ros-kinetic/message_runtime
-	ros-kinetic/sensor_msgs
-	ros-kinetic/std_msgs
+	ros-melodic/geographic_msgs
+	ros-melodic/geometry_msgs
+	ros-melodic/message_runtime
+	ros-melodic/sensor_msgs
+	ros-melodic/std_msgs
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
-	ros-kinetic/message_generation
+	ros-melodic/catkin
+	ros-melodic/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

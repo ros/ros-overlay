@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The adi_driver package"
 HOMEPAGE="http://wiki.ros.org/adi_driver"
-SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/indigo/${PN}/1.0.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/indigo/${PN}/1.0.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,6 +19,7 @@ RDEPEND="
 	ros-indigo/roscpp
 	ros-indigo/rqt_plot
 	ros-indigo/rviz
+	ros-indigo/rviz_imu_plugin
 	ros-indigo/sensor_msgs
 	ros-indigo/std_srvs
 	ros-indigo/xacro
