@@ -8,23 +8,23 @@ inherit ros-cmake
 
 DESCRIPTION="Move Base Flex \(MBF\) is a backwards-compatible replacement for move_base.[...]"
 HOMEPAGE="http://wiki.ros.org/move_base_flex"
-SRC_URI="https://github.com/uos-gbp/${PN}-release/archive/release/indigo/${PN}/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/${PN}-release/archive/release/kinetic/${PN}/0.2.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-indigo/mbf_abstract_core
-	ros-indigo/mbf_abstract_nav
-	ros-indigo/mbf_costmap_core
-	ros-indigo/mbf_costmap_nav
-	ros-indigo/mbf_msgs
-	ros-indigo/mbf_simple_nav
+	ros-kinetic/mbf_abstract_core
+	ros-kinetic/mbf_abstract_nav
+	ros-kinetic/mbf_costmap_core
+	ros-kinetic/mbf_costmap_nav
+	ros-kinetic/mbf_msgs
+	ros-kinetic/mbf_simple_nav
 "
 DEPEND="${RDEPEND}
-	ros-indigo/catkin
+	ros-kinetic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="indigo"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

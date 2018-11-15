@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="franka_hw provides hardware interfaces for using Franka Emika research robo[...]"
 HOMEPAGE="http://wiki.ros.org/franka_hw"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.6.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

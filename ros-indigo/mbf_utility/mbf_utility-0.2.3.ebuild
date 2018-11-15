@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The mbf_utility package"
 HOMEPAGE="http://wiki.ros.org/move_base_flex/mbf_utility"
-SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/indigo/${PN}/0.2.2-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/indigo/${PN}/0.2.3-0.tar.gz -> ${PN}-indigo-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

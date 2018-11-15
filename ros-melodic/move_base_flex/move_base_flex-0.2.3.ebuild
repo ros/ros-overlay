@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Move Base Flex \(MBF\) is a backwards-compatible replacement for move_base.[...]"
 HOMEPAGE="http://wiki.ros.org/move_base_flex"
-SRC_URI="https://github.com/uos-gbp/${PN}-release/archive/release/melodic/${PN}/0.2.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/uos-gbp/${PN}-release/archive/release/melodic/${PN}/0.2.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

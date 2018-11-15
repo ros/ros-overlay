@@ -6,15 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="franka_description contains URDF files and meshes of Franka Emika robots"
-HOMEPAGE="http://wiki.ros.org/franka_description"
-SRC_URI="https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/${PN}/0.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="fmt is an open-source formatting library for C++.\
+\	\	It can be used as a [...]"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/xqms/${PN}-release/archive/release/kinetic/${PN}/6.0.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/xacro
+	ros-kinetic/rosconsole
+	ros-kinetic/roscpp
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

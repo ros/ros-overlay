@@ -6,17 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="fmt is an open-source formatting library for C++.\
-\	\	It can be used as a [...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/xqms/${PN}-release/archive/release/kinetic/${PN}/5.2.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="The mbf_utility package"
+HOMEPAGE="http://wiki.ros.org/move_base_flex/mbf_utility"
+SRC_URI="https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/${PN}/0.2.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/rosconsole
+	ros-kinetic/geometry_msgs
 	ros-kinetic/roscpp
+	ros-kinetic/tf
+	ros-kinetic/tf2
+	ros-kinetic/tf2_geometry_msgs
+	ros-kinetic/tf2_ros
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
