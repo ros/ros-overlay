@@ -1,5 +1,5 @@
 EAPI=6
-PYTHON_COMPAT=( python3_5 )
+PYTHON_COMPAT=( python3_{5,6,7} )
 
 inherit distutils-r1
 
@@ -21,3 +21,5 @@ DEPEND="
 "
 
 DISTUTILS_IN_SOURCE_BUILD="yes"
+
+PATCHES=("${FILESDIR}/fix-python3-generation.patch")
