@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<use>
+		<flag name="egl">Enable EGL integration</flag>
+		<flag name="exceptions">Add support for exceptions - like catching them
+			inside the event loop (recommended by upstream)</flag>
+		<flag name="glib">Enable integration with the <pkg>dev-libs/glib</pkg> event loop</flag>
+		<flag name="gtkstyle">Build a widgets style that mimics the active GTK+ theme</flag>
+		<flag name="qt3support">Enable the Qt3Support libraries for Qt4. Note that
+			this does not mean you can compile pure Qt3 programs with Qt4.</flag>
+		<flag name="trace">Build the 'trace' graphicssystem engine which allows to record
+			all drawing operations into a trace buffer. The trace can be replayed
+			later with the qttracereplay tool.</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://bugreports.qt.io/</bugs-to>
+		<doc>https://doc.qt.io/</doc>
+	</upstream>
+	<slots>
+		<subslots>
+			Must only be used by packages that are known to use private parts of the Qt API.
+		</subslots>
+	</slots>
+</pkgmetadata>
