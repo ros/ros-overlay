@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>davetcoleman@gmail.com</email>
+      <email>dave@picknik.ai</email>
       <name>Dave Coleman</name>
     </maintainer>
-    <bugs-to>https://github.com/davetcoleman/moveit_visual_tools/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/moveit_visual_tools/issues</bugs-to>
   </upstream>
 </pkgmetadata>
