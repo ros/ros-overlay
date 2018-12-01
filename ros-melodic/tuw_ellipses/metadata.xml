@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The tuw_ellipses package contains a computer vision library which is able to detect ellipses within images.  
+    The package is able to estimate the pose of the circle related to the ellipse the circle diameter as well as the camera parameter are known.
+    A dynamic reconfigure interface allows the user to tune the parameter of the system to ones needs.
+    But be aware that the pose of a projected circle within a image (ellipse) has two solutions and only one is published as TF.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>markus.bader@tuwien.ac.at</email>
+      <name>Markus Bader</name>
+    </maintainer>
+    <bugs-to>https://github.com/tuw-robotics/tuw_marker_detection/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
