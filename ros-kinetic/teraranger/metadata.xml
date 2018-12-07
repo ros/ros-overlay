@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mateusz.sadowski@terabee.com</email>
-      <name>Mateusz Sadowski</name>
+      <email>krzysztof.zurad@terabee.com</email>
+      <name>Krzysztof Żurad</name>
     </maintainer>
     <bugs-to>https://github.com/Terabee/teraranger/issues</bugs-to>
   </upstream>

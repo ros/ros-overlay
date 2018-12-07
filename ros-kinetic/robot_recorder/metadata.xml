@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Meta package that contains all essential packages for the robot recorder.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunter@openrobotics.org</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jonathan.hechtbauer@ipa.fraunhofer.de</email>
+      <name>Jonathan Hechtbauer</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa-jfh/robot_recorder/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
