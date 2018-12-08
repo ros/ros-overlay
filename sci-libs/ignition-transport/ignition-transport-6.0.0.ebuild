@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/${PN}3_${PV}"
+S="${WORKDIR}/${PN}6_${PV}~pre2"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_configure() {
