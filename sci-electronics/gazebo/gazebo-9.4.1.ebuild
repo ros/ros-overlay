@@ -40,7 +40,6 @@ RDEPEND="
 	sci-libs/hdf5:=[cxx]
 	sys-apps/util-linux
 	media-gfx/graphviz
-	net-libs/ignition-msgs:=
 	>=sci-libs/ignition-math:6=
         >=sci-libs/ignition-transport:6=
 	x11-libs/qwt:6=
