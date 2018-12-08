@@ -51,7 +51,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-python/empy app-text/libpaper dev-libs/libsodium dev-libs/vala-common \
     net-dns/libidn dev-util/scons dev-libs/double-conversion \
     dev-python/olefile dev-python/enum34 app-eselect/eselect-opengl \
-    app-eselect/eselect-mesa app-eselect/eselect-wxwidgets \
+    app-eselect/eselect-wxwidgets \
     app-eselect/eselect-notify-send app-text/qpdf dev-perl/File-Listing \
     dev-perl/HTTP-Message virtual/python-ipaddress dev-python/pyasn1 \
     dev-python/asn1crypto dev-python/idna =app-text/docbook-xml-dtd-4.2-r2 \
