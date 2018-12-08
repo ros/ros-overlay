@@ -42,8 +42,8 @@ RDEPEND="
 	sys-apps/util-linux
 	media-gfx/graphviz
 	net-libs/ignition-msgs:=
-	>=sci-libs/ignition-math-2.3:3=
-	net-libs/ignition-transport:3=
+	>=sci-libs/ignition-math:6=
+        >=sci-libs/ignition-transport:6=
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
