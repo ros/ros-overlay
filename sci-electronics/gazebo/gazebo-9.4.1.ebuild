@@ -11,7 +11,7 @@ SRC_URI="https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${P}.tar.bz
 
 LICENSE="Apache-2.0"
 # Subslot = major version = soname of libs
-SLOT="0/8"
+SLOT="0/9"
 KEYWORDS="~amd64"
 IUSE="cpu_flags_x86_sse2 libav test"
 
@@ -20,7 +20,6 @@ RDEPEND="
 	virtual/opengl
 	media-libs/openal
 	net-misc/curl
-	dev-libs/tinyxml
 	dev-libs/tinyxml2
 	dev-libs/libtar
 	dev-cpp/tbb
@@ -29,7 +28,7 @@ RDEPEND="
 	sci-libs/libccd
 	sci-libs/gts
 	>=sci-physics/bullet-2.82
-	>=dev-libs/sdformat-5.0:=
+	>=dev-libs/sdformat:6
 	dev-qt/qtwidgets:5
 	dev-qt/qtcore:5
 	dev-qt/qtopengl:5
