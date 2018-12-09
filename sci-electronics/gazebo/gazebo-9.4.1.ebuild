@@ -41,7 +41,7 @@ RDEPEND="
 	sys-apps/util-linux
 	media-gfx/graphviz
 	>=sci-libs/ignition-math:6=
-        >=sci-libs/ignition-transport:6=
+	>=sci-libs/ignition-transport:6=
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
@@ -53,6 +53,13 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
+
+PATCHES=(
+	"${FILESDIR}/${P}-0001-Patch-to-use-QWT-version-6.patch"
+	"${FILESDIR}/${P}-0002-Remove-distributed-tinyxml2.patch"
+	"${FILESDIR}/${P}-0003-Force-external-tinyxml2.patch"
+	"${FILESDIR}/${P}-0004-Remove-error-logging-in-favor-of-compilation.patch"
+)
 
 src_configure() {
 	# doesnt build without it

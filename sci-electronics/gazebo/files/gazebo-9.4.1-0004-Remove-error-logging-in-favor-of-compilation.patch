@@ -1,0 +1,25 @@
+From 58ae798cde7e9395267917922b1462a154648c2f Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Sun, 9 Dec 2018 15:41:59 -0500
+Subject: [PATCH] Remove error logging in favor of compilation
+
+---
+ gazebo/util/LogPlay.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gazebo/util/LogPlay.cc b/gazebo/util/LogPlay.cc
+index a03d7e5..756ce15 100644
+--- a/gazebo/util/LogPlay.cc
++++ b/gazebo/util/LogPlay.cc
+@@ -122,7 +122,7 @@ void LogPlay::Open(const std::string &_logFile)
+     gzerr << "Unable to load file[" << _logFile << "]. "
+       << "Check the Gazebo server log file for more information.\n";
+ #ifdef TINYXML2_MAJOR_VERSION_GE_6
+-    const char *errorStr1 = this->dataPtr->xmlDoc.ErrorStr();
++    const char *errorStr1 = nullptr;
+     const char *errorStr2 = nullptr;
+ #else
+     const char *errorStr1 = this->dataPtr->xmlDoc.GetErrorStr1();
+-- 
+2.19.2
+
