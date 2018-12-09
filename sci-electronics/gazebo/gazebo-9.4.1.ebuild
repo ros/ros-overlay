@@ -28,7 +28,7 @@ RDEPEND="
 	sci-libs/libccd
 	sci-libs/gts
 	>=sci-physics/bullet-2.82
-	>=dev-libs/sdformat:6=
+	dev-libs/sdformat:6
 	dev-qt/qtwidgets:5
 	dev-qt/qtcore:5
 	dev-qt/qtopengl:5
@@ -40,8 +40,8 @@ RDEPEND="
 	sci-libs/hdf5:=[cxx]
 	sys-apps/util-linux
 	media-gfx/graphviz
-	>=sci-libs/ignition-math:6=
-	>=sci-libs/ignition-transport:6=
+	sci-libs/ignition-math:6
+	sci-libs/ignition-transport:6
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
