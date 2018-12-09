@@ -28,7 +28,7 @@ RDEPEND="
 	sci-libs/libccd
 	sci-libs/gts
 	>=sci-physics/bullet-2.82
-	>=dev-libs/sdformat:6
+	>=dev-libs/sdformat:6=
 	dev-qt/qtwidgets:5
 	dev-qt/qtcore:5
 	dev-qt/qtopengl:5
