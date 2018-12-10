@@ -1,0 +1,28 @@
+From 089eb3dc143501df1a16cd3d91c115043f00f88d Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Sun, 9 Dec 2018 15:08:29 -0500
+Subject: [PATCH 3/3] Force external tinyxml2
+
+---
+ gazebo/util/LogPlay.cc | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/gazebo/util/LogPlay.cc b/gazebo/util/LogPlay.cc
+index f3f6808..a03d7e5 100644
+--- a/gazebo/util/LogPlay.cc
++++ b/gazebo/util/LogPlay.cc
+@@ -21,11 +21,7 @@
+ #endif
+ #include <gazebo/gazebo_config.h>
+ 
+-#ifndef USE_EXTERNAL_TINYXML2
+-#include <gazebo/tinyxml2.h>
+-#else
+ #include <tinyxml2.h>
+-#endif
+ 
+ #include <algorithm>
+ #include <boost/filesystem.hpp>
+-- 
+2.19.2
+

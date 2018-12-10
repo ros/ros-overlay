@@ -11,7 +11,7 @@ SRC_URI="https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${P}.tar.bz
 
 LICENSE="Apache-2.0"
 # Subslot = major version = soname of libs
-SLOT="0/8"
+SLOT="0/9"
 KEYWORDS="~amd64"
 IUSE="cpu_flags_x86_sse2 libav test"
 
@@ -20,7 +20,6 @@ RDEPEND="
 	virtual/opengl
 	media-libs/openal
 	net-misc/curl
-	dev-libs/tinyxml
 	dev-libs/tinyxml2
 	dev-libs/libtar
 	dev-cpp/tbb
@@ -29,7 +28,7 @@ RDEPEND="
 	sci-libs/libccd
 	sci-libs/gts
 	>=sci-physics/bullet-2.82
-	>=dev-libs/sdformat-5.0:=
+	=dev-libs/sdformat-6*
 	dev-qt/qtwidgets:5
 	dev-qt/qtcore:5
 	dev-qt/qtopengl:5
@@ -41,9 +40,11 @@ RDEPEND="
 	sci-libs/hdf5:=[cxx]
 	sys-apps/util-linux
 	media-gfx/graphviz
-	net-libs/ignition-msgs:=
-	>=sci-libs/ignition-math:6=
-        >=sci-libs/ignition-transport:6=
+	sci-libs/ignition-math
+	|| (
+		sci-libs/ignition-transport
+		net-libs/ignition-transport
+	)
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
@@ -55,6 +56,13 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
+
+PATCHES=(
+	"${FILESDIR}/${P}-0001-Patch-to-use-QWT-version-6.patch"
+	"${FILESDIR}/${P}-0002-Remove-distributed-tinyxml2.patch"
+	"${FILESDIR}/${P}-0003-Force-external-tinyxml2.patch"
+	"${FILESDIR}/${P}-0004-Remove-error-logging-in-favor-of-compilation.patch"
+)
 
 src_configure() {
 	# doesnt build without it
