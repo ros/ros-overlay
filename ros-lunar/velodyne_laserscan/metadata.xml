@@ -5,7 +5,7 @@
     Extract a single ring of a Velodyne PointCloud2 and publish it as a LaserScan message
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

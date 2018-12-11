@@ -2,16 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Experimental packages for moveit.
+    Experimental packages for MoveIt!
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>moveit_releasers@googlegroups.com</email>
+      <name>MoveIt! Release Team</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/moveit/issues</bugs-to>
   </upstream>

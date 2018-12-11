@@ -5,7 +5,7 @@
     Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
