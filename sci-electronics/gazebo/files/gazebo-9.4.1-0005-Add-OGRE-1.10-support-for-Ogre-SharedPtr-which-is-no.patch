@@ -1,0 +1,1331 @@
+From 41c9d23389d5a6bc8ef51b2f2f44ff78f34df80f Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Tue, 11 Dec 2018 19:02:12 -0500
+Subject: [PATCH 5/5] Add OGRE >= 1.10 support for Ogre::SharedPtr (which is
+ now just a std::shared_ptr)
+
+---
+ gazebo/gui/model/EditorMaterialSwitcher.cc    | 18 +++++--
+ gazebo/rendering/Camera.cc                    | 16 ++++++
+ gazebo/rendering/DepthCamera.cc               | 22 ++++++++-
+ gazebo/rendering/DepthCamera.hh               |  5 +-
+ gazebo/rendering/DepthCameraPrivate.hh        |  5 +-
+ gazebo/rendering/Distortion.cc                |  5 ++
+ gazebo/rendering/GpuLaser.cc                  | 21 +++++++-
+ gazebo/rendering/GpuLaserPrivate.hh           |  9 +++-
+ gazebo/rendering/Heightmap.cc                 | 49 +++++++++++++++----
+ gazebo/rendering/HeightmapPrivate.hh          |  5 +-
+ gazebo/rendering/LensFlare.cc                 | 20 +++++++-
+ gazebo/rendering/Material.cc                  | 10 +++-
+ gazebo/rendering/MovableText.cc               | 41 ++++++++++++----
+ gazebo/rendering/RTShaderSystem.cc            | 23 +++++++--
+ gazebo/rendering/RenderEngine.cc              | 10 +++-
+ gazebo/rendering/Visual.cc                    | 32 +++++++++---
+ gazebo/rendering/WideAngleCamera.cc           | 23 +++++++--
+ gazebo/rendering/WideAngleCameraPrivate.hh    |  4 ++
+ .../deferred_shading/AmbientLight.hh          |  4 ++
+ .../deferred_shading/DeferredLightCP.hh       |  4 ++
+ .../LightMaterialGenerator.hh                 | 13 ++++-
+ .../selection_buffer/MaterialSwitcher.cc      |  4 +-
+ .../selection_buffer/SelectionBuffer.cc       | 10 +++-
+ gazebo/rendering/skyx/include/GPUManager.h    |  4 ++
+ gazebo/rendering/skyx/src/GPUManager.cpp      |  4 ++
+ gazebo/rendering/skyx/src/MeshManager.cpp     | 10 +++-
+ gazebo/rendering/skyx/src/MoonManager.cpp     |  9 +++-
+ .../skyx/src/VClouds/DataManager.cpp          |  8 +++
+ .../skyx/src/VClouds/GeometryBlock.cpp        | 14 ++++--
+ .../skyx/src/VClouds/LightningManager.cpp     | 22 +++++++--
+ gazebo/rendering/skyx/src/VClouds/VClouds.cpp | 23 +++++++--
+ gazebo/sensors/GaussianNoiseModel.cc          | 12 ++++-
+ plugins/AmbientOcclusionVisualPlugin.cc       | 22 +++++++--
+ 33 files changed, 413 insertions(+), 68 deletions(-)
+
+diff --git a/gazebo/gui/model/EditorMaterialSwitcher.cc b/gazebo/gui/model/EditorMaterialSwitcher.cc
+index c70b38e..c072612 100644
+--- a/gazebo/gui/model/EditorMaterialSwitcher.cc
++++ b/gazebo/gui/model/EditorMaterialSwitcher.cc
+@@ -28,6 +28,13 @@
+ using namespace gazebo;
+ using namespace gui;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
+ 
+ /////////////////////////////////////////////////
+ EditorMaterialSwitcher::EditorMaterialSwitcher(
+@@ -191,22 +198,25 @@ Ogre::Technique *EditorMaterialListener::handleSchemeNotFound(
+     // set the material for the models
+     Ogre::ResourcePtr res =
+         Ogre::MaterialManager::getSingleton().getByName(material);
+-    if (res.isNull())
++    if (IS_NULL(res))
+     {
+       Ogre::MaterialManager::getSingleton().load(material,
+       Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+     }
+ 
++    // OGRE 1.10 changes the shared pointer definition even more
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    auto newTechnique = std::dynamic_pointer_cast<Ogre::Material>(res)->getTechnique(0);
+     // OGRE 1.9 changes the shared pointer definition
+-    #if (OGRE_VERSION < ((1 << 16) | (9 << 8) | 0))
++#elif (OGRE_VERSION < ((1 << 16) | (9 << 8) | 0))
+     // Make sure we keep the same depth properties so that
+     // certain overlay objects can be picked by the mouse.
+     Ogre::Technique *newTechnique =
+         static_cast<Ogre::MaterialPtr>(res)->getTechnique(0);
+-    #else
++#else
+     Ogre::Technique *newTechnique =
+         res.staticCast<Ogre::Material>()->getTechnique(0);
+-    #endif
++#endif
+ 
+     return newTechnique;
+   }
+diff --git a/gazebo/rendering/Camera.cc b/gazebo/rendering/Camera.cc
+index ca18928..310867c 100644
+--- a/gazebo/rendering/Camera.cc
++++ b/gazebo/rendering/Camera.cc
+@@ -1333,6 +1333,21 @@ void Camera::CreateRenderTexture(const std::string &_textureName)
+   fsaa = 0;
+ #endif
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  // Create the render texture
++  this->renderTexture = (Ogre::TextureManager::getSingleton().createManual(
++      _textureName,
++      "General",
++      Ogre::TEX_TYPE_2D,
++      this->ImageWidth(),
++      this->ImageHeight(),
++      0,
++      static_cast<Ogre::PixelFormat>(this->imageFormat),
++      Ogre::TU_RENDERTARGET,
++      0,
++      false,
++      fsaa)).get();
++#else
+   // Create the render texture
+   this->renderTexture = (Ogre::TextureManager::getSingleton().createManual(
+       _textureName,
+@@ -1346,6 +1361,7 @@ void Camera::CreateRenderTexture(const std::string &_textureName)
+       0,
+       false,
+       fsaa)).getPointer();
++#endif
+ 
+   this->SetRenderTarget(this->renderTexture->getBuffer()->getRenderTarget());
+ 
+diff --git a/gazebo/rendering/DepthCamera.cc b/gazebo/rendering/DepthCamera.cc
+index 40d6bc6..51bfada 100644
+--- a/gazebo/rendering/DepthCamera.cc
++++ b/gazebo/rendering/DepthCamera.cc
+@@ -94,6 +94,15 @@ void DepthCamera::CreateDepthTexture(const std::string &_textureName)
+   // Create the depth buffer
+   std::string depthMaterialName = this->Name() + "_RttMat_Camera_Depth";
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  this->depthTexture = Ogre::TextureManager::getSingleton().createManual(
++      _textureName,
++      Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
++      Ogre::TEX_TYPE_2D,
++      this->ImageWidth(), this->ImageHeight(), 0,
++      Ogre::PF_FLOAT32_R,
++      Ogre::TU_RENDERTARGET);
++#else
+   this->depthTexture = Ogre::TextureManager::getSingleton().createManual(
+       _textureName,
+       Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+@@ -101,6 +110,7 @@ void DepthCamera::CreateDepthTexture(const std::string &_textureName)
+       this->ImageWidth(), this->ImageHeight(), 0,
+       Ogre::PF_FLOAT32_R,
+       Ogre::TU_RENDERTARGET).getPointer();
++#endif
+ 
+   this->depthTarget = this->depthTexture->getBuffer()->getRenderTarget();
+   this->depthTarget->setAutoUpdated(false);
+@@ -130,6 +140,16 @@ void DepthCamera::CreateDepthTexture(const std::string &_textureName)
+ 
+   if (this->dataPtr->outputPoints)
+   {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    this->dataPtr->pcdTexture =
++      Ogre::TextureManager::getSingleton().createManual(
++        _textureName + "_pcd",
++        "General",
++        Ogre::TEX_TYPE_2D,
++        this->ImageWidth(), this->ImageHeight(), 0,
++        Ogre::PF_FLOAT32_RGBA,
++        Ogre::TU_RENDERTARGET);
++#else
+     this->dataPtr->pcdTexture =
+         Ogre::TextureManager::getSingleton().createManual(
+         _textureName + "_pcd",
+@@ -138,7 +158,7 @@ void DepthCamera::CreateDepthTexture(const std::string &_textureName)
+         this->ImageWidth(), this->ImageHeight(), 0,
+         Ogre::PF_FLOAT32_RGBA,
+         Ogre::TU_RENDERTARGET).getPointer();
+-
++#endif
+     this->dataPtr->pcdTarget =
+         this->dataPtr->pcdTexture->getBuffer()->getRenderTarget();
+     this->dataPtr->pcdTarget->setAutoUpdated(false);
+diff --git a/gazebo/rendering/DepthCamera.hh b/gazebo/rendering/DepthCamera.hh
+index fcb9c2e..548ca9d 100644
+--- a/gazebo/rendering/DepthCamera.hh
++++ b/gazebo/rendering/DepthCamera.hh
+@@ -114,8 +114,11 @@ namespace gazebo
+                                        const std::string &_matName);
+ 
+       /// \brief Pointer to the depth texture
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      protected: std::shared_ptr<Ogre::Texture> depthTexture;
++#else
+       protected: Ogre::Texture *depthTexture;
+-
++#endif
+       /// \brief Pointer to the depth target
+       protected: Ogre::RenderTarget *depthTarget;
+ 
+diff --git a/gazebo/rendering/DepthCameraPrivate.hh b/gazebo/rendering/DepthCameraPrivate.hh
+index 89c7784..505a0d4 100644
+--- a/gazebo/rendering/DepthCameraPrivate.hh
++++ b/gazebo/rendering/DepthCameraPrivate.hh
+@@ -59,8 +59,11 @@ namespace gazebo
+       public: Ogre::Material *pcdMaterial;
+ 
+       /// \brief Point cloud texture
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      public: std::shared_ptr<Ogre::Texture> pcdTexture;
++#else
+       public: Ogre::Texture *pcdTexture;
+-
++#endif
+       /// \brief Point cloud texture
+       public: Ogre::RenderTarget *pcdTarget;
+ 
+diff --git a/gazebo/rendering/Distortion.cc b/gazebo/rendering/Distortion.cc
+index 70abe8f..6e06af6 100644
+--- a/gazebo/rendering/Distortion.cc
++++ b/gazebo/rendering/Distortion.cc
+@@ -336,8 +336,13 @@ void Distortion::SetCamera(CameraPtr _camera)
+ //////////////////////////////////////////////////
+ void Distortion::CalculateAndApplyDistortionScale()
+ {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  if (!this->dataPtr->distortionMaterial)
++    return;
++#else
+   if (this->dataPtr->distortionMaterial.isNull())
+     return;
++#endif
+ 
+   // Scale up image if cropping enabled and valid
+   if (this->dataPtr->distortionCrop && this->dataPtr->k1 < 0)
+diff --git a/gazebo/rendering/GpuLaser.cc b/gazebo/rendering/GpuLaser.cc
+index 96f9392..6d6bcaf 100644
+--- a/gazebo/rendering/GpuLaser.cc
++++ b/gazebo/rendering/GpuLaser.cc
+@@ -155,12 +155,19 @@ void GpuLaser::CreateLaserTexture(const std::string &_textureName)
+   {
+     std::stringstream texName;
+     texName << _textureName << "first_pass_" << i;
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    this->dataPtr->firstPassTextures[i] =
++      Ogre::TextureManager::getSingleton().createManual(
++      texName.str(), "General", Ogre::TEX_TYPE_2D,
++      this->ImageWidth(), this->ImageHeight(), 0,
++      Ogre::PF_FLOAT32_RGB, Ogre::TU_RENDERTARGET);
++#else
+     this->dataPtr->firstPassTextures[i] =
+       Ogre::TextureManager::getSingleton().createManual(
+       texName.str(), "General", Ogre::TEX_TYPE_2D,
+       this->ImageWidth(), this->ImageHeight(), 0,
+       Ogre::PF_FLOAT32_RGB, Ogre::TU_RENDERTARGET).getPointer();
+-
++#endif
+     this->Set1stPassTarget(
+         this->dataPtr->firstPassTextures[i]->getBuffer()->getRenderTarget(), i);
+ 
+@@ -173,7 +180,17 @@ void GpuLaser::CreateLaserTexture(const std::string &_textureName)
+   this->dataPtr->matFirstPass->load();
+   this->dataPtr->matFirstPass->setCullingMode(Ogre::CULL_NONE);
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
+   this->dataPtr->secondPassTexture =
++      Ogre::TextureManager::getSingleton().createManual(
++      _textureName + "second_pass",
++      "General",
++      Ogre::TEX_TYPE_2D,
++      this->dataPtr->w2nd, this->dataPtr->h2nd, 0,
++      Ogre::PF_FLOAT32_RGB,
++      Ogre::TU_RENDERTARGET);
++#else
++    this->dataPtr->secondPassTexture =
+       Ogre::TextureManager::getSingleton().createManual(
+       _textureName + "second_pass",
+       "General",
+@@ -181,7 +198,7 @@ void GpuLaser::CreateLaserTexture(const std::string &_textureName)
+       this->dataPtr->w2nd, this->dataPtr->h2nd, 0,
+       Ogre::PF_FLOAT32_RGB,
+       Ogre::TU_RENDERTARGET).getPointer();
+-
++#endif
+   this->Set2ndPassTarget(
+       this->dataPtr->secondPassTexture->getBuffer()->getRenderTarget());
+ 
+diff --git a/gazebo/rendering/GpuLaserPrivate.hh b/gazebo/rendering/GpuLaserPrivate.hh
+index 5c2e70c..27c3f6a 100644
+--- a/gazebo/rendering/GpuLaserPrivate.hh
++++ b/gazebo/rendering/GpuLaserPrivate.hh
+@@ -71,12 +71,19 @@ namespace gazebo
+       /// \brief Pointer to Ogre material for the sencod rendering pass.
+       public: Ogre::Material *matSecondPass;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      /// \brief An array of first pass textures.
++      public: std::shared_ptr<Ogre::Texture> firstPassTextures[3];
++
++      /// \brief Second pass texture.
++      public: std::shared_ptr<Ogre::Texture> secondPassTexture;
++#else
+       /// \brief An array of first pass textures.
+       public: Ogre::Texture *firstPassTextures[3];
+ 
+       /// \brief Second pass texture.
+       public: Ogre::Texture *secondPassTexture;
+-
++#endif
+       /// \brief First pass render targets.
+       public: Ogre::RenderTarget *firstPassTargets[3];
+ 
+diff --git a/gazebo/rendering/Heightmap.cc b/gazebo/rendering/Heightmap.cc
+index f06413d..b0440b5 100644
+--- a/gazebo/rendering/Heightmap.cc
++++ b/gazebo/rendering/Heightmap.cc
+@@ -50,6 +50,22 @@
+ #include "gazebo/rendering/Heightmap.hh"
+ #include "gazebo/rendering/HeightmapPrivate.hh"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ using namespace gazebo;
+ using namespace rendering;
+ 
+@@ -1225,13 +1241,25 @@ void Heightmap::CreateMaterial()
+ {
+   if (!this->dataPtr->materialName.empty())
+   {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    auto terrainMaterial = std::make_shared<TerrainMaterial>(
++      this->dataPtr->materialName);
++    if (this->dataPtr->splitTerrain)
++      terrainMaterial->setGridSize(this->dataPtr->numTerrainSubdivisions);
++
+     // init custom material generator
+-    Ogre::TerrainMaterialGeneratorPtr terrainMaterialGenerator;
++    auto terrainMaterialGenerator =
++      std::dynamic_pointer_cast<Ogre::TerrainMaterialGenerator>(terrainMaterial);
++#else
+     TerrainMaterial *terrainMaterial = OGRE_NEW TerrainMaterial(
+         this->dataPtr->materialName);
+     if (this->dataPtr->splitTerrain)
+       terrainMaterial->setGridSize(this->dataPtr->numTerrainSubdivisions);
++
++    // init custom material generator
++    Ogre::TerrainMaterialGeneratorPtr terrainMaterialGenerator;
+     terrainMaterialGenerator.bind(terrainMaterial);
++#endif
+     this->dataPtr->terrainGlobals->setDefaultMaterialGenerator(
+         terrainMaterialGenerator);
+   }
+@@ -1240,11 +1268,14 @@ void Heightmap::CreateMaterial()
+     // use default material
+     // RTSS PSSM shadows compatible terrain material
+     if (!this->dataPtr->gzMatGen)
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      this->dataPtr->gzMatGen = std::make_shared<GzTerrainMatGen>();
++    auto ptr = std::dynamic_pointer_cast<Ogre::TerrainMaterialGenerator>(this->dataPtr->gzMatGen);
++#else
+       this->dataPtr->gzMatGen = new GzTerrainMatGen();
+-
+     Ogre::TerrainMaterialGeneratorPtr ptr = Ogre::TerrainMaterialGeneratorPtr();
+     ptr.bind(this->dataPtr->gzMatGen);
+-
++#endif
+     this->dataPtr->terrainGlobals->setDefaultMaterialGenerator(ptr);
+ 
+     this->SetupShadows(true);
+@@ -1475,7 +1506,7 @@ Ogre::MaterialPtr GzTerrainMatGen::SM2Profile::generate(
+   // re-use old material if exists
+   Ogre::MaterialPtr mat = _terrain->_getMaterial();
+ 
+-  if (mat.isNull())
++  if (IS_NULL(mat))
+   {
+     Ogre::MaterialManager &matMgr = Ogre::MaterialManager::getSingleton();
+ 
+@@ -1484,7 +1515,7 @@ Ogre::MaterialPtr GzTerrainMatGen::SM2Profile::generate(
+     const Ogre::String &matName = _terrain->getMaterialName();
+     mat = matMgr.getByName(matName);
+ 
+-    if (mat.isNull())
++    if (IS_NULL(mat))
+     {
+       mat = matMgr.create(matName,
+           Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+@@ -1536,7 +1567,7 @@ Ogre::MaterialPtr GzTerrainMatGen::SM2Profile::generateForCompositeMap(
+   // re-use old material if exists
+   Ogre::MaterialPtr mat = _terrain->_getCompositeMapMaterial();
+ 
+-  if (mat.isNull())
++  if (IS_NULL(mat))
+   {
+     Ogre::MaterialManager &matMgr = Ogre::MaterialManager::getSingleton();
+ 
+@@ -1546,7 +1577,7 @@ Ogre::MaterialPtr GzTerrainMatGen::SM2Profile::generateForCompositeMap(
+ 
+     mat = matMgr.getByName(matName);
+ 
+-    if (mat.isNull())
++    if (IS_NULL(mat))
+     {
+       mat = matMgr.create(matName,
+           Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+@@ -3247,7 +3278,7 @@ Ogre::MaterialPtr TerrainMaterial::Profile::generate(
+ 
+   Ogre::MaterialPtr mat =
+       Ogre::MaterialManager::getSingleton().getByName(matName);
+-  if (!mat.isNull())
++  if (!IS_NULL(mat))
+       Ogre::MaterialManager::getSingleton().remove(matName);
+ 
+   TerrainMaterial *parent =
+@@ -3282,7 +3313,7 @@ Ogre::MaterialPtr TerrainMaterial::Profile::generate(
+ 
+       Ogre::GpuProgramParametersSharedPtr params =
+           pass->getFragmentProgramParameters();
+-      if (params.isNull())
++      if (IS_NULL(params))
+         continue;
+ 
+       // set up shadow split points in a way that is consistent with the
+diff --git a/gazebo/rendering/HeightmapPrivate.hh b/gazebo/rendering/HeightmapPrivate.hh
+index 47edb8b..1e27e58 100644
+--- a/gazebo/rendering/HeightmapPrivate.hh
++++ b/gazebo/rendering/HeightmapPrivate.hh
+@@ -406,8 +406,11 @@ namespace gazebo
+       public: std::vector<float> heights;
+ 
+       /// \brief Pointer to the terrain material generator.
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      public: std::shared_ptr<GzTerrainMatGen> gzMatGen = nullptr;
++#else
+       public: GzTerrainMatGen *gzMatGen = nullptr;
+-
++#endif
+       /// \brief A page provider is needed to use the paging system.
+       public: DummyPageProvider dummyPageProvider;
+ 
+diff --git a/gazebo/rendering/LensFlare.cc b/gazebo/rendering/LensFlare.cc
+index 8d380f2..72432fb 100644
+--- a/gazebo/rendering/LensFlare.cc
++++ b/gazebo/rendering/LensFlare.cc
+@@ -29,6 +29,22 @@
+ #include "gazebo/rendering/LensFlare.hh"
+ #include "gazebo/rendering/WideAngleCamera.hh"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ namespace gazebo
+ {
+   namespace rendering
+@@ -79,7 +95,7 @@ namespace gazebo
+       public: virtual void notifyMaterialRender(unsigned int _passId,
+                                                 Ogre::MaterialPtr &_mat)
+       {
+-        GZ_ASSERT(!_mat.isNull(), "Null OGRE material");
++        GZ_ASSERT(!IS_NULL(_mat), "Null OGRE material");
+         // These calls are setting parameters that are declared in two places:
+         // 1. media/materials/scripts/gazebo.material, in
+         //    fragment_program Gazebo/CameraLensFlareFS
+@@ -90,7 +106,7 @@ namespace gazebo
+         GZ_ASSERT(pass, "Null OGRE material pass");
+         Ogre::GpuProgramParametersSharedPtr params =
+             pass->getFragmentProgramParameters();
+-        GZ_ASSERT(!params.isNull(), "Null OGRE material GPU parameters");
++        GZ_ASSERT(!IS_NULL(params), "Null OGRE material GPU parameters");
+ 
+         // used for animating flare
+         params->setNamedConstant("time", static_cast<Ogre::Real>(
+diff --git a/gazebo/rendering/Material.cc b/gazebo/rendering/Material.cc
+index ef472c7..fd6306e 100644
+--- a/gazebo/rendering/Material.cc
++++ b/gazebo/rendering/Material.cc
+@@ -24,6 +24,14 @@
+ using namespace gazebo;
+ using namespace rendering;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
+ //////////////////////////////////////////////////
+ void Material::CreateMaterials()
+ {
+@@ -226,7 +234,7 @@ bool Material::MaterialAsColor(const std::string &_materialName,
+     matPtr = Ogre::MaterialManager::getSingleton().getByName(_materialName,
+         "General");
+ 
+-    if (matPtr.isNull())
++    if (IS_NULL(matPtr))
+       return false;
+ 
+     Ogre::Technique *technique = matPtr->getTechnique(0);
+diff --git a/gazebo/rendering/MovableText.cc b/gazebo/rendering/MovableText.cc
+index 3bf7e74..ea13c00 100644
+--- a/gazebo/rendering/MovableText.cc
++++ b/gazebo/rendering/MovableText.cc
+@@ -41,6 +41,22 @@
+ using namespace gazebo;
+ using namespace rendering;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ /// \brief Private data for the MovableText class.
+ class gazebo::rendering::MovableTextPrivate
+ {
+@@ -195,27 +211,34 @@ void MovableText::SetFontName(const std::string &_newFontName)
+   }
+ 
+   if (this->dataPtr->fontName != _newFontName ||
+-      this->dataPtr->material.isNull() || !this->dataPtr->font)
++      IS_NULL(this->dataPtr->material) || !this->dataPtr->font)
+   {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    auto font = Ogre::FontManager::getSingleton().getByName(_newFontName);
++#else
+     auto font = (Ogre::Font*)Ogre::FontManager::getSingleton()
+-        .getByName(_newFontName).getPointer();
+-
++      .getByName(_newFontName).getPointer();
++#endif
+     if (!font)
+     {
+       throw Ogre::Exception(Ogre::Exception::ERR_ITEM_NOT_FOUND,
+                             "Could not find font " + _newFontName,
+                             "MovableText::setFontName");
+     }
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    this->dataPtr->font = font.get();
++#else
+     this->dataPtr->font = font;
++#endif
+     this->dataPtr->fontName = _newFontName;
+ 
+     this->dataPtr->font->load();
+ 
+-    if (!this->dataPtr->material.isNull())
++    if (!IS_NULL(this->dataPtr->material))
+     {
+       Ogre::MaterialManager::getSingletonPtr()->remove(
+           this->dataPtr->material->getName());
+-      this->dataPtr->material.setNull();
++      SET_NULL(this->dataPtr->material);
+     }
+ 
+     this->dataPtr->material = this->dataPtr->font->getMaterial()->clone(
+@@ -406,7 +429,7 @@ float MovableText::Baseline() const
+ void MovableText::SetShowOnTop(bool show)
+ {
+   std::lock_guard<std::recursive_mutex> lock(this->dataPtr->mutex);
+-  if (this->dataPtr->onTop != show && !this->dataPtr->material.isNull())
++  if (this->dataPtr->onTop != show && !IS_NULL(this->dataPtr->material))
+   {
+     this->dataPtr->onTop = show;
+ 
+@@ -455,7 +478,7 @@ void MovableText::SetupGeometry()
+   std::lock_guard<std::recursive_mutex> lock(this->dataPtr->mutex);
+ 
+   GZ_ASSERT(this->dataPtr->font, "font class member is null");
+-  GZ_ASSERT(!this->dataPtr->material.isNull(), "material class member is null");
++  GZ_ASSERT(!IS_NULL(this->dataPtr->material), "material class member is null");
+ 
+   Ogre::VertexDeclaration *decl = nullptr;
+   Ogre::VertexBufferBinding *bind = nullptr;
+@@ -797,7 +820,7 @@ void MovableText::UpdateColors()
+   unsigned int i;
+ 
+   GZ_ASSERT(this->dataPtr->font, "font class member is null");
+-  GZ_ASSERT(!this->dataPtr->material.isNull(), "material class member is null");
++  GZ_ASSERT(!IS_NULL(this->dataPtr->material), "material class member is null");
+ 
+   // Convert to system-specific
+   Ogre::ColourValue cv(this->dataPtr->color.R(), this->dataPtr->color.G(),
+@@ -894,7 +917,7 @@ void MovableText::getRenderOperation(Ogre::RenderOperation & op)
+ const Ogre::MaterialPtr &MovableText::getMaterial(void) const
+ {
+   std::lock_guard<std::recursive_mutex> lock(this->dataPtr->mutex);
+-  GZ_ASSERT(!this->dataPtr->material.isNull(),
++  GZ_ASSERT(!IS_NULL(this->dataPtr->material),
+       "material class member is null");
+   return this->dataPtr->material;
+ }
+diff --git a/gazebo/rendering/RTShaderSystem.cc b/gazebo/rendering/RTShaderSystem.cc
+index 3f034df..7dcddc5 100644
+--- a/gazebo/rendering/RTShaderSystem.cc
++++ b/gazebo/rendering/RTShaderSystem.cc
+@@ -38,7 +38,6 @@
+ 
+ #endif /* HAVE_OPENGL */
+ 
+-
+ #include "gazebo/common/Console.hh"
+ #include "gazebo/common/Exception.hh"
+ #include "gazebo/common/SystemPaths.hh"
+@@ -54,13 +53,29 @@
+ using namespace gazebo;
+ using namespace rendering;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ //////////////////////////////////////////////////
+ RTShaderSystem::RTShaderSystem()
+   : dataPtr(new RTShaderSystemPrivate)
+ {
+   this->dataPtr->initialized = false;
+   this->dataPtr->shadowsApplied = false;
+-  this->dataPtr->pssmSetup.setNull();
++  SET_NULL(this->dataPtr->pssmSetup);
+   this->dataPtr->updateShaders = false;
+ }
+ 
+@@ -156,7 +171,7 @@ void RTShaderSystem::Fini()
+     this->dataPtr->shaderGenerator = NULL;
+   }
+ 
+-  this->dataPtr->pssmSetup.setNull();
++  SET_NULL(this->dataPtr->pssmSetup);
+   this->dataPtr->scenes.clear();
+   this->dataPtr->shadowsApplied = false;
+   this->dataPtr->initialized = false;
+@@ -561,7 +576,7 @@ void RTShaderSystem::ApplyShadows(ScenePtr _scene)
+   // pssmCasterPass->setFog(true);
+ 
+   // shadow camera setup
+-  if (this->dataPtr->pssmSetup.isNull())
++  if (IS_NULL(this->dataPtr->pssmSetup))
+   {
+     this->dataPtr->pssmSetup =
+         Ogre::ShadowCameraSetupPtr(new CustomPSSMShadowCameraSetup());
+diff --git a/gazebo/rendering/RenderEngine.cc b/gazebo/rendering/RenderEngine.cc
+index c0651e6..83e72e3 100644
+--- a/gazebo/rendering/RenderEngine.cc
++++ b/gazebo/rendering/RenderEngine.cc
+@@ -57,6 +57,14 @@
+ #include "gazebo/rendering/RenderEngine.hh"
+ #include "gazebo/rendering/RenderEnginePrivate.hh"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
+ using namespace gazebo;
+ using namespace rendering;
+ 
+@@ -519,7 +527,7 @@ void RenderEngine::AddResourcePath(const std::string &_uri)
+                 Ogre::MaterialManager::getSingleton().getByName(
+                     fullPath.string());
+ 
+-              if (!matPtr.isNull())
++              if (!IS_NULL(matPtr))
+               {
+                 // is this necessary to do here? Someday try it without
+                 matPtr->compile();
+diff --git a/gazebo/rendering/Visual.cc b/gazebo/rendering/Visual.cc
+index 8ab8650..0cb9be3 100644
+--- a/gazebo/rendering/Visual.cc
++++ b/gazebo/rendering/Visual.cc
+@@ -53,6 +53,22 @@
+ using namespace gazebo;
+ using namespace rendering;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ // Note: The value of ignition::math::MAX_UI32 is reserved as a flag.
+ uint32_t VisualPrivate::visualIdCount = ignition::math::MAX_UI32 - 1;
+ 
+@@ -642,7 +658,7 @@ void Visual::AttachObject(Ogre::MovableObject *_obj)
+       {
+         Ogre::SubEntity *subEntity = entity->getSubEntity(j);
+         Ogre::MaterialPtr material = subEntity->getMaterial();
+-        if (!material.isNull() &&
++        if (!IS_NULL(material) &&
+             material->getName().find("_MATERIAL_") == std::string::npos)
+         {
+           std::string newMaterialName;
+@@ -772,7 +788,7 @@ Ogre::MovableObject *Visual::AttachMesh(const std::string &_meshName,
+     {
+       Ogre::MeshPtr ogreMesh = Ogre::MeshManager::getSingleton().getByName(
+         _meshName);
+-      if (!ogreMesh.isNull())
++      if (!IS_NULL(ogreMesh))
+       {
+         try
+         {
+@@ -937,7 +953,7 @@ void Visual::SetLighting(bool _lighting)
+         for (unsigned j = 0; j < entity->getNumSubEntities(); ++j)
+         {
+           Ogre::MaterialPtr mat = entity->getSubEntity(j)->getMaterial();
+-          if (!mat.isNull())
++          if (!IS_NULL(mat))
+           {
+             mat->setLightingEnabled(this->dataPtr->lighting);
+           }
+@@ -960,7 +976,7 @@ void Visual::SetLighting(bool _lighting)
+           for (unsigned k = 0; k < entity->getNumSubEntities(); ++k)
+           {
+             Ogre::MaterialPtr mat = entity->getSubEntity(k)->getMaterial();
+-            if (!mat.isNull())
++            if (!IS_NULL(mat))
+             {
+               mat->setLightingEnabled(this->dataPtr->lighting);
+             }
+@@ -1038,7 +1054,7 @@ void Visual::SetMaterial(const std::string &_materialName, bool _unique,
+       return;
+     }
+ 
+-    if (origMaterial.isNull())
++    if (IS_NULL(origMaterial))
+     {
+       gzwarn << "Unable to get Material[" << _materialName << "] for Geometry["
+         << this->dataPtr->sceneNode->getName()
+@@ -1196,7 +1212,7 @@ void Visual::SetMaterialShaderParam(const std::string &_paramName,
+   // loop through material techniques and passes to find the param
+   Ogre::MaterialPtr mat = Ogre::MaterialManager::getSingleton().getByName(
+       this->dataPtr->myMaterialName);
+-  if (mat.isNull())
++  if (IS_NULL(mat))
+   {
+     gzerr << "Failed to find material: '" << this->dataPtr->myMaterialName
+           << std::endl;
+@@ -1624,7 +1640,7 @@ void Visual::SetWireframe(bool _show)
+     {
+       Ogre::SubEntity *subEntity = entity->getSubEntity(j);
+       Ogre::MaterialPtr material = subEntity->getMaterial();
+-      if (material.isNull())
++      if (IS_NULL(material))
+         continue;
+ 
+       unsigned int techniqueCount, passCount;
+@@ -1701,7 +1717,7 @@ void Visual::SetTransparencyInnerLoop(Ogre::SceneNode *_sceneNode)
+ 
+         // get original material technique
+         Ogre::Technique *origTechnique = nullptr;
+-        if (!origMat.isNull()
++        if (!IS_NULL(origMat)
+             && (techniqueCount < origMat->getNumTechniques()))
+         {
+           origTechnique = origMat->getTechnique(techniqueCount);
+diff --git a/gazebo/rendering/WideAngleCamera.cc b/gazebo/rendering/WideAngleCamera.cc
+index ffd517d..c4674c2 100644
+--- a/gazebo/rendering/WideAngleCamera.cc
++++ b/gazebo/rendering/WideAngleCamera.cc
+@@ -651,7 +651,21 @@ void WideAngleCamera::CreateEnvRenderTexture(const std::string &_textureName)
+   auto const it = std::find(fsaaLevels.begin(), fsaaLevels.end(), targetFSAA);
+   if (it != fsaaLevels.end())
+     fsaa = targetFSAA;
+-
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  this->dataPtr->envCubeMapTexture =
++      Ogre::TextureManager::getSingleton().createManual(
++          this->scopedUniqueName+"::"+_textureName,
++          "General",
++          Ogre::TEX_TYPE_CUBE_MAP,
++          this->dataPtr->envTextureSize,
++          this->dataPtr->envTextureSize,
++          0,
++          static_cast<Ogre::PixelFormat>(this->imageFormat),
++          Ogre::TU_RENDERTARGET,
++          0,
++          false,
++          fsaa);
++#else
+   this->dataPtr->envCubeMapTexture =
+       Ogre::TextureManager::getSingleton().createManual(
+           this->scopedUniqueName+"::"+_textureName,
+@@ -665,7 +679,7 @@ void WideAngleCamera::CreateEnvRenderTexture(const std::string &_textureName)
+           0,
+           false,
+           fsaa).getPointer();
+-
++#endif
+   for (int i = 0; i < 6; ++i)
+   {
+     Ogre::RenderTarget *rtt;
+@@ -711,9 +725,12 @@ void WideAngleCamera::RenderImpl()
+ void WideAngleCamera::notifyMaterialRender(Ogre::uint32 /*_pass_id*/,
+                                            Ogre::MaterialPtr &_material)
+ {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  if (!_material)
++#else
+   if (_material.isNull())
++#endif
+     return;
+-
+   Ogre::Technique *pTechnique = _material->getBestTechnique();
+   if (!pTechnique)
+     return;
+diff --git a/gazebo/rendering/WideAngleCameraPrivate.hh b/gazebo/rendering/WideAngleCameraPrivate.hh
+index cbf21c4..89d7d7b 100644
+--- a/gazebo/rendering/WideAngleCameraPrivate.hh
++++ b/gazebo/rendering/WideAngleCameraPrivate.hh
+@@ -60,7 +60,11 @@ namespace gazebo
+       public: Ogre::Viewport *envViewports[6];
+ 
+       /// \brief A single cube map texture
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      public: std::shared_ptr<Ogre::Texture> envCubeMapTexture;
++#else
+       public: Ogre::Texture *envCubeMapTexture;
++#endif
+ 
+       /// \brief Pointer to material, used for second rendering pass
+       public: Ogre::MaterialPtr compMat;
+diff --git a/gazebo/rendering/deferred_shading/AmbientLight.hh b/gazebo/rendering/deferred_shading/AmbientLight.hh
+index 3ecc74d..55d9f13 100644
+--- a/gazebo/rendering/deferred_shading/AmbientLight.hh
++++ b/gazebo/rendering/deferred_shading/AmbientLight.hh
+@@ -60,7 +60,11 @@ namespace gazebo
+         this->matPtr = Ogre::MaterialManager::getSingleton().getByName(
+             this->GetMaterialPrefix() + "/AmbientLight");
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++        if (!this->matPtr)
++#else
+         if (this->matPtr.isNull())
++#endif
+           gzthrow("Is Null");
+ 
+         this->matPtr->load();
+diff --git a/gazebo/rendering/deferred_shading/DeferredLightCP.hh b/gazebo/rendering/deferred_shading/DeferredLightCP.hh
+index ed54e3e..113abc4 100644
+--- a/gazebo/rendering/deferred_shading/DeferredLightCP.hh
++++ b/gazebo/rendering/deferred_shading/DeferredLightCP.hh
+@@ -130,7 +130,11 @@ namespace gazebo
+ 
+             Ogre::ShadowCameraSetupPtr cameraSetup =
+               dLight->GetParentLight()->getCustomShadowCameraSetup();
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++            if (cameraSetup)
++#else
+             if (cameraSetup.isNull())
++#endif
+             {
+               cameraSetup = _sm->getShadowCameraSetup();
+             }
+diff --git a/gazebo/rendering/deferred_shading/LightMaterialGenerator.hh b/gazebo/rendering/deferred_shading/LightMaterialGenerator.hh
+index ad4d2a7..9aaa8db 100644
+--- a/gazebo/rendering/deferred_shading/LightMaterialGenerator.hh
++++ b/gazebo/rendering/deferred_shading/LightMaterialGenerator.hh
+@@ -101,8 +101,11 @@ namespace gazebo
+         Ogre::GpuProgramPtr ptr =
+           Ogre::HighLevelGpuProgramManager::getSingleton().getByName(
+               programName);
+-
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++        if (!ptr)
++#else
+         if (ptr.isNull())
++#endif
+           gzthrow("Null pointer");
+ 
+         return ptr;
+@@ -164,7 +167,11 @@ namespace gazebo
+                 "deferred_rendering/deferred_shading/light_material_ps.glsl",
+                 Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++          if (!ptrMasterSource)
++#else
+           if (ptrMasterSource.isNull())
++#endif
+             gzthrow("Null Pointer\n");
+ 
+           this->masterSource = ptrMasterSource->getAsString();
+@@ -337,7 +344,11 @@ namespace gazebo
+       protected: void SetUpBaseParameters(
+                      const Ogre::GpuProgramParametersSharedPtr &_params)
+       {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++        if (!_params)
++#else
+         if (_params.isNull())
++#endif
+           gzthrow("Params is null");
+ 
+         struct AutoParamPair
+diff --git a/gazebo/rendering/selection_buffer/MaterialSwitcher.cc b/gazebo/rendering/selection_buffer/MaterialSwitcher.cc
+index b10227d..f3e26ff 100644
+--- a/gazebo/rendering/selection_buffer/MaterialSwitcher.cc
++++ b/gazebo/rendering/selection_buffer/MaterialSwitcher.cc
+@@ -73,7 +73,9 @@ Ogre::Technique *MaterialSwitcher::handleSchemeNotFound(
+                 Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+ 
+           // OGRE 1.9 changes the shared pointer definition
+-          #if (OGRE_VERSION < ((1 << 16) | (9 << 8) | 0))
++          #if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++          auto plainMaterial = std::dynamic_pointer_cast<Ogre::Material>(res);
++          #elif OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 8 && OGRE_VERSION_MINOR < 10
+           Ogre::MaterialPtr plainMaterial = static_cast<Ogre::MaterialPtr>(res);
+           #else
+           Ogre::MaterialPtr plainMaterial = res.staticCast<Ogre::Material>();
+diff --git a/gazebo/rendering/selection_buffer/SelectionBuffer.cc b/gazebo/rendering/selection_buffer/SelectionBuffer.cc
+index 61fda1a..f239673 100644
+--- a/gazebo/rendering/selection_buffer/SelectionBuffer.cc
++++ b/gazebo/rendering/selection_buffer/SelectionBuffer.cc
+@@ -28,6 +28,14 @@
+ using namespace gazebo;
+ using namespace rendering;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
+ namespace gazebo
+ {
+   namespace rendering
+@@ -131,7 +139,7 @@ void SelectionBuffer::Update()
+ /////////////////////////////////////////////////
+ void SelectionBuffer::DeleteRTTBuffer()
+ {
+-  if (!this->dataPtr->texture.isNull() && this->dataPtr->texture->isLoaded())
++  if (!IS_NULL(this->dataPtr->texture) && this->dataPtr->texture->isLoaded())
+     this->dataPtr->texture->unload();
+   if (this->dataPtr->buffer)
+   {
+diff --git a/gazebo/rendering/skyx/include/GPUManager.h b/gazebo/rendering/skyx/include/GPUManager.h
+index 108e310..646a825 100644
+--- a/gazebo/rendering/skyx/include/GPUManager.h
++++ b/gazebo/rendering/skyx/include/GPUManager.h
+@@ -131,7 +131,11 @@ namespace SkyX
+           Ogre::MaterialManager::getSingleton().getByName(
+             getSkydomeMaterialName()));
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      if (!mSkydomeMaterial)
++#else
+       if (mSkydomeMaterial.isNull())
++#endif
+       {
+         SkyXLOG("Error in SkyX::GPUManager: '" +
+             getSkydomeMaterialName() + "' material not found");
+diff --git a/gazebo/rendering/skyx/src/GPUManager.cpp b/gazebo/rendering/skyx/src/GPUManager.cpp
+index 6bee99f..d9424ef 100644
+--- a/gazebo/rendering/skyx/src/GPUManager.cpp
++++ b/gazebo/rendering/skyx/src/GPUManager.cpp
+@@ -400,7 +400,11 @@ namespace SkyX
+   {
+     Ogre::TexturePtr tex = Ogre::TextureManager::getSingleton().getByName(n);
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    if (!tex)
++#else
+     if (!tex.isNull())
++#endif
+     {
+       if (g)
+       {
+diff --git a/gazebo/rendering/skyx/src/MeshManager.cpp b/gazebo/rendering/skyx/src/MeshManager.cpp
+index b2eeded..22f25bb 100644
+--- a/gazebo/rendering/skyx/src/MeshManager.cpp
++++ b/gazebo/rendering/skyx/src/MeshManager.cpp
+@@ -67,11 +67,17 @@ namespace SkyX
+     Ogre::MeshManager::getSingleton().remove("SkyXMesh");
+     mSkyX->getSceneManager()->destroyEntity(mEntity);
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    mMesh = nullptr;
++    mVertexBuffer = nullptr;
++    mIndexBuffer = nullptr;
++#else
+     mMesh.setNull();
+-    mSubMesh = 0;
+-    mEntity = 0;
+     mVertexBuffer.setNull();
+     mIndexBuffer.setNull();
++#endif
++    mSubMesh = 0;
++    mEntity = 0;
+     mMaterialName = "_NULL_";
+ 
+     delete [] mVertices;
+diff --git a/gazebo/rendering/skyx/src/MoonManager.cpp b/gazebo/rendering/skyx/src/MoonManager.cpp
+index f9346fe..9b7f732 100644
+--- a/gazebo/rendering/skyx/src/MoonManager.cpp
++++ b/gazebo/rendering/skyx/src/MoonManager.cpp
+@@ -55,7 +55,11 @@ namespace SkyX
+     mMoonMaterial = static_cast<Ogre::MaterialPtr>(
+         Ogre::MaterialManager::getSingleton().getByName("SkyX_Moon"));
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    if (!mMoonMaterial)
++#else
+     if (mMoonMaterial.isNull())
++#endif
+     {
+       SkyXLOG("Error while creating SkyX::MoonManager, material not found");
+       return;
+@@ -95,8 +99,11 @@ namespace SkyX
+     mSkyX->getSceneManager()->destroyBillboardSet(mMoonBillboard);
+     mMoonBillboard = 0;
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    mMoonMaterial = nullptr;
++#else
+     mMoonMaterial.setNull();
+-
++#endif
+     mCreated = false;
+   }
+ 
+diff --git a/gazebo/rendering/skyx/src/VClouds/DataManager.cpp b/gazebo/rendering/skyx/src/VClouds/DataManager.cpp
+index 9f21227..ea4ccb7 100644
+--- a/gazebo/rendering/skyx/src/VClouds/DataManager.cpp
++++ b/gazebo/rendering/skyx/src/VClouds/DataManager.cpp
+@@ -46,7 +46,11 @@ namespace SkyX { namespace VClouds
+   {
+     for (int k = 0; k < 2; k++)
+     {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      mVolTextures[k] = nullptr;
++#else
+       mVolTextures[k].setNull();
++#endif
+     }
+   }
+ 
+@@ -65,7 +69,11 @@ namespace SkyX { namespace VClouds
+     for (int k = 0; k < 2; k++)
+     {
+       Ogre::TextureManager::getSingleton().remove(mVolTextures[k]->getName());
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++      mVolTextures[k] = nullptr;
++#else
+       mVolTextures[k].setNull();
++#endif
+     }
+ 
+     _delete3DCellArray(mCellsCurrent, mNx, mNy);
+diff --git a/gazebo/rendering/skyx/src/VClouds/GeometryBlock.cpp b/gazebo/rendering/skyx/src/VClouds/GeometryBlock.cpp
+index d414eeb..204bc2f 100644
+--- a/gazebo/rendering/skyx/src/VClouds/GeometryBlock.cpp
++++ b/gazebo/rendering/skyx/src/VClouds/GeometryBlock.cpp
+@@ -26,6 +26,14 @@ http://www.gnu.org/copyleft/lesser.txt.
+ 
+ #include "VClouds/VClouds.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ namespace SkyX { namespace VClouds
+ {
+   GeometryBlock::GeometryBlock(VClouds* vc,
+@@ -109,11 +117,11 @@ namespace SkyX { namespace VClouds
+     Ogre::MeshManager::getSingleton().remove(mMesh->getName());
+     mVClouds->getSceneManager()->destroyEntity(mEntity);
+ 
+-    mMesh.setNull();
++    SET_NULL(mMesh);
+     mSubMesh = 0;
+     mEntity = 0;
+-    mVertexBuffer.setNull();
+-    mIndexBuffer.setNull();
++    SET_NULL(mVertexBuffer);
++    SET_NULL(mIndexBuffer);
+ 
+     delete [] mVertices;
+ 
+diff --git a/gazebo/rendering/skyx/src/VClouds/LightningManager.cpp b/gazebo/rendering/skyx/src/VClouds/LightningManager.cpp
+index 11ae8cb..fec83bb 100644
+--- a/gazebo/rendering/skyx/src/VClouds/LightningManager.cpp
++++ b/gazebo/rendering/skyx/src/VClouds/LightningManager.cpp
+@@ -26,6 +26,22 @@ http://www.gnu.org/copyleft/lesser.txt.
+ 
+ #include "VClouds/VClouds.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ namespace SkyX { namespace VClouds
+ {
+   LightningManager::LightningManager(VClouds* vc)
+@@ -59,7 +75,7 @@ namespace SkyX { namespace VClouds
+     mLightningMaterial = static_cast<Ogre::MaterialPtr>(
+         Ogre::MaterialManager::getSingleton().getByName("SkyX_Lightning"));
+ 
+-    if (mLightningMaterial.isNull())
++    if (IS_NULL(mLightningMaterial))
+     {
+       SkyXLOG("Error while creating SkyX::VClouds::LightningManager,  "
+               "material not found");
+@@ -100,8 +116,8 @@ namespace SkyX { namespace VClouds
+ 
+     removeListeners();
+ 
+-    mVolCloudsLightningMaterial.setNull();
+-    mLightningMaterial.setNull();
++    SET_NULL(mVolCloudsLightningMaterial);
++    SET_NULL(mLightningMaterial);
+ 
+     mCreated = false;
+   }
+diff --git a/gazebo/rendering/skyx/src/VClouds/VClouds.cpp b/gazebo/rendering/skyx/src/VClouds/VClouds.cpp
+index e122bac..edcf0e3 100644
+--- a/gazebo/rendering/skyx/src/VClouds/VClouds.cpp
++++ b/gazebo/rendering/skyx/src/VClouds/VClouds.cpp
+@@ -26,6 +26,23 @@ http://www.gnu.org/copyleft/lesser.txt.
+ 
+ #include "SkyX.h"
+ 
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ namespace SkyX { namespace VClouds
+ {
+ VClouds::VClouds(Ogre::SceneManager *sm)
+@@ -71,7 +88,7 @@ void VClouds::create()
+       Ogre::MaterialManager::getSingleton().getByName(
+         "SkyX_VolClouds_Lightning"));
+ 
+-  if (mVolCloudsMaterial.isNull() || mVolCloudsLightningMaterial.isNull())
++  if (IS_NULL(mVolCloudsMaterial) || IS_NULL(mVolCloudsLightningMaterial))
+   {
+     SkyXLOG("Error while creating SkyX::VClouds::VClouds,"
+             "materials are not found");
+@@ -142,8 +159,8 @@ void VClouds::remove()
+   mCamera = 0;
+   mCamerasData.clear();
+ 
+-  mVolCloudsMaterial.setNull();
+-  mVolCloudsLightningMaterial.setNull();
++  SET_NULL(mVolCloudsMaterial);
++  SET_NULL(mVolCloudsLightningMaterial);
+ 
+   mCreated = false;
+ }
+diff --git a/gazebo/sensors/GaussianNoiseModel.cc b/gazebo/sensors/GaussianNoiseModel.cc
+index bcf8d64..e046918 100644
+--- a/gazebo/sensors/GaussianNoiseModel.cc
++++ b/gazebo/sensors/GaussianNoiseModel.cc
+@@ -29,6 +29,14 @@
+ #include "gazebo/rendering/Camera.hh"
+ #include "gazebo/sensors/GaussianNoiseModel.hh"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
+ namespace gazebo
+ {
+   // We'll create an instance of this class for each camera, to be used to
+@@ -46,7 +54,7 @@ namespace gazebo
+     public: virtual void notifyMaterialRender(unsigned int _passId,
+                                               Ogre::MaterialPtr &_mat)
+     {
+-      GZ_ASSERT(!_mat.isNull(), "Null OGRE material");
++      GZ_ASSERT(!IS_NULL(_mat), "Null OGRE material");
+       // modify material here (wont alter the base material!), called for
+       // every drawn geometry instance (i.e. compositor render_quad)
+ 
+@@ -66,7 +74,7 @@ namespace gazebo
+       GZ_ASSERT(pass, "Null OGRE material pass");
+       Ogre::GpuProgramParametersSharedPtr params =
+           pass->getFragmentProgramParameters();
+-      GZ_ASSERT(!params.isNull(), "Null OGRE material GPU parameters");
++      GZ_ASSERT(!IS_NULL(params), "Null OGRE material GPU parameters");
+ 
+       params->setNamedConstant("offsets", offsets);
+       params->setNamedConstant("mean", static_cast<Ogre::Real>(this->mean));
+diff --git a/plugins/AmbientOcclusionVisualPlugin.cc b/plugins/AmbientOcclusionVisualPlugin.cc
+index c63ffab..be1c4cd 100644
+--- a/plugins/AmbientOcclusionVisualPlugin.cc
++++ b/plugins/AmbientOcclusionVisualPlugin.cc
+@@ -24,6 +24,22 @@
+ 
+ #include "AmbientOcclusionVisualPlugin.hh"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x) \
++  (!(x))
++#else
++#define IS_NULL(x) \
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x) \
++  ((x) = nullptr)
++#else
++#define SET_NULL(x) \
++  ((x).setNull())
++#endif
++
+ namespace gazebo
+ {
+   /// \brief Helper class to assign the GBuffer material to compositors that
+@@ -35,7 +51,7 @@ namespace gazebo
+     {
+       this->gBufRefMat =
+           Ogre::MaterialManager::getSingleton().getByName("SSAO/GBuffer");
+-      if (this->gBufRefMat.isNull())
++      if (IS_NULL(this->gBufRefMat))
+       {
+         gzerr << "Unable to find 'SSAO/GBuffer' material, SSAO will not work"
+               << std::endl;
+@@ -45,7 +61,7 @@ namespace gazebo
+     /// \brief Destructor
+     public: ~SsaoGBufferSchemeHandler()
+     {
+-      this->gBufRefMat.setNull();
++      SET_NULL(this->gBufRefMat);
+     }
+ 
+     /// \brief Ogre callback for assigning the GBuffer material to compositors
+@@ -79,7 +95,7 @@ namespace gazebo
+       Ogre::Technique *gBufferTech = _originalMaterial->createTechnique();
+       gBufferTech->setSchemeName(_schemeName);
+       Ogre::Pass *gbufPass = gBufferTech->createPass();
+-      if (!this->gBufRefMat.isNull())
++      if (!IS_NULL(this->gBufRefMat))
+         *gbufPass = *this->gBufRefMat->getTechnique(0)->getPass(0);
+       return gBufferTech;
+     }
+-- 
+2.20.0
+

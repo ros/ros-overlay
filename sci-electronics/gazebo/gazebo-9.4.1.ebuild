@@ -62,6 +62,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-0002-Remove-distributed-tinyxml2.patch"
 	"${FILESDIR}/${P}-0003-Force-external-tinyxml2.patch"
 	"${FILESDIR}/${P}-0004-Remove-error-logging-in-favor-of-compilation.patch"
+        "${FILESDIR}/${P}-0005-Add-OGRE-1.10-support-for-Ogre-SharedPtr-which-is-no.patch"
 )
 
 src_configure() {
