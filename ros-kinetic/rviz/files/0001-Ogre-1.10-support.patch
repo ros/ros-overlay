@@ -1,0 +1,420 @@
+From 11220b34a105fefcc3caf246f694085449f9a6d7 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Thu, 13 Dec 2018 09:17:48 -0500
+Subject: [PATCH] Ogre 1.10 support:  * Fix setNull and isNull calls  * Store a
+ shared pointer if given  * Convert .bind to a std::dynamic_pointer_cast  *
+ Remove stack protection
+
+---
+ CMakeLists.txt                                |  2 +
+ src/rviz/default_plugin/map_display.cpp       | 41 +++++++++++++++----
+ .../markers/mesh_resource_marker.cpp          | 20 ++++++++-
+ src/rviz/image/ros_image_texture.cpp          |  6 ++-
+ src/rviz/ogre_helpers/movable_text.cpp        | 37 +++++++++++++----
+ src/rviz/ogre_helpers/movable_text.h          | 14 ++++++-
+ src/rviz/panel_dock_widget.cpp                | 10 ++++-
+ src/rviz/pluginlib_factory.h                  | 12 +++++-
+ src/rviz/scaled_image_widget.cpp              | 10 ++++-
+ src/rviz/selection/selection_manager.cpp      |  8 +++-
+ 10 files changed, 135 insertions(+), 25 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index da590a1..737492a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -100,6 +100,8 @@ find_package(OpenGL REQUIRED)
+ 
+ set(CMAKE_AUTOMOC ON)
+ set(CMAKE_INCLUDE_CURRENT_DIR ON)
++# NOTE(allenh1): This is needed for something
++set(CXXFLAGS "-fno-stack-protector ${CXX_FLAGS}")
+ 
+ option(UseQt5 "UseQt5" ON)
+ if (UseQt5)
+diff --git a/src/rviz/default_plugin/map_display.cpp b/src/rviz/default_plugin/map_display.cpp
+index 449042c..4146c47 100644
+--- a/src/rviz/default_plugin/map_display.cpp
++++ b/src/rviz/default_plugin/map_display.cpp
+@@ -57,6 +57,22 @@
+ 
+ #include "map_display.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x)\
++  ((x) = nullptr)
++#else
++#define SET_NULL(x)\
++  ((x).setNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -194,13 +210,18 @@ void Swatch::updateData()
+     if(index+pixels_to_copy>=N) break;
+   }
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  auto pixel_stream{
++    std::dynamic_pointer_cast<Ogre::DataStream>(
++      std::make_shared<Ogre::MemoryDataStream>(pixels, pixels_size))};
++#else
+   Ogre::DataStreamPtr pixel_stream;
+-  pixel_stream.bind( new Ogre::MemoryDataStream( pixels, pixels_size ));
+-
+-  if( !texture_.isNull() )
++  pixel_stream.bind(new Ogre::MemoryDataStream(pixels, pixels_size));
++#endif
++  if( !IS_NULL(texture_) )
+   {
+     Ogre::TextureManager::getSingleton().remove( texture_->getName() );
+-    texture_.setNull();
++    SET_NULL(texture_);
+   }
+ 
+   static int tex_count = 0;
+@@ -399,8 +420,14 @@ unsigned char* makeRawPalette()
+ 
+ Ogre::TexturePtr makePaletteTexture( unsigned char *palette_bytes )
+ {
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  auto palette_stream{
++    std::dynamic_pointer_cast<Ogre::DataStream>(
++      std::make_shared<Ogre::MemoryDataStream>(palette_bytes, 256 * 4))};
++#else
+   Ogre::DataStreamPtr palette_stream;
+-  palette_stream.bind( new Ogre::MemoryDataStream( palette_bytes, 256*4 ));
++  palette_stream.bind(new Ogre::MemoryDataStream(palette_bytes, 256*4));
++#endif
+ 
+   static int palette_tex_count = 0;
+   std::stringstream ss;
+@@ -534,10 +561,10 @@ void MapDisplay::clear()
+     if( swatches[i]->manual_object_ )
+       swatches[i]->manual_object_->setVisible( false );
+ 
+-    if( !swatches[i]->texture_.isNull() )
++    if( !IS_NULL(swatches[i]->texture_))
+     {
+       Ogre::TextureManager::getSingleton().remove( swatches[i]->texture_->getName() );
+-      swatches[i]->texture_.setNull();
++      SET_NULL(swatches[i]->texture_);
+     }
+   }
+ 
+diff --git a/src/rviz/default_plugin/markers/mesh_resource_marker.cpp b/src/rviz/default_plugin/markers/mesh_resource_marker.cpp
+index 02c8449..e75ed77 100644
+--- a/src/rviz/default_plugin/markers/mesh_resource_marker.cpp
++++ b/src/rviz/default_plugin/markers/mesh_resource_marker.cpp
+@@ -46,6 +46,22 @@
+ #include <OgreSharedPtr.h>
+ #include <OgreTechnique.h>
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x)\
++  ((x) = nullptr)
++#else
++#define SET_NULL(x)\
++  ((x).setNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -75,7 +91,7 @@ void MeshResourceMarker::reset()
+   for (it = materials_.begin(); it != materials_.end(); it++)
+   {
+     Ogre::MaterialPtr material = *it;
+-    if (!material.isNull())
++    if (!IS_NULL(material))
+     {
+       material->unload();
+       Ogre::MaterialManager::getSingleton().remove(material->getName());
+@@ -126,7 +142,7 @@ void MeshResourceMarker::onNewMessage(const MarkerConstPtr& old_message, const M
+       return;
+     }
+ 
+-    if (loadMeshFromResource(new_message->mesh_resource).isNull())
++    if (IS_NULL(loadMeshFromResource(new_message->mesh_resource)))
+     {
+       std::stringstream ss;
+       ss << "Mesh resource marker [" << getStringID() << "] could not load [" << new_message->mesh_resource << "]";
+diff --git a/src/rviz/image/ros_image_texture.cpp b/src/rviz/image/ros_image_texture.cpp
+index f694622..877376f 100644
+--- a/src/rviz/image/ros_image_texture.cpp
++++ b/src/rviz/image/ros_image_texture.cpp
+@@ -251,9 +251,13 @@ bool ROSImageTexture::update()
+ 
+   // TODO: Support different steps/strides
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  auto pixel_stream{std::dynamic_pointer_cast<Ogre::DataStream>(
++    std::make_shared<Ogre::MemoryDataStream>(imageDataPtr, imageDataSize))};
++#else
+   Ogre::DataStreamPtr pixel_stream;
+   pixel_stream.bind(new Ogre::MemoryDataStream(imageDataPtr, imageDataSize));
+-
++#endif
+   try
+   {
+     ogre_image.loadRawData(pixel_stream, width_, height_, 1, format, 1, 0);
+diff --git a/src/rviz/ogre_helpers/movable_text.cpp b/src/rviz/ogre_helpers/movable_text.cpp
+index 4ef3403..ae4393b 100644
+--- a/src/rviz/ogre_helpers/movable_text.cpp
++++ b/src/rviz/ogre_helpers/movable_text.cpp
+@@ -58,6 +58,22 @@ using namespace Ogre;
+ #define POS_TEX_BINDING    0
+ #define COLOUR_BINDING     1
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define SET_NULL(x)\
++  ((x) = nullptr)
++#else
++#define SET_NULL(x)\
++  ((x).setNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -95,7 +111,7 @@ MovableText::~MovableText()
+   if (mRenderOp.vertexData)
+     delete mRenderOp.vertexData;
+   // May cause crashing... check this and comment if it does
+-  if (!mpMaterial.isNull())
++  if (!IS_NULL(mpMaterial))
+     MaterialManager::getSingletonPtr()->remove(mpMaterial->getName());
+ }
+ 
+@@ -106,20 +122,23 @@ void MovableText::setFontName(const String &fontName)
+     Ogre::MaterialManager::getSingleton().remove(mName + "Material");
+   }
+ 
+-  if (mFontName != fontName || mpMaterial.isNull() || !mpFont)
++  if (mFontName != fontName || IS_NULL(mpMaterial) || !mpFont)
+   {
+     mFontName = fontName;
+-    mpFont
+-        = (Font *) FontManager::getSingleton().getByName(mFontName).getPointer();
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++    mpFont = FontManager::getSingleton().getByName(mFontName);
++#else
++    mpFont = reinterpret_cast<Font *>(FontManager::getSingleton().getByName(mFontName).getPointer());
++#endif
+     if (!mpFont)
+       throw Exception(Exception::ERR_ITEM_NOT_FOUND, "Could not find font "
+           + fontName, "MovableText::setFontName");
+ 
+     mpFont->load();
+-    if (!mpMaterial.isNull())
++    if (!IS_NULL(mpMaterial))
+     {
+       MaterialManager::getSingletonPtr()->remove(mpMaterial->getName());
+-      mpMaterial.setNull();
++      SET_NULL(mpMaterial);
+     }
+ 
+     mpMaterial = mpFont->getMaterial()->clone(mName + "Material");
+@@ -207,7 +226,7 @@ void MovableText::setLocalTranslation(Vector3 trans)
+ 
+ void MovableText::showOnTop(bool show)
+ {
+-  if (mOnTop != show && !mpMaterial.isNull())
++  if (mOnTop != show && !IS_NULL(mpMaterial))
+   {
+     mOnTop = show;
+     mpMaterial->setDepthBias(1.0, 1.0);
+@@ -219,7 +238,7 @@ void MovableText::showOnTop(bool show)
+ void MovableText::_setupGeometry()
+ {
+   assert(mpFont);
+-  assert(!mpMaterial.isNull());
++  assert(!IS_NULL(mpMaterial));
+ 
+   unsigned int vertexCount = 0;
+ 
+@@ -531,7 +550,7 @@ void MovableText::_setupGeometry()
+ void MovableText::_updateColors(void)
+ {
+   assert(mpFont);
+-  assert(!mpMaterial.isNull());
++  assert(!IS_NULL(mpMaterial));
+ 
+   // Convert to system-specific
+   RGBA color;
+diff --git a/src/rviz/ogre_helpers/movable_text.h b/src/rviz/ogre_helpers/movable_text.h
+index a81787b..29d228a 100644
+--- a/src/rviz/ogre_helpers/movable_text.h
++++ b/src/rviz/ogre_helpers/movable_text.h
+@@ -56,6 +56,14 @@ class Camera;
+ class Font;
+ }
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -101,7 +109,11 @@ protected:
+ 
+   Ogre::Camera *mpCam;
+   Ogre::RenderWindow *mpWin;
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  std::shared_ptr<Ogre::Font> mpFont;
++#else
+   Ogre::Font *mpFont;
++#endif
+   Ogre::MaterialPtr mpMaterial;
+   Ogre::MaterialPtr mpBackgroundMaterial;
+ 
+@@ -172,7 +184,7 @@ public:
+ 
+   const Ogre::MaterialPtr &getMaterial(void) const
+   {
+-    assert(!mpMaterial.isNull());
++    assert(!IS_NULL(mpMaterial));
+     return mpMaterial;
+   }
+   ;
+diff --git a/src/rviz/panel_dock_widget.cpp b/src/rviz/panel_dock_widget.cpp
+index e064f65..f7c41c0 100644
+--- a/src/rviz/panel_dock_widget.cpp
++++ b/src/rviz/panel_dock_widget.cpp
+@@ -35,6 +35,14 @@
+ 
+ #include "rviz/panel_dock_widget.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -80,7 +88,7 @@ void PanelDockWidget::setWindowTitle( QString title )
+ 
+ void PanelDockWidget::setIcon( QIcon icon )
+ {
+-  if ( icon.isNull() )
++  if (IS_NULL(icon))
+   {
+     icon_label_->setVisible( false );
+   }
+diff --git a/src/rviz/pluginlib_factory.h b/src/rviz/pluginlib_factory.h
+index edc760b..daab131 100644
+--- a/src/rviz/pluginlib_factory.h
++++ b/src/rviz/pluginlib_factory.h
+@@ -43,6 +43,14 @@
+ #include "rviz/class_id_recording_factory.h"
+ #include "rviz/load_resource.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -130,10 +138,10 @@ public:
+     QString package = getClassPackage( class_id );
+     QString class_name = getClassName( class_id );
+     QIcon icon = loadPixmap( "package://"+package+"/icons/classes/"+class_name+".svg" );
+-    if ( icon.isNull() )
++    if (icon.isNull())
+     {
+       icon = loadPixmap( "package://"+package+"/icons/classes/"+class_name+".png" );
+-      if ( icon.isNull() )
++      if (icon.isNull())
+       {
+         icon = loadPixmap( "package://rviz/icons/default_class_icon.png");
+       }
+diff --git a/src/rviz/scaled_image_widget.cpp b/src/rviz/scaled_image_widget.cpp
+index 1a30e67..f1352b3 100644
+--- a/src/rviz/scaled_image_widget.cpp
++++ b/src/rviz/scaled_image_widget.cpp
+@@ -32,6 +32,14 @@
+ 
+ #include "scaled_image_widget.h"
+ 
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++#define IS_NULL(x)\
++  (!(x))
++#else
++#define IS_NULL(x)\
++  ((x).isNull())
++#endif
++
+ namespace rviz
+ {
+ 
+@@ -54,7 +62,7 @@ QSize ScaledImageWidget::sizeHint() const
+ 
+ void ScaledImageWidget::paintEvent( QPaintEvent* event )
+ {
+-  if( !image_.isNull() )
++  if (!IS_NULL(image_))
+   {
+     QSize dest_size = image_.size();
+     dest_size.scale( width(), height(), Qt::KeepAspectRatio );
+diff --git a/src/rviz/selection/selection_manager.cpp b/src/rviz/selection/selection_manager.cpp
+index f7d9272..e991b62 100644
+--- a/src/rviz/selection/selection_manager.cpp
++++ b/src/rviz/selection/selection_manager.cpp
+@@ -134,9 +134,15 @@ void SelectionManager::initialize()
+   highlight_rectangle_ = new Ogre::Rectangle2D(true);
+ 
+   const static uint32_t texture_data[1] = { 0xffff0080 };
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  auto pixel_stream{
++    std::dynamic_pointer_cast<Ogre::DataStream>(
++      std::make_shared<Ogre::MemoryDataStream>(
++        (void *)(&texture_data[0]), 4))};
++#else
+   Ogre::DataStreamPtr pixel_stream;
+   pixel_stream.bind(new Ogre::MemoryDataStream( (void*)&texture_data[0], 4 ));
+-
++#endif
+   Ogre::TexturePtr tex = Ogre::TextureManager::getSingleton().loadRawData(ss.str() + "Texture", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, pixel_stream, 1, 1, Ogre::PF_R8G8B8A8, Ogre::TEX_TYPE_2D, 0);
+ 
+   Ogre::MaterialPtr material = Ogre::MaterialManager::getSingleton().create(ss.str(), Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+-- 
+2.20.0
+
