@@ -1,0 +1,25 @@
+From 9758fa23600dc047f2b74a7d6f70ce8130628b01 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Thu, 13 Dec 2018 10:10:24 -0500
+Subject: [PATCH] Fix strange template behavior
+
+---
+ include/message_filters/synchronizer.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/message_filters/synchronizer.h b/include/message_filters/synchronizer.h
+index 7891890..1c14a6f 100644
+--- a/include/message_filters/synchronizer.h
++++ b/include/message_filters/synchronizer.h
+@@ -355,7 +355,7 @@ private:
+   template<int i>
+   void cb(const typename mpl::at_c<Events, i>::type& evt)
+   {
+-    this->add<i>(evt);
++    this->template add<i>(evt);
+   }
+ 
+   uint32_t queue_size_;
+-- 
+2.20.0
+
