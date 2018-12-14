@@ -6,7 +6,7 @@
     This package contains an API which builds on the ROS middleware API and is optionally built upon by the other ROS client libraries.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
