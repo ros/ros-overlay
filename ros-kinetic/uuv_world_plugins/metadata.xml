@@ -5,12 +5,12 @@
     The uuv_world_plugins package
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>Musa.Marcusso@de.bosch.com</email>
+      <email>musa.marcusso@de.bosch.com</email>
       <name>Musa Morena Marcusso Manhaes</name>
     </maintainer>
     <bugs-to>https://github.com/uuvsimulator/uuv_simulator/issues</bugs-to>

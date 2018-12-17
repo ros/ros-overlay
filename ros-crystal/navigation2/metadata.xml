@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>oregon.robotics.team@intel.com</email>
-      <name>Oregon Robotics Team</name>
+      <email>stevenmacenski@gmail.com</email>
+      <name>Steve Macenski</name>
     </maintainer>
     <bugs-to>https://github.com/SteveMacenski/navigation2/issues</bugs-to>
   </upstream>
