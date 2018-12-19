@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>william@osrfoundation.org</email>
+      <name>William Woodall</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/capabilities/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
