@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package implements driver for ATI force torque sensors up to firmware 3.x. Char and Net CAN devices are supported through cob_generic_can package. The code if based on cob_forcetorque package.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>denis.stogl@kit.edu</email>
+      <name>Denis Štogl (KIT, IAR-IPR)</name>
+    </maintainer>
+    <bugs-to>https://github.com/KITrobotics/ati_force_torque/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
