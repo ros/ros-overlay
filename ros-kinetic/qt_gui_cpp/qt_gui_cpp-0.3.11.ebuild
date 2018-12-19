@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-qt/qtcore:5
 	dev-qt/qtcore:5
+	dev-qt/widgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"
