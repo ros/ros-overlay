@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The pheeno_ros_description package
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>zkakish@gmail.edu</email>
+      <name>Zahi Kakish</name>
+    </maintainer>
+    <bugs-to>https://github.com/acslaboratory/pheeno_ros_description/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
