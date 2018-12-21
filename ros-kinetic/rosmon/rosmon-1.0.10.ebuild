@@ -27,7 +27,7 @@ RDEPEND="
 	ros-kinetic/std_msgs
 	test? ( ros-kinetic/catch_ros )
 	test? ( ros-kinetic/rostest )
-	dev-libs/boost
+	dev-libs/boost[python]
 	sys-libs/ncurses
 	dev-cpp/yaml-cpp
 	test? ( dev-python/rospkg )
@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	dev-lang/python
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"

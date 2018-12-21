@@ -53,6 +53,8 @@ DEPEND="${RDEPEND}
 	media-libs/assimp
 	dev-qt/qtopengl:5
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"
