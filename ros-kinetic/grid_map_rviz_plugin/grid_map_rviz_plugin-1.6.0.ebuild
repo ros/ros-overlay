@@ -1,14 +1,14 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2018 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="RViz plugin for displaying grid map messages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ethz-asl/grid_map-release/archive/release/kinetic/${PN}/1.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/anybotics/grid_map-release/archive/release/kinetic/${PN}/1.6.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,6 +24,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"

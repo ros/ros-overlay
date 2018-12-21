@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 	ros-kinetic/pcl_conversions
 	sci-libs/pcl
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"

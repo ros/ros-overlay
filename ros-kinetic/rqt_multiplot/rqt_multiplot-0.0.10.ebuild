@@ -22,6 +22,8 @@ RDEPEND="
 	ros-kinetic/variant_topic_tools
 	x11-libs/qwt:6
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

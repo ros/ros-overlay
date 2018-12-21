@@ -20,7 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
-	dev-python/PyQt5
+	dev-python/PyQt5[gui,widgets]
 	dev-qt/qtcore:5
 "
 
