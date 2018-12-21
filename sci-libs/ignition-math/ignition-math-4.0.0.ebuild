@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/ignitionrobotics-ign-math-054f8a99081f"
+S="${WORKDIR}/${PN}4_${PV}"
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_configure() {
