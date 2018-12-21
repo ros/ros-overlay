@@ -19,7 +19,7 @@ RDEPEND="
 	ros-melodic/rosconsole
 	ros-melodic/sensor_msgs
 	test? ( ros-melodic/rostest )
-	dev-libs/boost
+	dev-libs/boost[python]
 	media-libs/opencv
 	dev-lang/python
 	media-libs/opencv[python]
@@ -32,3 +32,10 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+src_prepare() {
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
+}
