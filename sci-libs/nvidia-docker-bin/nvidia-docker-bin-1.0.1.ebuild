@@ -36,7 +36,7 @@ src_install() {
 	fperms +x /opt/${MY_PN}/bin/${MY_PN}-plugin
 
 	dosym ../../opt/${MY_PN}/bin/${MY_PN} /usr/bin/${MY_PN}
-	dosym ../../opt/${MY_PN}/bin/${MY_PN} /usr/bin/${MY_PN}-plugin
+	dosym ../../opt/${MY_PN}/bin/${MY_PN}-plugin /usr/bin/${MY_PN}-plugin
 
 	dosym ../../opt/${MY_PN}/share/lintian/overrides/${MY_PN} /usr/share/lintian/overrides/${MY_PN}
 	dosym ../../opt/${MY_PN}/share/doc/${MY_PN} /usr/share/doc/${MY_PN}
