@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The mcl_3dl package
+    3-D/6-DOF localization for mobile robots with 3-D LIDAR(s)
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
