@@ -2,16 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Package to parse NMEA strings and publish a very simple GPS message. Does not require the GPSD deamon.
+    Package to parse NMEA strings and publish a very simple GPS message. Does not 
+    require or use the GPSD deamon.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>eric@ericperko.com</email>
-      <name>Eric Perko</name>
+      <email>evenator@gmail.com</email>
+      <name>Ed Venator</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/nmea_navsat_driver/issues</bugs-to>
   </upstream>
