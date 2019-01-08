@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The OPT++ catkin wrapper package
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>wolfgang.merkt@ed.ac.uk</email>
+      <name>Wolfgang Merkt</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipab-slmc/optpp_catkin/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
