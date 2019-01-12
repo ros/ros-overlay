@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The mbf_utility package
+    The move_base_flex messages package providing the action definition files for the action GetPath, ExePath, Recovery and MoveBase. The action servers providing these action are implemented in <a href="http://wiki.ros.org/mbf_abstract_nav">mbf_abstract_nav</a>.
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>spuetz@uos.de</email>
-      <name>Sebastian Pütz</name>
+      <email>santos@magazino.eu</email>
+      <name>Jorge Santos</name>
     </maintainer>
     <bugs-to>https://github.com/uos-gbp/move_base_flex/issues</bugs-to>
   </upstream>
