@@ -1,0 +1,18 @@
+From 463400155aaf9d4119d97d9a4e4b13211306a85b Mon Sep 17 00:00:00 2001
+From: Stephen Sampson <36173115+ecestev@users.noreply.github.com>
+Date: Sun, 7 Oct 2018 13:52:09 -0300
+Subject: [PATCH] Update Makefile
+
+Added CMAKE flag to compile with Gstreamer version1.X
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 73e8a91..6acff3b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,2 +1,2 @@
+-EXTRA_CMAKE_FLAGS = -DUSE_ROSBUILD:BOOL=1
++EXTRA_CMAKE_FLAGS = -DUSE_ROSBUILD:BOOL=1 -DGSTREAMER_VERSION_1_x=On
+ include $(shell rospack find mk)/cmake.mk
