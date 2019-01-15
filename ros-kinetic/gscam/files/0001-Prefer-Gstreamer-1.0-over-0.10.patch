@@ -1,0 +1,28 @@
+From 64f1bcd7dde98bbf662ec4372be0048ae5efd92c Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <Sammy.Pfeiffer@student.uts.edu.au>
+Date: Wed, 16 Jan 2019 00:11:54 +1100
+Subject: [PATCH] Prefer Gstreamer 1.0 over 0.10
+
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 98166b7..6b7ab95 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,9 +5,9 @@ project(gscam)
+ # System Dependencies
+ find_package(PkgConfig)
+ 
+-pkg_check_modules(GSTREAMER QUIET gstreamer-0.10)
++pkg_check_modules(GSTREAMER QUIET gstreamer-1.0)
+ if(NOT GSTREAMER_FOUND)
+-  set(GSTREAMER_VERSION_1_x TRUE)
++  set(GSTREAMER_VERSION_1_x FALSE)
+ endif()
+ if(GSTREAMER_VERSION_1_x)
+   message(STATUS "gst 1.0")
+-- 
+2.7.4
+
