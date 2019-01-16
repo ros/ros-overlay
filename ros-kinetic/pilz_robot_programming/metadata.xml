@@ -5,7 +5,7 @@
     An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
