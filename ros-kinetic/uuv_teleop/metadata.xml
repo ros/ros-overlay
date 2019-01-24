@@ -5,7 +5,7 @@
     ROS nodes to generate command topics for vehicles and manipulators using a joystick input
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

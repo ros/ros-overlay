@@ -15,12 +15,14 @@ LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-python/PyQt5
+	dev-python/PyQt5[gui,widgets]
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/rosbuild
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"

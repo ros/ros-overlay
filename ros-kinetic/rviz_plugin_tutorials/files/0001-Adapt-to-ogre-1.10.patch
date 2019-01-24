@@ -1,0 +1,29 @@
+From 6920f584beb4548c0092b9c8a5be3d6b1b6e761e Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <Sammy.Pfeiffer@student.uts.edu.au>
+Date: Sat, 15 Dec 2018 12:14:29 +1100
+Subject: [PATCH] Adapt to ogre 1.10
+
+---
+ src/plant_flag_tool.cpp | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/plant_flag_tool.cpp b/src/plant_flag_tool.cpp
+index ea2689b..c8fd7af 100644
+--- a/src/plant_flag_tool.cpp
++++ b/src/plant_flag_tool.cpp
+@@ -86,8 +86,11 @@ PlantFlagTool::~PlantFlagTool()
+ void PlantFlagTool::onInitialize()
+ {
+   flag_resource_ = "package://rviz_plugin_tutorials/media/flag.dae";
+-
++#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR > 9
++  if( !(rviz::loadMeshFromResource( flag_resource_ )) )
++#else
+   if( rviz::loadMeshFromResource( flag_resource_ ).isNull() )
++#endif
+   {
+     ROS_ERROR( "PlantFlagTool: failed to load model resource '%s'.", flag_resource_.c_str() );
+     return;
+-- 
+2.7.4
+

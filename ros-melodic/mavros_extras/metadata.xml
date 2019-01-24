@@ -5,7 +5,7 @@
     Extra nodes and plugins for <a href="http://wiki.ros.org/mavros">MAVROS</a>.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -1,0 +1,32 @@
+From 60360c0f591dbed0310c770ef33a9232e4b8a77f Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Thu, 20 Dec 2018 20:54:42 -0500
+Subject: [PATCH] Remove explicit python check
+
+---
+ CMakeLists.txt | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 997bef3..d32f625 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,13 +5,9 @@ find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
+ 
+ if(NOT ANDROID)
+   find_package(PythonLibs)
+-  if(PYTHONLIBS_VERSION_STRING VERSION_LESS 3)
+-    find_package(Boost REQUIRED python)
+-  else()
+-    find_package(Boost REQUIRED python3)
+-  endif()
++  find_package(Boost REQUIRED)
+ else()
+-find_package(Boost REQUIRED)
++  find_package(Boost REQUIRED)
+ endif()
+ find_package(OpenCV 3 REQUIRED
+   COMPONENTS
+-- 
+2.20.1
+

@@ -5,7 +5,7 @@
     RViz plugin for displaying grid map messages.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
@@ -13,6 +13,6 @@
       <email>pfankhauser@ethz.ch</email>
       <name>Péter Fankhauser</name>
     </maintainer>
-    <bugs-to>https://github.com/ethz-asl/grid_map/issues</bugs-to>
+    <bugs-to>https://github.com/anybotics/grid_map/issues</bugs-to>
   </upstream>
 </pkgmetadata>

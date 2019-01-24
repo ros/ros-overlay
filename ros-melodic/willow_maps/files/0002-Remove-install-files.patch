@@ -1,0 +1,39 @@
+From f8a120ba7a2cd313c7bad495bd008be37c24b54a Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Sun, 9 Dec 2018 15:14:40 -0500
+Subject: [PATCH 2/2] Remove install files
+
+---
+ CMakeLists.txt | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 84dc0bd..d2142d8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -61,14 +61,14 @@ install(FILES
+ 
+ 
+ install(CODE "execute_process(COMMAND  make -C ${PROJECT_BINARY_DIR} tests)")
+-install(FILES
+-  ${PROJECT_BINARY_DIR}/willow-full-0.025.pgm
+-  ${PROJECT_BINARY_DIR}/willow-full-0.05.pgm
+-  ${PROJECT_BINARY_DIR}/willow-full-0.10.pgm
+-  ${PROJECT_BINARY_DIR}/willow-sans-whitelab-0.025.pgm
+-  ${PROJECT_BINARY_DIR}/willow.tmap
++# install(FILES
++#  ${PROJECT_BINARY_DIR}/willow-full-0.025.pgm
++#  ${PROJECT_BINARY_DIR}/willow-full-0.05.pgm
++#  ${PROJECT_BINARY_DIR}/willow-full-0.10.pgm
++#  ${PROJECT_BINARY_DIR}/willow-sans-whitelab-0.025.pgm
++#  ${PROJECT_BINARY_DIR}/willow.tmap
+ #  ${PROJECT_BINARY_DIR}/willow-2010-02-18-0.025.pgm
+ #  ${PROJECT_BINARY_DIR}/willow-sans-whitelab-2010-02-18-0.025.pgm
+-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+-)
++#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
++#)
+ 
+-- 
+2.19.2
+

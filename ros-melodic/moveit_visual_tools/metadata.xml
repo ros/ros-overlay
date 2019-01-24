@@ -5,7 +5,7 @@
     Helper functions for displaying and debugging MoveIt! data in Rviz via published markers
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

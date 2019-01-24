@@ -5,7 +5,7 @@
     Optimal allocation of forces and torques to thruster and fins of AUVs
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

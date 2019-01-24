@@ -1,0 +1,30 @@
+From 1518e6b5cdc4271a587d290ac220ee14a1dd0699 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hallen@kns.com>
+Date: Thu, 20 Dec 2018 20:09:52 -0500
+Subject: [PATCH] Remove explicit boost python check
+
+---
+ CMakeLists.txt | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b70b853..45e9e36 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -4,11 +4,8 @@ project(camera_calibration_parsers)
+ find_package(catkin REQUIRED sensor_msgs rosconsole roscpp roscpp_serialization)
+ 
+ find_package(PythonLibs REQUIRED)
+-if(PYTHONLIBS_VERSION_STRING VERSION_LESS 3)
+-  find_package(Boost REQUIRED COMPONENTS filesystem python)
+-else()
+-  find_package(Boost REQUIRED COMPONENTS filesystem python3)
+-endif()
++find_package(Boost REQUIRED)
++
+ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+ 
+ catkin_python_setup()
+-- 
+2.20.1
+
