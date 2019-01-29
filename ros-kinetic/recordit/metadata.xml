@@ -5,7 +5,7 @@
     Record the joint_states and/or the mobile changes (via tf) of a ROS system as three.js animation
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

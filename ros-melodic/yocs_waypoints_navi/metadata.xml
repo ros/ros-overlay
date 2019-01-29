@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Simple tool for waypoints navigation with two functions:
+    <br/> * Command the robot to go to a goal by passing through a series of waypoints.
+    <br/> * Command the robot to constantly loop through a series of waypoints, useful for patrol.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jihoonl@yujinrobot.com</email>
+      <name>Jihoon Lee</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/yujin_ocs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

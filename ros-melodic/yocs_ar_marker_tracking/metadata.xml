@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Collecting, tracking and generating statistics for ar markers from ar_track_alvar.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jihoonl@yujinrobot.com</email>
+      <name>Jihoon Lee</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/yujin_ocs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

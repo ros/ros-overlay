@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Math toolkit for Yujin open control system. This package is intended to contain common use functions,
+    mostly for simple mathematics but also for tf-related conversions.
+    By no means it pretends to be an efficient and robust, widely used math library, but a play ground where
+    to put common code that is typically repeated in many robot control programs.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jihoonl@yujinrobot.com</email>
+      <name>Jihoon Lee</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/yujin_ocs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
