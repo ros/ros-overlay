@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.
+    A pose consists of a 2D position (x,y) and a 1D orientation (theta).
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>marcus.liebhardt@yujinrobot.com</email>
+      <name>Marcus Liebhardt</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/yujin_ocs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

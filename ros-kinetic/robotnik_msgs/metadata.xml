@@ -5,7 +5,7 @@
     The robotnik_msgs package. Common messages and services used by some Robotnik's packages.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

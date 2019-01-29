@@ -13,6 +13,6 @@
       <email>thach.do@neuromeka.com</email>
       <name>Thach Do</name>
     </maintainer>
-    <bugs-to>https://github.com/thachdd88/ros_indy/issues</bugs-to>
+    <bugs-to>https://github.com/neuromeka-robotics/ros_indy/issues</bugs-to>
   </upstream>
 </pkgmetadata>

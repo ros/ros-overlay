@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Virtual sensor that uses semantic map information to &quot;see&quot; obstacles undetectable by robot sensors.
+      
+      Current implementation cannot read obstacles from YAML files. Until this feature gets implemented, we
+      use auxiliary scripts to read and publish files' content. Data directory contains some example files.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jihoonl@yujinrobot.com</email>
+      <name>Jihoon Lee</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/yujin_ocs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
