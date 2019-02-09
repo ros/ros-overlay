@@ -5,7 +5,7 @@
     Messages and services package for OpenManipulator to send information about state or pose
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

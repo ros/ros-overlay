@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    API an scripts to parse .msg/.srv/.action files and convert them to .idl.
+    API and scripts to parse .msg/.srv/.action files and convert them to .idl.
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
