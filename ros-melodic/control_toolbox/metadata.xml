@@ -5,13 +5,13 @@
     The control toolbox contains modules that are useful across all controllers.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>sachinc@willowgarage.com</email>
-      <name>Sachin Chitta</name>
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/control_toolbox/issues</bugs-to>
   </upstream>

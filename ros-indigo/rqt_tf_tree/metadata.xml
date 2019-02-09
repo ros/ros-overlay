@@ -5,13 +5,13 @@
     rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ablasdel@gmail.com</email>
-      <name>Aaron Blasdel</name>
+      <email>gm130s@gmail.com</email>
+      <name>Isaac I.Y. Saito</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_tf_tree/issues</bugs-to>
   </upstream>
