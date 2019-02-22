@@ -5,7 +5,7 @@
     Plugin based global planner implementing the nav_core2::GlobalPlanner interface.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

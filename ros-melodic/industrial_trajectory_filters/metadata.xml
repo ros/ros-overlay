@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>
+     ROS Industrial libraries/plugins for filtering trajectories.
+   </p>
+   <p>
+     This package is part of the ROS Industrial program and contains libraries
+     and moveit plugins for filtering robot trajectories.
+   </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sedwards@swri.org</email>
+      <name>Shaun Edwards</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-industrial/industrial_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
