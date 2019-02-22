@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ros@pilz.de</email>
-      <name>Pilz GmbH and Co. KG</name>
+      <email>a.gutenkunst@pilz.de</email>
+      <name>Alexander Gutenkunst</name>
     </maintainer>
     <bugs-to>https://github.com/PilzDE/pilz_robots/issues</bugs-to>
   </upstream>

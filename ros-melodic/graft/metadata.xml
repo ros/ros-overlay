@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Graft is not yet finished. It's intended to be a full replacement to
+    robot_pose_ekf, including native absolute references, and arbitrary
+    topic configuration.
+
+    If you try to use Graft now, please note that not all parameters are
+    configured and you will not always see a change in behavior by
+    modifying the parameters.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>chadrockey@gmail.com</email>
+      <name>Chad Rockey</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/graft/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

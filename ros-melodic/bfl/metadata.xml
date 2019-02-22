@@ -13,13 +13,13 @@
   matrix operations and random number generation.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/bfl/issues</bugs-to>
   </upstream>
