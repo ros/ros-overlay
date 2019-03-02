@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <longdescription>
+    The industrial robot simulator is a stand in for industrial robot driver node(s).  It adheres to the driver specification for industrial robot controllers.
+  </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
