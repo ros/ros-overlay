@@ -43,7 +43,7 @@ RDEPEND="
 	media-gfx/graphviz
 	net-libs/ignition-msgs:=
 	>=sci-libs/ignition-math-2.3:3=
-	net-libs/ignition-transport:3=
+	net-libs/ignition-transport:4=
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
