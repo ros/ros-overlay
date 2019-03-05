@@ -1,0 +1,11 @@
+--- CMakeLists.txt	2019-03-05 14:45:35.000000000 +0900
++++ CMakeLists.txt.edit	2019-03-05 14:46:24.000000000 +0900
+@@ -7,7 +7,7 @@
+ if(PYTHONLIBS_VERSION_STRING VERSION_LESS 3)
+   find_package(Boost REQUIRED COMPONENTS filesystem python)
+ else()
+-  find_package(Boost REQUIRED COMPONENTS filesystem python3)
++  find_package(Boost REQUIRED COMPONENTS filesystem python-3.6)
+ endif()
+ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+ 
