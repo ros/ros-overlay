@@ -41,9 +41,9 @@ RDEPEND="
 	sci-libs/hdf5:=[cxx]
 	sys-apps/util-linux
 	media-gfx/graphviz
-	net-libs/ignition-msgs:=
+	=sci-libs/ignition-msgs-0.7.0
 	>=sci-libs/ignition-math-2.3:3=
-	net-libs/ignition-transport:4=
+	sci-libs/ignition-transport:3=
 	x11-libs/qwt:6=
 "
 DEPEND="${RDEPEND}
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/libxslt )
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
-PATCHES=( "${FILESDIR}/${PN}-tinyxml2.patch" "${FILESDIR}/qwt.patch" )
+PATCHES=( "${FILESDIR}/qwt.patch" "${FILESDIR}/gazebo-8.3.0_scope_fix.patch" )
 
 src_configure() {
 	# doesnt build without it

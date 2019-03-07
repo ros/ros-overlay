@@ -1,0 +1,64 @@
+--- gazebo/msgs/generator/GazeboGenerator.cc	2018-02-11 04:21:42.000000000 +0900
++++ gazebo/msgs/generator/GazeboGenerator.cc.fix	2019-03-07 21:58:45.000000000 +0900
+@@ -21,6 +21,7 @@
+ #include <google/protobuf/io/zero_copy_stream.h>
+ #include <google/protobuf/descriptor.pb.h>
+ #include <boost/algorithm/string/replace.hpp>
++#include <boost/scoped_ptr.hpp>
+ 
+ #include <vector>
+ #include <utility>
+@@ -48,7 +49,7 @@
+ 
+   // Add boost shared point include
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -57,7 +58,7 @@
+ 
+   // Add boost shared point include
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(sourceFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -67,7 +68,7 @@
+ 
+ 
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -79,7 +80,7 @@
+ 
+   // Add boost shared typedef
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "namespace_scope"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -95,7 +96,7 @@
+ 
+   // Add const boost shared typedef
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "global_scope"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -111,7 +112,7 @@
+ 
+   // Add Message Factory register
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(sourceFilename, "global_scope"));
+     io::Printer printer(output.get(), '$');
+ 
