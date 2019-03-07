@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
-PATCHES=( "${FILESDIR}/urdfdom1.patch" )
+PATCHES=( "${FILESDIR}/urdfdom1.patch" "${FILESDIR}/fix-cmake.patch")
 
 src_configure() {
 	echo "set (CMAKE_C_FLAGS_ALL \"${CXXFLAGS} \${CMAKE_C_FLAGS_ALL}\")" > "${S}/cmake/HostCFlags.cmake"
