@@ -1,0 +1,79 @@
+From a757b85ff35a7324076c13ad947ad0d1cbae3e78 Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <Sammy.Pfeiffer@student.uts.edu.au>
+Date: Wed, 19 Dec 2018 17:08:46 +1100
+Subject: [PATCH] Fix scoped_ptr was not declared in this scope
+
+By using the work from https://src.fedoraproject.org/rpms/gazebo/c/d9fe0215cc2eed07d422d9b3c021183154faa5ca?branch=master from Till Hofmann
+---
+ gazebo/msgs/generator/GazeboGenerator.cc | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/gazebo/msgs/generator/GazeboGenerator.cc b/gazebo/msgs/generator/GazeboGenerator.cc
+index 154b4ad..1ed2086 100644
+--- a/gazebo/msgs/generator/GazeboGenerator.cc
++++ b/gazebo/msgs/generator/GazeboGenerator.cc
+@@ -21,6 +21,7 @@
+ #include <google/protobuf/io/zero_copy_stream.h>
+ #include <google/protobuf/descriptor.pb.h>
+ #include <boost/algorithm/string/replace.hpp>
++#include <boost/scoped_ptr.hpp>
+ 
+ #include <vector>
+ #include <utility>
+@@ -48,7 +49,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+   // Add boost shared point include
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -57,7 +58,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+   // Add boost shared point include
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(sourceFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -67,7 +68,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+ 
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "includes"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -79,7 +80,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+   // Add boost shared typedef
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "namespace_scope"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -95,7 +96,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+   // Add const boost shared typedef
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(headerFilename, "global_scope"));
+     io::Printer printer(output.get(), '$');
+ 
+@@ -111,7 +112,7 @@ bool GazeboGenerator::Generate(const FileDescriptor *_file,
+ 
+   // Add Message Factory register
+   {
+-    scoped_ptr<io::ZeroCopyOutputStream> output(
++    boost::scoped_ptr<io::ZeroCopyOutputStream> output(
+         _generator_context->OpenForInsert(sourceFilename, "global_scope"));
+     io::Printer printer(output.get(), '$');
+ 
+-- 
+2.7.4
+

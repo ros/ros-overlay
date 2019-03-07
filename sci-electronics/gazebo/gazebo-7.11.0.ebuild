@@ -43,7 +43,7 @@ RDEPEND="
 	sys-apps/util-linux
 	media-gfx/graphviz
 	net-libs/ignition-msgs:=
-	>=sci-libs/ignition-math-2.3:3=
+        >=sci-libs/ignition-math-2.3:3=
 	net-libs/ignition-transport:4=
 	x11-libs/qwt:6=
 "
@@ -55,6 +55,11 @@ DEPEND="${RDEPEND}
 	x11-apps/mesa-progs
 	test? ( dev-libs/libxslt )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-0001-Fix-scoped_ptr-was-not-declared-in-this-scope.patch"
+)
+
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_configure() {
