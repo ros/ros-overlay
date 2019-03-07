@@ -8,7 +8,7 @@ install:
   - git clone https://github.com/ros-infrastructure/superflore
   - cd superflore
   - sudo pip3 install --upgrade pip
-  - sudo pip3 install --upgrade -r requirements.txt
+  - sudo pip3 install --upgrade -r requirements.txt --ignore-installed
   - sudo python3 ./setup.py install
 script:
   - cd ../
