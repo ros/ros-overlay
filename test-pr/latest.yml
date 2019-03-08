@@ -1,5 +1,5 @@
-#indigo:
-#  - catkin
+indigo:
+  - catkin
 kinetic:
   - catkin
 lunar:
