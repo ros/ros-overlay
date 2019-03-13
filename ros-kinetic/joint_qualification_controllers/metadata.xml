@@ -5,7 +5,7 @@
     Controllers used in PR2 hardware testing. For testing counterbalance of PR2, and for internal WG use.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

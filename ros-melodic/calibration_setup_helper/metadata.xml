@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains a script to generate calibration launch and configurationfiles for your robot.
+    which is based on Michael Ferguson's calibration code
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>kei.okada@gmail.com</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/calibration/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

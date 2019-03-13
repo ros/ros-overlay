@@ -5,7 +5,7 @@
     This application allows the PR2 to navigate autonomously in an odometric frame.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
