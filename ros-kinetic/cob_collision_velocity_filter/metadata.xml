@@ -5,7 +5,7 @@
     The cob_collision_velocity_filter package is a package for collision avoidance using teleoperation.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

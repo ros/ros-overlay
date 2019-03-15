@@ -5,7 +5,7 @@
     Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -5,7 +5,7 @@
     Default configuration of the different robots supported by the Care-O-bot stacks. Configuration is e.g. preconfigured joint positions.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

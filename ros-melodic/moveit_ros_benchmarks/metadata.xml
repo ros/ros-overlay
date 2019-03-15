@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dave@dav.ee</email>
+      <email>dave@picknik.ai</email>
       <name>Dave Coleman</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/moveit/issues</bugs-to>
