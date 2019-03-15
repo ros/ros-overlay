@@ -1,32 +1,15 @@
-From af983b45677459ff259fc789efd2b8d05bd81d9c Mon Sep 17 00:00:00 2001
-From: Sammy Pfeiffer <Sammy.Pfeiffer@student.uts.edu.au>
-Date: Thu, 3 May 2018 04:38:10 +0000
-Subject: [PATCH] Fix for Gentoo
-
----
- cmake/python.cmake | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
-
-diff --git a/cmake/python.cmake b/cmake/python.cmake
-index 70f3d26..c0dbef3 100644
---- a/cmake/python.cmake
-+++ b/cmake/python.cmake
-@@ -11,9 +11,10 @@ message(STATUS "Using PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}")
+--- cmake/python.cmake	2017-03-07 00:58:50.000000000 +0900
++++ cmake/python.cmake.fix	2019-03-08 13:40:45.000000000 +0900
+@@ -11,9 +11,9 @@
  set(_PYTHON_PATH_VERSION_SUFFIX "${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}")
  
  set(enable_setuptools_deb_layout OFF)
 -if(EXISTS "/etc/debian_version")
 -  set(enable_setuptools_deb_layout ON)
 -endif()
-+# We know we are in Gentoo, it should be OFF (Gentoo Prefix fails to build otherwise)
-+# if(EXISTS "/etc/debian_version")
-+#   set(enable_setuptools_deb_layout ON)
-+# endif()
- option(SETUPTOOLS_DEB_LAYOUT "Enable debian style python package layout" 
-${enable_setuptools_deb_layout})
++#if(EXISTS "/etc/debian_version")
++#  set(enable_setuptools_deb_layout ON)
++#endif()
+ option(SETUPTOOLS_DEB_LAYOUT "Enable debian style python package layout" ${enable_setuptools_deb_layout})
  
  if(SETUPTOOLS_DEB_LAYOUT)
--- 
-2.17.0
-
-
