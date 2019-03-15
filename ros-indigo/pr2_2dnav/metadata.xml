@@ -5,7 +5,7 @@
     This application allows the PR2 robot to navigate autonomously with a pre-specified static map.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

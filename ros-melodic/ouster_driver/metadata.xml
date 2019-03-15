@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    OS1 ROS client
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>miyamoto.musashi2@gmail.com</email>
+      <name>Alexander Carballo</name>
+    </maintainer>
+    <bugs-to>https://github.com/CPFL/ouster/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
