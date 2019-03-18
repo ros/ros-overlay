@@ -5,7 +5,7 @@
     Flips the image of Care-O-bots kinect in dependence of the viewing direction of the cameras to receive an upright image all the time.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

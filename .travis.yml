@@ -3,13 +3,14 @@ services: docker
 python:
   - "3.5"
 install:
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
   - sudo apt-get update -qq
   - sudo apt-get install python3 python3-pip
   - git clone https://github.com/ros-infrastructure/superflore
   - cd superflore
   - sudo pip3 install --upgrade pip
-  - sudo pip3 install --upgrade -r requirements.txt
+  - sudo pip3 install --upgrade -r requirements.txt --ignore-installed
   - sudo python3 ./setup.py install
 script:
   - cd ../
-  - superflore-check-ebuilds -f test-pr/latest.yml
+  - superflore-check-ebuilds -f test-pr/latest.yml -v

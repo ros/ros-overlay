@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Message defined in the BRICS project
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nowak@locomotec.com</email>
+      <name>Walter Nowak</name>
+    </maintainer>
+    <bugs-to>https://github.com/wnowak/brics_actuator/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -5,7 +5,7 @@
     This packagae implements the special homing procedure that is needed for old cob4/raw bases
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
