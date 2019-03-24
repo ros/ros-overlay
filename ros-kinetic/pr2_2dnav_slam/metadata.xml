@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This application allows the PR2 to navigate autonomously while also building a map of its environment as it drives along.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dash@clearpathrobotics.com</email>
+      <name>Devon Ash</name>
+    </maintainer>
+    <bugs-to>https://github.com/pr2-gbp/pr2_navigation_apps/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
