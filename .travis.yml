@@ -13,4 +13,4 @@ install:
   - sudo python3 ./setup.py install
 script:
   - cd ../
-  - superflore-check-ebuilds -f test-pr/latest.yml -v
+  - superflore-check-ebuilds -f test-pr/latest.yml
