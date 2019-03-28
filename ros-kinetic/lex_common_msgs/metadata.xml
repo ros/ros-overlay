@@ -5,7 +5,7 @@
     Common messages for interacting with Amazon Lex using the lex_node package
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

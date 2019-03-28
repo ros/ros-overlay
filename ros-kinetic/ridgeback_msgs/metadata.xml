@@ -5,7 +5,7 @@
     Messages exclusive to Ridgeback, especially for representing low-level motor commands and sensors.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
