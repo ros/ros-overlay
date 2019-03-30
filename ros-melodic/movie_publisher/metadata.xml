@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Node for using a video file as video topic source.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>peckama2@fel.cvut.cz</email>
+      <name>Martin Pecka</name>
+    </maintainer>
+    <bugs-to>https://github.com/peci1/movie_publisher/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
