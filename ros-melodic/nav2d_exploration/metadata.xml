@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package holds a collection of plugins for the RobotNavigator, that provide
+    different cooperative exploration strategies for a team of mobile robots.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sebastian.kasperski@dfki.de</email>
+      <name>Sebastian Kasperski</name>
+    </maintainer>
+    <bugs-to>https://github.com/skasperski/navigation_2d/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

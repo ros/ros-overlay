@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package provides a node for higher level navigation of a mobile
+    robot in a planar environment. It needs a map and the robot's position
+    within this map to create a plan for navigation. When used together with
+    a SLAM module it can also be used to perform autonomous exploration of
+    the robot's workspace.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sebastian.kasperski@dfki.de</email>
+      <name>Sebastian Kasperski</name>
+    </maintainer>
+    <bugs-to>https://github.com/skasperski/navigation_2d/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

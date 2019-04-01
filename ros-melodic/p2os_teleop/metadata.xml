@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>hallen@kns.com</email>
+      <email>hunter@openrobotics.org</email>
       <name>Hunter L. Allen</name>
     </maintainer>
     <bugs-to>https://github.com/allenh1/p2os/issues</bugs-to>

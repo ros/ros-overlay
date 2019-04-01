@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Meta-Package containing modules for 2D-Navigation
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sebastian.kasperski@dfki.de</email>
+      <name>Sebastian Kasperski</name>
+    </maintainer>
+    <bugs-to>https://github.com/skasperski/navigation_2d/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
