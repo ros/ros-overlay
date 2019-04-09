@@ -6,13 +6,13 @@
      See http://hdl.handle.net/1853/50782 for details.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fxm@ipa.fhg.de</email>
-      <name>Felix Messmer</name>
+      <email>g.a.vanderhoorn@tudelft.nl</email>
+      <name>G.A. vd. Hoorn</name>
     </maintainer>
     <bugs-to>https://github.com/ros-industrial/universal_robot/issues</bugs-to>
   </upstream>

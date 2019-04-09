@@ -5,7 +5,7 @@
     A package to support MongoDB-based storage and analysis for data from a ROS system, eg. saved messages, configurations etc
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
