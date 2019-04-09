@@ -10,12 +10,12 @@
     with Quadrotors&quot;.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>winklera@ethz.ch</email>
+      <email>alexander.w.winkler@gmail.com</email>
       <name>Alexander W. Winkler</name>
     </maintainer>
     <bugs-to>https://github.com/leggedrobotics/xpp/issues</bugs-to>

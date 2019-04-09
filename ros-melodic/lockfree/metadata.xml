@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The lockfree package contains lock-free data structures for use in multithreaded programming.  These
+     kinds of data structures are generally not as easy to use as single-threaded equivalents, and are not
+     always faster.  If you don't know you need to use one, try another structure with a lock around it
+     first.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dash@clearpathrobotics.com</email>
+      <name>Devon Ash</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/ros_realtime/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
