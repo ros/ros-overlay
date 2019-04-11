@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.
+
+    This package is deprecated.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>chadrockey@gmail.com</email>
+      <name>Chad Rockey</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/driver_common/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
