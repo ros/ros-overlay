@@ -73,6 +73,8 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     virtual/perl-IO-Socket-IP virtual/perl-Time-HiRes dev-perl/XML-XPath \
     dev-perl/Text-Iconv dev-cpp/gtest dev-db/sqlite \
     dev-lang/swig sys-libs/binutils-libs \
+    && emerge bash-completion \
+    && emerge @preserved-rebuild \
     && rm -f /usr/portage/distfiles/*.tar* \
     && rm -f /usr/portage/distfiles/*.zip* \
     && rm -rf /var/tmp/portage/*; exit 0
