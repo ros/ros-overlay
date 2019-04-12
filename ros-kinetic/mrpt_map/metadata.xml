@@ -5,7 +5,7 @@
     The mrpt_map is able to publish a mrpt map as ros occupancy grid like the map_server
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
