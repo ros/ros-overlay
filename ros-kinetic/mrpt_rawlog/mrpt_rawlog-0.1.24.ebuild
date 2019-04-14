@@ -1,15 +1,15 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="This package enables you to record a rawlog from a ROS drive robot.\
   At t[...]"
 HOMEPAGE="http://wiki.ros.org/mrpt_rawlog"
-SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/${PN}/0.1.23-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/${PN}/0.1.24-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -6,7 +6,7 @@
   At the moment the package is able to deal with odometry and 2d laser scans.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
