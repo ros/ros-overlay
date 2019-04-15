@@ -5,13 +5,13 @@
     PRBT support for Schunk pg70 gripper.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ros@pilz.de</email>
-      <name>Pilz GmbH and Co. KG</name>
+      <email>a.gutenkunst@pilz.de</email>
+      <name>Alexander Gutenkunst</name>
     </maintainer>
     <bugs-to>https://github.com/PilzDE/prbt_grippers/issues</bugs-to>
   </upstream>
