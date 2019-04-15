@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Quickly load variables from rosparam with good command line error checking."
 HOMEPAGE="https://github.com/davetcoleman/rosparam_shortcuts"
-SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/0.3.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/0.3.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
