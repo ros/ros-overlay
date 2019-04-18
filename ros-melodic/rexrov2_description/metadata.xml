@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The robot description files for the RexROV 2 underwater vehicle
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>Musa.Marcusso@de.bosch.com</email>
+      <name>Musa Morena Marcusso Manhaes</name>
+    </maintainer>
+    <bugs-to>https://github.com/uuvsimulator/rexrov2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
