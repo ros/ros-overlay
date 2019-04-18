@@ -5,7 +5,7 @@
     mrpt_icp_slam_2d contains a wrapper on MRPT's 2D ICP-SLAM algorithms.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Capture keyboard input from the local computer and publish it to ROS
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dan@digilabs.io</email>
+      <name>Dan Rose</name>
+    </maintainer>
+    <bugs-to>https://github.com/RoverRobotics/ros2-keystroke/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

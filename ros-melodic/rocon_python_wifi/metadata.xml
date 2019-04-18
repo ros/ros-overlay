@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The pythonwifi package is available through pypi, but not through a 
+    deb package. This is copy of the package suitable for use through the
+    ROS ecosystem.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/rocon_tools/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
