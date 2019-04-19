@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Autonomous mapping and navigation demos for the Clearpath Husky"
 HOMEPAGE="http://ros.org/wiki/husky_navigation"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
