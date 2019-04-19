@@ -6,18 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Metapackage for Clearpath Husky simulation software"
-HOMEPAGE="http://ros.org/wiki/husky_simulator"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Messages for Clearpath Husky"
+HOMEPAGE="http://ros.org/wiki/husky_msgs"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/husky_gazebo
+	ros-kinetic/message_runtime
+	ros-kinetic/std_msgs
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
+	ros-kinetic/message_generation
 "
 
 SLOT="0"

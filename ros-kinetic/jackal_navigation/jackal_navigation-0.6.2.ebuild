@@ -6,15 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Clearpath Husky URDF description"
-HOMEPAGE="http://ros.org/wiki/husky_description"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Launch files and code for autonomous navigation of the Jackal"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/${PN}/0.6.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/lms1xx
+	ros-kinetic/amcl
+	ros-kinetic/gmapping
+	ros-kinetic/map_server
+	ros-kinetic/move_base
 	ros-kinetic/urdf
 	ros-kinetic/xacro
 "

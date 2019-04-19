@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Visualization configuration for Clearpath Husky"
 HOMEPAGE="http://ros.org/wiki/husky_viz"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.2-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/${PN}/0.3.3-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

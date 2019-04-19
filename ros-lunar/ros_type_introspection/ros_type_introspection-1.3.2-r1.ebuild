@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize[...]"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/lunar/${PN}/1.3.1-0.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/lunar/${PN}/1.3.2-1.tar.gz -> ${PN}-lunar-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
