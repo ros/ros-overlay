@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="Capture keyboard input from the local computer and publish it to ROS"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/RoverRobotics/ros2-${PN}-release/archive/release/crystal/${PN}/0.2.0-1.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
+SRC_URI="https://github.com/RoverRobotics/ros2-${PN}-release/archive/release/crystal/${PN}/0.2.0-2.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
