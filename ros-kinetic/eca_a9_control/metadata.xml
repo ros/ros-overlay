@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Configuration and launch files to control the ECA A9 AUV
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>thp@eca.fr</email>
+      <name>Thibault Pelletier</name>
+    </maintainer>
+    <bugs-to>https://github.com/uuvsimulator/eca_a9/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The robot description files for the Desistek SAGA ROV underwater vehicle
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>emre.ege@desistek.com.tr</email>
+      <name>Emre Ege</name>
+    </maintainer>
+    <bugs-to>https://github.com/uuvsimulator/desistek_saga/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

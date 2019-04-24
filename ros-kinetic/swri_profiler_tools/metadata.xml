@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>preed@swri.org</email>
-      <name>P. J. Reed</name>
+      <email>elliot.johnson@swri.org</email>
+      <name>Elliot Johnson</name>
     </maintainer>
     <bugs-to>https://github.com/swri-robotics-gbp/swri_profiler/issues</bugs-to>
   </upstream>
