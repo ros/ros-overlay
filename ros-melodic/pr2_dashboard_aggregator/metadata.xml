@@ -5,7 +5,7 @@
     A simple script that aggregates all of the topics that a &quot;pr2_dashboard&quot; app might be interested in.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

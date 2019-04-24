@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Sample launch files to start a simulated LAUV in Gazebo.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>musa.marcusso@de.bosch.com</email>
+      <name>Musa Morena Marcusso Manhaes</name>
+    </maintainer>
+    <bugs-to>https://github.com/uuvsimulator/lauv_gazebo/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

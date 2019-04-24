@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Launch scripts for simulating the PR2 in <a href="http://ros.org/wiki/gazebo">gazebo</a>.
+    The simulation equivalent of pr2.launch is found here.
+    pr2_fingertip_pressure_contact_translator produces the same ROS topics as fingertip_pressure package for simulated PR2.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
+    </maintainer>
+    <bugs-to>https://github.com/pr2-gbp/pr2_simulator/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
