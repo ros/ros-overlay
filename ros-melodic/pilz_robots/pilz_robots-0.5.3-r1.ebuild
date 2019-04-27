@@ -6,18 +6,20 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="This package contains testing utilities used by Pilz packages."
-HOMEPAGE="https://wiki.ros.org/pilz_testutils"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="The metapackage"
+HOMEPAGE="http://ros.org/wiki/pilz_robots"
+SRC_URI="https://github.com/PilzDE/${PN}-release/archive/release/melodic/${PN}/0.5.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-melodic/prbt_ikfast_manipulator_plugin
+	ros-melodic/prbt_moveit_config
+	ros-melodic/prbt_support
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	ros-melodic/roscpp
 "
 
 SLOT="0"

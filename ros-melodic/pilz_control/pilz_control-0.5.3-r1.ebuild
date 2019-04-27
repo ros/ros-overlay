@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides a specialized joint_trajectory_controller that can be[...]"
 HOMEPAGE="http://ros.org/wiki/pilz_control"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
