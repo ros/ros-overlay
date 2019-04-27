@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Mobile Robot Programming Toolkit \(MRPT\) version 1.5.x"
 HOMEPAGE="https://www.mrpt.org/"
-SRC_URI="https://github.com/mrpt-ros-pkg-release/${PN}-release/archive/release/melodic/${PN}/1.5.7-6.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mrpt-ros-pkg-release/${PN}-release/archive/release/melodic/${PN}/1.5.7-7.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,6 +17,7 @@ RDEPEND="
 	ros-melodic/catkin
 	ros-melodic/octomap
 	media-libs/assimp
+	dev-libs/boost[python]
 	dev-cpp/eigen
 	virtual/ffmpeg
 	media-libs/freeglut
@@ -25,6 +26,8 @@ RDEPEND="
 	net-libs/libpcap
 	virtual/libudev
 	virtual/libusb:1
+	dev-lang/python
+	dev-python/numpy
 	sci-libs/suitesparse
 	x11-libs/wxGTK
 	x11-libs/wxGTK

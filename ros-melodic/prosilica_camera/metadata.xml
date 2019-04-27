@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Mobile Robot Programming Toolkit (MRPT) version 1.5.x
+    A ROS driver node for AVT/Prosilica Gigabit Ethernet (GigE) cameras.
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>joseluisblancoc@gmail.com</email>
-      <name>Jose-Luis Blanco-Claraco</name>
+      <email>namniart@gmail.com</email>
+      <name>Austin Hendrix</name>
     </maintainer>
-    <bugs-to>https://github.com/mrpt-ros-pkg/mrpt1/issues</bugs-to>
+    <bugs-to>https://github.com/ros-drivers-gbp/prosilica_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>

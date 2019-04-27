@@ -8,15 +8,17 @@ inherit ros-cmake
 
 DESCRIPTION="ROS package for Multiple objects detection, tracking and classification fro[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/praveen-palanisamy/${PN}-release/archive/release/melodic/${PN}/1.0.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/praveen-palanisamy/${PN}-release/archive/release/melodic/${PN}/1.0.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-melodic/cv_bridge
 	ros-melodic/pcl_ros
 	ros-melodic/roscpp
 	ros-melodic/sensor_msgs
+	ros-melodic/visualization_msgs
 	sci-libs/pcl
 "
 DEPEND="${RDEPEND}

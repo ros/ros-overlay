@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Mobile Robot Programming Toolkit (MRPT) version 1.5.x
+    ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>joseluisblancoc@gmail.com</email>
-      <name>Jose-Luis Blanco-Claraco</name>
+      <email>praveen.palanisamy@outlook.com</email>
+      <name>Praveen Palanisamy</name>
     </maintainer>
-    <bugs-to>https://github.com/mrpt-ros-pkg/mrpt1/issues</bugs-to>
+    <bugs-to>https://github.com/praveen-palanisamy/multi_object_tracking_lidar/issues</bugs-to>
   </upstream>
 </pkgmetadata>

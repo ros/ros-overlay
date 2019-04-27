@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Mobile Robot Programming Toolkit (MRPT) version 1.5.x
+    pr2_motor_diagnostic_tool
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>joseluisblancoc@gmail.com</email>
-      <name>Jose-Luis Blanco-Claraco</name>
+      <email>dave@cse.unr.edu</email>
+      <name>David Feil-Seifer</name>
     </maintainer>
-    <bugs-to>https://github.com/mrpt-ros-pkg/mrpt1/issues</bugs-to>
+    <bugs-to>https://github.com/pr2-gbp/pr2_self_test/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="Mechanical, kinematic and visual description\
   of the Pilz light weight ar[...]"
 HOMEPAGE="https://wiki.ros.org/prbt_support"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -20,7 +20,6 @@ RDEPEND="
 	ros-melodic/controller_manager
 	ros-melodic/joint_state_controller
 	ros-melodic/joint_state_publisher
-	ros-melodic/joint_trajectory_controller
 	ros-melodic/pilz_control
 	ros-melodic/prbt_hardware_support
 	ros-melodic/robot_state_publisher
