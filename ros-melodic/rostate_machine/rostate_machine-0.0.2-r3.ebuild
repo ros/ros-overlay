@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The rostate_machine package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/OUXT-Polaris/${PN}-release/archive/release/melodic/${PN}/0.0.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/OUXT-Polaris/${PN}-release/archive/release/melodic/${PN}/0.0.2-3.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

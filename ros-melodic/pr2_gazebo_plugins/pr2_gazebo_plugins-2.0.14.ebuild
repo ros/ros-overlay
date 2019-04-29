@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Gazebo Plugins for various PR2-specific sensors and actuators on the robot."
 HOMEPAGE="http://ros.org/wiki/pr2_gazebo_plugins"
-SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/${PN}/2.0.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/${PN}/2.0.14-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -38,7 +38,6 @@ RDEPEND="
 	ros-melodic/std_msgs
 	ros-melodic/tf
 	ros-melodic/urdf
-	sci-electronics/gazebo
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
