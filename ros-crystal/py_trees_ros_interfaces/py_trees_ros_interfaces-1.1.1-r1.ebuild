@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Interfaces used by py_trees_ros and py_trees_ros_tutorials."
 HOMEPAGE="http://ros.org/wiki/py_trees_ros_interfaces"
-SRC_URI="https://github.com/stonier/${PN}-release/archive/release/crystal/${PN}/1.1.0-0.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
+SRC_URI="https://github.com/stonier/${PN}-release/archive/release/crystal/${PN}/1.1.1-1.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

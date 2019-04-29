@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pr2_simulator package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/2.0.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/2.0.14-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
