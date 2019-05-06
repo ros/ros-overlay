@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This is an implementation of the EtherCAT master protocol for the PR2
+      robot based on the work done at Flanders' Mechatronics Technology Centre.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dave@cse.unr.edu</email>
+      <name>David Feil-Seifer</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/eml/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

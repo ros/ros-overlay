@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    COLLADA 1.5 Robot Models Repository
+
+    This repository is associated with the Open Robotics Automation Virtual Environment (OpenRAVE). The open and view them, install OpenRAVE and execute:
+    
+    openrave XXX.zae
+    
+    The robots are augmented with information as described by the &quot;OpenRAVE&quot; profile here:
+    http://openrave.programmingvision.com/index.php/Started:COLLADA
+    
+    *.zae files are zip archives which contain the raw collada 1.5 xml (dae).
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/openrave_planning/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
