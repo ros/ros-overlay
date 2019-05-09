@@ -5,13 +5,13 @@
     The cob_extern stack contains third party libraries needed for operating Care-O-bot. The packages are downloaded from the manufactorers website and not changed in any way.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fmw@ipa.fhg.de</email>
-      <name>Florian Weisshardt</name>
+      <email>richard.bormann@ipa.fraunhofer.de</email>
+      <name>Richard Bormann</name>
     </maintainer>
     <bugs-to>https://github.com/ipa320/cob_extern/issues</bugs-to>
   </upstream>

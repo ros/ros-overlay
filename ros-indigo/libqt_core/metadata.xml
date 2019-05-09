@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    libqt-core metapackage supporting qt4 and qt5
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mbries@swri.org</email>
+      <name>Matthew Bries</name>
+    </maintainer>
+    <bugs-to>https://github.com/swri-robotics-gbp/qt_metapackages/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

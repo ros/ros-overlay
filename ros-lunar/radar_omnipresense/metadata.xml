@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This is the radar driver package developed for the omnipresense radar module.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ghendricks@scu.edu</email>
+      <name>Garren Hendricks</name>
+    </maintainer>
+    <bugs-to>https://github.com/SCU-RSL-ROS/radar_omnipresense/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
