@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    cv_camera uses OpenCV capture object to capture camera image.
+  This supports camera_image and nodelet.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>t.ogura@gmail.com</email>
+      <name>Takashi Ogura</name>
+    </maintainer>
+    <bugs-to>https://github.com/OTL/cv_camera/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

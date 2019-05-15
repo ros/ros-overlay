@@ -6,7 +6,7 @@
 		It can be used as a safe and fast alternative to (s)printf and IOStreams.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -5,7 +5,7 @@
     This package wraps the libphidget21 to use it as a ROS dependency
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
