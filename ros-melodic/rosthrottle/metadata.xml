@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS Python package for throttling ROS topics programatically in Python. Sits on top of the 
+        ros_comm topic_tools throttle utility.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>carson.schubert14@gmail.com</email>
+      <name>Carson Schubert</name>
+    </maintainer>
+    <bugs-to>https://github.com/UTNuclearRoboticsPublic/rosthrottle/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
