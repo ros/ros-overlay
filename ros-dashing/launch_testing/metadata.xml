@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Helper scripts for tests that use the ROS launch tool.
+    A package to create tests which involve launch files and multiple processes.
   </longdescription>
   <maintainer type="person">
     <email>hallen@kns.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>pete.baughman@apex.ai</email>
+      <name>Pete Baughman</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/launch/issues</bugs-to>
   </upstream>
