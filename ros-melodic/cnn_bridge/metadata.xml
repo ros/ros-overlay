@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The cnn_bridge package take freeze graphs and publishes them as ROS messages
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ngolombek@gmail.com</email>
+      <name>Noam C. Golombek</name>
+    </maintainer>
+    <bugs-to>https://github.com/wew84/cnn_bridge/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
