@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>rein@ruvu.nl</email>
+      <email>rein@eurogroep.com</email>
       <name>Rein Appeldoorn</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/omron/issues</bugs-to>

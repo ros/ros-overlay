@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Basic test nodes for Pyros dynamic ROS interface
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>asmodehn@gmail.com</email>
+      <name>AlexV</name>
+    </maintainer>
+    <bugs-to>https://github.com/pyros-dev/pyros-test/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

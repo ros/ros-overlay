@@ -5,7 +5,7 @@
     RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

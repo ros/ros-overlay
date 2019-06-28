@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Messages definition for ETS2/ATS telemetry and configuration data
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>demartinoba@gmail.com</email>
+      <name>Bruno Demartino</name>
+    </maintainer>
+    <bugs-to>https://github.com/brunodmt/ets_ros2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
