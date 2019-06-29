@@ -7,7 +7,7 @@
     The other files in this package are intended for use in exotic situations that mostly arise when importing 3rdparty code.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

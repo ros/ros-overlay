@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Position feedback controller for simple linear motion of the fetch robot's end-effector.
+  </longdescription>
+  <maintainer type="person">
+    <email>hallen@kns.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dekent@gatech.edu</email>
+      <name>David Kent</name>
+    </maintainer>
+    <bugs-to>https://github.com/gt-rail/fetch_simple_linear_controller/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

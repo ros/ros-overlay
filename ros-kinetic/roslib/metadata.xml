@@ -6,7 +6,7 @@
     roslib contains many of the common data structures and tools that are shared across ROS client library implementations.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hallen@kns.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
