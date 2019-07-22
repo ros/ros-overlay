@@ -5,7 +5,7 @@
     AprilTag message definitions
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
@@ -13,6 +13,6 @@
       <email>Rauch.Christian@gmx.de</email>
       <name>Christian Rauch</name>
     </maintainer>
-    <bugs-to>https://github.com/christianrauch/apriltag_ros/issues</bugs-to>
+    <bugs-to>https://github.com/christianrauch/apriltag_msgs/issues</bugs-to>
   </upstream>
 </pkgmetadata>
