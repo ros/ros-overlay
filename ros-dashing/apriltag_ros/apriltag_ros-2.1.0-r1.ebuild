@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="AprilTag detection node"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/christianrauch/${PN}-release/archive/release/dashing/${PN}/2.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/christianrauch/${PN}-release/archive/release/dashing/${PN}/2.1.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
