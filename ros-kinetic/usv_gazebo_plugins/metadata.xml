@@ -6,7 +6,7 @@
     Originaly copied from https://github.com/bsb808/usv_gazebo_plugins
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
@@ -14,6 +14,6 @@
       <email>caguero@osrfoundation.org</email>
       <name>Carlos Aguero</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/vmrc/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/vrx/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -5,7 +5,7 @@
     Base implementation for CANopen chains node with support for management services and diagnostics
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

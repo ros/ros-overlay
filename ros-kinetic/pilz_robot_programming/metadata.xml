@@ -5,7 +5,7 @@
     An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
