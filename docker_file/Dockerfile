@@ -4,7 +4,7 @@ ENV FEATURES sign
 ENV PORTAGE_GPG_DIR ~/.gnupg/
 
 RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
-    eselect profile set 12 && emerge app-crypt/gnupg \
+    eselect profile set 5 && emerge app-crypt/gnupg \
     dev-vcs/git --autounmask-write && \
     mkdir -p /usr/local/portage && \
     printf '\nPORTDIR_OVERLAY="/usr/local/portage"\n' >> /etc/portage/make.conf && \
@@ -20,12 +20,10 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     eselect profile set default/linux/amd64/17.0/desktop && \
     emaint sync -r ros-overlay && \
     emerge --oneshot portage && \
-    echo "ros-indigo/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-indigo/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-kinetic/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "ros-kinetic/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-lunar/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
-    echo "ros-lunar/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-melodic/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils && \
+    echo "ros-melodic/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils && \
     echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils && \
     echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils && \
     echo "dev-python/PyQt5 webkit" >> /etc/portage/package.use/iputils && \
@@ -36,6 +34,7 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     emerge -C openssl && \
     printf 'USE="${USE} fontconfig ruby_targets_ruby25"\n' >> \
     /etc/portage/make.conf && \
+    emerge repoman && \
     emerge --jobs openssl dev-libs/boost dev-util/cmake sys-devel/llvm-common \
     dev-qt/qtchooser dev-libs/icu dev-util/ninja \
     dev-python/nose dev-python/numpy dev-python/docutils \
@@ -60,20 +59,19 @@ RUN mkdir -p /usr/portage/gentoo && emerge-webrsync && emerge --sync && \
     dev-perl/IO-HTML dev-perl/Encode-Locale \
     dev-qt/qtcore dev-cpp/gtest dev-libs/libpthread-stubs \
     net-nds/openldap media-libs/openjpeg \
-    x11-base/xcb-proto x11-libs/xtrans x11-libs/libICE x11-libs/libSM \
     dev-libs/poco dev-libs/log4cxx dev-libs/apr-util app-arch/lz4 \
     dev-python/pillow dev-python/paramiko dev-python/pynacl dev-perl/Socket6 \
     dev-perl/XML-NamespaceSupport dev-perl/HTTP-Negotiate \
     dev-perl/HTTP-Cookies dev-perl/HTTP-Daemon dev-python/pycurl \
     dev-python/sip dev-python/backports dev-python/subprocess32 \
     dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash \
-    app-portage/gentoolkit x11-libs/libX11 media-libs/assimp \
-    dev-qt/qtxml x11-misc/util-macros app-portage/repoman \
+    app-portage/gentoolkit media-libs/assimp \
+    dev-qt/qtxml app-portage/repoman \
     x11-misc/util-macros dev-libs/tinyxml2 \
     virtual/perl-IO-Socket-IP virtual/perl-Time-HiRes dev-perl/XML-XPath \
     dev-perl/Text-Iconv dev-cpp/gtest dev-db/sqlite \
-    dev-lang/swig sys-libs/binutils-libs \
-    && emerge bash-completion \
+    dev-lang/swig sys-libs/binutils-libs bash-completion \
+    --keep-going \
     && emerge @preserved-rebuild \
     && rm -f /usr/portage/distfiles/*.tar* \
     && rm -f /usr/portage/distfiles/*.zip* \
