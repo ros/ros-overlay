@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains a ROS wrapper for OpenSlam's Gmapping. 
+  The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), 
+  as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy
+  grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/slam_gmapping/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -5,7 +5,7 @@
     Generic CAN interface description with helpers for filtering and driver implementation. Further a socketcan implementation based on boost::asio is included.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

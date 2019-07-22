@@ -5,7 +5,7 @@
     The rc_visard_driver provides data from a Roboception rc_visard 3D sensor on several ROS topics.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

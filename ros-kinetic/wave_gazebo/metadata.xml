@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains Gazebo media, models and worlds for simulating
+    water waves and dynamics for surface vessels. There are ROS 
+    launch scripts that may be used to launch a Gazebo session and
+    load a world and models using `roslaunch`.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>rhys.mainwaring@me.com</email>
+      <name>Rhys Mainwaring</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/vrx/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

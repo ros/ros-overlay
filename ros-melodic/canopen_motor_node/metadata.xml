@@ -5,7 +5,7 @@
     canopen_chain_node specialization for handling of canopen_402 motor devices. It facilitates interface abstraction with ros_control.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -5,7 +5,7 @@
     franka_description contains URDF files and meshes of Franka Emika robots
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
