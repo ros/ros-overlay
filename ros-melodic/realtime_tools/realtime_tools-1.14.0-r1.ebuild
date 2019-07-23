@@ -9,14 +9,18 @@ inherit ros-cmake
 DESCRIPTION="Contains a set of tools that can be used from a hard\
 	realtime thread, [...]"
 HOMEPAGE="http://ros.org/wiki/realtime_tools"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.14.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
+	ros-melodic/actionlib
 	ros-melodic/roscpp
-	ros-melodic/rospy
+	test? ( ros-melodic/actionlib )
+	test? ( ros-melodic/rostest )
+	test? ( ros-melodic/rosunit )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Contains a set of tools that can be used from a hard
-    realtime thread, without breaking the realtime behavior.
+    A common drone teleop interface for all drone exercises in the JdeRobot Robotics Academy
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>bence.magyar.robotics@gmail.com</email>
-      <name>Bence Magyar</name>
+      <email>nikhilvkhedekar@gmail.com</email>
+      <name>Nikhil Khedekar</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/realtime_tools/issues</bugs-to>
+    <bugs-to>https://github.com/JdeRobot/drones/issues</bugs-to>
   </upstream>
 </pkgmetadata>
