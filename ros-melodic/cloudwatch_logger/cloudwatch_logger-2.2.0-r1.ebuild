@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="CloudWatch Logger node for publishing logs to AWS CloudWatch Logs"
 HOMEPAGE="http://wiki.ros.org/cloudwatch_logger"
-SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/melodic/${PN}/2.1.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/melodic/${PN}/2.2.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -19,7 +19,11 @@ RDEPEND="
 	ros-melodic/aws_ros1_common
 	ros-melodic/cloudwatch_logs_common
 	ros-melodic/roscpp
+	ros-melodic/std_msgs
+	ros-melodic/std_srvs
 	test? ( ros-melodic/rostest )
+	test? ( dev-cpp/gtest )
+	test? ( dev-cpp/gtest )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
