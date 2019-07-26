@@ -5,7 +5,7 @@
     Package for creating a hardware interface to the robot using the EtherCAT motor controller/driver
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

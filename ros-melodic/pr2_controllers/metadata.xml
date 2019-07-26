@@ -5,7 +5,7 @@
     Contains the controllers that run in realtime on the PR2 and supporting packages.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
