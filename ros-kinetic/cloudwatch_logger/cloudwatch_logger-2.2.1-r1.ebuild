@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="CloudWatch Logger node for publishing logs to AWS CloudWatch Logs"
 HOMEPAGE="http://wiki.ros.org/cloudwatch_logger"
-SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/kinetic/${PN}/2.2.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/kinetic/${PN}/2.2.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Contains the controllers that run in realtime on the PR2 and supporting pac[...]"
 HOMEPAGE="http://ros.org/wiki/pr2_controllers"
-SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/1.10.15-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/1.10.16-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

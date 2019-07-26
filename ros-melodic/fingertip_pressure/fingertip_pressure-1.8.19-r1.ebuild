@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package provides access to the PR2 fingertip pressure sensors. This in[...]"
 HOMEPAGE="http://ros.org/wiki/fingertip_pressure"
-SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/${PN}/1.8.18-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/${PN}/1.8.19-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

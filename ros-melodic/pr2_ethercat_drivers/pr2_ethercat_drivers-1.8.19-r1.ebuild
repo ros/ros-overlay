@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="This stack contains drivers for the ethercat system and the peripherals\
   [...]"
 HOMEPAGE="http://ros.org/wiki/pr2_ethercat_drivers"
-SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/1.8.18-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/pr2-gbp/${PN}-release/archive/release/melodic/${PN}/1.8.19-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="( BSD GPL-1 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
