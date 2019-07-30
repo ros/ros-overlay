@@ -10,7 +10,7 @@ DESCRIPTION="GenICam/GigE Vision Convenience Layer.\
 \
 	  This package combines the R[...]"
 HOMEPAGE="https://github.com/roboception/rc_genicam_api"
-SRC_URI="https://github.com/roboception-gbp/${PN}-release/archive/release/melodic/${PN}/2.2.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/roboception-gbp/${PN}-release/archive/release/melodic/${PN}/2.2.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/${PN}/0.1.1-1 -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/${PN}/0.2.0-1 -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

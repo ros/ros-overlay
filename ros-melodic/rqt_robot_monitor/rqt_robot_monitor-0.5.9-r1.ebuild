@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="rqt_robot_monitor displays diagnostics_agg topics messages that\
    are pub[...]"
 HOMEPAGE="http://wiki.ros.org/rqt_robot_monitor"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.5.8-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.5.9-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="The class_loader package is a ROS-independent package for loading plugins d[...]"
 HOMEPAGE="http://ros.org/wiki/class_loader"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.3.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.3.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
