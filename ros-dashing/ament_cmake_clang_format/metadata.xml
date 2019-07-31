@@ -5,7 +5,7 @@
     The CMake API for ament_clang_format to lint C / C++ code using clang format.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="The pluginlib package provides tools for writing and dynamically loading pl[...]"
 HOMEPAGE="http://www.ros.org/wiki/pluginlib"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.3.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.3.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

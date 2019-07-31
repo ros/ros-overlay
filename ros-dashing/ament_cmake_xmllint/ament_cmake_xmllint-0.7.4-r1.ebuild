@@ -6,19 +6,21 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="The CMake API for ament_lint_cmake to lint CMake code using cmakelint."
+DESCRIPTION="The CMake API for ament_xmllint to check XML file using xmmlint."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.3-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
+	test? ( ros-dashing/ament_cmake_copyright )
+	test? ( ros-dashing/ament_cmake_lint_cmake )
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake_core
 	ros-dashing/ament_cmake_test
-	ros-dashing/ament_lint_cmake
 "
 
 SLOT="0"

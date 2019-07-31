@@ -5,7 +5,7 @@
     Package containing utility code for C++. Currently only Clang thread safety annotation macros
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
