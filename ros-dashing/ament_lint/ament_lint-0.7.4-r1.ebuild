@@ -4,11 +4,11 @@
 EAPI=6
 PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ament-cmake
+inherit ament-python
 
-DESCRIPTION="The auto-magic functions for ease to use of the ament linters in CMake."
+DESCRIPTION="Providing common API for ament linter packages."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.3-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -16,8 +16,6 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "
 DEPEND="${RDEPEND}
-	ros-dashing/ament_cmake_core
-	ros-dashing/ament_cmake_test
 "
 
 SLOT="0"

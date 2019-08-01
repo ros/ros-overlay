@@ -5,7 +5,7 @@
     The CMake API for ament_lint_cmake to lint CMake code using cmakelint.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
