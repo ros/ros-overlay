@@ -5,7 +5,7 @@
     Provides a cmake config for the default version of Gazebo for the ROS distribution.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
