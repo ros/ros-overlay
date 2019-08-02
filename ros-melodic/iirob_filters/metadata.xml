@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The iirob_filters package implements following filters:
+      1) Low-Pass
+      2) Moving Mean
+      3) Gravity Compensation (used for force-torque sensors)
+      4) Threshold Filter
+      5) Kalman Filter
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>denis.stogl@kit.edu</email>
+      <name>Denis Štogl</name>
+    </maintainer>
+    <bugs-to>https://github.com/KITrobotics/iirob_filters/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
