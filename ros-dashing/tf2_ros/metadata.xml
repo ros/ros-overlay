@@ -5,7 +5,7 @@
     This package contains the ROS bindings for the tf2 library, for both Python and C++.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

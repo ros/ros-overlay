@@ -5,7 +5,7 @@
     Layer encapsulating ROS middleware to allow rosbag2 to be used with or without middleware
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
