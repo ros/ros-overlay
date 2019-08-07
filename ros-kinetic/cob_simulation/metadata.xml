@@ -5,7 +5,7 @@
     The cob_simulation stack includes packages to work with Care-O-bot within simulation environments, e.g. gazebo.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
