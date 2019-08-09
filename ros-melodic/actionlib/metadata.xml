@@ -8,13 +8,13 @@
     the resulting point cloud, detecting the handle of a door, etc.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mikael@osrfoundation.org</email>
-      <name>Mikael Arguedas</name>
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/actionlib/issues</bugs-to>
   </upstream>
