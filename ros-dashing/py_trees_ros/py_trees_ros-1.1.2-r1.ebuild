@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="ROS2 extensions and behaviours for py_trees."
 HOMEPAGE="http://ros.org/wiki/py_trees"
-SRC_URI="https://github.com/stonier/${PN}-release/archive/release/dashing/${PN}/1.1.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/stonier/${PN}-release/archive/release/dashing/${PN}/1.1.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
