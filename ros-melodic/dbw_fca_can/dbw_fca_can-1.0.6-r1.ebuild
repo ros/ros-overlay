@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Drive-by-wire interface to the Dataspeed Inc. Lincoln MKZ DBW kit"
+DESCRIPTION="Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit"
 HOMEPAGE="http://dataspeedinc.com"
-SRC_URI="https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/${PN}/1.1.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/${PN}/1.0.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -18,8 +18,8 @@ RDEPEND="
 	ros-melodic/can_msgs
 	ros-melodic/dataspeed_can_usb
 	ros-melodic/dataspeed_ulc_can
-	ros-melodic/dbw_mkz_description
-	ros-melodic/dbw_mkz_msgs
+	ros-melodic/dbw_fca_description
+	ros-melodic/dbw_fca_msgs
 	ros-melodic/geometry_msgs
 	ros-melodic/nodelet
 	ros-melodic/roscpp
@@ -31,7 +31,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	ros-melodic/dataspeed_can_msg_filters
 "
 
 SLOT="0"

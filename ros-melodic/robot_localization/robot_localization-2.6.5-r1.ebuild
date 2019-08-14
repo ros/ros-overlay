@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Provides nonlinear state estimation through sensor fusion of an abritrary n[...]"
 HOMEPAGE="http://ros.org/wiki/robot_localization"
-SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/melodic/${PN}/2.6.4-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/cra-ros-pkg/${PN}-release/archive/release/melodic/${PN}/2.6.5-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
