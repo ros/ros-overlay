@@ -8,26 +8,16 @@ inherit ros-cmake
 
 DESCRIPTION="Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit"
 HOMEPAGE="http://dataspeedinc.com"
-SRC_URI="https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/${PN}/1.0.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/DataspeedInc-release/${PN}_ros-release/archive/release/melodic/${PN}/1.0.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-IUSE="test"
 RDEPEND="
-	ros-melodic/can_msgs
-	ros-melodic/dataspeed_can_usb
-	ros-melodic/dataspeed_ulc_can
+	ros-melodic/dbw_fca_can
 	ros-melodic/dbw_fca_description
+	ros-melodic/dbw_fca_joystick_demo
 	ros-melodic/dbw_fca_msgs
-	ros-melodic/geometry_msgs
-	ros-melodic/nodelet
-	ros-melodic/roscpp
-	ros-melodic/roslaunch
-	ros-melodic/rospy
-	ros-melodic/sensor_msgs
-	ros-melodic/std_msgs
-	test? ( ros-melodic/roslaunch )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
