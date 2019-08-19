@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package allows to use the Robot One Framework with ROS. The supported features of the framework includes the simulator and connection with the physical robots
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>alexander.ti.ufv@gmail.com</email>
+      <name>Alexander S. Barbosa</name>
+    </maintainer>
+    <bugs-to>https://github.com/AlexanderSilvaB/robot-one-ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
