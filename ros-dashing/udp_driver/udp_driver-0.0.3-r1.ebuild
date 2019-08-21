@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="A template class and associated utilities which encapsulate basic reading f[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/${PN}/0.0.2-2.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/${PN}/0.0.3-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -19,6 +19,7 @@ RDEPEND="
 	ros-dashing/rclcpp_lifecycle
 	ros-dashing/std_msgs
 	test? ( ros-dashing/ament_cmake_gtest )
+	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
 	dev-libs/boost[python]
 "
