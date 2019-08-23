@@ -6,22 +6,19 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-python
 
-DESCRIPTION="A package to create tests which involve launch files and multiple processes."
+DESCRIPTION="The ROS launch tool."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/launch-release/archive/release/dashing/${PN}/0.8.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.8.5-3.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/ament_index_python
-	ros-dashing/launch
+	ros-dashing/osrf_pycommon
 	test? ( ros-dashing/ament_copyright )
 	test? ( ros-dashing/ament_flake8 )
 	test? ( ros-dashing/ament_pep257 )
-	test? ( ros-dashing/launch )
-	test? ( dev-python/mock )
 	test? ( dev-python/pytest )
 "
 DEPEND="${RDEPEND}

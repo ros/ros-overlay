@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 inherit ament-python
 
 DESCRIPTION="Interface between Webots and ROS2"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/omichel/${PN}-release/archive/release/crystal/${PN}/0.0.1-2.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
+HOMEPAGE="http://wiki.ros.org/webots_ros2"
+SRC_URI="https://github.com/cyberbotics/${PN}-release/archive/release/crystal/${PN}/0.0.2-1.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -16,12 +16,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
 	ros-crystal/builtin_interfaces
-	ros-crystal/control_msgs
 	ros-crystal/rclpy
-	ros-crystal/rosgraph_msgs
-	ros-crystal/sensor_msgs
 	ros-crystal/std_msgs
-	ros-crystal/trajectory_msgs
+	ros-crystal/webots_ros2_core
+	ros-crystal/webots_ros2_examples
+	ros-crystal/webots_ros2_universal_robot
 	test? ( ros-crystal/ament_copyright )
 	test? ( ros-crystal/ament_flake8 )
 	test? ( ros-crystal/ament_pep257 )

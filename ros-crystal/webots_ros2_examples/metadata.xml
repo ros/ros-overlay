@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Interface between Webots and ROS2
+    Minimal example showing how to control a robot with ROS2 in Webots.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
