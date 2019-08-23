@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="A package providing cmake functions for running launch tests from the build."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/launch-release/archive/release/dashing/${PN}/0.8.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/launch-release/archive/release/dashing/${PN}/0.8.5-3.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
