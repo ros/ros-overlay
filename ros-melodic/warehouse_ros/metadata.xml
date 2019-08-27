@@ -5,13 +5,13 @@
     Persistent storage of ROS messages
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>isucan@google.com</email>
-      <name>Ioan Sucan</name>
+      <email>moveit_releasers@googlegroups.com</email>
+      <name>MoveIt! Release Team</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/warehouse_ros/issues</bugs-to>
   </upstream>
