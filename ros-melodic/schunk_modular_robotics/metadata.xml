@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This stack includes packages that provide access to the Schunk hardware through ROS messages, services and actions.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>bfb@ipa.fhg.de</email>
+      <name>Bruno Brito</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/schunk_modular_robotics/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
