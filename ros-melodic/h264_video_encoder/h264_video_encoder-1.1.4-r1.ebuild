@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS1 H264 encoder node"
 HOMEPAGE="http://wiki.ros.org/h264_video_encoder"
-SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/melodic/${PN}/1.1.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/melodic/${PN}/1.1.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
 	ros-melodic/aws_ros1_common
+	ros-melodic/h264_encoder_core
 	ros-melodic/image_transport
 	ros-melodic/image_transport_plugins
 	ros-melodic/kinesis_video_msgs
@@ -27,7 +28,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	ros-melodic/h264_encoder_core
 	ros-melodic/message_generation
 "
 

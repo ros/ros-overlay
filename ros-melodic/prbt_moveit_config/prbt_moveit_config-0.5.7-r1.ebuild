@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="An automatically generated package with all the configuration and launch fi[...]"
 HOMEPAGE="https://wiki.ros.org/prbt_moveit_config"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.7-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

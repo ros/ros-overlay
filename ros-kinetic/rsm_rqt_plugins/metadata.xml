@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The rsm_rqt_plugins package includes the Robot Statemachine GUI plugin for rqt
+    The rsm_rqt_plugins package includes the Robot
+		Statemachine GUI plugin for rqt
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,7 +12,7 @@
   <upstream>
     <maintainer status="active">
       <email>marco.stb1993@gmail.com</email>
-      <name>marco</name>
+      <name>Marco Steinbrink</name>
     </maintainer>
     <bugs-to>https://github.com/MarcoStb1993/robot_statemachine/issues</bugs-to>
   </upstream>
