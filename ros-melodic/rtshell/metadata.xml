@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The robot_statemachine package bundles all functionalities and the GUI
+    <p>Shell commands for managing RT-Middleware running on OpenRTM-aist.</p>
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>marco.stb1993@gmail.de</email>
-      <name>Marco Steinbrink</name>
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
     </maintainer>
-    <bugs-to>https://github.com/MarcoStb1993/robot_statemachine/issues</bugs-to>
+    <bugs-to>https://github.com/tork-a/rtshell/issues</bugs-to>
   </upstream>
 </pkgmetadata>

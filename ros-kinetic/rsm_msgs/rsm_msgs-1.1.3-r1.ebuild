@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The rsm_msgs package features messages and services for the Robot Statemachine"
 HOMEPAGE="https://github.com/MarcoStb1993/robot_statemachine"
-SRC_URI="https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/kinetic/${PN}/1.1.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/kinetic/${PN}/1.1.3-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

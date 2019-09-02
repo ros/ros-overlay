@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The robot_statemachine package bundles all functionalities and the GUI"
 HOMEPAGE="https://github.com/MarcoStb1993/robot_statemachine"
-SRC_URI="https://github.com/MarcoStb1993/${PN}-release/archive/release/kinetic/${PN}/1.1.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/MarcoStb1993/${PN}-release/archive/release/kinetic/${PN}/1.1.3-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
