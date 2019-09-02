@@ -6,14 +6,16 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-python
 
-DESCRIPTION="Providing common API for ament linter packages."
+DESCRIPTION="The ability to check code for style and syntax conventions with flake8."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.8-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.9-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-dashing/ament_lint
+	dev-python/flake8
 "
 DEPEND="${RDEPEND}
 "

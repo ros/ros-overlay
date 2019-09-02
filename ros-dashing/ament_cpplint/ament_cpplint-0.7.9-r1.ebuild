@@ -9,7 +9,7 @@ inherit ament-python
 DESCRIPTION="The ability to check code against the Google style conventions using\
 	c[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.8-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.9-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="( Apache-2.0 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
