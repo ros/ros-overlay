@@ -4,20 +4,20 @@
 EAPI=6
 PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ament-python
+inherit ament-cmake
 
-DESCRIPTION="The ability to perform static code analysis on C/C++ code using Cppcheck\
- [...]"
+DESCRIPTION="The auto-magic functions for ease to use of the ament linters in CMake."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.8-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/${PN}/0.7.9-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-util/cppcheck
 "
 DEPEND="${RDEPEND}
+	ros-dashing/ament_cmake_core
+	ros-dashing/ament_cmake_test
 "
 
 SLOT="0"
