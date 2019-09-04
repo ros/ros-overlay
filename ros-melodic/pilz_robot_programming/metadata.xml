@@ -5,13 +5,13 @@
     An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ros@pilz.de</email>
-      <name>Pilz GmbH and Co. KG</name>
+      <email>a.gutenkunst@pilz.de</email>
+      <name>Alexander Gutenkunst</name>
     </maintainer>
     <bugs-to>https://github.com/PilzDE/pilz_industrial_motion/issues</bugs-to>
   </upstream>
