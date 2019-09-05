@@ -5,13 +5,13 @@
     Server Side tools for Authorization and Authentication of ROS Clients
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>rctoris@wpi.edu</email>
-      <name>Russell Toris</name>
+      <email>rein@eurotec.com</email>
+      <name>Rein Appeldoorn</name>
     </maintainer>
     <bugs-to>https://github.com/gt-rail/rosauth/issues</bugs-to>
   </upstream>
