@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    CloudWatch Logger node for publishing logs to AWS CloudWatch Logs
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-contributions@amazon.com</email>
+      <name>AWS RoboMaker</name>
+    </maintainer>
+    <bugs-to>https://github.com/aws-gbp/cloudwatch_logger/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
