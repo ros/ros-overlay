@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS models for HEBI components
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>matt@hebirobotics.com</email>
+      <name>Matthew Tesch</name>
+    </maintainer>
+    <bugs-to>https://github.com/HebiRobotics/hebi_description/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
