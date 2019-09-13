@@ -6,9 +6,10 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="The ROS package for the RobotX competition running in Gazebo."
-HOMEPAGE="http://wiki.ros.org/vrx_gazebo"
-SRC_URI="https://github.com/ros-gbp/vrx-release/archive/release/kinetic/${PN}/1.2.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Gazebo plugins for simulating Unmanned Surface Vehicles\
+	Originaly copi[...]"
+HOMEPAGE="http://wiki.ros.org/usv_gazebo_plugins"
+SRC_URI="https://github.com/ros-gbp/vrx-release/archive/release/kinetic/${PN}/1.2.4-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -16,14 +17,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/gazebo_dev
 	ros-kinetic/gazebo_ros
-	ros-kinetic/geographic_msgs
-	ros-kinetic/joy
-	ros-kinetic/joy_teleop
 	ros-kinetic/message_runtime
+	ros-kinetic/roscpp
 	ros-kinetic/std_msgs
-	ros-kinetic/wamv_gazebo
-	ros-kinetic/wave_gazebo
+	ros-kinetic/wave_gazebo_plugins
 	ros-kinetic/xacro
+	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
