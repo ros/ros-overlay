@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Launch prbt robot in an empty Gazebo world.
+    ROS models for HEBI components
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>a.gutenkunst@pilz.de</email>
-      <name>Alexander Gutenkunst</name>
+      <email>matt@hebirobotics.com</email>
+      <name>Matthew Tesch</name>
     </maintainer>
-    <bugs-to>https://github.com/PilzDE/pilz_robots/issues</bugs-to>
+    <bugs-to>https://github.com/HebiRobotics/hebi_description/issues</bugs-to>
   </upstream>
 </pkgmetadata>

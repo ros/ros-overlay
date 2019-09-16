@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="An automatically generated package with all the configuration and launch fi[...]"
 HOMEPAGE="https://wiki.ros.org/prbt_moveit_config"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/${PN}/0.4.10-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/${PN}/0.4.11-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
