@@ -8,21 +8,21 @@ inherit ros-cmake
 
 DESCRIPTION="flexbe_widget implements some smaller scripts for the behavior engine."
 HOMEPAGE="http://ros.org/wiki/flexbe_widget"
-SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/${PN}/1.2.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/${PN}/1.2.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/flexbe_core
-	ros-kinetic/flexbe_msgs
-	ros-kinetic/rospy
-	ros-kinetic/smach_ros
+	ros-melodic/flexbe_core
+	ros-melodic/flexbe_msgs
+	ros-melodic/rospy
+	ros-melodic/smach_ros
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

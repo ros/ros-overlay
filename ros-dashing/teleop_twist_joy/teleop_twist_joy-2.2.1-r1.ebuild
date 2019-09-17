@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Generic joystick teleop for twist robots."
 HOMEPAGE="http://wiki.ros.org/teleop_twist_joy"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.2.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.2.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

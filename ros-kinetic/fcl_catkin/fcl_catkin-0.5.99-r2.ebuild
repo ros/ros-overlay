@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="fcl_catkin"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/kinetic/${PN}/0.5.98-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/kinetic/${PN}/0.5.99-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
