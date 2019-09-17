@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Provides templates and examples for integrating the WAM-V model into gazebo[...]"
 HOMEPAGE="http://wiki.ros.org/wamv_gazebo"
-SRC_URI="https://github.com/ros-gbp/vrx-release/archive/release/kinetic/${PN}/1.2.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/vrx-release/archive/release/kinetic/${PN}/1.2.4-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

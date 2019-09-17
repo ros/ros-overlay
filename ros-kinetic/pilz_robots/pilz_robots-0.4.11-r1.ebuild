@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The metapackage"
 HOMEPAGE="http://ros.org/wiki/pilz_robots"
-SRC_URI="https://github.com/PilzDE/${PN}-release/archive/release/kinetic/${PN}/0.4.10-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/${PN}-release/archive/release/kinetic/${PN}/0.4.11-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

@@ -6,10 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Doron Hirshberg\
-  Library for capturing data from the Intel\(R\) RealSense[...]"
+DESCRIPTION="Library for capturing data from the Intel\(R\) RealSense\(TM\) SR300, D400 [...]"
 HOMEPAGE="https://github.com/IntelRealSense/librealsense/"
-SRC_URI="https://github.com/IntelRealSense/${PN}-release/archive/release/kinetic/${PN}/2.25.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/IntelRealSense/${PN}-release/archive/release/kinetic/${PN}/2.28.0-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
