@@ -6,22 +6,25 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="flexbe_mirror implements functionality to remotely mirror an executed behavior."
-HOMEPAGE="http://ros.org/wiki/flexbe_mirror"
-SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/${PN}/1.2.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="flexbe_testing provides a framework for unit testing states."
+HOMEPAGE="http://ros.org/wiki/flexbe_testing"
+SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/${PN}/1.2.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-melodic/flexbe_core
 	ros-melodic/flexbe_msgs
-	ros-melodic/flexbe_widget
 	ros-melodic/rospy
 	ros-melodic/smach_ros
+	test? ( ros-melodic/rosunit )
+	test? ( ros-melodic/std_msgs )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
+	ros-melodic/rostest
 "
 
 SLOT="0"

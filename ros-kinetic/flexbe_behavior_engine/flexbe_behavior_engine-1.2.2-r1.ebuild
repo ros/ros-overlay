@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A meta-package to aggregate all the FlexBE packages"
 HOMEPAGE="http://ros.org/wiki/flexbe"
-SRC_URI="https://github.com/FlexBE/${PN}-release/archive/release/kinetic/${PN}/1.2.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/FlexBE/${PN}-release/archive/release/kinetic/${PN}/1.2.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

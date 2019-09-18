@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="fcl_catkin"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/melodic/${PN}/0.5.98-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/wxmerkt/${PN}-release/archive/release/melodic/${PN}/0.5.99-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

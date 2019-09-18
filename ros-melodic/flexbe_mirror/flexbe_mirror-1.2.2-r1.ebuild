@@ -6,23 +6,22 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="flexbe_msgs provides the messages used by FlexBE."
-HOMEPAGE="http://ros.org/wiki/flexbe_msgs"
-SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/${PN}/1.2.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="flexbe_mirror implements functionality to remotely mirror an executed behavior."
+HOMEPAGE="http://ros.org/wiki/flexbe_mirror"
+SRC_URI="https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/${PN}/1.2.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/actionlib
-	ros-melodic/actionlib_msgs
-	ros-melodic/message_runtime
+	ros-melodic/flexbe_core
+	ros-melodic/flexbe_msgs
+	ros-melodic/flexbe_widget
 	ros-melodic/rospy
 	ros-melodic/smach_ros
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	ros-melodic/message_generation
 "
 
 SLOT="0"
