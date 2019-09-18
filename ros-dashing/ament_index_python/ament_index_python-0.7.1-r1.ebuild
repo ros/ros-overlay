@@ -6,22 +6,18 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-python
 
-DESCRIPTION="A mouse teleop tool for holonomic mobile robots."
+DESCRIPTION="Python API to access the ament resource index."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/${PN}/1.0.0-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ament_index-release/archive/release/dashing/${PN}/0.7.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/geometry_msgs
-	ros-dashing/rclpy
-	test? ( ros-dashing/ament_copyright )
 	test? ( ros-dashing/ament_flake8 )
 	test? ( ros-dashing/ament_pep257 )
-	test? ( ros-dashing/ament_xmllint )
-	dev-python/numpy
+	test? ( dev-python/pytest )
 "
 DEPEND="${RDEPEND}
 "

@@ -8,13 +8,14 @@ inherit ament-python
 
 DESCRIPTION="A \(to be\) generic joystick interface to control a robot"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/${PN}/1.0.0-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/${PN}/1.0.1-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
+	ros-dashing/control_msgs
 	ros-dashing/rclpy
 	ros-dashing/sensor_msgs
 	ros-dashing/teleop_tools_msgs

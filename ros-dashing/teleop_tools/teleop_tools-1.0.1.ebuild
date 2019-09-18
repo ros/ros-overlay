@@ -6,18 +6,17 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="C++ API to access the ament resource index."
+DESCRIPTION="A set of generic teleoperation tools for any robot."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ament_index-release/archive/release/dashing/${PN}/0.7.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.1-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-IUSE="test"
 RDEPEND="
-	test? ( ros-dashing/ament_cmake_gtest )
-	test? ( ros-dashing/ament_lint_auto )
-	test? ( ros-dashing/ament_lint_common )
+	ros-dashing/joy_teleop
+	ros-dashing/key_teleop
+	ros-dashing/teleop_tools_msgs
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake

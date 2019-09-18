@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="The parser for the manifest files in the ament buildsystem."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
