@@ -5,7 +5,7 @@
     A simulation interface for a hardware interface for ros_control, and loads default joint values from SRDF
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
