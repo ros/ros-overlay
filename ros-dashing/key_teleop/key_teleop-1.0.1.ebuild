@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="A text-based interface to send a robot movement commands."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/${PN}/1.0.0-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/${PN}/1.0.1-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
