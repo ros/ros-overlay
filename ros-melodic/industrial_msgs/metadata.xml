@@ -6,12 +6,12 @@
 	definitions. This package is part of the ROS-Industrial program.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>sedwards@swri.org</email>
+      <email>shaun.edwards@gmail.com</email>
       <name>Shaun Edwards</name>
     </maintainer>
     <bugs-to>https://github.com/ros-industrial/industrial_core/issues</bugs-to>
