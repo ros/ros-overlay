@@ -5,12 +5,12 @@
     The industrial robot simulator is a stand in for industrial robot driver node(s).  It adheres to the driver specification for industrial robot controllers.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>sedwards@swri.org</email>
+      <email>shaun.edwards@gmail.com</email>
       <name>Shaun Edwards</name>
     </maintainer>
     <bugs-to>https://github.com/ros-industrial/industrial_core/issues</bugs-to>

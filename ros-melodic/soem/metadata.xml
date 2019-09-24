@@ -2,20 +2,18 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    SOEM is an open source EtherCAT master library written in c. Its
-     primary target is Linux but can be adapted to other OS and
-     embedded systems. (http://developer.berlios.de/projects/soem/)
-
-     This package contains the original soem c code provided by the Technische Universiteit Eindhoven.
+    ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    This is an updated version of the original SOEM wrapper released into ROS now including
+    the upstream Repo as a git subtree.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ruben@intermodalics.eu</email>
-      <name>Ruben Smits</name>
+      <email>matthias.gruhler@gmail.com</email>
+      <name>Matthias Gruhler</name>
     </maintainer>
     <bugs-to>https://github.com/mgruhler/soem-gbp/issues</bugs-to>
   </upstream>
