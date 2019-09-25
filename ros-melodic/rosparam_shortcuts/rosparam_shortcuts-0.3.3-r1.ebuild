@@ -8,20 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="Quickly load variables from rosparam with good command line error checking."
 HOMEPAGE="https://github.com/davetcoleman/rosparam_shortcuts"
-SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/0.3.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PickNikRobotics/${PN}-release/archive/release/melodic/${PN}/0.3.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-melodic/eigen_conversions
 	ros-melodic/roscpp
-	dev-cpp/eigen
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
 	ros-melodic/cmake_modules
-	ros-melodic/eigen_conversions
 	ros-melodic/roslint
+	dev-cpp/eigen
 "
 
 SLOT="0"
