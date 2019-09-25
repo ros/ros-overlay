@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="The core rosbridge package, repsonsible for interpreting JSON andperforming[...]"
 HOMEPAGE="http://ros.org/wiki/rosbridge_library"
-SRC_URI="https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/dashing/${PN}/1.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/dashing/${PN}/1.0.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
