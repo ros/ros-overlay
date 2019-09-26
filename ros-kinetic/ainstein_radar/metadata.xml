@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The um6 package provides a C++ implementation of the CH Robotics serial protocol, and a
-    corresponding ROS node for publishing standard ROS orientation topics from a UM6.
+    ROS support for Ainstein radar sensors.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mpurvis@clearpathrobotics.com</email>
-      <name>Mike Purvis</name>
+      <email>nick.rotella@ainstein.ai</email>
+      <name>Nick Rotella</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-drivers-gbp/um6/issues</bugs-to>
+    <bugs-to>https://github.com/AinsteinAI/ainstein_radar/issues</bugs-to>
   </upstream>
 </pkgmetadata>
