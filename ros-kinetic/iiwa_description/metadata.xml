@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The um6 package provides a C++ implementation of the CH Robotics serial protocol, and a
-    corresponding ROS node for publishing standard ROS orientation topics from a UM6.
+    This package contains the URDF of the KUKA LBR IIWA robot
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mpurvis@clearpathrobotics.com</email>
-      <name>Mike Purvis</name>
+      <email>salvo.virga@tum.de</email>
+      <name>Salvo Virga</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-drivers-gbp/um6/issues</bugs-to>
+    <bugs-to>https://github.com/ipa-rwu/iiwa_stack/issues</bugs-to>
   </upstream>
 </pkgmetadata>

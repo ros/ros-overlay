@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="depthimage_to_laserscan"
 HOMEPAGE="http://ros.org/wiki/depthimage_to_laserscan"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.2.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/2.2.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
