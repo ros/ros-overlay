@@ -6,7 +6,7 @@
     corresponding ROS node for publishing standard ROS orientation topics from a UM7.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

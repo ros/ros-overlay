@@ -8,13 +8,13 @@ inherit ros-cmake
 
 DESCRIPTION="YP-Spur is a mobile robot motion control software with coordinate frame bas[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/openspur/yp-spur-release/archive/release/melodic/${PN}/1.16.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/openspur/yp-spur-release/archive/release/kinetic/${PN}/1.17.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/catkin
+	ros-kinetic/catkin
 	sys-libs/readline
 "
 DEPEND="${RDEPEND}
@@ -23,5 +23,5 @@ DEPEND="${RDEPEND}
 "
 
 SLOT="0"
-ROS_DISTRO="melodic"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
