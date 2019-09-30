@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="http://wiki.ros.org/rviz"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.5-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
