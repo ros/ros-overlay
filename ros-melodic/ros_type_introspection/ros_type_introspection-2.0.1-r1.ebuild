@@ -8,21 +8,20 @@ inherit ros-cmake
 
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize[...]"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/kinetic/${PN}/1.3.3-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/melodic/${PN}/2.0.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/abseil_cpp
-	ros-kinetic/roscpp
-	ros-kinetic/roscpp_serialization
-	ros-kinetic/rostime
+	ros-melodic/roscpp
+	ros-melodic/roscpp_serialization
+	ros-melodic/rostime
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	ros-melodic/catkin
 "
 
 SLOT="0"
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
