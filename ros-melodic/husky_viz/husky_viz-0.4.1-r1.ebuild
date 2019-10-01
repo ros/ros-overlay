@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Visualization configuration for Clearpath Husky"
 HOMEPAGE="http://ros.org/wiki/husky_viz"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

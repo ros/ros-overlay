@@ -6,12 +6,12 @@
   ROS messages which type is unknown at compilation time.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>faconti@icarustechnology.com</email>
+      <email>davide.faconti@gmail.com</email>
       <name>Davide Faconti</name>
     </maintainer>
     <bugs-to>https://github.com/facontidavide/ros_type_introspection/issues</bugs-to>

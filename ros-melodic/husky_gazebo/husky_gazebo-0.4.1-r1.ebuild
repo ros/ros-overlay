@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Clearpath Husky Simulator bringup"
 HOMEPAGE="http://ros.org/wiki/husky_gazebo"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

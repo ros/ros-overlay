@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="qt_dotgraph provides helpers to work with dot graphs."
 HOMEPAGE="http://ros.org/wiki/qt_dotgraph"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.11-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,6 +17,8 @@ IUSE="test"
 RDEPEND="
 	ros-melodic/python_qt_binding
 	dev-python/pydot
+	dev-python/pydot
+	test? ( dev-python/pygraphviz )
 	test? ( dev-python/pygraphviz )
 "
 DEPEND="${RDEPEND}

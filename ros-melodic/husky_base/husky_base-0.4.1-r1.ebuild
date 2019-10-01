@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Clearpath Husky robot driver"
 HOMEPAGE="http://ros.org/wiki/husky_base"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

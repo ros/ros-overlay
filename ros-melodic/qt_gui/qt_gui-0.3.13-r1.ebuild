@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interfa[...]"
 HOMEPAGE="http://ros.org/wiki/qt_gui"
-SRC_URI="https://github.com/ros-gbp/${PN}_core-release/archive/release/melodic/${PN}/0.3.11-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}_core-release/archive/release/melodic/${PN}/0.3.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,10 +16,12 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/python_qt_binding
 	dev-python/rospkg
+	dev-python/rospkg
 	x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
+	dev-python/PyQt5[gui,widgets]
 	dev-python/PyQt5
 	dev-qt/qtcore:5
 "

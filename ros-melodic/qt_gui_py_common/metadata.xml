@@ -5,13 +5,13 @@
     qt_gui_py_common provides common functionality for GUI plugins written in Python.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dhood@osrfoundation.org</email>
-      <name>D. Hood</name>
+      <email>scholz@sim.tu-darmstadt.de</email>
+      <name>Dorian Scholz</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/qt_gui_core/issues</bugs-to>
   </upstream>
