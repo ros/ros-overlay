@@ -6,19 +6,19 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="Interfaces used by py_trees_ros and py_trees_ros_tutorials."
-HOMEPAGE="http://ros.org/wiki/py_trees_ros_interfaces"
-SRC_URI="https://github.com/stonier/${PN}-release/archive/release/dashing/${PN}/1.1.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="This package defines messages commonly used in mapping packages."
+HOMEPAGE="http://ros.org/wiki/map_msgs"
+SRC_URI="https://github.com/ros2-gbp/navigation_msgs-release/archive/release/dashing/${PN}/2.0.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/action_msgs
-	ros-dashing/geometry_msgs
+	ros-dashing/nav_msgs
 	ros-dashing/rosidl_default_runtime
-	ros-dashing/unique_identifier_msgs
+	ros-dashing/sensor_msgs
+	ros-dashing/std_msgs
 	test? ( ros-dashing/ament_lint_common )
 "
 DEPEND="${RDEPEND}

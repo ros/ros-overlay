@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="rqt_gui_cpp enables GUI plugins to use the C++ client library for ROS."
 HOMEPAGE="http://ros.org/wiki/rqt_gui_cpp"
-SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

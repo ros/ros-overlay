@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Interfaces used by py_trees_ros and py_trees_ros_tutorials.
+    PR2 specific plugins for MoveIt
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>d.stonier@gmail.com</email>
-      <name>Daniel Stonier</name>
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
     </maintainer>
-    <bugs-to>https://github.com/stonier/py_trees_ros_interfaces/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/moveit_pr2/issues</bugs-to>
   </upstream>
 </pkgmetadata>

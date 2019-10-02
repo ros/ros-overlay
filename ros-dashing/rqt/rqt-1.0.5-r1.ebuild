@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="rqt is a Qt-based framework for GUI development for ROS. It consists of thr[...]"
 HOMEPAGE="http://ros.org/wiki/rqt"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
