@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Integration of the ROS package system and ROS-specific plugins for a Qt-bas[...]"
 HOMEPAGE="http://ros.org/wiki/qt_gui_core"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.6-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.7-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

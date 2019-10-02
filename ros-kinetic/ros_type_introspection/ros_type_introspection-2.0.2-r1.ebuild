@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The ros_type_introspection package allows the user to parse and deserialize[...]"
 HOMEPAGE="http://www.ros.org/wiki/ros_type_introspection"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/kinetic/${PN}/2.0.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/kinetic/${PN}/2.0.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

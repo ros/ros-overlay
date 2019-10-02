@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="This stack provides Python bindings for Qt.\
 	There are two providers: p[...]"
 HOMEPAGE="http://ros.org/wiki/python_qt_binding"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.6-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

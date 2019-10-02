@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interfa[...]"
-HOMEPAGE="http://ros.org/wiki/qt_gui"
-SRC_URI="https://github.com/ros2-gbp/${PN}_core-release/archive/release/dashing/${PN}/1.0.6-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="qt_gui_py_common provides common functionality for GUI plugins written in P[...]"
+HOMEPAGE="http://ros.org/wiki/qt_gui_py_common"
+SRC_URI="https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/${PN}/1.0.7-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -19,13 +19,9 @@ RDEPEND="
 	ros-dashing/python_qt_binding
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
-	dev-python/catkin_pkg
-	x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake
-	dev-python/PyQt5
-	dev-qt/qtcore:5
 "
 
 SLOT="0"

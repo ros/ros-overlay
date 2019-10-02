@@ -5,7 +5,7 @@
     rqt_gui_py enables GUI plugins to use the Python client library for ROS.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

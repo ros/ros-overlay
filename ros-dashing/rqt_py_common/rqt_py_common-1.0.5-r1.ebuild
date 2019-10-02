@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="rqt_py_common provides common functionality for rqt plugins written in Pyth[...]"
 HOMEPAGE="http://ros.org/wiki/rqt_py_common"
-SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -20,6 +20,7 @@ RDEPEND="
 	ros-dashing/rclpy
 	ros-dashing/rosidl_default_runtime
 	test? ( ros-dashing/ament_cmake_pytest )
+	test? ( ros-dashing/python_cmake_module )
 	dev-qt/qtcore:5
 	dev-qt/qtwidgets:5
 	dev-qt/qttest:5

@@ -6,22 +6,19 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-python
 
-DESCRIPTION="rqt_gui provides the main to start an instance of the ROS integrated graphi[...]"
-HOMEPAGE="http://ros.org/wiki/rqt_gui"
-SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="rqt_gui_py enables GUI plugins to use the Python client library for ROS."
+HOMEPAGE="http://ros.org/wiki/rqt_gui_py"
+SRC_URI="https://github.com/ros2-gbp/rqt-release/archive/release/dashing/${PN}/1.0.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/ament_index_python
-	ros-dashing/python_qt_binding
 	ros-dashing/qt_gui
-	ros-dashing/rclpy
+	ros-dashing/rqt_gui
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
-	dev-python/catkin_pkg
 "
 DEPEND="${RDEPEND}
 "
