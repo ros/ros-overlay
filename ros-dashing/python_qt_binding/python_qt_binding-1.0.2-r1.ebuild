@@ -9,7 +9,7 @@ inherit ament-cmake
 DESCRIPTION="This stack provides Python bindings for Qt.\
 	There are two providers: p[...]"
 HOMEPAGE="http://ros.org/wiki/python_qt_binding"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates [...]"
 HOMEPAGE="http://ros.org/wiki/qt_gui_cpp"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.13-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

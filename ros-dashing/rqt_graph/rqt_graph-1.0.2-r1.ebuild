@@ -9,7 +9,7 @@ inherit ament-python
 DESCRIPTION="rqt_graph provides a GUI plugin for visualizing the ROS\
 	  computation [...]"
 HOMEPAGE="http://wiki.ros.org/rqt_graph"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/1.0.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="turtlesim is a tool made for teaching ROS and ROS packages."
 HOMEPAGE="http://www.ros.org/wiki/turtlesim"
-SRC_URI="https://github.com/ros2-gbp/ros_tutorials-release/archive/release/dashing/${PN}/1.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ros_tutorials-release/archive/release/dashing/${PN}/1.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,6 +17,7 @@ RDEPEND="
 	ros-dashing/ament_index_cpp
 	ros-dashing/geometry_msgs
 	ros-dashing/rclcpp
+	ros-dashing/rclcpp_action
 	ros-dashing/rosidl_default_runtime
 	ros-dashing/std_msgs
 	ros-dashing/std_srvs
