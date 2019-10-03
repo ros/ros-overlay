@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Integration of the ROS package system and ROS-specific plugins for a Qt-bas[...]"
 HOMEPAGE="http://ros.org/wiki/qt_gui_core"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.13-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

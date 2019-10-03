@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="qt_dotgraph provides helpers to work with dot graphs."
 HOMEPAGE="http://ros.org/wiki/qt_dotgraph"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.13-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.13-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
