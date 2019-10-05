@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    &gt;This package provides a ROS interface for the TelloPy library.
+  Development of this ROS package pursues not to modify the TelloPy library, 
+  instead apply any modification or addition to the ros_driver package in an encapsulated manner.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jordyvanappeven@gmail.com</email>
+      <name>Jordy van Appeven</name>
+    </maintainer>
+    <bugs-to>https://github.com/appie-17/tello_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
