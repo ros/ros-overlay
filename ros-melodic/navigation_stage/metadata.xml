@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package holds example launch files for running the ROS navigation stack in stage.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>william@osrfoundation.org</email>
+      <name>William Woodall</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/navigation_tutorials/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

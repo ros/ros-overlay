@@ -5,7 +5,7 @@
     Contains scripts used by the rosboost-cfg tool for determining cflags/lflags/etc. of boost on your system
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
