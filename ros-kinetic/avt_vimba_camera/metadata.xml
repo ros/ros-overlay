@@ -5,7 +5,7 @@
     Wrapper of the Allied Vision Technologies (AVT) VIMBA Ethernet and Firewire SDK.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
@@ -13,6 +13,6 @@
       <email>miquel.massot@uib.cat</email>
       <name>Miquel Massot</name>
     </maintainer>
-    <bugs-to>https://github.com/srv/avt_vimba_camera/issues</bugs-to>
+    <bugs-to>https://github.com/astuff/avt_vimba_camera/issues</bugs-to>
   </upstream>
 </pkgmetadata>
