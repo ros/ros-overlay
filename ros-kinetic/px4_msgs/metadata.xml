@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package with the ROS-equivalent of PX4 uORB msgs
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nuno.marques@dronesolutions.io</email>
+      <name>Nuno Marques</name>
+    </maintainer>
+    <bugs-to>https://github.com/PX4/px4_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
