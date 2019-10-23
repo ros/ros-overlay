@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="qt_gui_app provides the main to start an instance of the integrated graphic[...]"
 HOMEPAGE="http://ros.org/wiki/qt_gui_app"
-SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.14-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.15-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

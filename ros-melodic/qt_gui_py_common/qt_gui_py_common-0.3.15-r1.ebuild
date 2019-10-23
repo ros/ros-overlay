@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="qt_gui provides the infrastructure for an integrated graphical user interfa[...]"
-HOMEPAGE="http://ros.org/wiki/qt_gui"
-SRC_URI="https://github.com/ros-gbp/${PN}_core-release/archive/release/melodic/${PN}/0.3.14-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="qt_gui_py_common provides common functionality for GUI plugins written in P[...]"
+HOMEPAGE="http://ros.org/wiki/qt_gui_py_common"
+SRC_URI="https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/${PN}/0.3.15-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -17,13 +17,9 @@ RDEPEND="
 	ros-melodic/python_qt_binding
 	dev-python/rospkg
 	dev-python/rospkg
-	x11-themes/tango-icon-theme
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	dev-python/PyQt5[gui,widgets]
-	dev-python/PyQt5
-	dev-qt/qtcore:5
 "
 
 SLOT="0"
