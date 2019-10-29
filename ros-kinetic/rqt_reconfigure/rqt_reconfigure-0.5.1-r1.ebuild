@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="This rqt plugin succeeds former dynamic_reconfigure\'s GUI\
 	\(reconfigu[...]"
 HOMEPAGE="http://wiki.ros.org/rqt_reconfigure"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/kinetic/${PN}/0.5.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/kinetic/${PN}/0.5.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

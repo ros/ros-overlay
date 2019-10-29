@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The rosbag_editor package"
 HOMEPAGE="http://wiki.ros.org/rosbag_editor"
-SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/kinetic/${PN}/0.3.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/facontidavide/${PN}-release/archive/release/kinetic/${PN}/0.4.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
@@ -17,6 +17,8 @@ RDEPEND="
 	ros-kinetic/rosbag
 	ros-kinetic/rosbag_storage
 	ros-kinetic/roscpp
+	ros-kinetic/tf
+	ros-kinetic/tf2_msgs
 	dev-qt/qtcore:5
 	dev-qt/qtwidgets:5
 	dev-qt/qttest:5
