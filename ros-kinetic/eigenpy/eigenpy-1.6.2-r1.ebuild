@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Bindings between Numpy and Eigen using Boost.Python - wrapped for catkin."
+DESCRIPTION="Bindings between Numpy and Eigen using Boost.Python"
 HOMEPAGE="https://github.com/stack-of-tasks/eigenpy"
-SRC_URI="https://github.com/ipab-slmc/${PN}_catkin-release/archive/release/kinetic/${PN}/1.5.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipab-slmc/${PN}_catkin-release/archive/release/kinetic/${PN}/1.6.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -20,7 +20,8 @@ RDEPEND="
 	dev-python/numpy
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	dev-util/cmake
+	app-doc/doxygen
 	dev-vcs/git
 "
 

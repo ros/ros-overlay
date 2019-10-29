@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="The teb_local_planner package implements a plugin\
 	to the base_local_pl[...]"
 HOMEPAGE="http://wiki.ros.org/teb_local_planner"
-SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/kinetic/${PN}/0.6.13-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/kinetic/${PN}/0.6.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

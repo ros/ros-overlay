@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="&gt;This package provides a ROS interface for the TelloPy library.\
   Devel[...]"
 HOMEPAGE="http://www.ros.org/wiki/tello_driver"
-SRC_URI="https://github.com/appie-17/${PN}-release/archive/release/kinetic/${PN}/0.3.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/appie-17/${PN}-release/archive/release/kinetic/${PN}/0.3.1-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
