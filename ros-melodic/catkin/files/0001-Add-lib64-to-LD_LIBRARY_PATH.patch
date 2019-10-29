@@ -1,25 +1,13 @@
-From ccd7670ad5ea88fdfe17760288483bf2631b2e8a Mon Sep 17 00:00:00 2001
-From: "Hunter L. Allen" <hunter@openrobotics.org>
-Date: Sat, 7 Jul 2018 15:59:40 -0400
-Subject: [PATCH 1/4] Add lib64 to LD_LIBRARY_PATH.
-
----
- cmake/templates/_setup_util.py.in | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 diff --git a/cmake/templates/_setup_util.py.in b/cmake/templates/_setup_util.py.in
-index 106507a..d68fcde 100755
+index d03cd81..f1bc5a6 100755
 --- a/cmake/templates/_setup_util.py.in
 +++ b/cmake/templates/_setup_util.py.in
-@@ -52,7 +52,7 @@ IS_WINDOWS = (system == 'Windows')
+@@ -58,7 +58,7 @@ if IS_WINDOWS:
  # subfolder of workspace prepended to CMAKE_PREFIX_PATH
  ENV_VAR_SUBFOLDERS = {
      'CMAKE_PREFIX_PATH': '',
 -    'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': @CATKIN_LIB_ENVIRONMENT_PATHS@,
 +    'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', 'lib64'],
-     'PATH': '@CATKIN_GLOBAL_BIN_DESTINATION@',
+     'PATH': PATH_TO_ADD_SUFFIX,
      'PKG_CONFIG_PATH': @CATKIN_PKGCONFIG_ENVIRONMENT_PATHS@,
      'PYTHONPATH': '@PYTHON_INSTALL_DIR@',
--- 
-2.18.0
-
