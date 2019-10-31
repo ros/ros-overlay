@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Enables matching a mesh model file \(e.g. STL\) to a point cloud using ROS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/gt-rail-release/${PN}-release/archive/release/melodic/${PN}/0.0.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/gt-rail-release/${PN}-release/archive/release/melodic/${PN}/0.0.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD-2"
 
