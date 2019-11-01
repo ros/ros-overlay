@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="This package provides the Behavior Trees core library."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/BehaviorTree/${PN}-release/archive/release/dashing/${PN}/3.0.9-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/BehaviorTree/${PN}-release/archive/release/dashing/${PN}/3.1.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
