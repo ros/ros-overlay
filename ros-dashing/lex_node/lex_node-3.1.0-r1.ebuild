@@ -6,23 +6,29 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="Common messages for interacting with Amazon Lex using the lex_node package"
+DESCRIPTION="Package providing a ROS node for interacting with Amazon Lex"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/aws-gbp/lex_node-release/archive/release/dashing/${PN}/3.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/dashing/${PN}/3.1.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/builtin_interfaces
-	ros-dashing/rosidl_default_runtime
+	ros-dashing/aws_common
+	ros-dashing/aws_ros2_common
+	ros-dashing/launch
+	ros-dashing/launch_ros
+	ros-dashing/lex_common
+	ros-dashing/lex_common_msgs
+	ros-dashing/rclcpp
+	test? ( ros-dashing/ament_cmake_gmock )
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
+	dev-python/pyyaml
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake
-	ros-dashing/rosidl_default_generators
 "
 
 SLOT="0"

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Performant and robust open-source DDS implementation.
+    Eclipse Cyclone DDS is a very performant and robust open-source DDS implementation. Cyclone DDS is developed completely in the open as an Eclipse IoT project.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>scott@openrobotics.org</email>
-      <name>Scott K Logan</name>
+      <email>cyclonedds-dev@eclipse.org</email>
+      <name>Eclipse Foundation, Inc.</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/cyclonedds/issues</bugs-to>
   </upstream>
