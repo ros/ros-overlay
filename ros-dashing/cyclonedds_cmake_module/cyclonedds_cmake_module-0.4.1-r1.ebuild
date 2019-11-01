@@ -6,23 +6,15 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="Package providing a ROS node for interacting with Amazon Lex"
+DESCRIPTION="Provide CMake module to find Eclipse CycloneDDS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/dashing/${PN}/3.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/dashing/${PN}/0.4.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/aws_common
-	ros-dashing/aws_ros2_common
-	ros-dashing/launch
-	ros-dashing/launch_ros
-	ros-dashing/lex_common
-	ros-dashing/lex_common_msgs
-	ros-dashing/rclcpp
-	test? ( ros-dashing/ament_cmake_gmock )
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
 "

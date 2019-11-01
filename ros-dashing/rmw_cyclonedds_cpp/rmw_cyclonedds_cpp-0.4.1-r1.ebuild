@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Implement the ROS middleware interface using Eclipse CycloneDDS in C++."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/dashing/${PN}/0.4.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/dashing/${PN}/0.4.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
