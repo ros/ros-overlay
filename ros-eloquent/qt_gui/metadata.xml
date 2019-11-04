@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
+    It is extensible with Python- and C++-based plugins (implemented in separate packages) which can contribute arbitrary widgets.
+    It requires either PyQt or PySide bindings.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dthomas@osrfoundation.org</email>
+      <name>Dirk Thomas</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/qt_gui_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
