@@ -5,7 +5,7 @@
     A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
