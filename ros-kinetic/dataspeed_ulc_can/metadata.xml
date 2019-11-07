@@ -5,7 +5,7 @@
     Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
