@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Light version of dataflow libraries"
+DESCRIPTION="AWS CloudWatch management library used to manage offline files."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/${PN}/1.1.1-0.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/${PN}/1.1.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
 	ros-dashing/aws_common
+	ros-dashing/dataflow_lite
 	test? ( ros-dashing/ament_cmake_gmock )
 	test? ( ros-dashing/ament_cmake_gtest )
 	test? ( dev-cpp/gtest )
