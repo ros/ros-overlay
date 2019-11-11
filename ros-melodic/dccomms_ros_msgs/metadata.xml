@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>centelld@todo.todo</email>
-      <name>centelld</name>
+      <email>centelld@uji.es</email>
+      <name>Diego Centelles</name>
     </maintainer>
     <bugs-to>https://github.com/dcentelles/dccomms_ros_pkgs/issues</bugs-to>
   </upstream>
