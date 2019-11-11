@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS Robot Status Indicator
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>code@hxr.io</email>
+      <name>turtlebot</name>
+    </maintainer>
+    <bugs-to>https://github.com/LucidOne/robot_indicator/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

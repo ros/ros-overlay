@@ -5,7 +5,7 @@
     A ROS node that allows control of network emulation parameters such as bandwidth, loss and latency for a Linux network interface.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

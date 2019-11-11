@@ -8,7 +8,7 @@
     or a ROS node. The client can be a ROS node, a standalone utility or a python class.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
