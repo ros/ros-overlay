@@ -8,10 +8,10 @@ inherit ros-cmake
 
 DESCRIPTION="swri_profiler provides basic tools for real-time selective\
 	profiling o[...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/melodic/${PN}/0.2.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+HOMEPAGE="https://github.com/swri-robotics/swri_profiler.git"
+SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/melodic/${PN}/0.2.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="Copyright SwRI"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

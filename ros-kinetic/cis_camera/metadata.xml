@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for the swri_profiler tool.
+    The cis_camera package
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>preed@swri.org</email>
-      <name>P. J. Reed</name>
+      <email>yamamoto.yosuke@opensource-robotics.tokyo.jp</email>
+      <name>Yosuke Yamamoto</name>
     </maintainer>
-    <bugs-to>https://github.com/swri-robotics-gbp/swri_profiler/issues</bugs-to>
+    <bugs-to>https://github.com/tork-a/cis_camera/issues</bugs-to>
   </upstream>
 </pkgmetadata>

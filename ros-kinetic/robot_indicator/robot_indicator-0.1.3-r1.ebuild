@@ -6,20 +6,18 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Messages for the swri_profiler tool."
+DESCRIPTION="ROS Robot Status Indicator"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/LucidOne-release/${PN}/archive/release/kinetic/${PN}/0.1.3-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="Copyright SwRI"
+LICENSE="TODO"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/message_runtime
+	dev-python/rospkg
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
-	ros-kinetic/message_generation
-	ros-kinetic/std_msgs
 "
 
 SLOT="0"

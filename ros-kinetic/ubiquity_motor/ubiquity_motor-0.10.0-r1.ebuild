@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Provides a ROS interface to Ubiquity Robotics Magni motor controllers"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.9.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/UbiquityRobotics-release/${PN}-release/archive/release/kinetic/${PN}/0.10.0-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -24,6 +24,7 @@ RDEPEND="
 	ros-kinetic/joint_state_controller
 	ros-kinetic/nav_msgs
 	ros-kinetic/serial
+	ros-kinetic/std_msgs
 	ros-kinetic/tf
 	test? ( ros-kinetic/rostest )
 	dev-python/requests

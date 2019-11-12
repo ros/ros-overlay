@@ -6,13 +6,13 @@
     swri_profiler library to output profiling information.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>elliot.johnson@swri.org</email>
-      <name>Elliot Johnson</name>
+      <email>preed@swri.org</email>
+      <name>P. J. Reed</name>
     </maintainer>
     <bugs-to>https://github.com/swri-robotics-gbp/swri_profiler/issues</bugs-to>
   </upstream>

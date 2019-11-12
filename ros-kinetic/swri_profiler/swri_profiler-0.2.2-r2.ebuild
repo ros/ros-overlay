@@ -8,16 +8,17 @@ inherit ros-cmake
 
 DESCRIPTION="swri_profiler provides basic tools for real-time selective\
 	profiling o[...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+HOMEPAGE="https://github.com/swri-robotics/swri_profiler.git"
+SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/kinetic/${PN}/0.2.2-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="Copyright SwRI"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/diagnostic_updater
 	ros-kinetic/rosbridge_server
 	ros-kinetic/roscpp
+	ros-kinetic/rospy
 	ros-kinetic/std_msgs
 	ros-kinetic/swri_profiler_msgs
 "

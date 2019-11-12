@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Filters the robot\'s body out of laser scans or point clouds."
 HOMEPAGE="https://github.com/peci1/robot_body_filter"
-SRC_URI="https://github.com/peci1/${PN}-release/archive/release/melodic/${PN}/1.1.5-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/peci1/${PN}-release/archive/release/melodic/${PN}/1.1.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

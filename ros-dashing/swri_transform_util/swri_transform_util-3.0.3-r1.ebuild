@@ -6,36 +6,37 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="swri_image_util"
+DESCRIPTION="The swri_transform_util package contains utility functions and classes for\[...]"
 HOMEPAGE="https://github.com/swri-robotics/marti_common"
-SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/${PN}/3.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/${PN}/3.0.3-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-dashing/ament_index_cpp
-	ros-dashing/camera_calibration_parsers
 	ros-dashing/cv_bridge
+	ros-dashing/diagnostic_msgs
+	ros-dashing/geographic_msgs
 	ros-dashing/geometry_msgs
-	ros-dashing/image_geometry
-	ros-dashing/image_transport
-	ros-dashing/message_filters
-	ros-dashing/nav_msgs
+	ros-dashing/gps_msgs
+	ros-dashing/rcl_interfaces
 	ros-dashing/rclcpp
 	ros-dashing/rclcpp_components
 	ros-dashing/rclpy
-	ros-dashing/std_msgs
-	ros-dashing/swri_geometry_util
+	ros-dashing/sensor_msgs
 	ros-dashing/swri_math_util
-	ros-dashing/swri_opencv_util
 	ros-dashing/swri_roscpp
 	ros-dashing/tf2
+	ros-dashing/tf2_geometry_msgs
+	ros-dashing/tf2_ros
 	dev-libs/boost[python]
-	dev-cpp/eigen
+	sci-libs/geos
+	sci-libs/proj
+	dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake
+	ros-dashing/ament_cmake_python
 	virtual/pkgconfig
 "
 
