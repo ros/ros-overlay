@@ -8,8 +8,8 @@ inherit ros-cmake
 
 DESCRIPTION="Provides tools for viewing data produced by nodes that use the\
 	swri_pr[...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/${PN}/0.1.0-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+HOMEPAGE="https://github.com/swri-robotics/swri_profiler.git"
+SRC_URI="https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/${PN}/0.2.2-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -21,13 +21,13 @@ RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	dev-qt/qtcore:5
-	dev-qt/qtwidgets:5
-	dev-qt/qttest:5
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	dev-qt/qtcore:5
+	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 
 SLOT="0"
