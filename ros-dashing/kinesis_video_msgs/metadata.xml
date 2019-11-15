@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>aws-b9-platform@amazon.com</email>
-      <name>AWS B9 Team</name>
+      <email>ros-contributions@amazon.com</email>
+      <name>AWS RoboMaker</name>
     </maintainer>
     <bugs-to>https://github.com/aws-gbp/kinesis_video_streamer/issues</bugs-to>
   </upstream>
