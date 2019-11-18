@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Messages for proprietary \(non-NMEA\) sentences from Novatel GPS receivers."
 HOMEPAGE="https://github.com/swri-robotics/novatel_gps_driver"
-SRC_URI="https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/dashing/${PN}/4.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/dashing/${PN}/4.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
