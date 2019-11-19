@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Driver for NovAtel receivers"
 HOMEPAGE="https://github.com/swri-robotics/novatel_gps_driver"
-SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/dashing/${PN}/4.0.0-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/swri-robotics-gbp/${PN}-release/archive/release/dashing/${PN}/4.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -21,6 +21,7 @@ RDEPEND="
 	ros-dashing/nav_msgs
 	ros-dashing/novatel_gps_msgs
 	ros-dashing/rclcpp
+	ros-dashing/rclcpp_components
 	ros-dashing/sensor_msgs
 	ros-dashing/std_msgs
 	ros-dashing/swri_math_util
@@ -29,6 +30,7 @@ RDEPEND="
 	ros-dashing/tf2
 	test? ( ros-dashing/ament_cmake_gtest )
 	test? ( ros-dashing/ament_index_cpp )
+	test? ( ros-dashing/ament_lint_auto )
 	dev-libs/boost[python]
 	net-libs/libpcap
 "

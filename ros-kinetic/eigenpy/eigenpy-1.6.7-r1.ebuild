@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Bindings between Numpy and Eigen using Boost.Python"
 HOMEPAGE="https://github.com/stack-of-tasks/eigenpy"
-SRC_URI="https://github.com/ipab-slmc/${PN}_catkin-release/archive/release/kinetic/${PN}/1.6.5-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ipab-slmc/${PN}_catkin-release/archive/release/kinetic/${PN}/1.6.7-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
