@@ -5,7 +5,7 @@
     This package provides a recovery behavior for the navigation stack that attempts to clear space by performing a 360 degree rotation of the robot.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

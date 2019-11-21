@@ -5,12 +5,12 @@
     A pure-python interaface to the MoveIt! ROS API.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>fergs@unboundedrobotics.com</email>
+      <email>fergs@botnuvo.com</email>
       <name>Michael Ferguson</name>
     </maintainer>
     <bugs-to>https://github.com/mikeferguson/moveit_python/issues</bugs-to>
