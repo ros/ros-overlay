@@ -6,24 +6,28 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-python
 
-DESCRIPTION="The service command for ROS 2 command line tools."
+DESCRIPTION="The component command for ROS 2 command line tools."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/${PN}/0.7.7-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/${PN}/0.7.8-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
+	ros-dashing/ament_index_python
+	ros-dashing/composition_interfaces
+	ros-dashing/rcl_interfaces
+	ros-dashing/rclcpp_components
 	ros-dashing/rclpy
 	ros-dashing/ros2cli
-	ros-dashing/ros2srv
-	ros-dashing/rosidl_runtime_py
+	ros-dashing/ros2node
+	ros-dashing/ros2param
+	ros-dashing/ros2pkg
 	test? ( ros-dashing/ament_copyright )
 	test? ( ros-dashing/ament_flake8 )
 	test? ( ros-dashing/ament_pep257 )
 	test? ( ros-dashing/ament_xmllint )
-	dev-python/pyyaml
 	test? ( dev-python/pytest )
 "
 DEPEND="${RDEPEND}
