@@ -6,14 +6,15 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="The OctoMap library implements a 3D occupancy grid mapping approach, provid[...]"
+DESCRIPTION="The dynamicEDT3D library implements an inrementally updatable Euclidean dis[...]"
 HOMEPAGE="http://octomap.github.io"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/dashing/${PN}/1.9.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/octomap-release/archive/release/dashing/${PN}/1.9.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	ros-dashing/octomap
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
