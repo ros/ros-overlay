@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="An Easy to use API to execute standard industrial robot commands like Ptp, [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.8-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.9-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

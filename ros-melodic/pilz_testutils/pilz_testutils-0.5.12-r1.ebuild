@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains testing utilities used by Pilz packages."
 HOMEPAGE="https://wiki.ros.org/pilz_testutils"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.11-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.12-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="An automatically generated package with all the configuration and launch fi[...]"
 HOMEPAGE="https://wiki.ros.org/prbt_moveit_config"
-SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.11-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/${PN}/0.5.12-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -22,6 +22,7 @@ RDEPEND="
 	ros-melodic/moveit_ros_move_group
 	ros-melodic/moveit_ros_visualization
 	ros-melodic/moveit_simple_controller_manager
+	ros-melodic/prbt_hardware_support
 	ros-melodic/prbt_ikfast_manipulator_plugin
 	ros-melodic/prbt_support
 	ros-melodic/robot_state_publisher

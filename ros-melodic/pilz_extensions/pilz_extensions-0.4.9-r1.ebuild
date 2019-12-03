@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pilz_extensions package. Here are classes extending the functionality o[...]"
 HOMEPAGE="https://wiki.ros.org/pilz_extensions"
-SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.8-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.9-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

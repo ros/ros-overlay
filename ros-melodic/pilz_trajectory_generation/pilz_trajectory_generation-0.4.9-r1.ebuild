@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The pilz_trajectory_generation package containing the MoveIt! plugin pilz_c[...]"
 HOMEPAGE="https://wiki.ros.org/pilz_trajectory_generation"
-SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.8-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/${PN}/0.4.9-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

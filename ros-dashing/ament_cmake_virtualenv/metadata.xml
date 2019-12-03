@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds
+    Bundle python requirements in a ament package via virtualenv.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>praveen.palanisamy@outlook.com</email>
-      <name>Praveen Palanisamy</name>
+      <email>v-krichenbauer7715@esol.co.jp</email>
+      <name>Max Krichenbauer</name>
     </maintainer>
-    <bugs-to>https://github.com/praveen-palanisamy/multi_object_tracking_lidar/issues</bugs-to>
+    <bugs-to>https://github.com/esol-community/ament_virtualenv/issues</bugs-to>
   </upstream>
 </pkgmetadata>

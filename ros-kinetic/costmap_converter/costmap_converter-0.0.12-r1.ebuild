@@ -8,28 +8,28 @@ inherit ros-cmake
 
 DESCRIPTION="A ros package that includes plugins and nodes to convert occupied costmap2d[...]"
 HOMEPAGE="http://wiki.ros.org/costmap_converter"
-SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/melodic/${PN}/0.0.11-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/rst-tu-dortmund/${PN}-release/archive/release/kinetic/${PN}/0.0.12-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-melodic/costmap_2d
-	ros-melodic/cv_bridge
-	ros-melodic/dynamic_reconfigure
-	ros-melodic/geometry_msgs
-	ros-melodic/message_runtime
-	ros-melodic/pluginlib
-	ros-melodic/roscpp
-	ros-melodic/std_msgs
-	test? ( ros-melodic/rostest )
+	ros-kinetic/costmap_2d
+	ros-kinetic/cv_bridge
+	ros-kinetic/dynamic_reconfigure
+	ros-kinetic/geometry_msgs
+	ros-kinetic/message_runtime
+	ros-kinetic/pluginlib
+	ros-kinetic/roscpp
+	ros-kinetic/std_msgs
+	test? ( ros-kinetic/rostest )
 "
 DEPEND="${RDEPEND}
-	ros-melodic/catkin
-	ros-melodic/message_generation
+	ros-kinetic/catkin
+	ros-kinetic/message_generation
 "
 
 SLOT="0"
-ROS_DISTRO="melodic"
+ROS_DISTRO="kinetic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

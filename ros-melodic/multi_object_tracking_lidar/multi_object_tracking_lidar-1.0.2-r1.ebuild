@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS package for Multiple objects detection, tracking and classification fro[...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/praveen-palanisamy/${PN}-release/archive/release/melodic/${PN}/1.0.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/praveen-palanisamy/${PN}-release/archive/release/melodic/${PN}/1.0.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="MIT"
 
