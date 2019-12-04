@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>clalancette@openrobotics.org</email>
-      <name>Chris Lalancette</name>
+      <email>paul@bovbel.com</email>
+      <name>Paul Bovbel</name>
     </maintainer>
-    <bugs-to>https://github.com/ros2-gbp/pcl_conversions/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/perception_pcl/issues</bugs-to>
   </upstream>
 </pkgmetadata>
