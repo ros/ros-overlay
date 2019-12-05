@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>matt@hebirobotics.com</email>
-      <name>Matthew Tesch</name>
+      <email>chris@hebirobotics.com</email>
+      <name>Chris Bollinger</name>
     </maintainer>
     <bugs-to>https://github.com/HebiRobotics/hebi_cpp_api_ros/issues</bugs-to>
   </upstream>
