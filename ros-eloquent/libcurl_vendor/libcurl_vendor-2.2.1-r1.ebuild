@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Wrapper around libcurl, it provides a fixed CMake module and an ExternalPro[...]"
 HOMEPAGE="https://github.com/curl/curl"
-SRC_URI="https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/${PN}/2.2.0-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/${PN}/2.2.1-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="( Apache-2.0 MIT )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"

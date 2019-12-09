@@ -4,26 +4,25 @@
 EAPI=6
 PYTHON_COMPAT=( python{3_5,3_6} )
 
-inherit ament-cmake
+inherit ament-python
 
 DESCRIPTION="Bundle python requirements in a ament package via virtualenv."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/esol-community/ament_virtualenv-release/archive/release/crystal/${PN}/0.0.3-2.tar.gz -> ${PN}-crystal-release-${PV}.tar.gz"
+SRC_URI="https://github.com/esol-community/${PN}-release/archive/release/dashing/${PN}/0.0.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	test? ( ros-crystal/ament_cmake_copyright )
-	test? ( ros-crystal/ament_cmake_lint_cmake )
+	test? ( ros-dashing/ament_copyright )
+	test? ( ros-dashing/ament_flake8 )
+	test? ( ros-dashing/ament_pep257 )
+	test? ( dev-python/pytest )
 "
 DEPEND="${RDEPEND}
-	ros-crystal/ament_cmake_core
-	ros-crystal/ament_cmake_test
-	ros-crystal/ament_virtualenv
 "
 
 SLOT="0"
-ROS_DISTRO="crystal"
+ROS_DISTRO="dashing"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"

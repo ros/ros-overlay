@@ -9,7 +9,7 @@ inherit ament-cmake
 DESCRIPTION="This package retrieves data from url-format files such as http://,\
    ftp:[...]"
 HOMEPAGE="http://ros.org/wiki/resource_retriever"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/2.2.0-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/2.2.1-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
