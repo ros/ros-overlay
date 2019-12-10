@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/${PN}/0.2.10-1 -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/${PN}/0.2.12-1 -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

@@ -8,15 +8,14 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/${PN}/0.2.10-1 -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/${PN}/0.2.12-1 -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-eloquent/launch
-	ros-eloquent/launch_ros
+	ros-eloquent/ros2cli
 	ros-eloquent/tracetools_trace
 	test? ( ros-eloquent/ament_copyright )
 	test? ( ros-eloquent/ament_flake8 )

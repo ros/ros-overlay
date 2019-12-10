@@ -6,20 +6,22 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="tf2 is the second generation of the transform library, which lets\
-	the [...]"
-HOMEPAGE="http://www.ros.org/wiki/tf2"
-SRC_URI="https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/${PN}/0.11.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python[...]"
+HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
+SRC_URI="https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/${PN}/0.11.6-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/console_bridge_vendor
 	ros-dashing/geometry_msgs
+	ros-dashing/message_filters
+	ros-dashing/rclcpp
+	ros-dashing/std_msgs
+	ros-dashing/tf2
+	ros-dashing/tf2_msgs
 	test? ( ros-dashing/ament_cmake_gtest )
-	dev-libs/console_bridge
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake

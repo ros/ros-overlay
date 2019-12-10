@@ -5,7 +5,7 @@
     A package which extends 'ros_core' and includes other basic functionalities like tf2 and urdf.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

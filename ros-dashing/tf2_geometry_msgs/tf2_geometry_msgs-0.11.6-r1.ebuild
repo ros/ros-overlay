@@ -6,26 +6,23 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="KDL binding for tf2"
-HOMEPAGE="http://ros.org/wiki/tf2"
-SRC_URI="https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/${PN}/0.11.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="tf2_geometry_msgs"
+HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
+SRC_URI="https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/${PN}/0.11.6-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/builtin_interfaces
 	ros-dashing/geometry_msgs
 	ros-dashing/orocos_kdl
 	ros-dashing/tf2
 	ros-dashing/tf2_ros
 	test? ( ros-dashing/ament_cmake_gtest )
-	test? ( ros-dashing/rclcpp )
-	test? ( ros-dashing/tf2_msgs )
 "
 DEPEND="${RDEPEND}
-	ros-dashing/ament_cmake
+	ros-dashing/ament_cmake_auto
 "
 
 SLOT="0"
