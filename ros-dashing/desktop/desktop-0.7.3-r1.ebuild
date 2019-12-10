@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="A package which extends \'ros_base\' and includes high level packages like [...]"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/variants-release/archive/release/dashing/${PN}/0.7.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/variants-release/archive/release/dashing/${PN}/0.7.3-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -50,6 +50,7 @@ RDEPEND="
 	ros-dashing/quality_of_service_demo_cpp
 	ros-dashing/quality_of_service_demo_py
 	ros-dashing/ros_base
+	ros-dashing/rqt_common_plugins
 	ros-dashing/rviz2
 	ros-dashing/rviz_default_plugins
 	ros-dashing/teleop_twist_joy

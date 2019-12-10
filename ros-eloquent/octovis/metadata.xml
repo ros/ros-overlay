@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A package to aggregate the packages required to use publish / subscribe, services, generate messages and other core ROS concepts.
+    octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer. See
+  http://octomap.github.io for details.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +11,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>steven@openrobotics.org</email>
-      <name>Steven! Ragnarök</name>
+      <email>armin@hornung.io</email>
+      <name>Armin Hornung</name>
     </maintainer>
-    <bugs-to>https://github.com/ros2-gbp/variants/issues</bugs-to>
+    <bugs-to>https://github.com/ros-gbp/octomap/issues</bugs-to>
   </upstream>
 </pkgmetadata>
