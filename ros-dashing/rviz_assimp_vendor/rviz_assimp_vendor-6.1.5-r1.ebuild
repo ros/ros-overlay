@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Wrapper around assimp, providing nothing but a dependency on assimp, on som[...]"
 HOMEPAGE="http://assimp.sourceforge.net/index.html"
-SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="( Apache-2.0 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"

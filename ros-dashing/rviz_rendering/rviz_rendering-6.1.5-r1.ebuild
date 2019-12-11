@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Library which provides the 3D rendering functionality in rviz."
 HOMEPAGE="https://github.com/ros2/rviz/blob/ros2/README.md"
-SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

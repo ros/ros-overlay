@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Wrapper around ogre3d, it provides a fixed CMake module and an ExternalProj[...]"
 HOMEPAGE="https://www.ogre3d.org/"
-SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="( Apache-2.0 MIT )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
