@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="3D testing framework for RViz."
 HOMEPAGE="http://ros.org/wiki/rviz2"
-SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

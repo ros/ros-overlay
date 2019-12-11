@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="Package containing the Python client."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.8-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.9-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -19,6 +19,7 @@ RDEPEND="
 	ros-dashing/builtin_interfaces
 	ros-dashing/rcl
 	ros-dashing/rcl_action
+	ros-dashing/rcl_interfaces
 	ros-dashing/rcl_yaml_param_parser
 	ros-dashing/rmw_implementation
 	ros-dashing/rosgraph_msgs
@@ -26,7 +27,6 @@ RDEPEND="
 	test? ( ros-dashing/ament_cmake_pytest )
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
-	test? ( ros-dashing/rcl_interfaces )
 	test? ( ros-dashing/rosidl_generator_py )
 	test? ( ros-dashing/test_msgs )
 	test? ( dev-python/pytest )

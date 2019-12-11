@@ -8,23 +8,26 @@ inherit ament-cmake
 
 DESCRIPTION="Package containing various utility types and functions for C"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/rcl-release/archive/release/dashing/${PN}/0.7.7-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/dashing/${PN}/0.7.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/libyaml_vendor
+	test? ( ros-dashing/ament_cmake_gmock )
 	test? ( ros-dashing/ament_cmake_gtest )
+	test? ( ros-dashing/ament_cmake_pytest )
 	test? ( ros-dashing/ament_lint_auto )
 	test? ( ros-dashing/ament_lint_common )
-	dev-libs/libyaml
+	test? ( ros-dashing/launch )
+	test? ( ros-dashing/launch_testing )
+	test? ( ros-dashing/launch_testing_ament_cmake )
+	test? ( ros-dashing/osrf_testing_tools_cpp )
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake_ros
-	ros-dashing/rcl
-	ros-dashing/rcutils
+	dev-python/empy
 "
 
 SLOT="0"

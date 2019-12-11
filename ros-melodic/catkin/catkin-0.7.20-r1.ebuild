@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Low-level build system macros and infrastructure for ROS."
 HOMEPAGE="http://wiki.ros.org/catkin"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.7.19-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.7.20-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -39,7 +39,7 @@ ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_prepare() {
-	cd ${WORKDIR}/${P}
+	cd ${P}
 	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" epatch
 	ros-cmake_src_prepare

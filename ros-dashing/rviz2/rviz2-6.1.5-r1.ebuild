@@ -6,24 +6,25 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
-DESCRIPTION="Example plugin for RViz - documents and tests RViz plugin development"
-HOMEPAGE="https://github.com/ros2/rviz"
-SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.4-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+DESCRIPTION="3D visualization tool for ROS."
+HOMEPAGE="https://github.com/ros2/rviz/blob/ros2/README.md"
+SRC_URI="https://github.com/ros2-gbp/rviz-release/archive/release/dashing/${PN}/6.1.5-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	ros-dashing/resource_retriever
-	ros-dashing/rviz_rendering
+	ros-dashing/rviz_common
+	ros-dashing/rviz_default_plugins
+	ros-dashing/rviz_ogre_vendor
 	test? ( ros-dashing/ament_cmake_cppcheck )
 	test? ( ros-dashing/ament_cmake_cpplint )
-	test? ( ros-dashing/ament_cmake_gmock )
-	test? ( ros-dashing/ament_cmake_gtest )
 	test? ( ros-dashing/ament_cmake_lint_cmake )
 	test? ( ros-dashing/ament_cmake_uncrustify )
-	test? ( ros-dashing/ament_index_cpp )
+	test? ( ros-dashing/geometry_msgs )
+	test? ( ros-dashing/rclcpp )
+	test? ( ros-dashing/sensor_msgs )
 "
 DEPEND="${RDEPEND}
 	ros-dashing/ament_cmake
