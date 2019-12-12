@@ -6,16 +6,15 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Metapackage for Clearpath Husky visualization software"
-HOMEPAGE="http://ros.org/wiki/husky_desktop"
-SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="Metapackage for Clearpath Husky simulation software"
+HOMEPAGE="http://ros.org/wiki/husky_simulator"
+SRC_URI="https://github.com/clearpath-gbp/husky-release/archive/release/melodic/${PN}/0.4.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-melodic/husky_msgs
-	ros-melodic/husky_viz
+	ros-melodic/husky_gazebo
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 inherit ros-cmake
 
 DESCRIPTION="The cis_camera package"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/melodic/${PN}/0.0.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+HOMEPAGE="http://wiki.ros.org/cis_camera"
+SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/melodic/${PN}/0.0.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -36,6 +36,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
+	ros-melodic/roslint
 	ros-melodic/rostest
 "
 

@@ -6,21 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="OMPL is a free sampling-based motion planning library."
-HOMEPAGE="http://ompl.kavrakilab.org"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.4.2-3.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="GenICam/GigE Vision Convenience Layer.\
+\
+	  This package combines the R[...]"
+HOMEPAGE="https://github.com/roboception/rc_genicam_api"
+SRC_URI="https://github.com/roboception-gbp/${PN}-release/archive/release/melodic/${PN}/2.2.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-libs/boost[python]
-	dev-cpp/eigen
+	ros-melodic/catkin
+	virtual/libusb:1
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
-	dev-util/cmake
-	virtual/pkgconfig
 "
 
 SLOT="0"

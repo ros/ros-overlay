@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="MAVLink communication library.\
 	This library provide unified connection[...]"
 HOMEPAGE="http://wiki.ros.org/mavros"
-SRC_URI="https://github.com/mavlink/mavros-release/archive/release/melodic/${PN}/0.33.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/mavlink/mavros-release/archive/release/melodic/${PN}/0.33.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="( GPL-3 LGPL-2 BSD )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
