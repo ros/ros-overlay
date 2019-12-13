@@ -6,24 +6,25 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Library to compute SIFT features"
+DESCRIPTION="The rostwitter package"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="Apache-1.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-libs/boost[python]
-	dev-python/numpy
+	ros-kinetic/rospy
+	ros-kinetic/std_msgs
+	dev-python/requests
+	dev-python/requests-oauthlib
+	dev-python/simplejson
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/mk
-	ros-kinetic/rosboost_cfg
-	ros-kinetic/roslib
-	ros-kinetic/rospack
-	dev-vcs/subversion
+	dev-vcs/git
+	dev-python/setuptools
 "
 
 SLOT="0"

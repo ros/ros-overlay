@@ -6,23 +6,23 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="voice_text \(www.voicetext.jp\)"
-HOMEPAGE="http://ros.org/wiki/voice_text"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Parameter/Structure Estimation and Inference for Bayesian Belief Network"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="HOYA License"
+LICENSE="MIT"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
-	ros-kinetic/dynamic_reconfigure
 	ros-kinetic/message_runtime
-	ros-kinetic/sound_play
-	app-i18n/nkf
+	ros-kinetic/rospy
+	test? ( ros-kinetic/rostest )
+	sci-libs/scipy
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/message_generation
-	ros-kinetic/roscpp
 "
 
 SLOT="0"

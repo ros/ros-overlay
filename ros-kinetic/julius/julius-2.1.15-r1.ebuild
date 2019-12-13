@@ -6,22 +6,23 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="nlopt"
-HOMEPAGE="http://ros.org/wiki/nlopt"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="julius: Open-Source Large Vocabulary CSR Engine \(http://julius.sourceforge[...]"
+HOMEPAGE="http://ros.org/wiki/julius"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="GPL-1"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
+	net-misc/rsync
+	app-arch/unzip
+	net-misc/wget
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
-	ros-kinetic/cmake_modules
 	ros-kinetic/mk
-	ros-kinetic/rosbuild
+	ros-kinetic/roslib
 	ros-kinetic/rospack
-	sys-devel/libtool
 "
 
 SLOT="0"

@@ -6,23 +6,22 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Parameter/Structure Estimation and Inference for Bayesian Belief Network"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="ROS API for Sesame smart lock"
+HOMEPAGE="http://ros.org/wiki/sesame_ros"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
-IUSE="test"
 RDEPEND="
 	ros-kinetic/message_runtime
-	ros-kinetic/rospy
-	test? ( ros-kinetic/rostest )
-	sci-libs/scipy
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
+	ros-kinetic/catkin_virtualenv
 	ros-kinetic/message_generation
+	virtual/libffi
+	dev-libs/openssl
 "
 
 SLOT="0"

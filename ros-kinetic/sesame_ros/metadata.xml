@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>uchimi@jsk.imi.i.u-tokyo.ac.jp</email>
-      <name>Yuto Uchimi</name>
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
     </maintainer>
     <bugs-to>https://github.com/tork-a/jsk_3rdparty/issues</bugs-to>
   </upstream>
