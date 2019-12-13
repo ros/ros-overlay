@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Common msg and srv definitions used by Roboception\'s ROS packages"
 HOMEPAGE="http://roboception.de"
-SRC_URI="https://github.com/roboception-gbp/${PN}-release/archive/release/melodic/${PN}/0.3.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/roboception-gbp/${PN}-release/archive/release/melodic/${PN}/0.4.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

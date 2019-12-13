@@ -10,7 +10,7 @@ DESCRIPTION="Xacro \(XML Macros\)\
 \
 	Xacro is an XML macro language. With xacro, you[...]"
 HOMEPAGE="http://ros.org/wiki/xacro"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.5-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

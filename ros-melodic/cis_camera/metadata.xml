@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>yamamoto.yosuke@opensource-robotics.tokyo.jp</email>
-      <name>Yosuke Yamamoto</name>
+      <email>dev@opensource-robotics.tokyo.jp</email>
+      <name>Tokyo Opensource Robotics Kyokai (TORK) Development Team</name>
     </maintainer>
     <bugs-to>https://github.com/tork-a/cis_camera/issues</bugs-to>
   </upstream>
