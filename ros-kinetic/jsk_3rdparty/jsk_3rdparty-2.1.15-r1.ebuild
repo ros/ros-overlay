@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="<p>Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg</p>"
 HOMEPAGE="http://ros.org/wiki/jsk_3rdparty"
-SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/tork-a/${PN}-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -16,9 +16,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-kinetic/assimp_devel
 	ros-kinetic/bayesian_belief_networks
+	ros-kinetic/dialogflow_task_executive
 	ros-kinetic/downward
 	ros-kinetic/ff
 	ros-kinetic/ffha
+	ros-kinetic/gdrive_ros
 	ros-kinetic/julius
 	ros-kinetic/julius_ros
 	ros-kinetic/libcmt

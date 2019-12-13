@@ -6,19 +6,21 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="rospatlite"
-HOMEPAGE="http://ros.org/wiki/rospatlite"
-SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.14-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="libCMT ROS Wrapper"
+HOMEPAGE="https://wiki.ros.org"
+SRC_URI="https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/${PN}/2.1.15-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/rospy
-	ros-kinetic/std_msgs
+	ros-kinetic/cv_bridge
 "
 DEPEND="${RDEPEND}
-	ros-kinetic/catkin
+	app-misc/ca-certificates
+	dev-util/cmake
+	dev-vcs/git
+	dev-libs/openssl
 "
 
 SLOT="0"

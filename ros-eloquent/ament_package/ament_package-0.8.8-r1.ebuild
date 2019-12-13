@@ -8,7 +8,7 @@ inherit ament-python
 
 DESCRIPTION="The parser for the manifest files in the ament buildsystem."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/0.8.7-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/0.8.8-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
