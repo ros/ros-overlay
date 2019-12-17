@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="ROS wrapper for the mobile robot control platform YP-Spur"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/openspur/${PN}-release/archive/release/melodic/${PN}/0.3.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/openspur/${PN}-release/archive/release/melodic/${PN}/0.3.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
