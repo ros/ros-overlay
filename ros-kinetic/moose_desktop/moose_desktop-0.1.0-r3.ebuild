@@ -6,15 +6,16 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="The seed_r7_description package"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/${PN}/0.3.3-2.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+DESCRIPTION="Packages for working with Moose from a ROS desktop."
+HOMEPAGE="http://wiki.ros.org/moose_desktop"
+SRC_URI="https://github.com/clearpath-gbp/${PN}-release/archive/release/kinetic/${PN}/0.1.0-3.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-kinetic/xacro
+	ros-kinetic/moose_msgs
+	ros-kinetic/moose_viz
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin

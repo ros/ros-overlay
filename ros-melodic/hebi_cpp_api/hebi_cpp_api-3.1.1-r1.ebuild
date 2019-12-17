@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="A ROS package providing access to the HEBI C++ API."
 HOMEPAGE="http://docs.hebi.us/tools.html#cpp-api"
-SRC_URI="https://github.com/HebiRobotics/${PN}_ros-release/archive/release/melodic/${PN}/3.1.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/HebiRobotics/${PN}_ros-release/archive/release/melodic/${PN}/3.1.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="HEBI C++ Software License (https://www.hebirobotics.com/softwarelicense)"
 

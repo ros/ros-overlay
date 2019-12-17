@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    ROS wrapper for the mobile robot control platform YP-Spur
+    The uwb_hardware_driver package
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>atsushi.w@openspur.org</email>
-      <name>Atsushi Watanabe</name>
+      <email>elcin.erdogan@inovasyonmuhendislik.com</email>
+      <name>Elcin Erdogan</name>
     </maintainer>
-    <bugs-to>https://github.com/openspur/ypspur_ros/issues</bugs-to>
+    <bugs-to>https://github.com/inomuh/uwb_hardware_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>
