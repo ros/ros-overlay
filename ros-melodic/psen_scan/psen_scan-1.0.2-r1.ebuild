@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The psen_scan package for Pilz laser scanner"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/PilzDE/${PN}-release/archive/release/melodic/${PN}/1.0.1-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/PilzDE/${PN}-release/archive/release/melodic/${PN}/1.0.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

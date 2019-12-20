@@ -6,15 +6,17 @@ PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
-DESCRIPTION="Aldebaran\'s libqi: a core library for NAOqiOS development"
-HOMEPAGE="http://doc.aldebaran.com/libqi"
-SRC_URI="https://github.com/ros-naoqi/libqi-release/archive/release/melodic/${PN}/2.9.0-5.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+DESCRIPTION="Demo of safe_teleop in stage"
+HOMEPAGE="http://ros.org/wiki/safe_teleop_stage"
+SRC_URI="https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/melodic/${PN}/0.0.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-libs/boost[python]
+	ros-melodic/joy
+	ros-melodic/safe_teleop_base
+	ros-melodic/stage
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
