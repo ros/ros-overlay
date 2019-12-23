@@ -9,11 +9,12 @@ inherit ament-cmake
 DESCRIPTION="include\
 		This package provides an implementation of a 3D costmap th[...]"
 HOMEPAGE="http://wiki.ros.org/non-persisent-voxel-layer"
-SRC_URI="https://github.com/SteveMacenski/${PN}-release/archive/release/dashing/${PN}/2.0.1-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
+SRC_URI="https://github.com/SteveMacenski/${PN}-release/archive/release/dashing/${PN}/2.0.2-1.tar.gz -> ${PN}-dashing-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
+IUSE="test"
 RDEPEND="
 	ros-dashing/geometry_msgs
 	ros-dashing/laser_geometry
@@ -30,6 +31,7 @@ RDEPEND="
 	ros-dashing/tf2
 	ros-dashing/tf2_ros
 	ros-dashing/visualization_msgs
+	test? ( ros-dashing/ament_lint_auto )
 	sci-libs/pcl
 "
 DEPEND="${RDEPEND}
