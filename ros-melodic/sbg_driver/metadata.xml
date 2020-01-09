@@ -5,14 +5,14 @@
     The SBG ROS Driver package
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>thomas.le_mezo@ensta-bretagne.org</email>
-      <name>Thomas Le Mézo</name>
+      <email>erwan.cabon@sbg-systems.com</email>
+      <name>Erwan Cabon</name>
     </maintainer>
-    <bugs-to>https://github.com/ENSTABretagneRobotics/sbg_ros_driver/issues</bugs-to>
+    <bugs-to>https://github.com/SBG-Systems/sbg_ros_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>
