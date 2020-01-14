@@ -2,8 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Dock driving library for Kobuki. Users owning a docking station for Kobuki
-	    can use this tool to develop autonomous docking drive algorithms.
+    <p>
+      ROS2 message, service and action interfaces for the Kobuki.
+    </p>
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -14,6 +15,6 @@
       <email>d.stonier@gmail.com</email>
       <name>Daniel Stonier</name>
     </maintainer>
-    <bugs-to>https://github.com/stonier/kobuki_core/issues</bugs-to>
+    <bugs-to>https://github.com/stonier/kobuki_ros_interfaces/issues</bugs-to>
   </upstream>
 </pkgmetadata>

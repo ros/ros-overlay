@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{3_5,3_6} )
 inherit ament-cmake
 
 DESCRIPTION="Dock driving library for Kobuki. Users owning a docking station for Kobuki\[...]"
-HOMEPAGE="http://ros.org/wiki/kobuki_dock_drive"
-SRC_URI="https://github.com/yujinrobot-release/kobuki_core-release/archive/release/eloquent/${PN}/0.8.1-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
+HOMEPAGE="https://index.ros.org/k/kobuki_dock_drive/github-kobuki-base-kobuki_dock_drive"
+SRC_URI="https://github.com/stonier/kobuki_core-release/archive/release/eloquent/${PN}/1.0.0-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

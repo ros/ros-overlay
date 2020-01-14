@@ -11,9 +11,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>stonier@yujinrobot.com</email>
+      <email>d.stonier@gmail.com</email>
       <name>Daniel Stonier</name>
     </maintainer>
-    <bugs-to>https://github.com/yujinrobot/kobuki_core/issues</bugs-to>
+    <bugs-to>https://github.com/stonier/kobuki_core/issues</bugs-to>
   </upstream>
 </pkgmetadata>
