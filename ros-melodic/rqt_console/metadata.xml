@@ -5,7 +5,7 @@
     rqt_console provides a GUI plugin for displaying and filtering ROS messages.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

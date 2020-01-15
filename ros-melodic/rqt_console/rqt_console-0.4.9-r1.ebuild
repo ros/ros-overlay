@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="rqt_console provides a GUI plugin for displaying and filtering ROS messages."
 HOMEPAGE="http://wiki.ros.org/rqt_console"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.4.8-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.4.9-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
@@ -21,6 +21,7 @@ RDEPEND="
 	ros-melodic/rqt_gui_py
 	ros-melodic/rqt_logger_level
 	ros-melodic/rqt_py_common
+	dev-python/rospkg
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}

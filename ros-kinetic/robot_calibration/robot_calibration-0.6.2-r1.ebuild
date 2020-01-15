@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Calibrate a Robot"
 HOMEPAGE="http://ros.org/wiki/robot_calibration"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/kinetic/${PN}/0.6.1-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/kinetic/${PN}/0.6.2-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 

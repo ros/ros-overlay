@@ -1,15 +1,15 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="These are regression tests for the osm_cartography and\
 	 route_network [...]"
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/${PN}/0.2.4-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
+HOMEPAGE="http://ros.org/wiki/test_osm"
+SRC_URI="https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/${PN}/0.2.5-1.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
