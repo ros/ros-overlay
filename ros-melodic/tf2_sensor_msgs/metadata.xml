@@ -5,7 +5,7 @@
     Small lib to transform sensor_msgs with tf. Most notably, PointCloud2
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

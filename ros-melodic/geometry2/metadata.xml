@@ -5,7 +5,7 @@
     A metapackage to bring in the default packages second generation Transform Library in ros, tf2.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

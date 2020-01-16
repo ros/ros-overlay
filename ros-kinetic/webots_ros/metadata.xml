@@ -13,6 +13,6 @@
       <email>support@cyberbotics.com</email>
       <name>Cyberbotics</name>
     </maintainer>
-    <bugs-to>https://github.com/omichel/webots_ros/issues</bugs-to>
+    <bugs-to>https://github.com/cyberbotics/webots_ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>
