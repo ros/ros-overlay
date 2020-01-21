@@ -5,7 +5,7 @@
     image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

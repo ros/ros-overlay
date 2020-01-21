@@ -16,6 +16,6 @@
       <email>d.stonier@gmail.com</email>
       <name>Daniel Stonier</name>
     </maintainer>
-    <bugs-to>https://github.com/yujinrobot/kobuki_core/issues</bugs-to>
+    <bugs-to>https://github.com/stonier/kobuki_ftdi/issues</bugs-to>
   </upstream>
 </pkgmetadata>
