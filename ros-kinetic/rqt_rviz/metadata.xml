@@ -6,7 +6,7 @@
     Note that this rqt plugin does NOT supersede RViz but depends on it.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

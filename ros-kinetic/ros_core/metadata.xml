@@ -5,7 +5,7 @@
     A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

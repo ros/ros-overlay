@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -20,7 +20,7 @@ RDEPEND="
 	ros-kinetic/roscpp_traits
 	ros-kinetic/roslz4
 	ros-kinetic/rostime
-	dev-libs/boost
+	dev-libs/boost[python]
 	app-arch/bzip2
 	dev-libs/console_bridge
 "

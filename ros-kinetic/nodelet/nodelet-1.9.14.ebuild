@@ -1,14 +1,14 @@
-# Copyright 2017 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="The nodelet package is designed to provide a way to run multiple\
 	algor[...]"
-HOMEPAGE="https://wiki.ros.org"
+HOMEPAGE="http://ros.org/wiki/nodelet"
 SRC_URI="https://github.com/ros-gbp/${PN}_core-release/archive/release/kinetic/${PN}/1.9.14-0.tar.gz -> ${PN}-kinetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
@@ -22,7 +22,7 @@ RDEPEND="
 	ros-kinetic/roscpp
 	ros-kinetic/rospy
 	ros-kinetic/std_msgs
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-libs/ossp-uuid
 "
 DEPEND="${RDEPEND}
