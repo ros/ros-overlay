@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	ros-kinetic/catkin
 	ros-kinetic/rostest
 	ros-kinetic/rosunit
-	dev-libs/boost
+	dev-libs/boost[python]
 "
 
 SLOT="0"
