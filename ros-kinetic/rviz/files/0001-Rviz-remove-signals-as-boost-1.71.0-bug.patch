@@ -1,0 +1,24 @@
+From 7506d93c8abc9b4f5e7c35424697106a1607b6e4 Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <sammypfeiffer@gmail.com>
+Date: Wed, 4 Dec 2019 23:27:07 +1100
+Subject: [PATCH 1/1] Rviz remove signals as boost 1.71.0 bug
+
+---
+ CMakeLists.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6d0d50a..f5ee110 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,7 +12,6 @@ find_package(Boost REQUIRED
+   COMPONENTS
+   filesystem
+   program_options
+-  signals
+   system
+   thread
+ )
+-- 
+2.7.4
+

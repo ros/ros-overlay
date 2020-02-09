@@ -1,0 +1,25 @@
+From 092bc5d7290f58ae89270891a6c86dcfd1a66fb6 Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <sammypfeiffer@gmail.com>
+Date: Fri, 6 Dec 2019 18:43:58 +1100
+Subject: [PATCH 1/1] image_view signals boost 1.71.0 bug fix
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0b98148..88113d1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ find_package(catkin REQUIRED COMPONENTS camera_calibration_parsers cv_bridge dyn
+ generate_dynamic_reconfigure_options(cfg/ImageView.cfg)
+ 
+ catkin_package(CATKIN_DEPENDS dynamic_reconfigure)
+-find_package(Boost REQUIRED COMPONENTS signals thread)
++find_package(Boost REQUIRED COMPONENTS thread)
+ find_package(OpenCV REQUIRED)
+ 
+ include_directories(${Boost_INCLUDE_DIRS}
+-- 
+2.7.4
+

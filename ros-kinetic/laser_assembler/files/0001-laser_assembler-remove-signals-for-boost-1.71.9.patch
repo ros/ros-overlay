@@ -1,0 +1,25 @@
+From 4ee8cc3521dcc553bf43cf2378a34f64339d17e5 Mon Sep 17 00:00:00 2001
+From: Sammy Pfeiffer <sammypfeiffer@gmail.com>
+Date: Fri, 6 Dec 2019 18:31:38 +1100
+Subject: [PATCH 1/1] laser_assembler remove signals for boost 1.71.9
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ae36340..74f2f32 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,7 +11,7 @@ tf sensor_msgs message_filters roscpp laser_geometry filters)
+ find_package(catkin REQUIRED COMPONENTS 
+   ${THIS_PACKAGE_ROS_DEPS} 
+   message_generation)
+-find_package(Boost REQUIRED COMPONENTS system signals)
++find_package(Boost REQUIRED COMPONENTS system)
+ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
+ 
+ ##############################################################################
+-- 
+2.7.4
+
