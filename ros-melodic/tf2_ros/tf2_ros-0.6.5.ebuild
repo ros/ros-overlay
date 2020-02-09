@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="This package contains the ROS bindings for the tf2 library, for both Python[...]"
 HOMEPAGE="http://www.ros.org/wiki/tf2_ros"
-SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/melodic/${PN}/0.6.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/geometry2-release/archive/release/melodic/${PN}/0.6.5-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
