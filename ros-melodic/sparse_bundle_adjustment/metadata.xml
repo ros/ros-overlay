@@ -5,7 +5,7 @@
     ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
