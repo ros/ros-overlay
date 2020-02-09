@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -25,7 +25,7 @@ RDEPEND="
 	ros-kinetic/std_srvs
 	ros-kinetic/topic_tools
 	ros-kinetic/xmlrpcpp
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}

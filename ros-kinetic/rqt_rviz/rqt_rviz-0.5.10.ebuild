@@ -1,8 +1,8 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -18,7 +18,7 @@ RDEPEND="
 	ros-kinetic/rqt_gui
 	ros-kinetic/rqt_gui_cpp
 	ros-kinetic/rviz
-	dev-libs/boost
+	dev-libs/boost[python]
 "
 DEPEND="${RDEPEND}
 	ros-kinetic/catkin
