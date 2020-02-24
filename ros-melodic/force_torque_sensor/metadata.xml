@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The force_torque_sensor package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>denis.stogl@kit.edu</email>
+      <name>Denis Štogl</name>
+    </maintainer>
+    <bugs-to>https://github.com/KITrobotics/force_torque_sensor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

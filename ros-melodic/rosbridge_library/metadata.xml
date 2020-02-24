@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The core rosbridge package, repsonsible for interpreting JSON andperforming
+    The core rosbridge package, responsible for interpreting JSON and performing
     the appropriate ROS action, like subscribe, publish, call service, and
     interact with params.
   </longdescription>

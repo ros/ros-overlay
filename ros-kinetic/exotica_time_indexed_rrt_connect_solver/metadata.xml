@@ -5,13 +5,13 @@
     Time-Indexed RRT-Connect solver (Humanoids 2018)
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>yiming.yang@ed.ac.uk</email>
-      <name>Yiming Yang</name>
+      <email>wolfgang.merkt@ed.ac.uk</email>
+      <name>Wolfgang Merkt</name>
     </maintainer>
     <bugs-to>https://github.com/ipab-slmc/exotica/issues</bugs-to>
   </upstream>
