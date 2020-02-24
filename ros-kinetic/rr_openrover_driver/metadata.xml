@@ -12,8 +12,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>jack@digilabs.io</email>
-      <name>Jack Kilian</name>
+      <email>nickpadilla@roverrobotics.com</email>
+      <name>Nick Padilla</name>
     </maintainer>
     <bugs-to>https://github.com/RoverRobotics/rr_openrover_stack/issues</bugs-to>
   </upstream>
