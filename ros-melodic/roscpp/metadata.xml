@@ -3,7 +3,7 @@
 <pkgmetadata>
   <longdescription>
     roscpp is a C++ implementation of ROS. It provides
-    a <a href="http://www.ros.org/wiki/Client%20Libraries">client
+    a <a href="http://wiki.ros.org/Client%20Libraries">client
     library</a> that enables C++ programmers to quickly interface with
     ROS <a href="http://ros.org/wiki/Topics">Topics</a>,
     <a href="http://ros.org/wiki/Services">Services</a>,
@@ -13,7 +13,7 @@
     be the high-performance library for ROS.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

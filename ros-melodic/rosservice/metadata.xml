@@ -3,13 +3,13 @@
 <pkgmetadata>
   <longdescription>
     rosservice contains the rosservice command-line tool for listing
-    and querying ROS <a href="http://www.ros.org/wiki/Services">Services</a>. It also
+    and querying ROS <a href="http://wiki.ros.org/Services">Services</a>. It also
     contains a Python library for retrieving information about
     Services and dynamically invoking them. The Python library is
     experimental and is for internal-use only.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

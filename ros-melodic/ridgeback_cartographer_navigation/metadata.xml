@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Launch files and code for autonomous navigation of the Ridgeback using Google Cartographer
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>tbaltovski@clearpathrobotics.com</email>
+      <name>Tony Baltovski</name>
+    </maintainer>
+    <bugs-to>https://github.com/clearpath-gbp/ridgeback_cartographer_navigation/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
