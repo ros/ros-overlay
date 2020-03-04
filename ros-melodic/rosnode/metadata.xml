@@ -3,13 +3,13 @@
 <pkgmetadata>
   <longdescription>
     rosnode is a command-line tool for displaying debug information
-    about ROS <a href="http://www.ros.org/wiki/Nodes">Nodes</a>,
+    about ROS <a href="http://wiki.ros.org/Nodes">Nodes</a>,
     including publications, subscriptions and connections. It also
     contains an experimental library for retrieving node
     information. This library is intended for internal use only.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
