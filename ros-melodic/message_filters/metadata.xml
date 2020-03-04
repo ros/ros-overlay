@@ -5,7 +5,7 @@
     A set of message filters which take in messages and may output those messages at a later time, based on the conditions that filter needs met.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
