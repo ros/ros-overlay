@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -9,7 +9,7 @@ inherit ros-cmake
 DESCRIPTION="<p>\
 			amcl is a probabilistic localization system for a robot mo[...]"
 HOMEPAGE="http://wiki.ros.org/amcl"
-SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/melodic/${PN}/1.16.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/navigation-release/archive/release/melodic/${PN}/1.16.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
