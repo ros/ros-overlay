@@ -12,7 +12,7 @@ library. This package is stable, and will get integrated into tf in
 the next major release cycle (see roadmap).
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

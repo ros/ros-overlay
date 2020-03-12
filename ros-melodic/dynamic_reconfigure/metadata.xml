@@ -2,17 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This unary stack contains the dynamic_reconfigure package which provides a means to change
-    node parameters at any time without having to restart the node.
+    The dynamic_reconfigure package provides a means to update parameters
+    at runtime without having to restart the node.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mikael@osrfoundation.org</email>
-      <name>Mikael Arguedas</name>
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/dynamic_reconfigure/issues</bugs-to>
   </upstream>
