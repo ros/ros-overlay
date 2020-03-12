@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>piotr.orzechowski@kit.edu</email>
-      <name>Piotr Orzechowski</name>
+      <email>fabian.poggenhans@kit.edu</email>
+      <name>Fabian Poggenhans</name>
     </maintainer>
     <bugs-to>https://github.com/KIT-MRT/mrt_cmake_modules/issues</bugs-to>
   </upstream>
