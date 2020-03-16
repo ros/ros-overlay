@@ -22,6 +22,7 @@ RDEPEND="
 	dev-python/rosdep
 	dev-lang/python
 	dev-python/catkin_pkg
+	dev-util/rosdep
 	dev-libs/tinyxml2
 	test? ( dev-python/coverage )
 	test? ( dev-python/coverage )
