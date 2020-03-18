@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The cob_omni_drive_controller package
+    The cob_omni_drive_controller package provides a ros_controller plugin for the Care-O-bot omni-directional base platform.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
