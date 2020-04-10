@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The cob_hardware_emulation package
+    The cob_hardware_emulation package provides idealized nodes emulating real robot hardware and/or physics simulation.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
