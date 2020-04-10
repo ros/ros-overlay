@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The cob_phidget_power_state package
+    The cob_phidget_power_state package publishes power state based on phidgets signals.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

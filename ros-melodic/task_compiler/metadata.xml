@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    task_compiler
+
+     Compiler that translate task description in PDDL (Planning Domain Description Language) to SMACH (state machine based execution and coordination system) description.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ueda@jsk.t.u-tokyo.ac.jp</email>
+      <name>Ryohei Ueda</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/jsk_planning/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>padilla@digilabs.io</email>
+      <email>nickpadilla@roverrobotics.com</email>
       <name>Nicholas Padilla</name>
     </maintainer>
     <bugs-to>https://github.com/RoverRobotics/rr_openrover_stack/issues</bugs-to>

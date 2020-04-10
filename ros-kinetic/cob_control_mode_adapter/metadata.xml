@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The cob_control_mode_adapter package
+    The cob_control_mode_adapter package provides a node that automatically loads respective ros_controllers depending on required control mode.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
