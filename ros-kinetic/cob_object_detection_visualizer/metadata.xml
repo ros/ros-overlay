@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The cob_object_detection_visualizer package
+    The cob_object_detection_visualizer package visualizes the object detection result.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

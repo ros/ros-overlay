@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The cob_mecanum_controller_node provides a lightweight base controller for mecanum drive robots. 
+    The out/input for the wheel command/state are wheel velocities in rad/s for the wheels 
+    [front left, front right, rear left, rear right]
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jba@ipa.fhg.de</email>
+      <name>Jannik Abbenseth</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_control/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

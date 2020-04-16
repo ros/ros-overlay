@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provides a mechanism to make trees of lifecycle nodes to propagate state changes
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>fmrico@gmail.com</email>
+      <name>fmrico</name>
+    </maintainer>
+    <bugs-to>https://github.com/fmrico/cascade_lifecycle/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

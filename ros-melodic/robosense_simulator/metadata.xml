@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Metapackage allowing easy installation of Robosense simulation components.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>thomas.simon@ensta-paris.fr</email>
+      <name>Thomas SIMON</name>
+    </maintainer>
+    <bugs-to>https://github.com/tomlogan501/robosense_simulator_release/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
