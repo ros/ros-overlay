@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Script to delay the launch of a roslaunch file
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>p595201m@mail.kyutech.jp</email>
+      <name>Masaru Morita</name>
+    </maintainer>
+    <bugs-to>https://github.com/MoriKen254/timed_roslaunch/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
