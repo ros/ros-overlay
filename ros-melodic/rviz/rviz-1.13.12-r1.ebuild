@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="3D visualization tool for ROS."
 HOMEPAGE="http://wiki.ros.org/rviz"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.9-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.13.12-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="( BSD CC-BY-SA-3.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
@@ -21,6 +21,7 @@ RDEPEND="
 	ros-melodic/map_msgs
 	ros-melodic/media_export
 	ros-melodic/message_filters
+	ros-melodic/message_runtime
 	ros-melodic/nav_msgs
 	ros-melodic/pluginlib
 	ros-melodic/python_qt_binding
@@ -51,6 +52,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
 	ros-melodic/cmake_modules
+	ros-melodic/message_generation
 	dev-cpp/eigen
 	dev-qt/qtopengl:5
 	dev-libs/urdfdom
