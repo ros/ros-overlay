@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides messages and serializations / conversion for the <a href="http://octomap.github.com">OctoMap library</a>.
+    This package provides messages and serializations / conversion for the <a href="http://octomap.github.io">OctoMap library</a>.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

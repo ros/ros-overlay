@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>w.merkt+oss@gmail.com</email>
+      <email>opensource@wolfgangmerkt.com</email>
       <name>Wolfgang Merkt</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/octomap_mapping/issues</bugs-to>

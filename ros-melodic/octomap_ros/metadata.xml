@@ -6,13 +6,13 @@
     This enables a convenvient use of the octomap package in ROS.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>HornungA@informatik.uni-freiburg.de</email>
-      <name>Armin Hornung</name>
+      <email>opensource@wolfgangmerkt.com</email>
+      <name>Wolfgang Merkt</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/octomap_ros/issues</bugs-to>
   </upstream>

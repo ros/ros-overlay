@@ -5,7 +5,7 @@
     Trajectory critics for the dwb_local_planner that work well together with the SBPL global planner on the MiR robot
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
