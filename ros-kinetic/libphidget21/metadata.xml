@@ -5,13 +5,13 @@
     This package wraps the libphidget21 to use it as a ROS dependency
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
       <email>martin.guenther@dfki.de</email>
-      <name>Martin Guenther</name>
+      <name>Martin Günther</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/phidgets_drivers/issues</bugs-to>
   </upstream>

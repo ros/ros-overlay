@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Extension to launch_ros to provide the ability to run nodes in sandboxed environments.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-contributions@amazon.com</email>
+      <name>AWS RoboMaker</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-security/launch_ros_sandbox/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

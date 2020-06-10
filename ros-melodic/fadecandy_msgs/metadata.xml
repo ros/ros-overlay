@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS msgs for fadecandy LED controllers
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jon.binney@ironox.com</email>
+      <name>Jon Binney</name>
+    </maintainer>
+    <bugs-to>https://github.com/iron-ox/fadecandy_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
