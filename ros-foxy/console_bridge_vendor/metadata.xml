@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Wrapper around console_bridge, providing nothing but a dependency on console_bridge, on some systems.
+    On others, it provides an ExternalProject build of console_bridge.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>steven@osrfoundation.org</email>
+      <name>Steven! Ragnarök</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/console_bridge_vendor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
