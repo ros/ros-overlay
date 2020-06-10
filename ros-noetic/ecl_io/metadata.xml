@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Most implementations (windows, posix, ...) have slightly different api for 
+     low level input-output functions. These are gathered here and re-represented 
+     with a cross platform set of functions.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/ecl_lite/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
