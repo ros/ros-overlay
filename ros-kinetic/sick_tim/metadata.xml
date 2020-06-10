@@ -5,7 +5,7 @@
     A ROS driver for the SICK TiM and the SICK MRS 1000 laser scanners.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

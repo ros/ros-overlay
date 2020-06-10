@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provides an interface between ros and Rover Robotics rover hardware. Inputs to rr_openrover_driver
+    include emergency stop and velocity commands.  It outputs diagnostic data such as encoder
+    readings and battery charge.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nickpadilla@roverrobotics.com</email>
+      <name>Nick Padilla</name>
+    </maintainer>
+    <bugs-to>https://github.com/RoverRobotics/rr_openrover_stack/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
