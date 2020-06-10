@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    rqt GUI for rosmon, the node launcher and monitor for ROS.
+		rosmon is a replacement for the roslaunch tool, focused on performance,
+		remote monitoring, and usability.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>max.schwarz@uni-bonn.de</email>
+      <name>Max Schwarz</name>
+    </maintainer>
+    <bugs-to>https://github.com/xqms/rosmon/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

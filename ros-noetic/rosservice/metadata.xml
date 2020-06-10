@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    rosservice contains the rosservice command-line tool for listing
+    and querying ROS <a href="http://wiki.ros.org/Services">Services</a>. It also
+    contains a Python library for retrieving information about
+    Services and dynamically invoking them. The Python library is
+    experimental and is for internal-use only.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dthomas@osrfoundation.org</email>
+      <name>Dirk Thomas</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/ros_comm/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Generic CAN interface description with helpers for filtering and driver implementation. Further a socketcan implementation based on boost::asio is included.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mathias.luedtke@ipa.fraunhofer.de</email>
+      <name>Mathias Lüdtke</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-industrial/ros_canopen/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
