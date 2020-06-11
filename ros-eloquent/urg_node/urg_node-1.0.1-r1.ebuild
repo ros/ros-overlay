@@ -8,7 +8,7 @@ inherit ament-cmake
 
 DESCRIPTION="urg_node"
 HOMEPAGE="http://ros.org/wiki/urg_node"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/1.0.0-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/eloquent/${PN}/1.0.1-1.tar.gz -> ${PN}-eloquent-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
