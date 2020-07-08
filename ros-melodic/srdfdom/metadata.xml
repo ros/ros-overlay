@@ -5,13 +5,13 @@
     Parser for Semantic Robot Description Format (SRDF).
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dave@dav.ee</email>
-      <name>Dave Coleman</name>
+      <email>moveit_releasers@googlegroups.com</email>
+      <name>MoveIt Release Team</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/srdfdom/issues</bugs-to>
   </upstream>

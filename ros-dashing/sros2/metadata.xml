@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>michael@openrobotics.org</email>
-      <name>Michael Carroll</name>
+      <email>ros-security@googlegroups.com</email>
+      <name>ROS Security Working Group</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/sros2/issues</bugs-to>
   </upstream>
