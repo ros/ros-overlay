@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>praveen.palanisamy@outlook.com</email>
+      <name>Praveen Palanisamy</name>
+    </maintainer>
+    <bugs-to>https://github.com/praveen-palanisamy/multi_object_tracking_lidar/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

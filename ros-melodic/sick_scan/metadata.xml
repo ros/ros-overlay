@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A ROS driver for the SICK TiM and SICK MRS series of laser scanners.
+    A ROS driver for the SICK TiM and SICK MRS series of lidars.
     This package is based on the original sick_tim-repository of Martin Günther et al.
   </longdescription>
   <maintainer type="person">

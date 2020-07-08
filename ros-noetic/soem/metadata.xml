@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    This is an updated version of the original SOEM wrapper released into ROS now including
+    the upstream Repo as a git subtree.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>matthias.gruhler@gmail.com</email>
+      <name>Matthias Gruhler</name>
+    </maintainer>
+    <bugs-to>https://github.com/mgruhler/soem-gbp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

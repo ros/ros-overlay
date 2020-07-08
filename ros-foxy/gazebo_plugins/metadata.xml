@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jrivero@osrfoundation.org</email>
+      <name>Jose Luis Rivero</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/gazebo_ros_pkgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

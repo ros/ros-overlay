@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A node that provides the move_base action server interface, but instead of
+    planning simply drives towards the target pose using a control-based
+    approach.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>martin.guenther@dfki.de</email>
+      <name>Martin Günther</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/navigation_experimental/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

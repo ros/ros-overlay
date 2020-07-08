@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package provides added functionaliy on top of rospy, including a
+    This package provides added functionality on top of rospy, including a
   single-threaded callback queue.
   </longdescription>
   <maintainer type="person">

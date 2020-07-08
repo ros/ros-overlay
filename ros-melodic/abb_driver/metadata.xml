@@ -19,6 +19,6 @@
       <email>levi.armstrong@swri.org</email>
       <name>Levi Armstrong (Southwest Research Institute)</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-industrial/abb/issues</bugs-to>
+    <bugs-to>https://github.com/ros-industrial/abb_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>
