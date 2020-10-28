@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This repository holds the current calibration data for Care-O-bot.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>richard.bormann@ipa.fraunhofer.de</email>
+      <name>Richard Bormann</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_calibration_data/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

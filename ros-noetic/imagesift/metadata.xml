@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    For every image, computes its sift features and send a new message with the image, its intrinsic parameters, and the features.
+    Parameters include:
+    display - shows the image on the local computer
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/jsk_recognition/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

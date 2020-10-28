@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Interprocess mechanisms vary greatly across platforms - sysv, posix, win32, there
+  are more than a few. This package provides an infrastructure to allow for developing 
+  cross platform c++ wrappers around the lower level c api's that handle these 
+  mechanisms. These make it not only easier to utilise such mechanisms, but allow it 
+  to be done consistently across platforms.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>d.stonier@gmail.com</email>
+      <name>Daniel Stonier</name>
+    </maintainer>
+    <bugs-to>https://github.com/yujinrobot/ecl_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

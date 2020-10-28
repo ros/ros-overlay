@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This packagae implements the special homing procedure that is needed for old cob4/raw bases
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>florian.weisshardt@ipa.fraunhofer.de</email>
+      <name>Florian Weisshardt</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

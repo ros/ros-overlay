@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The smach viewer is a GUI that shows the state of hierarchical
+    SMACH state machines. It can visualize the possible transitions
+    between states, as well as the currently active state and the
+    values of user data that is passed around between states. The
+    smach viewer uses the SMACH debugging interface based on
+    the <a href="http://www.ros.org/wiki/smach_msgs">smach
+    messages</a> to gather information from running state machines.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jbo@jhu.edu</email>
+      <name>Jonathan Bohren</name>
+    </maintainer>
+    <bugs-to>https://github.com/jbohren/executive_smach_visualization/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

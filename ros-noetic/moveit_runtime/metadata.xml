@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    moveit_runtime meta package contains MoveIt packages that are essential for its runtime (e.g. running MoveIt on robots).
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>gm130s@gmail.com</email>
+      <name>Isaac I. Y. Saito</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/moveit/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

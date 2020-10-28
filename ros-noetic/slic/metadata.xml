@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    SLIC-Superpizel ROS Wrapper
+  This file contains the class elements of the class Slic. This class is an
+  implementation of the SLIC Superpixel algorithm by Achanta et al. [PAMI'12,
+  vol. 34, num. 11, pp. 2274-2282].
+
+  This implementation is created for the specific purpose of creating
+  over-segmentations in an OpenCV-based environment.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>k-okada@jsk.imi.i.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/jsk_3rdparty/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

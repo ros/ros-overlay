@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Render large point clouds in rviz
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>timo.roehling@fkie.fraunhofer.de</email>
+      <name>Timo Röhling</name>
+    </maintainer>
+    <bugs-to>https://github.com/fkie/potree_rviz_plugin/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
