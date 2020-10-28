@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>william@osrfoundation.org</email>
-      <name>William Woodall</name>
+      <email>rhaschke@techfak.uni-bielefeld.de</email>
+      <name>Robert Haschke</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rviz/issues</bugs-to>
   </upstream>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROSaic: C++ driver for Septentrio's mosaic receivers and beyond
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>githubuser@septentrio.com</email>
+      <name>Septentrio</name>
+    </maintainer>
+    <bugs-to>https://github.com/septentrio-users/septentrio_gnss_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

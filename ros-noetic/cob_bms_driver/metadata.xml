@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Driver package for interfacing the battery management system (BMS) on Care-O-bot.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>felixmessmer@gmail.com</email>
+      <name>Felix Messmer</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

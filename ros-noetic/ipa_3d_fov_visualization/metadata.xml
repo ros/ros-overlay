@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The ipa_3d_fov_visualization package allows to visualize the field-of-view of a camera.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>florenz.graf@ipa.fraunhofer.de</email>
+      <name>Florenz Graf</name>
+    </maintainer>
+    <bugs-to>https://github.com/ipa320/cob_perception_common/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

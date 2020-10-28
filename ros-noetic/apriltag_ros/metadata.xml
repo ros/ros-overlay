@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A ROS wrapper of the AprilTag 3 visual fiducial detection
+    algorithm. Provides full access to the core AprilTag 3 algorithm's
+    customizations and makes the tag detection image and detected tags' poses
+    available over ROS topics (including tf). The core AprilTag 3 algorithm is
+    extended to allow the detection of tag bundles and a bundle calibration
+    script is provided (bundle detection is more accurate than single tag
+    detection). Continuous (camera image stream) and single image detector nodes
+    are available.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>danylo.malyuta@gmail.com</email>
+      <name>Danylo Malyuta</name>
+    </maintainer>
+    <bugs-to>https://github.com/AprilRobotics/apriltag_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

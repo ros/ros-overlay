@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The marker_msgs package contains messages usable to setup a marker/fiducial system. 
+    The package distinguishes between two types of messages. 
+    First messages to describe the properties of a marker/fiducial detection system and the detected markers. 
+    Secondly messages used to represent a map of markers/features with covariances as it would be produced by a SLAM system or published by a map server for self-localization.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>markus.bader@tuwien.ac.at</email>
+      <name>Markus Bader</name>
+    </maintainer>
+    <bugs-to>https://github.com/tuw-robotics/marker_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
