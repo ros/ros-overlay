@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="diagnostic_common_diagnostics"
 HOMEPAGE="http://ros.org/wiki/diagnostic_common_diagnostics"
-SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/${PN}/1.9.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/${PN}/1.9.7-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
