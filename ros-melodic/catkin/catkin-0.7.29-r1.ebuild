@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Low-level build system macros and infrastructure for ROS."
 HOMEPAGE="http://wiki.ros.org/catkin"
-SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.7.26-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.7.29-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 
