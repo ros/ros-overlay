@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN
+    Interface to the Dataspeed Inc. Intelligent Power Distribution System (iPDS) via CAN
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

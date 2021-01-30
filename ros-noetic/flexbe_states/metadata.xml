@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    flexbe_states provides a collection of predefined states.
+     Feel free to add new states.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>schillin@kth.se</email>
+      <name>Philipp Schillinger</name>
+    </maintainer>
+    <bugs-to>https://github.com/FlexBE/flexbe_behavior_engine/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

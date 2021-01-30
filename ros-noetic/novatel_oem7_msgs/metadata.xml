@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Messages for NovAtel Oem7 family of receivers.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>support.novatel@hexagon.com</email>
+      <name>NovAtel Support</name>
+    </maintainer>
+    <bugs-to>https://github.com/novatel-gbp/novatel_oem7_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Library implementing ODVA EtherNet/IP (Industrial Protocol).
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>reinzor@gmail.com</email>
+      <name>Rein Appeldoorn</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/odva_ethernetip/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

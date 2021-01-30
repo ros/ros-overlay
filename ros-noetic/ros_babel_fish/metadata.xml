@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A runtime message handler for ROS.
+    Allows subscription, publishing, calling of services and actions with messages known only at runtime.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros_babel_fish@stefanfabian.me</email>
+      <name>Stefan Fabian</name>
+    </maintainer>
+    <bugs-to>https://github.com/StefanFabian/ros_babel_fish/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

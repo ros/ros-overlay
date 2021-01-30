@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Robot agnostic information theoretic exploration strategy
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>bostoncleek2020@u.northwestern.edu</email>
+      <name>bostoncleek</name>
+    </maintainer>
+    <bugs-to>https://github.com/bostoncleek/ergodic_exploration/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

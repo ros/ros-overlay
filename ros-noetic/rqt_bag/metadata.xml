@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>mabel@openrobotics.org</email>
+      <name>Mabel Zhang</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_bag/issues</bugs-to>
   </upstream>
