@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Messages for the Dataspeed Inc. Power Distribution System (PDS)
+    Messages for the Dataspeed Inc. Intelligent Power Distribution System (iPDS)
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>
+        This package contains the robot model that is used by the realtime
+        controllers
+        inside <a href="http://www.ros.org/wiki/pr2_controller_manager">controller
+           manager</a>. This robot model focuses on controlling the robot
+        mechanism in a realtime control loop, and therefore it only contains
+        the components of a robot that are relevant in realtime: the robot
+        joints (with encoders, transmisisons and actuators) and the
+        kinematic/dynamic model of the robot.
+     </p>
+     <p>
+        The pr2_mechanism_model package is well tested and is released with a stable API.
+     </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
+    </maintainer>
+    <bugs-to>https://github.com/pr2-gbp/pr2_mechanism/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

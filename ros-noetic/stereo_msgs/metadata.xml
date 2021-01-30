@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>tfoote@osrfoundation.org</email>
-      <name>Tully Foote</name>
+      <email>michel@ekumenlabs.com</email>
+      <name>Michel Hidalgo</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/common_msgs/issues</bugs-to>
   </upstream>

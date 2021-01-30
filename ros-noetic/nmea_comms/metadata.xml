@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The nmea_comms package provides helper nodes for transmitting and receiving
+    the NMEA sentences.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mpurvis@clearpathrobotics.com</email>
+      <name>Mike Purvis</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/nmea_comms/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

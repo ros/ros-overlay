@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -39,4 +39,3 @@ src_prepare() {
 	EPATCH_FORCE="yes" epatch
 	ros-cmake_src_prepare
 }
-

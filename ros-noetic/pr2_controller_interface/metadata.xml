@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package specifies the interface to a realtime controller. A
+   controller that implements this interface can be executed by the
+    <a href="http://www.ros.org/wiki/pr2_controller_manager">controller
+  manager</a> in the real time control loop. The package basically
+  contains the C++ controller base class that all controllers need to
+  inherit from.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-orphaned-packages@googlegroups.com</email>
+      <name>ROS Orphaned Package Maintainers</name>
+    </maintainer>
+    <bugs-to>https://github.com/pr2-gbp/pr2_mechanism/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

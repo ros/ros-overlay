@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>namniart@gmail.com</email>
-      <name>Austin Hendrix</name>
+      <email>guglielmo.gemignani@gmail.com</email>
+      <name>Guglielmo Gemignani</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/diagnostics/issues</bugs-to>
   </upstream>

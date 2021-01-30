@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package to contain an install external message dependencies
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>abrahammonrroy@yahoo.com</email>
+      <name>Abraham Monrroy</name>
+    </maintainer>
+    <bugs-to>https://github.com/autoware-ai/messages/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

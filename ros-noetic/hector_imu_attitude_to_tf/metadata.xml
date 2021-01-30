@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    hector_imu_attitude_to_tf is a lightweight node that can be used to publish the roll/pitch attitude angles reported via a imu message to tf.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>meyer@fsr.tu-darmstadt.de</email>
+      <name>Johannes Meyer</name>
+    </maintainer>
+    <bugs-to>https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

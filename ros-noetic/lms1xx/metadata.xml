@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mpurvis@clearpathrobotics.com</email>
+      <name>Mike Purvis</name>
+    </maintainer>
+    <bugs-to>https://github.com/clearpath-gbp/lms1xx/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
