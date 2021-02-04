@@ -1,0 +1,27 @@
+diff --git a/cv_bridge/CMakeLists.txt b/cv_bridge/CMakeLists.txt
+index ef804b9..674f59f 100644
+--- a/cv_bridge/CMakeLists.txt
++++ b/cv_bridge/CMakeLists.txt
+@@ -6,15 +6,15 @@ find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
+ if(NOT ANDROID)
+   find_package(PythonLibs)
+ 
+-  if(PYTHONLIBS_VERSION_STRING VERSION_LESS "3.8")
+-    # Debian Buster
+-    find_package(Boost REQUIRED python37)
++  if(PYTHONLIBS_VERSION_STRING VERSION_GREATER 3.8)
++    find_package(Boost REQUIRED COMPONENTS filesystem python38)
+   else()
+-    # Ubuntu Focal
+-    find_package(Boost REQUIRED python)
++    if(PYTHONLIBS_VERSION_STRING VERSION_GREATER 3.7)
++      find_package(Boost REQUIRED COMPONENTS filesystem python37)
++    else()
++      message(FATAL_ERROR, "At least Python 3.7 is needed, please consider migrating.")
++    endif()
+   endif()
+-else()
+-find_package(Boost REQUIRED)
+ endif()
+ 
+ set(_opencv_version 4)
