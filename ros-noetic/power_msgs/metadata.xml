@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>narora@fetchrobotics.com</email>
-      <name>Niharika Arora</name>
+      <email>eric.relson@zebra.com</email>
+      <name>Eric Relson</name>
     </maintainer>
     <bugs-to>https://github.com/fetchrobotics-gbp/power_msgs/issues</bugs-to>
   </upstream>

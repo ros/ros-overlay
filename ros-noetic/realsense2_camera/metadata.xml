@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>sergey.dorodnicov@intel.com</email>
-      <name>Sergey Dorodnicov</name>
+      <email>doron.hirshberg@intel.com</email>
+      <name>Doron Hirshberg</name>
     </maintainer>
     <bugs-to>https://github.com/IntelRealSense/realsense-ros/issues</bugs-to>
   </upstream>
