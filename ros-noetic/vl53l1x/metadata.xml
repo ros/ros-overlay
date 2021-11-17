@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    VL53L1X ToF rangefinder driver
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>okalachev@gmail.com</email>
+      <name>Oleg Kalachev</name>
+    </maintainer>
+    <bugs-to>https://github.com/okalachev/vl53l1x_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

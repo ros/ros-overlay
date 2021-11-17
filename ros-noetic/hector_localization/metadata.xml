@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The hector_localization stack is a collection of packages, that provide the full 6DOF pose of a robot or platform.
+    It uses various sensor sources, which are fused using an Extended Kalman filter.
+
+    Acceleration and angular rates from an inertial measurement unit (IMU) serve as primary measurements.
+    The usage of other sensors is application-dependent. The hector_localization stack currently supports
+    GPS, magnetometer, barometric pressure sensors and other external sources that provide a geometry_msgs/PoseWithCovariance
+    message via the poseupdate topic.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>joh@nnes-meyer.de</email>
+      <name>Johannes Meyer</name>
+    </maintainer>
+    <bugs-to>https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

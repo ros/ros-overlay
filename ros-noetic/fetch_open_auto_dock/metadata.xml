@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    An open-source version of the Fetch charge docking system.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>selliott@fetchrobotics.com</email>
+      <name>Sarah Elliott</name>
+    </maintainer>
+    <bugs-to>https://github.com/fetchrobotics-gbp/fetch_open_auto_dock-gbp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

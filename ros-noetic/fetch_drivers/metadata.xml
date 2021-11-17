@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The public fetch_drivers package is a binary only release.
+
+    fetch_drivers contains both the drivers and firmware for the fetch and freight research robots.
+    There should be no reason to use these drivers unless you're running on a fetch or a freight research robot.
+    This package, is a cmake/make only package which installs the binaries for the drivers and firmware.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>csaldanha@fetchrobotics.com</email>
+      <name>Carl Saldanha</name>
+    </maintainer>
+    <bugs-to>https://github.com/fetchrobotics-gbp/fetch_robots/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
