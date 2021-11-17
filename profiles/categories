@@ -1,8 +1,4 @@
-ros-kinetic
 ros-melodic
 ros-noetic
-ros-bouncy
-ros-crystal
-ros-dashing
-ros-eloquent
 ros-foxy
+ros-galactic
