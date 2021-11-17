@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Contains aligned allocation functions, as well as an STL-compatible AlignedAllocator class.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dash@clearpathrobotics.com</email>
+      <name>Devon Ash</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/ros_realtime/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

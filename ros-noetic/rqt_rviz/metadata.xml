@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>louise@osrfoundation.org</email>
-      <name>Louise Poubel</name>
+      <email>rhaschke@techfak.uni-bielefeld.de</email>
+      <name>Robert Haschke</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_rviz/issues</bugs-to>
   </upstream>

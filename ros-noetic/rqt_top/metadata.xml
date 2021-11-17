@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dan@lazewatsky.com</email>
-      <name>Dan Lazewatsky</name>
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_top/issues</bugs-to>
   </upstream>

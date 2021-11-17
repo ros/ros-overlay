@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    visp_hand2eye_calibration estimates the camera position with respect
+     to its effector using the ViSP library.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>Fabien.Spindler@inria.fr</email>
+      <name>Fabien Spindler</name>
+    </maintainer>
+    <bugs-to>https://github.com/lagadic/vision_visp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

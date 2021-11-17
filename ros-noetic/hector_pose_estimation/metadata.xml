@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    hector_pose_estimation provides the hector_pose_estimation node and the hector_pose_estimation nodelet.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>joh@nnes-meyer.de</email>
+      <name>Johannes Meyer</name>
+    </maintainer>
+    <bugs-to>https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    scaled controllers metapackage
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>exner@fzi.de</email>
+      <name>Felix Exner</name>
+    </maintainer>
+    <bugs-to>https://github.com/UniversalRobots/Universal_Robots_ROS_scaled_controllers/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

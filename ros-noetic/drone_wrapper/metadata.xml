@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The drone_wrapper package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>pedroariasperez96@gmail.com</email>
+      <name>Pedro Arias</name>
+    </maintainer>
+    <bugs-to>https://github.com/JdeRobot/drones/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

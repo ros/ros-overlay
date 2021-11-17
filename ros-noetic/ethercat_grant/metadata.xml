@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Makes it possible to run the ros_ethercat_loop without using sudo. Forked from pr2-grant
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>software@shadowrobot.com</email>
+      <name>Shadow Robot's software team</name>
+    </maintainer>
+    <bugs-to>https://github.com/shadow-robot/ethercat_grant/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS interface to Rexroth ROKIT Locator
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>stefan.laible@de.bosch.com</email>
+      <name>Stefan Laible</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-gbp/locator_ros_bridge/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>scholz@sim.tu-darmstadt.de</email>
-      <name>Dorian Scholz</name>
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_py_console/issues</bugs-to>
   </upstream>

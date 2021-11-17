@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    TRAC-IK is a faster, significantly more reliable drop-in replacement for
+    KDL's pseudoinverse Jacobian solver.
+
+    The TRAC-IK library has a very similar API to KDL's IK solver calls,
+    except that the user passes a maximum time instead of a maximum number of
+    search iterations.  Additionally, TRAC-IK allows for error tolerances to
+    be set independently for each Cartesian dimension (x,y,z,roll,pitch.yaw).
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>robotics@traclabs.com</email>
+      <name>TRACLabs Robotics</name>
+    </maintainer>
+    <bugs-to>https://github.com/traclabs/trac_ik/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Streaming of OptiTrack mocap data to tf
+    <p>
+    This package contains a node that translates motion capture data from an
+    OptiTrack rig to tf transforms, poses and 2D poses. The node receives
+    packets that are streamed by a NatNet compliant source, decodes them and
+    broadcasts the poses of configured rigid bodies as tf transforms, poses,
+    and/or 2D poses.
+    </p>
+    <p>
+    Currently, this node supports the NatNet streaming protocol v3.0
+    </p>
+    <p>
+    Copyright (c) 2013, Clearpath Robotics<br/> 
+    Copyright (c) 2010, University of Bonn, Computer Science Institute VI<br/>
+    All rights reserved.
+    </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>tony@baltovski.ca</email>
+      <name>Tony Baltovski</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-drivers-gbp/mocap_optitrack/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

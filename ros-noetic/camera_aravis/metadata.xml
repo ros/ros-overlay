@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    camera_aravis: A complete and comfortable GenICam (USB3Vision and GigEVision) based camera driver for ROS (ethernet and usb).
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dominik.kleiser@iosb.fraunhofer.de</email>
+      <name>Dominik Kleiser, Fraunhofer IOSB</name>
+    </maintainer>
+    <bugs-to>https://github.com/FraunhoferIOSB/camera_aravis/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
