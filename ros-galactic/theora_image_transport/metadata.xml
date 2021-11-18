@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Theora_image_transport provides a plugin to image_transport for
+    transparently sending an image stream encoded with the Theora codec.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jkammerl@willowgarage.com</email>
+      <name>Julius Kammerl</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/image_transport_plugins/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

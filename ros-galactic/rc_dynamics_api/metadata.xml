@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The rc_dynamics_api provides an API for easy handling of the dynamic-state data
+      streams provided by Roboception's stereo camera with self-localization.
+      See http://rc-visard.com
+
+      Dynamic-state estimates of the rc_visard relate to its self-localization and
+      ego-motion estimation. These states refer to rc_visard's current pose,
+      velocity, or acceleration and are published on demand via several data streams.
+      For a complete list and descriptions of these dynamics states and the
+      respective data streams please refer to rc_visard's user manual.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>felix.ruess@roboception.de</email>
+      <name>Felix Ruess</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rc_dynamics_api/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

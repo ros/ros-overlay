@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>abrar@openrobotics.org</email>
+      <name>Abrar Rahman Protyasha</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/nodl_to_policy/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

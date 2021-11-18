@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The State Machine Compiler (SMC) from http://smc.sourceforge.net/
+    converts a language-independent description of a state machine
+    into the source code to support that state machine.
+
+    This package contains the libraries that a compiled state machine
+    depends on, but it does not contain the compiler itself.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/bond_core/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    GenICam/GigE Vision Convenience Layer.
+
+      This package combines the Roboception convenience layer for images with the
+      GenICam reference implementation and a GigE Vision transport layer. It is a
+      self contained package that permits configuration and image streaming of
+      GenICam / GigE Vision 2.0 compatible cameras like the Roboception rc_visard.
+
+      This package also provides some tools that can be called from the command line
+      for discovering cameras, changing their configuration and streaming images.
+      Although the tools are meant to be useful when working in a shell or in a
+      script, their main purpose is to serve as example on how to use the API for
+      reading and setting parameters, streaming and synchronizing images.
+
+      See LICENSE.md for licensing terms of the different parts.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>felix.ruess@roboception.de</email>
+      <name>Felix Ruess</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rc_genicam_api/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

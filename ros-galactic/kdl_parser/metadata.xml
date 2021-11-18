@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The Kinematics and Dynamics Library (KDL) defines a tree structure
+   to represent the kinematic and dynamic parameters of a robot
+   mechanism. <tt>kdl_parser</tt> provides tools to construct a KDL
+   tree from an XML robot representation in URDF.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>clalancette@osrfoundation.org</email>
+      <name>Chris Lalancette</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/kdl_parser/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

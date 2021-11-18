@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    rqt_robot_monitor displays diagnostics_agg topics messages that
+   are published by <a href="http://www.ros.org/wiki/diagnostic_aggregator">diagnostic_aggregator</a>.
+   rqt_robot_monitor is a direct port to rqt of
+   <a href="http://www.ros.org/wiki/robot_monitor">robot_monitor</a>. All
+   diagnostics are fall into one of three tree panes depending on the status of
+   diagnostics (normal, warning, error/stale). Status are shown in trees to
+   represent their hierarchy. Worse status dominates the higher level status.<br/>
+   <ul>
+    Ex. 'Computer' category has 3 sub devices. 2 are green but 1 is error. Then
+        'Computer' becomes error.
+   </ul>
+  You can look at the detail of each status by double-clicking the tree nodes.<br/>
+
+  Currently re-usable API to other pkgs are not explicitly provided.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ablasdel@gmail.com</email>
+      <name>Aaron Blasdel</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rqt_robot_monitor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

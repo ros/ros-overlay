@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    RealSense Camera package allowing access to Intel SR300, D400 and L500 3D cameras
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>doron.hirshberg@intel.com</email>
+      <name>Doron Hirshberg</name>
+    </maintainer>
+    <bugs-to>https://github.com/IntelRealSense/realsense-ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

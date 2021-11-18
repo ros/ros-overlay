@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Driver for u-blox GPS devices.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>gcross.code@icloud.com</email>
+      <name>Gareth Cross</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ublox/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
