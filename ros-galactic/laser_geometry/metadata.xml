@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains a class for converting from a 2D laser scan as defined by
+    sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
+    or sensor_msgs/PointCloud2. In particular, it contains functionality to account
+    for the skew resulting from moving robots or tilting laser scanners.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mabel@openrobotics.org</email>
+      <name>Mabel Zhang</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/laser_geometry/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provides real-time manipulator Cartesian and joint servoing.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>blakeanderson@utexas.edu</email>
+      <name>Blake Anderson</name>
+    </maintainer>
+    <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

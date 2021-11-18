@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The system modes concept assumes that a robotics system is built
+    from components with a lifecycle. It adds a notion of (sub-)systems,
+    hiararchically grouping these nodes, as well as a notion of modes
+    that determine the configuration of these nodes and (sub-)systems in
+    terms of their parameter values.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>arne.nordmann@bosch.com</email>
+      <name>Arne Nordmann</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/system_modes/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

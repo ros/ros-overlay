@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Allows integrating catch2 tests in the ament buildsystem with CMake
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>luca@osrfoundation.org</email>
+      <name>Luca Della Vedova</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ament_cmake_catch2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

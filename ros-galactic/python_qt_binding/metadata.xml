@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This stack provides Python bindings for Qt.
+    There are two providers: pyside and pyqt.  PySide2 is available under
+    the GPL, LGPL and a commercial license.  PyQt is released under the GPL.
+
+    Both the bindings and tools to build bindings are included from each
+    available provider.  For PySide, it is called &quot;Shiboken&quot;.  For PyQt,
+    this is called &quot;SIP&quot;.
+
+    Also provided is adapter code to make the user's Python code
+    independent of which binding provider was actually used which makes
+    it very easy to switch between these.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sloretz@openrobotics.org</email>
+      <name>Shane Loretz</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/python_qt_binding/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

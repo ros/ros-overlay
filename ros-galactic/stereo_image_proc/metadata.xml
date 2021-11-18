@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Stereo and single image rectification and disparity processing.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vincent.rabaud@gmail.com</email>
+      <name>Vincent Rabaud</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/image_pipeline/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

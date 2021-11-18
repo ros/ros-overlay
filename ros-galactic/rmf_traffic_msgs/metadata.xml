@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A package containing messages used by the RMF traffic management system.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>grey@openrobotics.org</email>
+      <name>Grey</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rmf_internal_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

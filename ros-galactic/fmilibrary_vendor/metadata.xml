@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Wrapper (aka vendor package) around the FMILibrary by Modelon AB (JModelica.org)
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ralph.lange@de.bosch.com</email>
+      <name>Ralph Lange</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/fmilibrary_vendor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
