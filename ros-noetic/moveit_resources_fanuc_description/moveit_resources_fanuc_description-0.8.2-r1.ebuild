@@ -6,11 +6,11 @@ PYTHON_COMPAT=( python{3_8,3_9,3_10} )
 
 inherit ros-cmake
 
-DESCRIPTION=""
-HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/noetic/${PN}/2.2.2-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
+DESCRIPTION="Fanuc Resources used for MoveIt! testing"
+HOMEPAGE="http://moveit.ros.org"
+SRC_URI="https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/${PN}/0.8.2-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="BSD"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

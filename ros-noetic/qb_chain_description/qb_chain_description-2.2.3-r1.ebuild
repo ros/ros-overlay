@@ -8,18 +8,15 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/noetic/${PN}/2.2.2-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
+SRC_URI="https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/noetic/${PN}/2.2.3-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	ros-noetic/message_runtime
-	ros-noetic/std_msgs
 "
 DEPEND="${RDEPEND}
 	ros-noetic/catkin
-	ros-noetic/message_generation
 "
 
 SLOT="0"

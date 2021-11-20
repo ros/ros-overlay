@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="The tesseract_support package containing files for test and examples"
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/${PN}/0.6.6-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/${PN}/0.6.7-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
