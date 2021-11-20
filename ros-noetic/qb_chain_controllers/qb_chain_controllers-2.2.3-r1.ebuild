@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/noetic/${PN}/2.2.2-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
+SRC_URI="https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/noetic/${PN}/2.2.3-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 
