@@ -1,16 +1,16 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ros-cmake
 
 DESCRIPTION="Foonathan/memory vendor package for Fast-RTPS."
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/galactic/${PN}/1.0.0-3.tar.gz -> ${PN}-galactic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/galactic/${PN}/1.2.0-1.tar.gz -> ${PN}-galactic-release-${PV}.tar.gz"
 
-LICENSE="( Apache-2.0 zlib License )"
+LICENSE="( Apache-2.0 Zlib )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
