@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    MoveIt plugin to generate industrial trajectories PTP, LIN, CIRC and sequences thereof.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>c.henkel@pilz.de</email>
+      <name>Christian Henkel</name>
+    </maintainer>
+    <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

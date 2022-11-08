@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    TODO: Package description
+    Launches a RoboCup 3D Simulation Agent, and converts data to and from ROS2 msgs
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,8 +11,8 @@
   <upstream>
     <maintainer status="active">
       <email>kenjibrameld@gmail.com</email>
-      <name>kenji</name>
+      <name>ijnek</name>
     </maintainer>
-    <bugs-to>https://github.com/ijnek/naosoccer_sim/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/rcss3d_agent/issues</bugs-to>
   </upstream>
 </pkgmetadata>

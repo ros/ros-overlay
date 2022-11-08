@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    MoveIt planning request adapter utilizing chomp for solution optimization
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>raghavendersahdev@gmail.com</email>
+      <name>Raghavender Sahdev</name>
+    </maintainer>
+    <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

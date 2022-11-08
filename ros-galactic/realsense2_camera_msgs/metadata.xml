@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A package containing realsense camera messages definitions.
+    RealSense camera_msgs package containing realsense camera messages definitions
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>doron.hirshberg@intel.com</email>
-      <name>Doron Hirshberg</name>
+      <email>librs.ros@intel.com</email>
+      <name>LibRealSense ROS Team</name>
     </maintainer>
     <bugs-to>https://github.com/IntelRealSense/realsense-ros/issues</bugs-to>
   </upstream>

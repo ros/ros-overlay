@@ -14,8 +14,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mikael@osrfoundation.org</email>
-      <name>Mikael Arguedas</name>
+      <email>audrow@openrobotics.org</email>
+      <name>Audrow Nash</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rqt_action/issues</bugs-to>
   </upstream>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The robot_upstart package provides scripts which may be used to install
+    and uninstall Ubuntu Linux upstart jobs which launch groups of roslaunch files.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>civerachb@clearpathrobotics.com</email>
+      <name>Chris Iverach-Brereton</name>
+    </maintainer>
+    <bugs-to>https://github.com/clearpath-gbp/robot_upstart/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

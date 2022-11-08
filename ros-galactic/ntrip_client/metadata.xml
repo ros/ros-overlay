@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    NTRIP client that will publish RTCM corrections to a ROS topic, and optionally subscribe to NMEA messages to send to an NTRIP server
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>rob.fisher@parker.com</email>
+      <name>Rob Fisher</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ntrip_client/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Driver module between Aldebaran's NAOqiOS and ROS2. It publishes all sensor and actuator data as well as basic diagnostic for battery, temperature. It subscribes also to RVIZ simple goal and cmd_vel for teleop.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mchamoux@softbankrobotics.com</email>
+      <name>Marine Chamoux</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-naoqi/naoqi_driver2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    octomap_ros provides conversion functions between ROS and OctoMap's native types.
+    This enables a convenvient use of the octomap package in ROS.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>opensource@wolfgangmerkt.com</email>
+      <name>Wolfgang Merkt</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/octomap_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

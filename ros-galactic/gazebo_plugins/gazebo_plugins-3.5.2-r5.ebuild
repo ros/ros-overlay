@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit ament-cmake
 
@@ -10,7 +10,7 @@ DESCRIPTION="Robot-independent Gazebo plugins for sensors, motors and dynamic re
 HOMEPAGE="http://gazebosim.org/tutorials?cat=connect_ros"
 SRC_URI="https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/galactic/${PN}/3.5.2-5.tar.gz -> ${PN}-galactic-release-${PV}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD-Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

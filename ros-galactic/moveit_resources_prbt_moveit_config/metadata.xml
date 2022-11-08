@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>
+      MoveIt Resources for testing: Pilz PRBT 6
+    </p>
+    <p>
+		A project-internal configuration for testing in MoveIt.
+    </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>a.gutenkunst@pilz.de</email>
+      <name>Alexander Gutenkunst</name>
+    </maintainer>
+    <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

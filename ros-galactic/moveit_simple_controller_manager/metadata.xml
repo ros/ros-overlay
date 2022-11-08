@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mferguson@fetchrobotics.com</email>
-      <name>Michael Ferguson</name>
+      <email>me@v4hn.de</email>
+      <name>Michael Görner</name>
     </maintainer>
     <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
   </upstream>
