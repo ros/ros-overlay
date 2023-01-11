@@ -16,9 +16,13 @@ KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="test"
 DEPEND=">=dev-python/colcon-core-0.6.1[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-        test? ( dev-python/flake8 )
-        test? ( dev-pyton/flake8-import-order )
-        test? ( dev-python/mock )
-        test? ( dev-python/pep8 )
-        test? ( dev-python/pylint )"
+	test? ( dev-python/flake8 )
+	test? ( dev-pyton/flake8-import-order )
+	test? ( dev-python/mock )
+	test? ( dev-python/pep8 )
+	test? ( dev-python/pylint )"
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/0001-Support-newer-setuptools.patch"
+)

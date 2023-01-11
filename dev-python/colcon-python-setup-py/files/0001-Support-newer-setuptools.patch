@@ -1,0 +1,26 @@
+From e14bd412a237046a85023b3c2544db0e3b0739d1 Mon Sep 17 00:00:00 2001
+From: "Hunter L. Allen" <hunter.allen@apex.ai>
+Date: Tue, 5 Jul 2022 12:50:53 -0400
+Subject: [PATCH] Support newer setuptools
+
+Signed-off-by: Hunter L. Allen <hunter.allen@apex.ai>
+---
+ .../package_identification/python_setup_py.py                   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/colcon_python_setup_py/package_identification/python_setup_py.py b/colcon_python_setup_py/package_identification/python_setup_py.py
+index 9037e84..0a1f232 100644
+--- a/colcon_python_setup_py/package_identification/python_setup_py.py
++++ b/colcon_python_setup_py/package_identification/python_setup_py.py
+@@ -248,7 +248,7 @@ def _get_setup_information(setup_py, *, env=None):
+         'import sys',
+         # setuptools needs to be imported before distutils
+         # to avoid warning introduced in setuptools 49.2.0
+-        'from setuptools.extern.packaging.specifiers import SpecifierSet',
++        'from packaging.specifiers import SpecifierSet',
+         'from distutils.core import run_setup',
+ 
+         'dist = run_setup('
+-- 
+2.35.1
+
