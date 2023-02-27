@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The vda5050_msgs package contains the datatypes (json objects) specified by the VDA
+    &quot;Arbeitskreis Schlüsseltechnologien&quot; in their recommondation &quot;VDA 5050 - Schnittstelle zur Kommunikation zwischen
+    Fahrerlosen Transportfahrzeugen (FTF) und einer Leitsteuerung.
+    This package provides the message files which can be used to be (de-)serialized with an implementation of mqtt
+    (e.g mqtt_bridge) or to plain json (rospy_message_converter) or similar.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jba@ipa.fhg.de</email>
+      <name>Jannik Abbenseth</name>
+    </maintainer>
+    <bugs-to>https://github.com/inorbit-ai/ros_amr_interop/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

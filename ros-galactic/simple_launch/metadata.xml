@@ -13,6 +13,6 @@
       <email>olivier.kermorgant@ec-nantes.fr</email>
       <name>Olivier Kermorgant</name>
     </maintainer>
-    <bugs-to>https://github.com/oKermorgant/simple_launch/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/simple_launch/issues</bugs-to>
   </upstream>
 </pkgmetadata>

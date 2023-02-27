@@ -13,6 +13,6 @@
       <email>kenjibrameld@gmail.com</email>
       <name>ijnek</name>
     </maintainer>
-    <bugs-to>https://github.com/ijnek/nao_lola/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/nao_lola/issues</bugs-to>
   </upstream>
 </pkgmetadata>

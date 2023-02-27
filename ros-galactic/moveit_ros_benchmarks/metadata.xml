@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dave@picknik.ai</email>
-      <name>Dave Coleman</name>
+      <email>henningkayser@picknik.ai</email>
+      <name>Henning Kayser</name>
     </maintainer>
     <bugs-to>https://github.com/moveit/moveit2/issues</bugs-to>
   </upstream>

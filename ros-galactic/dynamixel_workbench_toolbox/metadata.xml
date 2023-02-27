@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package is composed of 'dynamixel_item', 'dynamixel_tool', 'dynamixel_driver' and 'dynamixel_workbench' class.
+    The 'dynamixel_item' is saved as control table item and information of DYNAMIXEL.
+    The 'dynamixel_tool' class loads its by model number of DYNAMIXEL.
+    The 'dynamixel_driver' class includes wraped function used in DYNAMIXEL SDK.
+    The 'dynamixel_workbench' class make simple to use DYNAMIXEL.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/dynamixel_workbench/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

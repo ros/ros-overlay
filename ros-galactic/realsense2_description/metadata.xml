@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    RealSense Camera description package for Intel 3D D400 cameras
+    RealSense description package for Intel 3D D400 cameras
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>doron.hirshberg@intel.com</email>
-      <name>Doron Hirshberg</name>
+      <email>librs.ros@intel.com</email>
+      <name>LibRealSense ROS Team</name>
     </maintainer>
     <bugs-to>https://github.com/IntelRealSense/realsense-ros/issues</bugs-to>
   </upstream>

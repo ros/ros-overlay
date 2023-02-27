@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Bound incoming velocity messages according to robot velocity and acceleration limits.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jihoonl@yujinrobot.com</email>
+      <name>Jihoon Lee</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/kobuki_velocity_smoother/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
