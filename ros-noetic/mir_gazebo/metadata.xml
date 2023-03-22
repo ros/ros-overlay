@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Simulation specific launch and configuration files for the MiR100 robot.
+    Simulation specific launch and configuration files for the MiR robot.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

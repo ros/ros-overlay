@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -17,13 +17,10 @@ IUSE="test"
 RDEPEND="
 	ros-noetic/python_qt_binding
 	dev-python/pydot
-	dev-python/pydot
-	test? ( dev-python/pygraphviz )
 	test? ( dev-python/pygraphviz )
 "
 DEPEND="${RDEPEND}
 	ros-noetic/catkin
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Extract a single ring of a Velodyne PointCloud2 and publish it as a LaserScan message
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>whitleysoftwareservices@gmail.com</email>
+      <name>Josh Whitley</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/velodyne/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

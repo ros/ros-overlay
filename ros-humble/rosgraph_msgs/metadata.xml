@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Messages relating to the ROS Computation Graph.
+    These are generally considered to be low-level messages that end users do not interact with.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>clalancette@openrobotics.org</email>
+      <name>Chris Lalancette</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rcl_interfaces/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

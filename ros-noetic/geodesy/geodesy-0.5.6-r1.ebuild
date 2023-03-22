@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -23,13 +23,10 @@ RDEPEND="
 	ros-noetic/uuid_msgs
 	test? ( ros-noetic/rosunit )
 	dev-python/pyproj
-	dev-python/pyproj
 "
 DEPEND="${RDEPEND}
 	ros-noetic/angles
 	ros-noetic/catkin
-	dev-python/catkin_pkg
-	dev-python/setuptools
 	dev-python/catkin_pkg
 	dev-python/setuptools
 "

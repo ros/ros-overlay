@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>user@todo.todo</email>
-      <name>user</name>
+      <email>levi.armstrong@swri.org</email>
+      <name>Levi Armstrong</name>
     </maintainer>
     <bugs-to>https://github.com/ros-industrial/taskflow/issues</bugs-to>
   </upstream>

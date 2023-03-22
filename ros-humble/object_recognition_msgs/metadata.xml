@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vincent.rabaud@gmail.com</email>
+      <name>Vincent Rabaud</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/object_recognition_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

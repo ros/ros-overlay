@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Drivers for the Asus Xtion and Primesense Devices. For using a kinect
+  with ROS, try the <a href="http://wiki.ros.org/freenect_stack">freenect stack</a>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mike@vanadiumlabs.com</email>
+      <name>Michael Ferguson</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/openni2_camera/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -23,7 +23,6 @@ RDEPEND="
 	ros-noetic/std_msgs
 	ros-noetic/view_controller_msgs
 	dev-cpp/eigen
-	dev-qt/qtcore:4
 	virtual/opengl
 	dev-qt/qtcore:5
 	dev-qt/qtwidgets:5

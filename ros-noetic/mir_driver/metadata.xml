@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A reverse ROS bridge for the MiR100 robot
+    A reverse ROS bridge for the MiR robot
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

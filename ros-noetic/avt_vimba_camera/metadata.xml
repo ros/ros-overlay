@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Wrapper of the Allied Vision Technologies (AVT) VIMBA Ethernet and Firewire SDK.
+    Camera driver for Allied Vision Technologies (AVT) cameras, based on their Vimba SDK.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>miquel.massot@uib.cat</email>
-      <name>Miquel Massot</name>
+      <email>software@autonomoustuff.com</email>
+      <name>AutonomouStuff Software Team</name>
     </maintainer>
     <bugs-to>https://github.com/astuff/avt_vimba_camera/issues</bugs-to>
   </upstream>

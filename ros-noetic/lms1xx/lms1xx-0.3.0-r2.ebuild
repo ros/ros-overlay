@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -10,7 +10,7 @@ DESCRIPTION="The lms1xx package contains a basic ROS driver for the SICK LMS1xx 
 HOMEPAGE="http://ros.org/wiki/LMS1xx"
 SRC_URI="https://github.com/clearpath-gbp/${PN}-release/archive/release/noetic/${PN}/0.3.0-2.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

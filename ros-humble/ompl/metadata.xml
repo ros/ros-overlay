@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    OMPL is a free sampling-based motion planning library.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mmoll@rice.edu</email>
+      <name>Mark Moll</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ompl/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

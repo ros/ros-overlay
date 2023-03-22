@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -16,14 +16,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-noetic/roslib
 	ros-noetic/rospy
-	dev-lang/python
-	dev-python/pyyaml
 	dev-python/pyyaml
 	dev-python/wxpython
 "
 DEPEND="${RDEPEND}
 	ros-noetic/catkin
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

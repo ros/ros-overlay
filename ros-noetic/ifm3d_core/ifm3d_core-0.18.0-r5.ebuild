@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -10,7 +10,7 @@ DESCRIPTION="Library and Utilities for working with ifm pmd-based 3D ToF Cameras
 HOMEPAGE="https://github.com/ifm/ifm3d"
 SRC_URI="https://github.com/ifm/ifm3d-release/archive/release/noetic/${PN}/0.18.0-5.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
-LICENSE="Apache-1.0"
+LICENSE="Apache"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

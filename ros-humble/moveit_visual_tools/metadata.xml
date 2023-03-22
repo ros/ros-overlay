@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Helper functions for displaying and debugging MoveIt data in Rviz via published markers
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>dave@picknik.ai</email>
+      <name>Dave Coleman</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/moveit_visual_tools/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

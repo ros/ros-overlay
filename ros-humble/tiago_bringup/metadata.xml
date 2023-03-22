@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Launch files to upload the robot description and start the controllers
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jordi.pages@pal-robotics.com</email>
+      <name>Jordi Pages</name>
+    </maintainer>
+    <bugs-to>https://github.com/pal-gbp/tiago_robot/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

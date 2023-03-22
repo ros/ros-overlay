@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains the source code for testing and comparing trac_ik
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>robotics@traclabs.com</email>
+      <name>TRACLabs Robotics</name>
+    </maintainer>
+    <bugs-to>https://github.com/traclabs/trac_ik/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

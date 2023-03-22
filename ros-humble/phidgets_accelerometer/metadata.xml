@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Driver for the Phidgets Accelerometer devices
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>martin.guenther@dfki.de</email>
+      <name>Martin Günther</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/phidgets_drivers/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

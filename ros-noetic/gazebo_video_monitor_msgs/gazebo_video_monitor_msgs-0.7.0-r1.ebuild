@@ -1,8 +1,8 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
-PYTHON_COMPAT=( python{3_8,3_9,3_10} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit ros-cmake
 
@@ -10,7 +10,7 @@ DESCRIPTION="gazebo_video_monitor_msgs defines interfaces for the gazebo_video_m
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/${PN}/0.7.0-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

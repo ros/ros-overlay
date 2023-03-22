@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>william@openrobotics.org</email>
+      <name>William Woodall</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_image_view/issues</bugs-to>
   </upstream>

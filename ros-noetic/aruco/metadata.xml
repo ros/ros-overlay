@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
+    It provides real-time marker based 3D pose estimation using AR markers.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sai.kishor@pal-robotics.com</email>
+      <name>Sai Kishor Kothakota</name>
+    </maintainer>
+    <bugs-to>https://github.com/pal-gbp/aruco_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

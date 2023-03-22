@@ -13,6 +13,6 @@
       <email>justin.carpentier@inria.fr</email>
       <name>Justin Carpentier</name>
     </maintainer>
-    <bugs-to>https://github.com/ipab-slmc/pinocchio_catkin/issues</bugs-to>
+    <bugs-to>https://github.com/stack-of-tasks/pinocchio-ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>

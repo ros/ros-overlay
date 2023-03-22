@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provide CMake module with extra functionality for Python.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>sloretz@openrobotics.org</email>
+      <name>Shane Loretz</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/python_cmake_module/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

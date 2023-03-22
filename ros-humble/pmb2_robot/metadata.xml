@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    PMB2 robot description and launch files
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jordan.palacios@pal-robotics.com</email>
+      <name>Jordan Palacios</name>
+    </maintainer>
+    <bugs-to>https://github.com/pal-gbp/pmb2_robot-gbp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

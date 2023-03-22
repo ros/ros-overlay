@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package for grouping together all Mia Hand config and launch files.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>andreabu@prensilia.com</email>
+      <name>Andrea Burani</name>
+    </maintainer>
+    <bugs-to>https://github.com/Prensilia-srl/mia_hand_ros_pkgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

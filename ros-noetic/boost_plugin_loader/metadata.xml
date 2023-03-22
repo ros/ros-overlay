@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Boost plugin loader implementation
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>levi.armstrong@gmail.com</email>
+      <name>Levi Armstrong</name>
+    </maintainer>
+    <bugs-to>https://github.com/tesseract-robotics/boost_plugin_loader/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

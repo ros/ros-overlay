@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Online Trajectory Generation. Real-time. Jerk-constrained. Time-optimal.
+    Instantaneous Motion Generation for Robots and Machines.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>lars.berscheid@kit.edu</email>
+      <email>lars.berscheid@ruckig.com</email>
       <name>Lars Berscheid</name>
     </maintainer>
     <bugs-to>https://github.com/pantor/ruckig/issues</bugs-to>

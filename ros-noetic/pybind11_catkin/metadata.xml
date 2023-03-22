@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The pybind11 package
+    A package vendoring recent versions of pybind11 and providing extra macros for easier integration.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

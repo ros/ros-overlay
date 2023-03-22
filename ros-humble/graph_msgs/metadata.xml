@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS messages for publishing graphs of different data types
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>davetcoleman@gmail.com</email>
+      <name>Dave Coleman</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/graph_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

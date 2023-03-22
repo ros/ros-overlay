@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>matlabbe@gmail.com</email>
+      <name>Mathieu Labbe</name>
+    </maintainer>
+    <bugs-to>https://github.com/introlab/rtabmap_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

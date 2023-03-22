@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Library for controlling and capturing data from the Intel(R) RealSense(TM) D400 devices.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>librs.ros@intel.com</email>
+      <name>LibRS ROS Team</name>
+    </maintainer>
+    <bugs-to>https://github.com/IntelRealSense/librealsense2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

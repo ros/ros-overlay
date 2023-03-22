@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    mavros_msgs defines messages for <a href="http://wiki.ros.org/mavros">MAVROS</a>.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vooon341@gmail.com</email>
+      <name>Vladimir Ermakov</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/mavros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Streaming of Nokov mocap data to tf
+    <p>
+    This package contains a node that translates motion capture data from an
+    nokov rig to tf transforms, poses and 2D poses.
+    </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nokov-mocap@nokov.com</email>
+      <name>nokov</name>
+    </maintainer>
+    <bugs-to>https://github.com/NOKOV-MOCAP/mocap_nokov_release/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

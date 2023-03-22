@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Wrapper around assimp, providing nothing but a dependency on assimp, on some systems.
+    On others, it provides a fixed CMake module or even an ExternalProject build of assimp.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jacob@openrobotics.org</email>
+      <name>Jacob Perron</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rviz/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

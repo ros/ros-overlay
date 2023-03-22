@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Standalone C++ library for accessing Universal Robots interfaces. This has been forked off the ur_robot_driver.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>exner@fzi.de</email>
+      <name>Felix Exner</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/Universal_Robots_Client_Library/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

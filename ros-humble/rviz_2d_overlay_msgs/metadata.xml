@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Messages describing 2D overlays for RVIZ, extracted/derived from the jsk_visualization ROS1 packege.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>team-spatzenhirn@uni-ulm.de</email>
+      <name>Team Spatzenhirn</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rviz_2d_overlay_plugins/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

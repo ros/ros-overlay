@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The bag2_to_image package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nishimarudai@gmail.com</email>
+      <name>Daisuke Nishimatsu</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/bag2_to_image/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

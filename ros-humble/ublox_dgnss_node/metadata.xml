@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Provides a ublox_gnss node for a u-blox GPS GNSS receiver using Gen 9 UBX Protocol
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nick@aussierobots.com.au</email>
+      <name>Nick Hortovanyi</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ublox_dgnss/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

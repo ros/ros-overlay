@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ament package for ACADO toolkit for MPC code generation
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>christopherj.ho@gmail.com</email>
+      <name>Christopher Ho</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/acado_vendor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

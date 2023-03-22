@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>blazej@turtlerover.com</email>
-      <name>Błażej Sowa</name>
+      <email>support@fictionlab.pl</email>
+      <name>Fictionlab</name>
     </maintainer>
     <bugs-to>https://github.com/fictionlab-gbp/leo_simulator/issues</bugs-to>
   </upstream>

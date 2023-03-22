@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A library to write Synchronous and Asynchronous networking applications
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>whitleysoftwareservices@gmail.com</email>
+      <name>Joshua Whitley</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/transport_drivers/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

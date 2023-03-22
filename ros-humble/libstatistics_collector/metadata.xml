@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Lightweight aggregation utilities to collect statistics and measure message metrics.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ros-tooling@googlegroups.com</email>
+      <name>ROS Tooling Working Group</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/libstatistics_collector/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Maps of Dynamics Package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>ksatyaki@gmail.com</email>
+      <name>Chittaranjan Personal</name>
+    </maintainer>
+    <bugs-to>https://github.com/OrebroUniversity/mod/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

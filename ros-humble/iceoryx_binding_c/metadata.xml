@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Eclipse iceoryx inter-process-communication (IPC) middleware C-Language Binding
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>iceoryx-oss-support@apex.ai</email>
+      <name>Eclipse Foundation, Inc.</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/iceoryx/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

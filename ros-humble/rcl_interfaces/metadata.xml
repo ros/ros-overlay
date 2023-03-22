@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The ROS client library common interfaces.
+    This package contains the messages and services which ROS client libraries will use under the hood to
+    communicate higher level concepts such as parameters.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>clalancette@openrobotics.org</email>
+      <name>Chris Lalancette</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/rcl_interfaces/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Kinematics interface for ROS 2 control
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>denis@stogl.de</email>
+      <name>Denis Štogl</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/kinematics_interface/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

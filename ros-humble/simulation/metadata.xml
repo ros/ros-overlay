@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A package which extends 'ros_base' and includes simulation packages.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>louise@openrobotics.org</email>
+      <name>Louise Poubel</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/variants/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

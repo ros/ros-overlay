@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Generates rviz display markers from soccer msgs
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>kenjibrameld@gmail.com</email>
+      <name>ijnek</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/soccer_visualization/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

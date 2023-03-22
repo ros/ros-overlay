@@ -15,8 +15,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>jacob@openrobotics.org</email>
-      <name>Jacob Perron</name>
+      <email>michael@openrobotics.org</email>
+      <name>Michael Carroll</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/ros_comm/issues</bugs-to>
   </upstream>
