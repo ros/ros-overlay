@@ -38,7 +38,9 @@ RUN echo "dev-qt/qtwebkit printsupport" >> /etc/portage/package.use/iputils
 RUN echo "dev-libs/boost python" >> /etc/portage/package.use/iputils
 RUN echo "net-dns/avahi python" >> /etc/portage/package.use/iputils 
 
-RUN echo "ros-humble\nros-galactic\nros-foxy" >> /etc/portage/categories
+RUN echo "ros-humble" >> /etc/portage/categories
+RUN echo "ros-galactic" >> /etc/portage/categories
+RUN echo "ros-foxy" >> /etc/portage/categories
 RUN perl-cleaner --reallyall 
 RUN emerge -C openssl 
 RUN printf 'USE="${USE} fontconfig ruby_targets_ruby25"\n' >> \
