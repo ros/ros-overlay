@@ -5,7 +5,7 @@
     rqt_web is a simple web content viewer for rqt. Users can show web content in Qt-based window by specifying its URL.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

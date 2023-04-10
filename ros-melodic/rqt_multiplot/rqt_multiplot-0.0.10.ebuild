@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="rqt_multiplot provides a GUI plugin for visualizing numeric values\
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/anybotics/${PN}_plugin-release/archive/release/melodic/${PN}/0.0.10-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="GNU-Lesser-General-Public-License-LGPL-"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
@@ -22,6 +22,8 @@ RDEPEND="
 	ros-melodic/variant_topic_tools
 	x11-libs/qwt:6
 	dev-qt/qtcore:5
+	dev-qt/qtwidgets:5
+	dev-qt/qttest:5
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

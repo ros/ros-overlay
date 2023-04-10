@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The Move Base Flex \(MBF\) recovery behavior moves the robot back f
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/uos-gbp/mbf_recovery_behaviors/archive/release/melodic/${PN}/0.1.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-3-Clause"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

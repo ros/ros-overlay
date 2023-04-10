@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="This package provides a sped up improved slam karto with updated SD
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SteveMacenski/slam_toolbox-release/archive/release/melodic/${PN}/1.1.6-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

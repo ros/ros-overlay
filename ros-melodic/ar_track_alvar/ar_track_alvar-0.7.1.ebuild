@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="This package is a ROS wrapper for Alvar, an open source AR tag trac
 HOMEPAGE="http://ros.org/wiki/ar_track_alvar"
 SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.7.1-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

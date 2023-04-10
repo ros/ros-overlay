@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Interface for the New Eagle Multiplex Power Distribution Module (MPDM)
+    https://store.neweagle.net/product/multiplexed-power-distribution-module-mpdm/
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>neweagleraptorgithub@neweagle.net</email>
+      <name>New Eagle</name>
+    </maintainer>
+    <bugs-to>https://github.com/NewEagleRaptor/raptor-dbw-ros2/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

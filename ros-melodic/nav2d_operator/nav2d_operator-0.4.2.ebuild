@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="The operator is a lightweight, purely reactive obstacle-avoidance\
 HOMEPAGE="http://wiki.ros.org/nav2d_operator"
 SRC_URI="https://github.com/skasperski/navigation_2d-release/archive/release/melodic/${PN}/0.4.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

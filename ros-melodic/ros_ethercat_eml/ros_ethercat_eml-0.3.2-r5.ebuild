@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="This is an implementation of the EtherCAT master protocol for use w
 HOMEPAGE="http://ros.org/wiki/ros_ethercat_eml"
 SRC_URI="https://github.com/shadow-robot/${PN}-release/archive/release/melodic/${PN}/0.3.2-5.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

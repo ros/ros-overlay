@@ -5,7 +5,7 @@
     Tool for iterating through the cells of a costmap to find the closest distance to a subset of cells.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

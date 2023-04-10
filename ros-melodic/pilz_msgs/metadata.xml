@@ -13,6 +13,6 @@
       <email>a.gutenkunst@pilz.de</email>
       <name>Alexander Gutenkunst</name>
     </maintainer>
-    <bugs-to>https://github.com/PilzDE/pilz_industrial_motion/issues</bugs-to>
+    <bugs-to>https://github.com/PilzDE/pilz_common/issues</bugs-to>
   </upstream>
 </pkgmetadata>

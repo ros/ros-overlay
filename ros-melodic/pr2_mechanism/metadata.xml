@@ -5,7 +5,7 @@
     The pr2_mechanism stack contains the infrastructure to control the PR2 robot in a hard realtime control loop.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

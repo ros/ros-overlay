@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The dccomms_ros package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/dcentelles/${PN}_pkgs-release/archive/release/melodic/${PN}/0.0.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="TODO"
+LICENSE="TODO-CATKIN-PACKAGE-LICENSE"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

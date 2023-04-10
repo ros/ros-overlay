@@ -14,8 +14,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>amoriarty@fetchrobotics.com</email>
-      <name>Alexander Moriarty</name>
+      <email>csaldanha@fetchrobotics.com</email>
+      <name>Carl Saldanha</name>
     </maintainer>
     <bugs-to>https://github.com/fetchrobotics-gbp/fetch_robots/issues</bugs-to>
   </upstream>

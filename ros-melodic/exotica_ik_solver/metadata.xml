@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Pseudo-inverse unconstrained end-pose solver
+    Regularised and weighted pseudo-inverse unconstrained end-pose solver
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>v.ivan@ed.ac.uk</email>
-      <name>Vladimir Ivan</name>
+      <email>wolfgang@robots.ox.ac.uk</email>
+      <name>Wolfgang Merkt</name>
     </maintainer>
     <bugs-to>https://github.com/ipab-slmc/exotica/issues</bugs-to>
   </upstream>

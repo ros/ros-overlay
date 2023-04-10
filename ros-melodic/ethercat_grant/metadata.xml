@@ -5,7 +5,7 @@
     Makes it possible to run the ros_ethercat_loop without using sudo. Forked from pr2-grant
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="This is an implementation of the EtherCAT master protocol for the P
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/1.8.15-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="Binary Only"
+LICENSE="Binary-Only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

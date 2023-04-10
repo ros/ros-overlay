@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pfankhauser@anybotics.com</email>
-      <name>Péter Fankhauser</name>
+      <email>mwulf@anybotics.com</email>
+      <name>Maximilian Wulf</name>
     </maintainer>
     <bugs-to>https://github.com/anybotics/grid_map/issues</bugs-to>
   </upstream>

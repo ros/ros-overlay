@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="ROS1 H264 encoder node"
 HOMEPAGE="http://wiki.ros.org/h264_video_encoder"
 SRC_URI="https://github.com/aws-gbp/${PN}-release/archive/release/melodic/${PN}/1.1.4-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

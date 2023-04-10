@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>scott@openrobotics.org</email>
-      <name>Scott K Logan</name>
+      <email>jacob@openrobotics.org</email>
+      <name>Jacob Perron</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rviz/issues</bugs-to>
   </upstream>

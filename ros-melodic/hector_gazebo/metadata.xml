@@ -5,13 +5,13 @@
     hector_gazebo provides packages related to to simulation of robots using gazebo (gazebo plugins, world files etc.)
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>johannes@intermodalics.eu</email>
-      <name>Johannes Meyer</name>
+      <email>fabian@sim.tu-darmstadt.de</email>
+      <name>Stefan Fabian</name>
     </maintainer>
     <bugs-to>https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo/issues</bugs-to>
   </upstream>

@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="ACADO Toolkit"
 HOMEPAGE="http://acado.github.io/"
 SRC_URI="https://github.com/tud-cor/${PN}-release/archive/release/melodic/${PN}/1.2.3-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-3.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

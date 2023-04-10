@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    A ROS2 Driver for V4L USB Cameras
+    A ROS 2 Driver for V4L USB Cameras
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

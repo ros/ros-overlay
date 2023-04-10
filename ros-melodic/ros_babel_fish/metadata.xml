@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The ros_babel_fish package
+    A runtime message handler for ROS.
+    Allows subscription, publishing, calling of services and actions with messages known only at runtime.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

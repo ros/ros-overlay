@@ -5,13 +5,13 @@
     Message and service types: custom messages and services for TurtleBot3 packages
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/turtlebot3_msgs/issues</bugs-to>
   </upstream>

@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="This is the radar driver package developed for the omnipresense rad
 HOMEPAGE="http://www.ros.org/wiki/radar_omnipresense"
 SRC_URI="https://github.com/SCU-RSL-ROS/${PN}-release/archive/release/melodic/${PN}/0.3.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="ECL2.0"
+LICENSE="EPL-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

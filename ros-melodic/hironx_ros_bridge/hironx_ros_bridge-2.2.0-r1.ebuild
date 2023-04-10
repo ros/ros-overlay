@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="ROS-OpenRTM interfacing package for the opensource version of Kawad
 HOMEPAGE="http://ros.org/wiki/hironx_ros_bridge"
 SRC_URI="https://github.com/tork-a/rtmros_hironx-release/archive/release/melodic/${PN}/2.2.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="( BSD CC-BY-SA-3.0 )"
+LICENSE="( BSD CC-BY-NC-4.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/control_msgs

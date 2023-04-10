@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="rosatomic provides the C++11-style atomic operations by pulling sym
 HOMEPAGE="http://ros.org/wiki/rosatomic"
 SRC_URI="https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/${PN}/1.0.25-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="( BSD Boost-1.0 )"
+LICENSE="( BSD BSL-1.0 )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 "

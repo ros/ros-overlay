@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="The iirob_filters package implements following filters:\
 HOMEPAGE="http://wiki.ros.org/iirob_controllers"
 SRC_URI="https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/${PN}/0.8.8-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-3.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

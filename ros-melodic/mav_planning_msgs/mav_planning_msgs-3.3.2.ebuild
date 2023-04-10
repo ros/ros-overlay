@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Messages specific to MAV planning, especially polynomial planning."
 HOMEPAGE="https://github.com/ethz-asl/mav_comm"
 SRC_URI="https://github.com/ethz-asl/mav_comm-release/archive/release/melodic/${PN}/3.3.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="ASL 2.0"
+LICENSE="ASL-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

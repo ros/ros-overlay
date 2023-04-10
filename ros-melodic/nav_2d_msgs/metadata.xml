@@ -5,7 +5,7 @@
     Basic message types for two dimensional navigation, extending from geometry_msgs::Pose2D.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

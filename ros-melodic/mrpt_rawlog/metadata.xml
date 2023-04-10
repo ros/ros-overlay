@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    This package enables you to record a rawlog from a ROS drive robot.
-  At the moment the package is able to deal with odometry and 2d laser scans.
+    This package provides nodes to record and play MRPT rawlogs.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

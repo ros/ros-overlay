@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -20,7 +20,7 @@ RDEPEND="
 	ros-melodic/sensor_msgs
 	test? ( ros-melodic/rosbash )
 	test? ( ros-melodic/rosunit )
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-cpp/yaml-cpp
 "
 DEPEND="${RDEPEND}
@@ -34,9 +34,8 @@ ROS_DISTRO="melodic"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
 
 src_prepare() {
-        cd ${P}
-        EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
-        EPATCH_FORCE="yes" epatch
-        ros-cmake_src_prepare
+	cd ${P}
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" epatch
+	ros-cmake_src_prepare
 }
-

@@ -5,13 +5,13 @@
     This package contains nodes that control the Dynamixel by communicating with the server registered in the 'dynamixel_workbench_controllers' package
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/dynamixel-workbench/issues</bugs-to>
   </upstream>

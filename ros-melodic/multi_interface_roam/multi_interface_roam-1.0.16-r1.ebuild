@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="sdsdddsdsds"
 HOMEPAGE="http://ros.org/wiki/multi_interface_roam"
 SRC_URI="https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/${PN}/1.0.16-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="( BSD LGPL-2 GPL-1 )"
+LICENSE="( BSD LGPL GPL-for-sigblock )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/asmach

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    A simple, analytical inverse kinematic library for industrial robots with parallel bases and
+    spherical wrists. Based on the paper &quot;An Analytical Solution of the Inverse Kinematics Problem
+    of Industrial Serial Manipulators with an Ortho-parallel Basis and a Spherical Wrist&quot; by
+    Mathias Brandstötter, Arthur Angerer, and Michael Hofbaur.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>jmeyer@swri.org</email>
+      <name>Jon Meyer</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-industrial/opw_kinematics/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

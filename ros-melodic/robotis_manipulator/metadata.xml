@@ -5,13 +5,13 @@
     This package contains the manipulation API and functions for controlling the manipulator.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>hjkim@robotis.com</email>
+      <name>Hye-Jong KIM</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/robotis_manipulator/issues</bugs-to>
   </upstream>

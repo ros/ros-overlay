@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The spatio-temporal 3D obstacle costmap package"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/SteveMacenski/${PN}-release/archive/release/melodic/${PN}/1.3.5-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

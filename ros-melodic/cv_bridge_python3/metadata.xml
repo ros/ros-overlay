@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This contains CvBridge, which converts between ROS
+    Image messages and OpenCV images.
+    ==
+    This package intentionally link against boost-python3 and
+    install under /opt/ros/ROS_DISTRO/lib/python3/dist-package
+    Please add
+    import sys, os; sys.path.insert(0,'/opt/ros/' + os.environ['ROS_DISTRO'] + '/lib/python3/dist-packages/')
+    before you call import cv_bridge
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vincent.rabaud@gmail.com</email>
+      <name>Vincent Rabaud</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/vision_opencv_python3/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

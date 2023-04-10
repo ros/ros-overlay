@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="This package contains a recent version of the Bayesian Filtering\
 HOMEPAGE="http://ros.org/wiki/bfl"
 SRC_URI="https://github.com/ros-gbp/${PN}-release/archive/release/melodic/${PN}/0.8.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

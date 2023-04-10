@@ -1,8 +1,8 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
-PYTHON_COMPAT=( python{3_5,3_6} )
+PYTHON_COMPAT=( python{3_8,3_9,3_10} )
 
 inherit ament-python
 
@@ -11,7 +11,7 @@ DESCRIPTION="A robot-agnostic teleoperation node to convert keyboard commands to
 HOMEPAGE="http://wiki.ros.org/teleop_twist_keyboard"
 SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/foxy/${PN}/2.3.2-1.tar.gz -> ${PN}-foxy-release-${PV}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD-License-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

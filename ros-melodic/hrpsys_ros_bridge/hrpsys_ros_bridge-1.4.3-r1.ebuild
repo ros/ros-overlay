@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -58,7 +58,7 @@ DEPEND="${RDEPEND}
 	sys-apps/net-tools
 	virtual/pkgconfig
 	sys-process/procps
-	dev-python/rosdep
+	dev-util/rosdep
 	dev-vcs/subversion
 "
 

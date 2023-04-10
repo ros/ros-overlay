@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -18,7 +18,7 @@ RDEPEND="
 	ros-melodic/rosbag_storage
 	ros-melodic/roscpp
 	ros-melodic/rosgraph_msgs
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5

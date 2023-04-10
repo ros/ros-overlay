@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -16,11 +16,9 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/roslib
 	dev-python/rospkg
-	dev-python/rospkg
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

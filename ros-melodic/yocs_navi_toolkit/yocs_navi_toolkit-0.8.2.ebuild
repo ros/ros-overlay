@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Ros navigation utilities."
 HOMEPAGE="https://github.com/yujinrobot/yujin_ocs"
 SRC_URI="https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/${PN}/0.8.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="Yujin Robot"
+LICENSE="Yujin-Robot"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

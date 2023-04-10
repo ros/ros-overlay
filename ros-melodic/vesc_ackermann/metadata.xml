@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Translate between VESC messages and ROS ackermann and odometry messages.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>joebetz@seas.upenn.edu</email>
+      <name>Johannes Betz</name>
+    </maintainer>
+    <bugs-to>https://github.com/f1tenth/vesc/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

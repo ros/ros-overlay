@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="Internal packaging of the 0.91 version of the simple python\
 HOMEPAGE="http://lparis45.free.fr/rp.html"
 SRC_URI="https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/${PN}/0.3.2-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

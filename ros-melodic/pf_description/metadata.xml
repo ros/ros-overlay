@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The pf_description package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>harshavardhan.deshpande@ipa.fraunhofer.de</email>
+      <name>Harsh Deshpande</name>
+    </maintainer>
+    <bugs-to>https://github.com/PepperlFuchs/pf_lidar_ros_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    this package contains a set of messages that are used by the introspection
+    interfaces for smacc.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>pablo@ibrobotics.com</email>
+      <name>Pablo Iñigo Blasco</name>
+    </maintainer>
+    <bugs-to>https://github.com/robosoft-ai/smacc/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

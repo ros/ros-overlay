@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    MAVLink message marshaling library.
+  This package provides C-headers and C++11 library
+  for both 1.0 and 2.0 versions of protocol.
+
+  For pymavlink use separate install via rosdep (python-pymavlink).
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>vooon341@gmail.com</email>
+      <name>Vladimir Ermakov</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/mavlink-gbp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

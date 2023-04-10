@@ -5,13 +5,13 @@
     rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>mabel@openrobotics.org</email>
+      <name>Mabel Zhang</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/rqt_bag/issues</bugs-to>
   </upstream>

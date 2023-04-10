@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>karsten@osrfoundation.org</email>
-      <name>Karsten Knese</name>
+      <email>clalancette@openrobotics.org</email>
+      <name>Chris Lalancette</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rcutils/issues</bugs-to>
   </upstream>

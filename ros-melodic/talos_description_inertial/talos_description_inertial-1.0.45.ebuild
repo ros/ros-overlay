@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Inertial parameters of talos"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/pal-gbp/talos_robot-release/archive/release/melodic/${PN}/1.0.45-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="CC-BY-NC-ND-4.0"
+LICENSE="CC-BY-NC-ND-3.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

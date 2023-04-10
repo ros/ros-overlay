@@ -5,7 +5,7 @@
     This package contains the description of the hand-eye calibration of the TALOS robot.  The files in this package are used also from the talos_description package.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -8,7 +8,7 @@
     But be aware that the pose of a projected circle within a image (ellipse) has two solutions and only one is published as TF.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

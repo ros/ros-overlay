@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>sam.pfeiffer@pal-robotics.com</email>
-      <name>Sammy Pfeiffer</name>
+      <email>civerachb@clearpathrobotics.com</email>
+      <name>Chris Iverach-Brereton</name>
     </maintainer>
     <bugs-to>https://github.com/ros-drivers-gbp/axis_camera/issues</bugs-to>
   </upstream>

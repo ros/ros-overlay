@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Messages for describing objects and how to grasp them.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>mfergs7@gmail.com</email>
+      <name>Michael Ferguson</name>
+    </maintainer>
+    <bugs-to>https://github.com/mikeferguson/grasping_msgs-ros2-gbp/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

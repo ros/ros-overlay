@@ -2,10 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    <p>
-      Contains a node publish an image stream from single image file
+    Contains a node publish an image stream from single image file
       or avi motion file.
-    </p>
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

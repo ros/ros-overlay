@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Move any joint with any controller!"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/gstavrinos/${PN}-release/archive/release/melodic/${PN}/0.9.1-2.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-3-Clause"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

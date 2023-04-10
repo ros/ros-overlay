@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    foxglove_msgs extends the common ROS visualization messages with additional
-    useful messages that are supported by Foxglove Studio.
+    foxglove_msgs provides visualization messages that are supported by Foxglove Studio.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -11,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>john@foxglove.dev</email>
-      <name>John Hurliman</name>
+      <email>ros-tooling@foxglove.dev</email>
+      <name>Foxglove</name>
     </maintainer>
     <bugs-to>https://github.com/foxglove/ros_foxglove_msgs/issues</bugs-to>
   </upstream>

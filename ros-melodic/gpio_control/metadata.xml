@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Control GPIO pins on Raspberry Pi, Nvidia Jetson, and other Linux devices with GPIO pins
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>christopher.thierauf@tufts.edu</email>
+      <name>cst</name>
+    </maintainer>
+    <bugs-to>https://github.com/cst0/gpio_control/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

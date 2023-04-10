@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="This package contains a recent version of the Kinematics and Dynami
 HOMEPAGE="http://wiki.ros.org/orocos_kdl"
 SRC_URI="https://github.com/orocos/orocos-kdl-release/archive/release/melodic/${PN}/1.4.0-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

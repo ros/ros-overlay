@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="A collection of node\(let\)s that stream images from USB cameras \(
 HOMEPAGE="http://ros.org/wiki/uvc_camera"
 SRC_URI="https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/melodic/${PN}/0.2.7-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="Library and Utilities for working with ifm pmd-based 3D ToF Cameras
 HOMEPAGE="https://github.com/ifm/ifm3d"
 SRC_URI="https://github.com/ifm/ifm3d-release/archive/release/melodic/${PN}/0.18.0-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="Apache-1.0"
+LICENSE="Apache"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

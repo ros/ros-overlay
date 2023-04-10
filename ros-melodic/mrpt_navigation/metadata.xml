@@ -3,7 +3,7 @@
 <pkgmetadata>
   <longdescription>
     Tools related to the Mobile Robot Programming Toolkit (MRPT).
-    Refer to http://wiki.ros.org/mrpt_navigation for further documentation.
+    Refer to https://wiki.ros.org/mrpt_navigation for further documentation.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

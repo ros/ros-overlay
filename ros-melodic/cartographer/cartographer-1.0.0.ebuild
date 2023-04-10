@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -14,7 +14,7 @@ LICENSE="Apache-2.0"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-cpp/eigen
 	x11-libs/cairo
 	sci-libs/ceres-solver[sparse,lapack]

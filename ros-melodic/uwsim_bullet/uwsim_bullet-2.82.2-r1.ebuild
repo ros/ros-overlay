@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The bullet library. See https://code.google.com/p/bullet"
 HOMEPAGE="https://wiki.ros.org"
 SRC_URI="https://github.com/uji-ros-pkg/${PN}-release/archive/release/melodic/${PN}/2.82.2-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="Check author's website"
+LICENSE="Check-authors-website"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

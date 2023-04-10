@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains the python bindings PyKDL for the Kinematics and Dynamics
+    Library (KDL), distributed by the Orocos Project.
+    This repository is for python3 compatibility in melodic environment.
+    Supported by ROS community.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/orocos-kdl_python3/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

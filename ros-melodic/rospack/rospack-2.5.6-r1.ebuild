@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -20,11 +20,7 @@ RDEPEND="
 	dev-lang/python
 	dev-python/catkin_pkg
 	dev-util/rosdep
-	dev-lang/python
-	dev-python/catkin_pkg
-	dev-util/rosdep
 	dev-libs/tinyxml2
-	test? ( dev-python/coverage )
 	test? ( dev-python/coverage )
 "
 DEPEND="${RDEPEND}

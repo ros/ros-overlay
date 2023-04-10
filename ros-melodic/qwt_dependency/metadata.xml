@@ -5,7 +5,7 @@
     This encapsulates the Qwt dependency for a specific ROS distribution and its Qt version
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -11,8 +11,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>steven@openrobotics.org</email>
-      <name>Steven! Ragnarök</name>
+      <email>ivanpauno@ekumenlabs.com</email>
+      <name>Ivan Paunovic</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/orocos_kinematics_dynamics/issues</bugs-to>
   </upstream>

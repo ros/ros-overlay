@@ -5,7 +5,7 @@
     AWS CloudWatch management library used by ROS1/2 node to publish logs to CloudWatch service
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

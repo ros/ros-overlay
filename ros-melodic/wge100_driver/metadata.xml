@@ -5,7 +5,7 @@
     This stack contains the ROS driver and firmware for the WGE100 camera used on the PR2 robot.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

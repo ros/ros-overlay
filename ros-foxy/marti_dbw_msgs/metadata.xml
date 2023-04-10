@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mbries@swri.org</email>
-      <name>Matthew Bries</name>
+      <email>swri-robotics@swri.org</email>
+      <name>Southwest Research Institute</name>
     </maintainer>
-    <bugs-to>https://github.com/swri-robotics-gbp/marti_messages/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/marti_messages/issues</bugs-to>
   </upstream>
 </pkgmetadata>

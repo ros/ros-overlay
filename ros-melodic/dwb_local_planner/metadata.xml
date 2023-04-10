@@ -5,7 +5,7 @@
     Plugin based local planner implementing the nav_core2::LocalPlanner interface.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

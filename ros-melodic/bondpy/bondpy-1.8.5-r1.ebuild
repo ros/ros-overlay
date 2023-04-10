@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -22,7 +22,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	ros-melodic/bond
 	ros-melodic/catkin
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

@@ -14,6 +14,6 @@
       <email>rhaschke@techfak.uni-bielefeld.de</email>
       <name>Robert Haschke</name>
     </maintainer>
-    <bugs-to>https://github.com/ros-gbp/xacro/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/xacro/issues</bugs-to>
   </upstream>
 </pkgmetadata>

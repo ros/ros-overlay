@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    The ros_babel_fish_test_msgs package
+    Test messages for the ros_babel_fish project tests.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

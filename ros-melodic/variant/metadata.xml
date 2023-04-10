@@ -5,13 +5,13 @@
     Meta-package for the universal variant library.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>ralf.kaestner@gmail.com</email>
-      <name>Ralf Kaestner</name>
+      <email>sbachmann@anybotics.com</email>
+      <name>Samuel Bachmann</name>
     </maintainer>
     <bugs-to>https://github.com/anybotics/variant/issues</bugs-to>
   </upstream>

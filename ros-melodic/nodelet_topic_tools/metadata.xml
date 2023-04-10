@@ -5,7 +5,7 @@
     This package contains common nodelet tools such as a mux, demux and throttle.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

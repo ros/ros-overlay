@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -21,12 +21,10 @@ RDEPEND="
 	ros-melodic/rospack
 	test? ( ros-melodic/rosmake )
 	dev-python/rospkg
-	dev-python/rospkg
 	test? ( dev-libs/boost[python] )
 "
 DEPEND="${RDEPEND}
 	dev-libs/boost[threads]
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

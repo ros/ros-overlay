@@ -5,7 +5,7 @@
     Locally patched version of the python redis client (https://github.com/andymccurdy/redis-py).
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

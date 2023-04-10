@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -21,7 +21,6 @@ RDEPEND="
 	ros-melodic/rqt_gui_py
 	ros-melodic/rqt_logger_level
 	ros-melodic/rqt_py_common
-	dev-python/rospkg
 	dev-python/rospkg
 "
 DEPEND="${RDEPEND}

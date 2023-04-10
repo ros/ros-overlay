@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="This package implements driver for ATI force torque sensors up to f
 HOMEPAGE="http://ros.org/wiki/ati_force_torque"
 SRC_URI="https://github.com/KITrobotics/${PN}-release/archive/release/melodic/${PN}/1.1.1-3.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-3.0-only"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"

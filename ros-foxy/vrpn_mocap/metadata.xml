@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS2 <a href="https://github.com/vrpn/vrpn">VRPN</a>
+    client built primarily to interface with motion
+    capture devices such as VICON and OptiTrack. A detailed list of
+    supported hardware can be found
+    <a href="https://github.com/vrpn/vrpn/wiki/Available-hardware-devices">here</a>.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>alvinsunyixiao@gmail.com</email>
+      <name>Alvin Sun</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/vrpn_mocap/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

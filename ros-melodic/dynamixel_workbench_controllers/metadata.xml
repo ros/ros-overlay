@@ -5,13 +5,13 @@
     This package contains examples of applying the 'dynamixel_workbench_toolbox' library developed on the basis of dynamixel_sdk to various operating modes of Dynamixel.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/dynamixel-workbench/issues</bugs-to>
   </upstream>

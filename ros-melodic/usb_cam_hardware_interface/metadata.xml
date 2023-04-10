@@ -5,13 +5,13 @@
     The usb_cam_hardware_interface package
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
       <email>yoshito@todo.todo</email>
-      <name>yoshito</name>
+      <name>Yoshito Okada</name>
     </maintainer>
     <bugs-to>https://github.com/yoshito-n-students/usb_cam_hardware/issues</bugs-to>
   </upstream>

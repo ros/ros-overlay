@@ -2,17 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    HPP fork of FCL with bug fixes.
+    An extension of the Flexible Collision Library.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>wolfgang.merkt@ed.ac.uk</email>
-      <name>Wolfgang Merkt</name>
+      <email>jmirabel@laas.fr</email>
+      <name>Joseph Mirabel</name>
     </maintainer>
-    <bugs-to>https://github.com/ipab-slmc/hpp-fcl_catkin/issues</bugs-to>
+    <bugs-to>https://github.com/humanoid-path-planner/hpp-fcl-ros/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    An automatically generated package with all the configuration and launch files for using the panda with the MoveIt! Motion Planning Framework
+    An automatically generated package with all the configuration and launch files for using the panda with the MoveIt Motion Planning Framework
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>
@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>mike@picknik.ai</email>
-      <name>Mike Lautman</name>
+      <email>moveit_releasers@googlegroups.com</email>
+      <name>MoveIt maintainer team</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/panda_moveit_config/issues</bugs-to>
   </upstream>

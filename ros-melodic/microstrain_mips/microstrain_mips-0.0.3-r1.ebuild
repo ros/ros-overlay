@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The microstrain_mips package provides a driver for the LORD/Microst
 HOMEPAGE="http://wiki.ros.org/microstrain_3dm_gx5_45"
 SRC_URI="https://github.com/ros-drivers-gbp/${PN}-release/archive/release/melodic/${PN}/0.0.3-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

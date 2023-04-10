@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -21,17 +21,11 @@ RDEPEND="
 	dev-python/catkin_pkg
 	dev-python/empy
 	dev-python/nose
-	dev-python/catkin_pkg
-	dev-python/empy
-	dev-python/nose
-	test? ( dev-python/mock )
-	test? ( dev-python/nose )
 	test? ( dev-python/mock )
 	test? ( dev-python/nose )
 "
 DEPEND="${RDEPEND}
 	dev-util/cmake
-	dev-python/setuptools
 	dev-python/setuptools
 "
 

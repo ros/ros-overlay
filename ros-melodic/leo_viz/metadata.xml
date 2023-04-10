@@ -10,9 +10,9 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>support@fictionlab.pl</email>
-      <name>fictionlab</name>
+      <email>blazej@turtlerover.com</email>
+      <name>Błażej Sowa</name>
     </maintainer>
-    <bugs-to>https://github.com/fictionlab-gbp/leo_viz/issues</bugs-to>
+    <bugs-to>https://github.com/fictionlab-gbp/leo_desktop/issues</bugs-to>
   </upstream>
 </pkgmetadata>

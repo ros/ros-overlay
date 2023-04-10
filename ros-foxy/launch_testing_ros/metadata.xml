@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pete.baughman@apex.ai</email>
-      <name>Pete Baughman</name>
+      <email>jacob@openrobotics.org</email>
+      <name>Jacob Perron</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/launch_ros/issues</bugs-to>
   </upstream>

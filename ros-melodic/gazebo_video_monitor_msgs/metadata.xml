@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    gazebo_video_monitor_msgs defines interfaces for the gazebo_video_monitor_plugins package.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>nlamprian@gmail.com</email>
+      <name>Nick Lamprianidis</name>
+    </maintainer>
+    <bugs-to>https://github.com/nlamprian/gazebo_video_monitors/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

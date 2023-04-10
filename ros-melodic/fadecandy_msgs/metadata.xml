@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>jon.binney@ironox.com</email>
-      <name>Jon Binney</name>
+      <email>reinzor@gmail.com</email>
+      <name>Rein Appeldoorn</name>
     </maintainer>
     <bugs-to>https://github.com/iron-ox/fadecandy_ros/issues</bugs-to>
   </upstream>

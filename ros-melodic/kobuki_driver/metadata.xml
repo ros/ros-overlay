@@ -6,7 +6,7 @@
     Pure C++ driver library for Kobuki. This is for those who do not wish to use ROS on their systems.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

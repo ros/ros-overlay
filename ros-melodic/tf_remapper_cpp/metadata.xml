@@ -5,7 +5,7 @@
     More efficient version of tf/tf_remap able to handle TFs at kHz with tens of subscribers.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

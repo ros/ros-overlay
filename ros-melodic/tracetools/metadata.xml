@@ -5,7 +5,7 @@
     Wrapper interface for tracing libraries
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
@@ -13,6 +13,6 @@
       <email>ingo.luetkebohle@de.bosch.com</email>
       <name>Ingo Luetkebohle</name>
     </maintainer>
-    <bugs-to>https://github.com/bosch-robotics-cr/tracetools/issues</bugs-to>
+    <bugs-to>https://github.com/boschresearch/ros1-tracetools/issues</bugs-to>
   </upstream>
 </pkgmetadata>

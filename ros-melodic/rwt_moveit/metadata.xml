@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package provides a web user interface of <a href="http://moveit.ros.org/">MoveIt!</a> on top of visualizer in <a href="http://wiki.ros.org/ros3djs">ros3djs</a>.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>iiysaito@opensource-robotics.tokyo.jp</email>
+      <name>Isaac I.Y. Saito</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/visualization_rwt/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

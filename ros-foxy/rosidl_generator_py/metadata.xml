@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>scott@openrobotics.org</email>
-      <name>Scott K Logan</name>
+      <email>sloretz@openrobotics.org</email>
+      <name>Shane Loretz</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/rosidl_python/issues</bugs-to>
   </upstream>

@@ -1,4 +1,4 @@
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="The cob_extern stack contains third party libraries needed for oper
 HOMEPAGE="http://ros.org/wiki/cob_extern"
 SRC_URI="https://github.com/ipa320/${PN}-release/archive/release/melodic/${PN}/0.6.17-1.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="( LGPL-2 proprietary )"
+LICENSE="( LGPL Proprietary )"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="
 	ros-melodic/libdlib

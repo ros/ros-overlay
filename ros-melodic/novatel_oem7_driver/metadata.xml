@@ -10,7 +10,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>support@novatel.com</email>
+      <email>support.novatel@hexagon.com</email>
       <name>NovAtel Support</name>
     </maintainer>
     <bugs-to>https://github.com/novatel-gbp/novatel_oem7_driver/issues</bugs-to>

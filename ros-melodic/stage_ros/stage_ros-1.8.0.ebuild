@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -22,7 +22,7 @@ RDEPEND="
 	ros-melodic/std_msgs
 	ros-melodic/std_srvs
 	ros-melodic/tf
-	dev-libs/boost
+	dev-libs/boost[python]
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

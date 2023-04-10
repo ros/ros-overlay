@@ -5,13 +5,13 @@
     This package includes ROS messages and services for dynamixel_workbench packages
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs/issues</bugs-to>
   </upstream>

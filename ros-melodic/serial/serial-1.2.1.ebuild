@@ -1,4 +1,4 @@
-# Copyright 2018 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -15,7 +15,7 @@ LICENSE="MIT"
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 IUSE="test"
 RDEPEND="
-	test? ( dev-libs/boost )
+	test? ( dev-libs/boost[python] )
 "
 DEPEND="${RDEPEND}
 	ros-melodic/catkin

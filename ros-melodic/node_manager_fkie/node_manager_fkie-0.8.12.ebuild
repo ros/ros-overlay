@@ -1,4 +1,4 @@
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=6
@@ -11,7 +11,7 @@ DESCRIPTION="Graphical interface, written in PySide, to manage the running and \
 HOMEPAGE="http://ros.org/wiki/node_manager_fkie"
 SRC_URI="https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/${PN}/0.8.12-0.tar.gz -> ${PN}-melodic-release-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD-some-icons-are-licensed-under-the-GNU-Lesser-General-Public-License-LGPL-or-Creative-Commons-Attribution-Noncommercial-3.0-License"
 
 KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 RDEPEND="

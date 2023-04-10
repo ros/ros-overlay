@@ -5,7 +5,7 @@
     A viewer for the SLAM component of roboception based on ROS and PCL
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

@@ -13,6 +13,6 @@
       <email>jan.staschulat@de.bosch.com</email>
       <name>Jan Staschulat</name>
     </maintainer>
-    <bugs-to>https://github.com/micro-ROS/rclc/issues</bugs-to>
+    <bugs-to>https://github.com/ros2-gbp/rclc/issues</bugs-to>
   </upstream>
 </pkgmetadata>

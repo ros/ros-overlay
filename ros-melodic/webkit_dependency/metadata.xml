@@ -5,7 +5,7 @@
     This encapsulates the WebKit dependency for a specific ROS distribution and its Qt version
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

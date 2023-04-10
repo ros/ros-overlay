@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>pyo@robotis.com</email>
-      <name>Pyo</name>
+      <email>willson@robotis.com</email>
+      <name>Will Son</name>
     </maintainer>
     <bugs-to>https://github.com/ROBOTIS-GIT/turtlebot3/issues</bugs-to>
   </upstream>

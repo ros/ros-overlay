@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <longdescription>
-    Simple example system for system_modes package.
+    Example systems and according launch files for the system_modes
+    package.
   </longdescription>
   <maintainer type="person">
     <email>hunterlallen@protonmail.com</email>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>clairewang@openrobotics.org</email>
+      <name>Claire Wang</name>
     </maintainer>
     <bugs-to>https://github.com/ros2-gbp/ament_index/issues</bugs-to>
   </upstream>

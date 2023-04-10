@@ -5,7 +5,7 @@
     Catkin macros to allow using pure python packages in usual catkin workspaces with normal python workflow.
   </longdescription>
   <maintainer type="person">
-    <email>hallen@kns.com</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

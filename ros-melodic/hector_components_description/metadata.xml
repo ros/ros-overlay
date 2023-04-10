@@ -5,7 +5,7 @@
     hector_components_description contains URDF xacro macros for robot components, so they are easily attachable to robot models.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>

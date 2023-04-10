@@ -11,8 +11,8 @@
   <upstream>
     <maintainer status="active">
       <email>support@fictionlab.pl</email>
-      <name>fictionlab</name>
+      <name>Fictionlab</name>
     </maintainer>
-    <bugs-to>https://github.com/fictionlab-gbp/leo_description/issues</bugs-to>
+    <bugs-to>https://github.com/fictionlab-gbp/leo_common/issues</bugs-to>
   </upstream>
 </pkgmetadata>

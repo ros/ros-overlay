@@ -5,7 +5,7 @@
     posedetection_msgs provides messages and services to facilitate passing pose detection results and features.
   </longdescription>
   <maintainer type="person">
-    <email>hunter@openrobotics.org</email>
+    <email>hunterlallen@protonmail.com</email>
     <name>Hunter L. Allen</name>
   </maintainer>
   <upstream>
