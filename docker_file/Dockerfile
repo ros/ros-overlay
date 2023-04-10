@@ -9,32 +9,34 @@ RUN emerge --sync
 RUN   eselect profile set 5 && emerge app-crypt/gnupg dev-vcs/git --autounmask-write 
 RUN   mkdir -p /usr/local/portage 
 RUN   printf '\nPORTDIR_OVERLAY="/usr/local/portage"\n' >> /etc/portage/make.conf 
-RUN   mkdir /etc/portage/repos.conf 
-
+RUN mkdir -p /etc/portage/repos.conf/
 # add ros-overlay to repos.conf
-RUN   echo "[ros-overlay]\n\
-location = /usr/local/portage\n\
-sync-type = git\n\
-sync-uri = https://github.com/ros/ros-overlay\n\
-auto-sync = yes\n\
-masters = gentoo" >> /etc/portage/repos.conf/ros-overlay.conf 
+RUN echo "[ros-overlay]" > /etc/portage/repos.conf/ros-overlay.conf 
+RUN echo "location = /usr/local/portage" >> /etc/portage/repos.conf/ros-overlay.conf
+RUN echo "sync-type = git" >> /etc/portage/repos.conf/ros-overlay.conf 
+RUN echo "sync-uri = https://github.com/ros/ros-overlay" >> /etc/portage/repos.conf/ros-overlay.conf 
+RUN echo "auto-sync = yes" >> /etc/portage/repos.conf/ros-overlay.conf 
+RUN echo "masters = gentoo" >> /etc/portage/repos.conf/ros-overlay.conf
 
-RUN   echo 'ACCEPT_KEYWORDS=~amd64' >> /etc/portage/make.conf
-RUN   printf 'USE="X compat -bindist"\n' >> /etc/portage/make.conf 
-RUN   eselect profile set default/linux/amd64/17.1/desktop 
-RUN   emaint sync -r ros-overlay 
-RUN   emerge --oneshot portage 
+RUN echo 'ACCEPT_KEYWORDS=~amd64' >> /etc/portage/make.conf
+RUN printf 'USE="X compat -bindist"\n' >> /etc/portage/make.conf 
+RUN eselect profile set default/linux/amd64/17.1/desktop 
+RUN ls
+RUN cat /etc/portage/repos.conf/ros-overlay.conf
+RUN emaint sync -r ros-overlay 
+RUN emerge --oneshot portage 
+
 # add iputils conf
-RUN echo "ros-kinetic/* PYTHON_TARGETS: -* python2_7\n\
-ros-kinetic/* PYTHON_SINGLE_TARGET: -* python2_7\n\
-ros-melodic/* PYTHON_TARGETS: -* python2_7\n\
-ros-melodic/* PYTHON_SINGLE_TARGET: -* python2_7\n\
-sys-libs/zlib minizip\n\
-sci-libs/vtk rendering java\n\
-dev-python/PyQt5 webkit \n\
-dev-qt/qtwebkit printsupport\n\
-dev-libs/boost python\n\
-net-dns/avahi python" >> /etc/portage/package.use/iputils 
+RUN echo "ros-kinetic/* PYTHON_TARGETS: -* python2_7" > /etc/portage/package.use/iputils
+RUN echo "ros-kinetic/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils
+RUN echo "ros-melodic/* PYTHON_TARGETS: -* python2_7" >> /etc/portage/package.use/iputils
+RUN echo "ros-melodic/* PYTHON_SINGLE_TARGET: -* python2_7" >> /etc/portage/package.use/iputils
+RUN echo "sys-libs/zlib minizip" >> /etc/portage/package.use/iputils
+RUN echo "sci-libs/vtk rendering java" >> /etc/portage/package.use/iputils
+RUN echo "dev-python/PyQt5 webkit " >> /etc/portage/package.use/iputils
+RUN echo "dev-qt/qtwebkit printsupport" >> /etc/portage/package.use/iputils
+RUN echo "dev-libs/boost python" >> /etc/portage/package.use/iputils
+RUN echo "net-dns/avahi python" >> /etc/portage/package.use/iputils 
 
 RUN echo "ros-humble\nros-galactic\nros-foxy" >> /etc/portage/categories
 RUN perl-cleaner --reallyall 
@@ -71,6 +73,7 @@ RUN emerge --jobs dev-perl/XML-NamespaceSupport dev-perl/HTTP-Negotiate
 RUN emerge --jobs dev-perl/HTTP-Cookies dev-perl/HTTP-Daemon dev-python/pycurl 
 RUN emerge --jobs dev-python/sip 
 RUN emerge --jobs dev-python/pytz dev-perl/WWW-RobotRules dev-perl/Tie-IxHash 
+RUN emerge --jobs sys-libs/zlib
 RUN emerge --jobs app-portage/gentoolkit media-libs/assimp 
 RUN emerge --jobs dev-qt/qtxml 
 RUN emerge --jobs x11-misc/util-macros dev-libs/tinyxml2 
