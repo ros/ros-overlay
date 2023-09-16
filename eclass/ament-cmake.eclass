@@ -41,7 +41,7 @@ AMENT_PYTHON_USEDEP=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
 	PYTHON_ECLASS="python-r1"
 fi
-inherit ${SCM} ${PYTHON_ECLASS} cmake-utils flag-o-matic
+inherit ${SCM} ${PYTHON_ECLASS} cmake flag-o-matic
 
 AMENT_DO_PYTHON_MULTIBUILD=""
 if [ -n "${PYTHON_COMPAT}" ] ; then
@@ -75,13 +75,13 @@ ament-cmake_src_unpack() {
 
 # @FUNCTION: ros-catkin_src_prepare
 # @DESCRIPTION:
-# Calls cmake-utils_src_prepare (so that PATCHES array is handled there) and initialises the workspace
+# Calls cmake_src_prepare (so that PATCHES array is handled there) and initialises the workspace
 # by installing a recursive CMakeLists.txt to handle bundles.
 ament-cmake_src_prepare() {
 	# If no multibuild, just use cmake IN_SOURCE support
 	[ -n "${AMENT_IN_SOURCE_BUILD}" ] && [ -z "${AMENT_DO_PYTHON_MULTIBUILD}" ] && export CMAKE_IN_SOURCE_BUILD=yes
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 
 	# If python multibuild, copy the sources
 	[ -n "${AMENT_IN_SOURCE_BUILD}" ] && [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] && python_copy_sources
@@ -89,7 +89,7 @@ ament-cmake_src_prepare() {
 
 # @FUNCTION: ros-catkin_src_configure_internal
 # @DESCRIPTION:
-# Internal decoration of cmake-utils_src_configure to handle multiple python installs.
+# Internal decoration of cmake_src_configure to handle multiple python installs.
 ament-cmake_src_configure_internal() {
 	export PYTHONPATH="${EPREFIX%/}/${ROS_PREFIX%/}/lib64/${EPYTHON}/site-packages"
 	if [ -f ${EPREFIX%/}/${ROS_PREFIX%/}/setup.bash ]; then
@@ -116,7 +116,7 @@ ament-cmake_src_configure_internal() {
 			export CMAKE_USE_DIR="${BUILD_DIR}"
 		fi
 	fi
-	cmake-utils_src_configure "${@}"
+	cmake_src_configure "${@}"
 }
 
 # @VARIABLE: mycatkincmakeargs
@@ -149,7 +149,7 @@ ament-cmake_src_configure() {
 		-DCMAKE_INSTALL_PREFIX=${EPREFIX%/}/${ROS_PREFIX}
 		${mycmakeargs[@]}
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ament-cmake_src_configure_internal "${@}"
 	else
@@ -171,15 +171,15 @@ ament-cmake_src_compile() {
 		if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 			export CMAKE_USE_DIR="${BUILD_DIR}"
 		fi
-		python_foreach_impl cmake-utils_src_compile "${@}"
+		python_foreach_impl cmake_src_compile "${@}"
 	else
-		cmake-utils_src_compile "${@}"
+		cmake_src_compile "${@}"
 	fi
 }
 
 # @FUNCTION: ros-catkin_src_test_internal
 # @DESCRIPTION:
-# Decorator around cmake-utils_src_test to ensure tests are built before running them.
+# Decorator around cmake_src_test to ensure tests are built before running them.
 ament-cmake_src_test_internal() {
 	cd "${BUILD_DIR}" || die
 	# Regenerate env for tests, PYTHONPATH is not set properly otherwise...
@@ -187,12 +187,12 @@ ament-cmake_src_test_internal() {
 		einfo "Regenerating setup_cached.sh for tests"
 		${PYTHON:-python} catkin_generated/generate_cached_setup.py || die
 	fi
-	# Using cmake-utils_src_make with nonfatal does not work and breaks e.g.
+	# Using cmake_src_make with nonfatal does not work and breaks e.g.
 	# dev-ros/rviz.
 	if nonfatal emake tests -n &> /dev/null ; then
-		cmake-utils_src_make tests
+		cmake_src_make tests
 	fi
-	cmake-utils_src_test "${@}"
+	cmake_src_test "${@}"
 }
 
 # @FUNCTION: ros-catkin_src_test
@@ -208,14 +208,14 @@ ros-catkin_src_test() {
 
 # @FUNCTION: ros-catkin_src_install_with_python
 # @DESCRIPTION:
-# Decorator around cmake-utils_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
+# Decorator around cmake_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
 ament-cmake_src_install_with_python() {
 	python_scriptinto ${EPREFIX%/}/${ROS_PREFIX}/bin
 	python_export PYTHON_SCRIPTDIR
 	if [ -n "${AMENT_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"
 	fi
-	cmake-utils_src_install "${@}"
+	cmake_src_install "${@}"
 	if [ ! -f "${T}/.catkin_python_symlinks_generated" -a -d "${D}/${PYTHON_SCRIPTDIR}" ]; then
 		dodir /usr/bin
 		for i in "${D}/${PYTHON_SCRIPTDIR}"/* ; do
@@ -232,7 +232,7 @@ ament-cmake_src_install() {
 	if [ -n "${AMENT_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ament-cmake_src_install_with_python "${@}"
 	else
-		cmake-utils_src_install "${@}"
+		cmake_src_install "${@}"
 	fi
 }
 
