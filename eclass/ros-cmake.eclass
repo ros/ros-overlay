@@ -165,7 +165,7 @@ ros-cmake_src_configure_internal() {
 			"-DPYTHON_INSTALL_DIR=${lib_str}/${EPYTHON%/}/site-packages"
 			"${mycmakeargs[@]}"
 		)
-		python_export PYTHON_SCRIPTDIR
+		_python_export PYTHON_SCRIPTDIR
 		if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 			export CMAKE_USE_DIR="${BUILD_DIR}"
 		fi
@@ -273,7 +273,7 @@ ros-catkin_src_test() {
 # Decorator around cmake_src_install to ensure python scripts are properly handled w.r.t. python-exec2.
 ros-cmake_src_install_with_python() {
 	python_scriptinto ${EPREFIX%/}/${ROS_PREFIX%/}/bin
-	python_export PYTHON_SCRIPTDIR
+	_python_export PYTHON_SCRIPTDIR
 	if [ -n "${CATKIN_IN_SOURCE_BUILD}" ] ; then
 		export CMAKE_USE_DIR="${BUILD_DIR}"
 	fi
