@@ -215,7 +215,6 @@ ros-cmake_src_configure() {
 		-DCMAKE_INSTALL_PREFIX=${EPREFIX%/}/${ROS_PREFIX}
 		${mycmakeargs[@]}
 	)
-	cmake_src_configure
 	if [ -n "${CATKIN_DO_PYTHON_MULTIBUILD}" ] ; then
 		python_foreach_impl ros-cmake_src_configure_internal "${@}"
 	else
