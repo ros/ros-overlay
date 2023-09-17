@@ -144,6 +144,7 @@ ament-cmake_src_configure() {
 	fi
 	local mycmakeargs=(
 		-DAMENT_ENABLE_TESTING="$(usex test 1 0)"
+		-DBUILD_TESTING="$(usex test 1 0)"
 		-DAMENT_BUILD_BINARY_PACKAGE=${BUILD_BINARY}
 		-DCMAKE_PREFIX_PATH=${SYSROOT:-${EPREFIX%/}}/${ROS_PREFIX}
 		-DCMAKE_INSTALL_PREFIX=${EPREFIX%/}/${ROS_PREFIX}
