@@ -11,12 +11,9 @@
 # Provides function for building ROS packages on Gentoo.
 # It supports selectively building messages, multi-python installation, live ebuilds (git only).
 
-case "${EAPI:-0}" in
-	0|1|2|3|4)
-		die "EAPI='${EAPI}' is not supported"
-		;;
-	*)
-		;;
+case ${EAPI} in
+	7|8) ;;
+	*) die "${ECLASS}: EAPI ${EAPI:-0} not supported" ;;
 esac
 
 # @ECLASS-VARIABLE: ROS_REPO_URI
