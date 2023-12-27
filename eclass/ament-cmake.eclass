@@ -105,7 +105,10 @@ ament-cmake_src_configure_internal() {
 		fi
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			"-DPYTHON_INSTALL_DIR=${lib_str}/${EPYTHON}/site-packages"
+			-DPython3_EXECUTABLE="${PYTHON}"
+			-DPython3_INCLUDE_DIR="$(python_get_includedir)"
+			-DPython3_LIBRARY="$(python_get_library_path)"
+			-DPYTHON_INSTALL_DIR="${lib_str}/${EPYTHON%/}/site-packages"
 			"${mycmakeargs[@]}"
 		)
 		_python_export PYTHON_SCRIPTDIR
