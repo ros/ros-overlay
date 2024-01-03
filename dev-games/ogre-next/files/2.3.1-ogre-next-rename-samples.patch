@@ -1,0 +1,98 @@
+diff --git a/CMake/InstallResources.cmake b/CMake/InstallResources.cmake
+index 067963b..8c65983 100644
+--- a/CMake/InstallResources.cmake
++++ b/CMake/InstallResources.cmake
+@@ -55,7 +55,7 @@ elseif (APPLE)
+   set(OGRE_SAMPLES_DIR_DBG "")
+   set(OGRE_CFG_INSTALL_PATH "bin")
+ elseif (UNIX)
+-  set(OGRE_MEDIA_PATH "share/OGRE/Media")
++  set(OGRE_MEDIA_PATH "share/OGRE-Next/Media")
+   set(OGRE_MEDIA_DIR_REL "${CMAKE_INSTALL_PREFIX}/${OGRE_MEDIA_PATH}")
+   set(OGRE_MEDIA_DIR_DBG "${CMAKE_INSTALL_PREFIX}/${OGRE_MEDIA_PATH}")
+   set(OGRE_TEST_MEDIA_DIR_REL "${CMAKE_INSTALL_PREFIX}/Tests/Media")
+@@ -64,7 +64,7 @@ elseif (UNIX)
+   set(OGRE_PLUGIN_DIR_DBG "${CMAKE_INSTALL_PREFIX}/${OGRE_LIB_DIRECTORY}/OGRE")
+   set(OGRE_SAMPLES_DIR_REL "${CMAKE_INSTALL_PREFIX}/${OGRE_LIB_DIRECTORY}/OGRE/Samples")
+   set(OGRE_SAMPLES_DIR_DBG "${CMAKE_INSTALL_PREFIX}/${OGRE_LIB_DIRECTORY}/OGRE/Samples")
+-  set(OGRE_CFG_INSTALL_PATH "share/OGRE")
++  set(OGRE_CFG_INSTALL_PATH "share/OGRE-Next")
+ endif ()
+ 
+ if( APPLE )
+diff --git a/Samples/2.0/ApiUsage/PlanarReflections/CMakeLists.txt b/Samples/2.0/ApiUsage/PlanarReflections/CMakeLists.txt
+index cce7a81..767b54e 100644
+--- a/Samples/2.0/ApiUsage/PlanarReflections/CMakeLists.txt
++++ b/Samples/2.0/ApiUsage/PlanarReflections/CMakeLists.txt
+@@ -23,6 +23,6 @@ add_recursive( ./ SOURCE_FILES )
+ 
+ ogre_add_executable(Sample_PlanarReflections WIN32 MACOSX_BUNDLE ${SOURCE_FILES} ${SAMPLE_COMMON_RESOURCES})
+ 
+-target_link_libraries(Sample_PlanarReflections ${OGRE_LIBRARIES} ${OGRE_SAMPLES_LIBRARIES} OgrePlanarReflections )
++target_link_libraries(Sample_PlanarReflections ${OGRE_LIBRARIES} ${OGRE_SAMPLES_LIBRARIES} ${OGRE_NEXT}PlanarReflections )
+ ogre_config_sample_lib(Sample_PlanarReflections)
+ ogre_config_sample_pkg(Sample_PlanarReflections)
+diff --git a/Samples/2.0/CMakeLists.txt b/Samples/2.0/CMakeLists.txt
+index 5dc6f45..81ba8d3 100644
+--- a/Samples/2.0/CMakeLists.txt
++++ b/Samples/2.0/CMakeLists.txt
+@@ -99,7 +99,7 @@ if( OGRE_BUILD_SAMPLES2 AND NOT OGRE_BUILD_SAMPLES2_SKIP )
+ endif()
+ 
+ if( OGRE_BUILD_SAMPLES2 AND NOT OGRE_BUILD_SAMPLES2_SKIP )
+-	set( OGRE_SAMPLES_LIBRARIES "OgreSamplesCommon" "OgreOverlay" )
++	set( OGRE_SAMPLES_LIBRARIES "OgreSamplesCommon" "${OGRE_NEXT}Overlay" )
+ 
+ 	if( OGRE_STATIC OR WINDOWS_STORE OR WINDOWS_PHONE )
+ 		if( OGRE_BUILD_RENDERSYSTEM_GL3PLUS )
+diff --git a/Samples/2.0/Common/CMakeLists.txt b/Samples/2.0/Common/CMakeLists.txt
+index adbe28c..ea87ac5 100644
+--- a/Samples/2.0/Common/CMakeLists.txt
++++ b/Samples/2.0/Common/CMakeLists.txt
+@@ -55,4 +55,4 @@ add_library(${OGRE_SAMPLES_COMMON_LIBRARY} STATIC ${SOURCE_FILES} ${HEADER_FILES
+ 
+ link_directories(${CMAKE_CURRENT_BINARY_DIR})
+ 
+-target_link_libraries(${OGRE_SAMPLES_COMMON_LIBRARY} ${SDL2_LIBRARY} OgreHlmsPbs OgreHlmsUnlit)
++target_link_libraries(${OGRE_SAMPLES_COMMON_LIBRARY} ${SDL2_LIBRARY} ${OGRE_NEXT}HlmsPbs ${OGRE_NEXT}HlmsUnlit)
+diff --git a/Samples/2.0/Tutorials/Tutorial_Terrain/CMakeLists.txt b/Samples/2.0/Tutorials/Tutorial_Terrain/CMakeLists.txt
+index e8d1624..1311141 100644
+--- a/Samples/2.0/Tutorials/Tutorial_Terrain/CMakeLists.txt
++++ b/Samples/2.0/Tutorials/Tutorial_Terrain/CMakeLists.txt
+@@ -27,9 +27,9 @@ endif()
+ 
+ ogre_add_executable(Sample_Tutorial_Terrain WIN32 MACOSX_BUNDLE ${SOURCE_FILES} ${SAMPLE_COMMON_RESOURCES})
+ 
+-target_link_libraries(Sample_Tutorial_Terrain ${OGRE_LIBRARIES} ${OGRE_SAMPLES_LIBRARIES} OgreHlmsPbs)
++target_link_libraries(Sample_Tutorial_Terrain ${OGRE_LIBRARIES} ${OGRE_SAMPLES_LIBRARIES} ${OGRE_NEXT}HlmsPbs)
+ if( OGRE_BUILD_COMPONENT_PLANAR_REFLECTIONS )
+-    target_link_libraries( Sample_Tutorial_Terrain OgrePlanarReflections )
++    target_link_libraries( Sample_Tutorial_Terrain ${OGRE_NEXT}PlanarReflections )
+ endif()
+ ogre_config_sample_lib(Sample_Tutorial_Terrain)
+ ogre_config_sample_pkg(Sample_Tutorial_Terrain)
+diff --git a/Samples/2.0/Tutorials/Tutorial_Terrain/src/Terra/Terra.cpp b/Samples/2.0/Tutorials/Tutorial_Terrain/src/Terra/Terra.cpp
+index 1a3ccbe..eca19d9 100644
+--- a/Samples/2.0/Tutorials/Tutorial_Terrain/src/Terra/Terra.cpp
++++ b/Samples/2.0/Tutorials/Tutorial_Terrain/src/Terra/Terra.cpp
+@@ -38,6 +38,7 @@ THE SOFTWARE.
+ #include "Compositor/OgreCompositorWorkspace.h"
+ #include "OgreCamera.h"
+ #include "OgreDepthBuffer.h"
++#include "OgreHlmsDatablock.h"
+ #include "OgreMaterialManager.h"
+ #include "OgrePixelFormatGpuUtils.h"
+ #include "OgreSceneManager.h"
+diff --git a/Samples/Media/CMakeLists.txt b/Samples/Media/CMakeLists.txt
+index c2e507f..5e1fd56 100644
+--- a/Samples/Media/CMakeLists.txt
++++ b/Samples/Media/CMakeLists.txt
+@@ -17,7 +17,7 @@ if (WIN32)
+ elseif (APPLE)
+   set(OGRE_MEDIA_PATH "Media")
+ elseif (UNIX)
+-  set(OGRE_MEDIA_PATH "share/OGRE/Media")
++  set(OGRE_MEDIA_PATH "share/OGRE-Next/Media")
+ endif ()
+ 
+ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/

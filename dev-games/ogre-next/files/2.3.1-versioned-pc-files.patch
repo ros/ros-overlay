@@ -1,0 +1,275 @@
+--- a/CMake/ConfigureBuild.cmake
++++ b/CMake/ConfigureBuild.cmake
+@@ -256,6 +256,11 @@ install( FILES
+ 
+ # Create the pkg-config package files on Unix systems
+ if (UNIX)
++  if (OGRE_USE_NEW_PROJECT_NAME)
++    set(OGRE_PC_NAME "OGRE-${OGRE_VERSION_MAJOR}.${OGRE_VERSION_MINOR}")
++  else()
++    set(OGRE_PC_NAME "OGRE")
++  endif()
+   set(OGRE_LIB_SUFFIX "")
+   set(OGRE_PLUGIN_PREFIX "")
+   set(OGRE_PLUGIN_EXT ".so")
+@@ -282,55 +287,55 @@ if (UNIX)
+     endif ()
+     # there is no pkgconfig file for freeimage, so we need to add that lib manually
+     set(OGRE_ADDITIONAL_LIBS "${OGRE_ADDITIONAL_LIBS} -lfreeimage")
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGREStatic.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE.pc @ONLY)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGREStatic.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc @ONLY)
+   else ()
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE.pc @ONLY)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc @ONLY)
+   endif ()
+-  install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++  install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+ 
+   # configure additional packages
+ 
+   if (OGRE_BUILD_COMPONENT_PAGING)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Paging.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Paging.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Paging.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Paging.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Paging.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Paging.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_MESHLODGENERATOR)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-MeshLodGenerator.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-MeshLodGenerator.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-MeshLodGenerator.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-MeshLodGenerator.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-MeshLodGenerator.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-MeshLodGenerator.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+   
+   if (OGRE_BUILD_COMPONENT_TERRAIN)
+     if (OGRE_BUILD_COMPONENT_PAGING)
+-      set(OGRE_PAGING_ADDITIONAL_PACKAGES ", OGRE-Paging = ${OGRE_VERSION}")
++      set(OGRE_PAGING_ADDITIONAL_PACKAGES ", ${OGRE_PC_NAME}-Paging = ${OGRE_VERSION}")
+     endif ()
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Terrain.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Terrain.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Terrain.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Terrain.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Terrain.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Terrain.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_RTSHADERSYSTEM)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-RTShaderSystem.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-RTShaderSystem.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-RTShaderSystem.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-RTShaderSystem.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-RTShaderSystem.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-RTShaderSystem.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_PROPERTY)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Property.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Property.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Property.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Property.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Property.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Property.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_OVERLAY)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Overlay.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Overlay.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Overlay.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Overlay.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Overlay.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Overlay.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_VOLUME)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Volume.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Volume.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Volume.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Volume.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Volume.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Volume.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_HLMS)
+-    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Hlms.pc.in ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Hlms.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/OGRE-Hlms.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Hlms.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Hlms.pc @ONLY)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Hlms.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
+   endif ()
+ 
+ endif ()
+--- a/CMake/Templates/OGRE.pc.in
++++ b/CMake/Templates/OGRE.pc.in
+@@ -1,12 +1,12 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ plugindir=${libdir}/OGRE
+ 
+-Name: OGRE
++Name: @OGRE_PC_NAME@
+ Description: Object-Oriented Graphics Rendering Engine
+ Version: @OGRE_VERSION@
+ URL: http://www.ogre3d.org
+-Libs: -L${libdir} -lOgreMain@OGRE_LIB_SUFFIX@ @OGRE_ADDITIONAL_LIBS@
+-Cflags: -I${includedir} -I${includedir}/OGRE @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@Main@OGRE_LIB_SUFFIX@ @OGRE_ADDITIONAL_LIBS@
++Cflags: -I${includedir} @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Hlms.pc.in
++++ b/CMake/Templates/OGRE-Hlms.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Hlms
++Name: @OGRE_PC_NAME@-Hlms
+ Description: HLMS component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreHlmsPbs@OGRE_LIB_SUFFIX@ -lOgreHlmsUnlit@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Hlms @OGRE_CFLAGS@
+\ No newline at end of file
++Libs: -L${libdir} -l@OGRE_NEXT@HlmsPbs@OGRE_LIB_SUFFIX@ -l@OGRE_NEXT@HlmsUnlit@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Hlms @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-MeshLodGenerator.pc.in
++++ b/CMake/Templates/OGRE-MeshLodGenerator.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-MeshLodGenerator
++Name: @OGRE_PC_NAME@-MeshLodGenerator
+ Description: Mesh Lod Generator for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreMeshLodGenerator@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/MeshLodGenerator @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@MeshLodGenerator@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/MeshLodGenerator @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Overlay.pc.in
++++ b/CMake/Templates/OGRE-Overlay.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Overlay
++Name: @OGRE_PC_NAME@-Overlay
+ Description: Overlay component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreOverlay@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Overlay @OGRE_CFLAGS@
+\ No newline at end of file
++Libs: -L${libdir} -l@OGRE_NEXT@Overlay@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Overlay @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Paging.pc.in
++++ b/CMake/Templates/OGRE-Paging.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Paging
++Name: @OGRE_PC_NAME@-Paging
+ Description: General purpose paging component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgrePaging@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Paging @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@Paging@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Paging @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Property.pc.in
++++ b/CMake/Templates/OGRE-Property.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Property
++Name: @OGRE_PC_NAME@-Property
+ Description: General purpose property component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreProperty@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Property @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@Property@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Property @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-RTShaderSystem.pc.in
++++ b/CMake/Templates/OGRE-RTShaderSystem.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-RTShaderSystem
++Name: @OGRE_PC_NAME@-RTShaderSystem
+ Description: Real time shader generation component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreRTShaderSystem@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/RTShaderSystem @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@RTShaderSystem@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/RTShaderSystem @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Terrain.pc.in
++++ b/CMake/Templates/OGRE-Terrain.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Terrain
++Name: @OGRE_PC_NAME@-Terrain
+ Description: Outdoor terrain component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@ @OGRE_PAGING_ADDITIONAL_PACKAGES@
+-Libs: -L${libdir} -lOgreTerrain@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Terrain @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@Terrain@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Terrain @OGRE_CFLAGS@
+--- a/CMake/Templates/OGRE-Volume.pc.in
++++ b/CMake/Templates/OGRE-Volume.pc.in
+@@ -1,11 +1,11 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ 
+-Name: OGRE-Volume
++Name: @OGRE_PC_NAME@-Volume
+ Description: Voxel based terrain component for OGRE
+ Version: @OGRE_VERSION@
+ Requires: OGRE = @OGRE_VERSION@
+-Libs: -L${libdir} -lOgreVolume@OGRE_LIB_SUFFIX@
+-Cflags: -I${includedir}/OGRE/Volume @OGRE_CFLAGS@
++Libs: -L${libdir} -l@OGRE_NEXT@Volume@OGRE_LIB_SUFFIX@
++Cflags: -I${includedir}/Volume @OGRE_CFLAGS@
+--- a/CMake/Templates/OGREStatic.pc.in
++++ b/CMake/Templates/OGREStatic.pc.in
+@@ -1,13 +1,13 @@
+ prefix=@OGRE_PREFIX_PATH@
+ exec_prefix=${prefix}
+ libdir=${prefix}/@OGRE_LIB_DIRECTORY@
+-includedir=${prefix}/include
++includedir=${prefix}/include/@OGRE_VERSIONED_DIR@
+ plugindir=${libdir}/OGRE
+ 
+-Name: OGRE (static lib)
++Name: @OGRE_PC_NAME@ (static lib)
+ Description: Object-Oriented Graphics Rendering Engine
+ Version: @OGRE_VERSION@
+ URL: http://www.ogre3d.org
+ Requires: freetype2, zziplib, x11, xt, xaw7, gl
+-Libs: -L${libdir} -L${plugindir} -lOgreMain@OGRE_LIB_SUFFIX@ @OGRE_ADDITIONAL_LIBS@
+-Cflags: -I${includedir} -I${includedir}/OGRE @OGRE_CFLAGS@
++Libs: -L${libdir} -L${plugindir} -l@OGRE_NEXT@Main@OGRE_LIB_SUFFIX@ @OGRE_ADDITIONAL_LIBS@
++Cflags: -I${includedir} @OGRE_CFLAGS@
