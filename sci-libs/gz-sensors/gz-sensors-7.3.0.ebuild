@@ -24,6 +24,6 @@ RDEPEND="
 	sci-libs/gz-common:5=
 	sci-libs/gz-math:7="
 DEPEND="${RDEPEND}
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 BDEPEND="
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"

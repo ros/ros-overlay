@@ -30,9 +30,9 @@ RDEPEND="
 	sci-libs/gz-common:5=
 	dev-libs/gz-utils:2="
 DEPEND="${RDEPEND}
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 BDEPEND="
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 
 S="${WORKDIR}/${MY_P}"
 

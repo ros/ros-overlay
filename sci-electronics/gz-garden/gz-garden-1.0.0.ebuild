@@ -32,8 +32,8 @@ RDEPEND="
 	sci-libs/gz-physics:6=
 	sci-libs/gz-sensors:7="
 DEPEND="${RDEPEND}
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 BDEPEND="
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 
 S="${WORKDIR}/${PN}-${PN}_${PV}"

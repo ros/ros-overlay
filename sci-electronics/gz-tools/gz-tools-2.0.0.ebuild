@@ -17,6 +17,6 @@ IUSE=""
 
 RDEPEND="dev-lang/ruby:*"
 DEPEND="
-	dev-util/gz-cmake:3
+	dev-build/gz-cmake:3
 	!sci-electronics/gazebo"
-BDEPEND="dev-util/gz-cmake:3"
+BDEPEND="dev-build/gz-cmake:3"

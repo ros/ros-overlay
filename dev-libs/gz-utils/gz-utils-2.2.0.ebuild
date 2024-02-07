@@ -15,5 +15,5 @@ SLOT="$(ver_cut 1)"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-util/gz-cmake:3"
-BDEPEND="dev-util/gz-cmake:3"
+DEPEND="dev-build/gz-cmake:3"
+BDEPEND="dev-build/gz-cmake:3"

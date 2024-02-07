@@ -17,6 +17,6 @@ IUSE=""
 
 RDEPEND="dev-libs/gz-utils:2="
 DEPEND="${RDEPEND}
-	dev-util/gz-cmake:3
+	dev-build/gz-cmake:3
 	sci-electronics/gz-tools:2"
-BDEPEND="dev-util/gz-cmake:3"
+BDEPEND="dev-build/gz-cmake:3"

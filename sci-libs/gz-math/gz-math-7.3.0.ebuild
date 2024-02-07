@@ -23,9 +23,9 @@ RDEPEND="
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:3
-	dev-util/gz-cmake:3"
+	dev-build/gz-cmake:3"
 BDEPEND="
-	dev-util/gz-cmake:3
+	dev-build/gz-cmake:3
 	python? (
 		$(python_gen_cond_dep '
 			dev-python/pybind11[${PYTHON_USEDEP}]
