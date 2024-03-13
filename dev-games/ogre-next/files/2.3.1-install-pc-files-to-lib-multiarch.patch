@@ -1,0 +1,72 @@
+--- a/CMake/ConfigureBuild.cmake
++++ b/CMake/ConfigureBuild.cmake
+@@ -261,6 +261,8 @@
+   else()
+     set(OGRE_PC_NAME "OGRE")
+   endif()
++  get_filename_component(OGRE_PKGCONFIG_DIRECTORY ${OGRE_LIB_DIRECTORY} DIRECTORY)
++  set(OGRE_PKGCONFIG_DIRECTORY "${OGRE_PKGCONFIG_DIRECTORY}/pkgconfig")
+   set(OGRE_LIB_SUFFIX "")
+   set(OGRE_PLUGIN_PREFIX "")
+   set(OGRE_PLUGIN_EXT ".so")
+@@ -291,18 +293,18 @@
+   else ()
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc @ONLY)
+   endif ()
+-  install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++  install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+ 
+   # configure additional packages
+ 
+   if (OGRE_BUILD_COMPONENT_PAGING)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Paging.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Paging.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Paging.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Paging.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_MESHLODGENERATOR)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-MeshLodGenerator.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-MeshLodGenerator.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-MeshLodGenerator.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-MeshLodGenerator.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+   
+   if (OGRE_BUILD_COMPONENT_TERRAIN)
+@@ -310,32 +312,32 @@
+       set(OGRE_PAGING_ADDITIONAL_PACKAGES ", ${OGRE_PC_NAME}-Paging = ${OGRE_VERSION}")
+     endif ()
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Terrain.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Terrain.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Terrain.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Terrain.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_RTSHADERSYSTEM)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-RTShaderSystem.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-RTShaderSystem.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-RTShaderSystem.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-RTShaderSystem.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_PROPERTY)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Property.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Property.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Property.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Property.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_OVERLAY)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Overlay.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Overlay.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Overlay.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Overlay.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_VOLUME)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Volume.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Volume.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Volume.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Volume.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+   if (OGRE_BUILD_COMPONENT_HLMS)
+     configure_file(${OGRE_TEMPLATES_DIR}/OGRE-Hlms.pc.in ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Hlms.pc @ONLY)
+-    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Hlms.pc DESTINATION ${OGRE_LIB_DIRECTORY}/pkgconfig)
++    install(FILES ${OGRE_BINARY_DIR}/pkgconfig/${OGRE_PC_NAME}-Hlms.pc DESTINATION ${OGRE_PKGCONFIG_DIRECTORY})
+   endif ()
+ 
+ endif ()

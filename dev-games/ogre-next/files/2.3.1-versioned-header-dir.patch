@@ -1,0 +1,299 @@
+Description: Use versioned directory to host headers
+Author: Jose Luis Rivero <jrivero@openrobotics.org>
+Forwarded: no
+Last-Update: 2022-05-19
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/CMake/ConfigureBuild.cmake
++++ b/CMake/ConfigureBuild.cmake
+@@ -250,7 +250,7 @@
+ 	${OGRE_BINARY_DIR}/include/OgreBuildSettings.h
+ 	${OGRE_BINARY_DIR}/include/OgreGL3PlusBuildSettings.h
+ 	${OGRE_BINARY_DIR}/include/OgreVulkanBuildSettings.h
+-	DESTINATION include/OGRE
++  DESTINATION include/${OGRE_VERSIONED_DIR}
+ )
+ 
+ 
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -89,6 +89,8 @@
+ # Configure version file for use by scripts
+ configure_file("${OGRE_TEMPLATES_DIR}/version.txt.in" "${OGRE_BINARY_DIR}/version.txt" @ONLY)
+ 
++set(OGRE_VERSIONED_DIR "OGRE-${OGRE_VERSION_MAJOR}.${OGRE_VERSION_MINOR}")
++
+ # determine if we are compiling for a 32bit or 64bit system
+ include(CheckTypeSize)
+ CHECK_TYPE_SIZE("void*" OGRE_PTR_SIZE BUILTIN_TYPES_ONLY)
+--- a/Components/Hlms/Pbs/CMakeLists.txt
++++ b/Components/Hlms/Pbs/CMakeLists.txt
+@@ -52,12 +52,12 @@
+ ogre_config_component(${OGRE_NEXT}HlmsPbs)
+ 
+ install (DIRECTORY include/
+-        DESTINATION include/OGRE/Hlms/Pbs
++        DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/Pbs
+         FILES_MATCHING PATTERN "*.h"
+         )
+ 
+ # also install HLMS Common folder
+ install (DIRECTORY ../Common/include/
+-        DESTINATION include/OGRE/Hlms/Common
++        DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/Common
+         FILES_MATCHING PATTERN "*.h" PATTERN "*.inl"
+         )
+--- a/Components/Hlms/PbsMobile/CMakeLists.txt
++++ b/Components/Hlms/PbsMobile/CMakeLists.txt
+@@ -24,5 +24,5 @@
+ ogre_config_component(OgreHlmsPbsMobile)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Hlms/PbsMobile
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/PbsMobile
+ )
+--- a/Components/Hlms/Unlit/CMakeLists.txt
++++ b/Components/Hlms/Unlit/CMakeLists.txt
+@@ -34,12 +34,12 @@
+ ogre_config_component(${OGRE_NEXT}HlmsUnlit)
+ 
+ install (DIRECTORY include/
+-        DESTINATION include/OGRE/Hlms/Unlit
++        DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/Unlit
+         FILES_MATCHING PATTERN "*.h"
+         )
+ 
+ # also install HLMS Common folder
+ install (DIRECTORY ../Common/include/
+-        DESTINATION include/OGRE/Hlms/Common
++        DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/Common
+         FILES_MATCHING PATTERN "*.h" PATTERN "*.inl"
+         )
+--- a/Components/Hlms/UnlitMobile/CMakeLists.txt
++++ b/Components/Hlms/UnlitMobile/CMakeLists.txt
+@@ -24,5 +24,5 @@
+ ogre_config_component(OgreHlmsUnlitMobile)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Hlms/UnlitMobile
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Hlms/UnlitMobile
+ )
+--- a/Components/MeshLodGenerator/CMakeLists.txt
++++ b/Components/MeshLodGenerator/CMakeLists.txt
+@@ -37,5 +37,5 @@
+ ogre_config_component(${OGRE_NEXT}MeshLodGenerator)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/MeshLodGenerator
++  DESTINATION include/${OGRE_VERSIONED_DIR}/MeshLodGenerator
+ )
+--- a/Components/Overlay/CMakeLists.txt
++++ b/Components/Overlay/CMakeLists.txt
+@@ -41,6 +41,6 @@
+ ogre_config_component(${OGRE_NEXT}Overlay)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Overlay
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Overlay
+ )
+ 
+--- a/Components/Paging/CMakeLists.txt
++++ b/Components/Paging/CMakeLists.txt
+@@ -37,5 +37,5 @@
+ ogre_config_component(OgrePaging)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Paging
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Paging
+ )
+--- a/Components/PlanarReflections/CMakeLists.txt
++++ b/Components/PlanarReflections/CMakeLists.txt
+@@ -31,5 +31,5 @@
+ ogre_config_component(${OGRE_NEXT}PlanarReflections)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/PlanarReflections
++  DESTINATION include/${OGRE_VERSIONED_DIR}/PlanarReflections
+ )
+--- a/Components/Property/CMakeLists.txt
++++ b/Components/Property/CMakeLists.txt
+@@ -45,6 +45,6 @@
+ ogre_config_component(OgreProperty)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Property
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Property
+ )
+ 
+--- a/Components/RTShaderSystem/CMakeLists.txt
++++ b/Components/RTShaderSystem/CMakeLists.txt
+@@ -24,5 +24,5 @@
+ ogre_config_component(OgreRTShaderSystem)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/RTShaderSystem
++  DESTINATION include/${OGRE_VERSIONED_DIR}/RTShaderSystem
+ )
+--- a/Components/SceneFormat/CMakeLists.txt
++++ b/Components/SceneFormat/CMakeLists.txt
+@@ -34,5 +34,5 @@
+ ogre_config_component(${OGRE_NEXT}SceneFormat)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/SceneFormat
++  DESTINATION include/${OGRE_VERSIONED_DIR}/SceneFormat
+ )
+--- a/Components/Terrain/CMakeLists.txt
++++ b/Components/Terrain/CMakeLists.txt
+@@ -60,6 +60,6 @@
+ ogre_config_component(OgreTerrain)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Terrain
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Terrain
+ )
+ 
+--- a/Components/Volume/CMakeLists.txt
++++ b/Components/Volume/CMakeLists.txt
+@@ -38,6 +38,6 @@
+ ogre_config_component(OgreVolume)
+ 
+ install(FILES ${HEADER_FILES}
+-  DESTINATION include/OGRE/Volume
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Volume
+ )
+ 
+--- a/OgreMain/CMakeLists.txt
++++ b/OgreMain/CMakeLists.txt
+@@ -493,19 +493,20 @@
+   "${CMAKE_CURRENT_SOURCE_DIR}/src/OgrePrecompiledHeaders.cpp"
+ )
+ 
++
+ # install ${OGRE_NEXT}Main
+ ogre_config_lib(${OGRE_NEXT}Main TRUE)
+ foreach(HEADER_FILE ${HEADER_FILES})
+ 	string(REGEX REPLACE "((${CMAKE_CURRENT_SOURCE_DIR}|${OGRE_BINARY_DIR})/)?(include|src)/" "" RELATIVE_HEADER_FILE ${HEADER_FILE})
+ 	string(REGEX MATCH "((.*)/)+" HEADER_SUBDIRECTORY ${RELATIVE_HEADER_FILE})
+-	install(FILES ${HEADER_FILE} DESTINATION include/OGRE/${HEADER_SUBDIRECTORY})
++  install(FILES ${HEADER_FILE} DESTINATION include/${OGRE_VERSIONED_DIR}/${HEADER_SUBDIRECTORY})
+ endforeach()
+ 
+ install(FILES ${PLATFORM_HEADERS}
+-  DESTINATION include/OGRE/${PLATFORM_HEADER_INSTALL}
++  DESTINATION include/${OGRE_VERSIONED_DIR}/${PLATFORM_HEADER_INSTALL}
+ )
+ install(FILES ${THREAD_HEADER_FILES}
+-	DESTINATION include/OGRE/Threading
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Threading
+ )
+ 
+ set( DEPRECATED_HEADER_FILES
+@@ -528,5 +529,5 @@
+ )
+ 
+ install(FILES ${DEPRECATED_HEADER_FILES}
+-  DESTINATION include/OGRE/Deprecated
++  DESTINATION include/${OGRE_VERSIONED_DIR}/Deprecated
+ )
+--- a/PlugIns/ParticleFX/CMakeLists.txt
++++ b/PlugIns/ParticleFX/CMakeLists.txt
+@@ -27,5 +27,5 @@
+ ogre_config_framework(Plugin_ParticleFX)
+ 
+ ogre_config_plugin(Plugin_ParticleFX)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/Plugins/ParticleFX)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/Plugins/ParticleFX)
+ 
+--- a/RenderSystems/Direct3D11/CMakeLists.txt
++++ b/RenderSystems/Direct3D11/CMakeLists.txt
+@@ -65,4 +65,4 @@
+ endif()
+ 
+ ogre_config_plugin(RenderSystem_Direct3D11)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/Direct3D11)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Direct3D11)
+--- a/RenderSystems/Direct3D9/CMakeLists.txt
++++ b/RenderSystems/Direct3D9/CMakeLists.txt
+@@ -47,4 +47,4 @@
+ endif()
+ 
+ ogre_config_plugin(RenderSystem_Direct3D9)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/Direct3D9)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Direct3D9)
+--- a/RenderSystems/GL3Plus/CMakeLists.txt
++++ b/RenderSystems/GL3Plus/CMakeLists.txt
+@@ -123,15 +123,15 @@
+ ogre_config_framework(RenderSystem_GL3Plus)
+ 
+ ogre_config_plugin(RenderSystem_GL3Plus)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/GL3Plus)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus)
+ if( OGRE_GLSUPPORT_USE_GLX )
+-	install(FILES ${PLATFORM_HEADERS_GLX} DESTINATION include/OGRE/RenderSystems/GL3Plus/GLX)
++	install(FILES ${PLATFORM_HEADERS_GLX} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus/GLX)
+ endif()
+ if( OGRE_GLSUPPORT_USE_COCOA )
+-	install(FILES ${PLATFORM_HEADERS_OSX} DESTINATION include/OGRE/RenderSystems/GL3Plus/OSX)
++	install(FILES ${PLATFORM_HEADERS_OSX} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus/OSX)
+ endif()
+ if( OGRE_GLSUPPORT_USE_EGL_HEADLESS )
+-	install(FILES ${PLATFORM_HEADERS_EGL} DESTINATION include/OGRE/RenderSystems/GL3Plus/EGL)
++	install(FILES ${PLATFORM_HEADERS_EGL} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus/EGL)
+ endif()
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include/OGRE/RenderSystems/GL3Plus)
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/GLSL/ DESTINATION include/OGRE/RenderSystems/GL3Plus)
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus)
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/GLSL/ DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GL3Plus)
+--- a/RenderSystems/GLES2/CMakeLists.txt
++++ b/RenderSystems/GLES2/CMakeLists.txt
+@@ -130,8 +130,8 @@
+ 
+ ogre_config_plugin(RenderSystem_GLES2)
+ 
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/GLES2)
+-install(FILES ${PLATFORM_HEADERS} DESTINATION include/OGRE/RenderSystems/GLES2/${PLATFORM_HEADER_INSTALL})
+-install(FILES ${GLESW_HEADERS} DESTINATION include/OGRE/RenderSystems/GLES2/${GLESW_HEADER_INSTALL})
+-install(FILES ${KHR_HEADERS} DESTINATION include/OGRE/RenderSystems/GLES2/KHR)
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/GLSLES/include/ DESTINATION include/OGRE/RenderSystems/GLES2/GLSLES)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GLES2)
++install(FILES ${PLATFORM_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GLES2/${PLATFORM_HEADER_INSTALL})
++install(FILES ${GLESW_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GLES2/${GLESW_HEADER_INSTALL})
++install(FILES ${KHR_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GLES2/KHR)
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/GLSLES/include/ DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/GLES2/GLSLES)
+--- a/RenderSystems/Metal/CMakeLists.txt
++++ b/RenderSystems/Metal/CMakeLists.txt
+@@ -39,6 +39,6 @@
+ ogre_config_framework(RenderSystem_Metal)
+ 
+ ogre_config_plugin(RenderSystem_Metal)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/Metal)
+-install(FILES ${PLATFORM_HEADERS} DESTINATION include/OGRE/RenderSystems/Metal/${PLATFORM_HEADER_INSTALL})
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/OGRE/RenderSystems/Metal)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Metal)
++install(FILES ${PLATFORM_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Metal/${PLATFORM_HEADER_INSTALL})
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Metal)
+--- a/RenderSystems/NULL/CMakeLists.txt
++++ b/RenderSystems/NULL/CMakeLists.txt
+@@ -26,6 +26,6 @@
+ ogre_config_framework(RenderSystem_NULL)
+ 
+ ogre_config_plugin(RenderSystem_NULL)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/NULL)
+-install(FILES ${PLATFORM_HEADERS} DESTINATION include/OGRE/RenderSystems/NULL/${PLATFORM_HEADER_INSTALL})
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/OGRE/RenderSystems/NULL)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/NULL)
++install(FILES ${PLATFORM_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/NULL/${PLATFORM_HEADER_INSTALL})
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/NULL)
+--- a/RenderSystems/Vulkan/CMakeLists.txt
++++ b/RenderSystems/Vulkan/CMakeLists.txt
+@@ -48,6 +48,6 @@
+ ogre_config_framework(RenderSystem_Vulkan)
+ 
+ ogre_config_plugin(RenderSystem_Vulkan)
+-install(FILES ${HEADER_FILES} DESTINATION include/OGRE/RenderSystems/Vulkan)
+-install(FILES ${PLATFORM_HEADERS} DESTINATION include/OGRE/RenderSystems/Vulkan/${PLATFORM_HEADER_INSTALL})
+-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/OGRE/RenderSystems/Vulkan)
++install(FILES ${HEADER_FILES} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Vulkan)
++install(FILES ${PLATFORM_HEADERS} DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Vulkan/${PLATFORM_HEADER_INSTALL})
++install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION include/${OGRE_VERSIONED_DIR}/RenderSystems/Vulkan)

@@ -1,0 +1,48 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH OGREMESHTOOL 1 "Nov 17, 2004"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+OgreMeshToole \- upgrades .mesh files to the latest version
+.SH SYNOPSIS
+.B OgreMeshTool
+.RI [-e]\ [-t]\ sourcefile\ [destfile]
+
+.br
+.SH DESCRIPTION
+\fBOgreMeshTool\fP upgrades an Ogre .mesh definition to the latest version.
+.SH OPTIONS
+A summary of options is included below.
+.TP
+.B \-e
+DON'T generate edge lists (for stencil shadows)
+
+.TP
+.B \-t
+Generate tangents (for normal mapping)
+
+.TP
+.B sourcefile
+Name of the file to convert
+
+.TP
+.B destfile
+Optional name of file to write to. If you don't specify this OGRE
+overwrites the existing file.
+
+.SH AUTHOR
+This manual page was written by Moritz Muehlenhoff <jmm@inutil.org>
+for the Debian GNU/Linux system, but may be used by others.

@@ -1,0 +1,18 @@
+Description: Compilation was failing in arm for Ubuntu Jammy on armhf
+Author: Jose Luis Rivero <jrivero@openrobotics.org>
+Forwarded: no
+Last-Update: 2022-09-29
+
+diff --git a/RenderSystems/Vulkan/src/OgreVulkanRenderSystem.cpp b/RenderSystems/Vulkan/src/OgreVulkanRenderSystem.cpp
+index ce6f3bc4..d3d0cfe7 100644
+--- a/RenderSystems/Vulkan/src/OgreVulkanRenderSystem.cpp
++++ b/RenderSystems/Vulkan/src/OgreVulkanRenderSystem.cpp
+@@ -3362,7 +3362,7 @@ namespace Ogre
+             vkCreateSampler( mActiveDevice->mDevice, &samplerDescriptor, 0, &textureSampler );
+         checkVkResult( result, "vkCreateSampler" );
+ 
+-        newBlock->mRsData = textureSampler;
++        newBlock->mRsData = reinterpret_cast<void*>(textureSampler);
+     }
+     //-------------------------------------------------------------------------
+     void VulkanRenderSystem::_hlmsSamplerblockDestroyed( HlmsSamplerblock *block )
