@@ -7,7 +7,7 @@ DESCRIPTION="Package manager for ROS."
 HOMEPAGE="http://wiki.ros.org/rosdep"
 SRC_URI="https://github.com/ros-infrastructure/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}-gh.tar.gz"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
