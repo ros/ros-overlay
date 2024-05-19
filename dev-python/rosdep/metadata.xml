@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<longdescription></longdescription>
+	<maintainer type="project">
+		<email>hunter@allen-software.com</email>
+		<name>Hunter L. Allen</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">ros-infrastructure/rosdep</remote-id>
+		<remote-id type="pypi">rosdep</remote-id>
+	</upstream>
 </pkgmetadata>
