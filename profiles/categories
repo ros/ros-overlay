@@ -1,4 +1,6 @@
-ros-melodic
+# ROS 1 distros
 ros-noetic
-ros-foxy
-ros-galactic
+# ROS 2 distros
+ros-humble
+ros-iron
+ros-jazzy
