@@ -1,4 +1,4 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=7
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION=""
 HOMEPAGE="https://wiki.ros.org"
-SRC_URI="https://gitlab.com/botasys/${PN}-release/repository/archive.tar.gz?ref=release/noetic/${PN}/0.6.1-2 -> ${PN}-noetic-release-${PV}.tar.gz"
+SRC_URI="https://gitlab.com/botasys/${PN}-release/-/archive/release/noetic/${PN}/0.6.1-2/archive.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 

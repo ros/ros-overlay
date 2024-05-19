@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    The robotont_gazebo package
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>veiko.vunder@ut.ee</email>
+      <name>Veiko Vunder</name>
+    </maintainer>
+    <bugs-to>https://github.com/robotont/robotont_gazebo/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

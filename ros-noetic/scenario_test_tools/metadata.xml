@@ -15,6 +15,6 @@
       <email>lvb@mojin-robotics.de</email>
       <name>Loy van Beek</name>
     </maintainer>
-    <bugs-to>https://github.com/ipa320/cob_command_tools/issues</bugs-to>
+    <bugs-to>https://github.com/4am-robotics/cob_command_tools/issues</bugs-to>
   </upstream>
 </pkgmetadata>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>edupont@swri.org</email>
-      <name>Edmond DuPont</name>
+      <email>swri-robotics@swri.org</email>
+      <name>Southwest Research Institute</name>
     </maintainer>
     <bugs-to>https://github.com/swri-robotics-gbp/marti_messages/issues</bugs-to>
   </upstream>

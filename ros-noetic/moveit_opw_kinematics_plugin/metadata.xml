@@ -17,7 +17,7 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>jeroen.demaeyer@kuleuven.be</email>
+      <email>lousymessenger@gmail.com</email>
       <name>Jeroen De Maeyer</name>
     </maintainer>
     <bugs-to>https://github.com/JeroenDM/moveit_opw_kinematics_plugin/issues</bugs-to>

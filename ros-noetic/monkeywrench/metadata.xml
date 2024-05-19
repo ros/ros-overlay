@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    throw a monkeywrench in your robot code
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>chris@cthierauf.com</email>
+      <name>cst0 (Chris Thierauf)</name>
+    </maintainer>
+    <bugs-to>https://github.com/cst0/ros-monkeywrench/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

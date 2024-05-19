@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>rctoris@wpi.edu</email>
-      <name>Russell Toris</name>
+      <email>andrey.vukolov@elettra.eu</email>
+      <name>Andrey Vukolov</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/usb_cam/issues</bugs-to>
   </upstream>

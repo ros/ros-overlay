@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Open source drivers for the SICK Visionary-S 3D camera and Visionary-T Mini 3D-ToF camera.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>techsupport3dsnapshot@sick.de</email>
+      <name>SICK AG TechSupport 3D Snapshot</name>
+    </maintainer>
+    <bugs-to>https://github.com/SICKAG/sick_visionary_ros/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>monika.florek-jasinska@roboception.de</email>
-      <name>Monika Florek-Jasinska</name>
+      <email>felix.ruess@roboception.de</email>
+      <name>Felix Ruess</name>
     </maintainer>
     <bugs-to>https://github.com/roboception-gbp/rc_visard/issues</bugs-to>
   </upstream>

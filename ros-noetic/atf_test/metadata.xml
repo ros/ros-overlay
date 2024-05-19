@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Example test configuration to verifying the correct behaviour of the ATF.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>florian.weisshardt@mojin-robotics.de</email>
+      <name>Florian Weisshardt</name>
+    </maintainer>
+    <bugs-to>https://github.com/floweisshardt/atf/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

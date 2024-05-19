@@ -1,4 +1,4 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=7

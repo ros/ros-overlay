@@ -13,6 +13,6 @@
       <email>mig@ipa.fhg.de</email>
       <name>Matthias Gruhler</name>
     </maintainer>
-    <bugs-to>https://github.com/ipa320/cob_driver/issues</bugs-to>
+    <bugs-to>https://github.com/4am-robotics/cob_driver/issues</bugs-to>
   </upstream>
 </pkgmetadata>

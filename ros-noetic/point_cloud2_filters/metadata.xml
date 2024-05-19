@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Filters for the sensor_msgs/PointCloud2 based on the filters and sensor_filters chains
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>toridebraus@gmail.com</email>
+      <name>Davide Torielli</name>
+    </maintainer>
+    <bugs-to>https://github.com/ADVRHumanoids/point_cloud2_filters/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

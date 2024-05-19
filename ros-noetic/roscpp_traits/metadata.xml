@@ -13,8 +13,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dthomas@osrfoundation.org</email>
-      <name>Dirk Thomas</name>
+      <email>peckama2@fel.cvut.cz</email>
+      <name>Martin Pecka</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/roscpp_core/issues</bugs-to>
   </upstream>

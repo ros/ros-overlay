@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    RobotModel display using a `/robot_description` topic instead of a parameter
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>tim.clephas@nobleo.nl</email>
+      <name>Tim Clephas</name>
+    </maintainer>
+    <bugs-to>https://github.com/nobleo/rviz_robot_description_topic/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

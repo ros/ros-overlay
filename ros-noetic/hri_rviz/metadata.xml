@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains several rviz plugins to visualize HRI-related topics (like face/body region of interests, 3D skeletons...)
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>severin.lemaignan@pal-robotics.com</email>
+      <name>Séverin Lemaignan</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros4hri/hri_rviz/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -1,4 +1,4 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 EAPI=7
@@ -8,7 +8,7 @@ inherit ros-cmake
 
 DESCRIPTION="Messages definitions for representing computer\'s hardware state, such as b[...]"
 HOMEPAGE="http://ros.org/wiki/computer_status_msgs"
-SRC_URI="https://github.com/130s/${PN}-release/archive/release/noetic/${PN}/2.1.0-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
+SRC_URI="https://github.com/kinu-garage/${PN}-release/archive/release/noetic/${PN}/2.1.0-1.tar.gz -> ${PN}-noetic-release-${PV}.tar.gz"
 
 LICENSE="BSD"
 

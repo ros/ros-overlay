@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    pr2eus_moveit
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>youhei@jsk.t.u-tokyo.ac.jp</email>
+      <name>YoheiKakiuchi</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/jsk_pr2eus/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

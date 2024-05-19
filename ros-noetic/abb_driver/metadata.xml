@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    <p>
+     ROS-Industrial nodes for interfacing with ABB robot controllers.
+   </p>
+   <p>
+     This package is part of the ROS-Industrial program and contains nodes 
+     for interfacing with ABB industrial robot controllers.
+   </p>
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>levi.armstrong@swri.org</email>
+      <name>Levi Armstrong (Southwest Research Institute)</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros-industrial/abb_driver/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

@@ -10,8 +10,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>dominik.kleiser@iosb.fraunhofer.de</email>
-      <name>Dominik Kleiser, Fraunhofer IOSB</name>
+      <email>boitumelo.ruf@iosb.fraunhofer.de</email>
+      <name>Boitumelo Ruf, Fraunhofer IOSB</name>
     </maintainer>
     <bugs-to>https://github.com/FraunhoferIOSB/camera_aravis/issues</bugs-to>
   </upstream>

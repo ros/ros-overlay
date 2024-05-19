@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    roseus_smach
+
+     * Euslisp state machine class. it will be moved.
+     * Message publisher for visualizing current state by smach_viewer.
+     * Simple pickle dump script for debugging state machine.
+     * Execute state machine as a action server.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>k-okada@jsk.t.u-tokyo.ac.jp</email>
+      <name>Kei Okada</name>
+    </maintainer>
+    <bugs-to>https://github.com/tork-a/jsk_roseus/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

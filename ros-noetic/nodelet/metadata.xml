@@ -16,8 +16,8 @@
   </maintainer>
   <upstream>
     <maintainer status="active">
-      <email>michael@openrobotics.org</email>
-      <name>Michael Carroll</name>
+      <email>geoff@openrobotics.org</email>
+      <name>Geoffrey Biggs</name>
     </maintainer>
     <bugs-to>https://github.com/ros-gbp/nodelet_core/issues</bugs-to>
   </upstream>

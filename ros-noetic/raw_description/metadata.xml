@@ -16,6 +16,6 @@
       <email>jba@ipa.fhg.de</email>
       <name>Jannik Abbenseth</name>
     </maintainer>
-    <bugs-to>https://github.com/ipa320/cob_common/issues</bugs-to>
+    <bugs-to>https://github.com/4am-robotics/cob_common/issues</bugs-to>
   </upstream>
 </pkgmetadata>
