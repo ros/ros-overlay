@@ -1,0 +1,16 @@
+BDEPEND=dev-lang/ruby:* virtual/pkgconfig python? ( python_single_target_python3_10? ( dev-python/pybind11[python_targets_python3_10(-)] ) python_single_target_python3_11? ( dev-python/pybind11[python_targets_python3_11(-)] ) python_single_target_python3_12? ( dev-python/pybind11[python_targets_python3_12(-)] ) ) app-alternatives/ninja >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=>=dev-libs/urdfdom-1:= dev-libs/tinyxml dev-libs/boost:= sci-libs/gz-math:7= python? ( python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) )
+DESCRIPTION=Simulation Description Format (SDF) parser and description files
+EAPI=8
+HOMEPAGE=http://sdformat.org/
+INHERIT=cmake python-single-r1
+IUSE=python python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=>=dev-libs/urdfdom-1:= dev-libs/tinyxml dev-libs/boost:= sci-libs/gz-math:7= python? ( python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 ) )
+SLOT=13
+SRC_URI=http://osrf-distributions.s3.amazonaws.com/sdformat/releases/sdformat-13.6.0.tar.bz2
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	78cf3cc2d5572fddf5e5e10c70f7c81a	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	python-utils-r1	042f4cc53680245bf99a84669b94155a	python-single-r1	75118e916668a74c660a13b0ecb22562
+_md5_=ad77ad6f2577d3ce6c4c6154e2b356ab
