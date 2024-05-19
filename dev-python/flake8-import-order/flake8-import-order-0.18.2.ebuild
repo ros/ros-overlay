@@ -1,15 +1,15 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} pypy{,3} )
+PYTHON_COMPAT=( python3_{8..11} pypy{,3} )
 
 inherit distutils-r1
 
 DESCRIPTION="Add more Flake8 warnings."
 HOMEPAGE="https://github.com/PyCQA/flake8-import-order"
-SRC_URI="https://github.com/PyCQA/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/PyCQA/${PN}/archive/${PV}.tar.gz -> ${P}-gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
