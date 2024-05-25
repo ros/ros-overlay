@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<longdescription>Vcstool is a version control system (VCS) tool, designed to make working with multiple repositories easier.</longdescription>
+	<upstream>
+		<remote-id type="github">dirk-thomas/vcstool</remote-id>
+	</upstream>
 </pkgmetadata>

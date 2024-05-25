@@ -1,5 +1,8 @@
-EAPI=7
-PYTHON_COMPAT=( python3_{8..10} pypy3)
+# Copyright 1999-2024 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+EAPI=8
+PYTHON_COMPAT=( python3_{10..12} )
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 
@@ -8,11 +11,12 @@ HOMEPAGE="http://wiki.ros.org/wstool"
 
 SRC_URI="http://github.com/vcstools/wstool/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm64 ~x86"
 
 LICENSE="BSD"
 SLOT="0"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-python/pyyaml[${PYTHON_USEDEP}]
@@ -24,7 +28,7 @@ DEPEND="${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/coverage[${PYTHON_USEDEP}]
 		dev-vcs/git
-		dev-vcs/bzr
+		dev-vcs/breezy
 		dev-vcs/mercurial
 		dev-vcs/subversion
 	)

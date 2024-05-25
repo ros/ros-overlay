@@ -1,7 +1,8 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 EAPI=8
-PYTHON_COMPAT=( python3_{8..10} pypy3 )
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 
@@ -11,8 +12,8 @@ SRC_URI="https://github.com/dirk-thomas/${PN}/archive/${PV}.tar.gz -> ${PN}-${PV
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/pyyaml[${PYTHON_USEDEP}]"
+	dev-python/pyyaml[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"

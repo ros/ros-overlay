@@ -1,15 +1,16 @@
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} pypy3 )
-DISTUTILS_USE_SETUPTOOLS=rdepend
-inherit distutils-r1
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
+
+inherit distutils-r1 pypi
 
 DESCRIPTION="pytest plugin for repeating tests"
 HOMEPAGE="https://pypi.org/project/pytest-repeat/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-2.0"

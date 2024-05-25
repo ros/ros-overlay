@@ -3,7 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} pypy3 )
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
+DISTUTILS_USE_PEP517=setuptools
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
