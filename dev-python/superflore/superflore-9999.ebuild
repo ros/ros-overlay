@@ -1,5 +1,8 @@
+# Copyright 1999-2023 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 EAPI=8
-PYTHON_COMPAT=( python3_{8..11} pypy )
+PYTHON_COMPAT=( python3_{8..12} pypy )
+DISTUTILS_USE_PEP517=setuptools
 
 inherit git-r3 distutils-r1
 
@@ -13,6 +16,7 @@ LICENSE="( Apache-2.0 MIT )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="dev-python/xmltodict
 	dev-python/termcolor
@@ -20,16 +24,15 @@ RDEPEND="dev-python/xmltodict
 	dev-python/rosinstall_generator
 	dev-python/rosdistro
 	dev-python/catkin_pkg
-	dev-python/rosdep
-	dev-python/git-python
+	dev-util/rosdep
+	dev-python/GitPython
 	dev-python/PyGithub
 	dev-python/pyyaml
-	dev-python/docker-py
+	dev-python/docker
 	dev-python/requests
 	dev-vcs/git
 	dev-lang/python
-	app-emulation/docker"
-
+	app-containers/docker-cli"
 DEPEND="${RDEPEND}
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]

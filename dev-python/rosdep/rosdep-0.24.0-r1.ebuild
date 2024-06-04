@@ -1,5 +1,8 @@
+# Copyright 2023 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
 EAPI=8
-PYTHON_COMPAT=( python{3_8,3_9,3_10,3_11} )
+PYTHON_COMPAT=( python3_{10..12} )
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">colcon/colcon-mixin</remote-id>
+		<remote-id type="pypi">colcon-mixin</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,18 @@
+# this file is a copy of https://gitweb.gentoo.org/repo/gentoo.git/tree/metadata/.gitignore
+# These are added during tree generation only.
+/.checksum-test-marker
+/cache
+/dtd
+/glsa
+/herds.xml
+/Manifest.gz
+/md5-cache
+/news
+/pkg_desc_index
+/projects.xml
+/repoman
+/timestamp
+/timestamp.chk
+/timestamp.commit
+/timestamp.x
+/xml-schema

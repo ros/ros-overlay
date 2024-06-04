@@ -1,0 +1,13 @@
+diff --git a/colcon_python_setup_py/package_identification/python_setup_py.py b/colcon_python_setup_py/package_identification/python_setup_py.py
+index 7a513a0..96518f3 100644
+--- a/colcon_python_setup_py/package_identification/python_setup_py.py
++++ b/colcon_python_setup_py/package_identification/python_setup_py.py
+@@ -250,7 +250,7 @@ def _get_setup_information(setup_py, *, env=None):
+         # to avoid warning introduced in setuptools 49.2.0
+         'from contextlib import suppress',
+         'exec("with suppress(ImportError):'
+-        '    from setuptools.extern.packaging.specifiers'
++        '    from packaging.specifiers'
+         '    import SpecifierSet")',
+         # newer versions expose 'packaging' directly
+         # on Arch 'extern' isn't part of the package
